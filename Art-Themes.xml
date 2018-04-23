@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+  <fileDesc>
+    <titleStmt>
+    </titleStmt>
+    <publicationStmt>
+      <p></p>
+          </publicationStmt>
+    <sourceDesc>
+      <p>Produced by pandoc.</p>
+    </sourceDesc>
+  </fileDesc>
+</teiHeader>
+<text>
+<body>
+<div type="level1">
+  <head>Getting Started</head>
+  <p>Each Art Theme gets a file with an ID assigned (=
+  <seg type="code">ATID</seg>). Before creating a new
+  <seg type="code">ATID</seg> make sure it does not already exist, if
+  you create the file on the app make sure you:
+  <hi rendition="simple:bold">a)</hi> add the ID to the taxonomy in the
+  Art Themes section; <hi rendition="simple:bold">b)</hi> create a new
+  file and save it in new; <hi rendition="simple:bold">c)</hi> commit
+  the newly created file.</p>
+  <p>The ID Should be concise, and should ideally allow identification
+  of Theme/Object:</p>
+  <list type="unordered">
+    <item>
+      <p>Art Theme ID (ATID) = AT1005Crucifixion (AT + incremental
+      number + first word of Art Theme)</p>
+    </item>
+  </list>
+</div>
+<div type="level1">
+  <head>Title</head>
+  <p>For the title of the work, when possible:
+  <hi rendition="simple:bold">a)</hi> include most common definition in
+  British English; <hi rendition="simple:bold">b)</hi> include Ge'ez
+  title; <hi rendition="simple:bold">c)</hi> consider including
+  alternative titles used in principal art projects (e.g. ICONCLASS,
+  Artstor, Index of Christian Art).</p>
+  <p>Ex. 1</p>
+  <ab type='codeblock xml'>
+&lt;titleStmt&gt;
+  &lt;title xml:lang=&quot;gez&quot; xml:id=&quot;t1&quot;&gt;ስቅለት&lt;/title&gt;
+  &lt;title xml:lang=&quot;gez&quot; corresp=&quot;#t1&quot; type=&quot;normalized&quot;&gt;sǝqǝlat&lt;/title&gt;
+  &lt;title xml:lang=&quot;en&quot; corresp=&quot;#t1&quot;&gt;Crucifixion&lt;/title&gt;
+  &lt;title xml:lang=&quot;gez&quot; type=&quot;alt&quot; xml:id=&quot;t2&quot;&gt;ሥዕለ፡ ሥቅለት&lt;/title&gt;
+  &lt;title xml:lang=&quot;gez&quot; corresp=&quot;#t2&quot; type=&quot;normalized&quot;&gt;śǝʿǝla sǝqǝlat&lt;/title&gt;
+  &lt;title xml:lang=&quot;en&quot; corresp=&quot;#t2&quot;&gt;Image of the Crucifixion&lt;/title&gt;
+&lt;/titleStmt&gt;
+</ab>
+</div>
+<div type="level1">
+  <head>Description</head>
+  <p>Each <seg type="code">ATID</seg> should contain a brief description
+  outlining its subject-matter and principal recurring features. If more
+  than one typology is attested for a particular art theme in the
+  Ethiopian tradition, provide a brief description of the features of
+  each typology.</p>
+  <p>In addition to this basic information you may choose to provide
+  references to <seg type="code">WorkIDs</seg> that inform the content
+  of the <seg type="code">ATID</seg> (e.g The Crucifixion will include a
+  reference to the Gospels) and/or, where possible, to the relevant
+  passages of that work with <seg type="code">@cRef</seg>. Finally, the
+  description can be expanded to mention whether a theme type is
+  attested in other traditions, in which case provide relevant
+  bibliographic data.</p>
+  <p>Similarly, <seg type="code">WorkIDs</seg> can be used to specify
+  the particular scene in a miniature with a generic
+  <seg type="code">ATID</seg> within a
+  <seg type="code">decoNote</seg>.</p>
+  <p>Ex. 2</p>
+  <ab type='codeblock xml'>
+&lt;abstract&gt;
+ &lt;p&gt; 
+ A miniature showing the Crucifixion of &lt;persName ref=&quot;PRS5684JesusCh&quot;&gt;Jesus&lt;/persName&gt;.
+ The scene may include a number of additional figures, such as the
+ &lt;persName ref=&quot;PRS6819Mary&quot;&gt;Virgin Mary&lt;/persName&gt; or &lt;persName ref=&quot;PRS5695John&quot;&gt;John
+ &lt;/persName&gt;, the scene typically follows the account of the 
+ &lt;title ref=&quot;LIT1560Gospel&quot;&gt;Gospels&lt;/title&gt;. The three main typologies attested 
+ in the Ethiopian tradition are:
+  &lt;list&gt;
+    &lt;item&gt;Type 1 &lt;desc&gt;There is an &lt;term key=&quot;emptycross&quot;&gt;Empty Cross&lt;/term&gt; and 
+    there are figures associated with it (i.e. it is not just an interlaced cross).
+    &lt;/desc&gt;&lt;/item&gt;
+    &lt;item&gt;Type 2 &lt;desc&gt;The body of &lt;term key=&quot;livingjesus&quot;&gt;Living Jesus&lt;/term&gt; is 
+    nailed to the cross.&lt;/desc&gt;&lt;/item&gt;
+    &lt;item&gt;Type 3 &lt;desc&gt;The body of the &lt;term key=&quot;deadjesus&quot;&gt;Dead Jesus&lt;/term&gt; is 
+    nailed to the cross.&lt;/desc&gt;&lt;/item&gt;
+  &lt;/list&gt;
+ &lt;/p&gt;
+&lt;/abstract&gt;
+</ab>
+  <p><hi rendition="simple:bold">N.B.</hi> Typologies are encoded using
+  keywords, see the
+  <ref target="https://github.com/BetaMasaheft/Documentation/wiki/taxonomies">Authority-Files
+  Wiki</ref> for further details.</p>
+  <p>Consider including relevant keywords (e.g. The Theme of the
+  Crucifixion should contain keywords such as Bible; Crucifixion;
+  Passion of Jesus; New Testament) to link it to other works
+  (artistic/literary) and content that is relevant to that
+  <seg type="code">ATID</seg>, these are placed after
+  <seg type="code">&lt;abstract&gt;</seg>.</p>
+  <p>Ex. 3</p>
+  <ab type='codeblock xml'>
+&lt;textClass&gt;
+  &lt;keywords scheme=&quot;#ethioauthlist&quot;&gt;
+  &lt;term key=&quot;Bible&quot;/&gt;
+  &lt;term key=&quot;NewTestament&quot;/&gt;
+  &lt;/keywords&gt;
+&lt;/textClass&gt;
+</ab>
+</div>
+<div type="level1">
+  <head>Bibliography</head>
+  <p>Lastly, please include at least a couple of references to the
+  relevant bibliography at the end of your file. If there are works that
+  deal with the history of the ATID in Ethiopia, these should be always
+  included. For some themes, there might not be such a publication, in
+  which case strive to include a reference that provides at least some
+  basic information and additional references to the topic. Ideally also
+  include a reference to one or more works dealing with the broader
+  history of the <seg type="code">ATID</seg> in art. Before adding the
+  bibliography, make sure you have carefully read our
+  <ref target="https://github.com/BetaMasaheft/Documentation/wiki/zoteroguidelines">guidelines
+  on the matter</ref> and
+  <ref target="https://github.com/BetaMasaheft/Documentation/wiki/guidelines#bibliographic-references">here</ref>.</p>
+  <p>Ex. 4</p>
+  <ab type='codeblock xml'>
+&lt;listBibl type=&quot;secondary&quot;&gt;
+  &lt;bibl&gt;
+   &lt;ptr target=&quot;bm:1997BalickaCrucifixion&quot;/&gt;
+  &lt;/bibl&gt;
+&lt;/listBibl&gt;
+</ab>
+  <p>That is all, you are good to go!</p>
+</div>
+</body>
+</text>
+</TEI>

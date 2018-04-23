@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+  <fileDesc>
+    <titleStmt>
+    </titleStmt>
+    <publicationStmt>
+      <p></p>
+          </publicationStmt>
+    <sourceDesc>
+      <p>Produced by pandoc.</p>
+    </sourceDesc>
+  </fileDesc>
+</teiHeader>
+<text>
+<body>
+<p>We consider <hi rendition="simple:bold">a Work any text with an
+independent circulation</hi>. This does not mean it should be alone in a
+manuscript. A text which sometimes is added to another is also an
+independent work. So <hi rendition="simple:italic">Genesis</hi> is a
+Work as <hi rendition="simple:italic">Pentateuch</hi> is a Work which
+contains it. But <hi rendition="simple:italic">Chapter 1 of Genesis</hi>
+is not a Work, is a part of the Work
+<hi rendition="simple:italic">Genesis</hi>.</p>
+<list type="unordered">
+  <item>
+    <p>consider if the text you are dealing with is a WORK or a
+    Narrative Unit Orlandi 2010, <hi rendition="simple:italic">A
+    Terminology for the identification of Coptic Literary Documents</hi>
+    . A Work &quot;only refers to fixed contents and a precise
+    sequence&quot;
+    <ref target="https://www.zotero.org/groups/ethiostudies/items/itemKey/NWT4X3K9/q/corpus-organizers">Bausi
+    2010, 34 n3</ref></p>
+  </item>
+  <item>
+    <p>only texts with independent circulation get first level IDs, all
+    other are textparts</p>
+  </item>
+  <item>
+    <p>if a textpart has an individual circulation in other traditions
+    this should be said under the textpart: multuple titles can be
+    inserted, with bibliography linking to the IDs of these titles,
+    relations for the authors of the titles, etc.</p>
+  </item>
+  <item>
+    <p>the existing records inherited from the EAE index that do not
+    have independent circulation in Ethiopic should be deleted, but
+    their IDs should remain in the Google Spreadsheet, struck out with a
+    comment specifying the new derived ID added. THE NUMERIC PART OF
+    THESE IDS SHALL NOT BE REUSED.</p>
+  </item>
+  <item>
+    <p>if a part of a text also has an independent circulation - it gets
+    an independent first-level ID/record</p>
+  </item>
+  <item>
+    <p>texpart divs should also be created for these texts, with a
+    corresp link, in order to show the full content of a collection in
+    correct order</p>
+  </item>
+</list>
+<p>See as example
+<ref target="https://raw.githubusercontent.com/SChAth/Works/master/LIT1931Mashaf.xml">Maṣḥafa
+gǝnzat LIT1931Mashaf</ref></p>
+<p>Often the first problem to face is which records and how many to
+make. We accept as principle to do <hi rendition="simple:bold">the
+maximum number of record as it is sensible</hi> and to state
+<hi rendition="simple:bold">the minimum number of relations needed among
+them</hi> with a view on expanding them potentially to all what is not
+essential, in order to clarify their relation with each other. It might
+happen that different researchers have different opinions on the
+relation between the versions and the manuscripts and in this we will be
+able to host them all.</p>
+<p>For example. If the Work A has four versions 1, 2, 3 and 4, 1 being a
+short version of 2 and 3 a later version of 4 while 2 and 4 differ from
+one another only in the order in which the content is organized, there
+will be 5 records, one for the abstract work, one for each version.
+While the abstract work will point to each of the 4 version with
+relations and might contain a general description of the work, each of
+the version will have clearly defined relations with the others and the
+abstract Work.</p>
+<p>A further example: a text which is made of parts which can occur in
+different orders within different manuscripts. This will have 1 Work
+record, describing the ideal or majoritarian, or standard sequence,
+while each witness (Manuscript) will contain the specific order of the
+parts in it.</p>
+<p>Create a new record for every different version, recensions, etc. and
+then express the diverse relations between the records with relation
+elements. This should be clearer and leave space for more differing
+opinions than to try to express the relations within one single
+record.</p>
+<div type="level1">
+  <head>Title</head>
+  <p>A work file will mainly contain the edited text in the
+  <seg type="code">body</seg> element. It will not have instead a
+  <seg type="code">msDesc</seg>, although the view of the text will show
+  manuscript which point to this work.</p>
+  <ab type='codeblock xml'>
+&lt;titleStmt&gt;
+  &lt;title xml:lang=&quot;gez&quot; xml:id=&quot;t1&quot;&gt;
+   &lt;date&gt;&lt;/date&gt;
+  &lt;/title&gt;
+  &lt;title xml:lang=&quot;gez&quot; xml:id=&quot;t2&quot;&gt;
+   &lt;date&gt;&lt;/date&gt;
+  &lt;/title&gt;
+
+  &lt;title xml:lang=&quot;en&quot; corresp=&quot;#t1&quot;&gt;&lt;/title&gt;
+  &lt;title xml:lang=&quot;gez&quot; type=&quot;normalized&quot; corresp=&quot;#t1&quot;&gt;&lt;/title&gt;
+  
+&lt;/titleStmt&gt;
+</ab>
+  <p>You can also use <seg type="code">@type='main'</seg> to signal
+  which one title is to be used for labels, pointers and headers. the
+  <seg type="code">titleStmt</seg> element will have slightly different
+  contents. It will contain the title(s) of the work edited and the
+  date. If there is a digital edition, a <seg type="code">editor</seg>
+  will be added.</p>
+  <p>Titles of the same work in another tradition will be reported
+  following the same rule and attributing an arbitrary t+digit xml:id
+  and the appropriate <seg type="code">@xml:lang</seg>.</p>
+  <p>You can also use <seg type="code">@type='short'</seg> for shortened
+  titles like citation forms.</p>
+  <ab type='codeblock xml'>
+
+&lt;title xml:lang=&quot;gez&quot; xml:id=&quot;t1&quot;&gt;ወንጌል፡ ዘዮሐንስ፡&lt;/title&gt;
+&lt;title xml:lang=&quot;gez&quot; corresp=&quot;#t1&quot; type=&quot;normalized&quot;&gt;Wangel za-Yoḥannǝs&lt;/title&gt;
+&lt;title xml:lang=&quot;en&quot; corresp=&quot;#t1&quot; type=&quot;main&quot;&gt;Gospel of John&lt;/title&gt;
+&lt;title type=&quot;short&quot;&gt;Jn.&lt;/title&gt;
+</ab>
+  <list type="unordered">
+    <item>
+      <p>if a subpart of a work needs a bibliography this can be given
+      in the <seg type="code">div[@type='textpart']</seg></p>
+    </item>
+    <item>
+      <p>if a subpart without independent circulation in the Ethiopic
+      tradition needs to reference the work independently in other
+      traditions titles will be added and referenced in the appropriate
+      <seg type="code">div[@type='textpart']</seg></p>
+    </item>
+  </list>
+  <milestone unit="undefined" type="separator" rendition="line" />
+</div>
+<div type="level1">
+  <head>Edition statement, Source statement, and encoding
+  description</head>
+  <p>These elements should be provided in the header for texts that we
+  provide edition for. The Edition statement should specify the origin
+  of the text. The encoding description specifies the principles used
+  when encoding, when known (e.g. transcription, specific tag sets,
+  etc.)</p>
+  <ab type='codeblock xml'>
+&lt;editionStmt&gt;
+          &lt;p&gt;Digital text based on  &lt;bibl&gt;&lt;ptr target=&quot;bm:Marrassini1993AmdaSeyon&quot;/&gt;&lt;/bibl&gt;.&lt;/p&gt;
+&lt;/editionStmt&gt;
+</ab>
+  <ab type='codeblock xml'>
+&lt;encodingDesc&gt;
+         &lt;projectDesc&gt;
+            &lt;p&gt;Text prepared within the framework of the TraCES project.&lt;/p&gt;
+         &lt;/projectDesc&gt;
+         &lt;editorialDecl&gt;
+            &lt;correction&gt;
+               &lt;p&gt;The following errors
+                  in Marrassini edition have been corrected:
+                  &lt;list&gt;
+                     &lt;item&gt;...&lt;/item&gt;
+                     &lt;item&gt;...&lt;/item&gt;
+                     &lt;item&gt;...&lt;/item&gt;
+                     
+                  &lt;/list&gt;
+               &lt;/p&gt;
+               
+            &lt;/correction&gt;
+                       
+            &lt;normalization&gt;
+               &lt;p&gt;Original spelling and typography is retained.&lt;/p&gt;
+            &lt;/normalization&gt;
+         &lt;/editorialDecl&gt;
+         &lt;tagsDecl&gt;
+            &lt;!-- the format for the tagsDecl to be specified --&gt;
+         &lt;/tagsDecl&gt;
+         
+      &lt;/encodingDesc&gt;
+</ab>
+  <milestone unit="undefined" type="separator" rendition="line" />
+</div>
+<div type="level1">
+  <head>Extent</head>
+  <p>Extent should be specified for the works wherever possible;
+  obligatory for works with digital text provided, after the edition
+  statement:</p>
+  <ab type='codeblock xml'>
+&lt;editionStmt&gt;
+          &lt;p&gt;Digital text based on  &lt;bibl&gt;&lt;ptr target=&quot;bm:Marrassini1993AmdaSeyon&quot;/&gt;&lt;/bibl&gt;.&lt;/p&gt;
+&lt;/editionStmt&gt;
+
+&lt;extent&gt;10170  words&lt;/extent&gt;
+</ab>
+  <milestone unit="undefined" type="separator" rendition="line" />
+</div>
+<div type="level1">
+  <head>Other Clavis ids</head>
+  <p>inside sourceDesc, there will be a section like this</p>
+  <ab type='codeblock xml'>
+&lt;listBibl type=&quot;clavis&quot;&gt;
+               &lt;bibl corresp=&quot;#t2coptic&quot; type=&quot;CC&quot;&gt;&lt;ptr target=&quot;bm:CC&quot;/&gt;&lt;citedRange unit=&quot;item&quot;&gt;123&lt;/citedRange&gt;&lt;/bibl&gt;
+               &lt;bibl  type=&quot;CPG&quot;&gt;&lt;ptr target=&quot;bm:CPG1&quot;/&gt;&lt;citedRange unit=&quot;item&quot;&gt;123&lt;/citedRange&gt;&lt;/bibl&gt;
+               &lt;bibl type=&quot;BHO&quot;&gt;&lt;ptr target=&quot;bm:BHO&quot;/&gt;&lt;citedRange unit=&quot;item&quot;&gt;123&lt;/citedRange&gt;&lt;/bibl&gt;
+               &lt;bibl  type=&quot;CANT&quot;&gt;&lt;ptr target=&quot;bm:CANT1&quot;/&gt;&lt;citedRange unit=&quot;item&quot;&gt;123&lt;/citedRange&gt;&lt;/bibl&gt;
+               &lt;bibl  type=&quot;CAVT&quot;&gt;&lt;ptr target=&quot;bm:CAVT2&quot;/&gt;&lt;citedRange unit=&quot;item&quot;&gt;123&lt;/citedRange&gt;&lt;/bibl&gt;
+               &lt;bibl  type=&quot;BHL&quot;&gt;&lt;ptr target=&quot;bm:BHL&quot;/&gt;&lt;citedRange unit=&quot;item&quot;&gt;123&lt;/citedRange&gt;&lt;/bibl&gt;
+               &lt;bibl type=&quot;syriaca&quot;&gt;&lt;ptr target=&quot;bm:syriaca&quot;/&gt;&lt;citedRange unit=&quot;item&quot;&gt;123&lt;/citedRange&gt;&lt;/bibl&gt;
+               &lt;bibl type=&quot;KRZ&quot;&gt;&lt;ptr target=&quot;bm:KRZ&quot;/&gt;&lt;citedRange unit=&quot;item&quot;&gt;123&lt;/citedRange&gt;&lt;/bibl&gt;
+            &lt;/listBibl&gt;
+</ab>
+  <p>containing ids of the work pointing eventually to the title in
+  titleStmt.</p>
+  <milestone unit="undefined" type="separator" rendition="line" />
+</div>
+<div type="level1">
+  <head>Witnesses</head>
+  <p>We use <seg type="code">&lt;witness&gt;</seg> for those manuscripts
+  which are <hi rendition="simple:bold">actually used</hi> for the
+  edition we are going to provide in the
+  <seg type="code">div[@type='edition']</seg>. All catalogued
+  manuscripts containing the work are displayed in the app anyway.</p>
+  <ab type='codeblock xml'>
+&lt;listWit&gt;
+     &lt;witness cert=&quot;low&quot; corresp=&quot;EMML1234&quot;/&gt;
+     &lt;witness type=&quot;external&quot; facs=&quot;http://archivesetmanuscrits.bnf.fr/ead.html?id=FRBNFEAD000091073&quot; corresp=&quot;BNFEAD000091073&quot;/&gt;
+     &lt;witness type=&quot;external&quot; corresp=&quot;EMML&quot;/&gt;
+  &lt;listWit&gt;
+     &lt;witness corresp=&quot;ES123&quot;/&gt;
+     &lt;witness corresp=&quot;BL8910&quot;&gt;this manuscript was donated by &lt;persName ref=&quot;PRS123124trhas&quot;/&gt;, 
+     at &lt;placeName ref=&quot;LOC21321asa&quot;/&gt; and is a copy of &lt;ref corresp=&quot;EMML2&quot; type=&quot;mss&quot;/&gt;
+    &lt;/witness&gt;
+ &lt;/listWit&gt;
+&lt;/listWit&gt;
+</ab>
+  <p><seg type="code">listWit</seg>s can be nested if needed for example
+  to group them in families. Each <seg type="code">witness</seg> will
+  have to take a <seg type="code">@corresp</seg> pointing to the
+  manuscript <seg type="code">@xml:id</seg>. If the manuscript is in
+  beta mesaheft catalogue that is enough. If the manuscript is into an
+  external catalogue, than use @type='external' as in
+  listBibl[type='mss'] in the manuscript entity. You can use
+  <seg type="code">@cert</seg> to specify a degree of certainty
+  regarding the manuscript you are listing. Please, note that each
+  witness element can take a fully marked up description in relation to
+  the text.</p>
+  <p>As information provided by the catalogues we are working with
+  should not be lost, whenever a catalogue description contains
+  references to other manuscripts containing the same work, mini ms
+  records containing the work ID should be created for those
+  manuscripts. This assures that all the manuscripts containing the same
+  work can be retrieved by the app while reserving
+  <seg type="code">listWit</seg> in the work records mainly for the
+  manuscripts used for the edition.</p>
+  <milestone unit="undefined" type="separator" rendition="line" />
+</div>
+<div type="level1">
+  <head>Bibliography</head>
+  <p>At the moment there are no text to be entered. However there will
+  be. The body of the Work entity will contain a series of
+  <seg type="code">div</seg>s for marked up text</p>
+  <ab type='codeblock xml'>
+ &lt;text&gt;
+        &lt;body&gt;
+        &lt;div type=&quot;bibliography&quot;&gt;
+            &lt;listBibl type=&quot;editions&quot;&gt;
+                &lt;bibl&gt;&lt;/bibl&gt;
+            &lt;/listBibl&gt;
+            &lt;listBibl type=&quot;text&quot;&gt;
+                &lt;bibl&gt;&lt;/bibl&gt;
+            &lt;/listBibl&gt;
+            &lt;listBibl type=&quot;otherLanguages&quot;&gt;
+                &lt;bibl&gt;&lt;/bibl&gt;
+            &lt;/listBibl&gt;
+        &lt;/div&gt;
+            &lt;div type=&quot;edition&quot;&gt;
+                &lt;ab&gt;&lt;/ab&gt;
+            &lt;/div&gt;
+            &lt;div type=&quot;translation&quot; xml:lang=&quot;en&quot;&gt;
+                &lt;ab&gt;&lt;/ab&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+    &lt;/text&gt;
+</ab>
+  <p>different <seg type="code">listBibl</seg> will be used for separate
+  types of entries. within
+  <seg type="code">listBibl[@type='editions']</seg> each bibl will be an
+  edition of this work. each of this editions will have used different
+  manuscripts.</p>
+  <p>References to these witnesses can be done with a link directly to a
+  <seg type="code">witness</seg>'s or a <seg type="code">listWit</seg>'s
+  @xml:id like in LIT2317Senodo and LIT1709Kebran.</p>
+  <p>Secondary bibliographic references given in catalogues about a
+  certain work can also be copied here, as they do not belong to the
+  manuscript description.</p>
+  <milestone unit="undefined" type="separator" rendition="line" />
+</div>
+<div type="level1">
+  <head>Relations</head>
+  <p>Each relationship should be listed separately in a
+  <seg type="code">relation</seg>, even if the same relationship exists
+  between this and more than one other entity.
+  <seg type="code">@name</seg> contains the name of the relation.
+  Allowed values for relations among works and authors are those in the
+  <ref target="http://www.ancientwisdoms.ac.uk/media/ontology/doc/">SAWS
+  Ontology</ref> and those used by syriaca.org you can filter them out
+  in oXygen typing syriaca: or saws: in the value list.</p>
+  <p><seg type="code">@active</seg> should contain the xml:id of the
+  current item. <seg type="code">@passive</seg> should contain the ids
+  of the related works, people, places, separated by a space</p>
+  <ab type='codeblock '>
+&lt;listRelation&gt;
+  &lt;relation name=&quot;syriaca:share-a-title&quot; active=&quot;LIT1001Homili&quot; passive=&quot;LIT1002title&quot;&gt;
+        &lt;desc&gt;It is always a nice idea to provide a description of this relations with a sentence or two.         
+        &lt;/desc&gt;
+  &lt;/relation&gt;
+&lt;/listRelation&gt;
+</ab>
+  <p>The relationship between a work and its subject is expressed in the
+  person record:</p>
+  <ab type='codeblock xml'>
+&lt;relation name=&quot;ecrm:P129i_is_subject_of&quot;
+active=&quot;PRS4585Georgeo&quot;
+passive=&quot;LIT1455GadlaG&quot;/&gt;
+</ab>
+</div>
+<div type="level1">
+  <head>Authors</head>
+  <p>Please Note that we will encode
+  <hi rendition="simple:bold">AUTHORSHIP</hi> as a relation in the work
+  record, to be more specific and explicit about the sort of
+  authorship.</p>
+  <p><seg type="code">&lt;relation name=&quot;dcterms:creator&quot; active=&quot;LIT1608hoheta&quot; passive=&quot;PRS4709Giyorgis&quot;/&gt;</seg></p>
+  <p>This means that the work has this author.</p>
+  <p>If a work is traditionally attributed to an author whose authorship
+  is not currently considered to be historical, this can be expressed
+  verbally with bibliographic references in the description of the
+  relation, for example LIT1608hoheta:</p>
+  <p><seg type="code">&lt;relation name=&quot;saws:isAttributedToAuthor&quot; active=&quot;LIT1608hoheta&quot; passive=&quot;PRS4709Giyorgis&quot;/&gt;</seg></p>
+  <p><seg type="code">&lt;relation name=&quot;saws:isAttributedToAuthor&quot; active=&quot;LIT1608hoheta&quot; passive=&quot;PRS3709eleni&quot;&gt;&lt;desc&gt;The traditional attribution to &lt;persName ref=&quot;PRS3709eleni&quot;/&gt;             is considered unlikely by &lt;bibl&gt;&lt;ptr target=&quot;bm:Habtemichael2007Hoheta&quot;/&gt;&lt;/bibl&gt;.&lt;/desc&gt;&lt;/relation&gt;</seg></p>
+  <p>you can use many of this and also have different types for one
+  work. If you come across records which use the author element, please
+  correct them.</p>
+  <p>You might need to express concept which need more than one
+  relation. For example if Person A is author of a translation B of a
+  work C in arabic, you will need a relation of authorship between A and
+  B (A isAuthorOf B) and the relation stating the fact that B is a
+  translation of C (B isLooseTranslationOf C). If a digital edition of
+  the translated work exists, please use that as a value in the
+  relation. If no such edition exist you might point to the id of the
+  title in the language of the original.</p>
+  <milestone unit="undefined" type="separator" rendition="line" />
+</div>
+<div type="level1">
+  <head>Versions</head>
+  <p>If you have multiple recensions/version of a text, these can be
+  linked with a relation with
+  <seg type="code">@name='saws:isVersionOf'</seg> this will be used to
+  pick up these in the text view. The same parallel content in the
+  different versions should have the same @corresp to a NAR unit and
+  there should always be a @resp in the div[@type='edition'] containing
+  this text part with multiple versions with either the initials of the
+  editor or the pointer to the xml:id of the bibl element which has a
+  pointer to the edition.</p>
+  <milestone unit="undefined" type="separator" rendition="line" />
+</div>
+<div type="level1">
+  <head>Dates</head>
+  <p>For the date of creation of a work, use the element
+  <seg type="code">creation</seg> in <seg type="code">profileDesc</seg>
+  as in the following example</p>
+  <ab type='codeblock xml'>
+&lt;creation when=&quot;1555-06-23&quot; corresp=&quot;#Pdamot&quot;&gt;23 Sane (17 June) 1555 in &lt;placeName ref=&quot;LOC2488Damot&quot; xml:id=&quot;Pdamot&quot;&gt;Damot&lt;/placeName&gt;&lt;/creation&gt;
+</ab>
+  <p>any other date relevant to the work elaboration or life could be
+  added in a date element, possibly pointing to one of the placeNames in
+  the file with a proper id as in the example below.</p>
+  <ab type='codeblock xml'>
+&lt;date when=&quot;1555-06-23&quot; corresp=&quot;#Pdamot&quot;&gt;23 Sane (17 June) 1555&lt;/date&gt; in &lt;placeName ref=&quot;LOC2488Damot&quot; xml:id=&quot;Pdamot&quot;&gt;Damot&lt;/placeName&gt;
+</ab>
+  <p>It is important that the id of the referred place starts with P
+  because there are cases where corresp is already used to point to
+  another id, e.g. a work in another tradition title. Look at this
+  fictitious example, where I have entered a placeName with Q item id
+  from wikidata (Ethiopia) and assigned the second corresp and the id
+  with P</p>
+  <ab type='codeblock xml'>
+ &lt;creation corresp=&quot;#t2arabic #Ptest&quot; when=&quot;1238-09&quot; &gt;
+&lt;placeName ref=&quot;Q115&quot; xml:id=&quot;Ptest&quot;&gt;&lt;/placeName&gt;
+&lt;/creation&gt;
+</ab>
+  <p>this sounds like a dirty hack to get it working... and it is!</p>
+</div>
+<div type="level1">
+  <head>Attested placeNames</head>
+  <p>The attestations of placeNames should be marked as in the example
+  below</p>
+  <ab type='codeblock xml'>
+&lt;ab&gt; ምዕራፍ፡፱። ወእምዝ፡ ዓደወ፡ ማር፡ ገላውዴዎስ፡ 
+ማዕዶተ፡ ክልኤቱ፡ አፍላግ፡ መንገለ፡ ምድረ፡ 
+&lt;placeName 
+ref=&quot;LOC5597Sawa&quot; 
+notBefore=&quot;1540&quot; 
+notAfter=&quot;1559&quot;&gt;ሼዋ፡&lt;/placeName&gt; 
+እመንገለ፡ምድረ፡ 
+&lt;placeName 
+ref=&quot;LOC5932Tegray&quot; 
+notBefore=&quot;1540&quot; 
+notAfter=&quot;1559&quot;&gt;ትግራይ፡&lt;/placeName&gt;
+ ከመ፡ ይርአይ፡ መርዔቶ፡ bእለ፡ ህየ፡ በጽድቅ፡ ወይዋሄ፡ cሕዝቦ፡ በርትዕ። ወበጽሐ፡&lt;/ab&gt;
+</ab>
+  <p>to choose which id to use consider the following:</p>
+  <list type="unordered">
+    <item>
+      <p>if it is a place of interest for ethiopian studies or attested
+      in ethiopia, then use one of our internal ids or create a new
+      record if none is yet available</p>
+    </item>
+    <item>
+      <p>if it is an ancient place but not in ethiopia, like Jordan,
+      Rome, etc. then search pleaides and use a pleiades id prefixed
+      with pleaides: e.g. for Jordan River use plaeides:687932</p>
+    </item>
+    <item>
+      <p>if it is an ancient place not of our interest and not relevant
+      for pleiades, check in wikidata and enter the item id (starting
+      with Q)</p>
+    </item>
+  </list>
+  <p>you can also add a @resp with the id of one of our person records
+  or editors and a @source with a list of bm:tags from the Zotero
+  Ethiostudies group library.</p>
+</div>
+<div type="level1">
+  <head>Short Summary of Contents</head>
+  <p>To provide a short summary of contents use the element
+  <seg type="code">abstract</seg> in as in this example from
+  <ref target="https://github.com/SChAth/Works/blob/master/LIT1252Confes.xml">Confessio
+  Claudii</ref></p>
+  <ab type='codeblock '>
+&lt;abstract&gt;
+   &lt;p&gt;A theological treatise believed to be a responce of king &lt;persName 
+       ref=&quot;PRS4428Galawdew&quot;&gt;Galāwdewos&lt;/persName&gt; to the Jesuit missionaries headed by &lt;persName     
+       ref=&quot;PRS7691Oviedo&quot;&gt;Oviedo&lt;/persName&gt;.
+   &lt;/p&gt;
+&lt;/abstract&gt;
+</ab>
+  <p>The abstract can also mention the total number of words, which
+  might be then marked up with a
+  <seg type="code">measure[@type='words']</seg> within the
+  <seg type="code">abstract</seg>.</p>
+  <p>Summaries given in catalogues can be copied here and edited.</p>
+  <div type="level2">
+    <head>Keywords</head>
+    <p>These keywords are used for the whole record. You can use one or
+    more of the values provided for <seg type="code">@key</seg>.</p>
+    <ab type='codeblock xml'>
+&lt;textClass&gt;
+  &lt;keywords&gt;
+    &lt;term key=“Liturgy”/&gt;
+  &lt;/keywords&gt;
+&lt;/textClass&gt;
+</ab>
+    <milestone unit="undefined" type="separator" rendition="line" />
+  </div>
+</div>
+<div type="level1">
+  <head>divs edition and textparts</head>
+  <p>Text is entered in the <seg type="code">body</seg> of a TEI file
+  under into a <seg type="code">div[@type='edition']</seg> . Each text
+  part should be contained into a <seg type="code">div</seg>.
+  <seg type="code">div</seg>s should always be well nested one into the
+  other. These will always take a
+  <seg type="code">@subtype='textpart'</seg> and a
+  <seg type="code">@subtype</seg> with the desired value. There should
+  always be also a @n identifying for example chapter 3 as well as a
+  <seg type="code">@corresp</seg> pointing to the appropriate
+  <seg type="code">msPart</seg> or <seg type="code">msItem</seg></p>
+  <ab type='codeblock xml'>
+
+&lt;div type=&quot;edition&quot;&gt;
+&lt;div type=&quot;textpart&quot; subtype=&quot;chapter&quot; n=&quot;1&quot;&gt;
+&lt;ab&gt;
+&lt;l n=&quot;1&quot;&gt;
+ዝውእቱ ፡ አስማቲሆሙ ፡ ለደቂቀ ፡ እስራኤል ፡ እለ ፡ ቦኡ ፡ ብሔረ ፡ ግብጽ ፡ ምስለ ፡ ያዕቆብ ፡ አቡሆሙ ፡ [ለ]ለአሐዱ ፡ አሐዱ ፡ በበ ፡ አዕጻዲሆሙ ፡ ቦኡ ።
+&lt;/l&gt;
+&lt;l n=&quot;2&quot;&gt;ሮቤል ፡ ወስምዖን ፡ ወሌዊ ፡ ወይሁዳ ።&lt;/l&gt;
+&lt;l n=&quot;3&quot;&gt;ወይ[ሳኮ]ር ፡ ወዛቡሎን ፡ ወብንያም ።&lt;/l&gt;
+&lt;/ab&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</ab>
+  <p>Please be careful in always stating the sources for the description
+  of a work, especially for the division of the work into textparts and
+  other structural decisions. Ideally this source should be an edition,
+  but if none exists, state if the description follows for example the
+  EAe or a manuscript.</p>
+  <ab type='codeblock xml'>
+&lt;div type=&quot;edition&quot;&gt;
+ &lt;note&gt;This division into textparts follows &lt;ref type=&quot;mss&quot; corresp=&quot;FSUrueppII2&quot;/&gt;.&lt;/note&gt;
+&lt;div type=&quot;textpart&quot; subtype=&quot;book&quot; n=&quot;1&quot; xml:id=&quot;Kefl1&quot; xml:lang=&quot;gez&quot;&gt;
+</ab>
+  <p>Note that after each word there should be a separator or
+  punctuation without space.</p>
+  <p>If the text contains verses we will use <seg type="code">l</seg> as
+  in the example above. Also <seg type="code">lb</seg> can be used to
+  mark linebreaks, for example in Inscriptions. Be carefull:
+  <seg type="code">ab</seg> should be only in the lowest level div
+  nesting!</p>
+  <p>to identify a div you can use a label</p>
+  <ab type='codeblock xml'>
+&lt;div type=&quot;textpart&quot; xml:id=&quot;Athanasius1&quot;&gt;
+            &lt;label&gt;Homily on the Incarnation by Athanasius of Alexandria&lt;/label&gt;
+         &lt;/div&gt;
+</ab>
+  <p>or a corresp pointing to another work</p>
+  <ab type='codeblock xml'>
+&lt;div type=&quot;textpart&quot; xml:id=&quot;example&quot; corresp=&quot;LIT1234blabla&quot;&gt;
+            
+         &lt;/div&gt;
+</ab>
+</div>
+<div type="level1">
+  <head>Languages</head>
+  <p>within langUsage all languages used in the file should be defined.
+  It is not a problem if one of these statements is not relevant to the
+  current record, but if another language is used, it should be
+  defined.</p>
+  <ab type='codeblock xml'>
+ &lt;langUsage&gt;
+    &lt;language ident=&quot;en&quot;&gt;English&lt;/language&gt;
+    &lt;language ident=&quot;it&quot;&gt;Italian&lt;/language&gt;
+    &lt;language ident=&quot;gez&quot;&gt;Gəˁəz&lt;/language&gt;
+ &lt;/langUsage&gt;
+</ab>
+  <p>If you add somewhere e.g.
+  <seg type="code">&lt;title xml:lang=&quot;am&quot;/&gt;</seg>, there
+  should be a language element in langUsage like the following</p>
+  <p><seg type="code">&lt;language ident=&quot;am&quot;&gt;Amharic&lt;/language&gt;</seg>
+  the values of @ident here are restricted, so you should not be able to
+  add e.g. amh as value for @ident and consequently use it in the file
+  as value of @xml:lang.</p>
+</div>
+<div type="level1">
+  <head>Narrative Units</head>
+  <p>The model file for a Narrative Unit is much simpler. Just assign a
+  title to your file and add in the <seg type="code">body</seg> a short
+  description. You can mark up content as in any other entity.
+  Recommended but not compulsory are a bibliography and a
+  <seg type="code">listBibl[@type='relations']</seg>.</p>
+  <p>Narrative units can also be created for text portions (paragraphs,
+  chapters, miracles, etc.) which are extant as different versions in
+  multiple recensions of the same work or even in different works.
+  Creating these narrative units allows displaying in the app all the
+  existing interrelated versions of that text. See, e.g.,
+  NAR0013pelican, i.e., the chapter on the pelican in the Physiologus.
+  Once a single narrative unit ID is provided as
+  <seg type="code">div[@corresp]</seg> in correspondence of the text
+  edition in the Work records of the different recensions (e.g.,
+  <seg type="code">&lt;div type=&quot;textpart&quot; subtype=&quot;chapter&quot; xml:id=&quot;ch4&quot; n=&quot;4&quot;  corresp=&quot;NAR0013pelican&quot;&gt;</seg>),
+  all the existing versions of that narrative unit will be visualized in
+  the app by clicking the Versions button in the Text page of the work
+  record.</p>
+</div>
+</body>
+</text>
+</TEI>

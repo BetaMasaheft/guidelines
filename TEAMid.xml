@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+  <fileDesc>
+    <titleStmt>
+    </titleStmt>
+    <publicationStmt>
+      <p></p>
+          </publicationStmt>
+    <sourceDesc>
+      <p>Produced by pandoc.</p>
+    </sourceDesc>
+  </fileDesc>
+</teiHeader>
+<text>
+<body>
+<div type="level1">
+  <head>TEAM ids for use in <seg type="code">author/@xml:id</seg> and
+  <seg type="code">change/@who</seg></head>
+  <list type="unordered">
+    <item>
+      <p>Prof. Dr. Alessandro Bausi = AB</p>
+    </item>
+    <item>
+      <p>Solomon Gebreyes = SG</p>
+    </item>
+    <item>
+      <p>Dr. Denis Nosnitsin = DN</p>
+    </item>
+    <item>
+      <p>Eugenia Sokolinski = ES</p>
+    </item>
+    <item>
+      <p>Massimo Villa = MV</p>
+    </item>
+    <item>
+      <p>Dr. Pietro Liuzzo = PL</p>
+    </item>
+  </list>
+</div>
+</body>
+</text>
+</TEI>
