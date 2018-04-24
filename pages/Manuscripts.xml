@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Manuscripts</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  <text>
+      <body xml:id="manuscripts">
+         <div type="level1">
+            <head>TEI encoding guidelines for cataloguers</head>
+            <p>TEI should always be referred to for definitions and use of
+  elements and attributes.</p>
+            <p>However TEI is not a prescriptive system or a schema, and the
+  present guidelines describe the declension of the TEI for this project
+  and its purposes. Whenever possible the reason for a particular
+  encoding decision is given. This shall help also to track bugs related
+  to data entry.</p>
+            <p>The
+  <ref target="https://github.com/SChAth/schema/blob/master/tei-betamesaheft.xml">ODD</ref>
+  and the
+  <ref target="https://github.com/SChAth/schema/blob/master/tei-betamesaheft.rng">schema</ref>
+  can be found in the schema repo.</p>
+            <p>If you think something should be automatised,
+  <ref target="https://xkcd.com/1319/">click here first</ref>.</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+         </div>
+      </body>
+   </text>
+</TEI>

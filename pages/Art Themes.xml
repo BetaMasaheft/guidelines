@@ -20,7 +20,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </fileDesc>
    </teiHeader>
    <text>
-      <body xml:id="art themes">
+      <body xml:id="art_themes">
          <div type="level1">
             <head>Getting Started</head>
             <p>Each Art Theme gets a file with an ID assigned (=

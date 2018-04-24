@@ -20,7 +20,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </fileDesc>
    </teiHeader>
    <text>
-      <body xml:id="person">
+      <body xml:id="persons">
          <p>Each Person’s record contains a simple TEI header as the
 <ref target="guidelines">Manuscript Description</ref> which can be
 filled accordingly.</p>
