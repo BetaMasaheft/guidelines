@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>state and certainty</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="state-and-certainty">
+         <head>state and certainty</head>
+         <p>If the place does not exist any more, then you need to specify
+    when it existed with a state element</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<state type="existence" from="0410" to="0605">
+        <certainty locus='value' match="@from" notAfter="0410"/>
+        <certainty locus='value' match="@to" notBefore="0605"/>
+    </state>
+</egXML>
+         <p>Also the following is perfectly fine, and perhaps preferable,
+    stating without further precision that the place is attested in one
+    of the main periodizations, in this example Aksumite</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<state type="existence" ref="Aks"/>
+</egXML>
+         <p>the ref points to an Authority list file Aks.xml which contains
+    the permalink to the PeriodO definition, in this case
+    http://n2t.net/ark:/99152/p03tcss4qvv.</p>
+         <p>if this is an attested place only in one source, note down that
+    as well in @source or in a <gi>desc</gi> or
+    <gi>note</gi>. In the example below we found in
+    Smith's Dictionary of Greek and Roman Geography the passage in
+    Ptolemy where port of the Adulitae is mentioned and we have added a
+    note about it linking to the bibl element as its source. The note
+    has also a cRef to point to the exact passage in perseus.</p>
+         <p>example:</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<listBibl>
+...
+<bibl xml:id="Smith">
+               <ptr  target="bm:SmithGreekRomanGeo"/>
+               <citedRange unit="item">s.v. Adu'le or Adu'lis</citedRange>
+            </bibl>
+            </listBibl>
+               <note></note>
+               
+               <note source="#Smith"><ref cRef="http://data.perseus.org/citations/urn:cts:greekLit:tlg0363.tlg007.perseus-grc1:4.7">Ptolemy 4.7.8</ref></note>
+</egXML>
+      </body>
+   </text>
+</TEI>

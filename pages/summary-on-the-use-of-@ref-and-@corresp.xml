@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>summary on the use of @ref and @corresp</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="summary-on-the-use-of-@ref-and-@corresp">
+         <head>summary on the use of @ref and @corresp</head>
+         <p>internal references -
+    <gi>ref target="#q12"</gi> -
+    <gi>ref type="quire" corresp="#q12"</gi>
+    - <att>corresp="#id"</att> (# is the id
+    anchor) points always to a @xml:id WITHIN THE DOCUMENT</p>
+         <p>otherwise if <att>corresp</att> is used to point to
+    an element inside another document with an id, as for witness and
+    div in a work record, then it does not need an initial #</p>
+         <table>
+            <row role="label">
+               <cell>
+                  <p>element</p>
+               </cell>
+               <cell>
+                  <p>@ref</p>
+               </cell>
+               <cell>
+                  <p>@corresp</p>
+               </cell>
+            </row>
+            <row>
+               <cell>
+                  <p>ref</p>
+               </cell>
+               <cell/>
+               <cell>
+                  <p>X</p>
+               </cell>
+            </row>
+            <row>
+               <cell>
+                  <p>witness</p>
+               </cell>
+               <cell/>
+               <cell>
+                  <p>X</p>
+               </cell>
+            </row>
+            <row>
+               <cell>
+                  <p>div</p>
+               </cell>
+               <cell/>
+               <cell>
+                  <p>X</p>
+               </cell>
+            </row>
+            <row>
+               <cell>
+                  <p>title</p>
+               </cell>
+               <cell>
+                  <p>X</p>
+               </cell>
+               <cell/>
+            </row>
+            <row>
+               <cell>
+                  <p>persName</p>
+               </cell>
+               <cell>
+                  <p>X</p>
+               </cell>
+               <cell/>
+            </row>
+            <row>
+               <cell>
+                  <p>placeName</p>
+               </cell>
+               <cell>
+                  <p>X</p>
+               </cell>
+               <cell/>
+            </row>
+            <row>
+               <cell>
+                  <p>origPlace</p>
+               </cell>
+               <cell>
+                  <p>X</p>
+               </cell>
+               <cell/>
+            </row>
+            <row>
+               <cell>
+                  <p>repository</p>
+               </cell>
+               <cell>
+                  <p>X</p>
+               </cell>
+               <cell/>
+            </row>
+            <row>
+               <cell>
+                  <p>country</p>
+               </cell>
+               <cell>
+                  <p>X</p>
+               </cell>
+               <cell/>
+            </row>
+            <row>
+               <cell>
+                  <p>settlement</p>
+               </cell>
+               <cell>
+                  <p>X</p>
+               </cell>
+               <cell/>
+            </row>
+            <row>
+               <cell>
+                  <p>region</p>
+               </cell>
+               <cell>
+                  <p>X</p>
+               </cell>
+               <cell/>
+            </row>
+         </table>
+      </body>
+   </text>
+</TEI>

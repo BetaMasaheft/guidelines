@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>from template</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="from-template">
+         <head>from template</head>
+         <p>Cataloguers may use one of the
+    <ref target="https://github.com/SChAth/schema">annotated
+    templates</ref> to create new data. ### in the preview app You shall
+    now find a new "create new entity" function in the list
+    view of the app. You only need to enter the name of the file, for
+    manuscripts this is the full filename, for the other entities just
+    the last part of the id . For LIT1234iliad, you would enter only
+    "iliad". For a manuscript, simply enter the full name, the
+    small print will indicate you what is needed. As you start typing
+    the button will become active and you can create the file. This is
+    stored in the app, not in git! As the confirmation page tells you,
+    you need to 1. download the file 2. save it in a folder called
+    "new" into the proper folder 3. commit and sync to git</p>
+         <p>Once you have done this git and our server will be again in sync,
+    which means you can now move your file if you need to (especially
+    for manuscripts) and then commit and sync this change again. If you
+    omit the first step, we will have two identical files in two
+    locations and thus the id lookup of the app will fail not showing
+    you your file. On leaving the page you will get a warning every
+    time, intended to make you stop before you carry on without syncing.
+    The generated file will have a consistent new id and will insert it
+    in the appropriate place in the file. This should avoid the really
+    frequent problem of ids not being updated after copy-pasting a
+    master file. it remains entirely possible to create your files in
+    oXygen as previously, but this method is recommended as it makes
+    sure your id is unique. The file will also have the correct type and
+    a change element with your initials and current date, nothing
+    else.</p>
+      </body>
+   </text>
+</TEI>

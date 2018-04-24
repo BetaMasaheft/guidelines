@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Standardisation of transcription from Encyclopaedia
+    Aethiopica</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="standardisation-of-transcription-from-encyclopaedia ----aethiopica">
+         <head>Standardisation of transcription from Encyclopaedia
+    Aethiopica</head>
+         <list type="unordered">
+            <item>
+               <p>all the above should be applied to transcriptions from
+        ETHIOPIC only.</p>
+            </item>
+            <item>
+               <p>
+                  <hi rendition="simple:bold">ä</hi> for first order should be
+        changed into <hi rendition="simple:bold">a</hi>
+               </p>
+            </item>
+            <item>
+               <p>
+                  <hi rendition="simple:bold">a</hi> for fourth order should be
+        changed into <hi rendition="simple:bold">ā</hi>
+               </p>
+            </item>
+            <item>
+               <p>initial alef must be reinserted (ʾa, ʾo, ʾe, etc)</p>
+            </item>
+         </list>
+         <p>Ambiguities:</p>
+         <list type="unordered">
+            <item>
+               <p>A, a (at the beginning of a word, A/a vowel occurs only here)
+        &gt; ʾA / ʾĀ, ʾa / ʾā depending on the order (write ʾA/ʾa when
+        unsure)</p>
+            </item>
+            <item>
+               <p>ʿA (or ʿa) &gt; ʿA / ʿĀ (or ʿa / ʿā) depending on the
+        order</p>
+            </item>
+            <item>
+               <p>Ha (or ha) &gt; Ha / Hā(or ha / hā) depending on the
+        order</p>
+            </item>
+            <item>
+               <p>Ḥa (or ḥa) &gt; Ḥa / Ḥā (or ḥa / ḥā) depending on the
+        order</p>
+            </item>
+            <item>
+               <p>Ḫa (or ḫa) &gt; Ḫa / Ḫā (or ḫa / ḫā) depending on the
+        order</p>
+            </item>
+         </list>
+      </body>
+   </text>
+</TEI>

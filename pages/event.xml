@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>event</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="event">
+         <head>event</head>
+         <p>Any event affecting the definition of the place can be encoded
+    and described in an event element as below. Examples are made up and
+    will be replaced by real one asap.</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<event when="1201" source="#Eae3-author">
+        <desc xml:lang="en">destruction of the city from the arabs</desc>
+    </event>
+</egXML>
+         <p>event can take also @notBefore and @notAfter, @from and @to.</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<event from="1201" to="1256" source="#Eae3-author">
+        <desc xml:lang="en">capital of the region</desc>
+    </event>
+</egXML>
+         <p>example:</p>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Places</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+          </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="places">
+         <p>please read the content at the following links before starting:
+https://pleiades.stoa.org/help/conceptual-overview</p>
+         <p>an overview of our current work can be found here
+http://commons.pelagios.org/2017/08/report-ancient-places-in-the-chronicle-of-king-galawdewos/</p>
+         <p>This example record contains information about a single place, at
+whatever granularity. It is thus important to state relationships with
+other places when possible and typologies.</p>
+         <p>Coordinates are used to display the place on a map and can be
+obtained from openstreetmap for example, adding a pointer for a place
+there.</p>
+         <p>It can be expanded with much more information, following TEI
+guidelines for
+<ref target="http://www.tei-c.org/release/doc/tei-p5-doc/de/html/ref-person.html">
+               <gi>place</gi>
+            </ref>
+         </p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<text>
+      <body>
+         <listPlace>
+            <place type="monastery">
+ <placeName xml:id="n1" xml:lang="gez">አሲር፡ መቲራ፡</placeName>
+               <placeName corresp="#n1" xml:lang="gez" type="normalized">ʾAsir Matirā</placeName>
+               <placeName type="alt" xml:id="n2" xml:lang="gez">አሲር፡ መቲራ፡  ደብረ፡ ዓለማ፡ ቅድስት፡ ማርያም፡</placeName>
+               <placeName type="normalized" corresp="#n2" xml:lang="gez">ʾAsir Matirā Dabra ʿĀlamā Qǝddǝst Maryam</placeName>
+               <placeName type="alt" xml:id="n3" xml:lang="gez">አሲረ፡ መቲራ፡  </placeName>
+               <placeName type="normalized" corresp="#n3" xml:lang="gez">ʾAsira Matirā</placeName>
+
+
+                  <country ref="LOC3010Ethiop"/>
+               <region notBefore="1991" type="RegionalState" ref="LOC5932Tegray"/>
+               
+               <settlement type="province" ref="LOC5932Tegray"/>
+               <settlement when="2009-11-16" ref="LOC1564ASbiW" type="warada"/>
+                 
+               <settlement when="2009-11-16" ref="LOC6526Asir" type="qushat"/>
+               <location>
+                   <geo>51.969604 -2.893146</geo>
+               </location>
+            </place>
+            <listRelation>
+<relation name="gn:nearBy" active="LOC00000sssss"
+               passive="LOC1111sssss LOC2222ggggg">
+               <desc>It is always a nice idea to provide a description of this relations with a sentence or two.         
+               </desc>
+            </relation>
+</listRelation>
+         </listPlace>
+      </body>
+   </text>
+</egXML>
+         <div type="level1">
+            <head>new records</head>
+            <p>Before creating new entities for PLACES like Stuttgart, Paris,
+  London, etc. which unlike all institutions are very much unlikely to
+  receive specific descriptions by this project, use external links to
+  geonames ids as follows.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<country ref="gn:2017370"/> 
+<settlement ref="gn:498817"/>
+</egXML>
+            <p>(same for placeName and region)</p>
+            <p>to decide whether to create a new place record or not if in doubt,
+  try the following. check if there is a record already in our list * if
+  yes, then 1. check if there is also a wikidata item (you can simply
+  google what you are looking for, open the correct wikipedia page you
+  find and hit the wikidata item link on the left. * if yes add a
+  @sameAs attribute with the Q id in the url or at the top of the item.
+  1. check if there is also a record in geonames.org * if yes add a
+  @sameAs attribute to place linking to such geonames id. * if not leave
+  the record 1. add a ref to our record * if not, then 1. check if there
+  is also a wikidata item 1. check if it is in geonames.org * if yes add
+  the uri in the @ref * if not (but check thoroughly, because it would
+  be an exception) create a new place record</p>
+            <p>generally, when possible I would always prefer an external link to
+  an authority file for places out of scope which we are not going to
+  describe or give details about. If there is already a record, no need
+  to delete it or update it. Simply add the geonames ID.</p>
+            <p>adding references to places not in our db: * for ancient places
+  prefere pleiades, with namespace pleiades: e.g. * for places related
+  to coptic literary tradition use PAThs paths:</p>
+         </div>
+         <div type="level1">
+            <head>alignment</head>
+            <p>Use @sameAs inside <gi>place</gi> to declare
+  the authority file. prefer Wikidata if an item is present, otherwise
+  use geonames.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<place type="region" sameAs="Q2894614">
+               <placeName>Wägära</placeName>
+               <placeName type="alt">Wäggära</placeName>
+            </place>
+</egXML>
+            <p>GN id number should use a prefix gn:.</p>
+         </div>
+         <div type="level1">
+            <head>type</head>
+            <p>
+               <gi>type</gi>contains a value from the
+  <ref target="https://docs.google.com/spreadsheets/d/1a0LtliOVuXoRcDhgj3p5V1Z2i-M5k5_MkT6YgPgh04s/edit#gid=1295787771">controlled
+  list of Qualifiers</ref> in <gi>relation</gi> allowed
+  values of <att>name</att> are * contains * nearBy *
+  partOf</p>
+            <p>Please, refer to Institution below for geo location and
+  administrative location. Also place records can be enriched with this
+  information.</p>
+         </div>
+         <div type="level1">
+            <head>Coordinates</head>
+            <p>Coordinates must be provided latitude longitude and separated only
+  by one white space.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+ <geo>14.308833 39.378683</geo>
+</egXML>
+            <p>for regions, areas, and all polygons, use geo[@rend='polygon']
+  using one line for each point. please do not add spaces at the
+  beginning and end of the series. You can draw your polygon with (this
+  tool)[https://www.keene.edu/campus/maps/tool/] and copy past directly
+  from there. take care, please to remove the commas.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+
+<location>  
+<!--polygon coordinates designed with https://www.keene.edu/campus/maps/tool/ after 
+    suggestions on http://commons.pelagios.org/groups/linked-pasts/forum/topic/historical-region/-->
+                  <geo rend="polygon">38.40271 12.9804713 
+                     38.2626343 13.0580747
+                     38.1170654 13.1463524
+                     37.9138184 13.1543761 
+                     37.7737427 13.0901794 
+                     37.7160645 12.9885004 
+                     37.6858521 12.8707149 
+                     37.5979614 12.7421585 
+                     37.6446533 12.6483782 
+                     37.6693726 12.5438397 
+                     37.7380371 12.3909763 
+                     37.8506470 12.3426849 
+                     37.9934692 12.2460756 
+                     38.1692505 12.2111802 
+                     38.4439087 12.2809664 
+                     38.4521484 12.6162171 
+                     38.4851074 12.7796608
+                     38.4082031 12.9831477 
+                     38.40271 12.9804713</geo>
+                  </location>
+</egXML>
+  
+         </div>
+         <div type="level1">
+            <head>specific encoding for repositories/institutions</head>
+            <p>For Institutions where manuscripts are preserved, some more
+  information is required. Please, note the
+  <att>subtype=‘institution’</att>.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<listPlace>
+            <place type="church dabr" subtype="institution">
+               <placeName xml:id="n1" xml:lang="gez">ዓደቃሐርሲ፡ ጰራቅሊጦስ፡</placeName>
+               <placeName corresp="#n1" xml:lang="gez" type="normalized">ʿĀddaqāḥarsi Ṗarāqliṭos</placeName>
+               <placeName type="alt"  xml:id="n2">ዓደቃሐርሲ፡ መካነ፡ ህይወት፡ ጰራቅሊጦስ፡</placeName>
+               <placeName type="alt" corresp="#n2">ʿAddaqāḥarsi Makāna Həywat Ṗarāqliṭos</placeName>
+               <country ref="LOC3010Ethiop"/>
+               <region ref="LOC5932Tegray"/>
+               <location>
+                  <geo>14.308833 39.378683</geo>
+                  <height unit="m">2437.0</height>
+               </location>
+               <note>
+                  <date type="foundation" notBefore="1400" notAfter="1500">1400-1500</date>
+                  <desc type="foundation">Existed aready in the pre-Christian time as the religious site of South Arabian migrants; the church was founded in a later period.</desc>
+                  <ab type="history">Dabr. A new large church is under construction outside of the compound of the old church, both standing on the rock outcrop (below is the river of <placeName corresp="LOC6519Wafadabbo">Wafadabbo</placeName>).
+                     </ab>
+                  <ab type="tabot">
+                     <measure quantity="8"/>
+                     Tabots of <persName ref="PRS5684JesusCh" type="tabot">Jesus</persName>, <persName ref="PRS10775Trinity">Trinity</persName>, <persName ref="PRS6819Mary">Mary</persName>, unidentified marble, 
+                     <persName ref="PRS4377Gabriel">Gabriel</persName>, <persName ref="PRS10776Kidan">Kidāna Mǝḥrat</persName>, <persName ref="PRS7049Michael">Michael</persName>, 
+                     <persName ref="PRS10774Paraq">Ṗarāqliṭos</persName>. The tabot of the local <persName ref="PRS10773SadeqP">Ṣādǝqān</persName> (Righteous Ones) was not mentioned, probably by mistake.</ab>
+                  <ab type="description">52 Mss. photographed: <ref target="ESap001">AP-001</ref> "Missal"; <ref target="ESap002">AP-002</ref> "Hymnary"; <ref target="ESap003">AP-003</ref> "Four Gospels"; ...</ab>
+               </note>
+               <listBibl>
+                  <bibl></bibl>
+               </listBibl>
+            </place>
+        
+
+         </listPlace>
+</egXML>
+         </div>
+         <div type="level1">
+            <head>administrative location</head>
+            <p>If you want to give other administrative location information, use
+  <gi>settlement</gi>. One settlement for each set of
+  information, but only one if there is only one set. Please do not
+  remove text if it is there, simply mark it up as in the following
+  example. If you are adding info and you want to do it more quickly you
+  can also enter only empty <gi>placeName</gi>s withe
+  corresp and type.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<country ref="LOC3010Ethiop"/>
+<region ref="LOC5932Tegray"/>
+<settlement when="2009-11-16">wäräda <placeName ref="LOC1564ASbiW" type="waradā">ʾAṣbi Wänbärta</placeName>, 
+                  qušät <placeName ref="LOC6526Asir" type="qušat">ʾAsir Mätira</placeName> </settlement>
+
+</egXML>
+         </div>
+         <div type="level1">
+            <head>Place Names</head>
+            <p>a full example of how to encode the various possible placeNames is
+  the following</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<placeName xml:id="n1" xml:lang="am">አክሱም፡ ጽዮን፡</placeName>
+<placeName corresp="#n1" xml:lang="am" type="normalized">ʾAksum Ṣǝyon</placeName>
+<placeName xml:id="n2" xml:lang="gez" type="alt">ማርያም፡ ጽዮን፡</placeName>
+<placeName corresp="#n2" xml:lang="gez" type="normalized">Māryām Ṣǝyon</placeName>
+<placeName corresp="#n2" xml:lang="en">Mary of Zion</placeName>
+<placeName xml:id="n3" xml:lang="gez" type="alt">ገበዘ፡ ጽዮን፡</placeName>
+<placeName corresp="#n3" xml:lang="gez" type="normalized">Gabaza Ṣǝyon</placeName>
+<country ref="LOC3010Ethiop"/>
+<region notBefore="1991" type="RegionalState" ref="LOC5932Tegray"/>
+<region notAfter="1974" type="Province" ref="LOC6556Tegre"/>
+</egXML>
+            <p>all placeName can take an xml:id if it is needed for referencing,
+  following the above example. i.e. nothing prevents Mary of Zion to
+  have a @xml:id='n5' AND @corresp='#n2'</p>
+            <p>You can enter into placeName a <gi>note</gi> element
+  where to describe the denomination more in detail, see for example
+  LOC1261Adulis</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<placeName xml:id="n4" xml:lang="la" type="alt" source="#FattovichMunro">Adulitae
+                     <note source="#Smith"><ref
+                        cRef="http://data.perseus.org/citations/urn:cts:greekLit:tlg0363.tlg007.perseus-grc1:4.7"
+                        >Ptolemy 4.7.8</ref></note><note source="#Epiphanius">
+                     Epiphanius (listing nine kingdoms of the 'Indians', he refers to the Adulites
+                     other then to the Aksumites)</note></placeName>
+               <placeName xml:id="n5" type="alt" source="#FattovichMunro">WDTT <note
+                     source="#FattovichMunro">The geographical lists of the Egyptian 18th
+                     dynasty (<date when="-1450" precision="low">ca. 1450
+                  B.C.</date>)</note></placeName>
+               
+</egXML>
+            <p>use this especially if you need to provide specific sources for
+  this name of the place</p>
+            <p>On referring to places, please look carefully for available
+  records. e.g.: - LOC6569Tegray (Tǝgrāy historical province) vs
+  LOC5932Tegray (contemporary regional state) - LOC6568Amhara (ʾAmhārā
+  historical province) vs LOC1426Amhara (contemporary regional state) -
+  LOC3577Gondar (Gondar town) vs LOC6554GondarineK (Gondarine
+  Kingdom)</p>
+         </div>
+         <div type="level1">
+            <head>Tābots</head>
+            <p>For tābotat please use an <gi>ab[@type='tabot’]</gi>
+  including the number of the tābots and persNames[@type='tabot'] for
+  each of the dedicatory persons. Avoid using @type for other persons
+  mentioned in the texts.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<ab type="tabot">
+   <measure quantity="4"/>
+   Tābots of <persName ref="PRS3249Cyriacus" type="tabot">Qirqos</persName>, <persName 
+   ref="PRS9684Uriel" type="tabot">Urael</persName>, <persName ref="PRS6819Mary" type="tabot">Mary</persName>, <persName         
+   ref="PRS10777Madhane" type="tabot">Madḫane ʿĀlam</persName>
+</ab>
+</egXML>
+            <p>If a tābot is dedicated to an inanimate entity, use a
+  <gi>ref</gi> with appropriate type to point to a
+  relevant ID, as in
+  <gi>ref type="authFile" corresp="Masqal"Cross/ref</gi>
+            </p>
+         </div>
+         <div type="level1">
+            <head>syriaca historical Geography schema alignment</head>
+            <p>to encode historical places we follow in the above and what follows
+  the Syriaca.org TEI manual for Historical Geography, with some
+  divergences due to our project</p>
+  
+  
+  
+  
+         </div>
+         <div type="level1">
+            <head>creating a new record or deciding between institution and
+  place</head>
+            <p>All Monasteries and Churches in PLACES have also a parallel in
+  Institutions. The two lists have different origins, PLACES comes from
+  EA indexes, while the INSTITUTIONS list is an export of the records in
+  EthioSPaRe for institutions.</p>
+            <p>Please, proceed as follows in case of doubt:</p>
+            <list type="ordered:arabic">
+               <item>
+                  <p>if the institution record for the institution you need does not
+      exist, create one and assign an id.</p>
+               </item>
+               <item>
+                  <p>leave the place record there, check the already existing
+      references to this place. This can be done either with xpath in
+      Oxygen or on the website looking at related entities.</p>
+               </item>
+               <item>
+                  <p>modify those references that actually point to an institution
+      and not to a place, if any.</p>
+               </item>
+            </list>
+            <p>with regard to automatically creating an institution record for all
+  churches and monastries in Places: is it true that all those with no
+  exception are also institutions holding manuscripts?</p>
+            <p>Please, markup entities referred to in the text of the fields into
+  <gi>note</gi> as described in the
+  <ref target="guidelines">guidelines</ref> A template with comments for
+  a place description is available
+  <ref target="https://github.com/SChAth/schema/blob/master/modelfilePlace.xml">here</ref>
+            </p>
+            <p>A template with comments for an Institution description is
+  available
+  <ref target="https://github.com/SChAth/schema/blob/master/modelfileInstitution.xml">here</ref>
+            </p>
+         </div>
+      </body>
+   </text>
+</TEI>

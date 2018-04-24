@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Revisions</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="revisions">
+         <head>Revisions</head>
+         <p>It is very important, at the end of each section of work of
+    improvement of a record to record a <gi>change</gi>in
+    the <gi>revisionDesc</gi> element of the
+    <gi>teiHeader</gi>. In the attribute
+    <att>who</att> enter your id, in the
+    <att>when</att> enter the date of the change, in the
+    format YYYY-MM-DD. Inside the element, briefly describe the changes
+    you have made.</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<revisionDesc>
+   <change when="2010-12-04">registered</change>
+   <change who="DN" when="2015-09-11T19:18:15.444Z">last edited</change>
+   <change who="PL" when="2016-03-10T17:51:23.806Z">transformed from mycore to TEI P5</change>
+</revisionDesc>
+</egXML>
+         <p>When you are done with a file, please, add a change element with
+    content <hi rendition="simple:bold">completed</hi>. If you have
+    reviewed and corrected a file which is now ready and published,
+    please add a change with content
+    <hi rendition="simple:bold">reviewed</hi>
+         </p>
+    
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Zotero</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+          </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="zotero">
+         <div type="level1">
+            <head>Zotero Bibliography Guidelines</head>
+            <p>When adding titles to the EthioStudies Group bibliography please
+  make sure you follow the rules:</p>
+            <list type="ordered:arabic">
+               <item>
+                  <p>Make sure that the entry is not there already. And make sure
+      that you choose the correct publication type (Journal article,
+      Encyclopedia article, etc.). For papers in Conference proceedings
+      - use "Book section" in Zotero, do not use
+      "Conference paper" as the publication type as then you
+      cannot enter series number and some other things in the mask.</p>
+               </item>
+               <item>
+                  <p>The titles must be quoted in full (not abbreviated), in the way
+      they appear on the frontispiece. All diacritics must be
+      preserved.</p>
+               </item>
+            </list>
+            <p>NOTES.</p>
+            <list type="ordered:loweralpha">
+               <item>
+                  <p>Titles in English should use maximal capitalization (i.e.
+      capitalize every words apart from articles and conjunctions),
+      unless the title is not originally in upper case, then follow the
+      capitalization as it appears on the book cover. Titles in
+      languages other than English should use minimal capitalization
+      (i.e. capitalize only the words which must be capitalized
+      according to the rules of the language in question, e.g. nouns in
+      German).</p>
+               </item>
+               <item>
+                  <p>The first word of subtitles should always be capitalized.</p>
+               </item>
+               <item>
+                  <p>The following punctuation should be used in titles:</p>
+               </item>
+            </list>
+            <list type="unordered">
+               <item>
+                  <p>The punctuation of the original title must be preserved.</p>
+               </item>
+               <item>
+                  <p>A colon (:) should be used between the main title and a
+      subtitle.</p>
+               </item>
+               <item>
+                  <p>If more subtitles are present, they should be divided by a
+      comma and capitalized.</p>
+               </item>
+               <item>
+                  <p>Use a full stop between titles in different languages in
+      publications with a double title. e.g.: Raineri, O. 1996.
+      <hi rendition="simple:italic">Santi e guerrieri a cavallo: Tele
+      etiopiche, Tele di Qēs Adamu Tesfaw. Warriors Saints on Horseback:
+      Ethiopian Paintings, Paintings by Qēs Adamu Tesfaw</hi> (Clusone:
+      Ferrari Edizioni, 1996)</p>
+               </item>
+            </list>
+            <list type="ordered:loweralpha">
+               <item n="4">
+                  <p>For titles in Ethiopic provide the original in fidäl, the
+      scientific transcription in brackets and the translation into
+      English.</p>
+               </item>
+               <item>
+                  <p>For titles in scripts other than Ethiopic (Arabic, Cyrillic,
+      etc.), provide the scientific transcription and translation only
+      (i.e. not the title in the original script).</p>
+               </item>
+               <item>
+                  <p>A translation in English is necessary for titles in any
+      language apart from the three in which Aethiopica accepts
+      publications (Italian, French and German).</p>
+               </item>
+               <item>
+                  <p>Pay attention not to incorporate in the title elements that do
+      not belong to it, e.g. information such as ‘edited and translated
+      by’.</p>
+               </item>
+               <item>
+                  <p>Journal names are quoted using only the 'main' name, i.e.
+      Aethiopica, not Aethiopica. International Journal of Ethiopian and
+      Eritrean Studies.</p>
+               </item>
+            </list>
+            <list type="ordered:arabic">
+               <item n="3">
+                  <p>The names of all authors, editors and translators must be
+      provided - in full and as they appear on the book. Make sure that
+      you enter editors as editors and authors as authors, not e.g.
+      editors as authors in the mask.</p>
+               </item>
+            </list>
+            <p>NOTE: Because of the HLCE style, if the SAME person is editor,
+  author and translator you need to insert their name in the Zotero mask
+  under EACH of their roles, otherwise the record will not appear
+  correctly once extracted. For instance: Colin, G. 1986.
+  <hi rendition="simple:italic">Le Synaxaire éthiopien, Mois de
+  maskaram</hi>, ed., tr. G. Colin, Patrologia Orientalis, 43/3 (195)
+  (Turnhout: Brepols, 1986). In Zotero, Colin's name needs to be
+  inserted in the fields: author, editor and translator.</p>
+            <list type="ordered:arabic">
+               <item n="4">
+                  <p>For the names of the authors/editors, Zotero has the option to
+      choose between the “Surname, First name” and simply “Name” (one
+      field) form. Make sure that you use 2 fields for occidental names,
+      and the 1-field mode for oriental (Ethiopian) names. You can
+      switch between the options clicking on the field to the right of
+      the name.</p>
+               </item>
+            </list>
+            <list type="ordered:loweralpha">
+               <item>
+                  <p>If the name of the authors is not given and not known, use
+      Anon. instead of the author's name.</p>
+               </item>
+               <item>
+                  <p>If the name of the authors is not given on the publication but
+      is known through other sources, the name may be given in square
+      brackets.</p>
+               </item>
+               <item>
+                  <p>Author's names in Zotero should be given in full as they appear
+      on the publication, but if the full first name is not available
+      please provide the initials as given on the book with full points
+      AND divided by a space (e.g. 'Mudimbe, V. Y.' and NOT 'Mudimbe, V
+      Y' OR 'Mudimbe, V.Y.' Titular prefixes (Sir, Revd, Dr, Captain,
+      etc.) are not needed unless their removal would mislead the
+      reader.</p>
+               </item>
+            </list>
+            <p>NOTE: The name of the person(s) appearing on the book should be
+  treated consistently with what was the author's and publisher's
+  intention: a person should be marked as an editor or a translator only
+  if this is explicitly written on the book cover and not because the
+  text is in our opinion an edition.</p>
+            <list type="ordered:arabic">
+               <item n="5">
+                  <p>In a multi-volume publication, each volume is a separate entry,
+      DO NOT merge volumes in one entry. Same is valid for article
+      series. Each separately printed piece is a separate Zotero entry.
+      Each volume gets a SEPARATE TAG.</p>
+               </item>
+               <item>
+                  <p>Each discrete printed entity that potentially may be quotable
+      separately is a separate Zotero entry. Meaning a collection
+      (Festschrift, Conference proceedings etc etc) get separate entries
+      as "Books", and each article in the collection gets its
+      own entry as "Book section". In electronic publications,
+      both the book and each chapter get independent DOIs.</p>
+               </item>
+               <item>
+                  <p>Same applies to articles consisting of sub-articles written by
+      different authors: the group article is an entry, but also each
+      sub-article by a different author is an entry of its own.</p>
+               </item>
+               <item>
+                  <p>In case of multiple reprints: always provide and primarily
+      quote the first version. Note that e.g. with CSCO the older series
+      volumes are not printed with Peeters in Louvain, and have
+      different series numbers – the original series numbers (Ser. II,
+      **), publication place (most often Parisiis), publisher and year
+      must be provided. All later reprints (Louvain, in the 1960s, with
+      the usual CSCO/SAe numbers) are separate, additional, Zotero
+      entries.</p>
+               </item>
+               <item>
+                  <p>If you import citations from an online source (e.g.
+      worldcat.org or JSTOR) make sure that they are correctly imported
+      and complete, <hi rendition="simple:bold">Never</hi> import from
+      specific library catalogues as you may inherit too many mistakes
+      and you risk to import a compilation created only in that specific
+      library and actually not existing elsewhere. Do not import any
+      library-specific data like shelfmarks, buildings, etc.</p>
+               </item>
+               <item>
+                  <p>Always provide the series (full title) and the series number
+      when they exist. For series+subseries combinations, the subseries
+      has to go with the series number (e.g. Series: Corpus Scriptorium
+      Christianorum Orientalium, Series Number: 552, Scriptores
+      Aethiopici, 101).</p>
+               </item>
+               <item>
+                  <p>Always provide the place of the publisher – in the FORM THEY
+      APPEAR ON THE COVER – i.e. for old books e.g. “Lugduni Batavorum”
+      and NOT “Leiden”</p>
+               </item>
+            </list>
+            <list type="ordered:loweralpha">
+               <item>
+                  <p>When no place of publication is given, use n.p. instead (it
+      means 'no place')</p>
+               </item>
+               <item>
+                  <p>Abbreviations in city’s and states name are written without
+      full point and without space in British English, e.g. Washington
+      DC not Washington D.C. or Washington D. C. or Washington, DC USA
+      not U.S.A or U. S. A.</p>
+               </item>
+            </list>
+            <list type="ordered:arabic">
+               <item n="12">
+                  <p>Always provide the publisher in the form he appears on the
+      cover (e.g. “Ex officina Danielis &amp; Abrahami à Gaesbeeck” and
+      not simply “Daniel &amp; Abraham” as modern catalogues may
+      list)</p>
+               </item>
+            </list>
+            <list type="ordered:loweralpha">
+               <item>
+                  <p>If the name of the publisher is in another script, e.g. fidäl
+      or Arabic, provide the name using the scientific transcription and
+      not the name in the original script or an English translation
+      (e.g. Täsfa Gäbrä Śǝllase mattämiya bet and NOT በተስፋ ገብረ ሥላሴ ማተሚያ
+      ቤት or Täsfa Gäbrä Śǝllase Press).</p>
+               </item>
+               <item>
+                  <p>If the name of the publisher is not given on the publication,
+      use n.pub. instead (it means 'no publisher')</p>
+               </item>
+            </list>
+            <list type="ordered:arabic">
+               <item n="13">
+                  <p>If the publication date is not given, please use n.d. (no
+      date).</p>
+               </item>
+               <item>
+                  <p>Most books can be found in HLCES/AAI/Stabi – check the physical
+      books. Some older books can be found on Googlebooks and/or
+      Archives, and articles on JSTOR and other repositories. In cases
+      when the publication is available online add URL/DOI in Zotero
+      mask.</p>
+               </item>
+               <item>
+                  <p>For related publications (translations, reprints, etc): you can
+      establish relations with Zotero.</p>
+               </item>
+               <item>
+                  <p>Use Roman numbers for specific volume number for
+      "Books" and Arabic numbers for volumes/issues for
+      Journals. Filling out the "# of Volume" field is not
+      requested, if you fill it out use Arabic number. Also "# of
+      pages".</p>
+               </item>
+               <item>
+                  <p>In case of 2nd/3rd etc edition: use the "Edition"
+      field, write in English only in this field, also for the books in
+      other languages (i.e. if the book says "Zweite Auflage"
+      you write "2nd edition).</p>
+               </item>
+               <item>
+                  <p>Manuscripts should be cited by city (in English), library (name
+      in the original language), collection (in the original language),
+      shelfmark. Examples: Milan, Biblioteca Ambrosiana, B. 21 inf
+      Vercelli, Biblioteca Capitolare, MS 117</p>
+               </item>
+               <item>
+                  <p>Do not use any abbreviations for journals, series, libraries,
+      etc.</p>
+               </item>
+               <item>
+                  <p>If the publisher cites more cities of publication, these can be
+      included in the bibliographic record separated by an n rule, e.g.
+      'Urbana–Chicago: University of Illinois Press'</p>
+               </item>
+               <item>
+                  <p>If there are more than one publisher involved and operating in
+      the same city, then the publishers’ name should be divided by an n
+      rule, e.g. 'Addis Ababa: CFEE–Institute of Ethiopian Studies'.</p>
+               </item>
+               <item>
+                  <p>If more publishers and more places of publication are involved,
+      these are separated by , (comma). E.g. 'London: James Currey,
+      Athens: Ohio University Press, Addis Ababa: Addis Ababa University
+      Press'.</p>
+               </item>
+               <item>
+                  <p>When the printing year on the book is expressed in a non-Common
+      Era calendar, then both years should be recorded: for instance,
+      for a book published in Ethiopia in 1982 EC = 1989/1990 CE write
+      in the field date '1989/1990' and in extra '1982 EC'</p>
+               </item>
+            </list>
+            <list type="ordered:loweralpha">
+               <item>
+                  <p>Please note that Zotero extraction of this type of records is
+      not perfect, but the bibliography tool will fix this for you.</p>
+               </item>
+               <item>
+                  <p>The abbreviations to be used are EC for Ethiopian Calendar and
+      H for Hegira.</p>
+               </item>
+            </list>
+            <list type="ordered:arabic">
+               <item n="24">
+                  <p>For bibliographic records in which the editorial and publishing
+      years are different, the editorial year is used as the point of
+      reference, as easier to define. E.g. Löfgren, O. 1962.
+      ‘Äthiopische Wandamulette’, Orientalia Suecana, 11 (1962, pub.
+      1963), 95–120. Both sets of information need to be input in
+      Zotero, with the editorial year (1962) given under 'Date' and the
+      publishing year given under 'Extra' as 'pub. 1963'.</p>
+               </item>
+               <item>
+                  <p>If you have a date across two years like 2011-2012, please
+      enter it both in the date filed as is and in extra with the
+      following syntax: "issued: 2011/2012" This will ensure
+      that both results printed with the HLZ styles from standalone and
+      API will be correct.</p>
+               </item>
+               <item>
+                  <p>Do not forget to test via the "export" function that
+      the titles appear the way you would want to see them in a
+      publishable bibliography. For quoting in publications of the
+      HLCES: use the Hiob Ludolf Centre for Ethiopian Studies style
+      provided in Zotero repository
+      (https://www.zotero.org/styles?q=hiob%20) – when you export your
+      bibliography with this style make sure it corresponds to the
+      appearance foreseen by the guidelines (e.g. here:
+      https://www.aai.uni-hamburg.de/en/comst/publications/bulletin.html)
+      - if not, maybe something is entered wrongly.</p>
+               </item>
+               <item>
+                  <p>NB: when creating tags note that these may be only ASCII
+      alphanumeric combinations, do not use diacritical symbols (umlauts
+      etc.)</p>
+               </item>
+               <item>
+                  <p>superscripts and subscripts should use
+      <gi>sup</gi> and
+      <gi>sub</gi>, as described here.
+      https://www.zotero.org/support/kb/rich_text_bibliography these can
+      be used also for cases in which the title contains formatting</p>
+               </item>
+               <item>
+                  <p>EACH Encyclopaedia entry must have volume and short title
+      indicated if you want to get the correct citation style for
+      Aethiopica. eg. ‘Mikaʾel Sǝḥul’, EAe, III (2007), 962b–964b (J.
+      Abbink)</p>
+               </item>
+               <item>
+                  <p>Do not upload PDFs in the group bibliography. If they are
+      necessary to substantiate your bibliographic entry, then please
+      add a note to explain what is in the pdf which provides evidence
+      for the decisions taken in entering the data in the record and
+      perhaps inform on the PDF availability.</p>
+               </item>
+               <item>
+                  <p>If your entry is to be used in BetaMasaheft or Dillmann Online,
+      then you need to add a tag with this format and using only latin
+      alphabet letters</p>
+               </item>
+            </list>
+            <p>bm:AuthorYYYYkeyword</p>
+            <p>Please make sure <hi rendition="simple:bold">this contains no
+  special characters, umlaut, underdots and other combining
+  diacritics</hi>, only digits and latin characters. To check that this
+  is unique, after saving the record in Zotero, click on the tag and
+  check that only one item has this tag. If not, change the keyword of
+  the tag just assigned.</p>
+         </div>
+      </body>
+   </text>
+</TEI>

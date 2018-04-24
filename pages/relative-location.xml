@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>relative location</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="relative-location">
+         <head>relative location</head>
+         <p>If the location of an ancient place which does not exist any more
+    is known only in relation to another place, you can use
+    <gi>location[@type='relative']</gi> and provide a
+    description, for example "5 days walk from Gondar". You
+    can encode with <gi>measure</gi> also the unit and
+    quantity of the distance if you can and want to.</p>
+         <p>example:</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<place type="port" sameAs="Q378940">
+               <placeName>Adulis</placeName>
+               <location type="relative" source="#FattovichMunro"><desc>20 stades from the actual port</desc></location>
+            <listBibl type="secondary">
+               <bibl xml:id="FattovichMunro">
+                  <ptr target="bm:FattovichMunro2003EnAeAdulis"/>
+               </bibl>
+            </listBibl>
+               <note></note>
+            </place>
+</egXML>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Team Ids</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+          </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="team ids">
+         <div type="level1">
+            <head>TEAM ids for use in <gi>author/@xml:id</gi> and
+  <gi>change/@who</gi>
+            </head>
+            <list type="unordered">
+               <item>
+                  <p>Prof. Dr. Alessandro Bausi = AB</p>
+               </item>
+               <item>
+                  <p>Solomon Gebreyes = SG</p>
+               </item>
+               <item>
+                  <p>Dr. Denis Nosnitsin = DN</p>
+               </item>
+               <item>
+                  <p>Eugenia Sokolinski = ES</p>
+               </item>
+               <item>
+                  <p>Massimo Villa = MV</p>
+               </item>
+               <item>
+                  <p>Dr. Pietro Liuzzo = PL</p>
+               </item>
+            </list>
+         </div>
+      </body>
+   </text>
+</TEI>

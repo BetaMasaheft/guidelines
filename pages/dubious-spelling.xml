@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Dubious spelling</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="dubious-spelling">
+         <head>Dubious spelling</head>
+         <p>The words listed below should be transliterated as follows,
+    according to the TraCES decisions:</p>
+         <list type="unordered">
+            <item>
+               <p>አእላፍ፡ | ʾaʾlāf (not ʾaʾǝlāf)</p>
+            </item>
+            <item>
+               <p>አዕይንት፡ | ʾaʿyǝnt (not ʾaʿǝyyǝnt)</p>
+            </item>
+            <item>
+               <p>እግዚአብሔር፡ | ʾƎgziʾabǝḥer (not ʾƎgziʾabḥer)</p>
+            </item>
+            <item>
+               <p>እሙንቱ፡ | ʾǝmuntu (not ʾǝmuntu)</p>
+            </item>
+            <item>
+               <p>እንድርያስ፡ | ʾƎndrǝyās (three consonants are accepted since the
+        first and the last are sonorant, not ʾƎndǝryās)</p>
+            </item>
+            <item>
+               <p>በእንተ፡ | baʾǝnta (not ba-ʾǝnta)</p>
+            </item>
+            <item>
+               <p>ባሕቱ፡ | bāḥǝttu (not bāḥtu)</p>
+            </item>
+            <item>
+               <p>ግዕዝ፡ | gǝʿz (not gǝʿǝz) [but this needs further
+        discussion]</p>
+            </item>
+            <item>
+               <p>ላዕለ፡ | lāʿla (not lāʿǝla)</p>
+            </item>
+            <item>
+               <p>ካዕበ፡ | kāʿǝba (not kāʿba)</p>
+            </item>
+            <item>
+               <p>ምዕራፍ፡ | mǝʿrāf (not mǝʿǝrāf)</p>
+            </item>
+            <item>
+               <p>መልእክት፡ | malʾǝkt (not malǝʿǝkt)</p>
+            </item>
+            <item>
+               <p>ጳጳስ፡ | ṗāṗās (not ṗāṗṗās)</p>
+            </item>
+            <item>
+               <p>ርእስ፡ | rǝʾs (not rǝʾǝs)</p>
+            </item>
+            <item>
+               <p>ርእየ፡ | rǝʾya (not rǝʾǝya)</p>
+            </item>
+            <item>
+               <p>ሰማዕታት፡ | samāʿtāt (not samāʿǝtāt)</p>
+            </item>
+            <item>
+               <p>ትእዛዝ፡ | tǝʾǝzāz (not tǝʾzāz)</p>
+            </item>
+            <item>
+               <p>ተአምር፡ | taʾammǝr (not taʾamǝr, taʾāmmǝr, or taʾāmǝr)</p>
+            </item>
+            <item>
+               <p>ያዕቆብ፡ | Yāʿqob (not Yāʿǝqob)</p>
+            </item>
+         </list>
+         <p>For other cases which raise questions, please open individual
+    issues.</p>
+      </body>
+   </text>
+</TEI>

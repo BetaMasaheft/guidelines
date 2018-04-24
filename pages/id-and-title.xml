@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>ID and Title</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="id-and-title">
+         <head>ID and Title</head>
+         <p>The manuscript ID should be composed of: - The abbreviation of
+    the institution holding the manuscript, as it is contained in the
+    insitution ID, written in capitals - The abbreviation of the
+    collection to which the manuscript belongs - a numeral: BAVet1 The
+    collection and the numeral should be given as they are in the
+    current/most commonly used official shelfmark of the manuscript.</p>
+         <p>If the manuscript has not yet been catalogued and/or has no shelf
+    mark, an ID has to created individually, following as much as
+    possible the usual process_ - The abbreviation of the institution
+    holding the manuscript, as it is contained in the institution ID,
+    written in capitals - If no more information is available, the ID
+    can be created with a work contained in the manuscript and a
+    numeral, such as: TMChronicle1</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<titleStmt>
+    <title>Senodos</title>
+    <editor key="DN"/>
+    <editor role="generalEditor" key="AB"/>
+    <funder>Akademie der Wissenschaften in Hamburg</funder>
+</titleStmt>
+</egXML>
+         <p>Authors and editors are referred to only by
+    <att>xml:id</att>. A <ref target="TEAMid">list of ids
+    of project members and editors is here</ref>
+         </p>
+         <p>The title should be intended as a generic title for this
+    manuscript record, which might refer to contents or identifiers. The
+    title should be made of all the normalized titles of the works
+    contained in the manuscript. If there are many different works which
+    would make the title too long, it is possible to create a more
+    generic title where this makes sense.</p>
+    
+      </body>
+   </text>
+</TEI>

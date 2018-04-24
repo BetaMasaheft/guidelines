@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Referencing the manuscript</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="referencing-the-manuscript">
+         <head>Referencing the manuscript</head>
+         <p>
+            <gi>locus</gi> element can be used almost
+    everywhere to indicate the physical location of an item. It contains
+    always the two attributes <att>from</att> and
+    <gi>to</gi>. Please do not use other numbering systems
+    or spaces within these attributes.</p>
+         <p/>
+         <p>When a line number is given, use:</p>
+         <list type="unordered">
+            <item>
+               <p>in case of an exact locus, line indicated by @n:
+        <tag>locus target="#1v" n="1"/</tag>
+               </p>
+            </item>
+            <item>
+               <p>in case of a range, lines indicated as a content :
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     <locus from="1v" to="2ra">the text begins on 1v in line 1 and ends on 2ra in line 6 </locus></egXML>
+        OR with two <gi>locus</gi> elements:
+        <tag>locus from="134rb" n="11"</tag> <tag>locus to="135ra" n="28"</tag>
+               </p>
+            </item>
+         </list>
+         <p>A list of individual references at page level (without line
+    indication) can be given in a single <gi>layout</gi>
+    with a <att>target</att>
+         </p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<locus target="#28v #33r #49r #50v #55v #82r #82v #83r #83v #84v #85r"/>
+</egXML>
+         <p>Please DO NOT use unknow as a value for any of this attributes.
+    Simply do not enter the attribute if its value is not known.</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+ <locus from="20r"/>
+</egXML>
+         <p>NOT
+    <tag>locus from="20r" to="unknown"</tag>
+         </p>
+         <p>A manuscript's existing foliation should not be shifted - it is
+    possible to point to folia not included in the foliation by
+    assigning individual leave numbers. This will lead to the inability
+    to calculate the foliation.</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+Two folios between <locus target="#66"/> and <locus target="#67"/>, <locus target="#66i"/> and <locus target="#66ii"/>, are so badly mutilated that only small corners - each not containing more than fragments of 4 letters - are preserved which have not been taken into account for the foliation of the manuscript.
+</egXML>
+    
+      </body>
+   </text>
+</TEI>

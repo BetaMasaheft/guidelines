@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Additional</title>
+        <author>Pietro Liuzzo</author>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+        <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body xml:id="additional">
+      <head>Additional</head>
+      <p>This is used for any other information related to the manuscript. Note <gi>surrogates</gi>
+        where for example microfilms or photographs should be recorded.</p>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+        <adminInfo>
+          <recordHist>
+            <source>
+              <listBibl type="catalogue">
+                <bibl>
+                  <ptr target="EMML"/>
+                  <citedRange unit="volume">V</citedRange>
+                  <citedRange unit="page">354-356</citedRange>
+                </bibl>
+              </listBibl>
+            </source>
+          </recordHist>
+          <custodialHist>
+            <custEvent type="restoration" subtype="modern"/>
+          </custodialHist>
+        </adminInfo>
+        <surrogates>
+          <bibl corresp="EMML1234"/>
+          <bibl corresp="ES4567"/>
+        </surrogates>
+        <listBibl>
+          <bibl>Ms. previously unknown</bibl>
+        </listBibl>
+      </egXML>
+      <p>For custodial history events use @subtype with one of the suggested values from the <ref
+          target="https://github.com/SChAth/Authority-Files/blob/master/Restoration.xml"
+          >corresponding taxonomy</ref>. oXygen should prompt them from the schema.</p>
+
+      <p>Here the <gi>msDesc</gi> or <gi>msPart</gi> ends. Check that all is well nested and that
+        all elements up to <gi>fileDesc</gi> are closed. *** ## Profile Description</p>
+      <div type="level3">
+        <head>People</head>
+        <p>Important people related to the manuscript can be listed in <gi>particDesc</gi> with a
+          list of pointers to names with a specific role. Allowed value of role here are * donor *
+          scribe * other * ...</p>
+        <p>Here it is enough to enumerate the scribe, owner, donor and patron, not everyone
+          mentioned in the manuscript. If this information has already been stated elswhere in the
+          description - which is preferable - it doesn't need to be repeated.</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <particDesc>
+            <listPerson>
+              <person>
+                <persName ref="PRS2232AubertR" role="donor"/>
+              </person>
+              <person>
+                <persName ref="PRS2233Audon" role="scribe"/>
+              </person>
+              <person>
+                <persName ref="PRS2233Audon" role="other"/>
+              </person>
+            </listPerson>
+          </particDesc>
+        </egXML>
+        <p>You can also be more precise and assign a @corresp to the <gi>persName</gi> if for
+          example a person has commissioned only a specific part.</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <person>
+            <persName role="patron" ref="PRS9170TaklaIy" corresp="#p1"/>
+          </person>
+        </egXML>
+
+      </div>
+      <div type="level3">
+        <head>Keywords</head>
+        <p>These keywords are used for the whole record. You can point use one or more of the values
+          provided for <att>key</att>. You can assign as many keywords as needed. This means that it
+          is not necessary to limit the keywords to the principal text, but keywords for any
+          additional or minor texts contained in the manuscript should also be assigned. Always
+          assign a period keyword, using the keywords referring to Ethiopian literary periods only
+          in records actually belonging to the Ethiopian tradition. The keywords
+          "ChristianLiterature", "IslamicLiterature" and "BetaEsraelLiterature" should be assigned
+          to all records belonging to these traditions.</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <textClass>
+            <keywords>
+              <term key="ChristianLiterature"/>
+              <term key="Gon"/>
+              <term key="Liturgy"/>
+            </keywords>
+          </textClass>
+        </egXML>
+
+      </div>
+      <div type="level3">
+        <head>Languages</head>
+        <p>within <gi>langUsage</gi> all languages used in the file should be defined. It is not a
+          problem if one of these statements is not relevant to the current record, but if another
+          language is used, it should be defined.</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <langUsage>
+            <language ident="en">English</language>
+            <language ident="it">Italian</language>
+            <language ident="gez">Gəʿəz</language>
+          </langUsage>
+        </egXML>
+        <p>If you add somewhere e.g.</p>
+        <p>, there should be a <gi>language</gi> element in <gi>langUsage</gi> like the
+          following</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <language ident="am">Amharic</language>
+        </egXML>
+        <p>the values of <att>ident</att> here are restricted, so you should not be able to add e.g.
+          amh as value for <att>ident</att> and consequently use it in the file as value of
+            <att>xml:lang</att>.</p>
+        <p>Regardless of the validity of this transliteration, Gəʿəz is always referred to by
+          "Gəʿəz" to ensure consistency.</p>
+
+      </div>
+    </body>
+  </text>
+</TEI>

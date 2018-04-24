@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Spaces</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="spaces">
+         <head>Spaces</head>
+         <p>Remember, in contents put spaces only where you really want them.
+    As much as you want.</p>
+         <p>this</p>
+         <cit>
+            <quote>
+<roleName type="title">ʾaṣe</roleName>Galāwdewos 
+</quote>
+         </cit>
+         <p>will always return this result</p>
+         <cit>
+            <quote>
+ʾaṣeGalāwdewos
+</quote>
+         </cit>
+         <p>if you want the space between ʾaṣe and Galāwdewos or any other
+    two words, please, remember to have it. On the other side, the
+    following two are equal in XML</p>
+         <cit>
+            <quote>
+<roleName type="title">ʾaṣe</roleName>                   Galāwdewos
+
+<roleName type="title">ʾaṣe</roleName>
+
+Galāwdewos
+</quote>
+         </cit>
+      </body>
+   </text>
+</TEI>

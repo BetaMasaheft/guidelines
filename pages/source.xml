@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>@source</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="source">
+         <head>@source</head>
+         <p>You can use the attribute <att>source</att> to point
+    to any xml:id within the file, most typically a bibl element to
+    which you have assigned one. This is especially relevant if evidence
+    is not clear and needs to be clearly attributed to a bibliographic
+    source.</p>
+         <p>example:</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<location source="#Smidt">
+                  <geo>14.1666 38.8333</geo>
+                  <height>1975 m</height>
+               </location>
+               <listBibl type="secondary">
+                  
+                  <bibl xml:id="Smidt">
+                     <ptr target="bm:Smidt2010EnAeTegray"/>
+                     
+                  </bibl>
+</listBibl>
+</egXML>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Transformation</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+          </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="transformation">
+         <p>Once you have your XML file nice and complete and you have validated
+it and all is green light, you might wish to test what you have done and
+see without tags. We have a test html view which you can use for this.
+it can be useful to check for white spaces, for information missing of
+mis typed, etc. This assumes you have set up you machine to have all the
+project repos in one folder called BetMes as described in the
+<ref target="Project-Workplace-Setup#github">github setup</ref> and that
+you have checked out and updated you ScAthiop repo.</p>
+         <p>Here is what you need to do to set up the transformation</p>
+         <list type="ordered:arabic">
+            <item>
+               <p>Open in oXygen the file you want to see in html</p>
+            </item>
+            <item>
+               <p>Click the little tool icon on the top which says Configure
+    Transformation scenario <figure>
+                     <head>Configure</head>
+                     <graphic url="https://github.com/SChAth/ScAthiop/blob/master/utility/img/1configTrScButton.png"/>
+                  </figure>
+               </p>
+            </item>
+            <item>
+               <p>The following window will appear <figure>
+                     <head>Configure</head>
+                     <graphic url="https://github.com/SChAth/ScAthiop/blob/master/utility/img/2ConfigTrScwindow.png"/>
+                  </figure>
+               </p>
+            </item>
+            <item>
+               <p>Now click on NEW and select "XML Transformation with
+    XSLT" <figure>
+                     <head>Configure</head>
+                     <graphic url="https://github.com/SChAth/ScAthiop/blob/master/utility/img/3newscenario.png"/>
+                  </figure>
+               </p>
+            </item>
+            <item>
+               <p>First thing, select from the Transformer menu the highest version
+    of SAXON available <figure>
+                     <head>Configure</head>
+                     <graphic url="https://github.com/SChAth/ScAthiop/blob/master/utility/img/4setTransformer.png"/>
+                  </figure>
+               </p>
+            </item>
+            <item>
+               <p>Now name your preview transformation <figure>
+                     <head>Configure</head>
+                     <graphic url="https://github.com/SChAth/ScAthiop/blob/master/utility/img/5giveName.png"/>
+                  </figure>
+               </p>
+            </item>
+            <item>
+               <p>You need now to tell oXygen where to find the XSLT to start the
+    transformation. Click on the browse icon and navigate into your
+    local ScAthiop repo <figure>
+                     <head>Configure</head>
+                     <graphic url="https://github.com/SChAth/ScAthiop/blob/master/utility/img/6browseforxslt.png"/>
+                  </figure>
+               </p>
+            </item>
+            <item>
+               <p>You will find there a preview folder with several xslt files,
+    select only <gi>preview.xslt</gi> 
+                  <figure>
+                     <head>Configure</head>
+                     <graphic url="https://github.com/SChAth/ScAthiop/blob/master/utility/img/7selectxslt.png"/>
+                  </figure>
+               </p>
+            </item>
+            <item>
+               <p>You should be back to the previous window, then click the Output
+    tab on top and lets set where the results of your transformation
+    will be saved. <figure>
+                     <head>Configure</head>
+                     <graphic url="https://github.com/SChAth/ScAthiop/blob/master/utility/img/8setOutput.png"/>
+                  </figure>
+               </p>
+            </item>
+            <item>
+               <p>there is a folder prepared for your output. Please, save it there
+    to avoid confusion in other folders. It is always in
+    ScAthiop/preview/html <figure>
+                     <head>Configure</head>
+                     <graphic url="https://github.com/SChAth/ScAthiop/blob/master/utility/img/9selectfolderforOutput.png"/>
+                  </figure>
+               </p>
+            </item>
+            <item>
+               <p>leave a random name, we will than change it. <figure>
+                     <head>Configure</head>
+                     <graphic url="https://github.com/SChAth/ScAthiop/blob/master/utility/img/10setfilename.png"/>
+                  </figure>
+               </p>
+            </item>
+            <item>
+               <p>once you have selected the folder and given a mock name, we will
+    substitute that name with a function which will give the same name
+    as your original file. click on the little green arrow pointing down
+    and select ${cfn} current file name. We want to change the
+    extension, so, after entering that type <gi>.html</gi>
+                  <figure>
+                     <head>Configure</head>
+                     <graphic url="https://github.com/SChAth/ScAthiop/blob/master/utility/img/11checkfilenameextension.png"/>
+                  </figure>
+               </p>
+            </item>
+            <item>
+               <p>I would suggest also to open directly in your browser the saved
+    file, ticking the option right there. <figure>
+                     <head>Configure</head>
+                     <graphic url="https://github.com/SChAth/ScAthiop/blob/master/utility/img/12TickOpenInBrowser.png"/>
+                  </figure>
+               </p>
+            </item>
+            <item>
+               <p>All set! Apply and enjoy! <figure>
+                     <head>Configure</head>
+                     <graphic url="https://github.com/SChAth/ScAthiop/blob/master/utility/img/13Apply.png"/>
+                  </figure>
+               </p>
+            </item>
+         </list>
+         <p>Attention!</p>
+         <list type="unordered">
+            <item>
+               <p>if oXygen says the file ended prematurely, it is highly likely
+    that something is wrong with your pointers to Zotero, as this is the
+    only live api call being done.</p>
+            </item>
+            <item>
+               <p>To correctly see bibliography citations and maps you need to be
+    online when you transform.</p>
+            </item>
+            <item>
+               <p>There are a series of tests embedded in this transformation, to
+    help check your contents. For example if a person id does not exist,
+    you will see a bold red sentence telling you about it. Fix the issue
+    and the transform will be fine.</p>
+            </item>
+            <item>
+               <p>The Transformation will first check the type of file and will
+    return a slightly different view for each different entity type.
+    Note that THE HTML IS SCHOOL BASIC as this serves only the purpose
+    of testing contents.</p>
+            </item>
+         </list>
+         <p>
+            <ref target="guidelines">guidelines</ref>
+         </p>
+      </body>
+   </text>
+</TEI>

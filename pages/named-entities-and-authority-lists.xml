@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Named Entities and authority lists</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="named-entities-and-authority-lists">
+         <head>Named Entities and authority lists</head>
+         <p>Throughout the document <gi>placeName</gi> and
+    <gi>persName</gi> will take a
+    <att>ref</att> containing the
+    <gi>xml:id</gi> of the place or person record.</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<placeName ref="LOC2969Ensala"/>
+</egXML>
+         <p>
+            <gi>repository</gi> takes a
+    <att>ref</att> as well, pointing to the institution id,
+    which will contain further place pointers.</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+     <repository ref="INS0030Addaqaharsi"/>
+</egXML>
+         <p>If the manuscript is lost and its current repository is not
+    known, write</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<repository>Lost</repository>
+</egXML>
+         <p>
+            <gi>title</gi> takes a <att>ref</att>
+    as well, pointing to the work id, which will contain the standard
+    edition of the text.</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+ <title ref="LIT1013ActaSa"/>
+</egXML>
+         <p>Variant titles, translations of the title, etc. will be contained
+    in the <ref target="guidelinesWork">file for that work</ref>.</p>
+         <p>Before creating new entities for PLACES like Stuttgart, Paris,
+    London, etc. which unlike all institutions are very much unlikely to
+    receive specific descriptions by this project, use external links to
+    geonames ids as follows.</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<country ref="gn:2017370"/> 
+<settlement ref="gn:498817"/>
+</egXML>
+         <p>(same for placeName and region)</p>
+         <p>to decide whether to create a new place record or not if in
+    doubt, try the following. * check if there is a record already in
+    our list * if yes, then 1. check if there is also a wikidata item
+    (you can simply google what you are looking for, open the correct
+    wikipedia page you find and hit the wikidata item link on the left.
+    * if yes add a @sameAs attribute with the Q id in the url or at the
+    top of the item. 1. check if there is also a record in geonames.org
+    * if yes add a @sameAs attribute to place linking to such geonames
+    id. * if not leave the record 1. add a ref to our record * if not,
+    then 1. check if there is also a wikidata item 1. check if it is in
+    geonames.org * if yes add the uri in the @ref * if not (but check
+    thoroughly, because it would be an exception) create a new place
+    record</p>
+         <p>generally, when possible I would always prefer an external link
+    to an authority file for places out of scope which we are not going
+    to describe or give details about. If there is already a record, no
+    need to delete it or update it. Simply add the geonames ID.</p>
+         <p>adding references to places not in our db: * for ancient place
+    prefere pleiades, with namespace pleiades: * for places related to
+    coptic literary tradition use PAThs paths:</p>
+         <div type="level3">
+            <head>Dates</head>
+            <p>Dates anywhere in the text quoted can be tagged with
+      precision</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<date calendar="ethiopian" when="1888" when-custom="1881" evidence="internal">፲ወ፰፻፹ወ፩ ዓመት፡ ምሕረት፡ </date>
+</egXML>
+            <p>
+               <att>when</att> always carries the standard ISO
+      date in the gregorian calendar, while the
+      <att>when-custom</att> (or notBefore-custom,
+      notAfter-custom) can hold the value in the calendar specified by
+      <att>calendar</att>.</p>
+            <p>BCE dates are therefore expressed with -:
+      <gi>death when="-0931"/</gi>
+            </p>
+            <p>date expressing a duration rather than a point in time, might
+      use the <att>dur</att>
+               <ref target="https://www.w3.org/TR/xmlschema-2/#duration">following
+      w3c recommendations</ref>. A period of 10 years and 5 months would
+      be encoded as</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<date dur="P10Y5M"/>
+</egXML>
+            <table>
+               <row role="label">
+                  <cell>
+                     <p>attribute</p>
+                  </cell>
+                  <cell>
+                     <p>value</p>
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <p>@when</p>
+                  </cell>
+                  <cell>
+                     <p>ISO gregorian date</p>
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <p>@when-custom</p>
+                  </cell>
+                  <cell>
+                     <p>date in specified calendar</p>
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <p>@notBefore</p>
+                  </cell>
+                  <cell>
+                     <p>date range limit</p>
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <p>@notAfter</p>
+                  </cell>
+                  <cell>
+                     <p>date range limit</p>
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <p>@notBefore-custom</p>
+                  </cell>
+                  <cell>
+                     <p>date range limit in specified calendar</p>
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <p>@notAfter-custom</p>
+                  </cell>
+                  <cell>
+                     <p>date range limit in specified calendar</p>
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <p>@dur</p>
+                  </cell>
+                  <cell>
+                     <p>duration</p>
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <p>@type</p>
+                  </cell>
+                  <cell>
+                     <p>type of date (reign, lifespan, etc.)</p>
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <p>@calendar</p>
+                  </cell>
+                  <cell>
+                     <p>specified calendar according to list</p>
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <p>@resp</p>
+                  </cell>
+                  <cell>
+                     <p>with the id of responsible</p>
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <p>@cert</p>
+                  </cell>
+                  <cell>
+                     <p>certainty low, medium or high (default)</p>
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <p>@evidence</p>
+                  </cell>
+                  <cell>
+                     <p>especially for date assigned to something, with set
+          of values</p>
+                  </cell>
+               </row>
+            </table>
+         </div>
+         <div type="level3">
+            <head>In-text placeName and persName</head>
+            <p>All information related to places or people should be stored in
+      the respective place or person record. If a long description needs
+      to be provided, then the name of the place might not be
+      omitted.</p>
+            <quote>
+               <p>The manuscript was perhaps found in
+        <gi>placeName ref="LOC2969Ensala"ʾƎnsalāle/placeName</gi>
+        but there is no agreement about this.</p>
+            </quote>
+            <p>There are some standard
+      <ref target="guidelines#people">typologies of persons</ref>
+      identified in the record description which can be used.</p>
+            <p>Information about a place should be entered in the TEI record
+      for that person following the
+      <ref target="guidelinesPlace">guidelines for a Place
+      entity</ref>.</p>
+            <p>Information about a person should be entered in the TEI record
+      for that person following the
+      <ref target="guidelinesPerson">guidelines for a Person
+      entity</ref>.</p>
+            <quote>
+               <p>IF YOU CHANGE AN ID, YOU SHOULD ALSO MAKE SURE TO UPDATE ANY
+        REFERENCE IN ANY FILE WHICH ALREADY CONTAINS IT</p>
+            </quote>
+      
+            <p>Filenames and IDs should correspond EXACTLY and as always they
+      are case sensitive. The main xml:id of a record is directly into
+      the <gi>TEI</gi> root element.</p>
+            <p>
+               <gi>TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PRS1009Abakaraz"</gi>
+            </p>
+         </div>
+         <div type="level3">
+            <head>roleName and @role</head>
+            <p>The titles of persons, such as ʾabbā, wayzaro, makʷannǝn etc.,
+      should be encoded with
+      <gi>roleName type="title"</gi> at
+      the place in the texts where they occur. In order to be reasonably
+      retrievable, <gi>roleName</gi> always has to
+      be encoded within <gi>persName</gi>. The
+      name of the person can be typed in the
+      <gi>persName</gi>, or, if avoiding typing it
+      is preferable, the <gi>persName</gi> element
+      with the same ID can be repeated immediately after the first
+      <gi>persName</gi> which contains
+      <gi>roleName</gi>:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+It lists the books belonging to <persName ref="PRS10796Tasfo"><roleName type="title">ʾabbā</roleName></persName><persName ref="PRS10796Tasfo"/>
+</egXML>
+            <p>and</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+It lists the books belonging to <persName ref="PRS10796Tasfo"><roleName type="title">ʾabbā</roleName> Tasfo</persName>
+</egXML>
+            <p>will both be visualized as: It lists the books belonging to
+      ʾabbā Tasfo.</p>
+            <p>Therefore, if only the title encoded should be visualized
+      (without the name of the person it refers to), it should be marked
+      up in the following way:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+he was also appointed as <persName ref="PRS5309hesanMo"><roleName type="title">qāla nǝguś</roleName></persName> of King <persName ref="PRS2334BaedaM">Baʾǝda Māryām I</persName>
+</egXML>
+            <p>The use of <gi>roleName</gi> has to be
+      clearly separated from the use of @role. The first is used to mark
+      up a concrete title mentioned in a text, the second specifies the
+      role the person has in regard to the record in which it is
+      mentioned. This applies for instance to scribes or owners of
+      manuscripts.</p>
+            <p>If possible, persNames should take a
+      <att>role</att> where relevant in the description,
+      and then don't need to be listed again in
+      <gi>listPers</gi>:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<item xml:id="e1">
+<locus target="#60v #143r #144r #152v #167v #171r #173r #189v #192r #234r #255r"/> 
+<desc>The names of the owner <persName role="owner" ref="PRS11297ZenaG"/> and his wife <persName ref="PRS11298SeyonM"/> are mentioned several times.</desc>
+</item>
+</egXML>
+            <p>If there is no sensible place within the description, then the
+      information on the role can also be encoded in
+      <gi>listPers</gi> in
+      <gi>particDesc</gi>.</p>
+         </div>
+      </body>
+   </text>
+</TEI>

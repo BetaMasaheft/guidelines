@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>history</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>documentation page produced ad hoc</p>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change who="PL" when="2018-04-24">stub of page</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="history">
+         <div>
+            <head>history</head>
+            <p/>
+         </div>
+      </body>
+   </text>
+</TEI>

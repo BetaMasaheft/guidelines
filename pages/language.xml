@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>language</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="language">
+         <head>language</head>
+         <p>The TEI file is in english. Please, make sure you use
+    <att>xml:lang</att> with the appropriate value for each
+    element containing text in a different language. If the content of
+    the element is mixed, please, use <gi>foreign</gi>
+         </p>
+         <cit>
+            <quote>
+ <p> <foreign xml:lang="gez">ሄሮድያዳ፡</foreign> <foreign xml:lang="grc">Ἡροδιάδα</foreign> </p>
+</quote>
+         </cit>
+         <p>
+            <gi>foreign</gi> should also be used for
+    transliterated words:</p>
+         <p>
+            <gi>p foreign xml:lang="gez"salām/foreign /p</gi>
+         </p>
+      </body>
+   </text>
+</TEI>

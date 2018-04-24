@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>References</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="references">
+         <head>References</head>
+         <p>Any <att>xml:id</att> within the file can be pointed
+    to with an element <gi>ref</gi> with a
+    <att>target</att> attribute. oXygen will not let you
+    enter a double id, and will pull up a list of
+    <att>xml:id</att> when you attempt to enter
+    <att>target</att> or
+    <att>corresp</att>
+         </p>
+         <cit>
+            <quote>
+<ref target="#p1"/>
+</quote>
+         </cit>
+         <p>This example will point to the <gi>msPart</gi> with
+            <att>xml:id</att>="p1". I the preview you will see it
+    as ’n. p1’ with a link to the point in the resource you are speaking
+    of. You can also use this to mark up a value, e.g.</p>
+         <cit>
+            <quote>
+this happens also in <ref target="#q14">the final quire</ref>
+</quote>
+         </cit>
+         <p>this will preserve your text. However, please note that multiple
+    references will be splitted in several links, so having something
+    like</p>
+         <cit>
+            <quote>
+this happens also in <ref target="#q14 #q15">the final quires</ref>
+</quote>
+         </cit>
+         <p>will not return the text in the element but the values of the
+    targets.</p>
+         <p>You can also use <att>target</att> to point to
+    external resources. In this case, please enter the full url,
+    including http.</p>
+         <p>If you are adding a reference, please simply mark it up using
+    placeName, persName, etc. If you want to refer to another entity in
+    the project but you don’t want to mark up the entity you can use
+    <gi>ref</gi> with <att>corresp</att> as
+    follows. This is intended to be useful especially for pointing
+    directly to a particular part of a manuscript description, e.g. a
+    hand or a quire or a part. This should also be used to refer to
+    specific works.</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<ref type="mss" corresp="ESap001">AP-001</ref>
+<ref type="work" corresp="LIT4018Mashafa"/>
+</egXML>
+         <p>In <att>corresp</att> don’t start with a
+    # but use it if you are referring to a
+    specific part of the quoted manuscript.</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+This manuscript is in the same hand as <ref type="hand" corresp="ESap002#h2"/>
+</egXML>
+         <p>Please specify the <att>type</att> for each
+    reference. The values of type are</p>
+         <list type="unordered">
+            <item>
+               <p>mss</p>
+            </item>
+            <item>
+               <p>title</p>
+            </item>
+            <item>
+               <p>mspart</p>
+            </item>
+            <item>
+               <p>author</p>
+            </item>
+            <item>
+               <p>place</p>
+            </item>
+            <item>
+               <p>item</p>
+            </item>
+            <item>
+               <p>hand</p>
+            </item>
+            <item>
+               <p>quire</p>
+            </item>
+            <item>
+               <p>binding</p>
+            </item>
+            <item>
+               <p>work</p>
+            </item>
+            <item>
+               <p>ins</p>
+            </item>
+            <item>
+               <p>pers</p>
+            </item>
+            <item>
+               <p>group</p>
+            </item>
+            <item>
+               <p>deco</p>
+            </item>
+            <item>
+               <p>authFile</p>
+            </item>
+         </list>
+         <p>To link to a manuscript in vHMML, please, use the provided
+    permalink in the metadata.</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+ <ref type="mss" target="https://w3id.org/vhmml/readingRoom/view/133001"/>
+</egXML>
+         <p>For citations, like Matthew 14, 3 use ref with a @cRef containing
+    the urn which you can get from Perseus catalogue searching for the
+    passage.</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+ <ref cRef="urn:cts:greekLit:tlg0031.tlg001.perseus-grc1:14.3">Matthew 14, 3</ref> 
+</egXML>
+         <p>You can also point to our texts for example to Numbers 21, 8 like
+    this</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+ <ref cRef="urn:dts:betmas:LIT2075Number:21.8">Numbers 21:8</ref> 
+</egXML>
+         <p>To mark up a passage in the text which is a literal quotation of
+    another text you might use <gi>cit</gi>
+         </p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<cit>
+    <quote xml:lang="gez">
+         ለሙሴ᎓ ግበር᎓ ለከ᎓ አርዌ᎓ ምድር᎓ ዘብረት᎓ ኵሉ᎓ ዘነሰኮ᎓ ይርአይ᎓ ኪያሁ᎓ ወይሕየው᎓ ኪዮስ᎓
+    </quote>
+    <ref cRef="urn:dts:betmas:LIT2075Number:21.8">Numbers 21:8</ref>
+</cit>
+</egXML>
+    
+      </body>
+   </text>
+</TEI>

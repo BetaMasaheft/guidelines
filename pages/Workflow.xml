@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Workflow</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+          </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="workflow">
+         <div type="level1">
+            <head>Create a new record</head>
+  
+  
+         </div>
+         <div type="level1">
+            <head>batch editing files</head>
+            <p>You can find and replace strings or regex patterns thourough the
+  data in Oxygen for example. Please, make sure you - untick the option
+  to create .bak files - in case you forget, and such files are created,
+  please DO NOT commit them - before replacing all, you will be asked if
+  you want to preview. this is always wise and gives you one more
+  occasion to spot check your changes before performing the action</p>
+            <p>In case you have anyway made a mistake remember that - before
+  committing data you can review in Git desktop the changes and discard
+  them if they are wrong. - if you have committed, pushed and you
+  realize it was a big mistake, you can still revert your own commit</p>
+         </div>
+         <div type="level1">
+            <head>keeping track</head>
+            <p>To keep track of the workflow we use the google drive file linked
+  above. PLEASE, note the guidelines for color coding. Use the tabs
+  below to switch between categories each line in the file corresponds
+  to a file in the corresponding GIThub Repo. https://github.com/SChAth
+  * color the text in red if an entry has been added to the spreadsheet,
+  but the file still needs to be created * color the text black and the
+  cell yellow once the file has been created and is in repo * to submit
+  a file for review color it purple * Alessandro should color green
+  approved records * Pietro will make blue records already online. This
+  will be subject to a different update workflow.</p>
+         </div>
+      </body>
+   </text>
+</TEI>

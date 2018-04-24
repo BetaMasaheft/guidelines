@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Text Encoding</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="text-encoding">
+         <head>Text Encoding</head>
+         <p>TEI records are for <hi rendition="simple:bold">Text</hi>
+    encoding. We record in Manuscripts records the Transcription of the
+    text on the catalogued manuscript, when available, whilst the edited
+    text or the theoretical structure of it should be recorded into the
+    Work Entity. Text is entered in the <gi>body</gi> of a
+    TEI file under into a <gi>div[@type='edition']</gi> .
+    Each text part should be contained into a
+    <gi>div</gi>. <gi>div</gi>s should
+    always be well nested one into the other. These will always take a
+    <att>subtype='textpart'</att> and a
+    <att>subtype</att> with the desired value. There should
+    always be also a @n identifying for example chapter 3 as well as a
+    <att>corresp</att> pointing to the appropriate
+    <gi>msPart</gi> or <gi>msItem</gi>
+         </p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+
+<div type="textpart" subtype="chapter" n="7" corresp="#ms_i3" xml:id="chapter7" xml:lang="gez">
+    <ab>
+      <locus target="#103"/>
+      <l n="1">በቀዳማዊ፡ ዐመተ፡ መንግሥቱ፡ ለበልጣሰር፡ ንጉሠ፡ ከለዴዎን፡ ሐለመ፡ ዳንኤል፡ ሕልመ፡ ወርእየ፡
+        ርእሶ፡ በውስተ፡ ምስካቡ፡ ወጸሐፈ፡ ሕልሞ። </l>
+      <l n="2">አነ፡ ዳንኤል፡ ሐለምኩ፡ ወርእኩ፡ አርባዕተ፡ ነፋሳተ፡
+        ነፍኁ፡ ውስተ፡ ባሕር፡ ዐቢይ፡ </l>
+      <l n="3">ወዐርጉ፡ አራዊት፡ አርባዕቱ፡ ዐበይት፡ እምባሕር፡ ኅቡረ፡ ወቀዳማዊ፡ </l>
+      <l n="4">ከመ፡ አንበሳዊት፡ ወባቲ፡ ክንፈ፡ ወክንፊሃኒ፡ ከመዝ፡ ንስር፡ ወርኢኩዋ፡ ውስከ፡ ተመልኀ፡ ክንፊሃ፡
+        ወተንሥአት፡ ወቆመት፡ በእግረ፡ ሰብእ፡ ዲበ፡ ምድር፡ ወልበ፡ ሰብእ፡ ተውህበ፡ ላቲ።</l>
+    </ab>
+  </div>
+</egXML>
+         <p>Note that after each word there should be a separator or
+    punctuation without space.</p>
+         <p>
+            <gi>locus</gi> can be used but will be printed as
+    (Excerpt from... ). If the text contains biblical verses we will use
+    <gi>l</gi> as in the example above. Also
+    <gi>lb</gi> can be used to mark linebreaks. Be
+    carefull: <gi>ab</gi> should be only in the lowest
+    level div nesting!</p>
+         <div type="level3">
+            <head>Text Diplomatic Transcription features</head>
+            <p>PLEASE, NOTE THAT THIS ELEMENTS CAN BE USED EVERYWHERE YOU HAVE
+      TEXT, FOR EXAMPLE IN ADDITIONS, IN INCIPIT AND EXPLICIT.</p>
+            <div type="level4">
+               <head>Text Structure</head>
+               <p>Use an empty <gi>pb</gi> for each page break.
+        this takes a @n which will have the folio number, e.g.
+        <gi>pb n="41r"/</gi> If there
+        are columns, use the element <gi>cb</gi> as in
+        this example
+        <gi>cb n="a"/</gi>
+               </p>
+            </div>
+            <div type="level4">
+               <head>Hand Shifts</head>
+               <p>Where a new hand begins insert an element
+        <gi>handShift</gi> with a
+        <att>new</att> pointing to the id of the hand in
+        <gi>handNote</gi>
+               </p>
+               <cit>
+                  <quote>
+ <handShift new="#h2"/>
+</quote>
+               </cit>
+            </div>
+            <div type="level4">
+               <head>Additions, notes, etc.</head>
+               <p>For text related additions and marginal notes not reported
+        under <gi>additions</gi>, use
+        <gi>add</gi>:</p>
+               <cit>
+                  <quote>
+ <add place="top" hand="#h5">ገድለ፡ ላሊበላ፡ ዘቅዱስ፡ መድኃኔ፡ ዓለም፡</add>
+</quote>
+               </cit>
+               <p>The <att>place</att> has specific values, as the
+        schema will tell you. Please read carefully when choosing.</p>
+               <p>Always point to the <gi>handDesc</gi>
+                  <gi>xml:id</gi>s of each
+        <gi>handNote</gi> in a @hand attribute if you know
+        who added a specific text or letter.</p>
+            </div>
+            <div type="level4">
+               <head>In text</head>
+               <p>You might have to encode excerpts or text. Please see
+        BLorient719.xml for an example including some of these markup,
+        or BDLaethe3.xml .</p>
+               <table>
+                  <row role="label">
+                     <cell>
+                        <p>description</p>
+                     </cell>
+                     <cell>
+                        <p>tag</p>
+                     </cell>
+                     <cell>
+                        <p>usage</p>
+                     </cell>
+                     <cell>
+                        <p>current preview</p>
+                     </cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>red inks</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>hi[@rend='rubric']</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                     <cell>
+                        <p>text red</p>
+                     </cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>later correction</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>add[@hand, @place]</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                     <cell>
+                        <p>/text/</p>
+                     </cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>text deleted removing material and
+            rewritten</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>subst/del[@rend'erasure'] and add[@place'overstrike']</gi>
+                        </p>
+                     </cell>
+                     <cell>
+                        <p>the top layer of the parchment was removed and the
+            text was written again.</p>
+                     </cell>
+                     <cell>
+                        <p>{text}</p>
+                     </cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>marginal signs</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>emph</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                     <cell>
+                        <p>[word]</p>
+                     </cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>a sign, pointing to the place where the text should
+            be added</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>gap reason="illegible" unit="chars" quantity="1"/</gi>
+                        </p>
+                     </cell>
+                     <cell>
+                        <p>you can vary unit and quantity. for characters, you
+            will get a plus sign for each missing character</p>
+                     </cell>
+                     <cell>
+                        <p>+</p>
+                     </cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>spaces left blank for rubrication, never
+            filled</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>space reason="rubrication" unit="chars" quantity="1"/</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                     <cell>
+                        <p>(@quantity @unit left for rubrication)</p>
+                     </cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>underlined text</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>hi[@rend="underline"]</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                     <cell>
+                        <p>underlined</p>
+                     </cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>unclear letters or words</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>unclear</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                     <cell>
+                        <p>word/letter?</p>
+                     </cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>undeciphrable words</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>orig</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                     <cell>
+                        <p>text grey</p>
+                     </cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>Words or lines skipped in omitted by the editor in
+            transcription</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>gap[@reason='omitted']</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                     <cell>
+                        <p>.....</p>
+                     </cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>Text omitted from the edition by the editor, for
+            whatever reason (brevity, context, language,
+            etc.)</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>gap[@reason='ellipsis']</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                     <cell>
+                        <p>(...)</p>
+                     </cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>Lost text</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>gap[@reason='lost']</gi>
+                        </p>
+                     </cell>
+                     <cell>
+                        <p>used to indicate a material loss or a portion of
+            text that is to be hypothesized for material reasons
+            ("it was there!"), but which is lost for loss of
+            the material</p>
+                     </cell>
+                     <cell>
+                        <p>[- ca. @quantity @unit -]</p>
+                     </cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>text supplied by editor</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>supplied[@reason='lost']</gi>
+                        </p>
+                     </cell>
+                     <cell>
+                        <p>are used to indicate some portions of text that
+            were restored on the basis of philological and textual
+            considerations</p>
+                     </cell>
+                     <cell>
+                        <p>[the supplied text]</p>
+                     </cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>text supplied by editor</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>supplied[@reason='omitted']</gi>
+                        </p>
+                     </cell>
+                     <cell>
+                        <p>are used to indicate some portions of text that
+            were integrated on the basis of philological and textual
+            considerations</p>
+                     </cell>
+                     <cell>
+                        <p>&lt;the supplied text&gt;</p>
+                     </cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>text supplied by editor</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>supplied[@reason='undefined']</gi>
+                        </p>
+                     </cell>
+                     <cell>
+                        <p>please do not use this unless really necessary
+            there are other nice options.</p>
+                     </cell>
+                     <cell>
+                        <p>[the supplied text (?)]</p>
+                     </cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>text supplied by copist in the
+            manuscript</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>ቃል፡ ዘ&lt;add place="inline"&gt;&lt;supplied reason="omitted"&gt;ማ&lt;/supplied&gt;&lt;/add&gt;ርቆስ፡ ፼ወ፯፻</gi>
+                        </p>
+                     </cell>
+                     <cell>
+                        <p>see above for supplied and below for add</p>
+                     </cell>
+                     <cell>
+                        <p>&lt;the omitted text&gt; with a tooltip giving info
+            on the position</p>
+                     </cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>correction</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>choice[sic[@resp] and corr[@resp]]</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                     <cell>
+                        <p>this will print the corrected version in bold and a
+            tooltip which reports the original version and the author of
+            it clicking on the correct form will toogle the
+            other</p>
+                     </cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>written upside down</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>hi[@rend='reversed']</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>written in negative writing</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>hi[@rend='negative']</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>text erased (scratched with a knife or
+            similar)</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>del[@rend=erasure]</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                     <cell>
+                        <p>〚deleted text (when still legible)〛</p>
+                     </cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>text crossed out with red or black ink, a line or
+            dashes</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>del[@rend=strikethrough]</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>text marked with dots above or below the
+            line</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>del[@rend=exponctuated]</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>text deleted or washed out, the material is
+            untouched</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>del[@rend=effaced]</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>text added above</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>add[@place=above]</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                     <cell>
+                        <p>all these will also have a popup indicating where
+            the text was added</p>
+                     </cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>text added below the line</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>add[@place=below]</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>text added at the bottom</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>add[@place=bottom]</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>text added within the body of the text</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>add[@place=inline]</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>text added interlinear</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>add[@place=interlinear]</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>text added at the left</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>add[@place=left]</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>text added in the margin</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>add[@place=margin]</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>text added mixed</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>add[@place=mixed]</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>text added on the opposite, i.e. facing,
+            page</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>add[@place=opposite]</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>text added on the other side of the leaf</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>add[@place=overleaf]</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>text written over previously deleted
+            text</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>add[@place=overstrike]</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>text added at the right</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>add[@place=right]</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>text added at the top</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>add[@place=top]</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>text added at an unspecified place</p>
+                     </cell>
+                     <cell>
+                        <p>
+                           <gi>add[@place=unspecified]</gi>
+                        </p>
+                     </cell>
+                     <cell/>
+                  </row>
+               </table>
+               <p>TEI is made for this and there are a number of other things
+        which can be much better and more precisely encoded.</p>
+               <p>When the record does not yet contain any text transcription,
+        but information about some of the above listed phenomena is
+        available, this should be stated temporarily in a note with a
+        commentary for future changes in the respective msItem:</p>
+               <p>
+                  <gi>noteThis prayer is written in negative writing. /note !--Information belongs to text transcription--</gi>
+               </p>
+               <p>Note, however, the different usage for the information about
+        rubrication.</p>
+            </div>
+         </div>
+         <div type="level3">
+            <head>Critical Apparatus</head>
+            <p>Typically a Work file, but also manuscript transcriptions can
+      have critical apparatus.</p>
+            <p>We follow the TEI guidelines for
+      <ref target="http://www.tei-c.org/Vault/P5/2.9.1/doc/tei-p5-doc/en/html/TC.html#TCAPLK">Location
+      Referenced External Apparatus</ref> when adding apparatus notes to
+      manuscript transcriptions. <att>wit</att> shall
+      contain the id of associated to the manuscript in
+      <gi>witness</gi>. This is usefully also the
+      abbreviation of the manuscript to be used in the apparatus.</p>
+            <p>Follow instead for critical edition (i.e. text in a work
+      record) the
+      <ref target="http://www.tei-c.org/Vault/P5/2.9.1/doc/tei-p5-doc/en/html/TC.html#TCAPPS">inline
+      parallel segmentation method</ref>, pointing to the ids of
+      <gi>witnesses</gi> in that record.</p>
+            <p>a sample file is the
+      <ref target="http://betamasaheft.aai.uni-hamburg.de/works/LIT3122Galaw.xml">Chronicle
+      of Galawdewos</ref>
+            </p>
+            <p>To separate different types of apparatus notes, use the
+      attribute type.</p>
+         </div>
+      </body>
+   </text>
+</TEI>

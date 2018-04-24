@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>TEI</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="tei">
+         <head>TEI</head>
+         <p>The root element <gi>TEI</gi> should contain always
+    an <att>xml:id</att> and
+    <att>xml:lang</att> as well as a
+    <att>type</att> to quickly identify entities with one
+    of the following values: * <gi>mss</gi> for manuscript
+    * <gi>ins</gi> for institutions *
+    <gi>pers</gi> for person *
+    <gi>place</gi> for places *
+    <gi>work</gi> for works * <gi>nar</gi>
+    for narrative units * <gi>auth</gi> for authority
+    files</p>
+      </body>
+   </text>
+</TEI>

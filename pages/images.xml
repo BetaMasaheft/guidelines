@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Images</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="images">
+         <head>Images</head>
+         <p>To link to an external set of images, use the
+    <att>facs</att> attribute. In
+    msDesc/msIdentifier/idno add a
+    <att>facs</att> containing the base url.</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<idno facs="http://gallica.bnf.fr/ark:/12148/btv1b52000941g"/>
+</egXML>
+         <p>A link to a digital copy of a manuscript can be added to the main
+    identifier:</p>
+         <p>
+            <tag>idno facs="http://gallica.bnf.fr/ark:/12148/btv1b52000460z"BnF Éthiopien 150</tag>
+         </p>
+         <p>then in <gi>locus</gi> together with the other
+    attributes add again the <att>facs</att> containing
+    only the reference to the first page in the range indicated
+    <hi rendition="simple:italic">exactly</hi> as it appears in the url
+    for that page (so, not the folio number!).</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+    <locus target="#30v" facs="f62"/>
+    <locus target="#64v #65v #110r" facs="f134 f136 f225"/>
+    <locus from="31" to="33" facs="f62"/>
+    <locus from="31" facs="f62"/>
+</egXML>
+         <p>Links to images hosted on our server in the additional hard
+    drive, should use the relevant part of the path, i.e.
+    BMQ/003/BMQM-003 for example. if the number of the photos are
+    separated with two underscores, then KAE/011/KAE-011_</p>
+         <p>Links to the images of the Vatican Library MSS are now supported,
+    by adding in the idno/@FACS the manifest.json
+    url which can be found in the digivatlib on the left info page
+    https://digi.vatlib.it/view/MSS_Vat.et.1, e.g.
+    https://digi.vatlib.it/iiif/MSS_Vat.et.1/manifest.json to add link
+    to loci, add <att>FACS</att> attributes. Please do not
+    forget that the folio number (in the following example 3r) does not
+    necessarily corresponds to the URL number (here 0006).</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<msItem xml:id="ms_i1.1.1">
+<locus target="#3r" facs="0006"/>
+<title type="complete">Maqdǝma wangel (Introduction to the Gospels)</title>
+</msItem>
+</egXML>
+         <p>Some Manuscripts have images published which are not accessible
+    via IIIF, please, in these cases add inside TEI, between
+    <gi>teiHeader</gi> and <gi>text</gi> a
+    <gi>facsimile</gi> element</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+    <facsimile>
+        <graphic url="http://dfg-viewer.de/show/?set[mets]=http%3A%2F%2Fsammlungen.ub.uni-frankfurt.de%2Foai%2F%3Fverb%3DGetRecord%26metadataPrefix%3Dmets%26identifier%3D5247786"/>
+    </facsimile>
+</egXML>
+         <p>You can also add the exact link to a page in a
+    <att>facs</att> in each <gi>pb</gi>
+    inside the transcription of the manuscript.</p>
+         <div type="level3">
+            <head>
+               <att>corresp</att> and
+      <att>ref</att>
+            </head>
+            <list type="unordered">
+               <item>
+                  <p>if you point to an internal id, use #</p>
+               </item>
+               <item>
+                  <p>if you point to an external id don't use #. That is why
+          <gi>witness</gi> does not take that, as
+          <att>active</att>,
+          <att>passive</att> inside
+          <gi>relation</gi> should not. In fact you want
+          to be able to point to ids within the records you are pointing
+          to.</p>
+               </item>
+            </list>
+         </div>
+         <div type="level3">
+            <head>certainty</head>
+            <p>TEI can express much more precisely where the uncertainty about
+      a certain information provided is using the element certainty.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+     <title type="complete" ref="LIT1716Kidanz"><certainty locus="value" match="../@type" cert="low"/></title>
+</egXML>
+            <p>instead of</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+     <title type="complete" cert="low" ref="LIT1716Kidanz"/>
+</egXML>
+            <p>will express that the uncertainty is about the completeness of
+      the work referenced, not about the work generally. Please refer to
+      the TEI guidelines for further guidance and example of how to use
+      this element. Note that an alternative for the aspect of the
+      markup in question can be given in
+      <gi>assertedValue</gi>:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<persName ref="PRS11436Cyriacus" role="owner"><certainty locus="value" match="../@role" assertedValue="other" cert="low"/></persName>
+</egXML>
+         </div>
+      </body>
+   </text>
+</TEI>
