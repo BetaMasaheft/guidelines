@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Beta maṣāḥǝft Guidelines schema</title>
+                <author xml:id="PL">Pietro Liuzzo</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+                <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine
+                    multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
+                <pubPlace>Hamburg</pubPlace>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
+                        licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>created electronically</p>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change who="PL" when="2016-04-08">generated first version of the ODD from
+                guidelines</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <divGen type="toc"/>
+        </front>
+        <body>
+            <schemaSpec ident="tei-betamesaheftGL" docLang="en" prefix="tei_" start="TEI"
+                xml:lang="en" source="tei:3.0.0">
+
+                <!--       MODULES USED BY THE Beta maṣāḥǝft: Manuscripts of Ethiopia and Eritrea Guidelines SCHEMA
+                the @source ties our current schema to the version 3.0.0 of TEI
+                -->
+                
+                <moduleRef key="tei"/>
+                <moduleRef key="core"/>
+                <moduleRef key="header" except="appInfo"/>
+                <moduleRef key="textstructure"/>
+                <moduleRef key="tagdocs"/>
+                
+            </schemaSpec>
+        </body>
+    </text>
+</TEI>
