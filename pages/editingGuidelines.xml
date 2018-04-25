@@ -35,7 +35,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     read, etc.</p>
             </div>
             <div type="level3">
-                <head>Editing the TEI</head>
+                <head>Editing the XML</head>
                 <p>You can use any editor you like to edit the XML files. We are going to deal here
                     only with the guidelines files, not with the editing of the schema.</p>
                 <p>There is indeed a Beta maṣāḥǝft Guidelines Schema which validates the files you
