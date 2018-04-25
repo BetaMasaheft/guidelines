@@ -118,16 +118,16 @@ record.</p>
   
 </titleStmt>
 </egXML>
-            <p>You can also use <att>type='main'</att> to signal
+            <p>You can also use <att>type</att> with value <val>main</val> to signal
   which one title is to be used for labels, pointers and headers. the
   <gi>titleStmt</gi> element will have slightly different
   contents. It will contain the title(s) of the work edited and the
   date. If there is a digital edition, a <gi>editor</gi>
   will be added.</p>
             <p>Titles of the same work in another tradition will be reported
-  following the same rule and attributing an arbitrary t+digit xml:id
+  following the same rule and attributing an arbitrary t+digit <att>xml:id</att>
   and the appropriate <att>xml:lang</att>.</p>
-            <p>You can also use <att>type='short'</att> for shortened
+            <p>You can also use <tag>title type='short'</tag> for shortened
   titles like citation forms.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 
