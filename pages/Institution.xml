@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Repositories</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+          </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="institution">
+         
+         <div type="level1">
+            <head>specific encoding for repositories/institutions</head>
+            <p>For Institutions where manuscripts are preserved, some more
+  information is required. Please, note the
+  <att>subtype=‘institution’</att>.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<listPlace>
+            <place type="church dabr" subtype="institution">
+               <placeName xml:id="n1" xml:lang="gez">ዓደቃሐርሲ፡ ጰራቅሊጦስ፡</placeName>
+               <placeName corresp="#n1" xml:lang="gez" type="normalized">ʿĀddaqāḥarsi Ṗarāqliṭos</placeName>
+               <placeName type="alt"  xml:id="n2">ዓደቃሐርሲ፡ መካነ፡ ህይወት፡ ጰራቅሊጦስ፡</placeName>
+               <placeName type="alt" corresp="#n2">ʿAddaqāḥarsi Makāna Həywat Ṗarāqliṭos</placeName>
+               <country ref="LOC3010Ethiop"/>
+               <region ref="LOC5932Tegray"/>
+               <location>
+                  <geo>14.308833 39.378683</geo>
+                  <height unit="m">2437.0</height>
+               </location>
+               <note>
+                  <date type="foundation" notBefore="1400" notAfter="1500">1400-1500</date>
+                  <desc type="foundation">Existed aready in the pre-Christian time as the religious site of South Arabian migrants; the church was founded in a later period.</desc>
+                  <ab type="history">Dabr. A new large church is under construction outside of the compound of the old church, both standing on the rock outcrop (below is the river of <placeName corresp="LOC6519Wafadabbo">Wafadabbo</placeName>).
+                     </ab>
+                  <ab type="tabot">
+                     <measure quantity="8"/>
+                     Tabots of <persName ref="PRS5684JesusCh" type="tabot">Jesus</persName>, <persName ref="PRS10775Trinity">Trinity</persName>, <persName ref="PRS6819Mary">Mary</persName>, unidentified marble, 
+                     <persName ref="PRS4377Gabriel">Gabriel</persName>, <persName ref="PRS10776Kidan">Kidāna Mǝḥrat</persName>, <persName ref="PRS7049Michael">Michael</persName>, 
+                     <persName ref="PRS10774Paraq">Ṗarāqliṭos</persName>. The tabot of the local <persName ref="PRS10773SadeqP">Ṣādǝqān</persName> (Righteous Ones) was not mentioned, probably by mistake.</ab>
+                  <ab type="description">52 Mss. photographed: <ref target="ESap001">AP-001</ref> "Missal"; <ref target="ESap002">AP-002</ref> "Hymnary"; <ref target="ESap003">AP-003</ref> "Four Gospels"; ...</ab>
+               </note>
+               <listBibl>
+                  <bibl></bibl>
+               </listBibl>
+            </place>
+        
+
+         </listPlace>
+</egXML>
+         </div>
+       
+         
+      </body>
+   </text>
+</TEI>
