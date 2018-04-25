@@ -37,8 +37,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   can be found in the schema repo.</p>
             <p>If you think something should be automatised,
   <ref target="https://xkcd.com/1319/">click here first</ref>.</p>
-  
-  <p><ref target="tei">Adding a type to distinguish different entities.</ref></p>
+  <p>There are several general things you are going to encode. These are all MUST READ if you are editing for the first time.</p>
+  <list>
+     <item><ref target="tei">Adding a <att>type</att> to distinguish different entities.</ref></item>
+     <item><ref target="spaces">How to deal with white spaces.</ref></item>
+     <item><ref target="titleStmtInfo">General information in <gi>titleStmt</gi>.</ref></item>
+     <item><ref target="entities-id-structure">How to assign IDs.</ref></item>
+     <item><ref target="references">How to make links.</ref></item>
+     <item><ref target="bibliographic-references">How to deal with bibliography.</ref></item>
+     <item><ref target="language">Making statements about language used in the file.</ref></item>
+     <item><ref target="named-entities-and-authority-lists">Marking up Named Entities (personal names, place names, titles, dates).</ref></item>
+  </list>
   
   
   

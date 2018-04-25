@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Relations</title>
+                <author>Pietro Liuzzo</author>
+            </titleStmt>
+            <publicationStmt>
+                <p/>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+                <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body xml:id="relations"><div type="level5">
+    <head>Relations</head>
+    <p>Relations can be listed as well for manuscript in a
+        specific <gi>listRelation</gi>. This will
+        contain <gi>relation</gi> elements with
+        <att>name</att> taken from a list of values in
+        the schema and can be updated.</p>
+    <p>
+        <gi>listRelation</gi> is allowed
+        EVERYWHERE.</p>
+    <p>For example, within a <gi>msItem</gi> such
+        relations and a description of them should be given within the
+        element <gi>filiation</gi>
+    </p>
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+        <filiation> This text describes in general the relations to other surviving manuscripts
+            <listRelation>
+                <relation name="saws:isRelatedTo" active="ESam002" passive="ESam003">
+                    <desc>It is always a nice idea to provide a description of this relations with a sentence or two.</desc>
+                </relation>
+            </listRelation>
+        </filiation>
+    </egXML>
+    <p>This relations can be much more precise than a simple list
+        of ref elements stating similarity, and this is therefore the
+        recommended way to encode similar manuscripts. multiple
+        relations can be stated if needed, for example if a manuscript
+        A is a copy from two different manuscripts B and C of which
+        one is certainly a translation from a coptic manuscript D, one
+        might have a relation between A and B, A and C, C and D. or
+        parts.</p>
+    <p>In the @active and @passive attributes, please don't use #
+        as this hinders the possibility to use further specific ids
+        within the record, and to point to a specific msItem, e.g.</p>
+    <p>It is preferable to have a separate
+        <gi>relation</gi> for each relationship,
+        even if the same relation exists between one and several more
+        items.</p>
+    <div type="section">
+        <head>mss-mss</head>
+        <p>saws:isDirectCopyOf</p>
+        <p>saws:isAncestorOf</p>
+    </div>
+    <div type="section">
+        <head>mss-work</head>
+        <p/>
+    </div>
+    <div type="section">
+        <head>work-work</head>
+        <p>saws:formsPartOf</p>
+        <p>saws:isVersionInAnotherLanguageOf</p>
+        <p>saws:contains</p>
+        <p>ecrm:CLP46i_may_form_part_of</p>
+        <p>saws:isDifferentTo</p>
+        <p>saws:isShorterVersionOf</p>
+        <p>saws:isRelatedTo</p>
+        <p>saws:follows</p>
+    </div>
+    <div type="section">
+        <head>work-person</head>
+        <p>saws:isAttributedToAuthor</p>
+        <p>ecrm:P129_is_about</p>
+        <p>dcterms:creator</p>
+    </div>
+    <div type="section">
+        <head>person-person</head>
+        <p>bm:wifeOf</p>
+        <p>bm:husbandOf</p>
+        <p>snap:AllianceWith</p>
+        <p>bm:ordainedBy</p>
+        <p>rel:enemyOf</p>
+        <p>snap:SonOf</p>
+        <p>snap:FatherOf</p>
+    </div>
+    <div type="section">
+        <head>person-mss</head>
+        <p>saws:isCopierOf</p>
+        <p>saws:hasOwned</p>
+        <p>lawd:hasAttestation</p>
+    </div>
+    <div type="section">
+        <head>person-work</head>
+        <p>ecrm:P129i_is_subject_of</p>
+    </div>
+    <div type="section">
+        <head>place-place</head>
+        <p/>
+    </div>
+    <div type="section">
+        <head>person-place</head>
+        <p>syriaca:has-relation-to-place</p>
+        <p>DEPRECATED, PLEASE DONT USE THIS: *
+            ecrm:P57_has_number_of_parts</p>
+    </div>
+</div>
+        </body>
+    </text>
+</TEI>

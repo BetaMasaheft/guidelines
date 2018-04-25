@@ -22,14 +22,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body xml:id="spaces">
          <head>Spaces</head>
-         <p>Remember, in contents put spaces only where you really want them.
+         <p>Remember, in contents put spaces <hi rendition="simple:bold">only where you really want them</hi>.
     As much as you want.</p>
-         <p>this</p>
-         <cit>
-            <quote>
+         <p>This following WRONG encoding</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <roleName type="title">ʾaṣe</roleName>Galāwdewos 
-</quote>
-         </cit>
+</egXML>
          <p>will always return this result</p>
          <cit>
             <quote>
@@ -37,17 +35,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 </quote>
          </cit>
          <p>if you want the space between ʾaṣe and Galāwdewos or any other
-    two words, please, remember to have it. On the other side, the
+            two words, please, remember to have it (there is a rule for this particular case, see <gi>roleName</gi>, but not always!). On the other side, the
     following two are equal in XML</p>
-         <cit>
-            <quote>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <roleName type="title">ʾaṣe</roleName>                   Galāwdewos
-
+         </egXML>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <roleName type="title">ʾaṣe</roleName>
 
 Galāwdewos
-</quote>
-         </cit>
+</egXML>
       </body>
    </text>
 </TEI>

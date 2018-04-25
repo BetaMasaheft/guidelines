@@ -20,21 +20,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </fileDesc>
    </teiHeader>
    <text>
-      <body xml:id="id-and-title">
+      <body xml:id="titleStmtInfo">
          <head>ID and Title</head>
-         <p>The manuscript ID should be composed of: - The abbreviation of
-    the institution holding the manuscript, as it is contained in the
-    insitution ID, written in capitals - The abbreviation of the
-    collection to which the manuscript belongs - a numeral: BAVet1 The
-    collection and the numeral should be given as they are in the
-    current/most commonly used official shelfmark of the manuscript.</p>
-         <p>If the manuscript has not yet been catalogued and/or has no shelf
-    mark, an ID has to created individually, following as much as
-    possible the usual process_ - The abbreviation of the institution
-    holding the manuscript, as it is contained in the institution ID,
-    written in capitals - If no more information is available, the ID
-    can be created with a work contained in the manuscript and a
-    numeral, such as: TMChronicle1</p>
+         
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <titleStmt>
     <title>Senodos</title>
@@ -43,12 +31,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <funder>Akademie der Wissenschaften in Hamburg</funder>
 </titleStmt>
 </egXML>
-         <p>Authors and editors are referred to only by
-    <att>xml:id</att>. A <ref target="TEAMid">list of ids
-    of project members and editors is here</ref>
+         <p>Editors are referred to only by
+    <att>key</att>. A <ref target="TEAMid">list of ids
+    of project members and editors is here</ref> and should be the same as the one in the schema for <gi>editor</gi> and <gi>change</gi>.
          </p>
          <p>The title should be intended as a generic title for this
-    manuscript record, which might refer to contents or identifiers. The
+    manuscript record, which might refer to contents or identifiers. Other rules apply for <ref target="works">Works</ref>. The
     title should be made of all the normalized titles of the works
     contained in the manuscript. If there are many different works which
     would make the title too long, it is possible to create a more

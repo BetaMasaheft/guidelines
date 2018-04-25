@@ -25,7 +25,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body xml:id="repository">
          <div>
             <head>repository</head>
-            <p/>
+            <p>
+               <gi>repository</gi> takes a
+               <att>ref</att> as well, pointing to the institution id,
+               which will contain further place pointers.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <repository ref="INS0030Addaqaharsi"/>
+            </egXML>
+            <p>If the manuscript is lost and its current repository is not
+               known, write</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <repository>Lost</repository>
+            </egXML>
          </div>
       </body>
    </text>

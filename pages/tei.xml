@@ -29,6 +29,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                ...
             </TEI>
          </egXML>
+         <p>See other topics of<ref target="general"> general interest</ref></p>
       </body>
    </text>
 </TEI>
