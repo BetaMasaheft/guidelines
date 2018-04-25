@@ -25,9 +25,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <p>The root element <gi>TEI</gi> should contain always an <att>xml:id</att> and
                <att>xml:lang</att> as well as a <att>type</att> to quickly identify entities.</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="AT1004Bitter" xml:lang="en" type="auth">
-               <teiHeader/>
-               <text/>
+            <TEI xml:id="AT1004Bitter" xml:lang="en" type="auth">
+               <teiHeader>
+                  <fileDesc>
+                     <titleStmt>
+                        <title></title>
+                     </titleStmt>
+                     <publicationStmt><p></p></publicationStmt>
+                  <sourceDesc><p></p></sourceDesc>
+                  </fileDesc>
+               </teiHeader>
             </TEI>
          </egXML>
       </body>
