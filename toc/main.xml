@@ -26,8 +26,8 @@
                <item>places</item>
                <item>persons</item>
                <item>narrativeUnits</item>
-<!--               <item>institution</item>-->
-<!--               <item>taxonomy</item>-->
+               <item>institution</item>
+               <item>taxonomy</item>
                <item>corpora</item>
                <item>artThemes</item>
             </list>
