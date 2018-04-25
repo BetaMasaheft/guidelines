@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Create New Entry</title>
+                <author>Pietro Liuzzo</author>
+            </titleStmt>
+            <publicationStmt>
+                <p/>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+                <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body xml:id="newEntry">
+            <div type="level1">
+                <head>Create a new record</head>
+                <p>You shall now find a new "create new entity" function in the navigation bar of
+                    the app. You only need to enter the name of the file, for manuscripts this is
+                    the full filename, for the other entities just the last part of the ID (see
+                        <gi>TEI</gi> schema specification). For LIT1234iliad, you would enter only
+                    "iliad". For a manuscript, simply enter the full name, the small print will
+                    indicate you what is needed. As you start typing the button will become active
+                    and you can create the file. This is stored in the app, not in Github! As the
+                    confirmation page will tell you blinking, you need to 
+                    <list rendition="ordered">
+                        <item>download the file</item>
+                        <item>save it in a folder called "new" into the proper folder</item>
+                        <item>commit and sync to git</item>
+                    </list> 
+                    Once you have done this GIT and our server will be again in sync, which
+                    means you can now move your file if you need to (especially for manuscripts) and
+                    then <hi rendition="simple:bold">commit and sync this change again.</hi></p>
+                <p> If you omit the first step, we will have two identical files in two locations
+                    and thus the id lookup of the app will fail not showing you your file. On
+                    leaving the page you will get a warning every time, intended to make you stop
+                    before you carry on without syncing. The generated file will have a consistent
+                    new id and will insert it in the appropriate place in the file. This should
+                    avoid the really frequent problem of ids not being updated after copy-pasting a
+                    master file. It remains entirely possible to create your files in oXygen as
+                    previously, but the application interface is recommended as it makes sure your id is unique.
+                    The file will also have the correct type and a <gi>change</gi> element with your initials
+                    and current date.</p>
+            </div>
+
+        </body>
+    </text>
+</TEI>
