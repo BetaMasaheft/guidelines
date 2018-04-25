@@ -556,27 +556,7 @@ notAfter="1559">ትግራይ፡</placeName>
   add e.g. amh as value for @ident and consequently use it in the file
   as value of @xml:lang.</p>
          </div>
-         <div type="level1">
-            <head>Narrative Units</head>
-            <p>The model file for a Narrative Unit is much simpler. Just assign a
-  title to your file and add in the <gi>body</gi> a short
-  description. You can mark up content as in any other entity.
-  Recommended but not compulsory are a bibliography and a
-  <gi>listBibl[@type='relations']</gi>.</p>
-            <p>Narrative units can also be created for text portions (paragraphs,
-  chapters, miracles, etc.) which are extant as different versions in
-  multiple recensions of the same work or even in different works.
-  Creating these narrative units allows displaying in the app all the
-  existing interrelated versions of that text. See, e.g.,
-  NAR0013pelican, i.e., the chapter on the pelican in the Physiologus.
-  Once a single narrative unit ID is provided as
-  <gi>div[@corresp]</gi> in correspondence of the text
-  edition in the Work records of the different recensions (e.g.,
-  <gi>div type="textpart" subtype="chapter" xml:id="ch4" n="4"  corresp="NAR0013pelican"</gi>),
-  all the existing versions of that narrative unit will be visualized in
-  the app by clicking the Versions button in the Text page of the work
-  record.</p>
-         </div>
+         
       </body>
    </text>
 </TEI>

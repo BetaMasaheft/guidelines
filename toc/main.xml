@@ -25,11 +25,11 @@
                <item>works</item>
                <item>places</item>
                <item>persons</item>
-               <item>narrative</item>
+               <item>narrativeUnits</item>
                <item>institution</item>
                <item>authority files</item>
                <item>corpora</item>
-               <item>art_themes</item>
+               <item>artThemes</item>
             </list>
                 </item>
             <item>zotero</item>
