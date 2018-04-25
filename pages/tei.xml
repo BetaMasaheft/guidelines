@@ -22,17 +22,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body xml:id="tei">
          <head>TEI</head>
-         <p>The root element <gi>TEI</gi> should contain always
-    an <att>xml:id</att> and
-    <att>xml:lang</att> as well as a
-    <att>type</att> to quickly identify entities with one
-    of the following values: * <gi>mss</gi> for manuscript
-    * <gi>ins</gi> for institutions *
-    <gi>pers</gi> for person *
-    <gi>place</gi> for places *
-    <gi>work</gi> for works * <gi>nar</gi>
-    for narrative units * <gi>auth</gi> for authority
-    files</p>
+         <p>The root element <gi>TEI</gi> should contain always an <att>xml:id</att> and
+               <att>xml:lang</att> as well as a <att>type</att> to quickly identify entities.</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="AT1004Bitter" xml:lang="en" type="auth">
+               <teiHeader/>
+               <text/>
+            </TEI>
+         </egXML>
       </body>
    </text>
 </TEI>
