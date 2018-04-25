@@ -23,10 +23,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body xml:id="institution">
          
          <div type="level1">
-            <head>specific encoding for repositories/institutions</head>
-            <p>For Institutions where manuscripts are preserved, some more
-  information is required. Please, note the
-  <att>subtype=‘institution’</att>.</p>
+            <head>Specific encoding for repositories/institutions</head>
+            <p>For Institutions where manuscripts are preserved all general guidelines and especially those for <ref target="places">places</ref> are valid, and some more
+  information is required. Please, note in the example below the
+  <att>subtype</att> with <val>institution</val>.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <listPlace>
             <place type="church dabr" subtype="institution">
