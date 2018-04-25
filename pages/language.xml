@@ -20,7 +20,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </fileDesc>
    </teiHeader>
    <text>
-      <body xml:id="language">
+      <body xml:id="languageIntro">
          <head>language</head>
          <p>The TEI file is in english. Please, make sure you use
     <att>xml:lang</att> with the appropriate value for each

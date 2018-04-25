@@ -20,7 +20,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </fileDesc>
    </teiHeader>
    <text>
-      <body xml:id="summary-on-the-use-of-@ref-and-@corresp">
+      <body xml:id="summary-on-the-use-of-ref-and-corresp">
          <head>summary on the use of @ref and @corresp</head>
          <p>internal references -
     <gi>ref target="#q12"</gi> -

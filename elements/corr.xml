@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>taxonomy</title>
+            <title>corr</title>
             <author>Pietro Liuzzo</author>
          </titleStmt>
          <publicationStmt>
@@ -22,9 +22,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </revisionDesc>
    </teiHeader>
    <text>
-      <body xml:id="taxonomy">
+      <body xml:id="corr">
          <div>
-            <head>taxonomy</head>
+            <head>corr</head>
             <p/>
          </div>
       </body>

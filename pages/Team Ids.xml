@@ -20,7 +20,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </fileDesc>
    </teiHeader>
    <text>
-      <body xml:id="team ids">
+      <body xml:id="team_ids">
          <div type="level1">
             <head>TEAM ids for use in <gi>author/@xml:id</gi> and
   <gi>change/@who</gi>

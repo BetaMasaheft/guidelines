@@ -21,7 +21,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </fileDesc>
    </teiHeader>
    <text>
-      <body xml:id="standardisation-of-transcription-from-encyclopaedia ----aethiopica">
+      <body xml:id="standardisation-of-transcription-from-encyclopaedia-aethiopica">
          <head>Standardisation of transcription from Encyclopaedia
     Aethiopica</head>
          <list type="unordered">

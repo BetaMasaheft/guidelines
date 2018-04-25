@@ -20,7 +20,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </fileDesc>
    </teiHeader>
    <text>
-      <body xml:id="source">
+      <body xml:id="sourceAtt">
          <head>@source</head>
          <p>You can use the attribute <att>source</att> to point
     to any xml:id within the file, most typically a bibl element to

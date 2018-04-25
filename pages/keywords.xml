@@ -20,7 +20,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </fileDesc>
    </teiHeader>
    <text>
-      <body xml:id="keywords">
+      <body xml:id="keywordsIntro">
          <head>Keywords</head>
          <p>These keywords are used for the whole record. You can use one or
     more of the values provided for <att>key</att>.</p>

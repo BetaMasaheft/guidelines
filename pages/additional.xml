@@ -20,7 +20,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </fileDesc>
   </teiHeader>
   <text>
-    <body xml:id="additional">
+    <body xml:id="additionalInfo">
       <head>Additional</head>
       <p>This is used for any other information related to the manuscript. Note <gi>surrogates</gi>
         where for example microfilms or photographs should be recorded.</p>
