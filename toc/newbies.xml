@@ -1,0 +1,36 @@
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_minimal.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_minimal.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>New contributors</title>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p/>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="newbies">
+         <!--         content of item elements must correspond to an xml:id in the data-->
+         <list>
+            <item>workflow</item>  
+            <item>how-to</item>  
+            <item>general</item>
+            <item>zotero</item>
+            <item>
+               <list>
+                  <item>manuscripts</item>
+                  <item>works</item>
+                  <item>places</item>
+                  <item>persons</item>
+               </list>
+            </item>
+         </list>
+      </body>
+   </text>
+</TEI>
