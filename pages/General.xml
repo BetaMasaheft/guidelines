@@ -38,7 +38,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>If you think something should be automatised,
   <ref target="https://xkcd.com/1319/">click here first</ref>.</p>
   
-  
+  <p><ref target="tei">Adding a type to distinguish different entities.</ref></p>
   
   
   
