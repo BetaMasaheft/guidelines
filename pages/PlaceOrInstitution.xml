@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Place or Institution</title>
+                <author>Pietro Liuzzo</author>
+            </titleStmt>
+            <publicationStmt>
+                <p/>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+                <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body xml:id="placeOrInstitution"><div type="level1">
+    <head>creating a new record or deciding between institution and
+        place</head>
+    <p>All Monasteries and Churches in PLACES have also a parallel in
+        Institutions. The two lists have different origins, PLACES comes from
+        EA indexes, while the INSTITUTIONS list is an export of the records in
+        EthioSPaRe for institutions.</p>
+    <p>Please, proceed as follows in case of doubt:</p>
+    <list type="ordered:arabic">
+        <item>
+            <p>if the institution record for the institution you need does not
+                exist, create one and assign an id.</p>
+        </item>
+        <item>
+            <p>leave the place record there, check the already existing
+                references to this place. This can be done either with xpath in
+                Oxygen or on the website looking at related entities.</p>
+        </item>
+        <item>
+            <p>modify those references that actually point to an institution
+                and not to a place, if any.</p>
+        </item>
+    </list>
+    <p>with regard to automatically creating an institution record for all
+        churches and monastries in Places: is it true that all those with no
+        exception are also institutions holding manuscripts?</p>
+    <p>Please, markup entities referred to in the text of the fields into
+        <gi>note</gi> as described in the
+        <ref target="guidelines">guidelines</ref> A template with comments for
+        a place description is available
+        <ref target="https://github.com/SChAth/schema/blob/master/modelfilePlace.xml">here</ref>
+    </p>
+    <p>A template with comments for an Institution description is
+        available
+        <ref target="https://github.com/SChAth/schema/blob/master/modelfileInstitution.xml">here</ref>
+    </p>
+</div>
+        </body>
+    </text>
+</TEI>

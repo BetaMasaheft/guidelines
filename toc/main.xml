@@ -27,7 +27,7 @@
                <item>persons</item>
                <item>narrativeUnits</item>
                <item>institution</item>
-               <item>authority files</item>
+                       <item>taxonomy</item>
                <item>corpora</item>
                <item>artThemes</item>
             </list>
