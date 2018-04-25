@@ -23,7 +23,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <body xml:id="narrativeUnits">
             <div type="level1">
     <head>Narrative Units</head>
-                <p>The model file for a Narrative Unit is much simpler then a <ref target="works">work file</ref>. Just assign a
+                <p>The model file for a Narrative Unit is much simpler than a <ref target="works">work file</ref>. Just assign a
         title to your file and add in the <gi>body</gi> a short
         description. You can mark up content as in any other entity.
         Recommended but not compulsory are a bibliography and a

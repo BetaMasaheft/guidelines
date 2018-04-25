@@ -21,58 +21,65 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body xml:id="works">
-         <p>We consider <hi rendition="simple:bold">a Work any text with an
-independent circulation</hi>. This does not mean it should be alone in a
+         <div type="level1">
+            <head>Definition and Assignment of IDs</head>
+         
+            <p>We consider a <hi rendition="simple:bold">work</hi> any text with an
+independent circulation. This does not mean it should be alone in a
 manuscript. A text which sometimes is added to another is also an
 independent work. So <hi rendition="simple:italic">Genesis</hi> is a
-Work as <hi rendition="simple:italic">Pentateuch</hi> is a Work which
+work as <hi rendition="simple:italic">Pentateuch</hi> is a work which
 contains it. But <hi rendition="simple:italic">Chapter 1 of Genesis</hi>
-is not a Work, is a part of the Work
+is not a work, it is a part of the work
 <hi rendition="simple:italic">Genesis</hi>.</p>
+            <p>Works should not be confused with  <ref target="narrativeUnits">Narrative Units</ref>. To
+               decide whether the text you are dealing with is a work or a
+               narrative unit, consider  Orlandi 2010, <hi rendition="simple:italic">A
+                  Terminology for the identification of Coptic Literary Documents</hi>.
+               A work "only refers to fixed contents and a precise
+               sequence", see
+               <ref target="https://www.zotero.org/groups/ethiostudies/items/itemKey/NWT4X3K9/q/corpus-organizers">Bausi
+                  2010, 34 n3</ref>
+               </p>
+            
+          <p>Works and textparts:</p>
+            
          <list type="unordered">
             <item>
-               <p>consider if the text you are dealing with is a WORK or a
-    Narrative Unit Orlandi 2010, <hi rendition="simple:italic">A
-    Terminology for the identification of Coptic Literary Documents</hi>
-    . A Work "only refers to fixed contents and a precise
-    sequence"
-    <ref target="https://www.zotero.org/groups/ethiostudies/items/itemKey/NWT4X3K9/q/corpus-organizers">Bausi
-    2010, 34 n3</ref>
-               </p>
+               <p>Texts with independent circulation get an individual record with a first-level ID (such as LIT1931Mashaf), all
+    other are textparts. </p>
             </item>
             <item>
-               <p>only texts with independent circulation get first level IDs, all
-    other are textparts</p>
+               <p>If a text is at the same time part of another text and circulates independently, it gets
+                  an independent first-level ID/record.</p>
             </item>
             <item>
-               <p>if a textpart has an individual circulation in other traditions
-    this should be said under the textpart: multuple titles can be
+               <p>For these texts (both circulating independently and part of another work), a <gi>div</gi> should also be created, with a
+                  <att>corresp</att> giving the individual ID, in order to show the full content of a collection in
+                  correct order.</p>
+            </item>
+            <item>
+               <p>If a textpart has an individual circulation in other traditions, but not in the Ethiopian tradition,
+    all information on this text should be given in the <gi>div</gi>: multiple titles can be
     inserted, with bibliography linking to the IDs of these titles,
     relations for the authors of the titles, etc.</p>
             </item>
             <item>
-               <p>the existing records inherited from the EAE index that do not
-    have independent circulation in Ethiopic should be deleted, but
-    their IDs should remain in the Google Spreadsheet, struck out with a
-    comment specifying the new derived ID added. THE NUMERIC PART OF
-    THESE IDS SHALL NOT BE REUSED.</p>
+               <p>For text portions (paragraphs, chapters, miracles, etc.) which are extant as different versions in multiple recensions of the same work or even in different works, 
+                  create a <ref target="narrativeUnits">Narrative Unit</ref>.</p>
             </item>
             <item>
-               <p>if a part of a text also has an independent circulation - it gets
-    an independent first-level ID/record</p>
-            </item>
-            <item>
-               <p>texpart divs should also be created for these texts, with a
-    corresp link, in order to show the full content of a collection in
-    correct order</p>
+               <p>The existing records inherited from the EAe index that do not
+    have an independent circulation in Ethiopic should be deleted.</p>
             </item>
          </list>
+            
          <p>See as example
-<ref target="https://raw.githubusercontent.com/SChAth/Works/master/LIT1931Mashaf.xml">Maṣḥafa
-gǝnzat LIT1931Mashaf</ref>
+            <ref target="LIT1931Mashaf" type="bm">LIT1931Mashaf</ref>.
          </p>
+            
          <p>Often the first problem to face is which records and how many to
-make. We accept as principle to do <hi rendition="simple:bold">the
+make. We accept as a principle to create <hi rendition="simple:bold">the
 maximum number of record as it is sensible</hi> and to state
 <hi rendition="simple:bold">the minimum number of relations needed among
 them</hi> with a view on expanding them potentially to all what is not
@@ -80,6 +87,7 @@ essential, in order to clarify their relation with each other. It might
 happen that different researchers have different opinions on the
 relation between the versions and the manuscripts and in this we will be
 able to host them all.</p>
+            
          <p>For example. If the Work A has four versions 1, 2, 3 and 4, 1 being a
 short version of 2 and 3 a later version of 4 while 2 and 4 differ from
 one another only in the order in which the content is organized, there
@@ -88,16 +96,21 @@ While the abstract work will point to each of the 4 version with
 relations and might contain a general description of the work, each of
 the version will have clearly defined relations with the others and the
 abstract Work.</p>
+            
          <p>A further example: a text which is made of parts which can occur in
 different orders within different manuscripts. This will have 1 Work
 record, describing the ideal or majoritarian, or standard sequence,
 while each witness (Manuscript) will contain the specific order of the
 parts in it.</p>
+            
          <p>Create a new record for every different version, recensions, etc. and
 then express the diverse relations between the records with relation
 elements. This should be clearer and leave space for more differing
 opinions than to try to express the relations within one single
 record.</p>
+            
+         </div>
+         
          <div type="level1">
             <head>Title</head>
             <p>A work file will mainly contain the edited text in the
@@ -139,14 +152,14 @@ record.</p>
             <list type="unordered">
                <item>
                   <p>if a subpart of a work needs a bibliography this can be given
-      in the <gi>div[@type='textpart']</gi>
+      in the <tag>div type='textpart'</tag>
                   </p>
                </item>
                <item>
                   <p>if a subpart without independent circulation in the Ethiopic
       tradition needs to reference the work independently in other
       traditions titles will be added and referenced in the appropriate
-      <gi>div[@type='textpart']</gi>
+                     <tag>div type='textpart'</tag>
                   </p>
                </item>
             </list>
@@ -234,7 +247,7 @@ record.</p>
             <p>We use <gi>witness</gi> for those manuscripts
   which are <hi rendition="simple:bold">actually used</hi> for the
   edition we are going to provide in the
-  <gi>div[@type='edition']</gi>. All catalogued
+  <tag>div type='edition'</tag>. All catalogued
   manuscripts containing the work are displayed in the app anyway.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <listWit>
@@ -301,7 +314,7 @@ record.</p>
 </egXML>
             <p>different <gi>listBibl</gi> will be used for separate
   types of entries. within
-  <gi>listBibl[@type='editions']</gi> each bibl will be an
+  <tag>listBibl type='editions'</tag> each bibl will be an
   edition of this work. each of this editions will have used different
   manuscripts.</p>
             <p>References to these witnesses can be done with a link directly to a
@@ -349,7 +362,7 @@ passive="LIT1455GadlaG"/>
   record, to be more specific and explicit about the sort of
   authorship.</p>
             <p>
-               <gi>relation name="dcterms:creator" active="LIT1608hoheta" passive="PRS4709Giyorgis"/</gi>
+               <tag>relation name='dcterms:creator' active='LIT1608hoheta' passive='PRS4709Giyorgis'</tag>
             </p>
             <p>This means that the work has this author.</p>
             <p>If a work is traditionally attributed to an author whose authorship
@@ -357,10 +370,11 @@ passive="LIT1455GadlaG"/>
   verbally with bibliographic references in the description of the
   relation, for example LIT1608hoheta:</p>
             <p>
-               <gi>relation name="saws:isAttributedToAuthor" active="LIT1608hoheta" passive="PRS4709Giyorgis"/</gi>
+               <tag>relation name='saws:isAttributedToAuthor' active='LIT1608hoheta' passive="PRS4709Giyorgis'</tag>
             </p>
             <p>
-               <gi>relation name="saws:isAttributedToAuthor" active="LIT1608hoheta" passive="PRS3709eleni"descThe traditional attribution to persName ref="PRS3709eleni"/             is considered unlikely by biblptr target="bm:Habtemichael2007Hoheta"//bibl./desc/relation</gi>
+               <tag>relation name='saws:isAttributedToAuthor' active='LIT1608hoheta' passive='PRS3709eleni'</tag>
+               <!--descThe traditional attribution to persName ref="PRS3709eleni"/             is considered unlikely by biblptr target="bm:Habtemichael2007Hoheta"//bibl./desc/relation</tag>-->
             </p>
             <p>you can use many of this and also have different types for one
   work. If you come across records which use the author element, please
@@ -379,7 +393,7 @@ passive="LIT1455GadlaG"/>
             <head>Versions</head>
             <p>If you have multiple recensions/version of a text, these can be
   linked with a relation with
-  <att>name='saws:isVersionOf'</att> this will be used to
+  <tag>name='saws:isVersionOf'</tag> this will be used to
   pick up these in the text view. The same parallel content in the
   different versions should have the same @corresp to a NAR unit and
   there should always be a @resp in the div[@type='edition'] containing
@@ -472,7 +486,7 @@ notAfter="1559">ትግራይ፡</placeName>
 </egXML>
             <p>The abstract can also mention the total number of words, which
   might be then marked up with a
-  <gi>measure[@type='words']</gi> within the
+  <tag>measure type='words'</tag> within the
   <gi>abstract</gi>.</p>
             <p>Summaries given in catalogues can be copied here and edited.</p>
   
@@ -480,11 +494,11 @@ notAfter="1559">ትግራይ፡</placeName>
          <div type="level1">
             <head>divs edition and textparts</head>
             <p>Text is entered in the <gi>body</gi> of a TEI file
-  under into a <gi>div[@type='edition']</gi> . Each text
+  under into a <tag>div type='edition'</tag> . Each text
   part should be contained into a <gi>div</gi>.
   <gi>div</gi>s should always be well nested one into the
   other. These will always take a
-  <att>subtype='textpart'</att> and a
+  <tag>subtype='textpart'</tag> and a
   <att>subtype</att> with the desired value. There should
   always be also a @n identifying for example chapter 3 as well as a
   <att>corresp</att> pointing to the appropriate
@@ -548,10 +562,10 @@ notAfter="1559">ትግራይ፡</placeName>
  </langUsage>
 </egXML>
             <p>If you add somewhere e.g.
-  <gi>title xml:lang="am"/</gi>, there
+  <tag>title xml:lang='am'</tag>, there
   should be a language element in langUsage like the following</p>
             <p>
-               <gi>language ident="am"Amharic/language</gi>
+               <!--<gi>language ident="am"Amharic/language</gi>-->
   the values of @ident here are restricted, so you should not be able to
   add e.g. amh as value for @ident and consequently use it in the file
   as value of @xml:lang.</p>
