@@ -23,7 +23,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body xml:id="from-template">
          <head>from template</head>
          <p>Cataloguers may use one of the
-    <ref target="https://github.com/SChAth/schema">annotated
+    <ref target="https://github.com/BetaMasaheft/schema">annotated
     templates</ref> to create new data. ### in the preview app You shall
     now find a new "create new entity" function in the list
     view of the app. You only need to enter the name of the file, for

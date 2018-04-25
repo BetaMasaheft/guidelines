@@ -459,7 +459,7 @@ notAfter="1559">ትግራይ፡</placeName>
             <head>Short Summary of Contents</head>
             <p>To provide a short summary of contents use the element
   <gi>abstract</gi> in as in this example from
-  <ref target="https://github.com/SChAth/Works/blob/master/LIT1252Confes.xml">Confessio
+  <ref target="https://github.com/BetaMasaheft/Works/blob/master/LIT1252Confes.xml">Confessio
   Claudii</ref>
             </p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">

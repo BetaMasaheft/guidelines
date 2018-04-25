@@ -31,9 +31,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   encoding decision is given. This shall help also to track bugs related
   to data entry.</p>
             <p>The
-  <ref target="https://github.com/SChAth/schema/blob/master/tei-betamesaheft.xml">ODD</ref>
+  <ref target="https://github.com/BetaMasaheft/schema/blob/master/tei-betamesaheft.xml">ODD</ref>
   and the
-  <ref target="https://github.com/SChAth/schema/blob/master/tei-betamesaheft.rng">schema</ref>
+  <ref target="https://github.com/BetaMasaheft/schema/blob/master/tei-betamesaheft.rng">schema</ref>
   can be found in the schema repo.</p>
             <p>If you think something should be automatised,
   <ref target="https://xkcd.com/1319/">click here first</ref>.</p>

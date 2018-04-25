@@ -82,7 +82,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     msFrag can be used when there are at least two parts of one
     manuscript kept in different repositories.</p>
          <p>As for
-    <ref target="https://github.com/SChAth/ScAthiop/issues/368">issue
+    <ref target="https://github.com/BetaMasaheft/ScAthiop/issues/368">issue
     368</ref> we have decided to use msFrag and msPart as follows in
     cases where leaves or quires have been moved. The Ms containing
     currently the unit, will have a msPart with it, with an appropriate

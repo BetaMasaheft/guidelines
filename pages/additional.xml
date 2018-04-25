@@ -50,7 +50,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </listBibl>
       </egXML>
       <p>For custodial history events use @subtype with one of the suggested values from the <ref
-          target="https://github.com/SChAth/Authority-Files/blob/master/Restoration.xml"
+          target="https://github.com/BetaMasaheft/Authority-Files/blob/master/Restoration.xml"
           >corresponding taxonomy</ref>. oXygen should prompt them from the schema.</p>
 
       <p>Here the <gi>msDesc</gi> or <gi>msPart</gi> ends. Check that all is well nested and that

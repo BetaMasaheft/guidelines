@@ -38,14 +38,14 @@ you have checked out and updated you ScAthiop repo.</p>
                <p>Click the little tool icon on the top which says Configure
     Transformation scenario <figure>
                      <head>Configure</head>
-                     <graphic url="https://github.com/SChAth/ScAthiop/blob/master/utility/img/1configTrScButton.png"/>
+                     <graphic url="https://github.com/BetaMasaheft/ScAthiop/blob/master/utility/img/1configTrScButton.png"/>
                   </figure>
                </p>
             </item>
             <item>
                <p>The following window will appear <figure>
                      <head>Configure</head>
-                     <graphic url="https://github.com/SChAth/ScAthiop/blob/master/utility/img/2ConfigTrScwindow.png"/>
+                     <graphic url="https://github.com/BetaMasaheft/ScAthiop/blob/master/utility/img/2ConfigTrScwindow.png"/>
                   </figure>
                </p>
             </item>
@@ -53,7 +53,7 @@ you have checked out and updated you ScAthiop repo.</p>
                <p>Now click on NEW and select "XML Transformation with
     XSLT" <figure>
                      <head>Configure</head>
-                     <graphic url="https://github.com/SChAth/ScAthiop/blob/master/utility/img/3newscenario.png"/>
+                     <graphic url="https://github.com/BetaMasaheft/ScAthiop/blob/master/utility/img/3newscenario.png"/>
                   </figure>
                </p>
             </item>
@@ -61,14 +61,14 @@ you have checked out and updated you ScAthiop repo.</p>
                <p>First thing, select from the Transformer menu the highest version
     of SAXON available <figure>
                      <head>Configure</head>
-                     <graphic url="https://github.com/SChAth/ScAthiop/blob/master/utility/img/4setTransformer.png"/>
+                     <graphic url="https://github.com/BetaMasaheft/ScAthiop/blob/master/utility/img/4setTransformer.png"/>
                   </figure>
                </p>
             </item>
             <item>
                <p>Now name your preview transformation <figure>
                      <head>Configure</head>
-                     <graphic url="https://github.com/SChAth/ScAthiop/blob/master/utility/img/5giveName.png"/>
+                     <graphic url="https://github.com/BetaMasaheft/ScAthiop/blob/master/utility/img/5giveName.png"/>
                   </figure>
                </p>
             </item>
@@ -77,7 +77,7 @@ you have checked out and updated you ScAthiop repo.</p>
     transformation. Click on the browse icon and navigate into your
     local ScAthiop repo <figure>
                      <head>Configure</head>
-                     <graphic url="https://github.com/SChAth/ScAthiop/blob/master/utility/img/6browseforxslt.png"/>
+                     <graphic url="https://github.com/BetaMasaheft/ScAthiop/blob/master/utility/img/6browseforxslt.png"/>
                   </figure>
                </p>
             </item>
@@ -86,7 +86,7 @@ you have checked out and updated you ScAthiop repo.</p>
     select only <gi>preview.xslt</gi> 
                   <figure>
                      <head>Configure</head>
-                     <graphic url="https://github.com/SChAth/ScAthiop/blob/master/utility/img/7selectxslt.png"/>
+                     <graphic url="https://github.com/BetaMasaheft/ScAthiop/blob/master/utility/img/7selectxslt.png"/>
                   </figure>
                </p>
             </item>
@@ -95,7 +95,7 @@ you have checked out and updated you ScAthiop repo.</p>
     tab on top and lets set where the results of your transformation
     will be saved. <figure>
                      <head>Configure</head>
-                     <graphic url="https://github.com/SChAth/ScAthiop/blob/master/utility/img/8setOutput.png"/>
+                     <graphic url="https://github.com/BetaMasaheft/ScAthiop/blob/master/utility/img/8setOutput.png"/>
                   </figure>
                </p>
             </item>
@@ -104,14 +104,14 @@ you have checked out and updated you ScAthiop repo.</p>
     to avoid confusion in other folders. It is always in
     ScAthiop/preview/html <figure>
                      <head>Configure</head>
-                     <graphic url="https://github.com/SChAth/ScAthiop/blob/master/utility/img/9selectfolderforOutput.png"/>
+                     <graphic url="https://github.com/BetaMasaheft/ScAthiop/blob/master/utility/img/9selectfolderforOutput.png"/>
                   </figure>
                </p>
             </item>
             <item>
                <p>leave a random name, we will than change it. <figure>
                      <head>Configure</head>
-                     <graphic url="https://github.com/SChAth/ScAthiop/blob/master/utility/img/10setfilename.png"/>
+                     <graphic url="https://github.com/BetaMasaheft/ScAthiop/blob/master/utility/img/10setfilename.png"/>
                   </figure>
                </p>
             </item>
@@ -123,7 +123,7 @@ you have checked out and updated you ScAthiop repo.</p>
     extension, so, after entering that type <gi>.html</gi>
                   <figure>
                      <head>Configure</head>
-                     <graphic url="https://github.com/SChAth/ScAthiop/blob/master/utility/img/11checkfilenameextension.png"/>
+                     <graphic url="https://github.com/BetaMasaheft/ScAthiop/blob/master/utility/img/11checkfilenameextension.png"/>
                   </figure>
                </p>
             </item>
@@ -131,14 +131,14 @@ you have checked out and updated you ScAthiop repo.</p>
                <p>I would suggest also to open directly in your browser the saved
     file, ticking the option right there. <figure>
                      <head>Configure</head>
-                     <graphic url="https://github.com/SChAth/ScAthiop/blob/master/utility/img/12TickOpenInBrowser.png"/>
+                     <graphic url="https://github.com/BetaMasaheft/ScAthiop/blob/master/utility/img/12TickOpenInBrowser.png"/>
                   </figure>
                </p>
             </item>
             <item>
                <p>All set! Apply and enjoy! <figure>
                      <head>Configure</head>
-                     <graphic url="https://github.com/SChAth/ScAthiop/blob/master/utility/img/13Apply.png"/>
+                     <graphic url="https://github.com/BetaMasaheft/ScAthiop/blob/master/utility/img/13Apply.png"/>
                   </figure>
                </p>
             </item>

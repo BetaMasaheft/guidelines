@@ -67,7 +67,7 @@ guidelines for
    </text>
 </egXML>
          <p>If you want to add a typical spelling which is used to search a name,
-like in https://github.com/SChAth/ScAthiop/issues/506, the safest place
+like in https://github.com/BetaMasaheft/ScAthiop/issues/506, the safest place
 to add it so that it is indexed without affecting the actual content of
 the entry is in a new teiHeader//titleStmt/title</p>
          <div type="level1">
@@ -298,7 +298,7 @@ active="PRS4585Georgeo"
 passive="LIT1455GadlaG"/>
 </egXML>
             <p>A template with comments for a person description is available
-  <ref target="https://github.com/SChAth/schema/blob/master/modelfilePerson.xml">here</ref>
+  <ref target="https://github.com/BetaMasaheft/schema/blob/master/modelfilePerson.xml">here</ref>
             </p>
          </div>
          <div type="level1">
