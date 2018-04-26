@@ -54,6 +54,41 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p>Catalogue references and other information related to record and custody can be added to <ref target="additionalInfo">additional.</ref></p>
             </div>
             
+            <div type="level2">
+                <head>Lists of similar Manuscripts</head>
+                <p>A <gi>listBibl</gi> containing
+                    <gi>bibl</gi> elements for bibliographical
+                    references can be given in each <gi>msItem</gi>.
+                    References to similar manuscripts can instead be given with a
+                    <gi>ref</gi>s as described above. Note that
+                    informations about these manuscripts should be stored with the
+                    manuscripts for coherence, thus a pointer to the manuscript
+                    file will be given and that will contain the bibliographical
+                    references, date, etc.</p>
+                <p>If you want to specify within the file a relation between a
+                    bibliographic entry in the catalogue list and one of the
+                    similar manuscripts, assign an <att>xml:id</att> to
+                    the <gi>ref</gi> pointing at the manuscript and give a
+                    <att>corresp</att> to the <gi>bibl</gi> of the catalogue
+                    bibliography.</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    
+                    .... <ref type="mss"  corresp="TuebingenAeth7" xml:id="TuebingenAeth7"/>
+                    <ref type="mss" corresp="BNabb65" xml:id="BNabb65"/> ...
+                    
+                    
+                    <listBibl type="catalogue">
+                        <bibl corresp="#BNabb65">
+                            <ptr target="bm:Abbadie1859Cat"/><citedRange unit="page">75-79</citedRange>
+                        </bibl>
+                        <bibl corresp="#TuebingenAeth7">
+                            <ptr target="bm:Ewald1843Tuebingen"/>
+                            <citedRange unit="page">179-180</citedRange>
+                        </bibl>
+                    </listBibl>
+                </egXML>
+                <p>Alternatively you can use <ref target="relations">relations</ref> which is often a better and quicker solution.</p>
+            </div>
             
         </body>
     </text>
