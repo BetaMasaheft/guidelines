@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Validation process</title>
+                <author>Pietro Liuzzo</author>
+            </titleStmt>
+            <publicationStmt>
+                <p/>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Encoded in TEI.</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body xml:id="validation">
+            <p>This page explains the validation mechanisms in place in the workflow.</p>
+            <p> Each
+                XML file is provided with a direct link (a processing instruction) to the schema, which means that when connected to the internet your editing tool (oXygen, Atom, etc.)
+                might validate it against the correct schema either you want it or not. It is then your free decision to ignore
+                the red and scary warning you get. If in some cases for unknown reasons, this
+                binding is missing, you should have a copy in your computer, cloned and updated from
+                the <ref target="https://github.com/BetaMasaheft/Schema">public repository</ref>, in order to validate manually the file. </p>
+            <p>If by mistake you push invalid data anyway, you should get an email packaged with
+                remorse and regret which also contains the very same error the schema would have
+                given you locally. The app actually validates the data just before saving it. If it
+                can at all, because actually not well formed data is prevented from being processed
+                by the app (exist will not be able to read it and will give an error), so if you do
+                not see your data online after successfully pushing it to GIT, your first thought
+                should be that there is a problem in the XML you just pushed which you overlooked.
+                It can also occasionally be a problem with the web hook, but this is quite unlikely
+                and would need to be investigated (i.e. open an issue or forward the message you get with the fail to somebody how can read it). </p>
+            <p>If for any reason you cannot validate the files, please, simply do not commit them
+                until you can validate. </p>
+            <p>Never to leave the messages
+                and warnings you get from the schema in your editor or via email unattended, but
+                act immediately and without hesitation to resolve the issue before you carry on
+                doing anything else, especially if the error comes from the email, which means you
+                have successfully injected invalid data into the app. </p>
+            <p>This holds true also for files created within the app. In this case you are invited
+                to download locally the file and push it to GIT in order to have the app in sync
+                with the repo (otherwise the app will have the data you just created which is not in
+                GIT). Files created this way are not rarely but systematically incomplete, they in
+                most cases need to be fixed. If you quickly download save and push, you will get the
+                email, so, please, fix the file. </p>
+            <p> If you cannot fix the problem because the validation report is cryptic for you,
+                please ask. </p>
+            <p>There are indeed also problems which the schema cannot see, for example if the ID is
+                the same as the filename, a major problem for our code architecture. If you notice
+                some and would like a process to prevent or notify you about that, please open an
+                issue (I have opened one for this). </p>
+            <p>It is of course pointless to go back to files you already pushed to the repo or to
+                old emails you received, so, please just keep this in mind for your current and
+                future working routine. </p>
+            <p>Let me also add a note on creativity. Quite often I hear and see people making up
+                some valid XML or changing their encoding either to <list>
+                    <item>enter information they did not find another way to add,</item>
+                    <item>or to get the visualisation in the way they would expect it.</item>
+                </list>
+            </p>
+            <p>Please note that both these working methodologies are wrong and inevitably lead to
+                confusion and caos. </p>
+            <p>If you cannot decide where to encode something, please ask the other team members
+                before you introduce novelties of your own creation and personal use. In some cases
+                we will also forward our questions to the TEI mailing list (which you are also very
+                welcome to read and use). We will then try always to document in our guidelines the
+                decisions taken. If you do something which is not in the guidelines, to the least it
+                needs to be documented there, possibly after discussion in an issue, especially if
+                it might affect other peoples encoding. </p>
+            <p>If instead you have encoded something following the guidelines but it does not appear
+                in one of the visualisations in the way you would expected it to, please, open an
+                issue describing what happens, with the XML you entered, reference to the guidelines
+                and possibly a clear description. </p>
+        </body>
+    </text>
+</TEI>

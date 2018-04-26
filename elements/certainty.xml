@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Certainty</title>
+                <author>Pietro Liuzzo</author>
+            </titleStmt>
+            <publicationStmt>
+                <p/>
+            </publicationStmt>
+            <sourceDesc>
+                <p>documentation page produced ad hoc</p>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change who="PL" when="2018-04-24">stub of page</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body xml:id="certainty"><div type="level3">
+    <head>Certainty</head>
+    <p>TEI can express much more precisely where the uncertainty about
+        a certain information provided is using the element certainty.</p>
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+        <title type="complete" ref="LIT1716Kidanz"><certainty locus="value" match="../@type" cert="low"/></title>
+    </egXML>
+    <p>instead of</p>
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+        <title type="complete" cert="low" ref="LIT1716Kidanz"/>
+    </egXML>
+    <p>will express that the uncertainty is about the completeness of
+        the work referenced, not about the work generally. Please refer to
+        the TEI guidelines for further guidance and example of how to use
+        this element. Note that an alternative for the aspect of the
+        markup in question can be given in
+        <att>assertedValue</att>:</p>
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+        <persName ref="PRS11436Cyriacus" role="owner"><certainty locus="value" match="../@role" assertedValue="other" cert="low"/></persName>
+    </egXML>
+</div>
+        </body>
+    </text>
+</TEI>
+

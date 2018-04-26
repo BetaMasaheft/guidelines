@@ -454,9 +454,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 </egXML>
                   <p>Alternatively you can use <ref target="relations">relations</ref> which is often a better and quicker solution.</p>
                </div>
+               
+               
                <div type="level5"><p><ref target="particDescPersons">Field like information about persons related to the manuscript.</ref></p>
 <!--               added link here not to forget that I had created that splitting it from additional-->
                </div>
+               <div type="level5"><p><ref target="additionalInfo">Where to put your catalogue references and other information related to record and custody.</ref></p>
+                  <!--               added link here not to forget that I had created that splitting it from additional-->
+               </div>
+               
+               
+               
                <div type="level5">
                   <head>Colophon</head>
                   <p>inside any msItem in the description of the contents a
@@ -1353,7 +1361,10 @@ in the <date from="1620" precision="low" to="1635">1620s - early 1630s</date>
           
                </div>
             </div>
+            
          </div>
+            <div type="level3"><p><ref target="text-encoding">Text encoding</ref></p></div>
+            <div type="level3"><p><ref target="images">Images</ref></p></div>
       </div>
       </body>
    </text>

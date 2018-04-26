@@ -4,7 +4,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader>
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>General</title>
@@ -18,38 +18,70 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
       </fileDesc>
-  </teiHeader>
-  <text>
+   </teiHeader>
+   <text>
       <body xml:id="general">
          <div type="level1">
             <head>TEI encoding guidelines for cataloguers</head>
-            <p>TEI should always be referred to for definitions and use of
-  elements and attributes.</p>
-            <p>However TEI is not a prescriptive system or a schema, and the
-  present guidelines describe the declension of the TEI for this project
-  and its purposes. Whenever possible the reason for a particular
-  encoding decision is given. This shall help also to track bugs related
-  to data entry.</p>
-            <p>The
-  <ref target="https://github.com/BetaMasaheft/schema/blob/master/tei-betamesaheft.xml">ODD</ref>
-  and the
-  <ref target="https://github.com/BetaMasaheft/schema/blob/master/tei-betamesaheft.rng">schema</ref>
-  can be found in the schema repo.</p>
-            <p>If you think something should be automatised,
-  <ref target="https://xkcd.com/1319/">click here first</ref>.</p>
-  <p>There are several general things you are going to encode. These are all MUST READ if you are editing for the first time.</p>
-  <list>
-     <item><ref target="tei">Adding a <att>type</att> to distinguish different entities.</ref></item>
-     <item><ref target="spaces">How to deal with white spaces.</ref></item>
-     <item><ref target="titleStmtInfo">General information in <gi>titleStmt</gi>.</ref></item>
-     <item><ref target="entities-id-structure">How to assign IDs.</ref></item>
-     <item><ref target="references">How to make links.</ref></item>
-     <item><ref target="bibliographic-references">How to deal with bibliography.</ref></item>
-     <item><ref target="language">Making statements about language used in the file.</ref></item>
-     <item><ref target="named-entities-and-authority-lists">Marking up Named Entities (personal names, place names, titles, dates).</ref></item>
-  </list>
-  
-  
+            <p>TEI should always be referred to for definitions and use of elements and
+               attributes.</p>
+            <p>However TEI is not a prescriptive system or a schema, and the present guidelines
+               describe the declension of the TEI for this project and its purposes. Whenever
+               possible the reason for a particular encoding decision is given. This shall help also
+               to track bugs related to data entry.</p>
+            <p>The <ref
+                  target="https://github.com/BetaMasaheft/schema/blob/master/tei-betamesaheft.xml"
+                  >ODD</ref> and the <ref
+                  target="https://github.com/BetaMasaheft/schema/blob/master/tei-betamesaheft.rng"
+                  >schema</ref> can be found in the schema repo.</p>
+            <p>If you think something should be automatised, <ref target="https://xkcd.com/1319/"
+                  >click here first</ref>.</p>
+            <p>There are several general things you are going to encode. These are all MUST READ if
+               you are editing for the first time.</p>
+            <list>
+               <item><ref target="revisions">How to record the activity done on any
+                  file</ref></item>
+               <item><ref target="tei">Adding a <att>type</att> to distinguish different
+                     entities.</ref></item>
+               <item><ref target="spaces">How to deal with white spaces.</ref></item>
+               <item><ref target="titleStmtInfo">General information in
+                  <gi>titleStmt</gi>.</ref></item>
+               <item><ref target="entities-id-structure">How to assign IDs.</ref></item>
+               <item><ref target="references">How to make links.</ref></item>
+               <item><ref target="bibliographic-references">How to deal with
+                  bibliography.</ref></item>
+               <item><ref target="language">Making statements about language used in the
+                  file.</ref></item>
+               <item><ref target="named-entities-and-authority-lists">Marking up Named Entities
+                     (personal names, place names, titles, dates).</ref></item>
+               <item><ref target="correspRef">use of referencing attributes</ref>
+                     (<att>corresp</att> and <att>ref</att>)</item>
+               <item><gi>certainty</gi></item>
+            </list>
+
+            <p>After reading these you have to look at more specific guidelines for each type of
+               file.</p>
+            <list>
+               <item><ref target="manuscripts">Manuscripts</ref></item>
+               <item><ref target="works">Text Units</ref></item>
+               <item><ref target="places">Places</ref></item>
+               <item><ref target="persons">Persons</ref></item>
+               <item><ref target="narrativeUnits">Narrative Units</ref></item>
+               <item><ref target="institution">Repositories</ref></item>
+               <item><ref target="authority-files">Authority files</ref></item>
+               <item><ref target="artThemes">Art Themes</ref></item>
+
+               <item><ref target="corpora">Corpora</ref></item>
+            </list>
+
+            <p>When you are done with a file, please, add a <gi>change</gi> with content <hi
+                  rendition="simple:bold">completed</hi> (see <ref target="revisions"
+                  >revisions</ref>). If you have reviewed and corrected a file which is now ready
+               and published, please add a change with content <hi rendition="simple:bold"
+                  >reviewed</hi>. </p>
+
+            <p>Please <ref target="validation">validate</ref> your data before pushing it to the public repositories and make sure
+               only valid data is sent through.</p>
          </div>
       </body>
    </text>

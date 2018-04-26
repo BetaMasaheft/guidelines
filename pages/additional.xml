@@ -22,7 +22,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   <text>
     <body xml:id="additionalInfo">
       <head>Additional</head>
-      <p>This is used for any <hi rendition="simple:bold">other</hi> information related to the manuscript. especially important is the <tag>listBibl type="catalogue"</tag> which contains the main catalogue references used also for the catalogue grouping. Note <gi>surrogates</gi>
+      <p>This is used for any <hi rendition="simple:bold">other</hi> information related to the
+        manuscript. especially important is the <tag>listBibl type="catalogue"</tag> which contains
+        the main catalogue references used also for the catalogue grouping. Note <gi>surrogates</gi>
         where for example microfilms or photographs should be recorded.</p>
       <egXML xmlns="http://www.tei-c.org/ns/Examples">
         <adminInfo>
@@ -54,9 +56,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           >corresponding taxonomy</ref>. oXygen should prompt them from the schema.</p>
 
       <p>Here the <gi>msDesc</gi> or <gi>msPart</gi> ends. Check that all is well nested and that
-        all elements up to <gi>fileDesc</gi> are closed. 
-      </p>
-      
+        all elements up to <gi>fileDesc</gi> are closed. </p>
+
     </body>
   </text>
 </TEI>

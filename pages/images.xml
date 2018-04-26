@@ -75,47 +75,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <p>You can also add the exact link to a page in a
     <att>facs</att> in each <gi>pb</gi>
     inside the transcription of the manuscript.</p>
-         <div type="level3">
-            <head>
-               <att>corresp</att> and
-      <att>ref</att>
-            </head>
-            <list type="unordered">
-               <item>
-                  <p>if you point to an internal id, use #</p>
-               </item>
-               <item>
-                  <p>if you point to an external id don't use #. That is why
-          <gi>witness</gi> does not take that, as
-          <att>active</att>,
-          <att>passive</att> inside
-          <gi>relation</gi> should not. In fact you want
-          to be able to point to ids within the records you are pointing
-          to.</p>
-               </item>
-            </list>
-         </div>
-         <div type="level3">
-            <head>certainty</head>
-            <p>TEI can express much more precisely where the uncertainty about
-      a certain information provided is using the element certainty.</p>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-     <title type="complete" ref="LIT1716Kidanz"><certainty locus="value" match="../@type" cert="low"/></title>
-</egXML>
-            <p>instead of</p>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-     <title type="complete" cert="low" ref="LIT1716Kidanz"/>
-</egXML>
-            <p>will express that the uncertainty is about the completeness of
-      the work referenced, not about the work generally. Please refer to
-      the TEI guidelines for further guidance and example of how to use
-      this element. Note that an alternative for the aspect of the
-      markup in question can be given in
-      <gi>assertedValue</gi>:</p>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<persName ref="PRS11436Cyriacus" role="owner"><certainty locus="value" match="../@role" assertedValue="other" cert="low"/></persName>
-</egXML>
-         </div>
+        
       </body>
    </text>
 </TEI>
