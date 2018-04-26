@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Images</title>
+                <author>Pietro Liuzzo</author>
+            </titleStmt>
+            <publicationStmt>
+                <p/>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+                <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body xml:id="structure">
+    <head>General Structure of Manuscript Records (Simple and
+        Composite)</head>
+    <p>It is recommended when starting encoding manuscript records to
+        read these guidelines alongside with example records, for example
+        of the <ref type="bm" target="/manuscripts/INS0003BAV/list">BAV</ref> or <ref type="bm" target="/manuscripts/INS0312BDL/list">BDL</ref> collections.</p>
+    <p>Each manuscript record should contain in
+        <gi>msDesc</gi> a description of the
+        manuscript's intellectual and physical content, its history and
+        the source of the record. The intellectual content of the
+        manuscript is encoded in
+        <gi>msContents</gi>, divided into as many
+        (nested) <gi>msItem</gi>s as needed. The
+        physical description of the manuscript is encoded in
+        <gi>physDesc</gi>.
+        <gi>history</gi> contains all available
+        information on the manuscript's provenance and further history.
+        The source of the record is encoded in
+        <gi>additional</gi>.</p>
+    <p>The order for these elements should be for simple manuscripts:
+        <list>
+            <item><gi>msIdentifier</gi>, see below</item>
+            <item> <gi>msContents</gi></item>
+            <item><gi>physDesc</gi></item>
+            <item><gi>history</gi></item>
+            <item> <gi>additional</gi></item>
+        </list>
+    </p>
+    <p>Each codicological unit of a composite manuscript is a
+        <gi>msPart</gi>. Since the codicological
+        units of a composite manuscript might have different physical
+        aspects and origins, all the above mentioned elements can and
+        should be used as needed within each separate
+        <gi>msPart</gi>. However, the shared aspects
+        of the manuscript - for example parts of its history, or the
+        description of the binding - can also be encoded for the entire
+        manuscript. Therefore, the <gi>msDesc</gi>
+        of a composite manuscript might have the following structure:</p>
+    <list type="unordered">
+        <item>
+            <p>
+                <gi>msIdentifier</gi>, see below</p>
+        </item>
+        <item>
+            <p>
+                <gi>physDesc</gi> Containing the
+                physical description pertaining to the entire manuscript</p>
+        </item>
+        <item>
+            <p>
+                <gi>history</gi> Containing
+                information on the origin and provenance pertaining to the
+                entire manuscript</p>
+        </item>
+        <item>
+            <p>
+                <gi>additional</gi> Containing the
+                source of this record</p>
+        </item>
+        <item>
+            <p>
+                <tag>msPart xml:id="p1"</tag>
+                Description of the first codicological unit, possibly
+                including again <gi>physDesc</gi>,
+                <gi>history</gi> and
+                <gi>additional</gi> as pertaining only
+                to this codicological unit</p>
+        </item>
+        <item>
+            <p>
+                <tag>msPart xml:id="p2"</tag>
+                Description of the second codicological unit, possibly
+                including again <gi>physDesc</gi>,
+                <gi>history</gi> and
+                <gi>additional</gi> as pertaining only
+                to this codicological unit</p>
+        </item>
+        <item>
+            <p>
+                <gi>text</gi> Containing any
+                transcribed text of any
+                <gi>msPart</gi>
+            </p>
+        </item>
+    </list>
+    <p>Each <gi>msPart</gi> contains the
+        description of its intellectual content in
+        <gi>msContents</gi> as well as all the above
+        elements, limited now to the description of this particular
+        <gi>msPart</gi>. If no further information
+        is available for example on the history of a particular
+        <gi>msPart</gi> or if no other source than
+        the one already specified in the first
+        <gi>additional</gi> element concerning the
+        entire manuscript has been used, it is not necessary to repeat
+        these elements.</p>
+
+        </body>
+    </text>
+</TEI>
+

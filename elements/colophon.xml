@@ -24,8 +24,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body xml:id="colophon">
          <div>
-            <head>colophon</head>
-            <p/>
+            <head>Colophon</head>
+            <p>inside any <gi>msItem</gi> in the description of the contents a
+               <gi>colophon</gi> with
+               <att>xml:id</att> with value <val>coloph</val> can be used to enter
+               the text of the Colophon and a description. This will be
+               entered with a special element <gi>colophon</gi>
+               within the <gi>msItem</gi>
+            </p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <colophon xml:lang="gez" xml:id="coloph1" >
+                  <locus from="49rb" n="28"/>
+                  በአስተሐምሞ፡ በትእዛዘ። እግዚአብሔር፡ ገበርክዎ፡ ለዝንቱ፡ ነገር ።
+               </colophon>
+            </egXML>
+            <p>Bilingual colophons can have a
+               <gi>foreign</gi> element with
+               <att>xml:lang</att> of the second language
+               used (see e.g. ESakm010).</p>
          </div>
       </body>
    </text>

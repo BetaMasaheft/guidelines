@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Binding Description</title>
+                <author>Pietro Liuzzo</author>
+            </titleStmt>
+            <publicationStmt>
+                <p/>
+            </publicationStmt>
+            <sourceDesc>
+                <p>transformed with Pandoc, then with XSLT, then further edited</p>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change who="PL" when="2018-04-24">stub of page</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body xml:id="bindingDescription">
+    <head>Binding Description</head>
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+        <bindingDesc>
+            <binding contemporary="false" xml:id="binding">
+                <decoNote xml:id='b1'>Wooden boards (recently) covered with
+                    reddish-brown tooled leather. </decoNote>
+                <decoNote xml:id='b2'>Four pairs of sewing stations.</decoNote>
+                <decoNote xml:id='b3' type="bindingMaterial"><material key="wood"/></decoNote>
+                <decoNote  xml:id='b4' type="Endbands">...</decoNote>
+                <decoNote xml:id='b5' type="Other">
+                    Parchment guards (possibly of the same
+                    origin as <locus target="#183"/>) were used to sew together <locus from="1" to="2"/>.
+                </decoNote>
+            </binding>
+        </bindingDesc>
+    </egXML>
+    <p>
+        <gi>binding</gi> can take
+        <att>notBefore</att> and
+        <att>notAfter</att> and takes a
+        <att>contemporary</att> with the following
+        values: * false * inapplicable * unknown * true * partly</p>
+    <p>oXygen should prompt the values from the schema.</p>
+    <p>
+        <gi>decoNote</gi> elements in Binding
+        Description MUST have a <att>xml:id</att>
+        starting with the letter 'b' followed by a progressive number,
+        e.g. b1, b2, b3.</p>
+    <p>Some of these decoNote can take a special form (which was
+        established to host the data coming out of EthioSpaRE).</p>
+    <list type="unordered">
+        <item>
+            <p>The first decoNote, with
+                <att>xml:id</att>='b1' should be a general
+                note and remain untyped.</p>
+        </item>
+        <item>
+            <p>Inside the special
+                <tag>decoNote type="bindingMaterial"</tag>
+                you can add the element <gi>material</gi>
+                with a <att>key</att> equal to one of the
+                values of the corresponding taxonomy from the schema.
+                oXygen should prompt the values from the schema.</p>
+        </item>
+    </list>
+    <p>Other defined types for decoNote are</p>
+    <list type="unordered">
+        <item>
+            <p>Headbands</p>
+        </item>
+        <item>
+            <p>Tailbands</p>
+        </item>
+        <item>
+            <p>Other</p>
+        </item>
+    </list>
+    <p>You can always further specify this information within one
+        of the <gi>decoNote</gi> elements within
+        <gi>binding</gi>.</p>
+        </body>
+    </text>
+</TEI>
+

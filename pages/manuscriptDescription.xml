@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Images</title>
+                <author>Pietro Liuzzo</author>
+            </titleStmt>
+            <publicationStmt>
+                <p/>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+                <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body xml:id="manuscriptDescription">
+            
+            <head>Into msPart</head>
+            <p>There should be a <gi>msIdentifier</gi> for the
+      manuscript as a whole, with a
+      <gi>repository</gi>. If this contains
+      <gi>msPart</gi>s then each of these only needs to
+      contain <gi>msIdentifier</gi> with an
+      <gi>idno</gi>
+            </p>
+            
+            <p>The description of the manuscript part is contained in <gi>physDesc</gi>,
+      the events which affected the history of the manuscript can be
+      added in  <gi>history</gi> 
+      while additional informations about the manuscript (e.g.
+      <gi>surrogates</gi>, further bibliography, etc.) have a specific element
+      for them:
+                  <gi>additional</gi>
+               .</p>
+            
+            <list>
+                <item><ref target="manuscriptContents">Manuscript Contents</ref></item>
+                <item><ref target="manuscriptPhysDescription">Manuscript Physical Description</ref></item>
+            </list>
+            
+            <div type="level2">
+                <head>Other information from the catalogues</head>
+                <p>Information given in the catalogues about manuscripts
+                    belonging to other traditions, i.e. Arabic, should not be
+                    included in our description.</p>
+                <p>Field like information about persons related to the manuscript if not already encoded can be provided in <ref target="particDescPersons">particDesc</ref>.</p>
+                <p>Catalogue references and other information related to record and custody can be added to <ref target="additionalInfo">additional.</ref></p>
+            </div>
+            
+            
+        </body>
+    </text>
+</TEI>
+       

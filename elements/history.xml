@@ -24,8 +24,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body xml:id="history">
          <div>
-            <head>history</head>
-            <p/>
+            <head>History</head>
+            <p>Events in the history of a manuscript part can be described
+               in <gi>history</gi>. These events are grouped in:
+               <list><item><gi>acquisition</gi></item>
+               <item><gi>origin</gi></item>
+               <item><gi>provenance</gi></item>
+               <item><gi>summary</gi></item></list>
+            </p>
          </div>
       </body>
    </text>

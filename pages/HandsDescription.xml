@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Hands Description</title>
+                <author>Pietro Liuzzo</author>
+            </titleStmt>
+            <publicationStmt>
+                <p/>
+            </publicationStmt>
+            <sourceDesc>
+                <p>transformed with Pandoc, then with XSLT, then further edited</p>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change who="PL" when="2018-04-24">stub of page</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body xml:id="handDescription">
+    <head>Hands Description</head>
+    <p>Into <gi>handDesc</gi> you can have as many
+        <gi>handNote</gi> as you wish.</p>
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+        <handNote script="Ethiopic" xml:id="h1" corresp="#p1.2 #p1.3 #a4">
+            <seg type="script"> 15th Century square script?</seg>
+            <seg type="ink">Black, red</seg>
+            <seg type="rubrication">nomina sacra</seg>
+            <persName role="scribe" ref="PRS1691Alib"/>
+            <date>Mid 15th - mid 15th-cent.</date>
+            <desc>Regular, by a well-trained hand</desc>
+        </handNote>
+    </egXML>
+    <p>Give an <att>xml:id</att> to each handNote to
+        able to refer to it in other parts of the record. You can also
+        use <att>corresp</att> to point to
+        <gi>msPart</gi>s or
+        <gi>msItem</gi>s in which this hand is used.
+        <att>script</att> should take one of the values
+        in the Writing Systems Taxonomy proposed from the schema. You
+        can always also add a <gi>locus</gi> within
+        <gi>handNote</gi> to determine where the hand is
+        used. This can overlap with the corresponding parts without
+        any problem.</p>
+    <p>Inside <gi>handNote</gi> you can also list
+        abbreviations</p>
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+        <list type="abbreviations">
+            <item>
+                <abbr>ፍ፡</abbr> for <expan>ፍቱሐ፡</expan> (e.g., <locus target="#36ra #36vb #39ra"/>)
+            </item>
+            <item>
+                <abbr>ይ፡ ሕ፡</abbr> for <expan>ይበል፡ ሕዝብ፡</expan> (e.g., <locus target="#40va"/>)
+            </item>
+            
+        </list>
+    </egXML>
+        </body>
+    </text>
+</TEI>
+

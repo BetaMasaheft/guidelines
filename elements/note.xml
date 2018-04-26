@@ -24,8 +24,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body xml:id="note">
          <div>
-            <head>note</head>
-            <p/>
+            <head>Note</head>
+            <p>
+               <gi>note</gi> can contain any other information
+               which cannot be better structured in the description. It can be
+               used within most elements of a manuscript description.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               
+               <colophon xml:lang="gez" xml:id="coloph1">
+                  <locus target="#92r"/>
+                  ተፈጸመ ፡ በዝየ ፡ ኦሪት ፡ ሰመንቱ ፡ ብሔር ፡ በሰላመ ፡ እግዚአ ብሔር ።
+                  <note>Written in hand <ref target="#Hc" />, cp. also Additiones <ref target="#a1"/>, <ref target="#a4"/>, <ref target="#a8"/>, <ref target="#a10"/>, <ref target="#a12"/>. 
+                     The note is written over erased punctuation sign.</note>
+               </colophon>
+            </egXML>
          </div>
       </body>
    </text>

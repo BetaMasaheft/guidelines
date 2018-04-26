@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Images</title>
+                <author>Pietro Liuzzo</author>
+            </titleStmt>
+            <publicationStmt>
+                <p/>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+                <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body xml:id="identifiersStructure">
+    <head>Identifiers</head>
+    <p>Each <gi>msPart</gi>,
+        <gi>msItem</gi> and <gi>msFrag</gi>
+        should have an <att>xml:id</att> with a letter
+        (respectively p, i or f) and a progressive number. For nested
+        <gi>msPart</gi>s numeration should restart and use a full stop for the
+        second level.</p>
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+        <msDesc xml:id="ms">
+            <msIdentifier>
+                <repository ref="INS0030Addaqaharsi"/>
+                <idno>MR-023</idno>
+            </msIdentifier>
+            <msPart xml:id="p1">
+                <msIdentifier><idno></idno></msIdentifier>
+                <msContents></msContents>
+                <msPart xml:id="p1.1">
+                    <msIdentifier><idno></idno></msIdentifier>
+                    <msContents></msContents>
+                </msPart>
+                <msPart xml:id="p1.2">
+                    <msIdentifier><idno></idno></msIdentifier>
+                    <msContents></msContents>
+                </msPart>
+                <msPart xml:id="p1.3">
+                    <msIdentifier><idno></idno></msIdentifier>
+                    <msContents></msContents>
+                </msPart>
+            </msPart>
+            <msPart xml:id="p2">
+                <msIdentifier>
+                    <idno></idno>
+                </msIdentifier>
+            </msPart>
+        </msDesc>
+    </egXML>
+    <p>
+        <gi>msItem</gi>s will have an id formed of the
+        msPart, underscore and the item id, like
+        <gi>p.1.1_i1</gi>
+    </p>
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+        <msPart xml:id="p1.1">
+            <msIdentifier>
+                <idno>  </idno>
+            </msIdentifier>
+            <msContents>
+                <msItem xml:id="p1.1_i1">
+                    <locus></locus>
+                    <title></title>
+                    <msItem xml:id="p1.1_i1.1">
+                        <locus></locus>
+                        <title></title>
+                    </msItem>
+                    <msItem xml:id="p1.1_i1.2">
+                        <locus></locus>
+                        <title></title>
+                    </msItem>
+                </msItem>
+                <msItem xml:id="p1.1_i2">
+                    <locus></locus>
+                    <title></title>
+                </msItem>
+            </msContents>
+        </msPart>
+    </egXML>
+    <div type="level4">
+        <head>More than one identifier for a manuscript or a part of
+            manuscript</head>
+        <p>If there are other possible identifiers, add them with the
+            following elements Inside msIdentifier</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <altIdentifier>
+                <repository ref="INS00000030Addaqaharsi"></repository> 
+                <idno>XX0000</idno>
+            </altIdentifier>
+        </egXML>
+    </div>
+        </body>
+    </text>
+</TEI>
+

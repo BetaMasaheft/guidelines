@@ -23,9 +23,61 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body xml:id="origin">
-         <div>
-            <head>origin</head>
-            <p/>
+         <div> 
+            <head>Origin</head>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <origin>
+                  <origPlace><placeName ref="LOC4705MayRub"/></origPlace>
+                  <origDate notBefore="1872" notAfter="1876">Mention of <persName ref="PRS10378Yohanne">King Yoḥannәs IV</persName> (<date>1872-89</date>)
+                     on <locus target="#43r" n="8" corresp="#coloph"/>, and of <persName ref="PRS2223Atnatewo">Metropolitan ˀabunä ˀAtnatewos</persName> (in tenure <date>1869-76</date>) on <locus target="#43r" corresp="#coloph"/>. Besides, the colophon refers to the year of John the Evangelist.</origDate>
+               </origin>
+            </egXML>
+            <p>
+               <gi>origDate</gi> contains as iso values in
+               <att>notBefore</att> and
+               <att>notAfter</att> (or only one of them, if
+               that’s all we have) the range of dates in the Gregorian
+               calendar for the production of the manuscript.</p>
+            <p>If a precise date is know, please use
+               <att>when</att> instead of
+               <att>notBefore</att> and
+               <att>notAfter</att>.</p>
+            <p>If the date is documented in the manuscript add
+               <att>evidence</att> ='internal-date'. You can also
+               use this attribute in a <gi>date</gi> element ,
+               e.g. marking up the colophon text. If the date is known by
+               another source, such as the date of the reign of a ruler or
+               paleography, please choose the relevant value prompted by the
+               schema for @evidence.</p>
+            <p>It is possible to add more than one
+               <gi>origDate</gi> if alternative datings
+               for the manuscript are provided in the catalogue or
+               literature. In these case the source for each date should be
+               specified in a <gi>note</gi> inside the
+               respective <gi>origDate</gi>. The person
+               responsible for the dating can be indicated with @resp inside
+               <gi>origDate</gi>:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <origDate notBefore="1540" notAfter="1699" resp="PRS4805Grebaut PRS9530Tisseran"> 
+                  <note> Date according to <bibl><ptr target="bm:GrebTiss1935Codices"/> <citedRange unit="page">187-190</citedRange></bibl>. </note> 
+               </origDate> 
+               <origDate notBefore="1550" notAfter="1599" resp="PRS3182ContiRo"> 
+                  <note>Date according to <bibl><ptr target="bm:ContiRossini1927Inediti"/> <citedRange unit="page">516</citedRange></bibl>.</note> 
+               </origDate>
+            </egXML>
+            <p>Please, note that almost anywhere text can be annotated,
+               for example with a <gi>date</gi> element which
+               can take the same attributes as described above. If marking up
+               a sentence, for example "in the early 1920s-1930s"
+               there is no need to remove the text just mark it up, as there
+               is no way to consistently output all options for a date
+               value.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               in the <date from="1620" precision="low" to="1635">1620s - early 1630s</date>
+            </egXML>
+            
+         
+            
          </div>
       </body>
    </text>

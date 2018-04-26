@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Decoration Description</title>
+                <author>Pietro Liuzzo</author>
+            </titleStmt>
+            <publicationStmt>
+                <p/>
+            </publicationStmt>
+            <sourceDesc>
+                <p>transformed with Pandoc, then with XSLT, then further edited</p>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change who="PL" when="2018-04-24">stub of page</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body xml:id="decorationDescription">
+    <head>Decoration Description</head>
+    <p>
+        <gi>decoDesc</gi> contains a description of
+        the various decorative elements found in a manuscript. If
+        multiple elements are present you can provide general
+        observation in <gi>summary</gi> using it
+        directly into <gi>decoDesc</gi>. Within this
+        text simply use <gi>ref</gi> to refer to each
+        <gi>decoNote</gi> or
+        <gi>locus</gi> to refer to a folio. If there is
+        a note about all miniatures and a note about all drawings of a
+        certain type, then the sentence in description will point to
+        the decoNotes involved.</p>
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+        <decoDesc>
+            <summary>
+                The manuscript’s decorative features are typical of the period. It includes the Eusebian Apparatus 
+                (3+7 arrangement) set under colourful stylized arches and followed by a Tempietto. As the pages 
+                before the beginning of the Gospel of Mark <locus target="#82v"/>, Luke <locus target="#127v"/>, 
+                and John <locus target="#203v"/> contain inventories and notes it is possible that they were originally 
+                intended to receive <ref type="authFile" corresp="AT1013EvaPortrait"/>. The miniatures are painted in 
+                the <term key="FirstSolomonicStyle"/> and recall examples produced between  
+                <date notBefore="1300" notAfter="1450"/>. The decorations appear to have been paintedby the same artist.
+            </summary>
+        </decoDesc>
+    </egXML>
+    <p>
+        <hi rendition="simple:bold">N.B.</hi>
+        <gi>summary</gi>
+        <hi rendition="simple:italic">can also be used to provide
+            information about the decorative features of the manuscript
+            that cannot be given elsewhere. In the above example, the
+            editor of the</hi> 
+        <gi>decoDesc</gi> believes
+        <hi rendition="simple:italic">that the manuscripts offers
+            evidence that is relevant to the Art Theme AT1013EvaPortrait
+            even though the theme is not included in the work in
+            question.</hi>
+    </p>
+    <p>Each decorative element in the manuscript is listed in a
+        <gi>decoNote</gi> as follows:</p>
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+        <decoNote type="miniature" xml:id="d1">
+            <locus target="#1r"/>
+            <desc>drawing of a cross; black ink.</desc>
+        </decoNote>
+        <decoNote type="frame" xml:id="d2">
+            <locus target="#41r"/>
+            <desc>wide, coloured (red and black), horizontal ornamental band over col. 
+                a-b, at the incipit of text I.-3), with three lateral pendants reaching l.6 
+                whose the central one decorated with a cross; the horizontal band extends to 
+                the top of the page(interlaces, crosses).
+            </desc>
+        </decoNote>
+    </egXML>
+    <p>Available values of <att>types</att> for
+        decorations are * frame * miniature * band * punctuation *
+        drawing * border * diagram * frieze * illustration * initial *
+        map * marginal * mixed * other * ornamentation * paratext *
+        printmark * publishmark * secondary * tooling * unspecified *
+        unwan * vignette * engraving</p>
+    <p>Include always a <gi>locus</gi> with <att>target</att> to
+        identify the position of the drawing.</p>
+    <p>There should be a ATID for each
+        subject represented as miniature/drawing in the
+        manuscript/item when possible (there should also be specific
+        <gi>ATIDs</gi> for subjects that cannot be
+        confidently identified (e.g. Saints on Horseback, Holy Men,
+        Group of Figures). These latter IDs are to be used only when
+        identification is not possible by means of attributes and/or
+        captions and/or iconography and/or context. For consistency,
+        when editing miniature and drawing
+        <att>types</att> in
+        <gi>desc</gi> the please try to follow,
+        when possible, the following principles.
+        <hi rendition="simple:bold">1.</hi> Order: main subject and
+        related iconographic elements; main iconographic features from
+        left to right and from top to bottom; and secondary elements
+        and background. <hi rendition="simple:bold">2.</hi> Generic
+        <gi>References</gi> and
+        Bibliographic References are given in
+        the ATID, include only references to:
+        works referring directly to this particular set of miniatures;
+        or works relevant to a particular feature of the specific Art
+        Theme that are not included in the general
+        ATID bibliography.
+        <hi rendition="simple:bold">3.</hi> Images depicting groups of
+        individuals/saints will have a specific
+        ATID but, when possible, each
+        individual should be identified with the appropriate
+        <gi>PersName</gi> or
+        <gi>persongrp</gi> record.
+        <hi rendition="simple:bold">4.</hi> Images depicting generical
+        geographical features (e.g. trees; mountains) can be encoded
+        using keywords in the Place types section. Towns, areas, etc.
+        can use <gi>PlaceName</gi>. If a geographical
+        reference is consistently present in a Theme, then consider
+        including it in the ATID rather than in
+        the <gi>DecoNote</gi>.
+        <hi rendition="simple:bold">5.</hi> Keywords are valuable
+        tools that you can use to provide further information about
+        such features as the style and iconographic elements of a
+        theme (<hi rendition="simple:italic">see relevant Wiki
+            section</hi>).</p>
+    <p>Miniatures may include: a) legends that illustrate the
+        general subject matter of the miniature; b) shorter captions,
+        a short sentence or a word, that identify some of the
+        Persons/Objects/Actions in the miniature. Legends should be
+        provided at the end of <gi>desc</gi>
+        inside the corresponding
+        <gi>decoNote</gi> and use
+        <gi>q</gi> captions should be associated
+        to the relevant iconographic element using
+        <gi>foreign</gi>:</p>
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+        <decoNote type="engraving" xml:id="d2">
+            <locus target="#125v"/>
+            <desc> The <ref type="authFile" corresp="AT1005Crucifixion"/>.
+                At the sides of the cross are the Two Thieves, identified by captions as 
+                <foreign xml:lang="gez">ፈያታይ፡ ዘየማን፡</foreign> and 
+                <foreign xml:lang="gez">ፈያታይ፡ ፀጋም፡</foreign>. The legend at the top of the
+                folio presents the
+                <q xml:lang="gez">ነዋ፡ በግዑ፡ ለእግዚአብሔር፡ ዘያአትት፡ ኀጢአተ፡ ዓለም።</q>
+            </desc>
+        </decoNote>
+    </egXML>
+    <p>Manuscripts that contain exclusively miniatures and no text
+        receive the keyword miniatureCollection. Any other keywords
+        relevant to these miniatures, such as for example Hagiography,
+        can be assigned freely.</p>
+        </body>
+    </text>
+</TEI>
+
+

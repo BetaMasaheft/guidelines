@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Manuscript Contents</title>
+                <author>Pietro Liuzzo</author>
+            </titleStmt>
+            <publicationStmt>
+                <p/>
+            </publicationStmt>
+            <sourceDesc>
+                <p>transformed with Pandoc, then with XSLT, then further edited</p>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change who="PL" when="2018-04-24">stub of page</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body xml:id="manuscriptContents">
+    <head>Manuscript Contents</head>
+    <p>The contents of each manuscript part should be given into the
+        smallest possible unit (<gi>msPart</gi>) to which
+        they refer to, into an <gi>msContent</gi>, but
+        they can be added at any level in a hierarchy of parts.</p>
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+        <msContents>
+            <summary>
+                I) Gädlä Kiros (fols. 5ra-43rb)
+                II) Mälkəˀa Kiros (fols. 43va-50va)
+                III) Mälkəˀa Kiros (fols. 50vb-51va)
+            </summary>
+            <msItem xml:id="p1.1_i1">
+                <locus from="5ra" to="43vb"/>
+                <title type="uniform" ref="LIT1488GadlaQ"/>
+                <textLang mainLang="gez">Ge'ez</textLang>
+            </msItem>
+            <msItem xml:id="p1.1_i2">
+                <locus from="43va" to="50va"/>
+                <title type="uniform" ref="LIT0000MalkaK">Mälkəˀa Kiros</title>
+                <textLang mainLang="gez">Ge'ez</textLang>
+            </msItem>
+            …
+        </msContents>
+    </egXML>
+    <p>
+        <gi>title</gi> should point with a
+        <att>ref</att> to the identifier of the <ref target="works">Work</ref> in the
+        <ref target="/works/list">Clavis</ref>. In the Work file alternative titles in different
+        languages should be given, here the title should be reported if relevant, e.g. if non standard.</p>
+    <div type="level2">
+        <head>Summary</head>
+        <p>
+            <gi>msContents</gi> can contain a
+            <gi>summary</gi> of the contents, but these can
+            be structurally described with nested
+            <gi>msItem</gi>s.</p>
+        <p>You do not have to give this summary, because a summary will be built from the app starting from <gi>msItem</gi>s.</p>
+    </div>
+    <div type="level2">
+        <head>msItem</head>
+        <p>
+            <gi>msItem</gi> will hold information about
+            contents of the manuscript.</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <msItem xml:id="p1_i5">
+                <textLang mainLang="gez">Ge'ez</textLang>
+                <locus from="1ra" to="182vb">1ra-182vb</locus>
+                <title type="Complete">I. Sinodos</title>
+                <rubric>...</rubric>
+                <incipit>
+                    <locus from="1ra" n="1"/>
+                    በስመ፡ አብ፡ ወልድ፡ ወመልድ[sic]፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ። ንቅድም፡ በረድኤተ፡ እግዚአብሔር፡ በሠናይ፡ ኅብረት፡ ወበጽሕፈተ፡ ሲኖዶስ፡ ዘአብው፡ ሐዋርያት፡ ቅዱሳን፡ ዘሠርዑ፡ ለአርትዖ፡ ቤተ፡ ክርስዲያን፡ ቅድስት። አሕብሮተ፡ ሲኖዶስ፡ ዘአበው፡ ሐዋርያት፡ ኅሩያን።
+                    <foreign xml:lang="en">Index of the Statutes or Commandments of the Apostles): In the name of the Father, and the Son, and the Holy Spirit, one God. With the help of God, we begin with the good collection, with the writing of of Sinodos of fathers, the Apostles, which they established for the guidance of the holy Church. The gathering of the Sinodos of the fathers, the chosen Apostles.</foreign>
+                </incipit>
+                <explicit>
+                    …
+                </explicit>
+                <listBibl>
+                    …
+                </listBibl>
+                <note/>
+            </msItem>
+        </egXML>
+        <p>One <gi>msItem</gi> can have more than one <gi>locus</gi> (see specific <ref target="referencing-the-manuscript">page on the use of locus</ref>), for instance in
+            composite mss:</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <msItem xml:id="p1_i8">
+                <locus from="94v" to="105"/>
+                <locus from="107"/>
+            </msItem>
+        </egXML>
+        <p>If the text of an incipit, explicit, or addition which is
+            quoted in the catalogue record contains text in verse, do use
+            <gi>lb</gi> with a progressive number in <att>n</att> for
+            each line.</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <incipit xml:lang="gez">
+                <lb n="1"/>ኦእግዚአብሔር፡ ጥበበ፡ ጠቢባን፡ ከሃሊ።
+                <lb n="2"/> እስከ፡ ለዓለም፡ እምጥንት፡ እንተ፡ ኢትበሊ።
+                <lb n="3"/> ድኩመ፡ ሕሊና፡ ገብርከ፡ ወፈራሃ፡ ልብ፡ ኢተሃባሊ።
+                <lb n="4"/> እስመ፡ ኀቤከ፡ እግዚኦ፡ ጸሎተ፡ አድኅኖ፡ እጼሊ።
+                <lb n="5"/>  አድኅነኒ፡ አድኅነኒ፡ እምኵሉ፡ ቀታሊ።
+            </incipit>
+        </egXML>
+        <div type="section">
+            <head>Title</head>
+            <p>
+                <gi>title</gi> will point to a univocally
+                identified work, for <gi>msItem</gi>s which
+                correspond to an identifiable work or can be identified as a
+                work. The id of the work in the authority list file will be
+                given in a <att>ref</att>
+            </p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <title type="complete" ref="LIT1468GadlaK">Gädlä Kiros</title>
+            </egXML>
+            <p>you can use <att>type</att> to give
+                information about the completeness of the text.</p>
+        </div>
+        <div type="section">
+            <head>Rubric</head>
+            <p>
+                <gi>rubric</gi> contains the text of any
+                rubric (heading or subheading) attached to a particular
+                manuscript item.</p>
+        </div>
+        <div type="section">
+            <head>Incipit and Explicit</head>
+            <p>
+                <gi>incipit</gi> and
+                <gi>explicit</gi> will contain a
+                <gi>locus</gi> and the original text directly
+                within the element. Their language should always be
+                specified, even if identical to the one given in
+                <gi>textLang</gi>. Translations of the text
+                will have to be into a <gi>foreign</gi>
+                specifying the language of the translation. More than one
+                translation can be added.</p>
+            <p>Within the text all TEI markup can be used to indicate
+                mistakes, lacunas, editorial interventions, etc.</p>
+            <p>The use of <gi>explicit</gi> follows the
+                TEI definition.</p>
+            <p>Subscriptions stating that the text is completed, which
+                have not been added later to the text, are encoded as
+                <tag>explicit type="subscription"</tag>:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <explicit type="subscription" xml:lang="gez">ተፈጸመ፡ ነገር፡ ዘጦቢት፡ ወጦቢያ፡ ወልዱ፡፡ 
+                    በረከቶሙ፡ ትኲን፡ ምስለ፡ ንጉሥነ፡ ኢያሱ፡ ለዓለመ፡ ዓለም፡፡ አሜን፡፡</explicit>
+            </egXML>
+            <p>Similarly, supplications written at the same time as the
+                main text should be encoded, depending on their location in
+                the text, as
+                <tag>incipit type="supplication"</tag>
+                or
+                <tag>explicit type="supplication"</tag>.</p>
+        </div>
+        <div type="section">
+            <head>Musical notation</head>
+            <p>Information about musical notation can be given in
+                <gi>notatedMusic</gi>
+            </p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <notatedMusic>
+                    <desc>Extensive musical notation.</desc>
+                </notatedMusic>
+            </egXML>
+        </div>
+    
+    <div type="level3">
+        <head>msItem for contents of a work</head>
+        <quote>
+            <p>N.B.: You can nest into a <gi>msItem</gi>
+                also other <gi>msItems</gi> which describe
+                part of a work. If the content is partial, you can use
+                <att>defective</att> with the value true.
+                Default is false and is not encoded.</p>
+        </quote>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <msItem xml:id="p1_i5">
+                …
+                <msItem xml:id="p1_i5.1"  class="content">
+                    <locus from="1ra" to="2vb">fols. 1ra-2vb</locus>
+                    <title type="uniform" xml:lang="la">Index of the Statutes or Commandments (təˀəzazat) of the Apostles </title>
+                    <textLang mainLang="gez">Ge'ez</textLang>
+                </msItem>
+                <msItem xml:id="p1_i5.2"  class="content">
+                    <locus from="3ra" to="40vb">fols. 3ra-40vb</locus>
+                    <title type="uniform" xml:lang="la">Statutes or Commandments (təˀəzazat) of the Apostles </title>
+                    <textLang mainLang="gez">Ge'ez</textLang>
+                </msItem>
+                …
+            </msItem>
+        </egXML>
+    </div>
+    </div>
+    <div type="level2">
+        <head>Lists of similar Manuscripts</head>
+        <p>A <gi>listBibl</gi> containing
+            <gi>bibl</gi> elements for bibliographical
+            references can be given in each <gi>msItem</gi>.
+            References to similar manuscripts can instead be given with a
+            <gi>ref</gi>s as described above. Note that
+            informations about these manuscripts should be stored with the
+            manuscripts for coherence, thus a pointer to the manuscript
+            file will be given and that will contain the bibliographical
+            references, date, etc.</p>
+        <p>If you want to specify within the file a relation between a
+            bibliographic entry in the catalogue list and one of the
+            similar manuscripts, assign an <att>xml:id</att> to
+            the <gi>ref</gi> pointing at the manuscript and give a
+            <att>corresp</att> to the <gi>bibl</gi> of the catalogue
+            bibliography.</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            
+            .... <ref type="mss"  corresp="TuebingenAeth7" xml:id="TuebingenAeth7"/>
+            <ref type="mss" corresp="BNabb65" xml:id="BNabb65"/> ...
+            
+            
+            <listBibl type="catalogue">
+                <bibl corresp="#BNabb65">
+                    <ptr target="bm:Abbadie1859Cat"/><citedRange unit="page">75-79</citedRange>
+                </bibl>
+                <bibl corresp="#TuebingenAeth7">
+                    <ptr target="bm:Ewald1843Tuebingen"/>
+                    <citedRange unit="page">179-180</citedRange>
+                </bibl>
+            </listBibl>
+        </egXML>
+        <p>Alternatively you can use <ref target="relations">relations</ref> which is often a better and quicker solution.</p>
+    </div>
+    
+            <div type="level2">
+                <head>Additions</head>
+                <p>Always in physDesc, you can add a
+                    <gi>additions</gi> element, which will contain a
+                    <gi>list</gi> of additions. Each
+                    <gi>item</gi> will have a structure as follows.
+                    <gi>additions</gi> should be used only for
+                    elements added later to the text! A general note on all
+                    additions can be added before <gi>list</gi>
+                    within a <gi>note</gi> element.</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <list>
+                        <item xml:id="a1">
+                            <desc type="acquisition">Acquisition note.</desc>
+                            <locus target="#40vb" n="30"/>
+                            <q xml:lang="gez">አጥረይክዋ፡ አነ፡ ገበረ፡ መድኅን፡ በመን{ፈ}ሰ፡ ጥበብ፡</q>
+                            <q xml:lang="en">I acquired it (this book), Gäbrä Mädḫən, through the spirit of wisdom.</q>
+                        </item>
+                        <item xml:id="e1">
+                            Crude recent notes in pen and in
+                            pencil throughout the manuscript, above and below the text (e.g. <locus target="#1rv #2r #4r"/> Crude drawings in
+                            pencil, mixed with crude notes, on <locus target="#45r"/>.</item>
+                    </list>
+                </egXML>
+                <p>
+                    <att>xml:id</att> will use "a" and a
+                    consecutive number. In case of other contents (varia) this
+                    will have an id with "e".</p>
+                <p>If the language of the addition is known but no excerpt is
+                    copied, use an empty <gi>q</gi> as in the
+                    following example from BLadd16187.</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <q xml:lang="am"/>
+                </egXML>
+                <p>You can specify the type of addition in the desc element,
+                    using one of the value provided for the
+                    <att>type</att>.</p>
+                <p>If among these also marginal additions or additions on
+                    guard leafs need to be added, add to
+                    <gi>item</gi> also a
+                    <att>rend</att> with value ‘marginal’ or
+                    ‘guardLeaf’.</p>
+                <p>If the type of document is known then there should be a
+                    narrative entity to which a <att>ref</att> can be
+                    given.</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <item xml:id="a2" xml:lang="am" ref="NAR0001gwǝlt">
+                        <locus target="#3v"/>
+                        <p>Land donation (gwǝlt) of <persName ref="PRS8344sahlaDe">Śāhlā Dǝngǝl</persName> (A.D. 1832-40, and again 1841-55) to the priests of <placeName ref="LOC2550Darasg">Darasge</placeName>, in Amharic. </p>
+                    </item>
+                </egXML>
+                <p>If a work with its own work ID is added later to a
+                    manuscript, it will be added as an addition specified with the
+                    type "GuestText" having its work ID in the
+                    description:</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <item xml:id="a10">
+                        <locus from="115v"/>
+                        <desc type="GuestText">
+                            <title type="Complete" ref="LIT3957SalotaB">ጸሎተ፡ ቡራኬ፡ ዘቅዱስ፡ ባስልዮስ።</title>
+                        </desc>
+                        <q xml:lang="gez">
+                            <desc>The following is the incipit:</desc>
+                            ኦሥሉስ፡ ቅዱስ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ባርክ፡ ዲበ፡ ሕዝብከ፡ ፍቁራን፡ ክርስቶሳውያን፡ በበረከት፡ ሰማያዊት፡
+                        </q>
+                    </item>
+                </egXML>
+                <p>The distinction between additions (or better
+                    <hi rendition="simple:italic">additiones</hi>) and
+                    <hi rendition="simple:italic">Varia</hi> comes from the
+                    Ethio-SPaRe guidelines. _Additiones _are very often written in
+                    a secondary hand, and they are later than the main text(s) of
+                    the Ms. They mark the so-called "secondary life" of
+                    the manuscript as the latter is used as a repository of
+                    documentary information, i.e. a true archive.
+                    <hi rendition="simple:italic">Additiones </hi> that can be
+                    tyipically found in a Ms. are the following:
+                    "AcquisitionNote", "Admonition",
+                    "CalendaricNote", "CommemorativeNote",
+                    "Comment", "Condemnation",
+                    "Correction", "DonationNote",
+                    "Doxology", "Excerpt",
+                    "Excommunication", "Exhortation",
+                    "FoundationCharter", "Genealogy",
+                    "Gloss", "GuarantorsList",
+                    "Headband", "Inventory",
+                    "Invocation", "LandGrant",
+                    "Letter", "MagicFormula",
+                    "MagicText", "OwnershipNote",
+                    "Poem", "PoemArke", "PoemQǝne",
+                    "PoemSalam", "ProtectivePrayer",
+                    "PurchaseNote", "ReceiptNote",
+                    "Record", "RecordDistribution",
+                    "RecordGuarantors", "RecordLitigation",
+                    "RecordReconciliation",
+                    "RecordTransaction",
+                    "ScribalNoteAssigningLang",
+                    "ScribalNoteBequeathing",
+                    "ScribalNoteCommencing",
+                    "ScribalNoteCommissioning",
+                    "ScribalNoteCompleting",
+                    "ScribalNoteOrdering", "ScribalSignature",
+                    "ScribalSupplication", "StampExlibris",
+                    "Subscription", "Supplication",
+                    "Tailband", "TransactionNote",
+                    "Unclear" or "foundation". These value are
+                    provided for the <att>type</att> in the desc
+                    element. When describing an addition, please - language (if
+                    different from Ethiopic: in Amharic, in Tǝgrǝñña); - hand (by
+                    a recent/old hand, by the same hand as that of the main text,
+                    by the same hand as that of another addition, etc.); "in a
+                    secondary hand" should be avoided: it is obvious; - ink (in
+                    recent ink, hardly legible because of the faded ink, etc.). -
+                    readability (hardly readable, washed/scratched out etc.); -
+                    some additiones can be rhymed.</p>
+                <p>Under <hi rendition="simple:italic">Varia</hi>, Ethio-SPaRe
+                    used to list the following phenomena, which simply concern the
+                    copying process or are more trivial than
+                    <hi rendition="simple:italic">additiones</hi>: - the title of
+                    the work written on the front board or cover, sometimes with
+                    blue or black paint or ink; - the internal number of the book
+                    in the monastic library; - the midpoint in the "Psalms of
+                    David" (in Ps. 77, after the word በደመና፡); - the presence
+                    of stamps of the owning institution; - part of the line is
+                    taken up or taken down (e.g., in the Psalters), ff. .... -
+                    glosses written in the margins of ff. .... - the so-called
+                    <hi rendition="simple:italic">tämälläs</hi>-sign, in the shape
+                    of a cross (as +) or two perpendicular lines (as ┴ or├),
+                    indicating the place where the omissions (written in the upper
+                    or lower margin) belong: ff. __. - omitted letters, words,
+                    lines or passages inserted interlineally, in the margins, at
+                    the beginning/end of the line (ff. ...). - erasures: ff. ....
+                    - corrections written over erasures, in the main hand or in a
+                    later recent hand: ff. .... - erasures marked with thin black
+                    and red lines: ff. .... - corrections immediately indicated by
+                    the scribe through thin series of dashes above and below the
+                    letters or the words: ff. .... - spaces for rubricated names
+                    left unfilled: ff. .... - unfilled spaces marked with thin
+                    black lines: ff. .... - cues for the rubricator written in the
+                    margin or in the interocolumn (e.g., small digits): ff. ... -
+                    erased names or names secondarily written over erased names
+                    (typically in the supplication formulas): ff. .... - the
+                    scribe reduced the size of his handwriting to accommodate the
+                    end of the line: ff. .... - the scribe used compressed script
+                    ("compressed" means two lines in a space originally
+                    meant for one single line), often to accommodate lines written
+                    over erasure: ff. .... - monthly or daily readings are usually
+                    indicated by writing the names of the months and weekdays in
+                    the upper margin of the folio, sometimes within frames. - pen
+                    trials, notes crudely written in pencil or pen; - devotional
+                    images sewn between ff. .... - scribbles and doodles.</p>
+            </div>
+            
+        </body>
+    </text>
+</TEI>
+
