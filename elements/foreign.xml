@@ -25,7 +25,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body xml:id="foreign">
          <div>
             <head>foreign</head>
-            <p/>
+            <p>If the content of
+               the element is mixed, please, use <gi>foreign</gi>
+            </p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <p> <foreign xml:lang="gez">ሄሮድያዳ፡</foreign> <foreign xml:lang="grc">Ἡροδιάδα</foreign> </p>
+            </egXML>
+            <p>
+               <gi>foreign</gi> should also be used for
+               transliterated words:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <p><foreign xml:lang="gez">salām</foreign> </p>
+            </egXML>
          </div>
       </body>
    </text>

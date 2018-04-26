@@ -21,23 +21,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body xml:id="languageIntro">
-         <head>language</head>
-         <p>The TEI file is in english. Please, make sure you use
-    <att>xml:lang</att> with the appropriate value for each
-    element containing text in a different language. If the content of
-    the element is mixed, please, use <gi>foreign</gi>
-         </p>
-         <cit>
-            <quote>
- <p> <foreign xml:lang="gez">ሄሮድያዳ፡</foreign> <foreign xml:lang="grc">Ἡροδιάδα</foreign> </p>
-</quote>
-         </cit>
-         <p>
-            <gi>foreign</gi> should also be used for
-    transliterated words:</p>
-         <p>
-            <gi>p foreign xml:lang="gez"salām/foreign /p</gi>
-         </p>
+         <head>Languages</head>
+         <p>The TEI file is in English. Please, make sure you use <att>xml:lang</att> with the
+            appropriate value for each element containing text in a different language. </p>
+         <p>The value of this <att>xml:lang</att> should be equal to one of the values of
+               <tag>language ident</tag> within <gi>langUsage</gi> in the <gi>teiHeader</gi>. All
+            languages used in the file should be defined there. It is not a problem if one of these
+            statements is not relevant to the current record, but if another language is used, it
+            should be defined.</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <langUsage>
+               <language ident="en">English</language>
+               <language ident="it">Italian</language>
+               <language ident="gez">Gəʿəz</language>
+            </langUsage>
+         </egXML>
+         <p>If you add somewhere e.g.</p>
+         <p>, there should be a <gi>language</gi> element in <gi>langUsage</gi> like the
+            following</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <language ident="am">Amharic</language>
+         </egXML>
+         <p>The values of <att>ident</att> here are restricted, so you should not be able to add
+            e.g. amh as value for <att>ident</att> and consequently use it in the file as value of
+               <att>xml:lang</att>.</p>
+         <p>Regardless of the validity of this transliteration, Gəʿəz is always referred to by
+            "Gəʿəz" to ensure consistency.</p>
+         <p>For text in another language from the main one stated, use <gi>foreign</gi>.</p>
+
       </body>
    </text>
 </TEI>

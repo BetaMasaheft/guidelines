@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Statements about persons.</title>
+                <author>Pietro Liuzzo</author>
+            </titleStmt>
+            <publicationStmt>
+                <p/>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+                <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body xml:id="particDescPersons">
+<div type="level3">
+    <head>People in particDesc</head>
+    <p>Important people related to the manuscript can be listed in <gi>particDesc</gi> with a
+        list of pointers to names with a specific <att>role</att> in <gi>persName</gi>.</p>
+    <p>Here it is enough to enumerate the scribe, owner, donor and patron, not everyone
+        mentioned in the manuscript, and only if they are not anywhere else. If this information has already been stated elswhere in the
+        description - which is preferable - it doesn't need to be repeated here.</p>
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+        <particDesc>
+            <listPerson>
+                <person>
+                    <persName ref="PRS2232AubertR" role="donor"/>
+                </person>
+                <person>
+                    <persName ref="PRS2233Audon" role="scribe"/>
+                </person>
+                <person>
+                    <persName ref="PRS2233Audon" role="other"/>
+                </person>
+            </listPerson>
+        </particDesc>
+    </egXML>
+    <p>You can also be more precise and assign a <att>corresp</att> to the <gi>persName</gi> if for
+        example a person has commissioned only a specific part.</p>
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+        <person>
+            <persName role="patron" ref="PRS9170TaklaIy" corresp="#p1"/>
+        </person>
+    </egXML>
+    
+</div>
+        </body>
+    </text>
+</TEI>

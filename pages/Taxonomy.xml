@@ -23,31 +23,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body xml:id="taxonomy">
          <div type="level1">
             <head>Taxonomies</head>
-            <p>In the Authority-Files repo there are currently a series of files
-  generated from lists which have nothing but a title and an id.</p>
-            <p>Each of these refers to one value so that they can be enriched with
-  a description which is out of the schema and they can be used for
-  relations and <gi>ref</gi> as the other Ids.</p>
-            <p>When reordering the hierarchy of the list, please remember to use
-  the same name you give in the taxonomy.xml file also for the filename
-  and the id.</p>
-            <p>An example of description inside an authority files</p>
+            <p>The taxonomy is scorporated from the single files and kept in one single file called taxonomy.xml. This is actually only a <gi>classDecl</gi> which contains a <gi>taxonomy</gi></p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<abstract>
-                <p>A miniature showing <persName ref="PRS5684JesusCh">Jesus</persName> being arrested by the guards of the Temple,
-                  (<ref cRef="urn:cts:greekLit:tlg0031.tlg001.perseus-grc1:26.50">Mt 26:50</ref>;
-                  <ref cRef="urn:cts:greekLit:tlg0031.tlg002.perseus-grc1:14.43"> Mk 14:43</ref>;
-                  <ref cRef="urn:cts:greekLit:tlg0031.tlg003.perseus-grc1:22.52">Lk 22:52</ref>;
-                  <ref cRef="urn:cts:greekLit:tlg0031.tlg004.perseus-grc1:18.3">Jn 18:3</ref>),
-                  the scene may feature additional details such as The Kiss of Judas, or
-                  <persName ref="PRS7805Peter">Peter</persName> cutting off the ear of  Malchus
-                  (<ref cRef="urn:cts:greekLit:tlg0031.tlg001.perseus-grc1:26.50">Mt 26:51</ref>;
-                  <ref cRef="urn:cts:greekLit:tlg0031.tlg002.perseus-grc1:14.47"> Mk 14:47</ref>;
-                  <ref cRef="urn:cts:greekLit:tlg0031.tlg003.perseus-grc1:22.50">Lk 22:50</ref>
-                  <ref cRef="urn:cts:greekLit:tlg0031.tlg004.perseus-grc1:18.10">Jn 18:10</ref>).
-                </p>
-            </abstract>
-</egXML>
+               <taxonomy xml:id="ethioauthlist">
+                  <category>
+                     <desc>special mss</desc>
+                     <category>
+                        <catDesc>GoldenGospel</catDesc>
+                     </category>
+                     <category>
+                        <catDesc>miniatureCollection</catDesc>
+                     </category>
+                  </category>
+                  ...
+               </taxonomy>
+            </egXML>
+            <p>The main <gi>category</gi> with a <gi>desc</gi> group the actual keywords which are in children <gi>category</gi> elements containing only a <gi>catDesc</gi> as in the example above. </p>
+            <p>So, if you need to add a keyword (a value for <att>key</att> in <gi>term</gi>), 
+               
+               <list type="ordered">
+                  <item>open an issue about its pertinence;</item> 
+                  <item>if agreed then edit the taxonomy.xml file and add the value under the correct group in a <gi>category</gi>;</item> 
+                  <item>create and sync an <ref target="authority-files">authority-file</ref> record for that;</item> 
+                  <item>you will have then to update the <ref target="editingSchema">schema</ref> with the value.</item>
+               </list></p>
          </div>
       </body>
    </text>

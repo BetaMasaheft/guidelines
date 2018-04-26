@@ -21,17 +21,51 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body xml:id="keywordsIntro">
-         <head>Keywords</head>
-         <p>These keywords are used for the whole record. You can use one or
-    more of the values provided for <att>key</att>.</p>
+        
+            <head>Keywords</head>
+            <p>These keywords are used for the whole record. You can use one or more of the values
+               provided for <att>key</att>. You can assign as many keywords as needed. This means that it
+               is not necessary to limit the keywords to the principal text, but keywords for any
+               additional or minor texts contained in the manuscript should also be assigned. Always
+               assign a period keyword, using the keywords referring to Ethiopian literary periods only
+               in records actually belonging to the Ethiopian tradition. The keywords
+               "ChristianLiterature", "IslamicLiterature" and "BetaEsraelLiterature" should be assigned
+               to all records belonging to these traditions.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <textClass>
+                  <keywords>
+                     <term key="ChristianLiterature"/>
+                     <term key="Gon"/>
+                     <term key="Liturgy"/>
+                  </keywords>
+               </textClass>
+            </egXML>
+            
+            <p>You can use <gi>term</gi> also in other parts of the files where the schema allows it. In the following example term is used in a <gi>decoNote</gi> but you can use it also in additions</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<textClass>
-  <keywords>
-    <term key="Liturgy"/>
-  </keywords>
-</textClass>
-</egXML>
-    
+            
+            <decoNote type="miniature" xml:id="d1">
+               <locus target="#2r" facs="f17"/>
+               <desc>
+                  The <title type="complete" ref="LIT1349EpistlEusebius"/> runs between
+                  <locus from="2r" to="3r"/>  and is placed under brightly coloured 
+                  <term key="arch">arches</term> that rest 
+                  on <term key="curtain">curtained</term> 
+                  <term key="column">columns</term>.
+                  Several <term key="bird">birds</term> are palced atop the arch. The opening page,
+                  <locus target="#2r"/> features a pair of  <foreign xml:lang="gez">ጣዎስ፡</foreign> 
+                  flanking a <term key="cross">cross</term> and four
+                  <foreign xml:lang="gez">ዱራ፡</foreign> birds. 
+                  The following pages feature the <foreign xml:lang="gez">ጠይራት፡</foreign> 
+                  birds on arches decorated with <term key="interlace"/> patterns.
+               </desc>
+            </decoNote>
+            
+         </egXML>
+         
+         <p>The values available for <att>key</att> have to be also in the <ref target="taxonomy">taxonomy</ref>. 
+            
+         </p>
       </body>
    </text>
 </TEI>

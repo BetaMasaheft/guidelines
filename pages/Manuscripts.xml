@@ -454,7 +454,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 </egXML>
                   <p>Alternatively you can use <ref target="relations">relations</ref> which is often a better and quicker solution.</p>
                </div>
-               
+               <div type="level5"><p><ref target="particDescPersons">Field like information about persons related to the manuscript.</ref></p>
+<!--               added link here not to forget that I had created that splitting it from additional-->
+               </div>
                <div type="level5">
                   <head>Colophon</head>
                   <p>inside any msItem in the description of the contents a
