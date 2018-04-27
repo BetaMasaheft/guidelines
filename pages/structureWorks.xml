@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -21,18 +21,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body xml:id="structureWorks">
-       
-        
+
+
          <div type="level1">
             <head>Basic Structure of Work Records</head>
-            
+
             <!--<p> It is recommended when starting to encode work records to read these guidelines alongside with example records, for example .</p>-->
-            
+
             <p>Each work record should contain basic information on the work in question in the <gi>teiHeader</gi>.</p>
             <p>The <gi>body</gi> contains bibliographic references, relations and the edition of the work if available.</p>
             <p>The basic structure of a work record will therefore be:
             <list>
-               
+
                <item><gi>teiHeader</gi>, containing:
                  <list>
                     <item><gi>titleStmt</gi> with titles of the work in all relevant languages and traditions</item>
@@ -42,7 +42,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </item>
                  </list>
                </item>
-               
+
                <item><gi>body</gi>, containing:
                   <list>
                      <item><tag>div type='bibliography'</tag>: Bibliographic references on secondary literature, editions and translations as well as relations</item>
@@ -52,16 +52,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </list>
             </p>
          </div>
-         
+
          <div type="level1">
             <head>teiHeader</head>
-            
             <div type="level2">
                <head>titleStmt</head>
             
             <p>
                The title(s) of the work are encoded in <gi>titleStmt</gi>:
-               
+
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <titleStmt>
                      <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ቅዳሴ፡</title>
@@ -78,16 +77,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                referring to this work, you can also use <att>type</att> with value <val>main</val> to signal
                the title which is to be used for labels, pointers and headers. 
             </p>
-            
-               
             <p>The title which will be printed on the website will therefore be:
                <list>
                   <item>the one which has <att>type</att> with value <val>main</val>,</item>
                   <item>the one containing <tag>corresp='#t1' type='normalized'</tag>,</item>
                   <item>the one with <tag>xml:id='t1'</tag>.</item>
                </list>
-               In the example above, 
-               therefore <hi rendition="simple:italic">Maṣḥafa qǝddāse</hi> will be printed.
+               In the example above, therefore <hi rendition="simple:italic">Maṣḥafa qǝddāse</hi> will be printed.
                Please be as careful in your encoding of titles as everywhere else to correctly encode the facts and not adapt them in order to achieve a certain visualization.
                 </p>
       
@@ -99,7 +95,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <p>You can also use <tag>title type='short'</tag> for shortened
                   titles like citation forms: 
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  
+
                   <title xml:lang="gez" xml:id="t1">ወንጌል፡ ዘዮሐንስ፡</title>
                   <title xml:lang="gez" corresp="#t1" type="normalized">Wangel za-Yoḥannǝs</title>
                   <title xml:lang="en" corresp="#t1" type="main">Gospel of John</title>
@@ -144,12 +140,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <item>...</item>
                      <item>...</item>
                      <item>...</item>
-                     
+
                   </list>
                </p>
-               
+
             </correction>
-                       
+
             <normalization>
                <p>Original spelling and typography is retained.</p>
             </normalization>
@@ -157,10 +153,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <tagsDecl>
             <!-- the format for the tagsDecl to be specified -->
          </tagsDecl>
-         
+
       </encodingDesc>
 </egXML>
-  
+
          </div>
          <div type="level1">
             <head>Extent</head>
@@ -174,7 +170,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 <extent>10170  words</extent>
 </egXML>
-  
+
          </div>
          <div type="level1">
             <head>Clavis IDs</head>
@@ -234,7 +230,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   work can be retrieved by the app while reserving
   <gi>listWit</gi> in the work records mainly for the
   manuscripts used for the edition.</p>
-  
+
          </div>
          <div type="level1">
             <head>Bibliography</head>
@@ -275,7 +271,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Secondary bibliographic references given in catalogues about a
   certain work can also be copied here, as they do not belong to the
   manuscript description.</p>
-  
+
          </div>
          <div type="level1">
             <head>Relations</head>
@@ -294,7 +290,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <listRelation>
   <relation name="syriaca:share-a-title" active="LIT1001Homili" passive="LIT1002title">
-        <desc>It is always a nice idea to provide a description of this relations with a sentence or two.         
+        <desc>It is always a nice idea to provide a description of this relations with a sentence or two.
         </desc>
   </relation>
 </listRelation>
@@ -339,7 +335,7 @@ passive="LIT1455GadlaG"/>
   the translated work exists, please use that as a value in the
   relation. If no such edition exist you might point to the id of the
   title in the language of the original.</p>
-  
+
          </div>
          <div type="level1">
             <head>Versions</head>
@@ -352,7 +348,7 @@ passive="LIT1455GadlaG"/>
   this text part with multiple versions with either the initials of the
   editor or the pointer to the xml:id of the bibl element which has a
   pointer to the edition.</p>
-  
+
          </div>
          <div type="level1">
             <head>Dates</head>
@@ -381,46 +377,7 @@ passive="LIT1455GadlaG"/>
 </egXML>
             <p>this sounds like a dirty hack to get it working... and it is!</p>
          </div>
-         <div type="level1">
-            <head>Attested placeNames</head>
-            <p>The attestations of placeNames should be marked as in the example
-  below</p>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<ab> ምዕራፍ፡፱። ወእምዝ፡ ዓደወ፡ ማር፡ ገላውዴዎስ፡ 
-ማዕዶተ፡ ክልኤቱ፡ አፍላግ፡ መንገለ፡ ምድረ፡ 
-<placeName 
-ref="LOC5597Sawa" 
-notBefore="1540" 
-notAfter="1559">ሼዋ፡</placeName> 
-እመንገለ፡ምድረ፡ 
-<placeName 
-ref="LOC5932Tegray" 
-notBefore="1540" 
-notAfter="1559">ትግራይ፡</placeName>
- ከመ፡ ይርአይ፡ መርዔቶ፡ bእለ፡ ህየ፡ በጽድቅ፡ ወይዋሄ፡ cሕዝቦ፡ በርትዕ። ወበጽሐ፡</ab>
-</egXML>
-            <p>to choose which id to use consider the following:</p>
-            <list type="unordered">
-               <item>
-                  <p>if it is a place of interest for ethiopian studies or attested
-      in ethiopia, then use one of our internal ids or create a new
-      record if none is yet available</p>
-               </item>
-               <item>
-                  <p>if it is an ancient place but not in ethiopia, like Jordan,
-      Rome, etc. then search pleaides and use a pleiades id prefixed
-      with pleaides: e.g. for Jordan River use plaeides:687932</p>
-               </item>
-               <item>
-                  <p>if it is an ancient place not of our interest and not relevant
-      for pleiades, check in wikidata and enter the item id (starting
-      with Q)</p>
-               </item>
-            </list>
-            <p>you can also add a @resp with the id of one of our person records
-  or editors and a @source with a list of bm:tags from the Zotero
-  Ethiostudies group library.</p>
-         </div>
+         
          <div type="level1">
             <head>Short Summary of Contents</head>
             <p>To provide a short summary of contents use the element
@@ -430,8 +387,8 @@ notAfter="1559">ትግራይ፡</placeName>
             </p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <abstract>
-   <p>A theological treatise believed to be a responce of king <persName 
-       ref="PRS4428Galawdew">Galāwdewos</persName> to the Jesuit missionaries headed by <persName     
+   <p>A theological treatise believed to be a responce of king <persName
+       ref="PRS4428Galawdew">Galāwdewos</persName> to the Jesuit missionaries headed by <persName
        ref="PRS7691Oviedo">Oviedo</persName>.
    </p>
 </abstract>
@@ -441,7 +398,7 @@ notAfter="1559">ትግራይ፡</placeName>
   <tag>measure type='words'</tag> within the
   <gi>abstract</gi>.</p>
             <p>Summaries given in catalogues can be copied here and edited.</p>
-  
+
          </div>
          <div type="level1">
             <head>divs edition and textparts</head>
@@ -496,34 +453,12 @@ notAfter="1559">ትግራይ፡</placeName>
             <p>or a corresp pointing to another work</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <div type="textpart" xml:id="example" corresp="LIT1234blabla">
-            
+
          </div>
 </egXML>
             <p>if a subpart of a work needs a bibliography this can be given
                in the <tag>div type='textpart'</tag>
             </p>
-         </div>
-         <div type="level1">
-            <head>Languages</head>
-            <p>within langUsage all languages used in the file should be defined.
-  It is not a problem if one of these statements is not relevant to the
-  current record, but if another language is used, it should be
-  defined.</p>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
- <langUsage>
-    <language ident="en">English</language>
-    <language ident="it">Italian</language>
-    <language ident="gez">Gəˁəz</language>
- </langUsage>
-</egXML>
-            <p>If you add somewhere e.g.
-  <tag>title xml:lang='am'</tag>, there
-  should be a language element in langUsage like the following</p>
-            <p>
-               <!--<gi>language ident="am"Amharic/language</gi>-->
-  the values of @ident here are restricted, so you should not be able to
-  add e.g. amh as value for @ident and consequently use it in the file
-  as value of @xml:lang.</p>
          </div>
          </div>
       </body>
