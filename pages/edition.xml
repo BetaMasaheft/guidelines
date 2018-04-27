@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Editions in Work Records</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+          </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="edition">
+   
+       
+         <div type="level1">
+            <head>Edition statement, Source statement, and encoding
+  description</head>
+            <p>These elements should be provided in the header for texts that we
+  provide edition for. The Edition statement should specify the origin
+  of the text. The encoding description specifies the principles used
+  when encoding, when known (e.g. transcription, specific tag sets,
+  etc.)</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<editionStmt>
+          <p>Digital text based on  <bibl><ptr target="bm:Marrassini1993AmdaSeyon"/></bibl>.</p>
+</editionStmt>
+</egXML>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<encodingDesc>
+         <projectDesc>
+            <p>Text prepared within the framework of the TraCES project.</p>
+         </projectDesc>
+         <editorialDecl>
+            <correction>
+               <p>The following errors
+                  in Marrassini edition have been corrected:
+                  <list>
+                     <item>...</item>
+                     <item>...</item>
+                     <item>...</item>
+                     
+                  </list>
+               </p>
+               
+            </correction>
+                       
+            <normalization>
+               <p>Original spelling and typography is retained.</p>
+            </normalization>
+         </editorialDecl>
+         <tagsDecl>
+            <!-- the format for the tagsDecl to be specified -->
+         </tagsDecl>
+         
+      </encodingDesc>
+</egXML>
+  
+         </div>
+      
+         <div type="level1">
+            <head>divs edition and textparts</head>
+            <p>Text is entered in the <gi>body</gi> of a TEI file
+  under into a <tag>div type='edition'</tag> . Each text
+  part should be contained into a <gi>div</gi>.
+  <gi>div</gi>s should always be well nested one into the
+  other. These will always take a
+  <tag>subtype='textpart'</tag> and a
+  <att>subtype</att> with the desired value. There should
+  always be also a @n identifying for example chapter 3 as well as a
+  <att>corresp</att> pointing to the appropriate
+  <gi>msPart</gi> or <gi>msItem</gi>
+            </p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+
+<div type="edition">
+<div type="textpart" subtype="chapter" n="1">
+<ab>
+<l n="1">
+ዝውእቱ ፡ አስማቲሆሙ ፡ ለደቂቀ ፡ እስራኤል ፡ እለ ፡ ቦኡ ፡ ብሔረ ፡ ግብጽ ፡ ምስለ ፡ ያዕቆብ ፡ አቡሆሙ ፡ [ለ]ለአሐዱ ፡ አሐዱ ፡ በበ ፡ አዕጻዲሆሙ ፡ ቦኡ ።
+</l>
+<l n="2">ሮቤል ፡ ወስምዖን ፡ ወሌዊ ፡ ወይሁዳ ።</l>
+<l n="3">ወይ[ሳኮ]ር ፡ ወዛቡሎን ፡ ወብንያም ።</l>
+</ab>
+  </div>
+</div>
+</egXML>
+            <p>Please be careful in always stating the sources for the description
+  of a work, especially for the division of the work into textparts and
+  other structural decisions. Ideally this source should be an edition,
+  but if none exists, state if the description follows for example the
+  EAe or a manuscript.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<div type="edition">
+ <note>This division into textparts follows <ref type="mss" corresp="FSUrueppII2"/>.</note>
+<div type="textpart" subtype="book" n="1" xml:id="Kefl1" xml:lang="gez"></div></div>
+</egXML>
+            <p>Note that after each word there should be a separator or
+  punctuation without space.</p>
+            <p>If the text contains verses we will use <gi>l</gi> as
+  in the example above. Also <gi>lb</gi> can be used to
+  mark linebreaks, for example in Inscriptions. Be carefull:
+  <gi>ab</gi> should be only in the lowest level div
+  nesting!</p>
+            <p>to identify a div you can use a label</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<div type="textpart" xml:id="Athanasius1">
+            <label>Homily on the Incarnation by Athanasius of Alexandria</label>
+         </div>
+</egXML>
+            <p>or a corresp pointing to another work</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<div type="textpart" xml:id="example" corresp="LIT1234blabla">
+            
+         </div>
+</egXML>
+         </div>
+         <div type="level1">
+            <head>Languages</head>
+            <p>within langUsage all languages used in the file should be defined.
+  It is not a problem if one of these statements is not relevant to the
+  current record, but if another language is used, it should be
+  defined.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+ <langUsage>
+    <language ident="en">English</language>
+    <language ident="it">Italian</language>
+    <language ident="gez">Gəˁəz</language>
+ </langUsage>
+</egXML>
+            <p>If you add somewhere e.g.
+  <tag>title xml:lang='am'</tag>, there
+  should be a language element in langUsage like the following</p>
+            <p>
+               <!--<gi>language ident="am"Amharic/language</gi>-->
+  the values of @ident here are restricted, so you should not be able to
+  add e.g. amh as value for @ident and consequently use it in the file
+  as value of @xml:lang.</p>
+         </div>
+         
+      </body>
+   </text>
+</TEI>

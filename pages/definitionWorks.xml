@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Definition of Works, Textparts and Narrative Units</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+          </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="definitionWorks">
+         <div type="level1">
+            <head>Definition of works and Assignment of IDs</head>
+         
+            <p>We consider a <hi rendition="simple:bold">work</hi> any text with an
+independent circulation. This does not mean it should be alone in a
+manuscript. A text which sometimes is added to another is also an
+independent work. So <hi rendition="simple:italic">Genesis</hi> is a
+work as <hi rendition="simple:italic">Pentateuch</hi> is a work which
+contains it. But <hi rendition="simple:italic">Chapter 1 of Genesis</hi>
+is not a work, it is a part of the work
+<hi rendition="simple:italic">Genesis</hi>.</p>
+            <p>Works should not be confused with  <ref target="narrativeUnits">Narrative Units</ref>. To
+               decide whether the text you are dealing with is a work or a
+               narrative unit, consider  Orlandi 2010, <hi rendition="simple:italic">A
+                  Terminology for the identification of Coptic Literary Documents</hi>.
+               A work "only refers to fixed contents and a precise
+               sequence", see
+               <ref target="https://www.zotero.org/groups/ethiostudies/items/itemKey/NWT4X3K9/q/corpus-organizers">Bausi
+                  2010, 34 n3</ref>
+               </p>
+            
+          <p>Works, textparts and Narrative Units:</p>
+            
+         <list type="unordered">
+            <item>
+               <p>Texts with independent circulation get an individual record with a first-level ID (such as LIT1931Mashaf), all
+    other are textparts. </p>
+            </item>
+            <item>
+               <p>If a text is at the same time part of another text and circulates independently, it gets
+                  an independent first-level ID/record.</p>
+            </item>
+            <item>
+               <p>For these texts (both circulating independently and part of another work), a <gi>div</gi> should also be created, with a
+                  <att>corresp</att> giving the individual ID, in order to show the full content of a collection in
+                  correct order.</p>
+            </item>
+            <item>
+               <p>If a textpart has an individual circulation in other traditions, but not in the Ethiopian tradition,
+    all information on this text should be given in the <gi>div</gi>: multiple titles can be
+    inserted, with bibliography linking to the IDs of these titles,
+    relations for the authors of the titles, etc.</p>
+            </item>
+            <item>
+               <p>For text portions (paragraphs, chapters, miracles, etc.) which are extant as different versions in multiple recensions of the same work or even in different works, 
+                  create a <ref target="narrativeUnits">Narrative Unit</ref>.</p>
+            </item>
+            <item>
+               <p>The existing records inherited from the EAe index that do not
+    have an independent circulation in Ethiopic should be deleted.</p>
+            </item>
+         </list>
+            
+         <p>See as example
+            <ref target="LIT1931Mashaf" type="bm">LIT1931Mashaf</ref>.
+         </p>
+            
+         <p>Often the first problem to face is which records and how many to
+make. We accept as a principle to create <hi rendition="simple:bold">the
+maximum number of record as it is sensible</hi> and to state
+<hi rendition="simple:bold">the minimum number of relations needed among
+them</hi> with a view on expanding them potentially to all what is not
+essential, in order to clarify their relation with each other. It might
+happen that different researchers have different opinions on the
+relation between the versions and the manuscripts and in this we will be
+able to host them all.</p>
+            
+         <p>For example. If the Work A has four versions 1, 2, 3 and 4, 1 being a
+short version of 2 and 3 a later version of 4 while 2 and 4 differ from
+one another only in the order in which the content is organized, there
+will be 5 records, one for the abstract work, one for each version.
+While the abstract work will point to each of the 4 version with
+relations and might contain a general description of the work, each of
+the version will have clearly defined relations with the others and the
+abstract Work.</p>
+            
+         <p>A further example: a text which is made of parts which can occur in
+different orders within different manuscripts. This will have 1 Work
+record, describing the ideal or majoritarian, or standard sequence,
+while each witness (Manuscript) will contain the specific order of the
+parts in it.</p>
+            
+         <p>Create a new record for every different version, recensions, etc. and
+then express the diverse relations between the records with relation
+elements. This should be clearer and leave space for more differing
+opinions than to try to express the relations within one single
+record.</p>
+         </div>
+      </body>
+   </text>
+</TEI>
