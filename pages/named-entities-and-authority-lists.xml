@@ -48,26 +48,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <settlement ref="gn:498817"/>
 </egXML>
          <p>(same for placeName and region)</p>
-         <p>to decide whether to create a new place record or not if in
-    doubt, try the following. * check if there is a record already in
-    our list * if yes, then 1. check if there is also a wikidata item
-    (you can simply google what you are looking for, open the correct
-    wikipedia page you find and hit the wikidata item link on the left.
-    * if yes add a @sameAs attribute with the Q id in the url or at the
-    top of the item. 1. check if there is also a record in geonames.org
-    * if yes add a @sameAs attribute to place linking to such geonames
-    id. * if not leave the record 1. add a ref to our record * if not,
-    then 1. check if there is also a wikidata item 1. check if it is in
-    geonames.org * if yes add the uri in the @ref * if not (but check
-    thoroughly, because it would be an exception) create a new place
-    record</p>
-         <p>generally, when possible I would always prefer an external link
-    to an authority file for places out of scope which we are not going
-    to describe or give details about. If there is already a record, no
-    need to delete it or update it. Simply add the geonames ID.</p>
-         <p>adding references to places not in our db: * for ancient place
-    prefere pleiades, with namespace pleiades: * for places related to
-    coptic literary tradition use PAThs paths:</p>
+         <p>To decide whether to create a new place record or not if in
+         doubt, see the page on creating <ref target="newEntry">new records</ref>.</p>
          <div type="level2">
             <head>Dates</head>
             <p>Dates anywhere in the text quoted can be tagged with
@@ -92,115 +74,107 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <date dur="P10Y5M"/>
 </egXML>
-
-            <table>
+<table>
                <row role="label">
-                  <cell>
-                     <p>attribute</p>
+                  <cell>attribute
                   </cell>
-                  <cell>
-                     <p>value</p>
+                  <cell>value
                   </cell>
                </row>
                <row>
                   <cell>
-                     <p>@when</p>
+                     <att>when</att>
                   </cell>
                   <cell>
-                     <p>ISO gregorian date</p>
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <p>@when-custom</p>
-                  </cell>
-                  <cell>
-                     <p>date in specified calendar</p>
+                     ISO gregorian date
                   </cell>
                </row>
                <row>
                   <cell>
-                     <p>@notBefore</p>
+                     <att>@when-custom</att>
                   </cell>
                   <cell>
-                     <p>date range limit</p>
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <p>@notAfter</p>
-                  </cell>
-                  <cell>
-                     <p>date range limit</p>
+                     date in specified calendar
                   </cell>
                </row>
                <row>
                   <cell>
-                     <p>@notBefore-custom</p>
+                     <att>notBefore</p>
                   </cell>
                   <cell>
-                     <p>date range limit in specified calendar</p>
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <p>@notAfter-custom</p>
-                  </cell>
-                  <cell>
-                     <p>date range limit in specified calendar</p>
+                     date range limit
                   </cell>
                </row>
                <row>
                   <cell>
-                     <p>@dur</p>
+                     <att>notAfter</p>
                   </cell>
                   <cell>
-                     <p>duration</p>
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <p>@type</p>
-                  </cell>
-                  <cell>
-                     <p>type of date (reign, lifespan, etc.)</p>
+                     date range limit
                   </cell>
                </row>
                <row>
                   <cell>
-                     <p>@calendar</p>
+                     <att>notBefore-custom</att>
                   </cell>
                   <cell>
-                     <p>specified calendar according to list</p>
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <p>@resp</p>
-                  </cell>
-                  <cell>
-                     <p>with the id of responsible</p>
+                     date range limit in specified calendar
                   </cell>
                </row>
                <row>
                   <cell>
-                     <p>@cert</p>
+                     <att>notAfter-custom</att>
                   </cell>
                   <cell>
-                     <p>certainty low, medium or high (default)</p>
+                     date range limit in specified calendar
                   </cell>
                </row>
                <row>
                   <cell>
-                     <p>@evidence</p>
+                     <att>dur</att>
                   </cell>
                   <cell>
-                     <p>especially for date assigned to something, with set
-          of values</p>
+                     duration
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <att>type</att>
+                  </cell>
+                  <cell>type of date (reign, lifespan, etc.)
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <att>calendar</att>
+                  </cell>
+                  <cell>specified calendar according to list
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <att>resp</att>
+                  </cell>
+                  <cell>
+                     with the id of responsible
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <att>cert</att>
+                  </cell>
+                  <cell>certainty low, medium or high (default)
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <att>evidence</att>
+                  </cell>
+                  <cell>especially for date assigned to something, with set
+          of values
                   </cell>
                </row>
             </table>
-
          </div>
          <div type="level2">
             <head>In-text placeName and persName</head>
@@ -210,7 +184,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       omitted.</p>
             <quote>
                <p>The manuscript was perhaps found in
-        <gi>placeName ref="LOC2969Ensala"ʾƎnsalāle/placeName</gi>
+        <tag>placeName ref="LOC2969Ensala"</tag>
         but there is no agreement about this.</p>
             </quote>
             <p>There are some standard
@@ -233,7 +207,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       are case sensitive. The main xml:id of a record is directly into
       the <gi>TEI</gi> root element.</p>
             <p>
-               <gi>TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PRS1009Abakaraz"</gi>
+               <tag>TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PRS1009Abakaraz"</tag>
             </p>
          <div type="level3">
             <head>Attested placeNames in a Work</head>
