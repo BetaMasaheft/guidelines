@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -22,10 +22,359 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body xml:id="transliteration-principles">
          <head>Transliteration Principles</head>
-         <p>For an overview of transliteration principles, please see:
-    <ref target="transliteration-principles">Transliteration
-    Principles</ref>
-    https://github.com/BetaMasaheft/Documentation/wiki/Transliteration.</p>
+         <p>For any questions regarding transliteration that should arise after
+         reading the guidelines, individual issues should be opened.</p>
+         <p>You can use
+         <ref target="https://betamasaheft.github.io/transliteration/">this
+         tool</ref> to update text transcribed according to the old convention
+         to these or to enter fidal or correctly transcribed text and get the
+         other of the two.</p>
+         <table>
+           <row role="label">
+             <cell><p>1</p></cell>
+             <cell><p>2</p></cell>
+             <cell><p>3</p></cell>
+             <cell><p>4</p></cell>
+             <cell><p>5</p></cell>
+             <cell><p>6</p></cell>
+             <cell><p>7</p></cell>
+           </row>
+           <row>
+             <cell><p>a</p></cell>
+             <cell><p>u</p></cell>
+             <cell><p>i</p></cell>
+             <cell><p>ā</p></cell>
+             <cell><p>e</p></cell>
+             <cell><p>ǝ</p></cell>
+             <cell><p>o</p></cell>
+           </row>
+         </table>
+         <table>
+           <row role="label">
+             <cell><p>ethiopic</p></cell>
+             <cell><p>transcription</p></cell>
+           </row>
+           <row>
+             <cell><p>ሀ</p></cell>
+             <cell><p>ha</p></cell>
+           </row>
+           <row>
+             <cell><p>ለ</p></cell>
+             <cell><p>la</p></cell>
+           </row>
+           <row>
+             <cell><p>ሐ</p></cell>
+             <cell><p>ḥa</p></cell>
+           </row>
+           <row>
+             <cell><p>መ</p></cell>
+             <cell><p>ma</p></cell>
+           </row>
+           <row>
+             <cell><p>ሠ</p></cell>
+             <cell><p>śa</p></cell>
+           </row>
+           <row>
+             <cell><p>ረ</p></cell>
+             <cell><p>ra</p></cell>
+           </row>
+           <row>
+             <cell><p>ሰ</p></cell>
+             <cell><p>sa</p></cell>
+           </row>
+           <row>
+             <cell><p>ቀ</p></cell>
+             <cell><p>qa</p></cell>
+           </row>
+           <row>
+             <cell><p>በ</p></cell>
+             <cell><p>ba</p></cell>
+           </row>
+           <row>
+             <cell><p>ተ</p></cell>
+             <cell><p>ta</p></cell>
+           </row>
+           <row>
+             <cell><p>ኀ</p></cell>
+             <cell><p>ḫa</p></cell>
+           </row>
+           <row>
+             <cell><p>ነ</p></cell>
+             <cell><p>na</p></cell>
+           </row>
+           <row>
+             <cell><p>አ</p></cell>
+             <cell><p>ʾa</p></cell>
+           </row>
+           <row>
+             <cell><p>ከ</p></cell>
+             <cell><p>ka</p></cell>
+           </row>
+           <row>
+             <cell><p>ወ</p></cell>
+             <cell><p>wa</p></cell>
+           </row>
+           <row>
+             <cell><p>ዐ</p></cell>
+             <cell><p>ʿa</p></cell>
+           </row>
+           <row>
+             <cell><p>ዘ</p></cell>
+             <cell><p>za</p></cell>
+           </row>
+           <row>
+             <cell><p>የ</p></cell>
+             <cell><p>ya</p></cell>
+           </row>
+           <row>
+             <cell><p>ደ</p></cell>
+             <cell><p>da</p></cell>
+           </row>
+           <row>
+             <cell><p>ገ</p></cell>
+             <cell><p>ga</p></cell>
+           </row>
+           <row>
+             <cell><p>ጠ</p></cell>
+             <cell><p>ṭa</p></cell>
+           </row>
+           <row>
+             <cell><p>ጰ</p></cell>
+             <cell><p>ṗa</p></cell>
+           </row>
+           <row>
+             <cell><p>ጸ</p></cell>
+             <cell><p>ṣa</p></cell>
+           </row>
+           <row>
+             <cell><p>ፀ</p></cell>
+             <cell><p>ḍa</p></cell>
+           </row>
+           <row>
+             <cell><p>ፈ</p></cell>
+             <cell><p>fa</p></cell>
+           </row>
+           <row>
+             <cell><p>ፐ</p></cell>
+             <cell><p>pa</p></cell>
+           </row>
+           <row>
+             <cell><p>ቈ</p></cell>
+             <cell><p>qʷa</p></cell>
+           </row>
+           <row>
+             <cell><p>ኈ</p></cell>
+             <cell><p>ḫʷa</p></cell>
+           </row>
+           <row>
+             <cell><p>ኰ</p></cell>
+             <cell><p>kʷa</p></cell>
+           </row>
+           <row>
+             <cell><p>ጐ</p></cell>
+             <cell><p>gʷa</p></cell>
+           </row>
+           <row>
+             <cell><p>ቨ</p></cell>
+             <cell><p>va</p></cell>
+           </row>
+           <row>
+             <cell><p>ቸ</p></cell>
+             <cell><p>ča</p></cell>
+           </row>
+           <row>
+             <cell><p>ጀ</p></cell>
+             <cell><p>ǧa</p></cell>
+           </row>
+           <row>
+             <cell><p>ጨ</p></cell>
+             <cell><p>č̣a</p></cell>
+           </row>
+           <row>
+             <cell><p>ቐ</p></cell>
+             <cell><p>q̲a</p></cell>
+           </row>
+           <row>
+             <cell><p>ኸ</p></cell>
+             <cell><p>ḵa</p></cell>
+           </row>
+           <row>
+             <cell><p>ሸ</p></cell>
+             <cell><p>ša</p></cell>
+           </row>
+           <row>
+             <cell><p>ኘ</p></cell>
+             <cell><p>ña</p></cell>
+           </row>
+           <row>
+             <cell><p>ዠ</p></cell>
+             <cell><p>ža</p></cell>
+           </row>
+           <row>
+             <cell><p>ጘ</p></cell>
+             <cell><p>[ŋa]</p></cell>
+           </row>
+           <row>
+             <cell><p>ⶓ</p></cell>
+             <cell><p>[ŋʷa]</p></cell>
+           </row>
+         </table>
+         <p>for Schwa - please always use ǝ (01DD, Latin Small Letter Turned E)
+         and not ə (0259, Latin Small Letter Schwa)</p>
+         <p>for Alif - please always use ʾ (02BE), not ˀ</p>
+         <p>for Ayn – please always use ʿ (02BF), not ˁ</p>
+         <p>for č̣ - please combine out of č (010D) and ̣ (0323)</p>
+         <p>for apices use <seg type="code">hi</seg></p>
+         <ab type='codeblock '>
+       12&lt;hi rend='apices'&gt;th&lt;/hi&gt;
+       </ab>
+         <p>For kʷ, gʷ, ḫʷ and qʷ using ʷ (modified w 02B7), which you find
+         also in codetemplates.</p>
+         <p>Please transcribe name starting with aleph with aleph.</p>
+         <ab type='codeblock '>
+       ʾƎsṭifānos and not Ǝsṭifānos
+       </ab>
+         <p>Prepositions are always separated by the following word by a
+         hyphen:</p>
+         <p>kāhǝnāt wa-diyāqonāt</p>
+         <p>Names containing prepositions are however, spelled as one word:</p>
+         <ab type='codeblock '>
+         Baḫayla Mikāʾel and not Ba-Ḫayla Mikāʾel
+
+         Zamikāʾel ʾAragāwi (not Za-Mikāʾel ʾAragāwi)
+
+         Naʾakkwǝto Laʾab (not La-ʾAb)
+       </ab>
+         <div type="level2">
+           <head>Dubious spelling</head>
+           <p>The words listed below should be transliterated as follows,
+           according to the TraCES decisions:</p>
+           <list type="unordered">
+             <item>
+               <p>አእላፍ፡ | ʾaʾlāf (not ʾaʾǝlāf)</p>
+             </item>
+             <item>
+               <p>አዕይንት፡ | ʾaʿyǝnt (not ʾaʿǝyyǝnt)</p>
+             </item>
+             <item>
+               <p>እግዚአብሔር፡ | ʾƎgziʾabǝḥer (not ʾƎgziʾabḥer)</p>
+             </item>
+             <item>
+               <p>እሙንቱ፡ | ʾǝmuntu (not ʾǝmuntu)</p>
+             </item>
+             <item>
+               <p>እንድርያስ፡ | ʾƎndrǝyās (three consonants are accepted since the
+               first and the last are sonorant, not ʾƎndǝryās)</p>
+             </item>
+             <item>
+               <p>በእንተ፡ | baʾǝnta (not ba-ʾǝnta)</p>
+             </item>
+             <item>
+               <p>ባሕቱ፡ | bāḥǝttu (not bāḥtu)</p>
+             </item>
+             <item>
+               <p>ግዕዝ፡ | gǝʿz (not gǝʿǝz) [but this needs further
+               discussion]</p>
+             </item>
+             <item>
+               <p>ላዕለ፡ | lāʿla (not lāʿǝla)</p>
+             </item>
+             <item>
+               <p>ካዕበ፡ | kāʿǝba (not kāʿba)</p>
+             </item>
+             <item>
+               <p>ምዕራፍ፡ | mǝʿrāf (not mǝʿǝrāf)</p>
+             </item>
+             <item>
+               <p>መልእክት፡ | malʾǝkt (not malǝʿǝkt)</p>
+             </item>
+             <item>
+               <p>ጳጳስ፡ | ṗāṗās (not ṗāṗṗās)</p>
+             </item>
+             <item>
+               <p>ርእስ፡ | rǝʾs (not rǝʾǝs)</p>
+             </item>
+             <item>
+               <p>ርእየ፡ | rǝʾya (not rǝʾǝya)</p>
+             </item>
+             <item>
+               <p>ሰማዕታት፡ | samāʿtāt (not samāʿǝtāt)</p>
+             </item>
+             <item>
+               <p>ትእዛዝ፡ | tǝʾǝzāz (not tǝʾzāz)</p>
+             </item>
+             <item>
+               <p>ተአምር፡ | taʾammǝr (not taʾamǝr, taʾāmmǝr, or taʾāmǝr)</p>
+             </item>
+             <item>
+               <p>ያዕቆብ፡ | Yāʿqob (not Yāʿǝqob)</p>
+             </item>
+           </list>
+           <p>For other cases which raise questions, please open individual
+           issues.</p>
+         </div>
+         <div type="level2">
+           <head>Capitalisation</head>
+           <p>In transliterated titles (whether the title of the work record or
+           the title of a manuscript containing the work), the first word and
+           all proper names should be spelled with a capital, so for example
+           Wəddāse ʾAmlāk.</p>
+           <p>Please open individual issues for particular cases that need
+           discussing.</p>
+         </div>
+         <div type="level2">
+           <head>Standardisation of transcription from Encyclopaedia
+           Aethiopica</head>
+           <list type="unordered">
+             <item>
+               <p>all the above should be applied to transcriptions from
+               ETHIOPIC only.</p>
+             </item>
+             <item>
+               <p><hi rendition="simple:bold">ä</hi> for first order should be
+               changed into <hi rendition="simple:bold">a</hi></p>
+             </item>
+             <item>
+               <p><hi rendition="simple:bold">a</hi> for fourth order should be
+               changed into <hi rendition="simple:bold">ā</hi></p>
+             </item>
+             <item>
+               <p>initial alef must be reinserted (ʾa, ʾo, ʾe, etc)</p>
+             </item>
+           </list>
+           <p>Ambiguities:</p>
+           <list type="unordered">
+             <item>
+               <p>A, a (at the beginning of a word, A/a vowel occurs only here)
+               &gt; ʾA / ʾĀ, ʾa / ʾā depending on the order (write ʾA/ʾa when
+               unsure)</p>
+             </item>
+             <item>
+               <p>ʿA (or ʿa) &gt; ʿA / ʿĀ (or ʿa / ʿā) depending on the
+               order</p>
+             </item>
+             <item>
+               <p>Ha (or ha) &gt; Ha / Hā(or ha / hā) depending on the
+               order</p>
+             </item>
+             <item>
+               <p>Ḥa (or ḥa) &gt; Ḥa / Ḥā (or ḥa / ḥā) depending on the
+               order</p>
+             </item>
+             <item>
+               <p>Ḫa (or ḫa) &gt; Ḫa / Ḫā (or ḫa / ḫā) depending on the
+               order</p>
+             </item>
+           </list>
+         </div>
+       <div type="level2">
+         <head>Arabic transcriptions</head>
+         <p>In general, the same transcription system as that of the EAe is
+         applied. However, Hamzat qaṭʿ is always to be transcribed. Titles and
+         names are transcribed without case endings:</p>
+         <p><hi rendition="simple:italic">Šarḥ sabab intiqāl mamlakat Sulaymān
+         malik ʾIsrāʾīl ʾilā bilād an-naǧāšīya allatī hiya al-ḥabaša</hi></p>
+       </div>
       </body>
    </text>
 </TEI>
