@@ -29,6 +29,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          tool</ref> to update text transcribed according to the old convention
          to these or to enter fidal or correctly transcribed text and get the
          other of the two.</p>
+         <p>
          <table>
            <row role="label">
              <cell><p>1</p></cell>
@@ -219,32 +220,36 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
              <cell><p>[ŋʷa]</p></cell>
            </row>
          </table>
+         </p>
          <p>for Schwa - please always use ǝ (01DD, Latin Small Letter Turned E)
          and not ə (0259, Latin Small Letter Schwa)</p>
          <p>for Alif - please always use ʾ (02BE), not ˀ</p>
          <p>for Ayn – please always use ʿ (02BF), not ˁ</p>
          <p>for č̣ - please combine out of č (010D) and ̣ (0323)</p>
-         <p>for apices use <seg type="code">hi</seg></p>
-         <ab type='codeblock '>
-       12&lt;hi rend='apices'&gt;th&lt;/hi&gt;
-       </ab>
+         <p>for apices use <gi>hi</gi></p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+       12<hi rend='apices'>th</hi>
+     </egXML>
          <p>For kʷ, gʷ, ḫʷ and qʷ using ʷ (modified w 02B7), which you find
          also in codetemplates.</p>
          <p>Please transcribe name starting with aleph with aleph.</p>
-         <ab type='codeblock '>
+         <cit>
+           <quote>
        ʾƎsṭifānos and not Ǝsṭifānos
-       </ab>
+       </quote>
+     </cit>
          <p>Prepositions are always separated by the following word by a
          hyphen:</p>
          <p>kāhǝnāt wa-diyāqonāt</p>
          <p>Names containing prepositions are however, spelled as one word:</p>
-         <ab type='codeblock '>
+         <cit>
+           <quote>
          Baḫayla Mikāʾel and not Ba-Ḫayla Mikāʾel
 
          Zamikāʾel ʾAragāwi (not Za-Mikāʾel ʾAragāwi)
 
          Naʾakkwǝto Laʾab (not La-ʾAb)
-       </ab>
+       </quote></cit>
          <div type="level2">
            <head>Dubious spelling</head>
            <p>The words listed below should be transliterated as follows,
