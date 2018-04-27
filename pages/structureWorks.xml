@@ -56,6 +56,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <div type="level1">
             <head>teiHeader</head>
             
+            <div type="level2">
+               <head>titleStmt</head>
+            
             <p>
                The title(s) of the work are encoded in <gi>titleStmt</gi>:
                
@@ -70,22 +73,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <funder>Akademie der Wissenschaften in Hamburg</funder>
                   </titleStmt>
                </egXML>
+               
+               In general, the normalized version of the Gǝʿz is the one printed on the app to refer to a work. If another title should be printed, because it is the standard title used when
+               referring to this work, you can also use <att>type</att> with value <val>main</val> to signal
+               the title which is to be used for labels, pointers and headers. 
             </p>
             
                
-            <p>The title which will be printed on the website is the title which has <tag>corresp='#t1' type='normalized'</tag>, in the example above, 
+            <p>The title which will be printed on the website will therefore be:
+               <list>
+                  <item>the one which has <att>type</att> with value <val>main</val>,</item>
+                  <item>the one containing <tag>corresp='#t1' type='normalized'</tag>,</item>
+                  <item>the one with <tag>xml:id='t1'</tag>.</item>
+               </list>
+               In the example above, 
                therefore <hi rendition="simple:italic">Maṣḥafa qǝddāse</hi> will be printed.
-                  If another title should be printed, because it is the standard title used when referring to this work, you can also use <att>type</att> with value <val>main</val> to signal
-                  which one title is to be used for labels, pointers and headers. the
-                  <gi>titleStmt</gi> element will have slightly different
-                  contents. It will contain the title(s) of the work edited and the
-                  date. If there is a digital edition, a <gi>editor</gi>
-                  will be added.</p>
+               Please be as careful in your encoding of titles as everywhere else to correctly encode the facts and not adapt them in order to achieve a certain visualization.
+                </p>
+      
                <p>Titles of the same work in another tradition will be reported
                   following the same rule and attributing an arbitrary t+digit <att>xml:id</att>
-                  and the appropriate <att>xml:lang</att>.</p>
+                  and the appropriate <att>xml:lang</att>.
+               </p>
+            
                <p>You can also use <tag>title type='short'</tag> for shortened
-                  titles like citation forms.</p>
+                  titles like citation forms: 
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   
                   <title xml:lang="gez" xml:id="t1">ወንጌል፡ ዘዮሐንስ፡</title>
@@ -93,25 +105,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <title xml:lang="en" corresp="#t1" type="main">Gospel of John</title>
                   <title type="short">Jn.</title>
                </egXML>
-               <list type="unordered">
-                  <item>
-                     <p>if a subpart of a work needs a bibliography this can be given
-                        in the <tag>div type='textpart'</tag>
-                     </p>
-                  </item>
-                  <item>
-                     <p>if a subpart without independent circulation in the Ethiopic
-                        tradition needs to reference the work independently in other
-                        traditions titles will be added and referenced in the appropriate
-                        <tag>div type='textpart'</tag>
-                     </p>
-                  </item>
-               </list>
+               </p>
+            
+            <p>If a subpart of a work, which does not circulate independently  in the Ethiopic
+               tradition, does circulate independently in other
+               traditions, the relevant titles and references will be added in the appropriate
+               <tag>div type='textpart'</tag>, not in <gi>titleStmt</gi>.
+            </p>
                
+               <!--editor-->
          </div>
             
             
-         <div type="level1">
+            
+         <div type="level2">
             <head>Edition statement, Source statement, and encoding
   description</head>
             <p>These elements should be provided in the header for texts that we
@@ -170,8 +177,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   
          </div>
          <div type="level1">
-            <head>Other Clavis ids</head>
-            <p>inside sourceDesc, there will be a section like this</p>
+            <head>Clavis IDs</head>
+            <p>Inside <gi>sourceDesc</gi>, IDs of the work in different claves can be given in <tag>listBibl type='clavis'</tag>:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <listBibl type="clavis">
                <bibl corresp="#t2coptic" type="CC"><ptr target="bm:CC"/><citedRange unit="item">123</citedRange></bibl>
@@ -184,31 +191,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <bibl type="KRZ"><ptr target="bm:KRZ"/><citedRange unit="item">123</citedRange></bibl>
             </listBibl>
 </egXML>
-            <p>containing ids of the work pointing eventually to the title in
-  titleStmt.</p>
+            <!--<p>containing IDs of the work pointing eventually to the title in
+  titleStmt.</p> This is not entirely clear-->
   
          </div>
+            
          <div type="level1">
             <head>Witnesses</head>
+            
             <p>We use <gi>witness</gi> for those manuscripts
   which are <hi rendition="simple:bold">actually used</hi> for the
   edition we are going to provide in the
-  <tag>div type='edition'</tag>. All catalogued
-  manuscripts containing the work are displayed in the app anyway.</p>
+  <tag>div type='edition'</tag>. All 
+  manuscript records containing the work are displayed in the app anyway.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<listWit>
-     <witness cert="low" corresp="EMML1234"/>
-     <witness type="external" facs="http://archivesetmanuscrits.bnf.fr/ead.html?id=FRBNFEAD000091073" corresp="BNFEAD000091073"/>
-     <witness type="external" corresp="EMML"/>
-  <listWit>
-     <witness corresp="ES123"/>
-     <witness corresp="BL8910">this manuscript was donated by <persName ref="PRS123124trhas"/>, 
-     at <placeName ref="LOC21321asa"/> and is a copy of <ref corresp="EMML2" type="mss"/>
-    </witness>
- </listWit>
-</listWit>
+               <sourceDesc>
+                  <listWit>
+                     <witness corresp="BLorient818" xml:id="L"/>
+                     <witness corresp="BNFet146" xml:id="P"/>
+                     <witness corresp="ONBAeth4" xml:id="W"/>
+                  </listWit>
+               </sourceDesc>
 </egXML>
             <p>
+               
                <gi>listWit</gi>s can be nested if needed for example
   to group them in families. Each <gi>witness</gi> will
   have to take a <att>corresp</att> pointing to the
@@ -493,6 +499,9 @@ notAfter="1559">ትግራይ፡</placeName>
             
          </div>
 </egXML>
+            <p>if a subpart of a work needs a bibliography this can be given
+               in the <tag>div type='textpart'</tag>
+            </p>
          </div>
          <div type="level1">
             <head>Languages</head>
@@ -516,7 +525,7 @@ notAfter="1559">ትግራይ፡</placeName>
   add e.g. amh as value for @ident and consequently use it in the file
   as value of @xml:lang.</p>
          </div>
-         
+         </div>
       </body>
    </text>
 </TEI>
