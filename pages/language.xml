@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>language</title>
+            <title>Language</title>
             <author>Pietro Liuzzo</author>
          </titleStmt>
          <publicationStmt>

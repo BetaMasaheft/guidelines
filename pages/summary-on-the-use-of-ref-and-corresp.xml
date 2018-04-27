@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -22,11 +22,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body xml:id="summary-on-the-use-of-ref-and-corresp">
          <head>summary on the use of @ref and @corresp</head>
-         <p>internal references -
-    <gi>ref target="#q12"</gi> -
-    <gi>ref type="quire" corresp="#q12"</gi>
-    - <att>corresp="#id"</att> (# is the id
-    anchor) points always to a @xml:id WITHIN THE DOCUMENT</p>
+         <p>internal references
+           <list>
+<item><tag>ref target="#q12"</tag></item>
+<item><tag>ref type="quire" corresp="#q12"</tag></item>
+<item><att>corresp</att> with a value starting with # (the ID
+anchor) points always to a @xml:id WITHIN THE DOCUMENT</item>
+</list>
+</p>
          <p>otherwise if <att>corresp</att> is used to point to
     an element inside another document with an id, as for witness and
     div in a work record, then it does not need an initial #</p>
@@ -142,6 +145,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <cell/>
             </row>
          </table>
+         <list type="unordered">
+             <item>
+                 <p>if you point to an internal anchor in a <att>xml:id</att> inside the document you are working with, use # to begin with.</p>
+             </item>
+             <item>
+                 <p>If you point to an external id don't start with #, just enter the ID. That is why
+                     <gi>witness</gi> does not take that, as
+                     <att>active</att>,
+                     <att>passive</att> inside
+                     <gi>relation</gi> should not. In fact you want
+                     to be able to point to anchors within the records you are pointing
+                     to and link things like LIT0000Example#t3.</p>
+             </item>
+         </list>
       </body>
    </text>
 </TEI>

@@ -39,6 +39,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 </revisionDesc>
 </egXML>
          <p>Best thing would be to do this every time you are not simply adding a comma.</p>
+         
+               <p>The file should be submitted for revision to a second author
+                  taking care of describing according to guidelines the event.</p>
+               <list type="ordered:arabic">
+                  <item>
+                     <p>Cataloguer will enter a <gi>change</gi>
+                        with content <hi rendition="simple:italic">Submitted for
+                           review</hi>, once she is finished.</p>
+                  </item>
+                  <item>
+                     <p>Reviewer will add a <gi>change</gi> with
+                        content <hi rendition="simple:italic">Reviewed and
+                           Corrected</hi>,</p>
+                  </item>
+                  <item>
+                     <p>General editor will enter a <gi>change</gi>
+                        with value <hi rendition="simple:italic">Approved</hi>
+                     </p>
+                  </item>
+               </list>
+         
          <p> If you change for example an ID in many files you don't want to go back to each and add a <gi>change</gi>, but in that case there is also the  GIT commit message which will help. Please use it!
          There is no need to commit immediately every small change made, thus multiplying them and their titles and descriptions, but when we do commit something (after checking, validating, checking again and being very sure), it is extremely  important to give a proper title and any relevant information helping to investigate the change in the future. 
          </p>

@@ -54,7 +54,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   file.</ref></item>
                <item><ref target="named-entities-and-authority-lists">Marking up Named Entities
                      (personal names, place names, titles, dates).</ref></item>
-               <item><ref target="correspRef">use of referencing attributes</ref>
+               <item><ref target="summary-on-the-use-of-ref-and-corresp">use of referencing attributes</ref>
                      (<att>corresp</att> and <att>ref</att>)</item>
                <item><gi>certainty</gi></item>
             </list>
