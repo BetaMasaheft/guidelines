@@ -22,7 +22,13 @@
             <item>
                     <list>
                <item>manuscripts</item>
-               <item>works</item>
+               <item>works
+               <list>
+                  <item>definitionWorks</item>
+                  <item>structureWorks</item>
+                  <item>edition</item>
+               </list>
+               </item>
                <item>places</item>
                <item>persons</item>
                <item>narrativeUnits</item>

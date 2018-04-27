@@ -25,7 +25,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <head>Definition of works and Assignment of IDs</head>
          
             <p>We consider a <hi rendition="simple:bold">work</hi> any text with an
-independent circulation. This does not mean it should be alone in a
+independent circulation. This does not mean it has to be alone in a
 manuscript. A text which sometimes is added to another is also an
 independent work. So <hi rendition="simple:italic">Genesis</hi> is a
 work as <hi rendition="simple:italic">Pentateuch</hi> is a work which

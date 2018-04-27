@@ -28,9 +28,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             
             <!--<p> It is recommended when starting to encode work records to read these guidelines alongside with example records, for example .</p>-->
             
-            <p>Each work record should contain basic information on the work in question in the <gi>teiHeader</gi>, encoded in    <gi>titleStmt</gi>,
-               <gi>publicationStmt</gi>, <gi>profileDesc</gi>, <gi>abstract</gi> and <gi>textClass</gi>.</p>
-            <p>The <gi>body</gi> contains bibliographic references, relations and the edition of the work.</p>
+            <p>Each work record should contain basic information on the work in question in the <gi>teiHeader</gi>.</p>
+            <p>The <gi>body</gi> contains bibliographic references, relations and the edition of the work if available.</p>
             <p>The basic structure of a work record will therefore be:
             <list>
                
@@ -39,14 +38,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <item><gi>titleStmt</gi> with titles of the work in all relevant languages and traditions</item>
                <item><gi>publicationStmt</gi> with the publication statement of the record</item>
                   <item><gi>profileDesc</gi>: Contains <gi>abstract</gi>with a concise description of the work;
-                     <gi>textClass</gi> with keywords which enable filtering the app and <gi>langUsage</gi> with definitions of all languages used in the record.
+                     <gi>textClass</gi> with keywords which enable filtering the app for subjects and other criteria and <gi>langUsage</gi> with definitions of all languages used in the record.
                   </item>
                  </list>
                </item>
                
-               <item>and <gi>body</gi>, containing:
-                  <list><item><tag>div type='bibliography'</tag>: Bibliographic references on secondary literature, editions and translations as well as relations</item></list>
-                  <list><item>and <tag>div type='edition'</tag>: Division of the work into parts and possibly text edition</item></list>
+               <item><gi>body</gi>, containing:
+                  <list>
+                     <item><tag>div type='bibliography'</tag>: Bibliographic references on secondary literature, editions and translations as well as relations</item>
+                  <item>and <tag>div type='edition'</tag>: Division of the work into parts and possibly text edition</item>
+                  </list>
                </item>
             </list>
             </p>
