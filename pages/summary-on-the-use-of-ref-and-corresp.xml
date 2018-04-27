@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>summary on the use of @ref and @corresp</title>
+            <title>Summary on the Use of @ref and @corresp</title>
             <author>Pietro Liuzzo</author>
          </titleStmt>
          <publicationStmt>
@@ -33,16 +33,16 @@ anchor) points always to a @xml:id WITHIN THE DOCUMENT</item>
          <p>otherwise if <att>corresp</att> is used to point to
     an element inside another document with an id, as for witness and
     div in a work record, then it does not need an initial #</p>
-         <table>
+         <p><table>
             <row role="label">
                <cell>
                   <p>element</p>
                </cell>
                <cell>
-                  <p>@ref</p>
+                  <p><att>ref</att></p>
                </cell>
                <cell>
-                  <p>@corresp</p>
+                  <p><att>corresp</att></p>
                </cell>
             </row>
             <row>
@@ -145,6 +145,7 @@ anchor) points always to a @xml:id WITHIN THE DOCUMENT</item>
                <cell/>
             </row>
          </table>
+         </p>
          <list type="unordered">
              <item>
                  <p>if you point to an internal anchor in a <att>xml:id</att> inside the document you are working with, use # to begin with.</p>
