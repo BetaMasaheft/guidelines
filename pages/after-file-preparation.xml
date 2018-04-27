@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>after file preparation</title>
+            <title>After file preparation</title>
             <author>Pietro Liuzzo</author>
          </titleStmt>
          <publicationStmt>
@@ -21,7 +21,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body xml:id="after-file-preparation">
-         <head>after file preparation</head>
+         <head>After file preparation</head>
          <list type="ordered:arabic">
             <item n="3">
                <p>The file should be submitted for revision to a second author
