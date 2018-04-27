@@ -22,8 +22,8 @@
             <item>
                     <list>
                <item>manuscripts</item>
-               <item>works
-               <list>
+               <item>works</item>
+               <item><list>
                   <item>definitionWorks</item>
                   <item>structureWorks</item>
                   <item>edition</item>
