@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -29,7 +29,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <placeName ref="LOC2969Ensala"/>
 </egXML>
-         
+
          <p>
             <gi>title</gi> takes a <att>ref</att>
     as well, pointing to the work id, which will contain the standard
@@ -44,7 +44,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     receive specific descriptions by this project, use external links to
     geonames ids as follows.</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<country ref="gn:2017370"/> 
+<country ref="gn:2017370"/>
 <settlement ref="gn:498817"/>
 </egXML>
          <p>(same for placeName and region)</p>
@@ -68,7 +68,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <p>adding references to places not in our db: * for ancient place
     prefere pleiades, with namespace pleiades: * for places related to
     coptic literary tradition use PAThs paths:</p>
-         <div type="level3">
+         <div type="level2">
             <head>Dates</head>
             <p>Dates anywhere in the text quoted can be tagged with
       precision</p>
@@ -82,7 +82,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       notAfter-custom) can hold the value in the calendar specified by
       <att>calendar</att>.</p>
             <p>BCE dates are therefore expressed with -:
-      <gi>death when="-0931"/</gi>
+      <tag>death when="-0931"</tag>
             </p>
             <p>date expressing a duration rather than a point in time, might
       use the <att>dur</att>
@@ -92,6 +92,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <date dur="P10Y5M"/>
 </egXML>
+
             <table>
                <row role="label">
                   <cell>
@@ -199,8 +200,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </cell>
                </row>
             </table>
+
          </div>
-         <div type="level3">
+         <div type="level2">
             <head>In-text placeName and persName</head>
             <p>All information related to places or people should be stored in
       the respective place or person record. If a long description needs
@@ -226,19 +228,59 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <p>IF YOU CHANGE AN ID, YOU SHOULD ALSO MAKE SURE TO UPDATE ANY
         REFERENCE IN ANY FILE WHICH ALREADY CONTAINS IT</p>
             </quote>
-      
+
             <p>Filenames and IDs should correspond EXACTLY and as always they
       are case sensitive. The main xml:id of a record is directly into
       the <gi>TEI</gi> root element.</p>
             <p>
                <gi>TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PRS1009Abakaraz"</gi>
             </p>
-         </div>
          <div type="level3">
+            <head>Attested placeNames in a Work</head>
+            <p>The attestations of placeNames should be marked as in the example
+  below</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<ab> ምዕራፍ፡፱። ወእምዝ፡ ዓደወ፡ ማር፡ ገላውዴዎስ፡
+ማዕዶተ፡ ክልኤቱ፡ አፍላግ፡ መንገለ፡ ምድረ፡
+<placeName
+ref="LOC5597Sawa"
+notBefore="1540"
+notAfter="1559">ሼዋ፡</placeName>
+እመንገለ፡ምድረ፡
+<placeName
+ref="LOC5932Tegray"
+notBefore="1540"
+notAfter="1559">ትግራይ፡</placeName>
+ ከመ፡ ይርአይ፡ መርዔቶ፡ bእለ፡ ህየ፡ በጽድቅ፡ ወይዋሄ፡ cሕዝቦ፡ በርትዕ። ወበጽሐ፡</ab>
+</egXML>
+            <p>to choose which id to use consider the following:</p>
+            <list type="unordered">
+               <item>
+                  <p>if it is a place of interest for ethiopian studies or attested
+      in ethiopia, then use one of our internal ids or create a new
+      record if none is yet available</p>
+               </item>
+               <item>
+                  <p>if it is an ancient place but not in ethiopia, like Jordan,
+      Rome, etc. then search pleaides and use a pleiades id prefixed
+      with pleaides: e.g. for Jordan River use plaeides:687932</p>
+               </item>
+               <item>
+                  <p>if it is an ancient place not of our interest and not relevant
+      for pleiades, check in wikidata and enter the item id (starting
+      with Q)</p>
+               </item>
+            </list>
+            <p>you can also add a @resp with the id of one of our person records
+  or editors and a @source with a list of bm:tags from the Zotero
+  Ethiostudies group library.</p>
+         </div>
+      </div>
+         <div type="level2">
             <head>roleName and @role</head>
             <p>The titles of persons, such as ʾabbā, wayzaro, makʷannǝn etc.,
       should be encoded with
-      <gi>roleName type="title"</gi> at
+      <tag>roleName type="title"</tag> at
       the place in the texts where they occur. In order to be reasonably
       retrievable, <gi>roleName</gi> always has to
       be encoded within <gi>persName</gi>. The
@@ -275,7 +317,7 @@ he was also appointed as <persName ref="PRS5309hesanMo"><roleName type="title">q
       <gi>listPers</gi>:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <item xml:id="e1">
-<locus target="#60v #143r #144r #152v #167v #171r #173r #189v #192r #234r #255r"/> 
+<locus target="#60v #143r #144r #152v #167v #171r #173r #189v #192r #234r #255r"/>
 <desc>The names of the owner <persName role="owner" ref="PRS11297ZenaG"/> and his wife <persName ref="PRS11298SeyonM"/> are mentioned several times.</desc>
 </item>
 </egXML>

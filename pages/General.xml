@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -50,7 +50,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <item><ref target="references">How to make links.</ref></item>
                <item><ref target="bibliographic-references">How to deal with
                   bibliography.</ref></item>
-               <item><ref target="language">Making statements about language used in the
+               <item><ref target="languageIntro">Making statements about language used in the
                   file.</ref></item>
                <item><ref target="named-entities-and-authority-lists">Marking up Named Entities
                      (personal names, place names, titles, dates).</ref></item>
