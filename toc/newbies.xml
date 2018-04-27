@@ -18,8 +18,9 @@
       <body xml:id="newbies">
          <!--         content of item elements must correspond to an xml:id in the data-->
          <list>
-            <item>workflow</item>  
-            <item>how-to</item>  
+            <item>workflow</item>
+						<item>validation</item>  
+            <item>how-to</item>
             <item>general</item>
             <item>zotero</item>
             <item>
