@@ -99,7 +99,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </row>
                <row>
                   <cell>
-                     <att>notBefore</p>
+                     <att>notBefore</att>
                   </cell>
                   <cell>
                      date range limit
@@ -107,7 +107,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </row>
                <row>
                   <cell>
-                     <att>notAfter</p>
+                     <att>notAfter</att>
                   </cell>
                   <cell>
                      date range limit
