@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
@@ -53,9 +53,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <item><ref target="structure">General structure of the Manuscript record</ref></item>
                <item><ref target="identifiersStructure">Structure of the Identifiers in a Manuscript record</ref></item>
                <item><ref target="manuscriptDescription">Description of the Manuscript</ref></item>
+               <item><ref target="text-encoding">Text encoding</ref></item>
+               <item><ref target="images">Images</ref></item>
             </list>
-            <div type="level3"><p><ref target="text-encoding">Text encoding</ref></p></div>
-            <div type="level3"><p><ref target="images">Images</ref></p></div>
       </div>
       </body>
    </text>
