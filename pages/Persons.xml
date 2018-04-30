@@ -129,7 +129,7 @@ the entry is in a new teiHeader//titleStmt/title</p>
       <gi>occupation</gi> elements and add <att>from</att> and <att>to</att>
        to assign the occupation to a period. Also only one of
       the two is OK. The use of
-      <gi>occupation type="academic"</gi>
+      <tag>occupation type="academic"</tag>
       should be restricted to scholars involved in the study of
       Ethiopian manuscripts. All persons whose records contain
       <tag>occupation type="academic"</tag>
