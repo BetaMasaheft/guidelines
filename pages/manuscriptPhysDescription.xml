@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
@@ -16,8 +16,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <sourceDesc>
                 <p>transformed with Pandoc, then with XSLT, then further edited</p>
             </sourceDesc>
-        </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+        </fileDesc>
         <revisionDesc>
+          <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
             <change who="PL" when="2018-04-24">stub of page</change>
         </revisionDesc>
     </teiHeader>
@@ -27,7 +28,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <p>The physical description of a Manuscript or manuscript part
         is contained in an element called
         <gi>physDesc</gi>.</p>
-            
+
             <list>
                 <item><ref target="objectDescription">Object</ref></item>
                 <item><ref target="handDescription">Hands</ref></item>
@@ -35,9 +36,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <item><ref target="bindingDescription">Binding</ref></item>
                 <item><ref target="sealDescription">Seals</ref></item>
                 </list>
-               
+
         </body>
     </text>
 </TEI>
-
-            

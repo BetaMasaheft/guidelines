@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
@@ -16,8 +16,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <sourceDesc>
                 <p>transformed with Pandoc, then with XSLT, then further edited</p>
             </sourceDesc>
-        </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+        </fileDesc>
         <revisionDesc>
+          <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
             <change who="PL" when="2018-04-24">stub of page</change>
         </revisionDesc>
     </teiHeader>
@@ -51,7 +52,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <p>
         <gi>title</gi> should point with a
         <att>ref</att> to the identifier of the <ref target="works">Work</ref> in the
-        <ref target="/works/list">Clavis</ref>. In the Work file alternative titles in different
+        <ref target="/works/list">Clavis</ref>. In the Work file <ref target="structureWorks">alternative titles</ref> in different
         languages should be given, here the title should be reported if relevant, e.g. if non standard.</p>
     <div type="level2">
         <head>Summary</head>
@@ -72,19 +73,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <textLang mainLang="gez">Ge'ez</textLang>
                 <locus from="1ra" to="182vb">1ra-182vb</locus>
                 <title type="Complete">I. Sinodos</title>
-                <rubric>...</rubric>
                 <incipit>
                     <locus from="1ra" n="1"/>
                     በስመ፡ አብ፡ ወልድ፡ ወመልድ[sic]፡ ወመንፈስ፡ ቅዱስ፡ አሐዱ፡ አምላክ። ንቅድም፡ በረድኤተ፡ እግዚአብሔር፡ በሠናይ፡ ኅብረት፡ ወበጽሕፈተ፡ ሲኖዶስ፡ ዘአብው፡ ሐዋርያት፡ ቅዱሳን፡ ዘሠርዑ፡ ለአርትዖ፡ ቤተ፡ ክርስዲያን፡ ቅድስት። አሕብሮተ፡ ሲኖዶስ፡ ዘአበው፡ ሐዋርያት፡ ኅሩያን።
                     <foreign xml:lang="en">Index of the Statutes or Commandments of the Apostles): In the name of the Father, and the Son, and the Holy Spirit, one God. With the help of God, we begin with the good collection, with the writing of of Sinodos of fathers, the Apostles, which they established for the guidance of the holy Church. The gathering of the Sinodos of the fathers, the chosen Apostles.</foreign>
                 </incipit>
-                <explicit>
-                    …
-                </explicit>
-                <listBibl>
-                    …
-                </listBibl>
-                <note/>
             </msItem>
         </egXML>
         <p>One <gi>msItem</gi> can have more than one <gi>locus</gi> (see specific <ref target="referencing-the-manuscript">page on the use of locus</ref>), for instance in
@@ -114,8 +107,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <gi>title</gi> will point to a univocally
                 identified work, for <gi>msItem</gi>s which
                 correspond to an identifiable work or can be identified as a
-                work. The id of the work in the authority list file will be
-                given in a <att>ref</att>
+                work. The ID of the work will be
+                given in a <att>ref</att> and it can be looked up in the list or search pages of the app, by id, if that is known, or by title.
             </p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                 <title type="complete" ref="LIT1468GadlaK">Gädlä Kiros</title>
@@ -150,7 +143,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 have not been added later to the text, are encoded as
                 <tag>explicit type="subscription"</tag>:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <explicit type="subscription" xml:lang="gez">ተፈጸመ፡ ነገር፡ ዘጦቢት፡ ወጦቢያ፡ ወልዱ፡፡ 
+                <explicit type="subscription" xml:lang="gez">ተፈጸመ፡ ነገር፡ ዘጦቢት፡ ወጦቢያ፡ ወልዱ፡፡
                     በረከቶሙ፡ ትኲን፡ ምስለ፡ ንጉሥነ፡ ኢያሱ፡ ለዓለመ፡ ዓለም፡፡ አሜን፡፡</explicit>
             </egXML>
             <p>Similarly, supplications written at the same time as the
@@ -171,7 +164,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </notatedMusic>
             </egXML>
         </div>
-    
+
     <div type="level3">
         <head>msItem for contents of a work</head>
         <quote>
@@ -199,11 +192,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </egXML>
     </div>
     </div>
-   
-    
+
+
             <div type="level2">
                 <head>Additions</head>
-                <p>Always in physDesc, you can add a
+                <p>Always in <gi>physDesc</gi>, you can add a
                     <gi>additions</gi> element, which will contain a
                     <gi>list</gi> of additions. Each
                     <gi>item</gi> will have a structure as follows.
@@ -241,8 +234,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p>If among these also marginal additions or additions on
                     guard leafs need to be added, add to
                     <gi>item</gi> also a
-                    <att>rend</att> with value ‘marginal’ or
-                    ‘guardLeaf’.</p>
+                    <att>rend</att> with value <val>marginal</val> or
+                    <val>guardLeaf</val>.</p>
                 <p>If the type of document is known then there should be a
                     narrative entity to which a <att>ref</att> can be
                     given.</p>
@@ -271,90 +264,87 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p>The distinction between additions (or better
                     <hi rendition="simple:italic">additiones</hi>) and
                     <hi rendition="simple:italic">Varia</hi> comes from the
-                    Ethio-SPaRe guidelines. _Additiones _are very often written in
+                    Ethio-SPaRe guidelines. <hi rendition="simple:italic">Additiones</hi>
+                    are very often written in
                     a secondary hand, and they are later than the main text(s) of
                     the Ms. They mark the so-called "secondary life" of
                     the manuscript as the latter is used as a repository of
-                    documentary information, i.e. a true archive.
-                    <hi rendition="simple:italic">Additiones </hi> that can be
-                    tyipically found in a Ms. are the following:
-                    "AcquisitionNote", "Admonition",
-                    "CalendaricNote", "CommemorativeNote",
-                    "Comment", "Condemnation",
-                    "Correction", "DonationNote",
-                    "Doxology", "Excerpt",
-                    "Excommunication", "Exhortation",
-                    "FoundationCharter", "Genealogy",
-                    "Gloss", "GuarantorsList",
-                    "Headband", "Inventory",
-                    "Invocation", "LandGrant",
-                    "Letter", "MagicFormula",
-                    "MagicText", "OwnershipNote",
-                    "Poem", "PoemArke", "PoemQǝne",
-                    "PoemSalam", "ProtectivePrayer",
-                    "PurchaseNote", "ReceiptNote",
-                    "Record", "RecordDistribution",
-                    "RecordGuarantors", "RecordLitigation",
-                    "RecordReconciliation",
-                    "RecordTransaction",
-                    "ScribalNoteAssigningLang",
-                    "ScribalNoteBequeathing",
-                    "ScribalNoteCommencing",
-                    "ScribalNoteCommissioning",
-                    "ScribalNoteCompleting",
-                    "ScribalNoteOrdering", "ScribalSignature",
-                    "ScribalSupplication", "StampExlibris",
-                    "Subscription", "Supplication",
-                    "Tailband", "TransactionNote",
-                    "Unclear" or "foundation". These value are
-                    provided for the <att>type</att> in the desc
-                    element. When describing an addition, please - language (if
-                    different from Ethiopic: in Amharic, in Tǝgrǝñña); - hand (by
-                    a recent/old hand, by the same hand as that of the main text,
-                    by the same hand as that of another addition, etc.); "in a
-                    secondary hand" should be avoided: it is obvious; - ink (in
-                    recent ink, hardly legible because of the faded ink, etc.). -
-                    readability (hardly readable, washed/scratched out etc.); -
-                    some additiones can be rhymed.</p>
-                <p>Under <hi rendition="simple:italic">Varia</hi>, Ethio-SPaRe
+                    documentary information, i.e. a true archive. These value are
+                    provided for the <att>type</att> in the <gi>desc</gi>
+                    element. When describing an addition, please provide
+<list>
+<item>language (if
+different from Ethiopic: in Amharic, in Tǝgrǝñña);</item>
+<item>hand (by
+a recent/old hand, by the same hand as that of the main text,
+by the same hand as that of another addition, etc.); "in a
+secondary hand" should be avoided: it is obvious;</item>
+<item>ink (in
+recent ink, hardly legible because of the faded ink, etc.).</item>
+<item>readability (hardly readable, washed/scratched out etc.);</item>
+<item>some additiones can be rhymed.</item>
+</list>
+
+                    </p>
+                <p>Under <hi rendition="simple:italic">Varia</hi> or <hi rendition="simple:italic">extra</hi>, Ethio-SPaRe
                     used to list the following phenomena, which simply concern the
                     copying process or are more trivial than
-                    <hi rendition="simple:italic">additiones</hi>: - the title of
-                    the work written on the front board or cover, sometimes with
-                    blue or black paint or ink; - the internal number of the book
-                    in the monastic library; - the midpoint in the "Psalms of
-                    David" (in Ps. 77, after the word በደመና፡); - the presence
-                    of stamps of the owning institution; - part of the line is
-                    taken up or taken down (e.g., in the Psalters), ff. .... -
-                    glosses written in the margins of ff. .... - the so-called
-                    <hi rendition="simple:italic">tämälläs</hi>-sign, in the shape
-                    of a cross (as +) or two perpendicular lines (as ┴ or├),
-                    indicating the place where the omissions (written in the upper
-                    or lower margin) belong: ff. __. - omitted letters, words,
-                    lines or passages inserted interlineally, in the margins, at
-                    the beginning/end of the line (ff. ...). - erasures: ff. ....
-                    - corrections written over erasures, in the main hand or in a
-                    later recent hand: ff. .... - erasures marked with thin black
-                    and red lines: ff. .... - corrections immediately indicated by
-                    the scribe through thin series of dashes above and below the
-                    letters or the words: ff. .... - spaces for rubricated names
-                    left unfilled: ff. .... - unfilled spaces marked with thin
-                    black lines: ff. .... - cues for the rubricator written in the
-                    margin or in the interocolumn (e.g., small digits): ff. ... -
-                    erased names or names secondarily written over erased names
-                    (typically in the supplication formulas): ff. .... - the
-                    scribe reduced the size of his handwriting to accommodate the
-                    end of the line: ff. .... - the scribe used compressed script
-                    ("compressed" means two lines in a space originally
-                    meant for one single line), often to accommodate lines written
-                    over erasure: ff. .... - monthly or daily readings are usually
-                    indicated by writing the names of the months and weekdays in
-                    the upper margin of the folio, sometimes within frames. - pen
-                    trials, notes crudely written in pencil or pen; - devotional
-                    images sewn between ff. .... - scribbles and doodles.</p>
+                    <hi rendition="simple:italic">additiones</hi>:
+<list>
+  <item>the title of
+  the work written on the front board or cover, sometimes with
+  blue or black paint or ink;</item>
+  <item>the internal number of the book
+  in the monastic library;</item>
+  <item>the midpoint in the "Psalms of
+  David" (in Ps. 77, after the word በደመና፡);</item>
+  <item>the presence
+  of stamps of the owning institution;</item>
+  <item>part of the line is
+  taken up or taken down (e.g., in the Psalters), ff. ....</item>
+  <item>glosses written in the margins of ff. ....</item>
+  <item>the so-called
+ <hi rendition="simple:italic">tämälläs</hi>-sign, in the shape
+ of a cross (as +) or two perpendicular lines (as ┴ or├),
+ indicating the place where the omissions (written in the upper
+ or lower margin) belong: ff. __.</item>
+ <item>omitted letters, words,
+lines or passages inserted interlineally, in the margins, at
+the beginning/end of the line (ff. ...).</item>
+<item>erasures: ff. ....</item>
+<item>corrections written over erasures, in the main hand or in a
+later recent hand: ff. ....</item>
+<item>erasures marked with thin black
+and red lines: ff. ....</item>
+<item>corrections immediately indicated by
+the scribe through thin series of dashes above and below the
+letters or the words: ff. .... </item>
+<item>spaces for rubricated names
+left unfilled: ff. ....</item>
+<item>unfilled spaces marked with thin
+black lines: ff. ....</item>
+<item>cues for the rubricator written in the
+margin or in the interocolumn (e.g., small digits): ff. ... </item>
+<item>erased names or names secondarily written over erased names
+(typically in the supplication formulas): ff. .... </item>
+<item>the
+scribe reduced the size of his handwriting to accommodate the
+end of the line: ff. ....</item>
+<item>the scribe used compressed script
+("compressed" means two lines in a space originally
+meant for one single line), often to accommodate lines written
+over erasure: ff. ....</item>
+<item>monthly or daily readings are usually
+indicated by writing the names of the months and weekdays in
+the upper margin of the folio, sometimes within frames.</item>
+<item>pen
+trials, notes crudely written in pencil or pen;</item>
+<item>devotional
+images sewn between ff. ....</item>
+<item>scribbles and doodles.</item>
+  </list></p>
             </div>
-            
+
         </body>
     </text>
 </TEI>
-

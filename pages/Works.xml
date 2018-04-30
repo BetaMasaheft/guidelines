@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -17,26 +17,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+      </fileDesc>       <revisionDesc>
+
+        <change who="DR" when="2018-04-26">editing of the Work section of the guidelines</change>
+            <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="works">
          <div type="level1">
             <head>Works</head>
-         
+
             <p>We consider a <hi rendition="simple:bold">work</hi> any text with an
-independent circulation. To decide whether a work record should be created for a particular text, or whether it should be a Narrative Unit or a textpart of another work, 
+independent circulation. To decide whether a work record should be created for a particular text, or whether it should be a Narrative Unit or a textpart of another work,
 please read <ref target="definitionWorks">Definition of Works and Narrative Units</ref>.</p>
-            
+
             <p>Please consider carefully whether any information should be encoded in the work record, or in the record of a manuscript containing this work.
             Any information pertaining only to a specific manuscript, not to the work as a whole, should be added to the record of this manuscript.</p>
-            
+
             <list>
                <item><ref target="definitionWorks">Definition of Works and Narrative Units</ref></item>
                <item><ref target="structureWorks">General structure of the Work record</ref></item>
                <item><ref target="edition">Edition and textparts</ref></item>
             </list>
-            
+
             <p>See also:
                <ref target="narrativeUnits">Narrative Units</ref>
             </p>

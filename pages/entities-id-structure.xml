@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -22,7 +22,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body xml:id="entities-id-structure">
          <head>Entities ID structure</head>
-         
+
          <list type="unordered">
             <item>
                <p>Manuscripts</p>
@@ -76,8 +76,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             written in capitals - If no more information is available, the ID
             can be created with a work contained in the manuscript and a
             numeral, such as: TMChronicle1</p>
-         
-        
+
+        <div type="level2">
+          <p>
+            <table>
+            <row role="label"><cell>Element</cell><cell>ID patter</cell></row>
+            <row><cell>msPart</cell><cell>p\d+[\.\d+]+</cell></row>
+            <row><cell>msItem</cell><cell>p\d+[\.\d+]+_i\d+[\.\d+]+</cell></row>
+            <row><cell>binding decoNote</cell><cell>b\d+</cell></row>
+            <row><cell>decoNote</cell><cell>d\d+</cell></row>
+            <row><cell>addition</cell><cell>a\d+</cell></row>
+            <row><cell>extra</cell><cell>e\d+</cell></row>
+            <row><cell>quire</cell><cell>q\d+</cell></row>
+            <row><cell>hand</cell><cell>h\d+</cell></row>
+            <row><cell>title</cell><cell>t\d+</cell></row>
+            <row><cell>name</cell><cell>n\d+</cell></row>
+            <row><cell>edition</cell><cell>ed\d+</cell></row>
+            <row><cell>transformation</cell><cell>tr\d+</cell></row>
+            <row><cell>Uni\w+ (SdC)</cell><cell>Uni\w+\d+ (SdC)</cell></row>
+
+          </table>
+        </p>
+          </div>
       </body>
    </text>
 </TEI>

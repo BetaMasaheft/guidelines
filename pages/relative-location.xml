@@ -24,7 +24,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <head>relative location</head>
          <p>If the location of an ancient place which does not exist any more
     is known only in relation to another place, you can use
-    <gi>location[@type='relative']</gi> and provide a
+    <tag>location type='relative'</tag> and provide a
     description, for example "5 days walk from Gondar". You
     can encode with <gi>measure</gi> also the unit and
     quantity of the distance if you can and want to.</p>

@@ -17,7 +17,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+      </fileDesc>
+      <revisionDesc>
+        <change who="DR" when="2018-04-26">editing of the Work section of the guidelines</change>
+        <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+      </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="structureWorks">
@@ -57,7 +61,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <head>teiHeader</head>
             <div type="level2">
                <head>titleStmt</head>
-            
+
             <p>
                The title(s) of the work are encoded in <gi>titleStmt</gi>:
 
@@ -72,10 +76,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <funder>Akademie der Wissenschaften in Hamburg</funder>
                   </titleStmt>
                </egXML>
-               
+
                In general, the normalized version of the Gǝʿz is the one printed on the app to refer to a work. If another title should be printed, because it is the standard title used when
                referring to this work, you can also use <att>type</att> with value <val>main</val> to signal
-               the title which is to be used for labels, pointers and headers. 
+               the title which is to be used for labels, pointers and headers.
             </p>
             <p>The title which will be printed on the website will therefore be:
                <list>
@@ -86,14 +90,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                In the example above, therefore <hi rendition="simple:italic">Maṣḥafa qǝddāse</hi> will be printed.
                Please be as careful in your encoding of titles as everywhere else to correctly encode the facts and not adapt them in order to achieve a certain visualization.
                 </p>
-      
+
                <p>Titles of the same work in another tradition will be reported
                   following the same rule and attributing an arbitrary t+digit <att>xml:id</att>
                   and the appropriate <att>xml:lang</att>.
                </p>
-            
+
                <p>You can also use <tag>title type='short'</tag> for shortened
-                  titles like citation forms: 
+                  titles like citation forms:
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
 
                   <title xml:lang="gez" xml:id="t1">ወንጌል፡ ዘዮሐንስ፡</title>
@@ -102,18 +106,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <title type="short">Jn.</title>
                </egXML>
                </p>
-            
+
             <p>If a subpart of a work, which does not circulate independently  in the Ethiopic
                tradition, does circulate independently in other
                traditions, the relevant titles and references will be added in the appropriate
                <tag>div type='textpart'</tag>, not in <gi>titleStmt</gi>.
             </p>
-               
+
                <!--editor-->
          </div>
-            
-            
-            
+
+
+
          <div type="level2">
             <head>Edition statement, Source statement, and encoding
   description</head>
@@ -189,16 +193,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 </egXML>
             <!--<p>containing IDs of the work pointing eventually to the title in
   titleStmt.</p> This is not entirely clear-->
-  
+
          </div>
-            
+
          <div type="level1">
             <head>Witnesses</head>
-            
+
             <p>We use <gi>witness</gi> for those manuscripts
   which are <hi rendition="simple:bold">actually used</hi> for the
   edition we are going to provide in the
-  <tag>div type='edition'</tag>. All 
+  <tag>div type='edition'</tag>. All
   manuscript records containing the work are displayed in the app anyway.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <sourceDesc>
@@ -210,7 +214,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </sourceDesc>
 </egXML>
             <p>
-               
+
                <gi>listWit</gi>s can be nested if needed for example
   to group them in families. Each <gi>witness</gi> will
   have to take a <att>corresp</att> pointing to the
@@ -377,7 +381,7 @@ passive="LIT1455GadlaG"/>
 </egXML>
             <p>this sounds like a dirty hack to get it working... and it is!</p>
          </div>
-         
+
          <div type="level1">
             <head>Short Summary of Contents</head>
             <p>To provide a short summary of contents use the element

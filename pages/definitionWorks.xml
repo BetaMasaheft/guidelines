@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -17,13 +17,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+      </fileDesc>       <revisionDesc>
+
+        <change who="DR" when="2018-04-26">editing of the Work section of the guidelines</change>
+            <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="definitionWorks">
          <div type="level1">
             <head>Definition of works and Assignment of IDs</head>
-         
+
             <p>We consider a <hi rendition="simple:bold">work</hi> any text with an
 independent circulation. This does not mean it has to be alone in a
 manuscript. A text which sometimes is added to another is also an
@@ -41,9 +44,9 @@ is not a work, it is a part of the work
                <ref target="https://www.zotero.org/groups/ethiostudies/items/itemKey/NWT4X3K9/q/corpus-organizers">Bausi
                   2010, 34 n3</ref>
                </p>
-            
+
           <p>Works, textparts and Narrative Units:</p>
-            
+
          <list type="unordered">
             <item>
                <p>Texts with independent circulation get an individual record with a first-level ID (such as LIT1931Mashaf), all
@@ -65,7 +68,7 @@ is not a work, it is a part of the work
     relations for the authors of the titles, etc.</p>
             </item>
             <item>
-               <p>For text portions (paragraphs, chapters, miracles, etc.) which are extant as different versions in multiple recensions of the same work or even in different works, 
+               <p>For text portions (paragraphs, chapters, miracles, etc.) which are extant as different versions in multiple recensions of the same work or even in different works,
                   create a <ref target="narrativeUnits">Narrative Unit</ref>.</p>
             </item>
             <item>
@@ -73,11 +76,11 @@ is not a work, it is a part of the work
     have an independent circulation in Ethiopic should be deleted.</p>
             </item>
          </list>
-            
+
          <p>See as example
             <ref target="LIT1931Mashaf" type="bm">LIT1931Mashaf</ref>.
          </p>
-            
+
          <p>Often the first problem to face is which records and how many to
 make. We accept as a principle to create <hi rendition="simple:bold">the
 maximum number of record as it is sensible</hi> and to state
@@ -87,7 +90,7 @@ essential, in order to clarify their relation with each other. It might
 happen that different researchers have different opinions on the
 relation between the versions and the manuscripts and in this we will be
 able to host them all.</p>
-            
+
          <p>For example. If the Work A has four versions 1, 2, 3 and 4, 1 being a
 short version of 2 and 3 a later version of 4 while 2 and 4 differ from
 one another only in the order in which the content is organized, there
@@ -96,13 +99,13 @@ While the abstract work will point to each of the 4 version with
 relations and might contain a general description of the work, each of
 the version will have clearly defined relations with the others and the
 abstract Work.</p>
-            
+
          <p>A further example: a text which is made of parts which can occur in
 different orders within different manuscripts. This will have 1 Work
 record, describing the ideal or majoritarian, or standard sequence,
 while each witness (Manuscript) will contain the specific order of the
 parts in it.</p>
-            
+
          <p>Create a new record for every different version, recensions, etc. and
 then express the diverse relations between the records with relation
 elements. This should be clearer and leave space for more differing
