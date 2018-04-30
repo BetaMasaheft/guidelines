@@ -193,7 +193,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>subst</gi> with children <tag>del rend='erasure'</tag> and <tag>add place='overstrike'</tag></gi>
+                           <gi>subst</gi>
+                           with children <tag>del rend='erasure'</tag>
+                           and <tag>add place='overstrike'</tag>
                         </p>
                      </cell>
                      <cell>
