@@ -44,7 +44,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <head>Keeping track</head>
             <p>To keep track of the workflow we use to refer to a google drive spreadsheet. This workflow is deprecated and discouraged in any way, as the spreadsheet is outdated by two years and should not be used to support any statement about entities in the website. Its historical purpose, and usage to originate the initial batch of data does not justify the redundancy of going back to look into that.
             </p>
-            <p>You can use your user page to </p>
+            <p>You can use your user page to see what you have done recently or use the latest function to see what is new in the data.</p>
          </div>
       </body>
    </text>

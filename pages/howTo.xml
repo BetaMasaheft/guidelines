@@ -24,25 +24,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <p>Using the website</p>
         <list>
         <item><ref target="navigation">Navigation</ref></item>
-        <item>Annotations with hypothesis</item>
+        <item><ref target="hypothesis">Annotations with hypothesis</ref></item>
         </list>
         <p>Contributing</p>
         <list>
-        <item>Setting up your workspace</item>
+        <item><ref target="workflow">General workflow</ref></item>
+        <item><ref target="setup">Setting up your workspace</ref></item>
         <item><ref target="zotero">Familiarizing with the bibliography editing</ref></item>
-        <item>making a Pull Request</item>
-        <item>project collaborations</item>
+        <item><ref target="https://help.github.com/articles/creating-a-pull-request/">Making a Pull Request</ref></item>
+        <item>Project collaborations</item>
 </list>
-<p>useful things to know working with XML</p>
+<p>Useful things to know working with XML</p>
 <list>
-        <item>use XPath in oXygen</item>
-        <item>use REGEX to search in the files</item>
+        <item><ref target="https://www.w3schools.com/xml/xpath_intro.asp">use XPath</ref></item>
+        <item><ref target="https://regexr.com/">use REGEX to search in the files</ref></item>
       </list>
       <p>Reusing the data</p>
       <list>
               <item>reusing the data from GitHub</item>
-              <item>accessing the data via the data API</item>
-              <item>reusing the RDF triples via SPARQL endpoint</item>
+              <item><ref type="bm" target="api">accessing the data via the data API</ref></item>
+              <item><ref type="bm" target="SPARQL">reusing the RDF triples via SPARQL endpoint</ref></item>
               <item>reuse of images</item>
             </list>
         </body>
