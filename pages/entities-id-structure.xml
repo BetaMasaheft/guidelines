@@ -88,6 +88,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <row><cell>addition</cell><cell>a\d+</cell></row>
             <row><cell>extra</cell><cell>e\d+</cell></row>
             <row><cell>quire</cell><cell>q\d+</cell></row>
+            <row><cell>foliation unit</cell><cell>fol\d+</cell></row>
             <row><cell>hand</cell><cell>h\d+</cell></row>
             <row><cell>title</cell><cell>t\d+</cell></row>
             <row><cell>name</cell><cell>n\d+</cell></row>

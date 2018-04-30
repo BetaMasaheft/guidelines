@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
@@ -16,9 +16,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <sourceDesc>
                 <p>transformed with Pandoc, then with XSLT, then further edited</p>
             </sourceDesc>
-        </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+        </fileDesc>
         <revisionDesc>
-            <change who="PL" when="2018-04-24">stub of page</change>
+          <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+          <change who="PL" when="2018-04-24">stub of page</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -27,25 +28,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <p>
                      <gi>objectDesc</gi> contains all the
           information about the object as such. Within the
-          <att>form</att> you can give one of the following
-          values:</p>
-                  <list type="unordered">
-                     <item>
-                        <p>Codex</p>
-                     </item>
-                     <item>
-                        <p>Scroll</p>
-                     </item>
-                     <item>
-                        <p>Leporello</p>
-                     </item>
-                     <item>
-                        <p>Leaf</p>
-                     </item>
-                     <item>
-                        <p>Other</p>
-                     </item>
-                  </list>
+          <att>form</att> you should specify one of the available values.</p>
                   <div type="section">
                      <head>Support Description</head>
                      <p>Into <gi>supportDesc</gi> a series of
@@ -61,12 +44,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             oXygen should prompt the values from the schema.</p>
                      <p>
                         <gi>extent</gi> contains information about
-            the global dimensions of the object. "Outer"
+            the global dimensions of the object. The value <val>outer</val> for
+            <att>type</att> in <gi>dimensions</gi>
             indicates the external dimensions, including the board, the
-            cover, and the spine. "Leaf" indicates the size of
+            cover, and the spine. The value <val>leaf</val> for
+            <att>type</att> in <gi>dimensions</gi> indicates the size of
             the leaf. The leaf from which the measurements have been
             taken can be added in a
-            <gi>note</gi>:</p>
+            <gi>note</gi> linked with <att>corresp</att> to the <gi>dimensions</gi> element.
+            In this way there can be several leaves measurements.
+            Other values for <att>type</att> are possible.</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <extent>
   <measure unit="leaf">183</measure>
@@ -82,19 +69,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <width>265</width>
   </dimensions>
 <note corresp="#leafdim">
-Data on leaves dimensions 
+Data on leaves dimensions
 taken from <locus target="#6r"/>.
 </note>
 </extent>
 </egXML>
                      <p>Measurements in <gi>dimensions</gi> should
-            always be given in millimiters.</p>
+            always be given in millimiters, unless the source catalogues provides them otherways</p>
                      <p>You can also specify which leaves are blank, adding a
             <gi>locus</gi> immediately after the relative
             measure.</p>
                      <p>
                         <gi>collation</gi> can be used to give
-            textual information about how the leaves are arranged.</p>
+            textual information about how the leaves are arranged using a simple <gi>list</gi> of <gi>item</gi> elements.</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <collation>
     <list>
@@ -167,18 +154,18 @@ WRONG ENCODING EXAMPLE
             values</p>
                      <cit>
                         <quote>
-3 replaced, 4 missing, 5 missing, 6 replaced, 9 added 
+3 replaced, 4 missing, 5 missing, 6 replaced, 9 added
 </quote>
                      </cit>
-                     <p>During preview, this will be analyzed to produce diagrams
+                     <p>This information will be analyzed to produce diagrams
             of each quire and formula notations. Added leaves are shown
             with hyphens, stubs are not shown, replaced leaves are
             dot-hyphen lines.</p>
                      <p>Sometimes you might need to describe the position of a
-            quire using <gi>locus</gi> elements. please,
-            do this in a note, as the locus element is here reserved for
+            quire using <gi>locus</gi> elements. Please,
+            do this in a <gi>note</gi>, as the <gi>locus</gi> element is here reserved for
             the quire extent.</p>
-                     <p>When a Quire and not just a leaf is added into another
+                     <!--<p>When a quire and not just a leaf is added into another
             quire at some point, you can follow this example</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <item xml:id="q11" rend="withInsertion" corresp="#q12">
@@ -186,7 +173,7 @@ WRONG ENCODING EXAMPLE
       <locus from="92r" to="99v"/>
        X (<note>between <locus target="#94">94v</locus>
        and <locus target="#99"> 99r</locus>: <ref target="#q12">the
-     second codicological unit</ref></note>) 
+     second codicological unit</ref></note>)
 </item>
 <item xml:id="q12" rend="inserted"  corresp="#q11">
      <dim unit="leaf">4</dim>
@@ -194,8 +181,8 @@ WRONG ENCODING EXAMPLE
     XI (s.l.: 2, stub after 4; 1, stub after 4)
 </item>
 </egXML>
-                     <p>Here @rend is used in <gi>quire</gi>s and
-            takes two values (free), "inserted in" or
+                     <p>Here <att>rend</att> is used in the <gi>item</gi> for the quire and
+            takes two values (free), "inserted" or
             "with insertion". The value of the
             <gi>locus</gi> in the item, needs to have the
             extremes of the quire, as in
@@ -207,6 +194,9 @@ WRONG ENCODING EXAMPLE
             order. You might also decide to put the inserted quire at
             the end of your list, then using
             <att>corresp</att> is very important.</p>
+
+commented out as no example can be found, but there was an example and an implementation
+          -->
                      <p>Different numerations of quires are encoded as
             follows</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -279,7 +269,7 @@ WRONG ENCODING EXAMPLE
             value from the State of Preservation Taxonomy for indexing
             purposes.</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<condition key="deficient"/> 
+<condition key="deficient"/>
 </egXML>
                      <p>value of <att>key</att> is the corresponding
             id from the state of preservation taxonomy proposed from the
@@ -312,7 +302,7 @@ WRONG ENCODING EXAMPLE
                      <p>If the layout measurement refer to a specific part of the
             manuscript a <gi>locus</gi> element can be
             used within <gi>layout</gi> to provide the
-            range or a @corresp with the id of the msPart, msItem or
+            range or a <att>corresp</att> with the id of the <gi>msPart</gi>, <gi>msItem</gi> or
             quire in the collation, whichever might be relevant.</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
   <layout corresp="#p.1.1_i1" columns="1" writtenLines="18">
@@ -362,8 +352,7 @@ WRONG ENCODING EXAMPLE
                      <p>The first <gi>dimensions</gi> contains the
             information about the text area. A
             <att>rend</att> can be used to list separated
-            by spaces other visible characteristics. Allowed values are:
-            * pricked * ruled</p>
+            by spaces other visible characteristics.</p>
                      <p>The second <tag>dimension
             type=‘margin’</tag> contains the measures
             of the margins.</p>
@@ -373,19 +362,6 @@ WRONG ENCODING EXAMPLE
  <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A/0-0/0-0/A.</ab>
  <ab type="pricking" subtype="pattern">Primary pricks are partly visible (s., e.g., fol. 37v).</ab>
 </egXML>
-                     <p>Allowed values of <att>type</att> here are 
-                        <list>
-                           <item>ruling</item>
-                           <item>pricking</item>
-                           <item>punctuation</item>
-                           <item>cruces</item>
-                           <item>CruxAnsata</item>
-                           <item>ChiRho</item>
-                           <item>coronis</item>
-                        </list>
-                     </p>
-                     <p>Allowed values of <att>subtype</att> here
-            are * pattern * usage * executed * dividers * ...</p>
                      <p>
                         <gi>ab</gi> can contain
             <gi>locus</gi> if you need to state precisely
@@ -395,7 +371,7 @@ WRONG ENCODING EXAMPLE
     <list>
        <item xml:id="div1" corresp="#p.1">Colon</item>
        <item xml:id="div2" corresp="#p.2">
-           Five red and black dot vertical colon. 
+           Five red and black dot vertical colon.
            <locus from="30v" n="3"/>
            <locus from="30v" n="11"/>
            <locus from="31r" n="14"/>
@@ -408,4 +384,3 @@ WRONG ENCODING EXAMPLE
         </body>
     </text>
 </TEI>
-           

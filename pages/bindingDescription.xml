@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
@@ -16,14 +16,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <sourceDesc>
                 <p>transformed with Pandoc, then with XSLT, then further edited</p>
             </sourceDesc>
-        </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+        </fileDesc>
         <revisionDesc>
-            <change who="PL" when="2018-04-24">stub of page</change>
+          <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+          <change who="PL" when="2018-04-24">stub of page</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body xml:id="bindingDescription">
     <head>Binding Description</head>
+    <p>The binding of the manuscript can be described in a <gi>bindingDesc</gi> element containing a <gi>binding</gi> and a series of <gi>decoNote</gi>s</p>
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
         <bindingDesc>
             <binding contemporary="false" xml:id="binding">
@@ -43,11 +45,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <gi>binding</gi> can take
         <att>notBefore</att> and
         <att>notAfter</att> and takes a
-        <att>contemporary</att> with the following
-        values: * false * inapplicable * unknown * true * partly</p>
-    <p>oXygen should prompt the values from the schema.</p>
+        <att>contemporary</att> to provide general information.</p>
     <p>
-        <gi>decoNote</gi> elements in Binding
+        <gi>decoNote</gi> elements in <gi>binding</gi>
         Description MUST have a <att>xml:id</att>
         starting with the letter 'b' followed by a progressive number,
         e.g. b1, b2, b3.</p>
@@ -86,4 +86,3 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </body>
     </text>
 </TEI>
-
