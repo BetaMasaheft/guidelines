@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Zotero</title>
+            <title>Zotero Bibliography Guidelines</title>
             <author>Pietro Liuzzo</author>
          </titleStmt>
          <publicationStmt>
@@ -22,7 +22,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body xml:id="zotero">
          <div type="level2">
-            <head>Zotero Bibliography Guidelines</head>
+            <head>Zotero data entry guidelines (valid for all HLCES projects)</head>
             <p>General guidance on bibliography can be found <ref target="https://betamasaheft.github.io/bibliography/">here</ref>.
             This page is about entering data in the <ref target="https://www.zotero.org/groups/ethiostudies/items">Zotero Group Library.</ref></p>
             <p>When adding titles to the EthioStudies Group bibliography please
@@ -40,9 +40,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <p>The titles must be quoted in full (not abbreviated), in the way
       they appear on the frontispiece. All diacritics must be
       preserved.</p>
-               </item>
-               <item>
-                 <head>NOTES</head>
 <list type="ordered:loweralpha">
   <item>
      <p>Titles in English should use maximal capitalization (i.e.
@@ -59,8 +56,7 @@ German).</p>
   </item>
   <item>
      <p>The following punctuation should be used in titles:</p>
-  </item>
-  <item>
+
   <list>
     <item>
        <p>The punctuation of the original title must be preserved.</p>
