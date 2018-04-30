@@ -639,7 +639,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <tag>add place="right"</gi>
+                           <tag>add place="right"</tag>
                         </p>
                      </cell>
                      <cell/>
