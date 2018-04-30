@@ -612,29 +612,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         rubrication.</p>
             </div>
          </div>
-         <div type="level3">
-            <head>Critical Apparatus</head>
-            <p>Typically a Work file, but also manuscript transcriptions can
-      have critical apparatus.</p>
-            <p>We follow the TEI guidelines for
-      <ref target="http://www.tei-c.org/Vault/P5/2.9.1/doc/tei-p5-doc/en/html/TC.html#TCAPLK">Location
-      Referenced External Apparatus</ref> when adding apparatus notes to
-      manuscript transcriptions. <att>wit</att> shall
-      contain the id of associated to the manuscript in
-      <gi>witness</gi>. This is usefully also the
-      abbreviation of the manuscript to be used in the apparatus.</p>
-            <p>Follow instead for critical edition (i.e. text in a work
-      record) the
-      <ref target="http://www.tei-c.org/Vault/P5/2.9.1/doc/tei-p5-doc/en/html/TC.html#TCAPPS">inline
-      parallel segmentation method</ref>, pointing to the ids of
-      <gi>witnesses</gi> in that record.</p>
-            <p>a sample file is the
-      <ref target="http://betamasaheft.aai.uni-hamburg.de/works/LIT3122Galaw.xml">Chronicle
-      of Galawdewos</ref>
-            </p>
-            <p>To separate different types of apparatus notes, use the
-      attribute type.</p>
-         </div>
+
       </body>
    </text>
 </TEI>

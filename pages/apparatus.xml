@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Critical Appartus</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+        <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="text-apparatus">
+<div type="level2">
+   <head>Critical Apparatus</head>
+   <p>Typically a <ref target="works">Work</ref> file, but also <ref target="manuscripts">manuscript</ref> transcriptions can
+have critical apparatus.</p>
+   <p>We follow the TEI guidelines for
+<ref target="http://www.tei-c.org/Vault/P5/2.9.1/doc/tei-p5-doc/en/html/TC.html#TCAPLK">Location
+Referenced External Apparatus</ref> when adding apparatus notes to
+manuscript transcriptions. <att>wit</att> shall
+contain the ID associated to the manuscript in
+<gi>witness</gi>. This is usefully also the
+abbreviation of the manuscript to be used in the apparatus.</p>
+   <p>Follow instead for critical edition (i.e. text in a work
+record) the
+<ref target="http://www.tei-c.org/Vault/P5/2.9.1/doc/tei-p5-doc/en/html/TC.html#TCAPPS">inline
+parallel segmentation method</ref>, pointing to the ids of
+<gi>witnesses</gi> in that record.</p>
+   <p>a sample file is the
+<ref target="LIT3122Galaw" type="bm">Chronicle
+of Galawdewos</ref> or the <ref target="LIT4915PhysA" type="bm">Dǝrsān za-bǝṣuʿ Fisālgos</ref>
+   </p>
+   <egXML xmlns="http://www.tei-c.org/ns/Examples">
+     <div type="edition" xml:lang="gez" xml:id="ed2" resp="MV">
+     <div type="textpart" subtype="chapter" xml:id="ed2ch4" n="4" corresp="NAR0013pelican">
+     <div type="textpart" subtype="sentence" xml:id="ed2ch4se1" n="1">
+     <ab>
+     <app>
+     <lem wit="#W">፬ፍካሬ፡</lem>
+     <rdg wit="#L #P">፫ፍካሬ፡</rdg>
+     </app>
+     በእንተ፡ ዖፍ፡ ዘስሙ፡ ጰልቃን፡ ዘውእቱ፡ ግራብ።
+     </ab>
+     </div>
+     .....
+     </div>
+     </div>
+
+   </egXML>
+   <p>Note in the above example that there are more than one <tag>div type="edition"</tag>
+   each with a <att>xml:id</att> starting with 'ed' and that a <att>resp</att> has also been used to distinguish the two.</p>
+   <p>The  <tag>div type="textpart" subtype="chapter"</tag> has been associated to a <ref target="narratives">narrative unit</ref>.</p>
+   <p>the apparatus is inline and the <att>wit</att> provides always pointers to the <gi>witness</gi> elements with that ID which point to the correct manuscript using its id.</p>
+   <p>To separate different types of apparatus notes, use the
+attribute <att>type</att>.</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+<ab>
+  ....
+  <app>
+  <lem wit="#B #C #F #L #O #P">ወቡሩክ፡</lem>
+  <rdg wit="#T">
+  <note>om.</note>
+  </rdg>
+  <rdg wit="#F">
+  <note>add.</note>
+  አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡
+  </rdg>
+  </app>
+  <app>
+  <lem wit="#B #C #L #O #P">በአፈ፡ ኵሉ፡ ፍጥረት</lem>
+  <rdg wit="#F #T">
+  <note>om.</note>
+  </rdg>
+  </app>
+  <app type="punctuation">
+  <lem wit="#C #O">።</lem>
+  </app>
+  ....
+  </ab>
+</egXML>
+</div>
+</body>
+</text>
+</TEI>

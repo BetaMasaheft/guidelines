@@ -26,7 +26,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body xml:id="edition">
 
 
-         <div type="level1">
+         <div type="level2">
             <head>Edition statement, Source statement, and encoding
   description</head>
             <p>These elements should be provided in the header for texts that we
@@ -62,16 +62,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <p>Original spelling and typography is retained.</p>
             </normalization>
          </editorialDecl>
-         <tagsDecl>
-            <!-- the format for the tagsDecl to be specified -->
-         </tagsDecl>
 
       </encodingDesc>
 </egXML>
 
          </div>
 
-         <div type="level1">
+         <div type="level2">
             <head>divs edition and textparts</head>
             <p>Text is entered in the <gi>body</gi> of a TEI file
   under into a <tag>div type='edition'</tag> . Each text
@@ -80,7 +77,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   other. These will always take a
   <tag>subtype='textpart'</tag> and a
   <att>subtype</att> with the desired value. There should
-  always be also a @n identifying for example chapter 3 as well as a
+  always be also a <att>n</att> identifying for example chapter 3 as well as a
   <att>corresp</att> pointing to the appropriate
   <gi>msPart</gi> or <gi>msItem</gi>
             </p>
@@ -115,40 +112,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   mark linebreaks, for example in Inscriptions. Be carefull:
   <gi>ab</gi> should be only in the lowest level div
   nesting!</p>
-            <p>to identify a div you can use a label</p>
+            <p>To identify a <gi>div</gi> you can use a <gi>label</gi></p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <div type="textpart" xml:id="Athanasius1">
             <label>Homily on the Incarnation by Athanasius of Alexandria</label>
          </div>
 </egXML>
-            <p>or a corresp pointing to another work</p>
+            <p>or a <att>corresp</att> pointing to another work, like in the following example from <ref target="LIT4115GadlaT" type="bm"></ref></p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<div type="textpart" xml:id="example" corresp="LIT1234blabla">
-
-         </div>
+              <div type="edition">
+              <div type="textpart" xml:lang="gez" xml:id="Genealogy" corresp="LIT3854KingList">
+              <label>King List</label>
+              </div>
+              <div type="textpart" xml:lang="gez" xml:id="Gadl">
+              <label>Gadl of Takla Hāymānot</label>
+              </div>
+              <div type="textpart" xml:lang="gez" xml:id="Miracles" corresp="LIT3971Taamme">
+              <label>Miracles of Takla Hāymānot</label>
+              </div>
+              </div>
 </egXML>
          </div>
-         <div type="level1">
-            <head>Languages</head>
-            <p>within langUsage all languages used in the file should be defined.
-  It is not a problem if one of these statements is not relevant to the
-  current record, but if another language is used, it should be
-  defined.</p>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
- <langUsage>
-    <language ident="en">English</language>
-    <language ident="it">Italian</language>
-    <language ident="gez">Gəˁəz</language>
- </langUsage>
-</egXML>
-            <p>If you add somewhere e.g.
-  <tag>title xml:lang='am'</tag>, there
-  should be a language element in langUsage like the following</p>
-            <p>
-               <!--<gi>language ident="am"Amharic/language</gi>-->
-  the values of @ident here are restricted, so you should not be able to
-  add e.g. amh as value for @ident and consequently use it in the file
-  as value of @xml:lang.</p>
+         <div type="level2">
+           <p>Other pages which you should look at for encoding works:</p>
+           <list>
+             <item><ref target="narratives">Narrative Units</ref></item>
+             <item><ref target="text-encoding">Text encoding</ref></item>
+             <item><ref target="text-apparatus">Critical apparatus</ref></item>
+             </list>
          </div>
 
       </body>
