@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -21,8 +21,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body xml:id="zotero">
-         <div type="level1">
+         <div type="level2">
             <head>Zotero Bibliography Guidelines</head>
+            <p>General guidance on bibliography can be found <ref target="https://betamasaheft.github.io/bibliography/">here</ref>.
+            This page is about entering data in the <ref target="https://www.zotero.org/groups/ethiostudies/items">Zotero Group Library.</ref></p>
             <p>When adding titles to the EthioStudies Group bibliography please
   make sure you follow the rules:</p>
             <list type="ordered:arabic">
@@ -39,91 +41,91 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       they appear on the frontispiece. All diacritics must be
       preserved.</p>
                </item>
-            </list>
-            <p>NOTES.</p>
-            <list type="ordered:loweralpha">
                <item>
-                  <p>Titles in English should use maximal capitalization (i.e.
-      capitalize every words apart from articles and conjunctions),
-      unless the title is not originally in upper case, then follow the
-      capitalization as it appears on the book cover. Titles in
-      languages other than English should use minimal capitalization
-      (i.e. capitalize only the words which must be capitalized
-      according to the rules of the language in question, e.g. nouns in
-      German).</p>
+                 <head>NOTES</head>
+<list type="ordered:loweralpha">
+  <item>
+     <p>Titles in English should use maximal capitalization (i.e.
+capitalize every words apart from articles and conjunctions),
+unless the title is not originally in upper case, then follow the
+capitalization as it appears on the book cover. Titles in
+languages other than English should use minimal capitalization
+(i.e. capitalize only the words which must be capitalized
+according to the rules of the language in question, e.g. nouns in
+German).</p>
+  </item>
+  <item>
+     <p>The first word of subtitles should always be capitalized.</p>
+  </item>
+  <item>
+     <p>The following punctuation should be used in titles:</p>
+  </item>
+  <item>
+  <list>
+    <item>
+       <p>The punctuation of the original title must be preserved.</p>
+    </item>
+    <item>
+       <p>A colon (:) should be used between the main title and a
+  subtitle.</p>
+    </item>
+    <item>
+       <p>If more subtitles are present, they should be divided by a
+  comma and capitalized.</p>
+    </item>
+    <item>
+       <p>Use a full stop between titles in different languages in
+  publications with a double title. e.g.: Raineri, O. 1996.
+  <hi rendition="simple:italic">Santi e guerrieri a cavallo: Tele
+  etiopiche, Tele di Qēs Adamu Tesfaw. Warriors Saints on Horseback:
+  Ethiopian Paintings, Paintings by Qēs Adamu Tesfaw</hi> (Clusone:
+  Ferrari Edizioni, 1996)</p>
+    </item>
+  </list></item>
+  <item>
+     <p>For titles in Ethiopic provide the original in fidäl, the
+scientific transcription in brackets and the translation into
+English.</p>
+  </item>
+  <item>
+     <p>For titles in scripts other than Ethiopic (Arabic, Cyrillic,
+etc.), provide the scientific transcription and translation only
+(i.e. not the title in the original script).</p>
+  </item>
+  <item>
+     <p>A translation in English is necessary for titles in any
+language apart from the three in which Aethiopica accepts
+publications (Italian, French and German).</p>
+  </item>
+  <item>
+     <p>Pay attention not to incorporate in the title elements that do
+not belong to it, e.g. information such as ‘edited and translated
+by’.</p>
+  </item>
+  <item>
+     <p>Journal names are quoted using only the 'main' name, i.e.
+Aethiopica, not Aethiopica. International Journal of Ethiopian and
+Eritrean Studies.</p>
+  </item>
+</list>
                </item>
+
+
                <item>
-                  <p>The first word of subtitles should always be capitalized.</p>
-               </item>
-               <item>
-                  <p>The following punctuation should be used in titles:</p>
-               </item>
-            </list>
-            <list type="unordered">
-               <item>
-                  <p>The punctuation of the original title must be preserved.</p>
-               </item>
-               <item>
-                  <p>A colon (:) should be used between the main title and a
-      subtitle.</p>
-               </item>
-               <item>
-                  <p>If more subtitles are present, they should be divided by a
-      comma and capitalized.</p>
-               </item>
-               <item>
-                  <p>Use a full stop between titles in different languages in
-      publications with a double title. e.g.: Raineri, O. 1996.
-      <hi rendition="simple:italic">Santi e guerrieri a cavallo: Tele
-      etiopiche, Tele di Qēs Adamu Tesfaw. Warriors Saints on Horseback:
-      Ethiopian Paintings, Paintings by Qēs Adamu Tesfaw</hi> (Clusone:
-      Ferrari Edizioni, 1996)</p>
-               </item>
-            </list>
-            <list type="ordered:loweralpha">
-               <item n="4">
-                  <p>For titles in Ethiopic provide the original in fidäl, the
-      scientific transcription in brackets and the translation into
-      English.</p>
-               </item>
-               <item>
-                  <p>For titles in scripts other than Ethiopic (Arabic, Cyrillic,
-      etc.), provide the scientific transcription and translation only
-      (i.e. not the title in the original script).</p>
-               </item>
-               <item>
-                  <p>A translation in English is necessary for titles in any
-      language apart from the three in which Aethiopica accepts
-      publications (Italian, French and German).</p>
-               </item>
-               <item>
-                  <p>Pay attention not to incorporate in the title elements that do
-      not belong to it, e.g. information such as ‘edited and translated
-      by’.</p>
-               </item>
-               <item>
-                  <p>Journal names are quoted using only the 'main' name, i.e.
-      Aethiopica, not Aethiopica. International Journal of Ethiopian and
-      Eritrean Studies.</p>
-               </item>
-            </list>
-            <list type="ordered:arabic">
-               <item n="3">
                   <p>The names of all authors, editors and translators must be
       provided - in full and as they appear on the book. Make sure that
       you enter editors as editors and authors as authors, not e.g.
       editors as authors in the mask.</p>
+      <p>NOTE: Because of the HLCE style, if the SAME person is editor,
+author and translator you need to insert their name in the Zotero mask
+under EACH of their roles, otherwise the record will not appear
+correctly once extracted. For instance: Colin, G. 1986.
+<hi rendition="simple:italic">Le Synaxaire éthiopien, Mois de
+maskaram</hi>, ed., tr. G. Colin, Patrologia Orientalis, 43/3 (195)
+(Turnhout: Brepols, 1986). In Zotero, Colin's name needs to be
+inserted in the fields: author, editor and translator.</p>
                </item>
-            </list>
-            <p>NOTE: Because of the HLCE style, if the SAME person is editor,
-  author and translator you need to insert their name in the Zotero mask
-  under EACH of their roles, otherwise the record will not appear
-  correctly once extracted. For instance: Colin, G. 1986.
-  <hi rendition="simple:italic">Le Synaxaire éthiopien, Mois de
-  maskaram</hi>, ed., tr. G. Colin, Patrologia Orientalis, 43/3 (195)
-  (Turnhout: Brepols, 1986). In Zotero, Colin's name needs to be
-  inserted in the fields: author, editor and translator.</p>
-            <list type="ordered:arabic">
+
                <item n="4">
                   <p>For the names of the authors/editors, Zotero has the option to
       choose between the “Surname, First name” and simply “Name” (one
@@ -132,33 +134,33 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       switch between the options clicking on the field to the right of
       the name.</p>
                </item>
-            </list>
-            <list type="ordered:loweralpha">
                <item>
-                  <p>If the name of the authors is not given and not known, use
-      Anon. instead of the author's name.</p>
+                 <list type="ordered:loweralpha">
+                    <item>
+                       <p>If the name of the authors is not given and not known, use
+           Anon. instead of the author's name.</p>
+                    </item>
+                    <item>
+                       <p>If the name of the authors is not given on the publication but
+           is known through other sources, the name may be given in square
+           brackets.</p>
+                    </item>
+                    <item>
+                       <p>Author's names in Zotero should be given in full as they appear
+           on the publication, but if the full first name is not available
+           please provide the initials as given on the book with full points
+           AND divided by a space (e.g. 'Mudimbe, V. Y.' and NOT 'Mudimbe, V
+           Y' OR 'Mudimbe, V.Y.' Titular prefixes (Sir, Revd, Dr, Captain,
+           etc.) are not needed unless their removal would mislead the
+           reader.</p>
+                    </item>
+                 </list>
+                 <p>NOTE: The name of the person(s) appearing on the book should be
+       treated consistently with what was the author's and publisher's
+       intention: a person should be marked as an editor or a translator only
+       if this is explicitly written on the book cover and not because the
+       text is in our opinion an edition.</p>
                </item>
-               <item>
-                  <p>If the name of the authors is not given on the publication but
-      is known through other sources, the name may be given in square
-      brackets.</p>
-               </item>
-               <item>
-                  <p>Author's names in Zotero should be given in full as they appear
-      on the publication, but if the full first name is not available
-      please provide the initials as given on the book with full points
-      AND divided by a space (e.g. 'Mudimbe, V. Y.' and NOT 'Mudimbe, V
-      Y' OR 'Mudimbe, V.Y.' Titular prefixes (Sir, Revd, Dr, Captain,
-      etc.) are not needed unless their removal would mislead the
-      reader.</p>
-               </item>
-            </list>
-            <p>NOTE: The name of the person(s) appearing on the book should be
-  treated consistently with what was the author's and publisher's
-  intention: a person should be marked as an editor or a translator only
-  if this is explicitly written on the book cover and not because the
-  text is in our opinion an edition.</p>
-            <list type="ordered:arabic">
                <item n="5">
                   <p>In a multi-volume publication, each volume is a separate entry,
       DO NOT merge volumes in one entry. Same is valid for article
@@ -209,8 +211,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       APPEAR ON THE COVER – i.e. for old books e.g. “Lugduni Batavorum”
       and NOT “Leiden”</p>
                </item>
-            </list>
-            <list type="ordered:loweralpha">
                <item>
                   <p>When no place of publication is given, use n.p. instead (it
       means 'no place')</p>
@@ -221,16 +221,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       DC not Washington D.C. or Washington D. C. or Washington, DC USA
       not U.S.A or U. S. A.</p>
                </item>
-            </list>
-            <list type="ordered:arabic">
                <item n="12">
                   <p>Always provide the publisher in the form he appears on the
       cover (e.g. “Ex officina Danielis &amp; Abrahami à Gaesbeeck” and
       not simply “Daniel &amp; Abraham” as modern catalogues may
       list)</p>
                </item>
-            </list>
-            <list type="ordered:loweralpha">
                <item>
                   <p>If the name of the publisher is in another script, e.g. fidäl
       or Arabic, provide the name using the scientific transcription and
@@ -242,8 +238,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <p>If the name of the publisher is not given on the publication,
       use n.pub. instead (it means 'no publisher')</p>
                </item>
-            </list>
-            <list type="ordered:arabic">
                <item n="13">
                   <p>If the publication date is not given, please use n.d. (no
       date).</p>
@@ -304,8 +298,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       for a book published in Ethiopia in 1982 EC = 1989/1990 CE write
       in the field date '1989/1990' and in extra '1982 EC'</p>
                </item>
-            </list>
-            <list type="ordered:loweralpha">
                <item>
                   <p>Please note that Zotero extraction of this type of records is
       not perfect, but the bibliography tool will fix this for you.</p>
@@ -314,8 +306,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <p>The abbreviations to be used are EC for Ethiopian Calendar and
       H for Hegira.</p>
                </item>
-            </list>
-            <list type="ordered:arabic">
                <item n="24">
                   <p>For bibliographic records in which the editorial and publishing
       years are different, the editorial year is used as the point of
@@ -373,15 +363,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <p>If your entry is to be used in BetaMasaheft or Dillmann Online,
       then you need to add a tag with this format and using only latin
       alphabet letters</p>
+      <p>bm:AuthorYYYYkeyword</p>
+      <p>Please make sure <hi rendition="simple:bold">this contains no
+special characters, umlaut, underdots and other combining
+diacritics</hi>, only digits and latin characters. To check that this
+is unique, after saving the record in Zotero, click on the tag and
+check that only one item has this tag. If not, change the keyword of
+the tag just assigned.</p>
                </item>
             </list>
-            <p>bm:AuthorYYYYkeyword</p>
-            <p>Please make sure <hi rendition="simple:bold">this contains no
-  special characters, umlaut, underdots and other combining
-  diacritics</hi>, only digits and latin characters. To check that this
-  is unique, after saving the record in Zotero, click on the tag and
-  check that only one item has this tag. If not, change the keyword of
-  the tag just assigned.</p>
+
          </div>
       </body>
    </text>

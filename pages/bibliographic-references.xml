@@ -27,19 +27,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <gi>ptr</gi> element with a
     <att>target</att>, as in the following example:</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<bibl><ptr target="bm:Villa2013Erma"/></bibl>
+<bibl>
+  <ptr target="bm:Villa2013Erma"/>
+</bibl>
 </egXML>
          <p>If you need to add an indication of exact reference, it should be given in a
     <gi>citedRange</gi> element, as in the following
     example:</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<bibl><ptr target="bm:Villa2014Erma"/><citedRange unit="page">5-13</citedRange></bibl>
+<bibl>
+  <ptr target="bm:Villa2014Erma"/>
+  <citedRange unit="page">5-13</citedRange>
+</bibl>
 </egXML>
          <p>
             <gi>citedRange</gi> can take several values in
     <att>unit</att> and can be repeated if there is a need
     to specify a volume, an entry, etc.</p>
-         <p>Please, do not use <att>from</att> and
+         <p>Please, <hi rendition="simple:bold">do not</hi> use <att>from</att> and
     <att>to</att> in <gi>citedRange</gi> as
     this is unnecessary.</p>
          <p>Please note that lists of references about a manuscript should be
@@ -61,7 +66,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     record in Zotero, click on the tag and check that only one item has
     this tag. If not, change the keyword of the tag just assigned.</p>
          <p>When adding records to the Zotero Group Library, please follow
-    the principles <ref target="zoteroguidelines">at this
+    the principles <ref target="zotero">at this
     page</ref>.</p>
 
       </body>
