@@ -17,23 +17,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+      </fileDesc>
+      <revisionDesc>
+        <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+      </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="text-encoding">
          <head>Text Encoding</head>
          <p>TEI records are for <hi rendition="simple:bold">Text</hi>
-    encoding. We record in Manuscripts records the Transcription of the
+    encoding. We record in <ref target="manuscripts">Manuscripts</ref> records the Transcription of the
     text on the catalogued manuscript, when available, whilst the edited
     text or the theoretical structure of it should be recorded into the
-    Work Entity. Text is entered in the <gi>body</gi> of a
-    TEI file under into a <tag>div type='edition'</tag> .
+    <ref target="manuscripts">Work</ref> Entity. Text is entered in the <gi>body</gi> of a
+    TEI file into a <tag>div type='edition'</tag> .
     Each text part should be contained into a
     <gi>div</gi>. <gi>div</gi>s should
     always be well nested one into the other. These will always take a
     <att>subtype</att> with <val>textpart</val> and a
     <att>subtype</att> with the desired value. There should
-    always be also a @n identifying for example chapter 3 as well as a
+    always be also a <att>n</att> identifying for example chapter 3 as well as a
     <att>corresp</att> pointing to the appropriate
     <gi>msPart</gi> or <gi>msItem</gi>
          </p>
@@ -53,63 +56,93 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   </div>
 </egXML>
          <p>Note that after each word there should be a separator or
-    punctuation without space.</p>
+    punctuation <hi rendition="simple:bold">without space</hi>.</p>
          <p>
-            <gi>locus</gi> can be used but will be printed as
-    (Excerpt from... ). If the text contains biblical verses we will use
+            <gi>locus</gi> can also be used but will be printed as
+    <cit><quote>(Excerpt from... )</quote></cit>
+
+    If the text contains biblical verses we will use
     <gi>l</gi> as in the example above. Also
     <gi>lb</gi> can be used to mark linebreaks. Be
     carefull: <gi>ab</gi> should be only in the lowest
     level div nesting!</p>
          <div type="level3">
             <head>Text Diplomatic Transcription features</head>
-            <p>PLEASE, NOTE THAT THIS ELEMENTS CAN BE USED EVERYWHERE YOU HAVE
+            <p>PLEASE, NOTE THAT THESE ELEMENTS CAN BE USED EVERYWHERE YOU HAVE
       TEXT, FOR EXAMPLE IN ADDITIONS, IN INCIPIT AND EXPLICIT.</p>
             <div type="level4">
                <head>Text Structure</head>
                <p>Use an empty <gi>pb</gi> for each page break.
-        this takes a @n which will have the folio number, e.g.
-        <gi>pb n="41r"/</gi> If there
+        this takes a <att>n</att> which will have the folio number, e.g.
+        <tag>pb n="41r"</tag> If there
         are columns, use the element <gi>cb</gi> as in
-        this example
-        <gi>cb n="a"/</gi>
+        <tag>cb n="a"</tag>
                </p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<div type="textpart" subtype="folio" n="10">
+<ab>
+  <pb n="10r"/>
+    <cb n="a"/>እንዘ፡ ይብል፡ ካልእ፡ ክብሩ፡ ለፀሐይ፡ ወካልእ፡ ክብሩ፡ ለወርኅ፡ ወካልእ፡ ክብሮሙ፡ ለከዋክብት፨ ወኮከብ፡ እምኮከብ፡ ይኄይስ፡ ክብሩ፨ ከማሁኬ፡ ልብሰቶሙ፡ ለቅዱሳን፡ ከመ፡ ኮከብኒ፡ ወከመ፡ ወርኅኒ፡ ቦሙ፡ ልብሰት፨ ወበአምሳለ፡ ፀሐይኒ፡ ቦሙ፡ ዑጻፌ፡ ወለዝንቱሰ፡ ብፁዕ፡ ወቅዱስ፡ ምክሀ፡ ኵልነ፨ ልብሰተ፡ ክብሩ፡ ኢኮነ፡ ከመ፡ ካልአን፡ ኢከመ፡ ፀሐይ፡ ወኢካዕበተ፡ እምፀሐይ፡ ይበርህ፡ ምስብዒተ፡ ስነ፡ አልባሲሁ፡ ዘተኣንመ፡ በእደ፡ ኬንያ፡ ዘአልቦ፡ ዘይትማሰሎ፡ እምነ፡ ኪነውት፨
+    <cb n="b"/>ብፁዕኬ፡ ዘረከበ፡ ክፍለ፡ ምስለ፡ ብፁዕ፡ <hi rend="rubric">ላሊበላ፡</hi> ወዘተዓፅፈ፡ ልብሰተ፡ ዑጻፌሁ፨ ወዘሰ፡ ኢተመሰሎ፡ በምግባሩ፡ ኢይነሥአ፡ ለክብሩ፨ ወዘሰ፡ ይፈቅድ፡ ይባእ፡ ኀበ፡ ቦአ፡
+....
+
+</ab>
+</div>
+               </egXML>
+               <p>Avoid trying to reproduce the layout of the text in the transcription, this has no use and the image can give much better information.</p>
             </div>
             <div type="level4">
                <head>Hand Shifts</head>
                <p>Where a new hand begins insert an element
         <gi>handShift</gi> with a
-        <att>new</att> pointing to the id of the hand in
-        <gi>handNote</gi>
+        <att>new</att> pointing to the ID of the hand in
+        <gi>handNote</gi>.
                </p>
-               <cit>
-                  <quote>
- <handShift new="#h2"/>
-</quote>
-               </cit>
+               <p>The following example comes from <ref target="BLorient719">London, British Library, BL Oriental 719</ref></p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <div type="edition" subtype="book" n="1" corresp="#BLorient719">
+<ab>
+                    ...
+                  <cb n="b"/>
+                 ጌልጌላሁ፡ ዘነበልባል፡ ወሰረገላሁ፡ መርዕድ። ዘያረምማ፡ ለማዕበለ፡ ባሕር፡ ወያዝኅና፡ ለሞገደ። ዘኢየኃልቅ፡ ምስፍናሁ፡ ለትውልደ፡ ትውልድ። ወይትዌዳዕ፡
+                 <pb n="3v"/>
+                 <handShift new="#h2"/>
+                 ለዛቲ፡ መጽሐፍ፡ ዘአጸሐፋ፡ አባ፡ አምሐ፡ በምግባረ፡ ሠናይ፡ ፍጹም፡ በእንተ፡ ፍቅሩ፡ ላሊበላ፡ ጻድቅ፡ ዘተሰምየ፡ ገብረ፡ መስቀል፡ ወከመ፡ ይኲኖ፡ መርሃ፡ ለመንግሥት፡ ሰማያት፡ ወእግዚአብሔር፡ ይጽሐፍ፡ ስሞ፡ ምስለ፡ ላሊበላ፡ ወያብኦ፡ ኀበ፡ ቦአ፡ ርስቱ፡ በሣህሉ፡ ወበምሕረቱ፡ አሜን። ዘንተ፡ መጽሐፈ፡ ዋሀበ፡ ለመካን፡ ጎልጎታ። እመቦ፡ ዘሰረቆ፡ ወዘሄደ፡ ወዘተዓገሎ፡ ወዘእውፅኦ፡ እመካኑ፡ ወዘአውሐሶ፡ ለሰብእ። ውጉዘ፡ ይኩን። በአፈ፡ ነቢያት፡ ወሐዋርያት። በአፈ፡ ጻድቃን፡ ወሰማዕት። በአፈ፡ ሚካኤል፡ ወገብርኤል፡ ወበክኵሎሙ፡ ማኅበረ፡ መላእክት። ወበአፈ፡ ጳጳሳት፡ ወሊቃነ፡ ጳጳሳት። ወበአፈ፡ እግዚእትነ፡ ማርያም፡ ጻዋ/ሪ/ተ፡ መላኮት። በአፈ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ በዝ፡ ዓለም፡ ወበዘ፡ ይመጽእ፡ ዓለም፡ አሜን
+                 <add place="bottom">
+                 <handShift new="#h8"/>
+                 ።=። ሐሑሐ ሀሁሃ መሙሚ ሠሡሢ
+                 </add>
+                 <pb n="4r"/>
+                 <add place="top" hand="#h5">ገድለ፡ ላሊበላ፡ ዘቅዱስ፡ መድኃኔ፡ ዓለም፡</add>
+                 <handShift new="#h2"/>
+                 ምኵናኑ፡ ለዘመደ፡ ዘመድ፨ ጥንተ፡ መዋዕሉ፡ ዘኢይትኋላቍ፡ ወስፍሐ፡ ሀለዎቱ፡ ዘኢይትኄለድ፨ ዘለሐኮ፡ ለአዳም፡ በአርአያሁ፡ ከመ፡ ይትገሃድ፨ ለዘ፡ ከመዝ፡ እግዚእ፡ እንዘ፡ እገኒ፡ ወእሰግድ፡ እነግር፡ ዜና፡ ገድለ፡ ጻማሁ፡ ለብእሲ፡ ብፁዕ፡ ወቅዱስ፡ ክቡር፡ ወርኡስ፡ ስቡሕ፡ ወውዱስ፨ ለባሴ፡ ንጹሕ፡ ዘኢለከፎ፡ ደነስ፨ ጸዋሬ፡ ንዴት፡
+                 <cb n="a"/>
+                 ....
+                 </ab>
+                 </div>
+</egXML>
             </div>
             <div type="level4">
                <head>Additions, notes, etc.</head>
                <p>For text related additions and marginal notes not reported
         under <gi>additions</gi>, use
         <gi>add</gi>:</p>
-               <cit>
-                  <quote>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
  <add place="top" hand="#h5">ገድለ፡ ላሊበላ፡ ዘቅዱስ፡ መድኃኔ፡ ዓለም፡</add>
-</quote>
-               </cit>
+</egXML>
                <p>The <att>place</att> has specific values, as the
         schema will tell you. Please read carefully when choosing.</p>
                <p>Always point to the <gi>handDesc</gi>
                   <gi>xml:id</gi>s of each
-        <gi>handNote</gi> in a @hand attribute if you know
+        <gi>handNote</gi> in a <att>hand</att> attribute if you know
         who added a specific text or letter.</p>
             </div>
             <div type="level4">
                <head>In text</head>
                <p>You might have to encode excerpts or text. Please see
-        BLorient719.xml for an example including some of these markup,
-        or BDLaethe3.xml .</p>
+        <ref target="BLorient719">London, British Library, BL Oriental 719</ref> for an example including some of these markup,
+        or <ref target="BDLaethe3">Oxford, Bodleian Library, Bodleian Aeth. e. 3</ref>.</p>
+        <p>
                <table>
                   <row role="label">
                      <cell>
@@ -131,7 +164,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>hi[@rend='rubric']</gi>
+                           <tag>hi rend='rubric'</tag>
                         </p>
                      </cell>
                      <cell/>
@@ -145,7 +178,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>add[@hand, @place]</gi>
+                           <gi>add</gi> with <att>hand</att> and  <att>place</att>
                         </p>
                      </cell>
                      <cell/>
@@ -160,7 +193,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>subst/del[@rend'erasure'] and add[@place'overstrike']</gi>
+                           <gi>subst</gi> with children <tag>del rend='erasure'</tag> and <tag>add place='overstrike'</tag></gi>
                         </p>
                      </cell>
                      <cell>
@@ -192,7 +225,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>gap reason="illegible" unit="chars" quantity="1"/</gi>
+                           <tag>gap reason="illegible" unit="chars" quantity="1"</tag>
                         </p>
                      </cell>
                      <cell>
@@ -210,7 +243,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>space reason="rubrication" unit="chars" quantity="1"/</gi>
+                           <tag>space reason="rubrication" unit="chars" quantity="1"</tag>
                         </p>
                      </cell>
                      <cell/>
@@ -224,7 +257,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>hi[@rend="underline"]</gi>
+                           <tag>hi rend="underline"</tag>
                         </p>
                      </cell>
                      <cell/>
@@ -267,7 +300,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>gap[@reason='omitted']</gi>
+                           <tag>gap reason='omitted'</tag>
                         </p>
                      </cell>
                      <cell/>
@@ -283,7 +316,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>gap[@reason='ellipsis']</gi>
+                           <tag>gap reason='ellipsis'</tag>
                         </p>
                      </cell>
                      <cell/>
@@ -297,7 +330,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>gap[@reason='lost']</gi>
+                           <tag>gap reason='lost'</tag>
                         </p>
                      </cell>
                      <cell>
@@ -316,7 +349,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>supplied[@reason='lost']</gi>
+                           <tag>supplied reason='lost'</tag>
                         </p>
                      </cell>
                      <cell>
@@ -334,7 +367,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>supplied[@reason='omitted']</gi>
+                           <tag>supplied reason='omitted'</tag>
                         </p>
                      </cell>
                      <cell>
@@ -352,7 +385,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>supplied[@reason='undefined']</gi>
+                           <tag>supplied reason='undefined'</tag>
                         </p>
                      </cell>
                      <cell>
@@ -370,8 +403,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>ቃል፡ ዘ&lt;add place="inline"&gt;&lt;supplied reason="omitted"&gt;ማ&lt;/supplied&gt;&lt;/add&gt;ርቆስ፡ ፼ወ፯፻</gi>
-                        </p>
+                           <tag>add place="inline"</tag> with a child <tag>supplied reason="omitted"</tag>
+                         </p>
                      </cell>
                      <cell>
                         <p>see above for supplied and below for add</p>
@@ -387,7 +420,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>choice[sic[@resp] and corr[@resp]]</gi>
+                           <gi>choice</gi> with children <gi>sic</gi> and <gi>corr</gi>
                         </p>
                      </cell>
                      <cell/>
@@ -404,7 +437,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>hi[@rend='reversed']</gi>
+                           <tag>hi rend='reversed'</tag>
                         </p>
                      </cell>
                      <cell/>
@@ -415,7 +448,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>hi[@rend='negative']</gi>
+                           <tag>hi rend='negative'</tag>
                         </p>
                      </cell>
                      <cell/>
@@ -427,7 +460,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>del[@rend=erasure]</gi>
+                           <tag>del rend=erasure</tag>
                         </p>
                      </cell>
                      <cell/>
@@ -442,7 +475,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>del[@rend=strikethrough]</gi>
+                           <tag>del rend="strikethrough"</Tag>
                         </p>
                      </cell>
                      <cell/>
@@ -454,7 +487,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>del[@rend=exponctuated]</gi>
+                           <tag>del rend="exponctuated"</tag>
                         </p>
                      </cell>
                      <cell/>
@@ -466,7 +499,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>del[@rend=effaced]</gi>
+                           <tag>del rend="effaced"</tag>
                         </p>
                      </cell>
                      <cell/>
@@ -477,7 +510,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>add[@place=above]</gi>
+                           <tag>add place="above"</tag>
                         </p>
                      </cell>
                      <cell/>
@@ -492,7 +525,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>add[@place=below]</gi>
+                           <tag>add place="below"</tag>
                         </p>
                      </cell>
                      <cell/>
@@ -503,7 +536,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>add[@place=bottom]</gi>
+                           <tag>add place="bottom"</tag>
                         </p>
                      </cell>
                      <cell/>
@@ -514,7 +547,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>add[@place=inline]</gi>
+                           <tag>add place="inline"</tag>
                         </p>
                      </cell>
                      <cell/>
@@ -525,7 +558,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>add[@place=interlinear]</gi>
+                           <tag>add place="interlinear"</tag>
                         </p>
                      </cell>
                      <cell/>
@@ -536,7 +569,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>add[@place=left]</gi>
+                           <tag>add place="left"</tag>
                         </p>
                      </cell>
                      <cell/>
@@ -547,7 +580,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>add[@place=margin]</gi>
+                           <tag>add place="margin"</tag>
                         </p>
                      </cell>
                      <cell/>
@@ -558,7 +591,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>add[@place=mixed]</gi>
+                           <tag>add place="mixed"</tag>
                         </p>
                      </cell>
                      <cell/>
@@ -570,7 +603,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>add[@place=opposite]</gi>
+                           <tag>add place="opposite"</tag>
                         </p>
                      </cell>
                      <cell/>
@@ -581,7 +614,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>add[@place=overleaf]</gi>
+                           <tag>add place="overleaf"</tag>
                         </p>
                      </cell>
                      <cell/>
@@ -593,7 +626,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>add[@place=overstrike]</gi>
+                           <tag>add place="overstrike"</tag>
                         </p>
                      </cell>
                      <cell/>
@@ -604,7 +637,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>add[@place=right]</gi>
+                           <tag>add place="right"</gi>
                         </p>
                      </cell>
                      <cell/>
@@ -615,7 +648,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>add[@place=top]</gi>
+                           <tag>add place="top"</tag>
                         </p>
                      </cell>
                      <cell/>
@@ -626,21 +659,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <gi>add[@place=unspecified]</gi>
+                           <tag>add place="unspecified"</taga>
                         </p>
                      </cell>
                      <cell/>
                   </row>
                </table>
+               </p>
                <p>TEI is made for this and there are a number of other things
         which can be much better and more precisely encoded.</p>
                <p>When the record does not yet contain any text transcription,
         but information about some of the above listed phenomena is
         available, this should be stated temporarily in a note with a
         commentary for future changes in the respective msItem:</p>
-               <p>
-                  <gi>noteThis prayer is written in negative writing. /note !--Information belongs to text transcription--</gi>
-               </p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                 <note>This prayer is written in negative writing. </note> <!--Information belongs to text transcription--></egXML>
                <p>Note, however, the different usage for the information about
         rubrication.</p>
             </div>
