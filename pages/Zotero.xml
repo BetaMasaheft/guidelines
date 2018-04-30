@@ -204,34 +204,36 @@ inserted in the fields: author, editor and translator.</p>
                   <p>Always provide the place of the publisher – in the FORM THEY
       APPEAR ON THE COVER – i.e. for old books e.g. “Lugduni Batavorum”
       and NOT “Leiden”</p>
+      <list><item>
+         <p>When no place of publication is given, use n.p. instead (it
+means 'no place')</p>
+      </item>
+      <item>
+         <p>Abbreviations in city’s and states name are written without
+full point and without space in British English, e.g. Washington
+DC not Washington D.C. or Washington D. C. or Washington, DC USA
+not U.S.A or U. S. A.</p>
+      </item></list>
                </item>
-               <item>
-                  <p>When no place of publication is given, use n.p. instead (it
-      means 'no place')</p>
-               </item>
-               <item>
-                  <p>Abbreviations in city’s and states name are written without
-      full point and without space in British English, e.g. Washington
-      DC not Washington D.C. or Washington D. C. or Washington, DC USA
-      not U.S.A or U. S. A.</p>
-               </item>
+
                <item n="12">
                   <p>Always provide the publisher in the form he appears on the
       cover (e.g. “Ex officina Danielis &amp; Abrahami à Gaesbeeck” and
       not simply “Daniel &amp; Abraham” as modern catalogues may
       list)</p>
+      <list><item>
+         <p>If the name of the publisher is in another script, e.g. fidäl
+or Arabic, provide the name using the scientific transcription and
+not the name in the original script or an English translation
+(e.g. Täsfa Gäbrä Śǝllase mattämiya bet and NOT በተስፋ ገብረ ሥላሴ ማተሚያ
+ቤት or Täsfa Gäbrä Śǝllase Press).</p>
+      </item>
+      <item>
+         <p>If the name of the publisher is not given on the publication,
+use n.pub. instead (it means 'no publisher')</p>
+      </item></list>
                </item>
-               <item>
-                  <p>If the name of the publisher is in another script, e.g. fidäl
-      or Arabic, provide the name using the scientific transcription and
-      not the name in the original script or an English translation
-      (e.g. Täsfa Gäbrä Śǝllase mattämiya bet and NOT በተስፋ ገብረ ሥላሴ ማተሚያ
-      ቤት or Täsfa Gäbrä Śǝllase Press).</p>
-               </item>
-               <item>
-                  <p>If the name of the publisher is not given on the publication,
-      use n.pub. instead (it means 'no publisher')</p>
-               </item>
+
                <item n="13">
                   <p>If the publication date is not given, please use n.d. (no
       date).</p>
@@ -291,15 +293,16 @@ inserted in the fields: author, editor and translator.</p>
       Era calendar, then both years should be recorded: for instance,
       for a book published in Ethiopia in 1982 EC = 1989/1990 CE write
       in the field date '1989/1990' and in extra '1982 EC'</p>
+      <list><item>
+         <p>Please note that Zotero extraction of this type of records is
+not perfect, but the bibliography tool will fix this for you.</p>
+      </item>
+      <item>
+         <p>The abbreviations to be used are EC for Ethiopian Calendar and
+H for Hegira.</p>
+      </item></list>
                </item>
-               <item>
-                  <p>Please note that Zotero extraction of this type of records is
-      not perfect, but the bibliography tool will fix this for you.</p>
-               </item>
-               <item>
-                  <p>The abbreviations to be used are EC for Ethiopian Calendar and
-      H for Hegira.</p>
-               </item>
+
                <item n="24">
                   <p>For bibliographic records in which the editorial and publishing
       years are different, the editorial year is used as the point of
