@@ -89,6 +89,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 </ab>
 </div>
                </egXML>
+
                <p>Avoid trying to reproduce the layout of the text in the transcription, this has no use and the image can give much better information.</p>
             </div>
             <div type="level4">

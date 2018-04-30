@@ -43,6 +43,7 @@
                 <moduleRef key="header" except="appInfo"/>
                 <moduleRef key="textstructure"/>
                 <moduleRef key="tagdocs"/>
+                <moduleRef key="figures"/>
                 
             </schemaSpec>
         </body>
