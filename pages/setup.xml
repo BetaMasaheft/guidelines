@@ -217,28 +217,45 @@ with a licence for it)</item>
   you will only use a few of the options provided. Some things you might
   find useful to know:</p>
   <p>You can create a project and add to it your folders, so you can
-  open files from oXygen directly. * click on PROJECT, then on NEW
+  open files from oXygen directly.
+<list>
+  <item>click on PROJECT, then on NEW
   project. call the file BetMas and save it into your BetMas folder,
-  where you cloned the repositories from GIT. * once created the project
-  will open in oXygen in a side bar on the left. * click with the
+  where you cloned the repositories from GIT.</item>
+  <item>once created the project
+  will open in oXygen in a side bar on the left. </item>
+  <item>click with the
   secondary button on the icon of the project and select &quot;add
-  Folder&quot; * select the folders in the BetMas folder and add them
-  all. * They will appear under the Project icon. try to open
-  manuscripts and click on a file to open it.</p>
-  <p>While editing your file you might start from one of the models. *
-  once you start typing a name of an element, oxygen will suggest you
-  which elements can be used there. * you can also use the elements and
-  attributes view to select from a sidebar the element to add * once you
-  have an element and you want to add an attribute, type the space
-  separating the element name from the future attribute and oXygen will
-  pull up a list of attributes from which you can select. If an
-  attribute is compulsary, is bold. * also values for attributes are
-  suggested by oXygen based on the schema. * to enter a element you can
-  either start typing it, or you can select a portion of text to tag and
-  click CTRL+E which will open a small window where you can type the
-  first letters of an element's name and select. * you might need to
-  repeatedly enter the same element. you can do the repeat with
-  CTRL+/</p>
+  Folder&quot;</item>
+  <item>select the folders in the BetMas folder and add them
+  all.</item>
+  <item>They will appear under the Project icon. try to open
+  manuscripts and click on a file to open it.</item>
+  </list>
+  </p>
+  <p>While editing your file you might start from one of the models.
+
+    <list>
+<item>once you start typing a name of an element, oxygen will suggest you
+which elements can be used there.</item>
+<item>you can also use the elements and
+attributes view to select from a sidebar the element to add</item>
+<item>once you
+have an element and you want to add an attribute, type the space
+separating the element name from the future attribute and oXygen will
+pull up a list of attributes from which you can select. If an
+attribute is compulsary, is bold.</item>
+<item>also values for attributes are
+suggested by oXygen based on the schema.</item>
+<item>to enter a element you can
+either start typing it, or you can select a portion of text to tag and
+click CTRL+E which will open a small window where you can type the
+first letters of an element's name and select. </item>
+<item>you might need to
+repeatedly enter the same element. you can do the repeat with
+CTRL+/</item>
+    </list>
+    </p>
   <p>You will often have to enter the the current date, for example when
   you describe your work in <gi>change</gi>. To
   facilitate this you can use the Code Templates function in oXygen. Set
@@ -250,6 +267,7 @@ with a licence for it)</item>
   along the side of the document to go to that point and read the
   message. Often this is enough, if you don't understand where is the
   problem, ask Pietro.</p>
+
   <div type="level2">
     <head>Special Characters and letters with diacritics</head>
     <p>You might need to type one of the following</p>

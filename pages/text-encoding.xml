@@ -29,7 +29,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     encoding. We record in <ref target="manuscripts">Manuscripts</ref> records the Transcription of the
     text on the catalogued manuscript, when available, whilst the edited
     text or the theoretical structure of it should be recorded into the
-    <ref target="manuscripts">Work</ref> Entity. Text is entered in the <gi>body</gi> of a
+    <ref target="works">Work</ref> Entity. Text is entered in the <gi>body</gi> of a
     TEI file into a <tag>div type='edition'</tag> .
     Each text part should be contained into a
     <gi>div</gi>. <gi>div</gi>s should
