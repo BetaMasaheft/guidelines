@@ -22,17 +22,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body xml:id="summary-on-the-use-of-ref-and-corresp">
          <head>summary on the use of @ref and @corresp</head>
-         <p>internal references
+         <p>For internal references you can use
            <list>
-<item><tag>ref target="#q12"</tag></item>
 <item><tag>ref type="quire" corresp="#q12"</tag></item>
+<item><tag>ref target="#q12 #q13"</tag></item>
 <item><att>corresp</att> with a value starting with # (the ID
-anchor) points always to a @xml:id WITHIN THE DOCUMENT</item>
+anchor) points always to a <att>xml:id</att> WITHIN THE DOCUMENT</item>
 </list>
 </p>
-         <p>otherwise if <att>corresp</att> is used to point to
-    an element inside another document with an id, as for witness and
-    div in a work record, then it does not need an initial #</p>
+         <p>If <att>corresp</att> is used to point to
+    an element inside another document with an ID, as for witness and
+    div in a work record, then it does not need an initial # like in this example from <ref target="LIT1560Gospel" type="bm">LIT1560Gospel</ref></p>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+        <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="IntroductionEpistle" corresp="LIT1349EpistlEusebius">
+<label>Epistle to Carpianus by Eusebius</label>
+</div>
+        </egXML>
          <p><table>
             <row role="label">
                <cell>
@@ -47,7 +52,7 @@ anchor) points always to a @xml:id WITHIN THE DOCUMENT</item>
             </row>
             <row>
                <cell>
-                  <p>ref</p>
+                  <gi>ref</gi>
                </cell>
                <cell/>
                <cell>
@@ -56,7 +61,7 @@ anchor) points always to a @xml:id WITHIN THE DOCUMENT</item>
             </row>
             <row>
                <cell>
-                  <p>witness</p>
+                  <gi>witness</gi>
                </cell>
                <cell/>
                <cell>
@@ -65,7 +70,7 @@ anchor) points always to a @xml:id WITHIN THE DOCUMENT</item>
             </row>
             <row>
                <cell>
-                  <p>div</p>
+                  <gi>div</gi>
                </cell>
                <cell/>
                <cell>
@@ -74,7 +79,7 @@ anchor) points always to a @xml:id WITHIN THE DOCUMENT</item>
             </row>
             <row>
                <cell>
-                  <p>title</p>
+                  <gi>title</gi>
                </cell>
                <cell>
                   <p>X</p>
@@ -83,7 +88,7 @@ anchor) points always to a @xml:id WITHIN THE DOCUMENT</item>
             </row>
             <row>
                <cell>
-                  <p>persName</p>
+                  <gi>persName</gi>
                </cell>
                <cell>
                   <p>X</p>
@@ -92,7 +97,7 @@ anchor) points always to a @xml:id WITHIN THE DOCUMENT</item>
             </row>
             <row>
                <cell>
-                  <p>placeName</p>
+                  <gi>placeName</gi>
                </cell>
                <cell>
                   <p>X</p>
@@ -110,7 +115,7 @@ anchor) points always to a @xml:id WITHIN THE DOCUMENT</item>
             </row>
             <row>
                <cell>
-                  <p>repository</p>
+                  <gi>repository</gi>
                </cell>
                <cell>
                   <p>X</p>
@@ -119,7 +124,7 @@ anchor) points always to a @xml:id WITHIN THE DOCUMENT</item>
             </row>
             <row>
                <cell>
-                  <p>country</p>
+                  <gi>country</gi>
                </cell>
                <cell>
                   <p>X</p>
@@ -128,7 +133,7 @@ anchor) points always to a @xml:id WITHIN THE DOCUMENT</item>
             </row>
             <row>
                <cell>
-                  <p>settlement</p>
+                  <gi>settlement</gi>
                </cell>
                <cell>
                   <p>X</p>
@@ -137,7 +142,7 @@ anchor) points always to a @xml:id WITHIN THE DOCUMENT</item>
             </row>
             <row>
                <cell>
-                  <p>region</p>
+                  <gi>region</gi>
                </cell>
                <cell>
                   <p>X</p>
@@ -148,7 +153,7 @@ anchor) points always to a @xml:id WITHIN THE DOCUMENT</item>
          </p>
          <list type="unordered">
              <item>
-                 <p>if you point to an internal anchor in a <att>xml:id</att> inside the document you are working with, use # to begin with.</p>
+                 <p>If you point to an internal anchor in a <att>xml:id</att> inside the document you are working with, use # to begin with and your editor should prompt for you a list of available IDs.</p>
              </item>
              <item>
                  <p>If you point to an external id don't start with #, just enter the ID. That is why
@@ -157,7 +162,7 @@ anchor) points always to a @xml:id WITHIN THE DOCUMENT</item>
                      <att>passive</att> inside
                      <gi>relation</gi> should not. In fact you want
                      to be able to point to anchors within the records you are pointing
-                     to and link things like LIT0000Example#t3.</p>
+                     to and link things like <ref target="LIT1560Gospel#t2" type="bm">LIT1560Gospel#t2</ref>.</p>
              </item>
          </list>
       </body>
