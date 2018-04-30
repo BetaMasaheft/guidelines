@@ -34,7 +34,12 @@ anchor) points always to a <att>xml:id</att> WITHIN THE DOCUMENT</item>
     an element inside another document with an ID, as for witness and
     div in a work record, then it does not need an initial # like in this example from <ref target="LIT1560Gospel" type="bm">LIT1560Gospel</ref></p>
       <egXML xmlns="http://www.tei-c.org/ns/Examples">
-        <div type="textpart" subtype="chapter" xml:lang="gez" xml:id="IntroductionEpistle" corresp="LIT1349EpistlEusebius">
+<div
+  type="textpart"
+  subtype="chapter"
+  xml:lang="gez"
+  xml:id="IntroductionEpistle"
+  corresp="LIT1349EpistlEusebius">
 <label>Epistle to Carpianus by Eusebius</label>
 </div>
         </egXML>
