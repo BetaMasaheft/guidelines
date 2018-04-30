@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Setup</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+          </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="setup">
+<p>This page is intended to guide team members to a stable setting to
+work for the project</p>
+<p>You will need:
+<list><item>an account in GIT (github.com)</item>
+<item>Atom (or oXygen
+with a licence for it)</item>
+<item>an account in Zotero</item></list>
+</p>
+<div type="level2">
+  <head>GITHUB</head>
+  <p>Git is a shared repo, public on the web, where we keep our project
+  files and code. It contains several repositorires, which are just like
+  folders. Here are the files we work on and the documentation, such as
+  guidelines and issue tracking. You will use this to:</p>
+  <list type="ordered:arabic">
+    <item>
+      <p>Keep your files in sync with others</p>
+    </item>
+    <item>
+      <p>Read the guidelines</p>
+    </item>
+    <item>
+      <p>Point out issues, problems requests</p>
+    </item>
+  </list>
+  <p>You will thus want to be always up to date. Here is what to do:</p>
+  <list type="unordered">
+    <item>
+      <p>After you created and verified your account, you will need to
+      be added to the group; email Pietro to get this done.</p>
+    </item>
+    <item>
+      <p>Install <ref target="https://desktop.github.com/">Github
+      desktop</ref></p>
+    </item>
+    <item>
+      <p>Prepare in your computer, in a location of your choice, a
+      folder called <hi rendition="simple:bold">BetMas</hi></p>
+    </item>
+    <item>
+      <p>Open Gihub desktop</p>
+    </item>
+    <item>
+      <p>Login</p>
+    </item>
+    <item>
+      <p>Click the plus on the top left corner</p>
+    </item>
+    <item>
+      <p>Select the group SchAth</p>
+    </item>
+    <item>
+      <p>Select the schema repository</p>
+    </item>
+    <item>
+      <p>Click CLONE below</p>
+    </item>
+    <item>
+      <p>Select the folder BetMas and say ok</p>
+    </item>
+    <item>
+      <p>This will create a folder called schema into your BetMas folder
+      which is identical to that in Git and can be synced with it if you
+      are online</p>
+    </item>
+    <item>
+      <p>Repeat the same operation for the repositories called
+      Manuscript, Persons, Places, Institutions and Works</p>
+    </item>
+  </list>
+  <p>If you use the new version GitHub beta:</p>
+  <list type="unordered">
+    <item>
+      <p>After you created and verified your account, you will need to
+      be added to the group. email Pietro to get this done.</p>
+    </item>
+    <item>
+      <p>Install Github desktop</p>
+    </item>
+    <item>
+      <p>Prepare in your computer in a location of your choice a folder
+      called BetMas</p>
+    </item>
+    <item>
+      <p>Ppen Gihub desktop</p>
+    </item>
+    <item>
+      <p>Login if you aren't automatically logged in</p>
+    </item>
+    <item>
+      <p>Click &quot;file&quot; on the top left corner</p>
+    </item>
+    <item>
+      <p>Select &quot;clone repository&quot;</p>
+    </item>
+    <item>
+      <p>In your browser, go to https://github.com/BetaMasaheft</p>
+    </item>
+    <item>
+      <p>Click on &quot;Manuscripts&quot;</p>
+    </item>
+    <item>
+      <p>Add the URL (https://github.com/BetaMasaheft/Manuscripts) to
+      Github Desktop</p>
+    </item>
+    <item>
+      <p>In &quot;Local path&quot;, select the folder BetMas</p>
+    </item>
+    <item>
+      <p>Click CLONE below</p>
+    </item>
+    <item>
+      <p>This will create a folder called schema into your BetMas folder
+      which is identical to that in Git and can be synced with it if you
+      are online.</p>
+    </item>
+    <item>
+      <p>repeat the same operation for all other BetaMasaheft
+      repositories you might need</p>
+    </item>
+  </list>
+  <p>The Schema repository contains model files, templates and most
+  importantly the schema. These templates will be for you to use daily.
+  You will only need to copy the file to your system from the folder.
+  Please, leave those files there.</p>
+  <p>Let's say you have a new manuscript file to add to the Manuscript
+  folder, where these are kept:</p>
+  <list type="unordered">
+    <item>
+      <p>Simply put it in the manuscript folder which you have in
+      BetMas.</p>
+    </item>
+    <item>
+      <p>Open Gihub Desktop and select Manuscript</p>
+    </item>
+    <item>
+      <p>Click the CHANGE tab and you will see that it has recorded the
+      fact that you have added such file to the folder (or modified
+      it)</p>
+    </item>
+    <item>
+      <p>Below the list of changes there is a Commit field enter a name
+      such as &quot;new manuscript ready for review&quot; and a
+      description about what you have done e.g. &quot;entered catalogue
+      entry 1234 from Catalogue X&quot;</p>
+    </item>
+    <item>
+      <p>Click commit</p>
+    </item>
+    <item>
+      <p>Once it has committed the changes on the top right corner click
+      SYNC. This will look for anything that has changed online and
+      update your files locally, then will upload your file or update
+      the online version from yours.</p>
+    </item>
+    <item>
+      <p>N.B. THERE IS NO RISK of data to be overwritten or lost.</p>
+    </item>
+  </list>
+  <p>If you have not updated in the last two or three days, it is
+  advisable to Sync all your repo before you begin a work session.</p>
+  <p>The SchAth repo contains instead two important parts, beside some
+  code used locally for the project. * the Wiki * the Issues</p>
+
+
+</div>
+<div type="level2">
+  <head>Issues</head>
+  <p>Let's say something goes wrong. e.g. I cannot see anymore the
+  values from the schema! or the text displayed is the wrong one!.
+  <ref target="https://github.com/BetaMasaheft/Documentation/issues/new">Open an
+  issue for that here</ref> and give as much detail as possible.</p>
+</div>
+<div type="level2">
+  <head>Atom</head>
+  <p>You can use <ref target="https://atom.io/">Atom</ref> to edit
+  files, but to validate and get schema related support (like
+  autocompletion) you will need to install a package.</p>
+  <p><ref target="https://atom.io/packages/linter-autocomplete-jing">linter-autocomplete-jing</ref></p>
+  <p>once you have Atom installed, inside Atom, go to settings (or
+  preferences on mac), then click on + install on the left and search
+  the above string.</p>
+  <p>It will find the package. Click on install and say yes to
+  dependencies installation requests.</p>
+  <p>You will then see errors messages and will get the autocompletion.
+  it works very well!</p>
+  <p>You can also pull and push from gihub directly in atom, just click on the arrows pointing up and down in the bottom right corner and you will have really all in one place.</p>
+</div>
+<div type="level1">
+  <head>oXygen</head>
+  <p>oXygen is a text editor which is very smart with XML.
+  oXygen is designed to help you write XML and it does it in a wonderful
+  way, with all possible tools to help you in your workflow. Very often
+  you will only use a few of the options provided. Some things you might
+  find useful to know:</p>
+  <p>You can create a project and add to it your folders, so you can
+  open files from oXygen directly. * click on PROJECT, then on NEW
+  project. call the file BetMas and save it into your BetMas folder,
+  where you cloned the repositories from GIT. * once created the project
+  will open in oXygen in a side bar on the left. * click with the
+  secondary button on the icon of the project and select &quot;add
+  Folder&quot; * select the folders in the BetMas folder and add them
+  all. * They will appear under the Project icon. try to open
+  manuscripts and click on a file to open it.</p>
+  <p>While editing your file you might start from one of the models. *
+  once you start typing a name of an element, oxygen will suggest you
+  which elements can be used there. * you can also use the elements and
+  attributes view to select from a sidebar the element to add * once you
+  have an element and you want to add an attribute, type the space
+  separating the element name from the future attribute and oXygen will
+  pull up a list of attributes from which you can select. If an
+  attribute is compulsary, is bold. * also values for attributes are
+  suggested by oXygen based on the schema. * to enter a element you can
+  either start typing it, or you can select a portion of text to tag and
+  click CTRL+E which will open a small window where you can type the
+  first letters of an element's name and select. * you might need to
+  repeatedly enter the same element. you can do the repeat with
+  CTRL+/</p>
+  <p>You will often have to enter the the current date, for example when
+  you describe your work in <gi>change</gi>. To
+  facilitate this you can use the Code Templates function in oXygen. Set
+  a Code Template for the XML Editor and assign it the current date
+  value. Then, while editing to enter today's date open Document/Content
+  Completion, start the assistant and enter the date.</p>
+  <p>There is a green light on top right corner of your document. If it
+  is red, it means something is not valid. click on the small red bar
+  along the side of the document to go to that point and read the
+  message. Often this is enough, if you don't understand where is the
+  problem, ask Pietro.</p>
+  <div type="level2">
+    <head>Special Characters and letters with diacritics</head>
+    <p>You might need to type one of the following</p>
+    <list type="unordered">
+      <item>
+        <p>Ā ā (long a)</p>
+      </item>
+      <item>
+        <p>Ē ē (long e)</p>
+      </item>
+      <item>
+        <p>Ī ī (long i)</p>
+      </item>
+      <item>
+        <p>Ō ō (long o)</p>
+      </item>
+      <item>
+        <p>Ū ū (long u)</p>
+      </item>
+      <item>
+        <p>Ǝ ǝ (schwa)</p>
+      </item>
+      <item>
+        <p>ʾ (glottal stop)</p>
+      </item>
+      <item>
+        <p>ʿ (ʿayn)</p>
+      </item>
+      <item>
+        <p>Š š (sh)</p>
+      </item>
+      <item>
+        <p>Ś ś (lateral s)</p>
+      </item>
+      <item>
+        <p>Ṣ ṣ (emphatic s)</p>
+      </item>
+      <item>
+        <p>Ḍ ḍ (emphatic d)</p>
+      </item>
+      <item>
+        <p>Ḏ ḏ (dh, Arabic)</p>
+      </item>
+      <item>
+        <p>Ṭ ṭ (emphatic t)</p>
+      </item>
+      <item>
+        <p>Ṯ ṯ (th, Arabic)</p>
+      </item>
+      <item>
+        <p>Ṗ ṗ (emphatic p)</p>
+      </item>
+      <item>
+        <p>Ḥ ḥ (pharyngeal h)</p>
+      </item>
+      <item>
+        <p>Ḫ ḫ (kh)</p>
+      </item>
+      <item>
+        <p>Ž ž (zh, Amharic)</p>
+      </item>
+      <item>
+        <p>Ẓ ẓ (emphatic z, Arabic)</p>
+      </item>
+      <item>
+        <p>Ǧ ǧ (dj)</p>
+      </item>
+      <item>
+        <p>Ġ ġ (gh, Arabic)</p>
+      </item>
+      <item>
+        <p>Č č (ch)</p>
+      </item>
+      <item>
+        <p>Č̣ č̣ (emphatic ch)</p>
+      </item>
+      <item>
+        <p>Ḵ ḵ (kh, Tigrinya)</p>
+      </item>
+      <item>
+        <p>Q̲ q̲ (qh (Tigrinya)</p>
+      </item>
+      <item>
+        <p>Ḳ ḳ (emphatic k)</p>
+      </item>
+      <item>
+        <p>Ñ ñ (gn, Amharic)</p>
+      </item>
+    </list>
+    <p>You can use oXygen Content Completion. To do this make sure you
+    sync this repo. in the folder codetemplates there is all you need.
+    Open oxygen, go to Preferences and search &quot;Code
+    Templates&quot;. click on it on the menu list on the left. Once the
+    list on the right appears, click IMPORT in the lower right corner.
+    select the codetemplates.xml file from the codetemplates folder.
+    Apply and close.</p>
+    <p>To use this code templates while editing click Document/ Content
+    Completion, then &quot;show content completion&quot; and then select
+    from the list what you need to type.</p>
+  </div>
+</div>
+<div type="level1">
+  <head>Zotero</head>
+  <p>Please check the
+  <ref target="zotero">Zotero
+  guidelines</ref> for working with the group bibliography.</p>
+</div>
+</body>
+</text>
+</TEI>

@@ -39,6 +39,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>There are several general things you are going to encode. These are all MUST READ if
                you are editing for the first time.</p>
             <list>
+              <item><ref target="transliteration-principles">How to transliterate</ref></item>
                <item><ref target="revisions">How to record the activity done on any
                   file</ref></item>
                <item><ref target="tei">Adding a <att>type</att> to distinguish different

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Tutorial to the website</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="navigation">
+        <div type="level2">
+          <list>
+          <item>Browse the data</item>
+          <item>Simple Search</item>
+          <item>Advanced Search</item>
+          <item>SPARQL</item>
+          <item>Xpath</item>
+          <item>Compare</item>
+          <item>Relations</item>
+          <item>Links and pointer</item>
+          <item>Text</item>
+          <item>Image Viewer (Mirador and Openseadragon)</item>
+          <item>Pages</item>
+        </list>
+          </div>
+        </body>
+      </text>
+    </TEI>
