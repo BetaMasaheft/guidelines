@@ -661,7 +661,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <tag>add place="unspecified"</taga>
+                           <tag>add place="unspecified"</tag>
                         </p>
                      </cell>
                      <cell/>
