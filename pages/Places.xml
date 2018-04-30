@@ -21,20 +21,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body xml:id="places">
-         <p>please read the content at the following links before starting:
-https://pleiades.stoa.org/help/conceptual-overview</p>
-         <p>an overview of our current work can be found here
-http://commons.pelagios.org/2017/08/report-ancient-places-in-the-chronicle-of-king-galawdewos/</p>
+         <p>Please read the content at the following links before starting:
+<list>
+  <item><ref target="https://pleiades.stoa.org/help/conceptual-overview">Pleiades Conceptual Overview</ref></item>
+<item><ref target="http://commons.pelagios.org/2017/08/report-ancient-places-in-the-chronicle-of-king-galawdewos/">an overview of our current work can be found here</ref></item>
+</list></p>
+
          <p>This example record contains information about a single place, at
 whatever granularity. It is thus important to state relationships with
-other places when possible and typologies.</p>
+other places when possible and typologies, using <gi>relation</gi> and <att>sameAs</att>.</p>
          <p>Coordinates are used to display the place on a map and can be
 obtained from openstreetmap for example, adding a pointer for a place
 there.</p>
          <p>It can be expanded with much more information, following TEI
 guidelines for
-<ref target="http://www.tei-c.org/release/doc/tei-p5-doc/de/html/ref-person.html">
-               <gi>place</gi>
+<ref target="http://www.tei-c.org/release/doc/tei-p5-doc/de/html/ref-place.html">
+               place
             </ref>
          </p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -75,38 +77,23 @@ guidelines for
          <div type="level1">
             <head>new records</head>
             <p>Before creating new entities for PLACES like Stuttgart, Paris,
-  London, etc. which unlike all institutions are very much unlikely to
+  London, etc. which unlike all <ref target="institutions">institutions</ref> are very much unlikely to
   receive specific descriptions by this project, use external links to
-  geonames ids as follows.</p>
+  Wikidata ids as follows.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<country ref="gn:2017370"/>
-<settlement ref="gn:498817"/>
+              <place type="city" sameAs="Q649">
+              <placeName xml:id="n1" xml:lang="ru">Москва</placeName>
+              <placeName corresp="#n1" xml:lang="en">Moscow</placeName>
+              <country ref="Q159"/>
+              <region ref="Q649"/>
+              </place>
 </egXML>
-            <p>(same for placeName and region)</p>
-            <p>to decide whether to create a new place record or not if in doubt,
-  try the following. check if there is a record already in our list * if
-  yes, then 1. check if there is also a wikidata item (you can simply
-  google what you are looking for, open the correct wikipedia page you
-  find and hit the wikidata item link on the left. * if yes add a
-  @sameAs attribute with the Q id in the url or at the top of the item.
-  1. check if there is also a record in geonames.org * if yes add a
-  @sameAs attribute to place linking to such geonames id. * if not leave
-  the record 1. add a ref to our record * if not, then 1. check if there
-  is also a wikidata item 1. check if it is in geonames.org * if yes add
-  the uri in the @ref * if not (but check thoroughly, because it would
-  be an exception) create a new place record</p>
-            <p>generally, when possible I would always prefer an external link to
-  an authority file for places out of scope which we are not going to
-  describe or give details about. If there is already a record, no need
-  to delete it or update it. Simply add the geonames ID.</p>
-            <p>adding references to places not in our db: * for ancient places
-  prefere pleiades, with namespace pleiades: e.g. * for places related
-  to coptic literary tradition use PAThs paths:</p>
-         </div>
+            <p>(same for <gi>placeName</gi> and <gi>region</gi>)</p>
+
          <div type="level1">
             <head>alignment</head>
-            <p>Use @sameAs inside <gi>place</gi> to declare
-  the authority file. prefer Wikidata if an item is present, otherwise
+            <p>Use <att>sameAs</att> inside <gi>place</gi> to declare
+  the authority file. Prefer Wikidata if an item is present, otherwise
   use geonames.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <place type="region" sameAs="Q2894614">
@@ -114,19 +101,12 @@ guidelines for
                <placeName type="alt">Wäggära</placeName>
             </place>
 </egXML>
-            <p>GN id number should use a prefix gn:.</p>
-         </div>
-         <div type="level1">
-            <head>type</head>
+            <p>GN id number should use a prefix "gn:".</p>
+
             <p>
-               <gi>type</gi>contains a value from the
-  <ref target="https://docs.google.com/spreadsheets/d/1a0LtliOVuXoRcDhgj3p5V1Z2i-M5k5_MkT6YgPgh04s/edit#gid=1295787771">controlled
-  list of Qualifiers</ref> in <gi>relation</gi> allowed
-  values of <att>name</att> are * contains * nearBy *
-  partOf</p>
-            <p>Please, refer to Institution below for geo location and
-  administrative location. Also place records can be enriched with this
-  information.</p>
+               <att>type</att> contains a value from the
+  <ref target="taxonomy">controlled
+  list of Qualifiers</ref> .</p>
          </div>
          <div type="level1">
             <head>Coordinates</head>
@@ -169,14 +149,14 @@ guidelines for
 
          </div>
          <div type="level1">
-            <head>administrative location</head>
+            <head>Administrative location</head>
             <p>If you want to give other administrative location information, use
   <gi>settlement</gi>. One settlement for each set of
   information, but only one if there is only one set. Please do not
   remove text if it is there, simply mark it up as in the following
   example. If you are adding info and you want to do it more quickly you
-  can also enter only empty <gi>placeName</gi>s withe
-  corresp and type.</p>
+  can also enter only empty <gi>placeName</gi>s with
+  <att>corresp</att> and <att>type</att>.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <country ref="LOC3010Ethiop"/>
 <region ref="LOC5932Tegray"/>
@@ -187,7 +167,7 @@ guidelines for
          </div>
          <div type="level1">
             <head>Place Names</head>
-            <p>a full example of how to encode the various possible placeNames is
+            <p>A full example of how to encode the various possible placeNames is
   the following</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <placeName xml:id="n1" xml:lang="am">አክሱም፡ ጽዮን፡</placeName>
@@ -201,12 +181,12 @@ guidelines for
 <region notBefore="1991" type="RegionalState" ref="LOC5932Tegray"/>
 <region notAfter="1974" type="Province" ref="LOC6556Tegre"/>
 </egXML>
-            <p>all placeName can take an xml:id if it is needed for referencing,
+            <p>All <gi>placeName</gi>s can take an <att>xml:id</att> if it is needed for referencing,
   following the above example. i.e. nothing prevents Mary of Zion to
-  have a @xml:id='n5' AND @corresp='#n2'</p>
-            <p>You can enter into placeName a <gi>note</gi> element
+  have a <att>xml:id</att>='n5' AND <att>corresp</att>='#n2'</p>
+            <p>You can enter into <gi>placeName</gi> a <gi>note</gi> element
   where to describe the denomination more in detail, see for example
-  LOC1261Adulis</p>
+  <ref target="LOC1261Adulis" type="bm">ʾAdulis</ref></p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <placeName xml:id="n4" xml:lang="la" type="alt" source="#FattovichMunro">Adulitae
                      <note source="#Smith"><ref
@@ -220,20 +200,25 @@ guidelines for
                   B.C.</date>)</note></placeName>
 
 </egXML>
-            <p>use this especially if you need to provide specific sources for
+            <p>use this especially if you need to provide specific <att>source</att>s for
   this name of the place</p>
             <p>On referring to places, please look carefully for available
-  records. e.g.: - LOC6569Tegray (Tǝgrāy historical province) vs
-  LOC5932Tegray (contemporary regional state) - LOC6568Amhara (ʾAmhārā
-  historical province) vs LOC1426Amhara (contemporary regional state) -
-  LOC3577Gondar (Gondar town) vs LOC6554GondarineK (Gondarine
-  Kingdom)</p>
+  records. e.g.:
+  <list>
+    <item><ref target="LOC6569Tegray" type="bm">LOC6569Tegray</ref> (Tǝgrāy historical province) vs
+  <ref target="LOC5932Tegray" type="bm">LOC5932Tegray</ref> (contemporary regional state)</item>
+  <item><ref target="LOC6568Amhara" type="bm">LOC6568Amhara</ref> (ʾAmhārā
+historical province) vs <ref target="LOC1426Amhara" type="bm">LOC1426Amhara</ref> (contemporary regional state)</item>
+<item><ref target="LOC3577Gondar" type="bm">LOC3577Gondar</ref> (Gondar town) vs <ref target="LOC6554GondarineK" type="bm">LOC6554GondarineK</ref> (Gondarine
+Kingdom)</item>
+    </list>
+  </p>
          </div>
          <div type="level1">
             <head>Tābots</head>
-            <p>For tābotat please use an <gi>ab[@type='tabot’]</gi>
-  including the number of the tābots and persNames[@type='tabot'] for
-  each of the dedicatory persons. Avoid using @type for other persons
+            <p>For tābotat please use an <tag>ab type='tabot’</tag>
+  including the number of the tābots in a <gi>measure</gi> and <tag>persNames type='tabot'</tag> for
+  each of the dedicatory persons. Avoid using <att>type</att> for other persons
   mentioned in the texts.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <ab type="tabot">
@@ -246,13 +231,16 @@ guidelines for
             <p>If a tābot is dedicated to an inanimate entity, use a
   <gi>ref</gi> with appropriate type to point to a
   relevant ID, as in
-  <gi>ref type="authFile" corresp="Masqal"Cross/ref</gi>
             </p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+
+              <ref type="authFile" corresp="Masqal">Cross</ref>
+            </egXML>
          </div>
          <div type="level1">
-            <head>syriaca historical Geography schema alignment</head>
-            <p>to encode historical places we follow in the above and what follows
-  the Syriaca.org TEI manual for Historical Geography, with some
+            <head>Syriaca Historical Geography schema alignment</head>
+            <p>To encode historical places we follow in the above and what follows
+  the <ref target="http://Syriaca.org">Syriaca.org</ref> TEI manual for Historical Geography, with some
   divergences due to our project</p>
   <list>
   <item><ref target="event">Events affecting the definition of a Place.</ref></item>
@@ -263,7 +251,7 @@ guidelines for
 
 
          </div>
-
+</div>
       </body>
    </text>
 </TEI>

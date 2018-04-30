@@ -136,6 +136,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <div type="level2">
            <p>Other pages which you should look at for encoding works:</p>
            <list>
+             <item><ref target="work-teiHeader">Description of a Work</ref></item>
              <item><ref target="narratives">Narrative Units</ref></item>
              <item><ref target="text-encoding">Text encoding</ref></item>
              <item><ref target="text-apparatus">Critical apparatus</ref></item>
