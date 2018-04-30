@@ -36,18 +36,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <p>This example will point to the <tag>msPart xml:id="p1"</tag>.
          You can also use this with content, especially where the text of the link is different from the standard label of the node you want to link to, e.g.</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
-this happens also in <ref target="#q14">the final quire</ref>
+<p>this happens also in <ref target="#q14">the final quire</ref></p>
 </egXML>
          <p>This second method preserve your text and make a link. However, please note that multiple
     references will be splitted in several links, so having something
     like</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
-this happens also in <ref target="#q14 #q15">the final quires</ref>
+<p>this happens also in <ref target="#q14 #q15">the final quires</ref></p>
 </egXML>
          <p>will not return the text in the element but the values of the
     targets. You can split that reference like</p>
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-this happens also in <ref target="#q14 #q15"/>, the final quires
+<p>this happens also in <ref target="#q14 #q15"/>, the final quires</p>
 </egXML>
 
          <div  type="level2">
