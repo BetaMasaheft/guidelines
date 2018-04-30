@@ -477,7 +477,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <tag>del rend="strikethrough"</Tag>
+                           <tag>del rend="strikethrough"</tag>
                         </p>
                      </cell>
                      <cell/>
