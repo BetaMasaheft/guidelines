@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
@@ -21,6 +21,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <text>
         <body xml:id="editingSchema">
             <head>Editing the ODD (i.e. the Schema)</head>
+          <p>  In the Schema repository there should be four file and the README.md</p>
+
+<p>The .xml files are the ODD (One Document Does it all) and the .rng are the actual RelaxNG schema files used for validation.</p>
+
+<p>To update the schema start always from the ODD (tei-betamesaheft.xml ).</p>
+
+
+
+
             <p>There is very good tutorial to <ref
                     target="http://www.tei-c.org/Guidelines/Customization/odds.xml">edit ODD (One
                     Document Does it all)</ref> among the TEI resources.</p>
@@ -29,7 +38,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Please, try to discuss any schema update in a issue.</p>
             <p>After editing the ODD, use the Oxygen transformation for TEI ODD to RelaxNG which is
                 already available in the software and will save a .rng file in a out directory
-                relative to the place where your schema is stored.</p>
+                relative to the place where your schema is stored. You can also do the same using the TEI Roma web application.</p>
             <p>Before committing the edited schema, test it locally validating a file against that
                 new version of the rng schema.</p>
             <p>Move then the new version in the main schema repository (not in the out subdirectory) and commit it. This will update the schema used by all the applications.</p>
