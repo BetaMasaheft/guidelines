@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -26,19 +26,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <gi>bibl</gi> element containing at least a
     <gi>ptr</gi> element with a
     <att>target</att>, as in the following example:</p>
-         <cit>
-            <quote>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <bibl><ptr target="bm:Villa2013Erma"/></bibl>
-</quote>
-         </cit>
-         <p>If need an indication of exact reference, it should be given in a
+</egXML>
+         <p>If you need to add an indication of exact reference, it should be given in a
     <gi>citedRange</gi> element, as in the following
     example:</p>
-         <cit>
-            <quote>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <bibl><ptr target="bm:Villa2014Erma"/><citedRange unit="page">5-13</citedRange></bibl>
-</quote>
-         </cit>
+</egXML>
          <p>
             <gi>citedRange</gi> can take several values in
     <att>unit</att> and can be repeated if there is a need
@@ -67,7 +63,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <p>When adding records to the Zotero Group Library, please follow
     the principles <ref target="zoteroguidelines">at this
     page</ref>.</p>
-    
+
       </body>
    </text>
 </TEI>

@@ -55,7 +55,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <gi>placeName</gi>, <gi>persName</gi>, etc. If you want to refer to another entity in
     the project but you don’t want to mark up the entity you can use
     <gi>ref</gi> with <att>corresp</att> as
-    follows (see also the <ref target="summary-on-the-use-of-ref-and-corresp">summary on ref and corresp</ref>). This is intended to be useful especially for pointing
+    follows (see also the <ref target="summary-on-the-use-of-ref-and-corresp">summary
+    on ref and corresp</ref>). This is intended to be useful especially for pointing
     directly to a particular part of a manuscript description, e.g. a
     hand or a quire or a part. This should also be used to refer to
     specific works.</p>
@@ -85,13 +86,13 @@ starting with http.</p>
 </div>
 <div type="level2">
   <head>Canonical text citations</head>
-         <p>For citations, like Matthew 14, 3 use ref with a @cRef containing
-    the urn which you can get from Perseus catalogue searching for the
+         <p>For citations, like Matthew 14, 3 use <gi>ref</gi> with a <att>cRef</att> containing
+    the URN which you can get from Perseus catalogue searching for the
     passage.</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
  <ref cRef="urn:cts:greekLit:tlg0031.tlg001.perseus-grc1:14.3">Matthew 14, 3</ref>
 </egXML>
-         <p>You can also point to our texts for example to Numbers 21, 8 like
+         <p>You can also point to our texts for example the ethiopic text of Numbers 21, 8 like
     this</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
  <ref cRef="urn:dts:betmas:LIT2075Number:21.8">Numbers 21:8</ref>

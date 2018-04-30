@@ -91,7 +91,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </row>
                <row>
                   <cell>
-                     <att>@when-custom</att>
+                     <att>when-custom</att>
                   </cell>
                   <cell>
                      date in specified calendar
@@ -245,8 +245,8 @@ notAfter="1559">ትግራይ፡</placeName>
       with Q)</p>
                </item>
             </list>
-            <p>you can also add a @resp with the id of one of our person records
-  or editors and a @source with a list of bm:tags from the Zotero
+            <p>you can also add a <att>resp</att> with the id of one of our person records
+  or editors and a <att>source</att> with a list of bm:tags from the Zotero
   Ethiostudies group library.</p>
          </div>
       </div>

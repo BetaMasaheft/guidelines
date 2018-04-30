@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -27,11 +27,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     text on the catalogued manuscript, when available, whilst the edited
     text or the theoretical structure of it should be recorded into the
     Work Entity. Text is entered in the <gi>body</gi> of a
-    TEI file under into a <gi>div[@type='edition']</gi> .
+    TEI file under into a <tag>div type='edition'</tag> .
     Each text part should be contained into a
     <gi>div</gi>. <gi>div</gi>s should
     always be well nested one into the other. These will always take a
-    <att>subtype='textpart'</att> and a
+    <att>subtype</att> with <val>textpart</val> and a
     <att>subtype</att> with the desired value. There should
     always be also a @n identifying for example chapter 3 as well as a
     <att>corresp</att> pointing to the appropriate
