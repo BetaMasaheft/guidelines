@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -21,10 +21,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body xml:id="institution">
-         
+
          <div type="level1">
             <head>Specific encoding for repositories/institutions</head>
-            <p>For Institutions where manuscripts are preserved all general guidelines and especially those for <ref target="places">places</ref> are valid, and some more
+            <p>For repositories where manuscripts are preserved all general guidelines and especially those for <ref target="places">places</ref> are valid, and some more
   information is required. Please, note in the example below the
   <att>subtype</att> with <val>institution</val>.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -47,8 +47,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </ab>
                   <ab type="tabot">
                      <measure quantity="8"/>
-                     Tabots of <persName ref="PRS5684JesusCh" type="tabot">Jesus</persName>, <persName ref="PRS10775Trinity">Trinity</persName>, <persName ref="PRS6819Mary">Mary</persName>, unidentified marble, 
-                     <persName ref="PRS4377Gabriel">Gabriel</persName>, <persName ref="PRS10776Kidan">Kidāna Mǝḥrat</persName>, <persName ref="PRS7049Michael">Michael</persName>, 
+                     Tabots of <persName ref="PRS5684JesusCh" type="tabot">Jesus</persName>, <persName ref="PRS10775Trinity">Trinity</persName>, <persName ref="PRS6819Mary">Mary</persName>, unidentified marble,
+                     <persName ref="PRS4377Gabriel">Gabriel</persName>, <persName ref="PRS10776Kidan">Kidāna Mǝḥrat</persName>, <persName ref="PRS7049Michael">Michael</persName>,
                      <persName ref="PRS10774Paraq">Ṗarāqliṭos</persName>. The tabot of the local <persName ref="PRS10773SadeqP">Ṣādǝqān</persName> (Righteous Ones) was not mentioned, probably by mistake.</ab>
                   <ab type="description">52 Mss. photographed: <ref target="ESap001">AP-001</ref> "Missal"; <ref target="ESap002">AP-002</ref> "Hymnary"; <ref target="ESap003">AP-003</ref> "Four Gospels"; ...</ab>
                </note>
@@ -56,13 +56,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <bibl></bibl>
                </listBibl>
             </place>
-        
+
 
          </listPlace>
 </egXML>
          </div>
-       
-         
+
+
       </body>
    </text>
 </TEI>

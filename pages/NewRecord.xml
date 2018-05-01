@@ -60,10 +60,10 @@ our list</item>
 <item>check if there is also a wikidata item
 (you can simply google what you are looking for, open the correct
 wikipedia page you find and hit the wikidata item link on the left).</item>
-  <item><list><item>if yes add a @sameAs attribute with the Q id in the url or at the
+  <item><list><item>if yes add a <att>sameAs</att> attribute with the Q id in the url or at the
   top of the item.</item></list></item>
   <item>check if there is also a record in geonames.org</item>
-  <item><list><item>if yes add a @sameAs attribute to place linking to such geonames
+  <item><list><item>if yes add a <att>sameAs</att> attribute to place linking to such geonames
   id.</item>
 <item>if not leave the record</item></list></item>
 </list></item>
@@ -73,7 +73,7 @@ then</item>
 <item>check if there is also a wikidata item</item>
 <item>check if it is in
 geonames.org</item>
-<item>if yes add the uri in the @ref</item>
+<item>if yes add the uri in the  <att>ref</att> </item>
 <item>if not (but check
 thoroughly, because it would be an exception) create a new place
 record</item>

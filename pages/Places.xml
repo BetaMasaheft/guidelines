@@ -74,10 +74,10 @@ guidelines for
       </body>
    </text>
 </egXML>
-         <div type="level1">
-            <head>new records</head>
+         <div type="level2">
+            <head>New records</head>
             <p>Before creating new entities for PLACES like Stuttgart, Paris,
-  London, etc. which unlike all <ref target="institutions">institutions</ref> are very much unlikely to
+  London, etc. which unlike all <ref target="institutions">repositories</ref> are very much unlikely to
   receive specific descriptions by this project, use external links to
   Wikidata ids as follows.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -90,8 +90,8 @@ guidelines for
 </egXML>
             <p>(same for <gi>placeName</gi> and <gi>region</gi>)</p>
 
-         <div type="level1">
-            <head>alignment</head>
+         <div type="level2">
+            <head>Aignment</head>
             <p>Use <att>sameAs</att> inside <gi>place</gi> to declare
   the authority file. Prefer Wikidata if an item is present, otherwise
   use geonames.</p>
@@ -108,7 +108,7 @@ guidelines for
   <ref target="taxonomy">controlled
   list of Qualifiers</ref> .</p>
          </div>
-         <div type="level1">
+         <div type="level2">
             <head>Coordinates</head>
             <p>Coordinates must be provided latitude longitude and separated only
   by one white space.</p>
@@ -148,7 +148,7 @@ guidelines for
 </egXML>
 
          </div>
-         <div type="level1">
+         <div type="level2">
             <head>Administrative location</head>
             <p>If you want to give other administrative location information, use
   <gi>settlement</gi>. One settlement for each set of
@@ -165,7 +165,7 @@ guidelines for
 
 </egXML>
          </div>
-         <div type="level1">
+         <div type="level2">
             <head>Place Names</head>
             <p>A full example of how to encode the various possible placeNames is
   the following</p>
@@ -214,7 +214,7 @@ Kingdom)</item>
     </list>
   </p>
          </div>
-         <div type="level1">
+         <div type="level2">
             <head>Tābots</head>
             <p>For tābotat please use an <tag>ab type='tabot’</tag>
   including the number of the tābots in a <gi>measure</gi> and <tag>persNames type='tabot'</tag> for
@@ -237,7 +237,7 @@ Kingdom)</item>
               <ref type="authFile" corresp="Masqal">Cross</ref>
             </egXML>
          </div>
-         <div type="level1">
+         <div type="level2">
             <head>Syriaca Historical Geography schema alignment</head>
             <p>To encode historical places we follow in the above and what follows
   the <ref target="http://Syriaca.org">Syriaca.org</ref> TEI manual for Historical Geography, with some

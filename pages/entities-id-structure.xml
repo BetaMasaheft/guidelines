@@ -55,7 +55,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         word of name)</p>
             </item>
             <item>
-               <p>Institutions = INS0030Addaqaharsi (INS + 4 digit number +
+               <p>Repositories = INS0030Addaqaharsi (INS + 4 digit number +
         initials)</p>
             </item>
             <item>
@@ -64,15 +64,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </item>
          </list>
          <p>The manuscript ID should be composed of: - The abbreviation of
-            the institution holding the manuscript, as it is contained in the
+            the repository holding the manuscript, as it is contained in the
             insitution ID, written in capitals - The abbreviation of the
             collection to which the manuscript belongs - a numeral: BAVet1 The
             collection and the numeral should be given as they are in the
             current/most commonly used official shelfmark of the manuscript.</p>
          <p>If the manuscript has not yet been catalogued and/or has no shelf
             mark, an ID has to created individually, following as much as
-            possible the usual process_ - The abbreviation of the institution
-            holding the manuscript, as it is contained in the institution ID,
+            possible the usual process_ - The abbreviation of the repository
+            holding the manuscript, as it is contained in the repository ID,
             written in capitals - If no more information is available, the ID
             can be created with a work contained in the manuscript and a
             numeral, such as: TMChronicle1</p>

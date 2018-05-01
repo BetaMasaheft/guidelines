@@ -250,74 +250,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
          Naʾakkwǝto Laʾab (not La-ʾAb)
        </quote></cit>
-         <div type="level2">
-           <head>Dubious spelling</head>
-           <p>The words listed below should be transliterated as follows,
-           according to the TraCES decisions:</p>
-           <list type="unordered">
-             <item>
-               <p>አእላፍ፡ | ʾaʾlāf (not ʾaʾǝlāf)</p>
-             </item>
-             <item>
-               <p>አዕይንት፡ | ʾaʿyǝnt (not ʾaʿǝyyǝnt)</p>
-             </item>
-             <item>
-               <p>እግዚአብሔር፡ | ʾƎgziʾabǝḥer (not ʾƎgziʾabḥer)</p>
-             </item>
-             <item>
-               <p>እሙንቱ፡ | ʾǝmuntu (not ʾǝmuntu)</p>
-             </item>
-             <item>
-               <p>እንድርያስ፡ | ʾƎndrǝyās (three consonants are accepted since the
-               first and the last are sonorant, not ʾƎndǝryās)</p>
-             </item>
-             <item>
-               <p>በእንተ፡ | baʾǝnta (not ba-ʾǝnta)</p>
-             </item>
-             <item>
-               <p>ባሕቱ፡ | bāḥǝttu (not bāḥtu)</p>
-             </item>
-             <item>
-               <p>ግዕዝ፡ | gǝʿz (not gǝʿǝz) [but this needs further
-               discussion]</p>
-             </item>
-             <item>
-               <p>ላዕለ፡ | lāʿla (not lāʿǝla)</p>
-             </item>
-             <item>
-               <p>ካዕበ፡ | kāʿǝba (not kāʿba)</p>
-             </item>
-             <item>
-               <p>ምዕራፍ፡ | mǝʿrāf (not mǝʿǝrāf)</p>
-             </item>
-             <item>
-               <p>መልእክት፡ | malʾǝkt (not malǝʿǝkt)</p>
-             </item>
-             <item>
-               <p>ጳጳስ፡ | ṗāṗās (not ṗāṗṗās)</p>
-             </item>
-             <item>
-               <p>ርእስ፡ | rǝʾs (not rǝʾǝs)</p>
-             </item>
-             <item>
-               <p>ርእየ፡ | rǝʾya (not rǝʾǝya)</p>
-             </item>
-             <item>
-               <p>ሰማዕታት፡ | samāʿtāt (not samāʿǝtāt)</p>
-             </item>
-             <item>
-               <p>ትእዛዝ፡ | tǝʾǝzāz (not tǝʾzāz)</p>
-             </item>
-             <item>
-               <p>ተአምር፡ | taʾammǝr (not taʾamǝr, taʾāmmǝr, or taʾāmǝr)</p>
-             </item>
-             <item>
-               <p>ያዕቆብ፡ | Yāʿqob (not Yāʿǝqob)</p>
-             </item>
-           </list>
-           <p>For other cases which raise questions, please open individual
-           issues.</p>
-         </div>
+         <p>See also <ref target="dubious-spelling">Dubious Spellings</ref> and especially the <ref target="standardisation-of-transcription-from-encyclopaedia-aethiopica">standardization rules for records coming from EAe</ref>.</p>
+
          <div type="level2">
            <head>Capitalisation</head>
            <p>In transliterated titles (whether the title of the work record or

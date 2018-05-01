@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
@@ -57,7 +57,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <p>It is preferable to have a separate
         <gi>relation</gi> for each relationship,
         even if the same relation exists between one and several more
-        items. The following are some frequently used ones, but there are many more readily available from the schema (see <gi>relation</gi>) and you can use others which are in the <ref target="ontology">ontology</ref>.</p>
+        items. The following are some frequently used ones, but there are many more readily available from the schema (see <gi>relation</gi>) and you can use others which are in the <ref target="ontologyView">ontology</ref>.</p>
     <div type="section">
         <head>mss-mss</head>
         <p>saws:isDirectCopyOf</p>

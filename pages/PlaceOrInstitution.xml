@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Place or Institution</title>
+                <title>Place or Repository</title>
                 <author>Pietro Liuzzo</author>
             </titleStmt>
             <publicationStmt>
@@ -21,10 +21,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </teiHeader>
     <text>
         <body xml:id="placeOrInstitution"><div type="level1">
-    <head>creating a new record or deciding between institution and
-        place</head>
+    <head>creating a new record or deciding between repository entity and
+        place entity</head>
     <p>All Monasteries and Churches in PLACES have also a parallel in
-        Institutions. The two lists have different origins, PLACES comes from
+        Repository in the institutions repo. The two lists have different origins, PLACES comes from
         EA indexes, while the INSTITUTIONS list is an export of the records in
         EthioSPaRe for institutions.</p>
     <p>Please, proceed as follows in case of doubt:</p>

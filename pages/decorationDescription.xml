@@ -122,7 +122,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <item>Keywords (<gi>term</gi>) are valuable
         tools that you can use to provide further information about
         such features as the style and iconographic elements of a
-        theme (<ref target="keywords">see relevant guidelines page</ref>).</item>
+        theme (<ref target="keywordsIntro">see relevant guidelines page</ref>).</item>
       </list></p>
     <p>Miniatures may include:
 <list>

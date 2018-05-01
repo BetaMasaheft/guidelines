@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -21,7 +21,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body xml:id="referencing-the-manuscript">
-         <head>Referencing the manuscript</head>
+         <head>Referencing the manuscript (placement / locus)</head>
          <p>
             <gi>locus</gi> element can be used almost
     everywhere to indicate the physical location of an item. It contains
@@ -67,7 +67,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
 Two folios between <locus target="#66"/> and <locus target="#67"/>, <locus target="#66i"/> and <locus target="#66ii"/>, are so badly mutilated that only small corners - each not containing more than fragments of 4 letters - are preserved which have not been taken into account for the foliation of the manuscript.
 </egXML>
-    
+
       </body>
    </text>
 </TEI>

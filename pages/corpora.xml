@@ -38,7 +38,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   </listRelation>
 </egXML>
 <p>
-The text of the document can be normally annotated with <ref target="keywords">keywords</ref> and <ref target="named-entities-and-authority-lists">named entities</ref> but should additionally use
+The text of the document can be normally annotated with <ref target="keywordsIntro">keywords</ref> and <ref target="named-entities-and-authority-lists">named entities</ref> but should additionally use
 <tag>seg type='interpretation'</tag> with <att>ana</att> pointing to the id of one of the interpretation keywords in the <ref target="taxonomy">taxonomy</ref>.
 </p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
