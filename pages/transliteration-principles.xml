@@ -372,6 +372,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
              </item>
            </list>
          </div>
+            <div type="level2">
+         <head>Capitalisation</head>
+         <p>In transliterated titles (whether the title of the work record or
+    the title of a manuscript containing the work), the first word and
+    all proper names should be spelled with a capital, so for example
+    Wəddāse ʾAmlāk.</p>
+         <p>Please open individual issues for particular cases that need
+    discussing.</p>
+    </div>
        <div type="level2">
          <head>Arabic transcriptions</head>
          <p>In general, the same transcription system as that of the EAe is

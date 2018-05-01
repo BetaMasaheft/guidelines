@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
@@ -16,10 +16,45 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <sourceDesc>
                 <p>Encoded in TEI.</p>
             </sourceDesc>
-        </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+        </fileDesc>
+        <revisionDesc>
+          <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+        </revisionDesc>
     </teiHeader>
     <text>
         <body xml:id="corpora">
+          <p>This part of the encoding is part of the cooperation with the Ethiopian Manuscripts Archives Project.</p>
+          <p>To encode a corpus of documents you have a series of specific encoding practices to follow.
+            </p>
+            <p>You need a corpus file, where only the metadata of the corpus of documents is given,
+              like in <ref target="corpus9/corpus">Les archives royales
+              du Maṣḥāfa Ṭefut à la cour de Gondar</ref>.</p>
+              <p>Documents will we encoded as <ref target="manuscriptContents">additions</ref> and follow all the guidelines in there with some more specific attentions.</p>
+<p>There needs to be a <gi>relation</gi> pointing back to the corpus file like in the following example
+</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+ <listRelation>
+    <relation active="BNFabb152#a1" name="saws:formsPartOf" passive="corpus3"/>
+  </listRelation>
+</egXML>
+<p>
+The text of the document can be normally annotated with <ref target="keywords">keywords</ref> and <ref target="named-entities-and-authority-lists">named entities</ref> but should additionally use
+<tag>seg type='interpretation'</tag> with <att>ana</att> pointing to the id of one of the interpretation keywords in the <ref target="taxonomy">taxonomy</ref>.
+</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  <q xml:lang="gez">
+                      <seg ana="#invocation" type="interpretation">በአኰቴተ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡</seg>
+                      <seg ana="#provision" type="interpretation">አነ፡ ሠራዕኩ፡ ወአውገዝኩ፡ ለሰብአ፡ ገዳም፡ ዘዋልድባ</seg>፡ <seg ana="#suscription" type="interpretation">አነ፡ ንጉሥ፡ ገላውዴዎስ፡ ዘተሰመይኩ፡ አጽናፍ፡ ሰገድ፡</seg>
+                      <seg ana="#clauses" type="interpretation">ከመ፡ ኢይቅረብ፡ ፩፡ ዘኢነበረ፡ ውስተ፡ ገዳም፡ በአፈ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ወበአፈ፡
+                          ፲ወ፭፡ ነቢያት፡ ወ፲ወ፪፡ ሐዋርያት፡ ወበአፈ፡ እግዝእትነ፡ ማርያም፡ ወላዲተ፡ አምላክ፡</seg>
+                      <seg ana="#clauses" type="interpretation">ከመ፡ ኢይባዕ፡ ጕልት፡ ውጉዘ፡ ይኩን፡ በሥልጣኖሙ፡ ለጴጥሮስ፡ ወጳውሎስ፡</seg>
+                      <seg ana="#clauses" type="interpretation">ወከመ፡ ኢይፍሐቅ፡ ዘንተ፡ ዘተጽሕፈ፡ ኀብ፡ ዝንቱ፡ መጽሐፈ፡ መንግሥት።።።</seg>
+
+                  </q>
+
+</egXML>
+<p>This can be done in the translation or in the fidal, but better on the original.</p>
+<p>This allows the corpus view with coloring of the different parts, as well as the <ref target="diplomatique.html" type="bm"></ref>comparison of diplomatic patters.</p>
         </body>
     </text>
 </TEI>

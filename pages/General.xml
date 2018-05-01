@@ -58,6 +58,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <item><ref target="summary-on-the-use-of-ref-and-corresp">use of referencing attributes</ref>
                      (<att>corresp</att> and <att>ref</att>)</item>
                <item><gi>certainty</gi></item>
+               <item><ref target="sourceAtt">Assigning an information to a specific source</ref></item>
             </list>
 
             <p>After reading these you have to look at more specific guidelines for each type of
