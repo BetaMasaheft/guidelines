@@ -72,7 +72,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <item><ref target="institution">Repositories</ref></item>
                <item><ref target="authority-files">Authority files</ref></item>
                <item><ref target="artThemes">Art Themes</ref></item>
-
                <item><ref target="corpora">Corpora</ref></item>
             </list>
 
