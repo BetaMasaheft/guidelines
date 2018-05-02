@@ -26,6 +26,7 @@
                <item><list>
                   <item>definitionWorks</item>
                   <item>structureWorks</item>
+                  <item>work-teiHeader</item>
                   <item>edition</item>
                </list>
                </item>
