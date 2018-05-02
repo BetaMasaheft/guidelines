@@ -23,41 +23,47 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <body xml:id="additionalInfo">
       <head>Additional</head>
       <p>This is used for any <hi rendition="simple:bold">other</hi> information related to the
-        manuscript. especially important is the <tag>listBibl type="catalogue"</tag> which contains
-        the main catalogue references used also for the catalogue grouping. Note <gi>surrogates</gi>
-        where for example microfilms or photographs should be recorded.</p>
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-        <adminInfo>
-          <recordHist>
-            <source>
-              <listBibl type="catalogue">
-                <bibl>
-                  <ptr target="EMML"/>
-                  <citedRange unit="volume">V</citedRange>
-                  <citedRange unit="page">354-356</citedRange>
-                </bibl>
-              </listBibl>
-            </source>
-          </recordHist>
-          <custodialHist>
-            <custEvent type="restoration" subtype="modern"/>
-          </custodialHist>
-        </adminInfo>
-        <surrogates>
-          <bibl corresp="EMML1234"/>
-          <bibl corresp="ES4567"/>
-        </surrogates>
-        <listBibl>
-          <bibl>Ms. previously unknown</bibl>
-        </listBibl>
-      </egXML>
-      <p>For custodial history events use @subtype with one of the suggested values from the <ref
+        manuscript, such as bibliographic references. Especially important is the <tag>listBibl type="catalogue"</tag> which contains
+        the main catalogue references on which the record is based. This information is also retrieved for the <ref type="bm" target="/catalogues/list">catalogue view</ref>. 
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <additional>
+            <adminInfo>
+              <recordHist>
+                <source>
+                  <listBibl type="catalogue">
+                    <bibl>
+                      <ptr target="bm:GrebTiss1935Codices"/>
+                      <citedRange unit="page">317-320</citedRange>
+                    </bibl>
+                  </listBibl>
+                  <listBibl type="secondary">
+                    <bibl>
+                      <ptr target="bm:Grebaut1912Delorme"/>
+                      <citedRange unit="page">128-132</citedRange>
+                    </bibl>
+                  </listBibl>
+                </source>
+              </recordHist>
+            </adminInfo>
+          </additional>
+        </egXML>
+      </p>
+      
+      <p>For custodial history events use <gi>custEvent</gi> with <att>subtype</att> with one of the suggested values from the <ref
           target="https://github.com/BetaMasaheft/Authority-Files/blob/master/Restoration.xml"
-          >corresponding taxonomy</ref>. oXygen should prompt them from the schema.</p>
-
-      <p>Here the <gi>msDesc</gi> or <gi>msPart</gi> ends. Check that all is well nested and that
-        all elements up to <gi>fileDesc</gi> are closed. </p>
-
+          >corresponding taxonomy</ref>. oXygen should prompt them from the schema.
+          
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <custodialHist>
+              <custEvent type="restorations" subtype="none"/>
+            </custodialHist>
+          </egXML>
+        </p>
+        
+        
+        <p>In  <gi>surrogates</gi>,
+         for example microfilms or photographs can be recorded.</p>
+     
     </body>
   </text>
 </TEI>
