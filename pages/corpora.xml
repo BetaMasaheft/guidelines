@@ -27,7 +27,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <p>To encode a corpus of documents you have a series of specific encoding practices to follow.
             </p>
             <p>You need a corpus file, where only the metadata of the corpus of documents is given,
-              like in <ref target="corpus9/corpus">Les archives royales
+              like in <ref target="corpus9/corpus" type="bm">Les archives royales
               du Maṣḥāfa Ṭefut à la cour de Gondar</ref>.</p>
               <p>Documents will we encoded as <ref target="manuscriptContents">additions</ref> and follow all the guidelines in there with some more specific attentions.</p>
 <p>There needs to be a <gi>relation</gi> pointing back to the corpus file like in the following example
@@ -54,7 +54,7 @@ The text of the document can be normally annotated with <ref target="keywordsInt
 
 </egXML>
 <p>This can be done in the translation or in the fidal, but better on the original.</p>
-<p>This allows the corpus view (e.g. <ref target="corpus3/corpus">Archives d'Aksum</ref>) with coloring of the different parts, as well as the <ref target="diplomatique.html" type="bm">comparison of diplomatic patters.</ref></p>
+<p>This allows the corpus view (e.g. <ref target="corpus3/corpus" type="bm">Archives d'Aksum</ref>) with coloring of the different parts, as well as the <ref target="diplomatique.html" type="bm">comparison of diplomatic patters.</ref></p>
         </body>
     </text>
 </TEI>
