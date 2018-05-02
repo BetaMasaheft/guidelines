@@ -41,7 +41,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Bilingual colophons can have a
                <gi>foreign</gi> element with
                <att>xml:lang</att> of the second language
-               used (see e.g. ESakm010).</p>
+               used (see e.g. <ref target="ESakm010" type="bm">ESakm010</ref>).</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <colophon xml:id="coloph1" xml:lang="gez">
+                  <locus target="#60r">60r</locus>
+                  ተጽሕፈ፡ በ፲፱፻፵ወ፬ዓ፡ም፡ በ፫መስከረም፡ ዝመጽሐፍ፡ ዘተክለ፡ ሃይማኖት፡ እምነቱ፡ ዘወሀቦ፡ ለደብረ፡ ሊባኖስ፡ ሀገሩ፡ አንበሰት፡ ፍቃዳ፡ እዛ፡ መጽሐፍ፡ ንዕሽቶይ፡ ኮይና፡ ከይትረአየኩም፡ ዓባይ፡ መጽሐፍ፡ እያ፡ እሞ፡ አብ፡ ብራና፡ ከምቶውርሱዋ፡ ግበሩ።
+                  <foreign xml:lang="tr">ሐደራኹም፡ እብለኩም፡ አነ፡ ቀ፡ ወልደ፡ ትንሣኤ፡ ጸሐፊኡ፡</foreign>
+                  ....
+               </colophon>
+            </egXML>
+            <p>Translations of the colophon should occur in the translation of the manuscript transcription, if any, inside a <tag>div type='translations'</tag>.</p>
          </div>
       </body>
    </text>
