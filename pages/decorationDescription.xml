@@ -29,7 +29,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <gi>decoDesc</gi> contains a description of
         the various decorative elements found in a manuscript. If
         multiple elements are present you can provide general
-        observation in <gi>summary</gi> using it
+        observations in <gi>summary</gi> using it
         directly into <gi>decoDesc</gi>. Within this
         text simply use <gi>ref</gi> to refer to each
         <gi>decoNote</gi> or
@@ -67,21 +67,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <p>Each decorative element in the manuscript is listed in a
         <gi>decoNote</gi> as follows:</p>
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-        <decoNote type="miniature" xml:id="d1">
-            <locus target="#1r"/>
-            <desc>drawing of a cross; black ink.</desc>
-        </decoNote>
-        <decoNote type="frame" xml:id="d2">
-            <locus target="#41r"/>
-            <desc>wide, coloured (red and black), horizontal ornamental band over col.
-                a-b, at the incipit of text I.-3), with three lateral pendants reaching l.6
-                whose the central one decorated with a cross; the horizontal band extends to
-                the top of the page(interlaces, crosses).
-            </desc>
+        <decoNote type="miniature" xml:id="d30">
+            <locus target="#108v"/>
+            <desc>A miniature of the <ref type="authFile" corresp="AT1008Descent"/> in which <persName ref="PRS5684JesusCh"/>, who is surrounded by a
+                <term key="mandorla"/>  and holds a staff <term key="cross"/>, pulls  <persName ref="PRS1385Adam">Adam</persName> out of Sheol.</desc>
         </decoNote>
     </egXML>
     <p>Include always a <gi>locus</gi> with <att>target</att> to
-        identify the position of the drawing.</p>
+        identify the position of the decoration.</p>
     <p>There should be a <ref target="artThemes">ATID</ref> for each
         subject represented as miniature/drawing in the
         manuscript/item when possible (there should also be specific
@@ -142,16 +135,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         to the relevant iconographic element using
         <gi>foreign</gi>:</p>
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-        <decoNote type="engraving" xml:id="d2">
-            <locus target="#125v"/>
-            <desc> The <ref type="authFile" corresp="AT1005Crucifixion"/>.
-                At the sides of the cross are the Two Thieves, identified by captions as
-                <foreign xml:lang="gez">ፈያታይ፡ ዘየማን፡</foreign> and
-                <foreign xml:lang="gez">ፈያታይ፡ ፀጋም፡</foreign>. The legend at the top of the
-                folio presents the
-                <q xml:lang="gez">ነዋ፡ በግዑ፡ ለእግዚአብሔር፡ ዘያአትት፡ ኀጢአተ፡ ዓለም።</q>
-            </desc>
-        </decoNote>
+        <decoDesc>
+            <decoNote type="miniature" xml:id="d1">
+                <locus target="#viii"/>
+                <desc>Miniature of <persName ref="PRS5332hezqeyas"/> lying at the feet of <persName ref="PRS3417David"/>, 
+                    identified by the caption  <foreign xml:lang="gez">
+                        <persName ref="PRS3417David">ዳዊት፡</persName> ንጉሥ።</foreign>.
+                    <q xml:lang="gez">ዘከመ፡ ተማኅፀነ፡ ንጉሠ፡ <persName ref="PRS5332hezqeyas">ሕዝቅያስ።</persName>
+                    </q>
+                </desc>
+            </decoNote>
+        </decoDesc>
     </egXML>
     <p>Manuscripts that contain exclusively miniatures and no text
         receive the keyword miniatureCollection. Any other keywords

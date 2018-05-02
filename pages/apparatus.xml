@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Critical Appartus</title>
+            <title>Critical Apparatus</title>
             <author>Pietro Liuzzo</author>
          </titleStmt>
          <publicationStmt>
@@ -26,8 +26,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body xml:id="text-apparatus">
 <div type="level2">
    <head>Critical Apparatus</head>
-   <p>Typically a <ref target="works">Work</ref> file, but also <ref target="manuscripts">manuscript</ref> transcriptions can
-have critical apparatus.</p>
+   <p>The Critical Apparatus is typically part of a <ref target="works">Work</ref> file, but  <ref target="manuscripts">manuscript</ref> transcriptions can
+contain a critical apparatus as well.</p>
    <p>We follow the TEI guidelines for
 <ref target="http://www.tei-c.org/Vault/P5/2.9.1/doc/tei-p5-doc/en/html/TC.html#TCAPLK">Location
 Referenced External Apparatus</ref> when adding apparatus notes to
@@ -61,10 +61,11 @@ of Galawdewos</ref> or the <ref target="LIT4915PhysA" type="bm">Dǝrsān za-bǝ�
      </div>
 
    </egXML>
-   <p>Note in the above example that there are more than one <tag>div type="edition"</tag>
+   
+   <p>Note that in the above example there are more than one <tag>div type="edition"</tag>
    each with a <att>xml:id</att> starting with 'ed' and that a <att>resp</att> has also been used to distinguish the two.</p>
    <p>The  <tag>div type="textpart" subtype="chapter"</tag> has been associated to a <ref target="narratives">narrative unit</ref>.</p>
-   <p>the apparatus is inline and the <att>wit</att> provides always pointers to the <gi>witness</gi> elements with that ID which point to the correct manuscript using its id.</p>
+   <p>The apparatus is inline and the <att>wit</att> provides always pointers to the <gi>witness</gi> elements with that ID which point to the correct manuscript using its ID.</p>
    <p>To separate different types of apparatus notes, use the
 attribute <att>type</att>.</p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">

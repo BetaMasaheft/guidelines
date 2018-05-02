@@ -23,14 +23,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <head>Authority files</head>
             <p>To each <gi>category</gi> in the <ref target="taxonomy">taxonomy</ref> corresponds a file in the authority-files repository.</p>
             <p>In the Authority-Files repo there are currently a series of files
-                mainly generated from lists which have nothing but a title and an id.</p>
+                mainly generated from lists which have nothing but a title and an ID.</p>
             <p>Each of these refers to one value so that they can be enriched with
                 a description which is out of the schema and they can be used for
-                relations and <gi>ref</gi> as the other Ids.</p>
+                relations and <gi>ref</gi> as the other IDs.</p>
             <p>When reordering the hierarchy of the list, please remember to use
                 the same name you give in the taxonomy.xml file also for the filename
-                and the id.</p>
-            <p>An example of description inside an authority files</p>
+                and the ID.</p>
+            <p>An example of description inside an authority file:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                 <abstract>
                     <p>A miniature showing <persName ref="PRS5684JesusCh">Jesus</persName> being arrested by the guards of the Temple,
@@ -47,7 +47,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </p>
                 </abstract>
             </egXML>
-            <p>Indeed this authority files for each keyword can also get keywords and all the rest. A special use case is for example that of <ref target="artThemes">Art Themes</ref>.</p>
+            
+            <p>Indeed these authority files for each keyword can also receive keywords and any further content, similarly to all other records. 
+                A special use case is for example that of <ref target="artThemes">Art Themes</ref>.</p>
             <p>To create a new authority file, see the <ref target="newEntry">new entry creation page</ref>.</p>
             
         </body>
