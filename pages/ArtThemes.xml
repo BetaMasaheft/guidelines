@@ -17,21 +17,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change> 
+         <change who="DR" when="2018-05-02">Updated examples and fixed links</change> </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="artThemes">
          <div type="level1">
             <head>Getting Started</head>
-            <p>Each Art Theme gets a file with an ID assigned (=
-  <gi>ATID</gi>). Before creating a new
-  <gi>ATID</gi> make sure it does not already exist, if
+            <p>Each Art Theme gets a file with an ID assigned (= ATID). Before creating a new
+  ATID make sure it does not already exist, if
   you create the file on the app make sure you:
   <hi rendition="simple:bold">a)</hi> add the ID to the taxonomy in the
   Art Themes section; <hi rendition="simple:bold">b)</hi> create a new
   file and save it in new; <hi rendition="simple:bold">c)</hi> commit
   the newly created file.</p>
-            <p>The ID Should be concise, and should ideally allow identification
+            <p>The ID should be concise, and should ideally allow identification
   of Theme/Object:</p>
             <list type="unordered">
                <item>
@@ -62,55 +62,64 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </div>
          <div type="level1">
             <head>Description</head>
-            <p>Each <gi>ATID</gi> should contain a brief description
+            <p>Each ATID should contain a brief description
   outlining its subject-matter and principal recurring features. If more
   than one typology is attested for a particular art theme in the
   Ethiopian tradition, provide a brief description of the features of
   each typology.</p>
             <p>In addition to this basic information you may choose to provide
-  references to <gi>WorkIDs</gi> that inform the content
-  of the <gi>ATID</gi> (e.g The Crucifixion will include a
+  references to Work IDs that inform the content
+  of the ATID (e.g The Crucifixion will include a
   reference to the Gospels) and/or, where possible, to the relevant
-  passages of that work with <att>cRef</att>. Finally, the
+  passages of that work with <att>cRef</att>:
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <abstract>
+                     <p> Miniature showing <persName ref="PRS5684JesusCh">Jesus</persName> in the Garden of Gethsemane before his Arrest,
+                        (<ref cRef="urn:cts:greekLit:tlg0031.tlg001.perseus-grc1:26.36">Mt 26:36</ref>;
+                        <ref cRef="urn:cts:greekLit:tlg0031.tlg002.perseus-grc1:14.32"> Mk 14:32</ref>;
+                        <ref cRef="urn:cts:greekLit:tlg0031.tlg003.perseus-grc1:22.39">Lk 22:39</ref>;).
+                     </p>
+                  </abstract>
+               </egXML>
+               Finally, the
   description can be expanded to mention whether a theme type is
   attested in other traditions, in which case provide relevant
   bibliographic data.</p>
-            <p>Similarly, <gi>WorkIDs</gi> can be used to specify
+            <p>Similarly, WorkIDs can be used to specify
   the particular scene in a miniature with a generic
-  <gi>ATID</gi> within a
+  ATID within a
   <gi>decoNote</gi>.</p>
             <p>Ex. 2</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<abstract>
- <p> 
- A miniature showing the Crucifixion of <persName ref="PRS5684JesusCh">Jesus</persName>.
- The scene may include a number of additional figures, such as the
- <persName ref="PRS6819Mary">Virgin Mary</persName> or <persName ref="PRS5695John">John
- </persName>, the scene typically follows the account of the 
- <title ref="LIT1560Gospel">Gospels</title>. The three main typologies attested 
- in the Ethiopian tradition are:
-  <list>
-    <item>Type 1 <desc>There is an <term key="emptycross">Empty Cross</term> and 
-    there are figures associated with it (i.e. it is not just an interlaced cross).
-    </desc></item>
-    <item>Type 2 <desc>The body of <term key="livingjesus">Living Jesus</term> is 
-    nailed to the cross.</desc></item>
-    <item>Type 3 <desc>The body of the <term key="deadjesus">Dead Jesus</term> is 
-    nailed to the cross.</desc></item>
-  </list>
- </p>
-</abstract>
+               <abstract>
+                  <p> A miniature showing the Crucifixion of  <persName ref="PRS5684JesusCh">Jesus</persName>.
+                     The scene may include a number of additional figures, such as the  <persName ref="PRS6819Mary">Virgin Mary</persName> or
+                     <persName ref="PRS5695John">John</persName>, the scene typically follows the account of the
+                     <ref type="work" corresp="LIT1560Gospel">Gospels</ref>, but  may include iconographic elements inspired by
+                     apocryphal sources.
+                     
+                     The three main typologies attested in the Ethiopian tradition are:
+                     <list>
+                        <item>Type 1 <desc>There is an Empty Cross and there are figures associated with it 
+                           (i.e. it is not just an interlaced cross).</desc>
+                        </item>
+                        <item>Type 2 <desc>The body of  Living Jesus is nailed to the cross.</desc>
+                        </item>
+                        <item>Type 3 <desc>The body of the Dead Jesus is nailed to the cross.</desc>
+                        </item>
+                     </list>
+                  </p>
+               </abstract>
 </egXML>
             <p>
                <hi rendition="simple:bold">N.B.</hi> Typologies are encoded using
   keywords, see the
-  <ref target="https://github.com/BetaMasaheft/Documentation/wiki/taxonomies">Authority-Files
-  Wiki</ref> for further details.</p>
+               <ref target="authority-files"/> for further details.</p>
             <p>Consider including relevant keywords (e.g. The Theme of the
   Crucifixion should contain keywords such as Bible; Crucifixion;
   Passion of Jesus; New Testament) to link it to other works
   (artistic/literary) and content that is relevant to that
-  <gi>ATID</gi>, these are placed after
+  ATID, these are placed after
   <gi>abstract</gi>.</p>
             <p>Ex. 3</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -131,18 +140,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   which case strive to include a reference that provides at least some
   basic information and additional references to the topic. Ideally also
   include a reference to one or more works dealing with the broader
-  history of the <gi>ATID</gi> in art. Before adding the
-  bibliography, make sure you have carefully read our
-  <ref target="https://github.com/BetaMasaheft/Documentation/wiki/zoteroguidelines">guidelines
-  on the matter</ref> and
-  <ref target="https://github.com/BetaMasaheft/Documentation/wiki/guidelines#bibliographic-references">here</ref>.</p>
+  history of the ATID in art. Before adding the
+               bibliography, make sure you have carefully read our guidelines
+               on the matter
+               <ref target="zotero">here</ref> and
+  <ref target="bibliographic-references">here</ref>.</p>
             <p>Ex. 4</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<listBibl type="secondary">
-  <bibl>
-   <ptr target="bm:1997BalickaCrucifixion"/>
-  </bibl>
-</listBibl>
+               <listBibl type="secondary">
+                  <bibl>
+                     <ptr target="bm:Mathews1991ArmenianIconography"/>
+                     <citedRange unit="pages">107b-109a</citedRange>
+                  </bibl>
+               </listBibl>
 </egXML>
             <p>That is all, you are good to go!</p>
          </div>
