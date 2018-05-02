@@ -91,7 +91,7 @@ guidelines for
             <p>(same for <gi>placeName</gi> and <gi>region</gi>)</p>
 
          <div type="level2">
-            <head>Aignment</head>
+            <head>Alignment</head>
             <p>Use <att>sameAs</att> inside <gi>place</gi> to declare
   the authority file. Prefer Wikidata if an item is present, otherwise
   use geonames.</p>
@@ -216,7 +216,7 @@ Kingdom)</item>
          </div>
          <div type="level2">
             <head>Tābots</head>
-            <p>For tābotat please use an <tag>ab type='tabot’</tag>
+            <p>For tābots please use an <tag>ab type='tabot’</tag>
   including the number of the tābots in a <gi>measure</gi> and <tag>persNames type='tabot'</tag> for
   each of the dedicatory persons. Avoid using <att>type</att> for other persons
   mentioned in the texts.</p>

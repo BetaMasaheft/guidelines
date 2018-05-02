@@ -47,7 +47,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </p>
                 </abstract>
             </egXML>
-            <p>Indeed this authority files for each keyword can also get keywords and all the rest. A special use case is for example that of <ref target="ArtThemes">Art Themes</ref>.</p>
+            <p>Indeed this authority files for each keyword can also get keywords and all the rest. A special use case is for example that of <ref target="artThemes">Art Themes</ref>.</p>
             <p>To create a new authority file, see the <ref target="newEntry">new entry creation page</ref>.</p>
             
         </body>

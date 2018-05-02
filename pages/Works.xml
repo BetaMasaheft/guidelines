@@ -37,6 +37,7 @@ please read <ref target="definitionWorks">Definition of Works and Narrative Unit
             <list>
                <item><ref target="definitionWorks">Definition of Works and Narrative Units</ref></item>
                <item><ref target="structureWorks">General structure of the Work record</ref></item>
+               <item><ref target="work-teiHeader">Work Description</ref></item>
                <item><ref target="edition">Edition and textparts</ref></item>
             </list>
 

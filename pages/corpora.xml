@@ -54,7 +54,8 @@ The text of the document can be normally annotated with <ref target="keywordsInt
 
 </egXML>
 <p>This can be done in the translation or in the fidal, but better on the original.</p>
-<p>This allows the corpus view (e.g. <ref target="corpus3/corpus">Archives d'Aksum</ref>) with coloring of the different parts, as well as the <ref target="diplomatique.html" type="bm">comparison of diplomatic patters.</ref></p>
+<p>This allows the corpus view (e.g. <ref target="corpus3/corpus">Archives d'Aksum</ref>) with coloring of the different parts, as well as the 
+    <ref target="diplomatique.html" type="bm">comparison of diplomatic patterns.</ref></p>
         </body>
     </text>
 </TEI>
