@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
@@ -24,7 +24,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <head>Additional</head>
       <p>This is used for any <hi rendition="simple:bold">other</hi> information related to the
         manuscript, such as bibliographic references. Especially important is the <tag>listBibl type="catalogue"</tag> which contains
-        the main catalogue references on which the record is based. This information is also retrieved for the <ref type="bm" target="/catalogues/list">catalogue view</ref>. 
+        the main catalogue references on which the record is based. This information is also retrieved for the <ref type="bm" target="/catalogues/list">catalogue view</ref>.
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
           <additional>
             <adminInfo>
@@ -48,22 +48,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           </additional>
         </egXML>
       </p>
-      
-      <p>For custodial history events use <gi>custEvent</gi> with <att>subtype</att> with one of the suggested values from the <ref
-          target="https://github.com/BetaMasaheft/Authority-Files/blob/master/Restoration.xml"
-          >corresponding taxonomy</ref>. oXygen should prompt them from the schema.
-          
+
+      <p>For custodial history events use <gi>custEvent</gi> with <att>subtype</att> with one of the suggested values from the corresponding taxonomy.
+
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <custodialHist>
               <custEvent type="restorations" subtype="none"/>
             </custodialHist>
           </egXML>
         </p>
-        
-        
+
+
         <p>In  <gi>surrogates</gi>,
          for example microfilms or photographs can be recorded.</p>
-     
+
     </body>
   </text>
 </TEI>
