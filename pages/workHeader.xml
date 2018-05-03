@@ -135,7 +135,7 @@ title in the language of the original.</p>
 </egXML>
 <!--<p>containing IDs of the work pointing eventually to the title in
 titleStmt.</p> This is not entirely clear-->
-
+<p>You cannot have both <gi>p</gi> and <gi>listBibl</gi> in <gi>sourceDesc</gi>, so if you also need paragraphs, add another <gi>sourceDesc</gi>.</p>
 </div>
 
 <div type="level2">
