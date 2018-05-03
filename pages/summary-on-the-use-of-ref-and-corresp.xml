@@ -171,7 +171,7 @@ anchor) points always to a <att>xml:id</att> WITHIN THE DOCUMENT</item>
                  <p>If you point to an internal anchor in a <att>xml:id</att> inside the document you are working with, use # to begin with and your editor should prompt for you a list of available IDs.</p>
              </item>
              <item>
-                 <p>If you point to an external id don't start with #, just enter the ID. That is why
+                 <p>If you point to an external ID don't start with #, just enter the ID. That is why
                      <gi>witness</gi> does not take that, as
                      <att>active</att>,
                      <att>passive</att> inside

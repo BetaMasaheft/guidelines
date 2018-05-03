@@ -98,7 +98,7 @@ the entry is in a new teiHeader//titleStmt/title</p>
             <p>Epithet should be recorded as
   <tag>addName type='epithet'</tag> and should have their
   <att>xml:id</att> with a chosen value. Assuming the
-  <att>xml:id</att> is in this case "SaviourOfTheWorld" id to be copied
+  <att>xml:id</att> is in this case "SaviourOfTheWorld" ID to be copied
   there will be the like 'PRS5684JesusCh#SaviourOfTheWorld'</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <persName xml:lang="gez" xml:id="n1">ኢየሱስ፡ ክርስቶስ፡</persName>

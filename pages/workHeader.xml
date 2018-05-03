@@ -113,7 +113,7 @@ work C in arabic, you will need a relation of authorship between A and
 B (A isAuthorOf B) and the relation stating the fact that B is a
 translation of C (B isLooseTranslationOf C). If a digital edition of
 the translated work exists, please use that as a value in the
-relation. If no such edition exist you might point to the id of the
+relation. If no such edition exist you might point to the ID of the
 title in the language of the original.</p>
 
 </div>
@@ -298,11 +298,11 @@ as in the following example</p>
 </egXML>
 <p>any other date relevant to the work elaboration or life could be
 added in a date element, possibly pointing to one of the placeNames in
-the file with a proper id as in the example below.</p>
+the file with a proper ID as in the example below.</p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <date when="1555-06-23" corresp="#Pdamot">23 Sane (17 June) 1555</date> in <placeName ref="LOC2488Damot" xml:id="Pdamot">Damot</placeName>
 </egXML>
-<p>It is important that the id of the referred place starts with P
+<p>It is important that the ID of the referred place starts with P
 because there are cases where corresp is already used to point to
 another id, e.g. a work in another tradition title. Look at this
 fictitious example, where I have entered a placeName with Q item id

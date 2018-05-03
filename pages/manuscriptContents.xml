@@ -221,7 +221,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p>
                     <att>xml:id</att> will use "a" and a
                     consecutive number. In case of other contents (varia) this
-                    will have an id with "e".</p>
+                    will have an ID with "e".</p>
                 <p>If the language of the addition is known but no excerpt is
                     copied, use an empty <gi>q</gi> as in the
                     following example from BLadd16187.</p>

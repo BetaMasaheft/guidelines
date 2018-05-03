@@ -36,10 +36,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </div>
             <div type="level3">
                 <head>Editing the XML</head>
-                <p>You can use any editor you like to edit the XML files. We are going to deal here
-                    only with the guidelines files, not with the editing of the schema.</p>
-                <p>There is indeed a Beta maṣāḥǝft Guidelines Schema which validates the files you
-                    are pushing to the app and will notify you if anything goes wrong. Actually,
+                <p>You can use any editor you like to edit the XML files. This page describes only the editing of the guidelines, for the editing of the schema
+                    see
+                    <ref target="editingSchema"/>.</p>
+                <p>There is  a Beta maṣāḥǝft Guidelines Schema which validates the files you
+                    are pushing to the app when editing the guidelines and will notify you if anything goes wrong. Actually,
                     there are processing instructions in every single file that should allow your
                     editor to validate your XML BEFORE you push it to the repo. </p>
             </div>
@@ -49,8 +50,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     specified in the schema should not need further clarification, so, e.g. there is
                     no need to repeat a list of values for an attribute if this is in the
                     schema.</p>
-                <p>There are Pages, Table of Contents and Elements beside the schema folder (which
-                    is the Beta maṣāḥǝft Guidelines Schema). </p>
+                <p>Besides the schema folder (which
+                    is the Beta maṣāḥǝft Guidelines Schema).</p>
                 <list>
                     <item>Pages are descriptive pieces like this one, trying to explain how to
                         encode something.</item>
@@ -102,7 +103,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p>If you really want to make something bold or italics use <tag>hi
                         rendition="simple:bold"</tag> and <tag>hi
                     rendition="simple:italic"</tag></p>
-                <p>In a Table of contents file, please only use <gi>list</gi> and enter as content of the <gi>item</gi>s only the id of the page you want the ToC to point to.</p>
+                <p>In a Table of contents file, please only use <gi>list</gi> and enter as content of the <gi>item</gi>s only the ID of the page you want the ToC to point to.</p>
             </div>
         </body>
     </text>

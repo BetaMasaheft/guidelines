@@ -101,7 +101,7 @@ guidelines for
                <placeName type="alt">Wäggära</placeName>
             </place>
 </egXML>
-            <p>GN id number should use a prefix "gn:".</p>
+            <p>GN ID number should use a prefix "gn:".</p>
 
             <p>
                <att>type</att> contains a value from the

@@ -27,11 +27,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 
          <div type="level2">
-            <head>Edition statement, Source statement, and encoding
-  description</head>
+            <head>Edition statement and encoding description</head>
             <p>These elements should be provided in the header for texts that we
-  provide edition for. The Edition statement should specify the origin
-  of the text. The encoding description specifies the principles used
+               provide an edition for. The <gi>editionStmt</gi> should specify the origin
+               of the text. The <gi>encodingDesc</gi> specifies the principles used
   when encoding, when known (e.g. transcription, specific tag sets,
   etc.)</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -108,9 +107,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Note that after each word there should be a separator or
   punctuation without space.</p>
             <p>If the text contains verses we will use <gi>l</gi> as
-  in the example above. Also <gi>lb</gi> can be used to
-  mark linebreaks, for example in Inscriptions. Be carefull:
-  <gi>ab</gi> should be only in the lowest level div
+  in the example above.  <gi>lb</gi> can also be used to
+  mark linebreaks, for example in Inscriptions. Be careful:
+  <gi>ab</gi> should be only used in the lowest level div
   nesting!</p>
             <p>To identify a <gi>div</gi> you can use a <gi>label</gi></p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">

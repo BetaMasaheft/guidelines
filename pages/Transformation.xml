@@ -156,7 +156,7 @@ you have checked out and updated you ScAthiop repo.</p>
             </item>
             <item>
                <p>There are a series of tests embedded in this transformation, to
-    help check your contents. For example if a person id does not exist,
+    help check your contents. For example if a person ID does not exist,
     you will see a bold red sentence telling you about it. Fix the issue
     and the transform will be fine.</p>
             </item>

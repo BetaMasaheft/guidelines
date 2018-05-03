@@ -156,7 +156,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <att>resp</att>
                   </cell>
                   <cell>
-                     with the id of responsible
+                     with the ID of responsible
                   </cell>
                </row>
                <row>
@@ -227,7 +227,7 @@ notBefore="1540"
 notAfter="1559">ትግራይ፡</placeName>
  ከመ፡ ይርአይ፡ መርዔቶ፡ bእለ፡ ህየ፡ በጽድቅ፡ ወይዋሄ፡ cሕዝቦ፡ በርትዕ። ወበጽሐ፡</ab>
 </egXML>
-            <p>to choose which id to use consider the following:</p>
+            <p>to choose which ID to use consider the following:</p>
             <list type="unordered">
                <item>
                   <p>if it is a place of interest for ethiopian studies or attested
@@ -236,16 +236,16 @@ notAfter="1559">ትግራይ፡</placeName>
                </item>
                <item>
                   <p>if it is an ancient place but not in ethiopia, like Jordan,
-      Rome, etc. then search pleaides and use a pleiades id prefixed
+      Rome, etc. then search pleaides and use a pleiades ID prefixed
       with pleaides: e.g. for Jordan River use plaeides:687932</p>
                </item>
                <item>
                   <p>if it is an ancient place not of our interest and not relevant
-      for pleiades, check in wikidata and enter the item id (starting
+      for pleiades, check in wikidata and enter the item ID (starting
       with Q)</p>
                </item>
             </list>
-            <p>you can also add a <att>resp</att> with the id of one of our person records
+            <p>you can also add a <att>resp</att> with the ID of one of our person records
   or editors and a <att>source</att> with a list of bm:tags from the Zotero
   Ethiostudies group library.</p>
          </div>

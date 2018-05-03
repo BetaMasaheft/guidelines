@@ -102,7 +102,7 @@ taken from <locus target="#6r"/>.
                      <p>Give a <att>xml:id</att> to each item in the
             list to be able to refer to this unit, using "q" and a
             consecutive number. You can also nest lists, following the
-            same id pattern used for
+            same ID pattern used for
             <ref target="guidelines#identifiers">
                            <gi>msPart</gi>
                         </ref>
@@ -272,7 +272,7 @@ commented out as no example can be found, but there was an example and an implem
 <condition key="deficient"/>
 </egXML>
                      <p>value of <att>key</att> is the corresponding
-            id from the state of preservation taxonomy proposed from the
+            ID from the state of preservation taxonomy proposed from the
             schema.</p>
                   </div>
                   <div type="section">
@@ -302,7 +302,7 @@ commented out as no example can be found, but there was an example and an implem
                      <p>If the layout measurement refer to a specific part of the
             manuscript a <gi>locus</gi> element can be
             used within <gi>layout</gi> to provide the
-            range or a <att>corresp</att> with the id of the <gi>msPart</gi>, <gi>msItem</gi> or
+            range or a <att>corresp</att> with the ID of the <gi>msPart</gi>, <gi>msItem</gi> or
             quire in the collation, whichever might be relevant.</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
   <layout corresp="#p.1.1_i1" columns="1" writtenLines="18">

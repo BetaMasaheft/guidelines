@@ -47,16 +47,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   British English; <hi rendition="simple:bold">b)</hi> include Ge'ez
   title; <hi rendition="simple:bold">c)</hi> consider including
   alternative titles used in principal art projects (e.g. ICONCLASS,
-  Artstor, Index of Christian Art).</p>
+  Artstor, Index of Christian Art). Minimally, it has to contain an English title:</p>
             <p>Ex. 1</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <titleStmt>
-  <title xml:lang="gez" xml:id="t1">ስቅለት</title>
-  <title xml:lang="gez" corresp="#t1" type="normalized">sǝqǝlat</title>
-  <title xml:lang="en" corresp="#t1">Crucifixion</title>
-  <title xml:lang="gez" type="alt" xml:id="t2">ሥዕለ፡ ሥቅለት</title>
-  <title xml:lang="gez" corresp="#t2" type="normalized">śǝʿǝla sǝqǝlat</title>
-  <title xml:lang="en" corresp="#t2">Image of the Crucifixion</title>
+   <title>Crucifixion of Jesus</title>
 </titleStmt>
 </egXML>
          </div>
