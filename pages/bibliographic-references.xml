@@ -32,7 +32,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>References to the different manuscripts used for the editions can be done with a link directly to a
   <gi>witness</gi>'s or a <gi>listWit</gi>'s
   <att>xml:id</att> like in <ref type="bm" target="LIT2317Senodo">LIT2317Senodo</ref> and <ref type="bm" target="LIT1709Kebran">LIT1709Kebran</ref>:
-               
+
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <listBibl type="editions">
                   <bibl>
@@ -43,7 +43,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </bibl>
                </listBibl>
                </egXML>
-            
+
             </p>
             <p>Secondary bibliographic references given in catalogues about a
   certain work can also be included here, as they do not belong to the
@@ -98,6 +98,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <p>When adding records to the Zotero Group Library, please follow
     the principles <ref target="zotero">at this
     page</ref>.</p>
+</div>
+<div type="level2">
+  <p>You can use a <att>corresp</att> to link a <gi>bibl</gi> element to a
+part of the file with an <att>xml:id</att>.</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  <bibl corresp="#t3arabic">
+  <ptr target="bm:Enger1856Transitu"/>
+  </bibl>
+</egXML>
+<p>The above example would point the bibliographical reference directly to the <gi>title</gi> with that ID.</p>
 </div>
       </body>
    </text>
