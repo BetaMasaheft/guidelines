@@ -43,18 +43,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <item><ref target="revisions">How to record the activity done on any
                   file</ref></item>
                <item><ref target="tei">Adding a <att>type</att> to distinguish different
-                     entities.</ref></item>
+                     entities</ref></item>
                <item><ref target="spaces">How to deal with white spaces.</ref></item>
                <item><ref target="titleStmtInfo">General information in
-                  <gi>titleStmt</gi>.</ref></item>
-               <item><ref target="entities-id-structure">How to assign IDs.</ref></item>
-               <item><ref target="references">How to make links.</ref></item>
+                  <gi>titleStmt</gi></ref></item>
+               <item><ref target="entities-id-structure">How to assign IDs</ref></item>
+               <item><ref target="references">How to make links</ref></item>
                <item><ref target="bibliographic-references">How to deal with
-                  bibliography.</ref></item>
+                  bibliography</ref></item>
                <item><ref target="languageIntro">Making statements about language used in the
-                  file.</ref></item>
+                  file</ref></item>
                <item><ref target="named-entities-and-authority-lists">Marking up Named Entities
-                     (personal names, place names, titles, dates).</ref></item>
+                     (personal names, place names, titles, dates)</ref></item>
                <item><ref target="summary-on-the-use-of-ref-and-corresp">use of referencing attributes</ref>
                      (<att>corresp</att> and <att>ref</att>)</item>
                <item><gi>certainty</gi></item>
@@ -63,7 +63,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </list>
 
             <p>After reading these you have to look at more specific guidelines for each type of
-               file.</p>
+               file:</p>
             <list>
                <item><ref target="manuscripts">Manuscripts</ref></item>
                <item><ref target="works">Text Units</ref></item>

@@ -23,11 +23,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body xml:id="event">
          <head>event</head>
          <p>Any event affecting the definition of the place can be encoded
-    and described in an event element as below. Examples are made up and
-    will be replaced by real one asap.</p>
+    and described in an <gi>event</gi> element as below. Examples are made up and
+    will be replaced by real ones asap.</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <event when="1201" source="#Eae3-author">
-        <desc xml:lang="en">destruction of the city from the arabs</desc>
+        <desc xml:lang="en">destruction of the city from the Arabs</desc>
     </event>
 </egXML>
          <p>event can take also @notBefore and @notAfter, @from and @to.</p>

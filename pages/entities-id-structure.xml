@@ -56,31 +56,39 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </item>
             <item>
                <p>Repositories = INS0030Addaqaharsi (INS + 4 digit number +
-        initials)</p>
+        initials or keyword)</p>
             </item>
             <item>
                <p>Art Themes = AT1005Crucifixion (AT + incremental number +
         title of art theme)</p>
             </item>
          </list>
-         <p>The manuscript ID should be composed of: - The abbreviation of
-            the repository holding the manuscript, as it is contained in the
-            insitution ID, written in capitals - The abbreviation of the
-            collection to which the manuscript belongs - a numeral: BAVet1 The
+         <p>The manuscript ID should be composed of: 
+            <list type="unordered">
+               <item><p>The abbreviation of the repository holding the manuscript, as it is contained in the institution ID, written in capitals</p> </item>
+            <item><p>The abbreviation of the collection to which the manuscript belongs</p> </item>
+            <item><p>a numeral: BAVet1</p></item>
+            </list>
+            The
             collection and the numeral should be given as they are in the
             current/most commonly used official shelfmark of the manuscript.</p>
          <p>If the manuscript has not yet been catalogued and/or has no shelf
             mark, an ID has to created individually, following as much as
-            possible the usual process_ - The abbreviation of the repository
-            holding the manuscript, as it is contained in the repository ID,
-            written in capitals - If no more information is available, the ID
-            can be created with a work contained in the manuscript and a
-            numeral, such as: TMChronicle1</p>
+            possible the usual process:
+            <list type="unordered">
+               <item><p>The abbreviation of the repository
+                  holding the manuscript, as it is contained in the repository ID,
+                  written in capitals</p> </item>
+               <item><p>If no more information is available, the ID
+                  can be created with a work contained in the manuscript and a
+                  numeral, such as: TMChronicle1</p> </item>
+            </list>
+            </p>
 
         <div type="level2">
           <p>
             <table>
-            <row role="label"><cell>Element</cell><cell>ID patter</cell></row>
+            <row role="label"><cell>Element</cell><cell>ID pattern</cell></row>
             <row><cell>msPart</cell><cell>p\d+[\.\d+]+</cell></row>
             <row><cell>msItem</cell><cell>p\d+[\.\d+]+_i\d+[\.\d+]+</cell></row>
             <row><cell>binding decoNote</cell><cell>b\d+</cell></row>
