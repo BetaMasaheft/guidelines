@@ -116,7 +116,10 @@ part of the file with an <att>xml:id</att>.</p>
                  </bibl>
 </egXML>
 
-<p>In this second example the <att>corresp</att> points to a <gi>witness</gi> with <att>xml:id</att> </p>
+<p>In this second example the <att>corresp</att> points to a <gi>witness</gi> with <att>xml:id</att>. </p>
+<p>If you want to encode a bibliographic reference provided by a catalogue to a editions of a text and catalogue descriptions of manuscripts featuring the same work, please add bibliography to the work or manuscript in question directly.</p>
+
+
 </div>
       </body>
    </text>
