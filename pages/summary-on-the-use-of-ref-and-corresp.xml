@@ -154,6 +154,16 @@ anchor) points always to a <att>xml:id</att> WITHIN THE DOCUMENT</item>
                </cell>
                <cell/>
             </row>
+            <row>
+               <cell>
+                  <gi>bibl</gi>
+               </cell>
+               <cell>
+               </cell>
+               <cell>
+                  <p>X</p>
+                </cell>
+            </row>
          </table>
          </p>
          <list type="unordered">
