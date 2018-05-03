@@ -31,7 +31,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <funder>Akademie der Wissenschaften in Hamburg</funder>
 </titleStmt>
 </egXML>
-         <p>Editors are referred to only by
+         <p>Editors (editor of the digital edition in the TEI file, which might happen to be a reworked copy of a printed edition by the same editor) are referred to only by
     <att>key</att>. A <ref target="TEAMid">list of ids
     of project members and editors is here</ref> and should be the same as the one in the schema for <gi>editor</gi> and <gi>change</gi>.
          </p>

@@ -108,6 +108,15 @@ part of the file with an <att>xml:id</att>.</p>
   </bibl>
 </egXML>
 <p>The above example would point the bibliographical reference directly to the <gi>title</gi> with that ID.</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+
+                 <bibl corresp="#blorient481">
+                    <ptr target="bm:Wright1877BM"/>
+                    <citedRange unit="page">2-4</citedRange>
+                 </bibl>
+</egXML>
+
+<p>In this second example the <att>corresp</att> points to a <gi>witness</gi> with <att>xml:id</att> </p>
 </div>
       </body>
    </text>
