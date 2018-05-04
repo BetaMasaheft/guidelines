@@ -76,7 +76,7 @@ This manuscript is in the same hand as <ref type="hand" corresp="ESap002#h2"/>
 <div  type="level2">
   <head>External links</head>
     <p>You can also use <att>target</att> to point to
-external resources. In this case, please enter the full url,
+external resources. In this case, please enter the full URL,
 starting with http.</p>
          <p>To link to a manuscript in vHMML, please, use the provided
     permalink in the metadata.</p>

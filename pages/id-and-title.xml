@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>ID and Title</title>
+            <title>titleStmt of Manuscript Records</title>
             <author>Pietro Liuzzo</author>
          </titleStmt>
          <publicationStmt>
@@ -21,7 +21,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body xml:id="titleStmtInfo">
-         <head>Title and file editors</head>
+         <div type="level2">
+            <head>Title and file editors</head>
 
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <titleStmt>
@@ -32,7 +33,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 </titleStmt>
 </egXML>
          <p>Editors (editor of the digital edition in the TEI file, which might happen to be a reworked copy of a printed edition by the same editor) are referred to only by
-    <att>key</att>. A <ref target="TEAMid">list of ids
+    <att>key</att>. A <ref target="TEAMid">list of IDs
     of project members and editors is here</ref> and should be the same as the one in the schema for <gi>editor</gi> and <gi>change</gi>.
          </p>
          <p>The title should be intended as a generic title for this
@@ -40,7 +41,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     title should be made of all the normalized titles of the works
     contained in the manuscript. If there are many different works which
     would make the title too long, it is possible to create a more
-    generic title where this makes sense.</p>
+    generic title where this makes sense.</p></div>
 
       </body>
    </text>

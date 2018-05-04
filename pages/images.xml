@@ -22,21 +22,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body xml:id="images">
          <head>Images</head>
-         <p>To link to an external set of images, use the
-    <att>facs</att> attribute. In
-    the <gi>idno</gi> descendant of the main <gi>msDesc</gi> add a
-    <att>facs</att> containing the base url.</p>
-         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<idno facs="http://gallica.bnf.fr/ark:/12148/btv1b52000941g"/>
-</egXML>
-         <p>A link to a digital copy of a manuscript can be added to the main
-    identifier:using
-            <tag>idno facs="http://gallica.bnf.fr/ark:/12148/btv1b52000460z"</tag>
-         for example, as in <ref target="BNFet150" type="bm">BnF Éthiopien 150</ref></p>
-         <p>then in <gi>locus</gi> together with the other
-    attributes add again the <att>facs</att> containing
+
+       <div type="level2">
+          <head>Links to Digital Copies of Manuscripts</head>
+          <p>A link to a digital copy of a manuscript can be added to the main
+    identifier by adding in the <gi>idno</gi> descendant of the main <gi>msDesc</gi> a <att>facs</att> attribute:
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <idno facs="http://gallica.bnf.fr/ark:/12148/btv1b52507611w">BnF Éthiopien 14</idno>   
+            </egXML>
+         for example, as in <ref target="BNFet14" type="bm">BnF Éthiopien 14</ref>.</p>
+         <p>In <gi>locus</gi> together with the other
+    attributes, add again the <att>facs</att> containing
     only the reference to the first page in the range indicated
-    <hi rendition="simple:italic">exactly</hi> as it appears in the url
+    <hi rendition="simple:italic">exactly</hi> as it appears in the URL
     for that page (so, not the folio number!).</p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
     <locus target="#30v" facs="f62"/>
@@ -44,10 +42,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <locus from="31" to="33" facs="f62"/>
     <locus from="31" facs="f62"/>
 </egXML>
+          
+          <p>You can also add the exact link to a page in a
+             <att>facs</att> in each <gi>pb</gi>
+             inside the transcription of the manuscript.</p>
+          
+       </div>
+         
+         <div type="level2">
+            <head>Links to images hosted on our server</head>
          <p>Links to images hosted on our server in the additional disks,
            should use the relevant part of the path, i.e.
     BMQ/003/BMQM-003 for example. If the number of the photos are
-    separated with two underscores, then KAE/011/KAE-011_ see for example <ref target="ESkae011" type="bm">KAE-011</ref>.</p>
+    separated with two underscores, then "KAE/011/KAE-011_", see for example <ref target="ESkae011" type="bm">KAE-011</ref>:</p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
   <msIdentifier>
 <repository ref="INS0234KAE"/>
@@ -55,14 +62,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <idno facs="KAE/011/KAE-011_" n="66">KAE-011</idno>
 </msIdentifier>
   </egXML>
-  <p><att>n</att> in the example above is the total number of images and it is a foundamental information to produce the links and the IIIF presentation manifest used by the viewer.</p>
+  <p><att>n</att> in the example above is the total number of images and it is a fundamental information to produce the links and the IIIF presentation manifest used by the viewer.</p>
+         </div>
 
-         <p>Links to the images of the Vatican Library MSS are now supported,
-    by adding in the idno/@FACS the manifest.json
-    url which can be found in the digivatlib on the left info page
-    https://digi.vatlib.it/view/MSS_Vat.et.1, e.g.
-    https://digi.vatlib.it/iiif/MSS_Vat.et.1/manifest.json to add link
-    to loci, add <att>facs</att> attributes. Please do not
+   <div type="level2">
+<head>Links to the Vatican Libaray</head>
+      <p>Links to the images of the Vatican Library MSS are now supported,
+    by adding in the <gi>idno</gi> <att>facs</att> the manifest.json
+    URL which can be found in the digivatlib on the left info page
+            <ref target="https://digi.vatlib.it/view/MSS_Vat.et.1"/>, e.g.
+            <ref target="https://digi.vatlib.it/iiif/MSS_Vat.et.1/manifest.json"/>.</p>
+         <p>To add the link to a 
+    <gi>locus</gi>, add <att>facs</att> attributes. Please do not
     forget that the folio number (in the following example 3r) does not
     necessarily corresponds to the URL number (here 0006).</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -71,19 +82,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <title type="complete">Maqdǝma wangel (Introduction to the Gospels)</title>
 </msItem>
 </egXML>
-         <p>Some Manuscripts have images published which are not accessible
-    via IIIF, please, in these cases add inside TEI, between
+   </div>
+         <div type="level2">
+            <head>Link to images not accessible via IIIF</head>
+            <p>Some Manuscripts have images published which are not accessible
+    via IIIF, please, in these cases add inside <gi>TEI</gi>, between
     <gi>teiHeader</gi> and <gi>text</gi> a
     <gi>facsimile</gi> element</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
     <facsimile>
         <graphic url="http://dfg-viewer.de/show/?set[mets]=http%3A%2F%2Fsammlungen.ub.uni-frankfurt.de%2Foai%2F%3Fverb%3DGetRecord%26metadataPrefix%3Dmets%26identifier%3D5247786"/>
     </facsimile>
-</egXML>
-         <p>You can also add the exact link to a page in a
-    <att>facs</att> in each <gi>pb</gi>
-    inside the transcription of the manuscript.</p>
-
+</egXML></div>
+         
       </body>
    </text>
 </TEI>

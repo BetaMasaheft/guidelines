@@ -79,7 +79,7 @@ guidelines for
             <p>Before creating new entities for PLACES like Stuttgart, Paris,
   London, etc. which unlike all <ref target="institutions">repositories</ref> are very much unlikely to
   receive specific descriptions by this project, use external links to
-  Wikidata ids as follows.</p>
+  Wikidata IDs as follows.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
               <place type="city" sameAs="Q649">
               <placeName xml:id="n1" xml:lang="ru">Москва</placeName>

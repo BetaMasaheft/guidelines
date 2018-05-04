@@ -42,7 +42,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <p>Before creating new entities for PLACES like Stuttgart, Paris,
     London, etc. which unlike all institutions are very much unlikely to
     receive specific descriptions by this project, use external links to
-    geonames ids as follows.</p>
+    geonames IDs as follows.</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <country ref="gn:2017370"/>
 <settlement ref="gn:498817"/>
@@ -231,7 +231,7 @@ notAfter="1559">ትግራይ፡</placeName>
             <list type="unordered">
                <item>
                   <p>if it is a place of interest for ethiopian studies or attested
-      in ethiopia, then use one of our internal ids or create a new
+      in ethiopia, then use one of our internal IDs or create a new
       record if none is yet available</p>
                </item>
                <item>

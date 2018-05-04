@@ -193,7 +193,7 @@ Ontology</ref> and those used by syriaca.org you can filter them out
 in oXygen typing syriaca: or saws: in the value list.</p>
 <p>
    <att>active</att> should contain the xml:id of the
-current item. <att>passive</att> should contain the ids
+current item. <att>passive</att> should contain the IDs
 of the related works, people, places, separated by a space</p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <listRelation>

@@ -195,7 +195,7 @@ in a struggle against the young <persName ref="PRS10198Yaeqob"><roleName type="t
   value list.</p>
             <p>
                <att>active</att> should contain the <att>xml:id</att> of the
-  current person. <att>passive</att> should contain the ids
+  current person. <att>passive</att> should contain the IDs
   of the related persons, separated by a space</p>
             <p>As usual all elements can take a
   <att>xml:lang</att>.</p>

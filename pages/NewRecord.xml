@@ -44,7 +44,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     leaving the page you will get a warning every time, intended to make you stop
                     before you carry on without syncing. The generated file will have a consistent
                     new ID and will insert it in the appropriate place in the file. This should
-                    avoid the really frequent problem of ids not being updated after copy-pasting a
+                    avoid the really frequent problem of IDs not being updated after copy-pasting a
                     master file. It remains entirely possible to create your files in oXygen as
                     previously, but the application interface is recommended as it makes sure your ID is unique.
                     The file will also have the correct type and a <gi>change</gi> element with your initials
@@ -60,11 +60,11 @@ our list</item>
 <item>check if there is also a wikidata item
 (you can simply google what you are looking for, open the correct
 wikipedia page you find and hit the wikidata item link on the left).</item>
-  <item><list><item>if yes add a <att>sameAs</att> attribute with the Q ID in the url or at the
+  <item><list><item>if yes add a <att>sameAs</att> attribute with the Q ID in the URL or at the
   top of the item.</item></list></item>
   <item>check if there is also a record in geonames.org</item>
   <item><list><item>if yes add a <att>sameAs</att> attribute to place linking to such geonames
-  id.</item>
+  ID.</item>
 <item>if not leave the record</item></list></item>
 </list></item>
 <item>add a ref to our record</item>

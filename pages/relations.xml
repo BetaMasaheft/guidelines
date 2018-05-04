@@ -52,7 +52,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         might have a relation between A and B, A and C, C and D. or
         parts.</p>
     <p>In the @active and @passive attributes, please don't use #
-        as this hinders the possibility to use further specific ids
+        as this hinders the possibility to use further specific IDs
         within the record, and to point to a specific msItem, e.g.</p>
     <p>It is preferable to have a separate
         <gi>relation</gi> for each relationship,

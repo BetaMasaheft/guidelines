@@ -38,7 +38,7 @@ abbreviation of the manuscript to be used in the apparatus.</p>
    <p>Follow instead for critical edition (i.e. text in a work
 record) the
 <ref target="http://www.tei-c.org/Vault/P5/2.9.1/doc/tei-p5-doc/en/html/TC.html#TCAPPS">inline
-parallel segmentation method</ref>, pointing to the ids of
+parallel segmentation method</ref>, pointing to the IDs of
 <gi>witnesses</gi> in that record.</p>
    <p>a sample file is the
 <ref target="LIT3122Galaw" type="bm">Chronicle
