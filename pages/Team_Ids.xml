@@ -22,8 +22,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body xml:id="teamids">
          <div type="level1">
-            <head>TEAM IDs for use in <gi>author/@xml:id</gi> and
-  <gi>change/@who</gi>
+            <head>TEAM IDs for use in <gi>author</gi> <att>xml:id</att> and
+  <gi>change</gi> <att>who</att>
             </head>
             <list type="unordered">
                <item>
