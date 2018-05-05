@@ -62,10 +62,39 @@ guidelines for
       </body>
    </text>
 </egXML>
+<p>We usually assign <val>n1</val> to the standard name in Fidal, and point with <att>corresp</att> to that for transliteration and translations of the same.</p>
+<p>Other <gi>persName</gi>s will have other IDs, which can be anything which is a valid <att>xml:id</att> but better if the are in the format 'n\d+'.</p>
          <p>If you want to add a typical spelling which is used to search a name,
 like in https://github.com/BetaMasaheft/Documentation/issues/506, the safest place
 to add it so that it is indexed without affecting the actual content of
 the entry is in a new teiHeader//titleStmt/title</p>
+<p>You can also use <att>type</att> with value <val>main</val> to further specify what the label name of the person should be.</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  <persName xml:id="n1" xml:lang="gez">ማርያም፡</persName>
+  <persName xml:lang="gez" corresp="#n1" type="normalized">Māryām</persName>
+  <persName xml:lang="en" corresp="#n1" type="main">Mary</persName>
+
+  </egXML>
+
+<p>
+This is of course redundant when the <gi>persName</gi> you assign this attribute would be already the one picked by the titles rules.</p>
+<p>Chaging the IDs to have this effect is deceptory as in the following example, where </p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  <person sex="1" sameAs="Q671055">
+  <persName xml:lang="en" xml:id="n1" type="main">Cyprian of Antioch</persName>
+  <persName xml:lang="gez" xml:id="n2">ቆጵርያኖስ፡</persName>
+  <persName xml:lang="gez" corresp="#n2" type="normalized">Qoṗrǝyānos</persName>
+  </person>
+</egXML>
+<p>The correct way to do this is</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  <person sex="1" sameAs="Q671055">
+  <persName xml:lang="gez" xml:id="n1">ቆጵርያኖስ፡</persName>
+  <persName xml:lang="gez" corresp="#n1" type="normalized">Qoṗrǝyānos</persName>
+  <persName xml:lang="en" xml:id="n2" type="main">Cyprian of Antioch</persName>
+  </person>
+</egXML>
+<p>which will print in the application 'Cyprian of Antioch' instead of the usual first candidate 'Qoṗrǝyānos', the normalized transcription of the name in Fidal.</p>
          <div type="level1">
             <head>Surname and Forename</head>
             <p>Use <gi>surname</gi> and <gi>forename</gi> only for european names. For other names
