@@ -18,7 +18,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
       </fileDesc>       <revisionDesc>
-
+         <change who="DR" when="2018-04-26">Edited and added example</change>
         <change who="DR" when="2018-04-26">editing of the Work section of the guidelines</change>
           <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
    </teiHeader>
@@ -104,13 +104,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
  <note>This division into textparts follows <ref type="mss" corresp="FSUrueppII2"/>.</note>
 <div type="textpart" subtype="book" n="1" xml:id="Kefl1" xml:lang="gez"></div></div>
 </egXML>
-            <p>Note that after each word there should be a separator or
+            <p>Note that after each Gǝʿz word there should be a separator or
   punctuation without space.</p>
             <p>If the text contains verses we will use <gi>l</gi> as
   in the example above.  <gi>lb</gi> can also be used to
   mark linebreaks, for example in Inscriptions. Be careful:
   <gi>ab</gi> should be only used in the lowest level div
-  nesting!</p>
+  nesting:
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <div n="2" xml:id="ed1ch2" type="textpart" subtype="chapter">
+                  <label>On the lizard</label>
+                  <div n="1" xml:id="ed1ch2se1" type="textpart" subtype="sentence">
+                     <ab> ፪ ፍካሬ፡ በእንተ፡ ሕንጲን፡ እንተ፡ ተፃሐየየት። </ab>
+                  </div>
+                  <div n="2" xml:id="ed1ch2se2" type="textpart" subtype="sentence">
+                     <ab> ሕንጲን፡ ሶበ፡ ትረሥእ፡ ይጼለላ፡ አዕይንቲሃ፡ ወተዐውር፡ እስከ፡ ኢትሬኢ፡ ብርሃነ፡ ፀሓይ። ወተኀሥሥ፡ አረፍተ፡ ዘይኔጽር፡
+                        መንገለ፡ ጽባሕ፡ ወታሰምክ፡ ህየ። ወሶበ፡ ይመውቅ፡ ፀሓይ፡ ይትፈታሕ፡ አዕይንቲሃ፡ ወትከውን፡ ሕያውተ። ዘንተ፡ እንከ፡ ትገብር፡
+                        በዘባቲ፡ ሠናይ፡ ፍጥረት። አንተሂ፡ ኦብእሲ፡ እንዘ፡ ብከ፡ ብሉይ፡ ክዳን፡ ሶበ፡ ተጸለለ፡ ዓይነ፡ ልብከ፡ ኅሥሥ፡ ዓረፍተ፡ ርድኤት፡
+                        በተጋህ፡ እስከ፡ ይሠርቅ፡ ለከ፡ ፀሓየ፡ ምሕረቱ፡ ለእግዚእነ፡ ዘሰመዮ፡ ነቢይ፡ጽባሐ። ወይበርህ፡ ዐይነ፡ ልብከ፡ በዝንቱ፡ አርአያ።
+                     </ab>
+                  </div>
+               </div>
+               </egXML>
+            </p>
             <p>To identify a <gi>div</gi> you can use a <gi>label</gi></p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <div type="textpart" xml:id="Athanasius1">
