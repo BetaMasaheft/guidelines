@@ -21,7 +21,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <text>
         <body xml:id="editingSchema">
             <head>Editing the ODD (i.e. the Schema)</head>
-          <p>  In the Schema repository there should be four file and the README.md</p>
+          <p>  In the Schema repository there should be five files and the README.md</p>
 
 <p>The .xml files are the ODD (One Document Does it all) and the .rng are the actual RelaxNG schema files used for validation.</p>
 
