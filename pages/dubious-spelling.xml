@@ -85,8 +85,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <p>ያዕቆብ፡ | Yāʿqob (not Yāʿǝqob)</p>
             </item>
          </list>
-         <p>For other cases which raise questions, please open individual
-    issues.</p>
+         <p>For other cases which raise questions, please do not hesitate to open individual
+    issues and please remember to document any decisions taken to such dubious spellings here.</p>
       </body>
    </text>
 </TEI>

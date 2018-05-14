@@ -16,7 +16,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <sourceDesc>
                 <p>Encoded in TEI.</p>
             </sourceDesc>
-        </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+        </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+            <change who="DR" when="2018-05-14">Edited and added examples</change></revisionDesc>
     </teiHeader>
     <text>
         <body xml:id="editingGuidelines">
@@ -30,7 +31,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         target="https://github.com/BetaMasaheft/guidelines">Beta maṣāḥǝft schema
                         repository</ref> and the <ref target="https://github.com/BetaMasaheft/RDF"
                         >Beta maṣāḥǝft ontology (this is not via webhook)</ref>.</p>
-                <p>If you edit and push (or make a PR) to the above repos, the XML files will be
+                <p>If you edit and push (or make a pull request) to the above repos, the XML files will be
                     sent to the application and go live so that you can see them, search, browse,
                     read, etc.</p>
             </div>
@@ -38,8 +39,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <head>Editing the XML</head>
                 <p>You can use any editor you like to edit the XML files. This page describes only the editing of the guidelines, for the editing of the schema
                     see
-                    <ref target="editingSchema"/>.</p>
-                <p>There is  a Beta maṣāḥǝft Guidelines Schema which validates the files you
+                    <ref target="editingSchema">editing the Schema</ref>.</p>
+                <p>There is a Beta maṣāḥǝft Guidelines Schema which validates the files you
                     are pushing to the app when editing the guidelines and will notify you if anything goes wrong. Actually,
                     there are processing instructions in every single file that should allow your
                     editor to validate your XML BEFORE you push it to the repo. </p>
@@ -51,15 +52,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     no need to repeat a list of values for an attribute if this is in the
                     schema.</p>
                 <p>Besides the schema folder (which
-                    is the Beta maṣāḥǝft Guidelines Schema).</p>
+                    is the Beta maṣāḥǝft Guidelines Schema), the guidelines folder contains subfolders for pages, elements, the table of contents (toc) and the user guide:</p>
                 <list>
                     <item>Pages are descriptive pieces like this one, trying to explain how to
                         encode something.</item>
-                    <item>Table of Contents (toc) are simply lists, organizing pages in meaningful
+                    <item>Tables of Contents (toc) are simply lists, organizing pages in meaningful
                         ways based on type of user, kind of task, etc.</item>
-                    <item>Elements describe one element, will fetch from the schema any
-                        specification further to those in TEI and link back to pages mentioning
-                        it.</item>
+                    <item>Elements describe one element: They link to the page of the respective element in the TEI guidelines, fetch from the Beta maṣāḥǝft schema any further
+                        specification and link back to all guideline pages mentioning this element.</item>
                 </list>
 
             </div>
@@ -69,10 +69,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         target="http://www.tei-c.org/release/doc/tei-p5-doc/de/html/TD.html#TDphrase"
                         >TEI Documentation Elements</ref>.</p>
                 <p>The application will use the <att>xml:id</att> in <gi>body</gi> to identify the
-                    pages and elements, so, please take care not to duplicate this if you are
+                    pages and elements, so, please take care not to duplicate <att>xml:id</att>s if you are
                     creating a new page. The application will use the <gi>title</gi> inside
                         <gi>titleStmt</gi> as a label for that resource. This means that you can
-                    have a page and an element called "person" but these will need to different
+                    have a page and an element called "person" but these will need two different
                         <att>xml:id</att> in <gi>body</gi></p>
                 <p>We use <gi>div</gi> elements to structure the contents. These should have <list>
                         <item>A <att>type</att> with <val>level2</val> where the digit is a number
@@ -81,14 +81,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </list></p>
                 <p>You can use <gi>table</gi> and <gi>list</gi> and their children as specified in
                     TEI.</p>
-                <p><gi>ref</gi> is used with <att>target</att>. The app will do some job for you in
-                    this case: <list>
+                <p>Links are encoded using <gi>ref</gi> with <att>target</att>:
+                    <list>
                         <item>You can enter in <att>target</att> simply the ID of any of the pages
-                            in the guidelines.</item>
+                            in the guidelines:
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                for the editing of the schema see <ref target="editingSchema">editing the Schema</ref>
+                            </egXML>
+                        </item>
                         <item>You can add a <att>type</att> with <val>bm</val> and your
                                 <att>target</att> can simply be the ID of any of the entities in
-                            Beta maṣāḥǝft. This is useful to link to examples.</item>
-                        <item>If you enter a URL, this will become an external link.</item>
+                            Beta maṣāḥǝft. This is useful to link to examples:
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                special cases like <ref target="BNFet45" type="bm">BNFet45</ref>
+                            </egXML>
+                        </item>
+                        <item>If you enter a URL, this will become an external link:
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                entering data in the <ref target="https://www.zotero.org/groups/ethiostudies/items">Zotero Group Library.</ref>
+                            </egXML>
+                        </item>
                     </list></p>
                 <p>Please always use <gi>gi</gi>, <gi>tag</gi>, <gi>att</gi> and <gi>val</gi> to
                     mark up respectively element names, tags, attributes names and values. You do

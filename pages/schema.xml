@@ -25,7 +25,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 <p>The .xml files are the ODD (One Document Does it all) and the .rng are the actual RelaxNG schema files used for validation.</p>
 
-<p>To update the schema start always from the ODD (tei-betamesaheft.xml ).</p>
+<p>To update the schema start always from the ODD (tei-betamesaheft.xml).</p>
 
 
 
@@ -33,11 +33,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>There is very good tutorial to <ref
                     target="http://www.tei-c.org/Guidelines/Customization/odds.xml">edit ODD (One
                     Document Does it all)</ref> among the TEI resources.</p>
-            <p>But to add rules it is safer to ask somebody who has done it, while in most cases you
-                will be simply adding a value to an existing list.</p>
-            <p>Please, try to discuss any schema update in a issue.</p>
+            <p>In most cases, you
+                will be simply adding a value to an existing list.
+                But to add rules it is safer to ask somebody who has done it.</p>
+            <p>Please, try to discuss any schema update in a issue before editing the schema.</p>
             <p>After editing the ODD, use the Oxygen transformation for TEI ODD to RelaxNG which is
-                already available in the software and will save a .rng file in a out directory
+                already available in the software and will save a .rng file in a "out" directory
                 relative to the place where your schema is stored. You can also do the same using the TEI Roma web application.</p>
             <p>Before committing the edited schema, test it locally validating a file against that
                 new version of the rng schema.</p>
