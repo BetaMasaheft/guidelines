@@ -17,30 +17,58 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+         <change who="PL" when="2018-05-15">Split into paragraphs and added example</change></revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="keywordsIntro">
-        
+         <div type="level2">
             <head>Keywords</head>
-            <p>These keywords are used for the whole record. You can use one or more of the values
-               provided for <att>key</att>. You can assign as many keywords as needed. This means that it
-               is not necessary to limit the keywords to the principal text, but keywords for any
-               additional or minor texts contained in the manuscript should also be assigned. Always
-               assign a period keyword, using the keywords referring to Ethiopian literary periods only
-               in records actually belonging to the Ethiopian tradition. The keywords
+            <p>Keywords can be used in priniple for all record types. You can use one or more of the values
+               provided for <att>key</att>. You can assign as many keywords as needed. The keywords
                "ChristianLiterature", "IslamicLiterature" and "BetaEsraelLiterature" should be assigned
-               to all records belonging to these traditions.</p>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               to all records belonging to these traditions.
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <textClass>
+                     <keywords>
+                        <term key="ChristianLiterature"/>
+                        <term key="Gon"/>
+                        <term key="Liturgy"/>
+                     </keywords>
+                  </textClass>
+               </egXML>
+               </p>
+         </div>
+         
+         <div type="level2">
+            <head>Keywords in manuscript records</head>
+         <p>This means that it
+               is not necessary to limit the keywords to the principal text, but keywords for any
+               additional or minor texts contained in the manuscript should also be assigned.</p>
+               </div>
+         
+         <div type="level2">
+            <head>Keywords in work records</head>
+            <p>Always
+               assign a period keyword, using the keywords referring to Ethiopian literary periods only
+               in records actually belonging to the Ethiopian tradition. </p>
+         </div>
+         
+         <div type="level2">
+            <head>Keywords in person records</head>
+            <p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <textClass>
                   <keywords>
-                     <term key="ChristianLiterature"/>
-                     <term key="Gon"/>
-                     <term key="Liturgy"/>
+                     <term key="angel"/>
                   </keywords>
                </textClass>
-            </egXML>
+               </egXML>
+            </p>
+         </div>
             
+         <div type="level2">
+            <head>Keywords in other parts of the files</head>
             <p>You can use <gi>term</gi> also in other parts of the files where the schema allows it. In the following example term is used in a <gi>decoNote</gi> but you can use it also in additions</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
             
@@ -62,10 +90,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </decoNote>
             
          </egXML>
+         </div>
          
-         <p>The values available for <att>key</att> have to be also in the <ref target="taxonomy">taxonomy</ref>. 
-            
-         </p>
+         <div type="level2">
+            <head>Taxonomy and creating new keywords</head>
+         <p>The values available for <att>key</att> have to be included in the <ref target="taxonomy">taxonomy</ref>. </p>
+            <p>New keywords can be created as needed, but especially when they concern many files or introduce a new way of use should be discussed in an issue.</p>
+         </div>
       </body>
    </text>
 </TEI>
