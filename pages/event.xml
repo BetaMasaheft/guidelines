@@ -24,19 +24,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <head>event</head>
          <p>Any event affecting the definition of the place can be encoded
     and described in an <gi>event</gi> element as below. Examples are made up and
-    will be replaced by real ones asap.</p>
+    will be replaced by real ones.</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <event when="1201" source="#Eae3-author">
         <desc xml:lang="en">destruction of the city from the Arabs</desc>
     </event>
 </egXML>
-         <p>event can take also @notBefore and @notAfter, @from and @to.</p>
+         <p><gi>event</gi> can take also <att>notBefore</att> and <att>notAfter</att>, <att>from</att> and <att>to</att>.</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <event from="1201" to="1256" source="#Eae3-author">
         <desc xml:lang="en">capital of the region</desc>
     </event>
 </egXML>
-         <p>example:</p>
       </body>
    </text>
 </TEI>

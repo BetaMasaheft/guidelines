@@ -22,6 +22,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body xml:id="entities-id-structure">
          <head>Entities ID structure</head>
+         
+         <div type="level2">
+            <head>Structure of record IDs</head>
+         <p>The following principles for the creation of new IDs should be followed for new records:</p>
 
          <list type="unordered">
             <item>
@@ -72,8 +76,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             The
             collection and the numeral should be given as they are in the
             current/most commonly used official shelfmark of the manuscript.</p>
-         <p>If the manuscript has not yet been catalogued and/or has no shelf
-            mark, an ID has to created individually, following as much as
+         <p>If the manuscript has not yet been catalogued and/or has no shelfmark, an ID has to created individually, following as much as
             possible the usual process:
             <list type="unordered">
                <item><p>The abbreviation of the repository
@@ -84,8 +87,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   numeral, such as: TMChronicle1</p> </item>
             </list>
             </p>
-
-        <div type="level2">
+         </div>
+         
+         <div type="level2">
+            <head>Structure of internal <att>xml:id</att>s</head>
           <p>
             <table>
             <row role="label"><cell>Element</cell><cell>ID pattern</cell></row>
@@ -106,6 +111,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
           </table>
         </p>
+            <p>See also <ref target="identifiersStructure">Identifiers Structure</ref>.</p>
           </div>
       </body>
    </text>

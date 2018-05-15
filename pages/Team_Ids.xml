@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Team Ids</title>
+            <title>Team IDs</title>
             <author>Pietro Liuzzo</author>
          </titleStmt>
          <publicationStmt>
@@ -22,15 +22,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body xml:id="teamids">
          <div type="level1">
-            <head>TEAM IDs for use in <gi>author</gi> <att>xml:id</att> and
-  <gi>change</gi> <att>who</att>
-            </head>
+            <head>Team IDs</head>
+            <p>For use in <gi>author</gi> <att>xml:id</att> and
+  <gi>change</gi> <att>who</att></p>
             <list type="unordered">
                <item>
                   <p>Prof. Dr. Alessandro Bausi = AB</p>
                </item>
                <item>
-                  <p>Solomon Gebreyes = SG</p>
+                  <p>Dr. Solomon Gebreyes = SG</p>
                </item>
                <item>
                   <p>Dr. Denis Nosnitsin = DN</p>
@@ -39,7 +39,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <p>Eugenia Sokolinski = ES</p>
                </item>
                <item>
-                  <p>Massimo Villa = MV</p>
+                  <p>Dr. Massimo Villa = MV</p>
                </item>
                <item>
                   <p>Dr. Pietro Liuzzo = PL</p>

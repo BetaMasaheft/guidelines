@@ -37,7 +37,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <desc>Regular, by a well-trained hand</desc>
         </handNote>
     </egXML>
-    <p>Give an <att>xml:id</att> to each handNote to
+    <p>Give an <att>xml:id</att> to each handNote to be
         able to refer to it in other parts of the record. You can also
         use <att>corresp</att> to point to
         <gi>msPart</gi>s,

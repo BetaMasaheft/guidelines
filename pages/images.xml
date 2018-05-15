@@ -31,8 +31,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <idno facs="http://gallica.bnf.fr/ark:/12148/btv1b52507611w">BnF Éthiopien 14</idno>   
             </egXML>
          for example, as in <ref target="BNFet14" type="bm">BnF Éthiopien 14</ref>.</p>
-         <p>In <gi>locus</gi> together with the other
-    attributes, add again the <att>facs</att> containing
+          <p>In <gi>locus</gi>, add <att>facs</att> together with the other
+    attributes,  containing
     only the reference to the first page in the range indicated
     <hi rendition="simple:italic">exactly</hi> as it appears in the URL
     for that page (so, not the folio number!).</p>
@@ -51,7 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          
          <div type="level2">
             <head>Links to images hosted on our server</head>
-         <p>Links to images hosted on our server in the additional disks,
+         <p>Links to images hosted on our server in the additional disks
            should use the relevant part of the path, i.e.
     BMQ/003/BMQM-003 for example. If the number of the photos are
     separated with two underscores, then "KAE/011/KAE-011_", see for example <ref target="ESkae011" type="bm">KAE-011</ref>:</p>
@@ -70,8 +70,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <p>Links to the images of the Vatican Library MSS are now supported,
     by adding in the <gi>idno</gi> <att>facs</att> the manifest.json
     URL which can be found in the digivatlib on the left info page
-            <ref target="https://digi.vatlib.it/view/MSS_Vat.et.1"/>, e.g.
-            <ref target="https://digi.vatlib.it/iiif/MSS_Vat.et.1/manifest.json"/>.</p>
+         <ref target="https://digi.vatlib.it/view/MSS_Vat.et.1">https://digi.vatlib.it/view/MSS_Vat.et.1</ref>, e.g.
+         <ref target="https://digi.vatlib.it/iiif/MSS_Vat.et.1/manifest.json">https://digi.vatlib.it/iiif/MSS_Vat.et.1/manifest.json</ref>.</p>
          <p>To add the link to a 
     <gi>locus</gi>, add <att>facs</att> attributes. Please do not
     forget that the folio number (in the following example 3r) does not
@@ -86,9 +86,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <div type="level2">
             <head>Link to images not accessible via IIIF</head>
             <p>Some Manuscripts have images published which are not accessible
-    via IIIF, please, in these cases add inside <gi>TEI</gi>, between
-    <gi>teiHeader</gi> and <gi>text</gi> a
-    <gi>facsimile</gi> element</p>
+    via IIIF, please add in these cases add <gi>TEI</gi>, between
+    <gi>teiHeader</gi> and <gi>text</gi>, a
+    <gi>facsimile</gi> element:</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
     <facsimile>
         <graphic url="http://dfg-viewer.de/show/?set[mets]=http%3A%2F%2Fsammlungen.ub.uni-frankfurt.de%2Foai%2F%3Fverb%3DGetRecord%26metadataPrefix%3Dmets%26identifier%3D5247786"/>
