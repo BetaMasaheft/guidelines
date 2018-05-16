@@ -94,6 +94,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </q>
                     </item>
                 </egXML>
+            </div>
+                
+                <div type="level2">
+                    <head>Varia</head>
                 <p>The distinction between additions (or better
                     <hi rendition="simple:italic">additiones</hi>) and
                     <hi rendition="simple:italic">Varia</hi> comes from the
