@@ -24,7 +24,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </revisionDesc>
     </teiHeader>
     <text>
-        <body xml:id="additions">
+        <body xml:id="additionsVaria">
     <head>Additions and Varia</head>
     
      
