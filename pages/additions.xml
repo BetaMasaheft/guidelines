@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Additions and Varia</title>
+                <author>Pietro Liuzzo</author>
+            </titleStmt>
+            <publicationStmt>
+                <p/>
+            </publicationStmt>
+            <sourceDesc>
+                <p>transformed with Pandoc, then with XSLT, then further edited</p>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+          <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+            <change who="PL" when="2018-04-24">stub of page</change>
+            <change who="DR" when="2018-05-16">Edited and split from manuscript contents page</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body xml:id="additions">
+    <head>Additions and Varia</head>
+    
+     
+
+            <div type="level2">
+                <head>Additions</head>
+                <p>You can always add a
+                    <gi>additions</gi> element in <gi>physDesc</gi>, which will contain a
+                    <gi>list</gi> of additions. A general note on all
+                        additions can be added before <gi>list</gi>
+                        within a <gi>note</gi> element.</p>
+                    <p><gi>additions</gi> should be used only for
+                        elements added later to the text!</p>
+                   <p>Each
+                    <gi>item</gi> will have a structure as follows:
+                </p>
+               
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <list>
+                    <item xml:id="a1">
+                        <locus target="#1r"/>
+                        <desc type="OwnershipNote">Crude ownership note in pencil.</desc>
+                        <q xml:lang="gez">ዘ<persName ref="PRS11944GabraM" role="owner"><roleName type="title">አባ፡</roleName> ገብረ፡ ማርያም፡</persName></q>
+                    </item>
+                    </list>
+                </egXML>
+                <p>
+                    The <att>xml:id</att> of additions will use "a" and a
+                    consecutive number. In case of other contents (varia) the <att>xml:id</att>
+                    will have an ID with "e" and a consecutive number.</p>
+                <p>If the language of the addition is known but no excerpt is
+                    copied, use an empty <gi>q</gi> as in the
+                    following example from <ref target="BLAdd16187" type="bm">BLAdd16187</ref> .</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <q xml:lang="am"/>
+                </egXML>
+                <p>You can specify the type of addition in the <gi>desc</gi> element,
+                    using one of the value provided for the
+                    <att>type</att>.</p>
+                <p>If among these, marginal additions or additions on
+                    guard leafs need to be added as well, add to
+                    <gi>item</gi> also a
+                    <att>rend</att> with value <val>marginal</val> or
+                    <val>guardLeaf</val>.</p>
+                <p>If the type of document is known, then there should be a
+                    narrative entity to which a <att>ref</att> can be
+                    given.</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <item xml:id="a2" xml:lang="am" ref="NAR0001gwǝlt">
+                        <locus target="#3v"/>
+                        <p>Land donation (gwǝlt) of <persName ref="PRS8344sahlaDe">Śāhlā Dǝngǝl</persName> (A.D. 1832-40, and again 1841-55) to the priests of <placeName ref="LOC2550Darasg">Darasge</placeName>, in Amharic. </p>
+                    </item>
+                </egXML>
+                <p>If a work with its own work ID is added later to a
+                    manuscript, it will be added as an addition specified with the
+                    type "GuestText" having its work ID in the
+                    description:</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <item xml:id="a10">
+                        <locus from="115v"/>
+                        <desc type="GuestText">
+                            <title type="Complete" ref="LIT3957SalotaB">ጸሎተ፡ ቡራኬ፡ ዘቅዱስ፡ ባስልዮስ።</title>
+                        </desc>
+                        <q xml:lang="gez">
+                            <desc>The following is the incipit:</desc>
+                            ኦሥሉስ፡ ቅዱስ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ባርክ፡ ዲበ፡ ሕዝብከ፡ ፍቁራን፡ ክርስቶሳውያን፡ በበረከት፡ ሰማያዊት፡
+                        </q>
+                    </item>
+                </egXML>
+                <p>The distinction between additions (or better
+                    <hi rendition="simple:italic">additiones</hi>) and
+                    <hi rendition="simple:italic">Varia</hi> comes from the
+                    Ethio-SPaRe guidelines. <hi rendition="simple:italic">Additiones</hi>
+                    are very often written in
+                    a secondary hand, and they are later than the main text(s) of
+                    the Ms. They mark the so-called "secondary life" of
+                    the manuscript as the latter is used as a repository of
+                    documentary information, i.e. a true archive. These value are
+                    provided for the <att>type</att> in the <gi>desc</gi>
+                    element. When describing an addition, please provide
+<list>
+<item>language (if
+different from Ethiopic: in Amharic, in Tǝgrǝñña);</item>
+<item>hand (by
+a recent/old hand, by the same hand as that of the main text,
+by the same hand as that of another addition, etc.); "in a
+secondary hand" should be avoided: it is obvious;</item>
+<item>ink (in
+recent ink, hardly legible because of the faded ink, etc.).</item>
+<item>readability (hardly readable, washed/scratched out etc.);</item>
+<item>some additiones can be rhymed.</item>
+</list>
+
+                    </p>
+                <p>Under <hi rendition="simple:italic">Varia</hi> or <hi rendition="simple:italic">extra</hi>, Ethio-SPaRe
+                    used to list the following phenomena, which simply concern the
+                    copying process or are more trivial than
+                    <hi rendition="simple:italic">additiones</hi>:
+<list>
+  <item>the title of
+  the work written on the front board or cover, sometimes with
+  blue or black paint or ink;</item>
+  <item>the internal number of the book
+  in the monastic library;</item>
+  <item>the midpoint in the "Psalms of
+  David" (in Ps. 77, after the word በደመና፡);</item>
+  <item>the presence
+  of stamps of the owning <ref target="institution">repository</ref>;</item>
+  <item>part of the line is
+  taken up or taken down (e.g., in the Psalters), ff. ....</item>
+  <item>glosses written in the margins of ff. ....</item>
+  <item>the so-called
+ <hi rendition="simple:italic">tämälläs</hi>-sign, in the shape
+ of a cross (as +) or two perpendicular lines (as ┴ or├),
+ indicating the place where the omissions (written in the upper
+ or lower margin) belong: ff. __.</item>
+ <item>omitted letters, words,
+lines or passages inserted interlineally, in the margins, at
+the beginning/end of the line (ff. ...).</item>
+<item>erasures: ff. ....</item>
+<item>corrections written over erasures, in the main hand or in a
+later recent hand: ff. ....</item>
+<item>erasures marked with thin black
+and red lines: ff. ....</item>
+<item>corrections immediately indicated by
+the scribe through thin series of dashes above and below the
+letters or the words: ff. .... </item>
+<item>spaces for rubricated names
+left unfilled: ff. ....</item>
+<item>unfilled spaces marked with thin
+black lines: ff. ....</item>
+<item>cues for the rubricator written in the
+margin or in the interocolumn (e.g., small digits): ff. ... </item>
+<item>erased names or names secondarily written over erased names
+(typically in the supplication formulas): ff. .... </item>
+<item>the
+scribe reduced the size of his handwriting to accommodate the
+end of the line: ff. ....</item>
+<item>the scribe used compressed script
+("compressed" means two lines in a space originally
+meant for one single line), often to accommodate lines written
+over erasure: ff. ....</item>
+<item>monthly or daily readings are usually
+indicated by writing the names of the months and weekdays in
+the upper margin of the folio, sometimes within frames.</item>
+<item>pen
+trials, notes crudely written in pencil or pen;</item>
+<item>devotional
+images sewn between ff. ....</item>
+<item>scribbles and doodles.</item>
+  </list></p>
+            </div>
+
+        </body>
+    </text>
+</TEI>

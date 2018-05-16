@@ -17,13 +17,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+         <change who="DR" when="2018-05-16">Added examples</change></revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="languageIntro">
          <head>Languages</head>
          <p>The TEI file is in English. Please, make sure you use <att>xml:lang</att> with the
-            appropriate value for each element containing text in a different language. </p>
+            appropriate value for each element containing text in a different language:
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <incipit xml:lang="gez">
+                  <locus target="#127"/>
+                  <hi rend="rubric">በስመ፡ አብ፡ ወወልድ፡ ወመ</hi>ንፈስ፡ ቅዱስ፡ ፩አምላክ፡ ጸሎት፡ በእንተ፡ ህማመ፡ ቡዳ፡
+               </incipit>
+         </egXML>
+         
+         </p>
          <p>The value of this <att>xml:lang</att> should be equal to one of the values of
                <tag>language ident</tag> within <gi>langUsage</gi> in the <gi>teiHeader</gi>. All
             languages used in the file should be defined there. It is not a problem if one of these
@@ -50,7 +59,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <att>xml:lang</att>.</p>
          <p>Regardless of the validity of this transliteration, Gəʿəz is always referred to by
             "Gəʿəz" to ensure consistency.</p>
-         <p>For text in another language from the main one stated, use <gi>foreign</gi>.</p>
+         <p>For text in another language from the main one stated, use <gi>foreign</gi>:
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         The midpoint of the Psalms of David is indicated with the word <foreign xml:lang="gez">መንፈቁ፡</foreign>, encircled in black ink
+            </egXML>
+         </p>
 
       </body>
    </text>
