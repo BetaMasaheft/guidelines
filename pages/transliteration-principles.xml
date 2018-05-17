@@ -17,7 +17,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+        <change who="DR" when="2018-05-17">Added paragraph on Amharic</change></revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="transliteration-principles">
@@ -315,6 +316,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <p>Please open individual issues for particular cases that need
     discussing.</p>
     </div>
+        <div type="level2">
+          <head>Amharic transcriptions</head>
+          <p>The same transcription system as that of Gǝʿǝz is applied. The orthography of the transcribed text is always followed, so for example
+            ከወልወል፡ እስከ፡ ማይጨው፡ is transcribed as Ka-walwal ʾǝska Māyč̣aw.
+          </p>
+          <p>Again, if you come across a case which you feel is not properly covered by the guidelines or have any doubts, please open an issue.</p>
+        </div>
        <div type="level2">
          <head>Arabic transcriptions</head>
          <p>In general, the same transcription system as that of the EAe is

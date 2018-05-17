@@ -22,27 +22,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body xml:id="workflow">
         <div type="level2">
-<p>In general the workflow for the app can be called github based. The app relyies on data which is pushed from github and is validated.</p>
+<p>In general the workflow for the app can be called github based. The app relies on data which is pushed from github and is validated.</p>
 <p>It can happen that a file goes out of sync, but the data is kept in the github repository separated from the code to be available for other implementations and applications.</p>
 <p>That is to say, if you do not see your data updated in few seconds, then please see the <ref target="validation">validation</ref> page and if this does not help, open an issue.</p>
         </div>
 
          <div type="level2">
             <head>Batch editing files</head>
-            <p>You can find and replace strings or regex patterns thourough the
-  data in Oxygen for example. Please, make sure you - untick the option
+            <p>You can find and replace strings or regex patterns throughout the
+               data in Oxygen for example. Before replacing all, you will be asked if
+               you want to preview. This is always wise and gives you one more
+               occasion to spot check your changes before performing the action. Please, make sure you untick the option
   to create .bak files - in case you forget, and such files are created,
-  please DO NOT commit them - before replacing all, you will be asked if
-  you want to preview. this is always wise and gives you one more
-  occasion to spot check your changes before performing the action</p>
-            <p>In case you have anyway made a mistake remember that - before
+  please DO NOT commit them. </p>
+            <p>In case you have anyway made a mistake, remember that before
   committing data you can review in Git desktop the changes and discard
-  them if they are wrong. - if you have committed, pushed and you
+  them if they are wrong. If you have committed, pushed and you
   realize it was a big mistake, you can still revert your own commit</p>
          </div>
          <div type="level2">
             <head>Keeping track</head>
-            <p>To keep track of the workflow we use to refer to a google drive spreadsheet. This workflow is deprecated and discouraged in any way, as the spreadsheet is outdated by two years and should not be used to support any statement about entities in the website. Its historical purpose, and usage to originate the initial batch of data does not justify the redundancy of going back to look into that.
+            <p>To keep track of the workflow we used to refer to a google drive spreadsheet. This workflow is deprecated and discouraged in any way, as the spreadsheet is outdated by two years 
+               and should not be used to support any statement about entities in the website. 
+               Its historical purpose, and usage to originate the initial batch of data does not justify the redundancy of going back to look into that.
             </p>
             <p>You can use your user page to see what you have done recently or use the latest function to see what is new in the data.</p>
          </div>

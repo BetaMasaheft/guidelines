@@ -177,6 +177,17 @@ trials, notes crudely written in pencil or pen;</item>
                     rubrications in left unfilled in incipits, and these incipits are transcribed in the manuscript description, the unfilled spaces should be encoded properly there and the
                     information does not need to be repeated under Varia.</p>
                     <p>See also <ref target="text-encoding">Text Encoding</ref>.</p>
+                    
+                    <p>
+                        The <att>xml:id</att> of varia will use "e" and a
+                        consecutive number:
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <item xml:id="e2">
+                                <desc>The text was frequently corrected, many words were erased or restored
+                                    by <ref target="#h2"/>.</desc>
+                            </item>
+                        </egXML>
+                    </p>
             </div>
 
         </body>
