@@ -111,6 +111,13 @@ This is of course redundant when the <gi>persName</gi> you assign this attribute
             <head>Role</head>
             <p>If the name contains a role, please tag it as
   <gi>roleName</gi> and add a <att>type</att>.</p>
+  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+    <persName xml:lang="gez" xml:id="n1" type="birth">ሚናስ፡</persName>
+    <persName xml:lang="gez" corresp="#n1" type="normalized">Minās</persName>
+    <persName><roleName type="title">ʾaṣe</roleName></persName>
+  </egXML>
+  <p>Also the  encoding in the first example above is correct, althoug this second method has been preferred.</p>
+
             <p>Please note that <gi>roleName</gi> always has to be
   encoded within <gi>persName</gi> for indexing and consistency purposes.</p>
          </div>
