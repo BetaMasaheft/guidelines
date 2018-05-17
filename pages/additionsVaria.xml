@@ -31,13 +31,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
             <div type="level2">
                 <head>Additions</head>
-                <p>You can always add a
+                <p>Additions (or <hi rendition="simple:italic">additiones</hi>)
+                    are very often written in
+                    a secondary hand, and they are later than the main text(s) of
+                    the manuscript. They mark the so-called "secondary life" of
+                    the manuscript as the latter is used as a repository of
+                    documentary information, i.e. a true archive. These value are
+                    provided for the <att>type</att> in the <gi>desc</gi>
+                    element. </p>
+                    <p>It is crucial that <gi>additions</gi> should be used only for
+                        elements added later to the text! Therefore, they do not include subscriptions or supplications written at the same time as the main texts.</p>
+                    <p>When describing an addition, please provide if possible:
+                    <list>
+                        <item>language;</item>
+                        <item>hand (by
+                            a recent/old hand, by the same hand as that of the main text,
+                            by the same hand as that of another addition, etc.); "in a
+                            secondary hand" should be avoided: it is obvious;</item>
+                        <item>ink (in
+                            recent ink, hardly legible because of the faded ink, etc.).</item>
+                        <item>readability (hardly readable, washed/scratched out etc.);</item>
+                        <item>whether the addition is rhymed.</item>
+                    </list>
+                </p>
+                <p>These additions are encoded in an 
                     <gi>additions</gi> element in <gi>physDesc</gi>, which will contain a
                     <gi>list</gi> of additions. A general note on all
                         additions can be added before <gi>list</gi>
                         within a <gi>note</gi> element.</p>
-                    <p><gi>additions</gi> should be used only for
-                        elements added later to the text!</p>
                    <p>Each
                     <gi>item</gi> will have a structure as follows:
                 </p>
@@ -51,10 +72,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </item>
                     </list>
                 </egXML>
+                
                 <p>
                     The <att>xml:id</att> of additions will use "a" and a
-                    consecutive number. In case of other contents (varia) the <att>xml:id</att>
-                    will have an ID with "e" and a consecutive number.</p>
+                    consecutive number. </p>
                 <p>If the language of the addition is known but no excerpt is
                     copied, use an empty <gi>q</gi> as in the
                     following example from <ref target="BLAdd16187" type="bm">BLAdd16187</ref> .</p>
@@ -62,16 +83,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <q xml:lang="am"/>
                 </egXML>
                 <p>You can specify the type of addition in the <gi>desc</gi> element,
-                    using one of the value provided for the
+                    using one of the values provided for the
                     <att>type</att>.</p>
-                <p>If among these, marginal additions or additions on
-                    guard leafs need to be added as well, add to
+                <p>If the addition is written in the margin or on a guard leaf, add to
                     <gi>item</gi> also a
                     <att>rend</att> with value <val>marginal</val> or
                     <val>guardLeaf</val>.</p>
                 <p>If the type of document is known, then there should be a
                     narrative entity to which a <att>ref</att> can be
                     given.</p>
+                <!--example to be updated-->
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                     <item xml:id="a2" xml:lang="am" ref="NAR0001gwǝlt">
                         <locus target="#3v"/>
@@ -98,88 +119,64 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 
                 <div type="level2">
                     <head>Varia</head>
-                <p>The distinction between additions (or better
-                    <hi rendition="simple:italic">additiones</hi>) and
-                    <hi rendition="simple:italic">Varia</hi> comes from the
-                    Ethio-SPaRe guidelines. <hi rendition="simple:italic">Additiones</hi>
-                    are very often written in
-                    a secondary hand, and they are later than the main text(s) of
-                    the Ms. They mark the so-called "secondary life" of
-                    the manuscript as the latter is used as a repository of
-                    documentary information, i.e. a true archive. These value are
-                    provided for the <att>type</att> in the <gi>desc</gi>
-                    element. When describing an addition, please provide
-<list>
-<item>language (if
-different from Ethiopic: in Amharic, in Tǝgrǝñña);</item>
-<item>hand (by
-a recent/old hand, by the same hand as that of the main text,
-by the same hand as that of another addition, etc.); "in a
-secondary hand" should be avoided: it is obvious;</item>
-<item>ink (in
-recent ink, hardly legible because of the faded ink, etc.).</item>
-<item>readability (hardly readable, washed/scratched out etc.);</item>
-<item>some additiones can be rhymed.</item>
-</list>
 
-                    </p>
-                <p>Under <hi rendition="simple:italic">Varia</hi> or <hi rendition="simple:italic">extra</hi>, Ethio-SPaRe
-                    used to list the following phenomena, which simply concern the
+                <p>Under  <hi rendition="simple:italic">Varia</hi> or <hi rendition="simple:italic">extra</hi>, we list the following phenomena, which simply concern the
                     copying process or are more trivial than
                     <hi rendition="simple:italic">additiones</hi>:
 <list>
   <item>the title of
   the work written on the front board or cover, sometimes with
   blue or black paint or ink;</item>
-  <item>the internal number of the book
-  in the monastic library;</item>
   <item>the midpoint in the "Psalms of
   David" (in Ps. 77, after the word በደመና፡);</item>
   <item>the presence
   of stamps of the owning <ref target="institution">repository</ref>;</item>
   <item>part of the line is
-  taken up or taken down (e.g., in the Psalters), ff. ....</item>
-  <item>glosses written in the margins of ff. ....</item>
+  taken up or taken down (e.g., in the Psalters);</item>
+    <item>glosses written in the margins;</item>
   <item>the so-called
- <hi rendition="simple:italic">tämälläs</hi>-sign, in the shape
+ <hi rendition="simple:italic">tamallas</hi>-sign, in the shape
  of a cross (as +) or two perpendicular lines (as ┴ or├),
  indicating the place where the omissions (written in the upper
- or lower margin) belong: ff. __.</item>
+ or lower margin) belong;</item>
  <item>omitted letters, words,
 lines or passages inserted interlineally, in the margins, at
-the beginning/end of the line (ff. ...).</item>
-<item>erasures: ff. ....</item>
+the beginning/end of the line ;</item>
+    <item>erasures;</item>
 <item>corrections written over erasures, in the main hand or in a
-later recent hand: ff. ....</item>
+    later recent hand;</item>
 <item>erasures marked with thin black
-and red lines: ff. ....</item>
+    and red lines;</item>
 <item>corrections immediately indicated by
 the scribe through thin series of dashes above and below the
-letters or the words: ff. .... </item>
+letters or the words;</item>
 <item>spaces for rubricated names
-left unfilled: ff. ....</item>
+    left unfilled;</item>
 <item>unfilled spaces marked with thin
-black lines: ff. ....</item>
+    black lines;</item>
 <item>cues for the rubricator written in the
-margin or in the interocolumn (e.g., small digits): ff. ... </item>
+    margin or in the interocolumn (e.g., small digits);</item>
 <item>erased names or names secondarily written over erased names
-(typically in the supplication formulas): ff. .... </item>
+    (typically in the supplication formulas);</item>
 <item>the
 scribe reduced the size of his handwriting to accommodate the
-end of the line: ff. ....</item>
+end of the line;</item>
 <item>the scribe used compressed script
 ("compressed" means two lines in a space originally
 meant for one single line), often to accommodate lines written
-over erasure: ff. ....</item>
+over erasure;</item>
 <item>monthly or daily readings are usually
 indicated by writing the names of the months and weekdays in
-the upper margin of the folio, sometimes within frames.</item>
+the upper margin of the folio, sometimes within frames;</item>
 <item>pen
 trials, notes crudely written in pencil or pen;</item>
-<item>devotional
-images sewn between ff. ....</item>
 <item>scribbles and doodles.</item>
   </list></p>
+                    
+                    <p>Please not that these phenomena should only be encoded under Varia if the text in which they occur is not transcribed. I.e. if space for
+                    rubrications in left unfilled in incipits, and these incipits are transcribed in the manuscript description, the unfilled spaces should be encoded properly there and the
+                    information does not need to be repeated under Varia.</p>
+                    <p>See also <ref target="text-encoding">Text Encoding</ref>.</p>
             </div>
 
         </body>
