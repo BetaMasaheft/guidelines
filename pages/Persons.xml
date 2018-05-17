@@ -209,7 +209,7 @@ This is of course redundant when the <gi>persName</gi> you assign this attribute
   <tag>death when="1636" evidence="internal"</tag>
   is sufficient. However, if the element contains text, the value will
   not be visualized. The date should therefore be included explicitly in
-  the content:</p>
+  the content as in this example from <ref target="PRS10233Yamana" type="bm">Yamāna Krǝstos</ref>:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
               <floruit when="1605" evidence="internal">
               He was an important military and political figure, who was involved in several episodes related to
