@@ -211,12 +211,23 @@ This is of course redundant when the <gi>persName</gi> you assign this attribute
   not be visualized. The date should therefore be included explicitly in
   the content:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<floruit when="1605" evidence="internal">He  refused to side with his brother
-<persName ref="PRS9038Susenyos"><roleName type="title">ʾaṣe</roleName></persName>
-<persName ref="PRS9038Susenyos">Susǝnyos</persName>
-in a struggle against the young <persName ref="PRS10198Yaeqob"><roleName type="title">ʾaṣe</roleName></persName>
-<persName ref="PRS10198Yaeqob">Yāʿqob</persName> in <date>1605</date>.
-</floruit>
+              <floruit when="1605" evidence="internal">
+              He was an important military and political figure, who was involved in several episodes related to
+              <persName ref="PRS9038Susenyos"/>
+              during the latter's years as šǝftā and pretender to the throne. He refused to side with his brother
+              <persName ref="PRS9038Susenyos">
+              <roleName type="title">ʾaṣe</roleName>
+              Susǝnyos
+              </persName>
+              in a struggle against the young
+              <persName ref="PRS10198Yaeqob">
+              <roleName type="title">ʾaṣe</roleName>
+              Yāʿqob
+              </persName>
+              in
+              <date>1605</date>
+              .
+              </floruit>
 </egXML>
          </div>
          <div type="level1">
