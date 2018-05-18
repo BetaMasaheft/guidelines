@@ -17,7 +17,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>  
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
          <change who="DR" when="2018-05-18">Split dates</change></revisionDesc>
    </teiHeader>
    <text>
@@ -54,7 +54,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <textLang mainLang="gez"/>
                </msItem>
             </egXML></p>
-         
+
          <p>Variant titles, translations of the title, etc. will be contained
             in the <ref target="works">work record</ref>. They do not need to be all listed in the manuscript record.</p>
          <div type="level2">
@@ -69,18 +69,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       for that person following the
       <ref target="guidelinesPerson">guidelines for a Person
       entity</ref>. For the encoding of roles and titles of persons, both in the appropriate record and when referring to them, see <ref target="roles">roles and roleName</ref>.</p>
-    
+
                <p>IF YOU CHANGE AN ID, YOU SHOULD ALSO MAKE SURE TO UPDATE ANY
         REFERENCE IN ANY FILE WHICH ALREADY CONTAINS IT</p>
-            
+
 
             <p>Filenames and IDs should correspond EXACTLY and as always they
       are case sensitive. The main xml:id of a record is directly into
       the <gi>TEI</gi> root element.:
-               
+
                <tag>TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PRS1009Abakaraz"</tag>
             </p>
-            
+
          <div type="level3">
             <head>Attested placeNames in a Work</head>
             <p>The attestations of placeNames should be marked as in the example
@@ -118,8 +118,7 @@ notAfter="1559">ትግራይ፡</placeName>
                </item>
             </list>
             <p>you can also add a <att>resp</att> with the ID of one of our person records
-  or editors and a <att>source</att> with a list of bm:tags from the Zotero
-  Ethiostudies group library.</p>
+  or editors and a <att>source</att> with a pointer to the ID assigned to a <gi>bibl</gi> in the file as shown <ref target="places">here </ref>.</p>
          </div>
          </div>
       </body>
