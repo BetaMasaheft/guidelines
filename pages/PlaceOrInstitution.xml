@@ -31,7 +31,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <list type="ordered:arabic">
         <item>
             <p>if the institution record for the institution you need does not
-                exist, create one and assign an id.</p>
+                exist, create one and assign an ID.</p>
         </item>
         <item>
             <p>leave the place record there, check the already existing

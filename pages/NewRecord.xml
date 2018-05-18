@@ -25,7 +25,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <head>Create a new record</head>
                 <p>You shall now find a new "create new entity" function in the navigation bar of
                     the app. You only need to enter the name of the file, for manuscripts this is
-                    the full filename, for the other entities just the last part of the ID (see
+                    the full filename, for the other entities just the last (not numerical) part of the ID (see
                         <gi>TEI</gi> schema specification). For LIT1234iliad, you would enter only
                     "iliad". For a manuscript, simply enter the full name, the small print will
                     indicate you what is needed. As you start typing the button will become active
@@ -49,6 +49,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     previously, but the application interface is recommended as it makes sure your ID is unique.
                     The file will also have the correct type and a <gi>change</gi> element with your initials
                     and current date.</p>
+                <p>Especially when creating a new work record, where the numerical part of the ID will become the Clavis reference number, only the app should be used.</p>
                 <p>Check the principles for creating a <ref target="works">WORK entity</ref> and the page about how to <ref target="placeOrInstitution">decide between a place and an institution</ref> record. </p>
                 <p>To decide whether to create a new place record or not if in
                 doubt, try the following.
@@ -85,9 +86,9 @@ record</item>
                 <p>Adding references to places not in our db:
 <list>
 <item>for ancient place
-prefere pleiades, with namespace pleiades</item>
-<item>for places related to
-coptic literary tradition use PAThs</item>
+prefer pleiades, with namespace pleiades</item>
+<item>for places related to the
+Coptic literary tradition use PAThs</item>
 </list>
                 </p>
             </div>

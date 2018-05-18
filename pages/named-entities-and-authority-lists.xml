@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Named Entities and authority lists</title>
+            <title>Named Entities</title>
             <author>Pietro Liuzzo</author>
          </titleStmt>
          <publicationStmt>
@@ -17,198 +17,70 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>  
+         <change who="DR" when="2018-05-18">Split dates</change></revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="named-entities-and-authority-lists">
-         <head>Named Entities and authority lists</head>
+         <head>Named Entities</head>
          <p>Throughout the document <gi>placeName</gi> and
     <gi>persName</gi> will take a
     <att>ref</att> containing the
-    <gi>xml:id</gi> of the place or person record.</p>
+    <gi>xml:id</gi> of the place or person record:
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<placeName ref="LOC2969Ensala"/>
+            belongs to the manuscripts looted by the British <persName ref="PRS7484Napier">Napier</persName>
+            expedition in <date>1868</date> from the church of <placeName ref="INS0101MadhaneAlam">Madḫāne ʿAlam</placeName>
+            or was acquired by a member of the expedition between <placeName ref="LOC5534Sanafe"/> and <placeName ref="LOC4547Maqdal"/>
 </egXML>
-
-         <p>
-            <gi>title</gi> takes a <att>ref</att>
-    as well, pointing to the work id, which will contain the standard
-    edition of the text.</p>
-         <egXML xmlns="http://www.tei-c.org/ns/Examples">
- <title ref="LIT1013ActaSa"/>
-</egXML>
-         <p>Variant titles, translations of the title, etc. will be contained
-    in the <ref target="guidelinesWork">file for that work</ref>.</p>
+         </p>
          <p>Before creating new entities for PLACES like Stuttgart, Paris,
     London, etc. which unlike all institutions are very much unlikely to
     receive specific descriptions by this project, use external links to
-    geonames IDs as follows.</p>
+    Wikidata IDs as follows.</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<country ref="gn:2017370"/>
-<settlement ref="gn:498817"/>
+            vicaire en la paroisse de <placeName ref="Q272084">Bourron</placeName>
 </egXML>
          <p>(same for placeName and region)</p>
          <p>To decide whether to create a new place record or not if in
          doubt, see the page on creating <ref target="newEntry">new records</ref>.</p>
-         <div type="level2">
-            <head>Dates</head>
-            <p>Dates anywhere in the text quoted can be tagged with
-      precision</p>
+         <p>
+            The <gi>title</gi> in a <gi>msItem</gi> takes a <att>ref</att>
+            as well, pointing to the work ID, which will contain the standard
+            edition of the text.
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<date calendar="ethiopian" when="1888" when-custom="1881" evidence="internal">፲ወ፰፻፹ወ፩ ዓመት፡ ምሕረት፡ </date>
-</egXML>
-            <p>
-               <att>when</att> always carries the standard ISO
-      date in the gregorian calendar, while the
-      <att>when-custom</att> (or notBefore-custom,
-      notAfter-custom) can hold the value in the calendar specified by
-      <att>calendar</att>.</p>
-            <p>BCE dates are therefore expressed with -:
-      <tag>death when="-0931"</tag>
-            </p>
-            <p>date expressing a duration rather than a point in time, might
-      use the <att>dur</att>
-               <ref target="https://www.w3.org/TR/xmlschema-2/#duration">following
-      w3c recommendations</ref>. A period of 10 years and 5 months would
-      be encoded as</p>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<date dur="P10Y5M"/>
-</egXML>
-<table>
-               <row role="label">
-                  <cell>attribute
-                  </cell>
-                  <cell>value
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <att>when</att>
-                  </cell>
-                  <cell>
-                     ISO gregorian date
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <att>when-custom</att>
-                  </cell>
-                  <cell>
-                     date in specified calendar
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <att>notBefore</att>
-                  </cell>
-                  <cell>
-                     date range limit
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <att>notAfter</att>
-                  </cell>
-                  <cell>
-                     date range limit
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <att>notBefore-custom</att>
-                  </cell>
-                  <cell>
-                     date range limit in specified calendar
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <att>notAfter-custom</att>
-                  </cell>
-                  <cell>
-                     date range limit in specified calendar
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <att>dur</att>
-                  </cell>
-                  <cell>
-                     duration
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <att>type</att>
-                  </cell>
-                  <cell>type of date (reign, lifespan, etc.)
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <att>calendar</att>
-                  </cell>
-                  <cell>specified calendar according to list
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <att>resp</att>
-                  </cell>
-                  <cell>
-                     with the ID of responsible
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <att>cert</att>
-                  </cell>
-                  <cell>certainty low, medium or high (default)
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <att>evidence</att>
-                  </cell>
-                  <cell>especially for date assigned to something, with set
-          of values
-                  </cell>
-               </row>
-            </table>
-         </div>
+               <msItem xml:id="ms_i7">
+                  <locus from="114v" to="118r"/>
+                  <title type="complete" ref="LIT2444Temher"/>
+                  <textLang mainLang="gez"/>
+               </msItem>
+            </egXML></p>
+         
+         <p>Variant titles, translations of the title, etc. will be contained
+            in the <ref target="works">work record</ref>. They do not need to be all listed in the manuscript record.</p>
          <div type="level2">
             <head>In-text placeName and persName</head>
-            <p>All information related to places or people should be stored in
-      the respective place or person record. If a long description needs
-      to be provided, then the name of the place might not be
-      omitted.</p>
-            <quote>
-               <p>The manuscript was perhaps found in
-        <tag>placeName ref="LOC2969Ensala"</tag>
-        but there is no agreement about this.</p>
-            </quote>
-            <p>There are some standard
-      <ref target="guidelines#people">typologies of persons</ref>
-      identified in the record description which can be used.</p>
+            <p>Similarily, all information related to places or people should be stored in
+      the respective place or person record:</p>
             <p>Information about a place should be entered in the TEI record
-      for that person following the
+      for that place following the
       <ref target="guidelinesPlace">guidelines for a Place
       entity</ref>.</p>
             <p>Information about a person should be entered in the TEI record
       for that person following the
       <ref target="guidelinesPerson">guidelines for a Person
-      entity</ref>.</p>
-            <quote>
+      entity</ref>. For the encoding of roles and titles of persons, both in the appropriate record and when referring to them, see <ref target="roles">roles and roleName</ref>.</p>
+    
                <p>IF YOU CHANGE AN ID, YOU SHOULD ALSO MAKE SURE TO UPDATE ANY
         REFERENCE IN ANY FILE WHICH ALREADY CONTAINS IT</p>
-            </quote>
+            
 
             <p>Filenames and IDs should correspond EXACTLY and as always they
       are case sensitive. The main xml:id of a record is directly into
-      the <gi>TEI</gi> root element.</p>
-            <p>
+      the <gi>TEI</gi> root element.:
+               
                <tag>TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PRS1009Abakaraz"</tag>
             </p>
+            
          <div type="level3">
             <head>Attested placeNames in a Work</head>
             <p>The attestations of placeNames should be marked as in the example
@@ -230,12 +102,12 @@ notAfter="1559">ትግራይ፡</placeName>
             <p>to choose which ID to use consider the following:</p>
             <list type="unordered">
                <item>
-                  <p>if it is a place of interest for ethiopian studies or attested
-      in ethiopia, then use one of our internal IDs or create a new
+                  <p>if it is a place of interest for Ethiopian studies or attested
+      in Ethiopia, then use one of our internal IDs or create a new
       record if none is yet available</p>
                </item>
                <item>
-                  <p>if it is an ancient place but not in ethiopia, like Jordan,
+                  <p>if it is an ancient place but not in Ethiopia, like Jordan,
       Rome, etc. then search pleaides and use a pleiades ID prefixed
       with pleaides: e.g. for Jordan River use plaeides:687932</p>
                </item>
@@ -249,56 +121,6 @@ notAfter="1559">ትግራይ፡</placeName>
   or editors and a <att>source</att> with a list of bm:tags from the Zotero
   Ethiostudies group library.</p>
          </div>
-      </div>
-         <div type="level2">
-            <head>roleName and @role</head>
-            <p>The titles of persons, such as ʾabbā, wayzaro, makʷannǝn etc.,
-      should be encoded with
-      <tag>roleName type="title"</tag> at
-      the place in the texts where they occur. In order to be reasonably
-      retrievable, <gi>roleName</gi> always has to
-      be encoded within <gi>persName</gi>. The
-      name of the person can be typed in the
-      <gi>persName</gi>, or, if avoiding typing it
-      is preferable, the <gi>persName</gi> element
-      with the same ID can be repeated immediately after the first
-      <gi>persName</gi> which contains
-      <gi>roleName</gi>:</p>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-It lists the books belonging to <persName ref="PRS10796Tasfo"><roleName type="title">ʾabbā</roleName></persName><persName ref="PRS10796Tasfo"/>
-</egXML>
-            <p>and</p>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-It lists the books belonging to <persName ref="PRS10796Tasfo"><roleName type="title">ʾabbā</roleName> Tasfo</persName>
-</egXML>
-            <p>will both be visualized as: It lists the books belonging to
-      ʾabbā Tasfo.</p>
-            <p>Therefore, if only the title encoded should be visualized
-      (without the name of the person it refers to), it should be marked
-      up in the following way:</p>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-he was also appointed as <persName ref="PRS5309hesanMo"><roleName type="title">qāla nǝguś</roleName></persName> of King <persName ref="PRS2334BaedaM">Baʾǝda Māryām I</persName>
-</egXML>
-            <p>The use of <gi>roleName</gi> has to be
-      clearly separated from the use of @role. The first is used to mark
-      up a concrete title mentioned in a text, the second specifies the
-      role the person has in regard to the record in which it is
-      mentioned. This applies for instance to scribes or owners of
-      manuscripts.</p>
-            <p>If possible, persNames should take a
-      <att>role</att> where relevant in the description,
-      and then don't need to be listed again in
-      <gi>listPers</gi>:</p>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<item xml:id="e1">
-<locus target="#60v #143r #144r #152v #167v #171r #173r #189v #192r #234r #255r"/>
-<desc>The names of the owner <persName role="owner" ref="PRS11297ZenaG"/> and his wife <persName ref="PRS11298SeyonM"/> are mentioned several times.</desc>
-</item>
-</egXML>
-            <p>If there is no sensible place within the description, then the
-      information on the role can also be encoded in
-      <gi>listPers</gi> in
-      <gi>particDesc</gi>.</p>
          </div>
       </body>
    </text>

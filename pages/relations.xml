@@ -17,12 +17,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
                 <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
             </sourceDesc>
-        </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+        </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+            <change who="DR" when="2018-05-18">Edited and updated examples</change></revisionDesc>
     </teiHeader>
     <text>
         <body xml:id="relations"><div type="level5">
     <head>Relations</head>
-    <p>Relations can be listed as well for manuscript in a
+    <p>Relations can be listed in all entities  in a
         specific <gi>listRelation</gi>. This will
         contain <gi>relation</gi> elements with
         <att>name</att> taken from a list of values in
@@ -30,34 +31,47 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <p>
         <gi>listRelation</gi> is allowed
         EVERYWHERE.</p>
-    <p>For example, within a <gi>msItem</gi> such
+    <p>For example, in a manuscript record within a <gi>msItem</gi> such
         relations and a description of them should be given within the
         element <gi>filiation</gi>
     </p>
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-        <filiation> This text describes in general the relations to other surviving manuscripts
+        <filiation>
             <listRelation>
-                <relation name="saws:isRelatedTo" active="ESam002" passive="ESam003">
-                    <desc>It is always a nice idea to provide a description of this relations with a sentence or two.</desc>
+                <relation name="saws:isDirectCopyOf"
+                    active="FSUffhludolfII21"
+                    passive="BNFet1">
+                    <desc>This manuscript is a direct copy of <ref type="mss" corresp="BNFet1"/>.</desc>
                 </relation>
             </listRelation>
         </filiation>
     </egXML>
-    <p>This relations can be much more precise than a simple list
-        of ref elements stating similarity, and this is therefore the
-        recommended way to encode similar manuscripts. multiple
+    <p>These relations can be much more precise than a simple list
+        of <gi>ref</gi> elements stating similarity, and this is therefore the
+        recommended way to encode similar manuscripts. Multiple
         relations can be stated if needed, for example if a manuscript
         A is a copy from two different manuscripts B and C of which
-        one is certainly a translation from a coptic manuscript D, one
-        might have a relation between A and B, A and C, C and D. or
-        parts.</p>
-    <p>In the @active and @passive attributes, please don't use #
+        one is certainly a translation from a Coptic manuscript D: one
+        might have a relation between A and B, A and C, C and D or
+        parts of them.</p>
+    <p>In the <att>active</att> and <att>passive</att> attributes, please don't use #
         as this hinders the possibility to use further specific IDs
         within the record, and to point to a specific msItem, e.g.</p>
     <p>It is preferable to have a separate
         <gi>relation</gi> for each relationship,
         even if the same relation exists between one and several more
-        items. The following are some frequently used ones, but there are many more readily available from the schema (see <gi>relation</gi>) and you can use others which are in the <ref target="ontologyView">ontology</ref>.</p>
+        items:
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <relation name="snap:FatherOf"
+                active="PRS11029Arkala"
+                passive="PRS11031WalattaM"/>
+            <relation name="snap:FatherOf"
+                active="PRS11029Arkala"
+                passive="PRS11032EsetaM"/>
+        </egXML>
+    
+    </p>
+            <p>The following are some frequently used ones, but there are many more readily available from the schema (see <gi>relation</gi>) and you can use others which are in the <ref target="ontologyView">ontology</ref>.</p>
     <div type="section">
         <head>mss-mss</head>
         <p>saws:isDirectCopyOf</p>

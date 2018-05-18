@@ -304,7 +304,7 @@ the file with a proper ID as in the example below.</p>
 </egXML>
 <p>It is important that the ID of the referred place starts with P
 because there are cases where corresp is already used to point to
-another id, e.g. a work in another tradition title. Look at this
+another ID, e.g. a work in another tradition title. Look at this
 fictitious example, where I have entered a placeName with Q item id
 from wikidata (Ethiopia) and assigned the second corresp and the id
 with P</p>

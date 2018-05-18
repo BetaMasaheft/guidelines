@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Roles and roleNames</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>  
+         <change who="DR" when="2018-05-18">Split dates</change></revisionDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="roles">
+            <head><gi>roleName</gi> and <att>role</att></head>
+            <p>The titles of persons, such as ʾabbā, wayzaro, makʷannǝn etc.,
+      should be encoded with
+      <tag>roleName type="title"</tag> at
+      the place in the texts where they occur. In order to be reasonably
+      retrievable, <gi>roleName</gi> always has to
+      be encoded within <gi>persName</gi>. The
+      name of the person can be typed in the
+      <gi>persName</gi>, or, if avoiding typing it
+      is preferable, the <gi>persName</gi> element
+      with the same ID can be repeated immediately after the first
+      <gi>persName</gi> which contains
+      <gi>roleName</gi>:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+It lists the books belonging to <persName ref="PRS10796Tasfo"><roleName type="title">ʾabbā</roleName></persName><persName ref="PRS10796Tasfo"/>
+</egXML>
+            <p>and</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+It lists the books belonging to <persName ref="PRS10796Tasfo"><roleName type="title">ʾabbā</roleName> Tasfo</persName>
+</egXML>
+            <p>will both be visualized as: It lists the books belonging to
+      ʾabbā Tasfo.</p>
+            <p>Therefore, if only the title encoded should be visualized
+      (without the name of the person it refers to), it should be marked
+      up in the following way:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+he was also appointed as <persName ref="PRS5309hesanMo"><roleName type="title">qāla nǝguś</roleName></persName> of King <persName ref="PRS2334BaedaM">Baʾǝda Māryām I</persName>
+</egXML>
+            <p>The use of <gi>roleName</gi> has to be
+      clearly separated from the use of <att>role</att>. The first is used to mark
+      up a concrete title mentioned in a text, the second specifies the
+      role the person has in regard to the record in which it is
+      mentioned. This applies for instance to scribes or owners of
+      manuscripts.</p>
+            <p>If possible, persNames should take a
+      <att>role</att> where relevant in the description,
+      and then don't need to be listed again in
+      <gi>listPers</gi>:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<item xml:id="e1">
+<locus target="#60v #143r #144r #152v #167v #171r #173r #189v #192r #234r #255r"/>
+<desc>The names of the owner <persName role="owner" ref="PRS11297ZenaG"/> and his wife <persName ref="PRS11298SeyonM"/> are mentioned several times.</desc>
+</item>
+</egXML>
+            <p>If there is no sensible place within the description, then the
+      information on the role can also be encoded in
+      <gi>listPers</gi> in
+      <gi>particDesc</gi>.</p>
+      </body>
+   </text>
+</TEI>
