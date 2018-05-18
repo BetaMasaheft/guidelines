@@ -52,7 +52,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             the leaf. The leaf from which the measurements have been
             taken can be added in a
             <gi>note</gi> linked with <att>corresp</att> to the <gi>dimensions</gi> element.
-            In this way there can be several leaves measurements.
+            In this way, measurements of several leaves can be added.
             Other values for <att>type</att> are possible.</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <extent>
@@ -81,7 +81,8 @@ taken from <locus target="#6r"/>.
             measure.</p>
                      <p>
                         <gi>collation</gi> can be used to give
-            textual information about how the leaves are arranged using a simple <gi>list</gi> of <gi>item</gi> elements.</p>
+            textual information about how the leaves are arranged using a 
+                        <gi>list</gi> of <gi>item</gi> elements.</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <collation>
     <list>
@@ -118,7 +119,7 @@ The textual sequence of the manuscript is disturbed, see <ref target="#ms_i1.1"/
 </note>
 </collation>
 </egXML>
-                     <p>Quires with an uneven dim[@unit] will ALWAYS need
+                      <p>Quires with an uneven <att>unit</att> for <gi>dim</gi>  will ALWAYS need
             clarification of the phenomenon occurring as below. No item
             view will be loaded if only the following is given</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -150,7 +151,7 @@ WRONG ENCODING EXAMPLE
                      </cit>
                      <p>where the number before the comma is the folio number of
             the singleton.</p>
-                     <p>Also, you can use with care for consistence the following
+                     <p>Also, you can use with care for consistency the following
             values</p>
                      <cit>
                         <quote>

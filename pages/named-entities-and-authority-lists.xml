@@ -33,20 +33,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             or was acquired by a member of the expedition between <placeName ref="LOC5534Sanafe"/> and <placeName ref="LOC4547Maqdal"/>
 </egXML>
          </p>
-         <p>
-            The <gi>title</gi> in a <gi>msItem</gi> takes a <att>ref</att>
-    as well, pointing to the work ID, which will contain the standard
-    edition of the text.
-         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <msItem xml:id="ms_i7">
-               <locus from="114v" to="118r"/>
-               <title type="complete" ref="LIT2444Temher"/>
-               <textLang mainLang="gez"/>
-            </msItem>
-</egXML></p>
-         
-         <p>Variant titles, translations of the title, etc. will be contained
-            in the <ref target="works">work record</ref>. They do not need to be all listed in the manuscript record.</p>
          <p>Before creating new entities for PLACES like Stuttgart, Paris,
     London, etc. which unlike all institutions are very much unlikely to
     receive specific descriptions by this project, use external links to
@@ -57,11 +43,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <p>(same for placeName and region)</p>
          <p>To decide whether to create a new place record or not if in
          doubt, see the page on creating <ref target="newEntry">new records</ref>.</p>
+         <p>
+            The <gi>title</gi> in a <gi>msItem</gi> takes a <att>ref</att>
+            as well, pointing to the work ID, which will contain the standard
+            edition of the text.
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <msItem xml:id="ms_i7">
+                  <locus from="114v" to="118r"/>
+                  <title type="complete" ref="LIT2444Temher"/>
+                  <textLang mainLang="gez"/>
+               </msItem>
+            </egXML></p>
          
+         <p>Variant titles, translations of the title, etc. will be contained
+            in the <ref target="works">work record</ref>. They do not need to be all listed in the manuscript record.</p>
          <div type="level2">
             <head>In-text placeName and persName</head>
-            <p>All information related to places or people should be stored in
-      the respective place or person record.</p>
+            <p>Similarily, all information related to places or people should be stored in
+      the respective place or person record:</p>
             <p>Information about a place should be entered in the TEI record
       for that place following the
       <ref target="guidelinesPlace">guidelines for a Place
@@ -70,10 +69,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       for that person following the
       <ref target="guidelinesPerson">guidelines for a Person
       entity</ref>. For the encoding of roles and titles of persons, both in the appropriate record and when referring to them, see <ref target="roles">roles and roleName</ref>.</p>
-            <quote>
+    
                <p>IF YOU CHANGE AN ID, YOU SHOULD ALSO MAKE SURE TO UPDATE ANY
         REFERENCE IN ANY FILE WHICH ALREADY CONTAINS IT</p>
-            </quote>
+            
 
             <p>Filenames and IDs should correspond EXACTLY and as always they
       are case sensitive. The main xml:id of a record is directly into
@@ -103,12 +102,12 @@ notAfter="1559">ትግራይ፡</placeName>
             <p>to choose which ID to use consider the following:</p>
             <list type="unordered">
                <item>
-                  <p>if it is a place of interest for ethiopian studies or attested
-      in ethiopia, then use one of our internal IDs or create a new
+                  <p>if it is a place of interest for Ethiopian studies or attested
+      in Ethiopia, then use one of our internal IDs or create a new
       record if none is yet available</p>
                </item>
                <item>
-                  <p>if it is an ancient place but not in ethiopia, like Jordan,
+                  <p>if it is an ancient place but not in Ethiopia, like Jordan,
       Rome, etc. then search pleaides and use a pleiades ID prefixed
       with pleaides: e.g. for Jordan River use plaeides:687932</p>
                </item>
