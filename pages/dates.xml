@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Dates</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+         <change who="DR" when="2018-05-18">Split from named entities</change></revisionDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="dates">
+         <head>Dates</head>
+            <p>Dates anywhere in the text quoted can be tagged with
+      precision using the <gi>date</gi> element:
+         
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         He succeeded his father                   <persName ref="PRS8550sardaDe"><roleName type="title">ʾaṣe</roleName>
+            Śarḍa Dǝngǝl</persName> when he was 15 years old in <date>1597</date>. 
+         </egXML>
+         
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<date calendar="ethiopian" when="1888" when-custom="1881" evidence="internal">፲ወ፰፻፹ወ፩ ዓመት፡ ምሕረት፡ </date>
+            </egXML>
+            </p>
+            <p>
+               <att>when</att> always carries the standard ISO
+      date in the Gregorian calendar, while the
+      <att>when-custom</att> (or <att>notBefore-custom</att>,
+      <att>notAfter-custom</att>) can hold the value in the calendar specified by
+      <att>calendar</att>.</p>
+            <p>BCE dates are therefore expressed with -:
+      <tag>death when="-0931"</tag>
+            </p>
+            <p>date expressing a duration rather than a point in time, might
+      use the <att>dur</att>
+               <ref target="https://www.w3.org/TR/xmlschema-2/#duration">following
+      w3c recommendations</ref>. A period of 10 years and 5 months would
+      be encoded as</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<date dur="P10Y5M"/>
+</egXML>
+<table>
+               <row role="label">
+                  <cell>attribute
+                  </cell>
+                  <cell>value
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <att>when</att>
+                  </cell>
+                  <cell>
+                     ISO gregorian date
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <att>when-custom</att>
+                  </cell>
+                  <cell>
+                     date in specified calendar
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <att>notBefore</att>
+                  </cell>
+                  <cell>
+                     date range limit
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <att>notAfter</att>
+                  </cell>
+                  <cell>
+                     date range limit
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <att>notBefore-custom</att>
+                  </cell>
+                  <cell>
+                     date range limit in specified calendar
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <att>notAfter-custom</att>
+                  </cell>
+                  <cell>
+                     date range limit in specified calendar
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <att>dur</att>
+                  </cell>
+                  <cell>
+                     duration
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <att>type</att>
+                  </cell>
+                  <cell>type of date (reign, lifespan, etc.)
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <att>calendar</att>
+                  </cell>
+                  <cell>specified calendar according to list
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <att>resp</att>
+                  </cell>
+                  <cell>
+                     with the ID of responsible
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <att>cert</att>
+                  </cell>
+                  <cell>certainty low, medium or high (default)
+                  </cell>
+               </row>
+               <row>
+                  <cell>
+                     <att>evidence</att>
+                  </cell>
+                  <cell>especially for date assigned to something, with set
+          of values
+                  </cell>
+               </row>
+            </table>
+      </body>
+   </text>
+</TEI>

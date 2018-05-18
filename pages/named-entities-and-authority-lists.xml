@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Named Entities and authority lists</title>
+            <title>Named Entities and Authority Lists</title>
             <author>Pietro Liuzzo</author>
          </titleStmt>
          <publicationStmt>
@@ -17,165 +17,48 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>  
+         <change who="DR" when="2018-05-18">Split dates</change></revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="named-entities-and-authority-lists">
-         <head>Named Entities and authority lists</head>
+         <head>Named Entities and Authority Lists</head>
          <p>Throughout the document <gi>placeName</gi> and
     <gi>persName</gi> will take a
     <att>ref</att> containing the
-    <gi>xml:id</gi> of the place or person record.</p>
+    <gi>xml:id</gi> of the place or person record:
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<placeName ref="LOC2969Ensala"/>
+            belongs to the manuscripts looted by the British <persName ref="PRS7484Napier">Napier</persName>
+            expedition in <date>1868</date> from the church of <placeName ref="INS0101MadhaneAlam">Madḫāne ʿAlam</placeName>
+            or was acquired by a member of the expedition between <placeName ref="LOC5534Sanafe"/> and <placeName ref="LOC4547Maqdal"/>
 </egXML>
-
+         </p>
          <p>
-            <gi>title</gi> takes a <att>ref</att>
-    as well, pointing to the work id, which will contain the standard
-    edition of the text.</p>
+            The <gi>title</gi> in a <gi>msItem</gi> takes a <att>ref</att>
+    as well, pointing to the work ID, which will contain the standard
+    edition of the text.
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
  <title ref="LIT1013ActaSa"/>
-</egXML>
+</egXML></p>
+         
          <p>Variant titles, translations of the title, etc. will be contained
-    in the <ref target="guidelinesWork">file for that work</ref>.</p>
+    in the <ref target="guidelinesWork">work record</ref>. They do not need to be all listed in the manuscript record.</p>
          <p>Before creating new entities for PLACES like Stuttgart, Paris,
     London, etc. which unlike all institutions are very much unlikely to
     receive specific descriptions by this project, use external links to
-    geonames IDs as follows.</p>
+    Wikidata IDs as follows.</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<country ref="gn:2017370"/>
-<settlement ref="gn:498817"/>
+            <place type="city" sameAs="Q649">
+               <placeName xml:id="n1" xml:lang="ru">Москва</placeName>
+               <placeName corresp="#n1" xml:lang="en">Moscow</placeName>
+               <country ref="Q159"></country>
+               <region ref="Q649"></region>
+            </place>
 </egXML>
          <p>(same for placeName and region)</p>
          <p>To decide whether to create a new place record or not if in
          doubt, see the page on creating <ref target="newEntry">new records</ref>.</p>
-         <div type="level2">
-            <head>Dates</head>
-            <p>Dates anywhere in the text quoted can be tagged with
-      precision</p>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<date calendar="ethiopian" when="1888" when-custom="1881" evidence="internal">፲ወ፰፻፹ወ፩ ዓመት፡ ምሕረት፡ </date>
-</egXML>
-            <p>
-               <att>when</att> always carries the standard ISO
-      date in the gregorian calendar, while the
-      <att>when-custom</att> (or notBefore-custom,
-      notAfter-custom) can hold the value in the calendar specified by
-      <att>calendar</att>.</p>
-            <p>BCE dates are therefore expressed with -:
-      <tag>death when="-0931"</tag>
-            </p>
-            <p>date expressing a duration rather than a point in time, might
-      use the <att>dur</att>
-               <ref target="https://www.w3.org/TR/xmlschema-2/#duration">following
-      w3c recommendations</ref>. A period of 10 years and 5 months would
-      be encoded as</p>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<date dur="P10Y5M"/>
-</egXML>
-<table>
-               <row role="label">
-                  <cell>attribute
-                  </cell>
-                  <cell>value
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <att>when</att>
-                  </cell>
-                  <cell>
-                     ISO gregorian date
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <att>when-custom</att>
-                  </cell>
-                  <cell>
-                     date in specified calendar
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <att>notBefore</att>
-                  </cell>
-                  <cell>
-                     date range limit
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <att>notAfter</att>
-                  </cell>
-                  <cell>
-                     date range limit
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <att>notBefore-custom</att>
-                  </cell>
-                  <cell>
-                     date range limit in specified calendar
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <att>notAfter-custom</att>
-                  </cell>
-                  <cell>
-                     date range limit in specified calendar
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <att>dur</att>
-                  </cell>
-                  <cell>
-                     duration
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <att>type</att>
-                  </cell>
-                  <cell>type of date (reign, lifespan, etc.)
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <att>calendar</att>
-                  </cell>
-                  <cell>specified calendar according to list
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <att>resp</att>
-                  </cell>
-                  <cell>
-                     with the ID of responsible
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <att>cert</att>
-                  </cell>
-                  <cell>certainty low, medium or high (default)
-                  </cell>
-               </row>
-               <row>
-                  <cell>
-                     <att>evidence</att>
-                  </cell>
-                  <cell>especially for date assigned to something, with set
-          of values
-                  </cell>
-               </row>
-            </table>
-         </div>
+         
          <div type="level2">
             <head>In-text placeName and persName</head>
             <p>All information related to places or people should be stored in
@@ -191,7 +74,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <ref target="guidelines#people">typologies of persons</ref>
       identified in the record description which can be used.</p>
             <p>Information about a place should be entered in the TEI record
-      for that person following the
+      for that place following the
       <ref target="guidelinesPlace">guidelines for a Place
       entity</ref>.</p>
             <p>Information about a person should be entered in the TEI record
