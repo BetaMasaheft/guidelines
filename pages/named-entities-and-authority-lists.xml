@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Named Entities and Authority Lists</title>
+            <title>Named Entities</title>
             <author>Pietro Liuzzo</author>
          </titleStmt>
          <publicationStmt>
@@ -22,7 +22,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body xml:id="named-entities-and-authority-lists">
-         <head>Named Entities and Authority Lists</head>
+         <head>Named Entities</head>
          <p>Throughout the document <gi>placeName</gi> and
     <gi>persName</gi> will take a
     <att>ref</att> containing the
@@ -38,22 +38,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     as well, pointing to the work ID, which will contain the standard
     edition of the text.
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
- <title ref="LIT1013ActaSa"/>
+            <msItem xml:id="ms_i7">
+               <locus from="114v" to="118r"/>
+               <title type="complete" ref="LIT2444Temher"/>
+               <textLang mainLang="gez"/>
+            </msItem>
 </egXML></p>
          
          <p>Variant titles, translations of the title, etc. will be contained
-    in the <ref target="guidelinesWork">work record</ref>. They do not need to be all listed in the manuscript record.</p>
+            in the <ref target="works">work record</ref>. They do not need to be all listed in the manuscript record.</p>
          <p>Before creating new entities for PLACES like Stuttgart, Paris,
     London, etc. which unlike all institutions are very much unlikely to
     receive specific descriptions by this project, use external links to
     Wikidata IDs as follows.</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <place type="city" sameAs="Q649">
-               <placeName xml:id="n1" xml:lang="ru">Москва</placeName>
-               <placeName corresp="#n1" xml:lang="en">Moscow</placeName>
-               <country ref="Q159"></country>
-               <region ref="Q649"></region>
-            </place>
+            vicaire en la paroisse de <placeName ref="Q272084">Bourron</placeName>
 </egXML>
          <p>(same for placeName and region)</p>
          <p>To decide whether to create a new place record or not if in
@@ -62,17 +61,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <div type="level2">
             <head>In-text placeName and persName</head>
             <p>All information related to places or people should be stored in
-      the respective place or person record. If a long description needs
-      to be provided, then the name of the place might not be
-      omitted.</p>
-            <quote>
-               <p>The manuscript was perhaps found in
-        <tag>placeName ref="LOC2969Ensala"</tag>
-        but there is no agreement about this.</p>
-            </quote>
-            <p>There are some standard
-      <ref target="guidelines#people">typologies of persons</ref>
-      identified in the record description which can be used.</p>
+      the respective place or person record.</p>
             <p>Information about a place should be entered in the TEI record
       for that place following the
       <ref target="guidelinesPlace">guidelines for a Place
@@ -80,7 +69,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Information about a person should be entered in the TEI record
       for that person following the
       <ref target="guidelinesPerson">guidelines for a Person
-      entity</ref>.</p>
+      entity</ref>. For the encoding of roles and titles of persons, both in the appropriate record and when referring to them, see <ref target="roles">roles and roleName</ref>.</p>
             <quote>
                <p>IF YOU CHANGE AN ID, YOU SHOULD ALSO MAKE SURE TO UPDATE ANY
         REFERENCE IN ANY FILE WHICH ALREADY CONTAINS IT</p>
@@ -88,10 +77,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
             <p>Filenames and IDs should correspond EXACTLY and as always they
       are case sensitive. The main xml:id of a record is directly into
-      the <gi>TEI</gi> root element.</p>
-            <p>
+      the <gi>TEI</gi> root element.:
+               
                <tag>TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PRS1009Abakaraz"</tag>
             </p>
+            
          <div type="level3">
             <head>Attested placeNames in a Work</head>
             <p>The attestations of placeNames should be marked as in the example
@@ -132,56 +122,6 @@ notAfter="1559">ትግራይ፡</placeName>
   or editors and a <att>source</att> with a list of bm:tags from the Zotero
   Ethiostudies group library.</p>
          </div>
-      </div>
-         <div type="level2">
-            <head>roleName and @role</head>
-            <p>The titles of persons, such as ʾabbā, wayzaro, makʷannǝn etc.,
-      should be encoded with
-      <tag>roleName type="title"</tag> at
-      the place in the texts where they occur. In order to be reasonably
-      retrievable, <gi>roleName</gi> always has to
-      be encoded within <gi>persName</gi>. The
-      name of the person can be typed in the
-      <gi>persName</gi>, or, if avoiding typing it
-      is preferable, the <gi>persName</gi> element
-      with the same ID can be repeated immediately after the first
-      <gi>persName</gi> which contains
-      <gi>roleName</gi>:</p>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-It lists the books belonging to <persName ref="PRS10796Tasfo"><roleName type="title">ʾabbā</roleName></persName><persName ref="PRS10796Tasfo"/>
-</egXML>
-            <p>and</p>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-It lists the books belonging to <persName ref="PRS10796Tasfo"><roleName type="title">ʾabbā</roleName> Tasfo</persName>
-</egXML>
-            <p>will both be visualized as: It lists the books belonging to
-      ʾabbā Tasfo.</p>
-            <p>Therefore, if only the title encoded should be visualized
-      (without the name of the person it refers to), it should be marked
-      up in the following way:</p>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-he was also appointed as <persName ref="PRS5309hesanMo"><roleName type="title">qāla nǝguś</roleName></persName> of King <persName ref="PRS2334BaedaM">Baʾǝda Māryām I</persName>
-</egXML>
-            <p>The use of <gi>roleName</gi> has to be
-      clearly separated from the use of @role. The first is used to mark
-      up a concrete title mentioned in a text, the second specifies the
-      role the person has in regard to the record in which it is
-      mentioned. This applies for instance to scribes or owners of
-      manuscripts.</p>
-            <p>If possible, persNames should take a
-      <att>role</att> where relevant in the description,
-      and then don't need to be listed again in
-      <gi>listPers</gi>:</p>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<item xml:id="e1">
-<locus target="#60v #143r #144r #152v #167v #171r #173r #189v #192r #234r #255r"/>
-<desc>The names of the owner <persName role="owner" ref="PRS11297ZenaG"/> and his wife <persName ref="PRS11298SeyonM"/> are mentioned several times.</desc>
-</item>
-</egXML>
-            <p>If there is no sensible place within the description, then the
-      information on the role can also be encoded in
-      <gi>listPers</gi> in
-      <gi>particDesc</gi>.</p>
          </div>
       </body>
    </text>
