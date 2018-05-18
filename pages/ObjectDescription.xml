@@ -101,12 +101,7 @@ taken from <locus target="#6r"/>.
 </egXML>
                      <p>Give a <att>xml:id</att> to each item in the
             list to be able to refer to this unit, using "q" and a
-            consecutive number. You can also nest lists, following the
-            same ID pattern used for
-            <ref target="guidelines#identifiers">
-                           <gi>msPart</gi>
-                        </ref>
-            for example.</p>
+            consecutive number.</p>
                      <p>If only general information on the collation is provided
             and no quire structure is given, this information can be
             stated in a <gi>note</gi> inside

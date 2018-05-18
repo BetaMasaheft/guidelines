@@ -68,18 +68,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 oXygen should prompt the values from the schema.</p>
         </item>
     </list>
-    <p>Other defined types for decoNote are</p>
-    <list type="unordered">
-        <item>
-            <p>Headbands</p>
-        </item>
-        <item>
-            <p>Tailbands</p>
-        </item>
-        <item>
-            <p>Other</p>
-        </item>
-    </list>
     <p>You can always further specify this information within one
         of the <gi>decoNote</gi> elements within
         <gi>binding</gi>.</p>
