@@ -23,7 +23,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body xml:id="taxonomy">
          <div type="level1">
             <head>Taxonomies</head>
-            <p>The taxonomy is scorporated from the single files and kept in one single file called taxonomy.xml. This is actually only a <gi>classDecl</gi> which contains a <gi>taxonomy</gi></p>
+            <p>The taxonomy is split from the single files and kept in one single file called taxonomy.xml. This is actually only a <gi>classDecl</gi> which contains a <gi>taxonomy</gi></p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <taxonomy xml:id="ethioauthlist">
                   <category>

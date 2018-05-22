@@ -21,7 +21,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="DR" when="2018-05-18">Edited and updated examples</change></revisionDesc>
     </teiHeader>
     <text>
-        <body xml:id="relations"><div type="level5">
+        <body xml:id="relations">
     <head>Relations</head>
     <p>Relations can be listed in all entities  in a
         specific <gi>listRelation</gi>. This will
@@ -126,7 +126,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <head>person-place</head>
         <p>syriaca:has-relation-to-place</p>
     </div>
-</div>
+
         </body>
     </text>
 </TEI>

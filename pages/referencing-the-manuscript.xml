@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Referencing the manuscript</title>
+            <title>Locus</title>
             <author>Pietro Liuzzo</author>
          </titleStmt>
          <publicationStmt>
@@ -21,7 +21,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body xml:id="referencing-the-manuscript">
-         <head>Referencing the manuscript (placement / locus)</head>
+         <head>Locus</head>
          <p>
             <gi>locus</gi> element can be used almost
     everywhere to indicate the physical location of an item. It contains
@@ -52,7 +52,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <locus target="#28v #33r #49r #50v #55v #82r #82v #83r #83v #84v #85r"/>
 </egXML>
-         <p>Please DO NOT use unknow as a value for any of this attributes.
+         <p>Please DO NOT use unknown as a value for any of these attributes.
     Simply do not enter the attribute if its value is not known.</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
  <locus from="20r"/>

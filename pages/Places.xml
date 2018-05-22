@@ -17,7 +17,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+         <change who="DR" when="2018-05-22">Edited and updated examples</change></revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="places">
@@ -29,11 +30,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
          <p>This example record contains information about a single place, at
 whatever granularity. It is thus important to state relationships with
-other places when possible and typologies, using <gi>relation</gi> and <att>sameAs</att>.</p>
-         <p>Coordinates are used to display the place on a map and can be
-obtained from openstreetmap for example, adding a pointer for a place
-there.</p>
-         <p>It can be expanded with much more information, following TEI
+other places and typologies when possible , using <gi>relation</gi> and <att>sameAs</att>.</p>
+       
+         <p>Place records can be expanded with much more information, following TEI
 guidelines for
 <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/de/html/ref-place.html">
                place
@@ -43,33 +42,48 @@ guidelines for
 <text>
       <body>
          <listPlace>
-            <place type="monastery">
- <placeName xml:id="n1" xml:lang="gez">አሲር፡ መቲራ፡</placeName>
-               <placeName corresp="#n1" xml:lang="gez" type="normalized">ʾAsir Matirā</placeName>
-               <placeName type="alt" xml:id="n2" xml:lang="gez">አሲር፡ መቲራ፡  ደብረ፡ ዓለማ፡ ቅድስት፡ ማርያም፡</placeName>
-               <placeName type="normalized" corresp="#n2" xml:lang="gez">ʾAsir Matirā Dabra ʿĀlamā Qǝddǝst Maryam</placeName>
-               <placeName type="alt" xml:id="n3" xml:lang="gez">አሲረ፡ መቲራ፡  </placeName>
-               <placeName type="normalized" corresp="#n3" xml:lang="gez">ʾAsira Matirā</placeName>
-
-
-                  <country ref="LOC3010Ethiop"/>
-               <region notBefore="1991" type="RegionalState" ref="LOC5932Tegray"/>
-
-               <settlement type="province" ref="LOC5932Tegray"/>
-               <settlement when="2009-11-16" ref="LOC1564ASbiW" type="warada"/>
-
-               <settlement when="2009-11-16" ref="LOC6526Asir" type="qushat"/>
-               <location>
-                   <geo>51.969604 -2.893146</geo>
+            <place type="RegionalState" sameAs="Q200127">
+               <placeName xml:id="n1" xml:lang="am">ብሔራዊ፡ ክልላዊ፡ መንግሥቲ፡ ትግራይ፡</placeName>
+               <placeName corresp="#n1" xml:lang="am" type="normalized">Bǝḥerāwi Kǝllǝlāwi Mangǝśti
+                  Tǝgrāy</placeName>
+               <placeName corresp="#n1" xml:lang="en">Tǝgrāy National Regional State</placeName>
+               <placeName xml:id="n2" xml:lang="ti" type="alt">ትግራይ፡</placeName>
+               <placeName corresp="#n2" xml:lang="ti" type="normalized">Tǝgrāy</placeName>
+               <placeName xml:id="n3" xml:lang="am" type="alt">ትግሬ፡</placeName>
+               <placeName corresp="#n3" xml:lang="am" type="normalized">Tǝgre</placeName>
+               <state type="existence" notBefore="1991"/>
+               <country ref="LOC3010Ethiop"/>
+               
+               <location source="#Smidt">
+                  <geo>14.1666 38.8333</geo>
+                  <height>1975 m</height>
                </location>
+               <listBibl type="secondary">
+                  <bibl xml:id="Smidt">
+                     <ptr target="bm:Smidt2010EnAeTegray"/>
+                  </bibl>
+                  <bibl>
+                     <ptr target="bm:MantelNiecko2003EnAeAdministrative"/>
+                  </bibl>
+               </listBibl>
+               <note>
+                  <date type="foundation" notBefore="1991">1991</date>
+                  <ab type="history">Tǝgrāy National Regional State was created in 1991 following a
+                     radical reshaping of the historical Tǝgrāy province and the merger of diverse
+                     historical northern provinces.</ab>
+                  <ab type="description">Tǝgrāy borders with <placeName ref="LOC2991Eritre">Eritrea</placeName> to the north, <placeName ref="Q1049">Sudan</placeName> to the west, <placeName ref="LOC1426Amhara">ʾAmhārā</placeName> kǝllǝl to the south and <placeName ref="LOC1274Afar">ʿAfār</placeName> kǝllǝl to the east. Its national language is <persName ref="ETH2126Tegren">Tǝgrǝññā</persName> and its capital is <placeName ref="LOC4545Maqala">Maqala</placeName>. Although the state was originally
+                     divided into four zones, in <date cert="medium">2005</date> these were
+                     increased to six: <placeName ref="LOC6583WestTegray">Western Tǝgrāy
+                        Zone</placeName>, <placeName ref="LOC6653EastTegray">Eastern Tǝgrāy
+                           Zone</placeName>, <placeName ref="LOC6654CentralTegray">Central Tǝgrāy
+                              Zone</placeName>, <placeName ref="LOC6655SudTegray">Southern Tǝgrāy
+                                 Zone</placeName>, <placeName ref="LOC6656NWTegray">North-Western Tǝgrāy
+                                    Zone</placeName>, <placeName ref="LOC6657SETegray">South-Eastern Tǝgrāy
+                                       Zone</placeName>. Tǝgrāy presents a rich cultural heritage consisting of
+                     churches, monasteries and other religious places, both Christian and Islamic:
+                     manuscript collections; land charters; inscriptions; etc. </ab>
+               </note>
             </place>
-            <listRelation>
-<relation name="gn:nearBy" active="LOC00000sssss"
-               passive="LOC1111sssss LOC2222ggggg">
-               <desc>It is always a nice idea to provide a description of this relations with a sentence or two.
-               </desc>
-            </relation>
-</listRelation>
          </listPlace>
       </body>
    </text>
@@ -110,16 +124,19 @@ guidelines for
          </div>
          <div type="level2">
             <head>Coordinates</head>
-            <p>Coordinates must be provided latitude longitude and separated only
+            <p>Coordinates are used to display the place on a map and can be
+               obtained from openstreetmap for example, adding a pointer for a place
+               there.</p>
+            <p>Coordinates must provide latitude longitude and be separated only
   by one white space.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
  <geo>14.308833 39.378683</geo>
 </egXML>
-            <p>for regions, areas, and all polygons, use geo[@rend='polygon']
-  using one line for each point. please do not add spaces at the
+            <p>For regions, areas, and all polygons, use geo[@rend='polygon']
+  using one line for each point. Please do not add spaces at the
   beginning and end of the series. You can draw your polygon with (this
-  tool)[https://www.keene.edu/campus/maps/tool/] and copy past directly
-  from there. take care, please to remove the commas.</p>
+  tool)[https://www.keene.edu/campus/maps/tool/] and copy paste directly
+  from there. Please take care to remove the commas.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 
 <location>
@@ -151,24 +168,22 @@ guidelines for
          <div type="level2">
             <head>Administrative location</head>
             <p>If you want to give other administrative location information, use
-  <gi>settlement</gi>. One settlement for each set of
+  <gi>settlement</gi>. Add one settlement for each set of
   information, but only one if there is only one set. Please do not
   remove text if it is there, simply mark it up as in the following
   example. If you are adding info and you want to do it more quickly you
   can also enter only empty <gi>placeName</gi>s with
   <att>corresp</att> and <att>type</att>.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<country ref="LOC3010Ethiop"/>
-<region ref="LOC5932Tegray"/>
-<settlement when="2009-11-16">wäräda <placeName ref="LOC1564ASbiW" type="waradā">ʾAṣbi Wänbärta</placeName>,
-                  qušät <placeName ref="LOC6526Asir" type="qušat">ʾAsir Mätira</placeName> </settlement>
-
+               <settlement type="province" ref="LOC5932Tegray"/>
+               <settlement when="2009-11-16" ref="LOC1564ASbiW" type="warada"/>
+               <settlement when="2009-11-16" ref="LOC6526Asir" type="qushat"/>
 </egXML>
          </div>
          <div type="level2">
             <head>Place Names</head>
             <p>A full example of how to encode the various possible placeNames is
-  the following</p>
+  the following:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <placeName xml:id="n1" xml:lang="am">አክሱም፡ ጽዮን፡</placeName>
 <placeName corresp="#n1" xml:lang="am" type="normalized">ʾAksum Ṣǝyon</placeName>
@@ -201,7 +216,7 @@ guidelines for
 
 </egXML>
             <p>use this especially if you need to provide specific <att>source</att>s for
-  this name of the place</p>
+  this name of the place.</p>
             <p>On referring to places, please look carefully for available
   records. e.g.:
   <list>
@@ -241,7 +256,7 @@ Kingdom)</item>
             <head>Syriaca Historical Geography schema alignment</head>
             <p>To encode historical places we follow in the above and what follows
   the <ref target="http://Syriaca.org">Syriaca.org</ref> TEI manual for Historical Geography, with some
-  divergences due to our project</p>
+  divergences due to our project.</p>
   <list>
   <item><ref target="event">Events affecting the definition of a Place.</ref></item>
 <item><ref target="state-and-certainty">State and Certainty of a Place.</ref></item>
