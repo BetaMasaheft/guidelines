@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Statements about persons.</title>
+                <title>Statements about persons</title>
                 <author>Pietro Liuzzo</author>
             </titleStmt>
             <publicationStmt>

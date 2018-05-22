@@ -36,7 +36,7 @@ guidelines for
             <person sex="1">
                <persName xml:lang="gez" xml:id="n1">አበከራዙን</persName>
                <persName xml:lang="gez" type="normalized" corresp="#n1">ʾAbakarazun</persName>
-               <persName type="alt"><roleName type="title">abba</roleName> ʾAbakǝrazun</persName>
+               <persName type="alt"><roleName type="title">ʾabbā</roleName> ʾAbakǝrazun</persName>
                <nationality>Christian Ethiopia</nationality>
                <faith>EOTC</faith>
 

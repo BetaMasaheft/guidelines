@@ -27,11 +27,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <head>Object Description</head>
                   <p>
                      <gi>objectDesc</gi> contains all the
-          information about the object as such. Within the
-          <att>form</att> you should specify one of the available values.</p>
-                  <div type="section">
-                     <head>Support Description</head>
-                     <p>Into <gi>supportDesc</gi> a series of
+                      information about the object as such. Within the
+                      <att>form</att> you should specify one of the available values. The object is further described in <gi>supportDesc</gi>.</p>
+            
+            <div type="level2">
+                <head>Support</head>
+                     <p>Into <gi>support</gi> a series of
             information about the material support are given.</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <support>
@@ -42,6 +43,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <p>In <gi>material</gi> with <att>key</att> enter the a value
             from the Writing Material taxonomy proposed from the schema.
             oXygen should prompt the values from the schema.</p>
+            </div>
+            <div type="level2">
+                <head>Extent</head>
                      <p>
                         <gi>extent</gi> contains information about
             the global dimensions of the object. The value <val>outer</val> for
@@ -75,10 +79,14 @@ taken from <locus target="#6r"/>.
 </extent>
 </egXML>
                      <p>Measurements in <gi>dimensions</gi> should
-            always be given in millimiters, unless the source catalogues provides them otherways</p>
+            always be given in millimiters, unless the source catalogues provides them otherwise.</p>
                      <p>You can also specify which leaves are blank, adding a
             <gi>locus</gi> immediately after the relative
             measure.</p>
+            </div>
+            
+            <div type="level2">
+                <head>Collation</head>
                      <p>
                         <gi>collation</gi> can be used to give
             textual information about how the leaves are arranged using a 
@@ -116,14 +124,14 @@ The textual sequence of the manuscript is disturbed, see <ref target="#ms_i1.1"/
 </egXML>
                       <p>Quires with an uneven <att>unit</att> for <gi>dim</gi>  will ALWAYS need
             clarification of the phenomenon occurring as below. No item
-            view will be loaded if only the following is given</p>
+            view will be loaded if only the following is given:</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
 WRONG ENCODING EXAMPLE
 <item xml:id="q2">
            <dim unit="leaf">9</dim>
        </item>
 </egXML>
-                     <p>you need at least the following</p>
+                     <p>you need at least the following:</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <item xml:id="q2">
            <dim unit="leaf">9</dim>
@@ -194,7 +202,7 @@ WRONG ENCODING EXAMPLE
 commented out as no example can be found, but there was an example and an implementation
           -->
                      <p>Different numerations of quires are encoded as
-            follows</p>
+            follows:</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <item xml:id="q26" n="25"> <num value="20">፳</num> <dim unit="leaf">8</dim> <locus from="195r" to="202v"/> </item>
 </egXML>
@@ -236,6 +244,10 @@ commented out as no example can be found, but there was an example and an implem
    </list>
 </collation>
 </egXML>
+            </div>
+            
+            <div type="level2">
+                <head>Foliation</head>
                      <p>You might also use <gi>foliation</gi> with
             a list of items in it to describe different numbering
             systems used.</p>
@@ -259,27 +271,30 @@ commented out as no example can be found, but there was an example and an implem
 </list>
 </foliation>
 </egXML>
+            </div>
+            
+            <div type="level2">
+                <head>Condition</head>
                      <p>You can also add a <gi>condition</gi>
-            element containing a full markedup description of the
-            condition of the manuscript. Do indicate any way a general
-            value from the State of Preservation Taxonomy for indexing
+            element containing a fully marked up description of the
+            condition of the manuscript. Do indicate a general
+            value from the State of Preservation Taxonomy proposed from the schema for indexing
             purposes.</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <condition key="deficient"/>
 </egXML>
-                     <p>value of <att>key</att> is the corresponding
-            ID from the state of preservation taxonomy proposed from the
-            schema.</p>
+                     <p>If no information on the condition of the manuscript is available, the element should be simply not added to the record.</p>
                   </div>
-                  <div type="section">
-                     <head>Layout Description</head>
+            
+            <div type="level2">
+                <head>Layout Description</head>
                      <p>
                         <gi>layoutDesc</gi> contains the
             description of how the text is laid out on the page.</p>
                      <p>Each layout information is given in a
             <gi>layout</gi> element therein.</p>
                      <p>For example for measurement a series of specific purpose
-            attributes and elements can be used</p>
+            attributes and elements can be used:</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <layout columns="1" writtenLines="18">
    <dimensions unit="mm" rend="pricked ruled">
@@ -337,7 +352,7 @@ commented out as no example can be found, but there was an example and an implem
                         <item>
                            <p>
                               <att>columns</att> contains the number
-                of columns on a page.</p>
+                               of columns on a page. One column should be encoded as <tag>layout columns='1'</tag>, when no information is available, this element should not be added.</p>
                         </item>
                         <item>
                            <p>
@@ -353,7 +368,7 @@ commented out as no example can be found, but there was an example and an implem
             type=‘margin’</tag> contains the measures
             of the margins.</p>
                      <p>Within a <gi>layout</gi> you can also use
-            <gi>ab</gi> as in the following example</p>
+            <gi>ab</gi> as in the following examples:</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
  <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A/0-0/0-0/A.</ab>
  <ab type="pricking" subtype="pattern">Primary pricks are partly visible (s., e.g., fol. 37v).</ab>
