@@ -86,6 +86,25 @@ This is of course redundant when the <gi>persName</gi> you assign this attribute
   <persName xml:lang="gez" corresp="#n2" type="normalized">Qoṗrǝyānos</persName>
   </person>
 </egXML>
+         <p>
+            Sometimes it is difficult to distinguish between the birth name and given name. 
+            The name given at the time of birth, is encoded as the a <gi>persName</gi> with an attribute <att>type</att> with value <val>birth</val>. 
+            However, there are exceptions where a person has been forced to change his or her birth name to another name for various reasons.
+            In this case a new name should be given to a person  with <att>type</att>=<val>given</val>. 
+            In our person records there are persons who have both a birth name and a given name. 
+            Here a typical example is a woman named  <ref target="PRS2170AsterGa" type="bm">Aster Ganamo</ref>, who was an Oromo pioneer who 
+            worked with Onesimos Nasib on the translation of the Bible into Oromo. Her Oromo name, 
+            which she had got from her parents, was called ሰልባን፡ but later she changed her name to አስቴር፡. In this case, we mark ሰልባን፡ as birth name where as አስቴር፡ as a given name. 
+           .</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <persName xml:lang="gez" xml:id="n1" type="given">አስቴር፡ ጋኖ፡</persName>
+            <persName xml:lang="gez" corresp="#n1" type="normalized">ʾAster Gānnoo</persName>
+            <persName xml:lang="gez" xml:id="n2" type="given">አስቴር፡ ገኖ፡</persName>
+            <persName xml:lang="gez" corresp="#n2" type="normalized">ʾAster Gano</persName>
+            <persName xml:lang="gez" xml:id="n3" type="birth">ሰልባን፡ ጋኖ፡</persName>
+            <persName xml:lang="gez" corresp="#n3" type="normalized">Salbāān Gānnoo</persName>
+            
+         </egXML>
 <p>The correct way to do this is</p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
   <person sex="1" sameAs="Q671055">

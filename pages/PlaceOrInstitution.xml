@@ -43,19 +43,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 and not to a place, if any.</p>
         </item>
     </list>
-    <p>with regard to automatically creating an institution record for all
-        churches and monastries in Places: is it true that all those with no
-        exception are also institutions holding manuscripts?</p>
-    <p>Please, markup entities referred to in the text of the fields into
-        <gi>note</gi> as described in the
-        <ref target="guidelines">guidelines</ref> A template with comments for
-        a place description is available
-        <ref target="https://github.com/BetaMasaheft/schema/blob/master/modelfilePlace.xml">here</ref>
-    </p>
-    <p>A template with comments for an Institution description is
-        available
-        <ref target="https://github.com/BetaMasaheft/schema/blob/master/modelfileInstitution.xml">here</ref>
-    </p>
+            <p>See also <ref target="places">Places</ref> <ref target="institution">Institutions</ref>.</p>
 </div>
         </body>
     </text>

@@ -21,7 +21,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body xml:id="references">
-         <head>References</head>
+         <div type="level2">
+            <head>Internal References</head>
          <p>Any <att>xml:id</att> within the file can be pointed
     to with an element <gi>ref</gi> with a
     <att>target</att> attribute. oXygen will not let you
@@ -38,19 +39,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <p>this happens also in <ref target="#q14">the final quire</ref></p>
 </egXML>
-         <p>This second method preserve your text and make a link. However, please note that multiple
+         <p>This second method preserves your text and creates a link. However, please note that multiple
     references will be splitted in several links, so having something
     like</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <p>this happens also in <ref target="#q14 #q15">the final quires</ref></p>
 </egXML>
-         <p>will not return the text in the element but the values of the
+         <p>will not return the text in the element, but the values of the
     targets. You can split that reference like</p>
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <p>this happens also in <ref target="#q14 #q15"/>, the final quires</p>
 </egXML>
+         </div>
 
          <div  type="level2">
+            <head>References to other entities in BM</head>
          <p>If you are adding a reference, please simply mark it up using
     <gi>placeName</gi>, <gi>persName</gi>, etc. If you want to refer to another entity in
     the project but you don’t want to mark up the entity you can use
@@ -64,9 +67,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <ref type="mss" corresp="ESap001">AP-001</ref>
 <ref type="work" corresp="LIT4018Mashafa"/>
 </egXML>
-         <p>In <att>corresp</att> don’t start with a
+         <p>In <att>corresp</att>, don’t start with a
     # but use it if you are referring to a
-    specific part of the quoted manuscript.</p>
+    specific part of the quoted manuscript:</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
 This manuscript is in the same hand as <ref type="hand" corresp="ESap002#h2"/>
 </egXML>
@@ -86,14 +89,14 @@ starting with http.</p>
 </div>
 <div type="level2">
   <head>Canonical text citations</head>
-         <p>For citations, like Matthew 14, 3 use <gi>ref</gi> with a <att>cRef</att> containing
-    the URN which you can get from Perseus catalogue searching for the
-    passage.</p>
+         <p>For citations like Matthew 14, 3, use <gi>ref</gi> with a <att>cRef</att> containing
+    the URN which you can get from the Perseus catalogue searching for the
+    passage. This will link to the Greek text and should therefore only be used when it is actually the Greek text that is intended.</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
  <ref cRef="urn:cts:greekLit:tlg0031.tlg001.perseus-grc1:14.3">Matthew 14, 3</ref>
 </egXML>
-         <p>You can also point to our texts for example the ethiopic text of Numbers 21, 8 like
-    this</p>
+         <p>You can also point to our texts, for example the Ethiopic text of Numbers 21, 8 like
+    this:</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
  <ref cRef="urn:dts:betmas:LIT2075Number:21.8">Numbers 21:8</ref>
 </egXML>
