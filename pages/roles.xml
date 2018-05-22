@@ -17,59 +17,98 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>  
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
          <change who="DR" when="2018-05-18">Split dates</change></revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="roles">
-            <head><gi>roleName</gi> and <att>role</att></head>
-            <p>The titles of persons, such as ʾabbā, wayzaro, makʷannǝn etc.,
-      should be encoded with
-      <tag>roleName type="title"</tag> at
-      the place in the texts where they occur. In order to be reasonably
-      retrievable, <gi>roleName</gi> always has to
-      be encoded within <gi>persName</gi>. The
-      name of the person can be typed in the
-      <gi>persName</gi>, or, if avoiding typing it
-      is preferable, the <gi>persName</gi> element
-      with the same ID can be repeated immediately after the first
-      <gi>persName</gi> which contains
-      <gi>roleName</gi>:</p>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+        <div type="level2">
+<head>Mark up of the text</head>
+<div type="level3">
+<head>persons with a role</head>
+<p>The titles of persons, such as ʾabbā, wayzaro, makʷannǝn etc.,
+should be encoded with
+<tag>roleName type="title"</tag> at
+the place in the texts where they occur. In order to be reasonably
+retrievable, <gi>roleName</gi> always has to
+be encoded within <gi>persName</gi>. However, because <gi>roleName</gi> can also be used alone, you will have to be careful, the schema cannot help here.
+
+So, when encoding names of persons, which might include the name of a role they have covered,
+use of <gi>roleName</gi> inside <gi>persName</gi> to encode the role associated to that person in that text.
+</p>
+</div>
+<div type="level3">
+<head>an office or role as such</head>
+<p>There are also names of offices, where no exact person is indicated (like in the <ref target="LIT4969EdictGala" type="bm">Edict of King Galāwdewos</ref>
+  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+    <ab>ወለተሳየጦሂ፡ እምደቂቀ፡ ዐረብ፡ እንዘ፡ የአምር፡ ከመ፡ ውእቱ፡ ክርስቲያናዊ፡ ይንሥእዎ፡
+    ኵሎ፡ ንዋዮ። ኵሉ፡ <roleName type="office">አዛዢ።</roleName>
+    አው፡ <roleName type="office">ፈታሕት፡</roleName> አው፡ <roleName type="office">መኮንን፡</roleName> አው፡
+    <roleName type="office">ስዩመ፡</roleName> ሀገረ፡ ዘኢይፈትሕ፡ በዘ፡ አዘዝነ፡ ቦቱ፡
+    ይትቀተል፡ ዘእንበለ፡ ምሕረት፡ ወይትበርበር፡ ኵሉ፡ ንዋዩ፡ ወይኩን፡ ውጉዘ፡ በአፈ፡
+    አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ወበአፈ፡ ኵሎሙ፡ አበው፡ ዘተወክፈቶሙ፡ ቤተ ክርስቲያን። </ab>
+  </egXML>
+
+In this case use <gi>roleName</gi> alone to encode the name of the office.</p>
+
+<p>If looking at an unidentified officer named only via his role in a text, also use a roleName alone. The visualization should pull up a list of parallel marked up texts and might help you to identify the person and consequently mark it up.</p>
+
+</div>
+<div type="level3">
+  <head><gi>roleName</gi> and <att>role</att></head>
+  <p> The
+name of the person can be typed in the
+<gi>persName</gi>, or, if avoiding typing it
+is preferable, the <gi>persName</gi> element
+with the same ID can be repeated immediately after the first
+<gi>persName</gi> which contains
+<gi>roleName</gi>:</p>
+  <egXML xmlns="http://www.tei-c.org/ns/Examples">
 It lists the books belonging to <persName ref="PRS10796Tasfo"><roleName type="title">ʾabbā</roleName></persName><persName ref="PRS10796Tasfo"/>
 </egXML>
-            <p>and</p>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+  <p>and</p>
+  <egXML xmlns="http://www.tei-c.org/ns/Examples">
 It lists the books belonging to <persName ref="PRS10796Tasfo"><roleName type="title">ʾabbā</roleName> Tasfo</persName>
 </egXML>
-            <p>will both be visualized as: It lists the books belonging to
-      ʾabbā Tasfo.</p>
-            <p>Therefore, if only the title encoded should be visualized
-      (without the name of the person it refers to), it should be marked
-      up in the following way:</p>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+  <p>will both be visualized as: It lists the books belonging to
+ʾabbā Tasfo.</p>
+  <p>Therefore, if only the title encoded should be visualized
+(without the name of the person it refers to), it should be marked
+up in the following way:</p>
+  <egXML xmlns="http://www.tei-c.org/ns/Examples">
 he was also appointed as <persName ref="PRS5309hesanMo"><roleName type="title">qāla nǝguś</roleName></persName> of King <persName ref="PRS2334BaedaM">Baʾǝda Māryām I</persName>
 </egXML>
-            <p>The use of <gi>roleName</gi> has to be
-      clearly separated from the use of <att>role</att>. The first is used to mark
-      up a concrete title mentioned in a text, the second specifies the
-      role the person has in regard to the record in which it is
-      mentioned. This applies for instance to scribes or owners of
-      manuscripts.</p>
-            <p>If possible, persNames should take a
-      <att>role</att> where relevant in the description,
-      and then don't need to be listed again in
-      <gi>listPers</gi>:</p>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+  <p>The use of <gi>roleName</gi> has to be
+clearly separated from the use of <att>role</att>. The first is used to mark
+up a concrete title mentioned in a text, the second specifies the
+role the person has in regard to the record in which it is
+mentioned. This applies for instance to scribes or owners of
+manuscripts.</p>
+  <p>If possible, persNames should take a
+<att>role</att> where relevant in the description,
+and then don't need to be listed again in
+<gi>listPers</gi>:</p>
+  <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <item xml:id="e1">
 <locus target="#60v #143r #144r #152v #167v #171r #173r #189v #192r #234r #255r"/>
 <desc>The names of the owner <persName role="owner" ref="PRS11297ZenaG"/> and his wife <persName ref="PRS11298SeyonM"/> are mentioned several times.</desc>
 </item>
 </egXML>
-            <p>If there is no sensible place within the description, then the
-      information on the role can also be encoded in
-      <gi>listPers</gi> in
-      <gi>particDesc</gi>.</p>
+  <p>If there is no sensible place within the description, then the
+information on the role can also be encoded in
+<gi>listPers</gi> in
+<gi>particDesc</gi>.</p>
+  </div>
+        </div>
+      <div type="level2">
+<head>Use in person records</head>
+<p>Here you would encode known roles covered by a person, without further specification. The actual attestations of the person with that or other roles will be picked up in the visualization.</p>
+<p>Please see the page about <ref target="persons">persons</ref> under the section "Roles".</p>
+      </div>
+
+
+
+
       </body>
    </text>
 </TEI>
