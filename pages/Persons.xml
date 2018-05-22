@@ -92,7 +92,7 @@ This is of course redundant when the <gi>persName</gi> you assign this attribute
             However, there are exceptions where a person has been forced to change his or her birth name to another name for various reasons.
             In this case a new name should be given to a person  with <att>type</att>=<val>given</val>. 
             In our person records there are persons who have both a birth name and a given name. 
-            Here a typical example is a woman named  <ref target="PRS2170AsterGa" type="bm">Aster Ganamo</ref>, who was an Oromo pioneer who 
+            Here a typical example is a woman named  <ref target="PRS2170AsterGa" type="bm">Aster Gānnoo</ref>, who was an Oromo pioneer who 
             worked with Onesimos Nasib on the translation of the Bible into Oromo. Her Oromo name, 
             which she had got from her parents, was called ሰልባን፡ but later she changed her name to አስቴር፡. In this case, we mark ሰልባን፡ as birth name where as አስቴር፡ as a given name. 
            .</p>
