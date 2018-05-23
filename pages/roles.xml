@@ -53,7 +53,18 @@ use of <gi>roleName</gi> inside <gi>persName</gi> to encode the role associated 
 In this case use <gi>roleName</gi> alone to encode the name of the office.</p>
 
 <p>If looking at an unidentified officer named only via his role in a text, also use a roleName alone. The visualization should pull up a list of parallel marked up texts and might help you to identify the person and consequently mark it up.</p>
-
+<p>You can use roleName also in other places in the encoding, like in titles or in notes or in paragraphs, especially if you think that it would be relevant. For example in the <ref type="bm" target="BDLbruce92">following manuscript description</ref> we know the title of a work about some offices, of which we have no trascription.</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  <msItem xml:id="ms_i1.3.1">
+<title type="complete">
+Two statutes on the
+<roleName type="office">bǝḥtwaddad</roleName>
+and the
+<roleName type="office">blātten getā</roleName>
+</title>
+<textLang mainLang="gez"/>
+</msItem>
+</egXML>
 </div>
 <div type="level3">
   <head><gi>roleName</gi> and <att>role</att></head>
