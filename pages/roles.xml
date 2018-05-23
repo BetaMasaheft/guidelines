@@ -36,10 +36,11 @@ be encoded within <gi>persName</gi>. However, because <gi>roleName</gi> can also
 So, when encoding names of persons, which might include the name of a role they have covered,
 use of <gi>roleName</gi> inside <gi>persName</gi> to encode the role associated to that person in that text.
 </p>
+  <p>It is not necessary to mark up <gi>roleName</gi>s in descriptive text added by us: What interests us are the actual attestations of role names in  Ethiopic texts.</p>
 </div>
 <div type="level3">
 <head>an office or role as such</head>
-<p>There are also names of offices, where no exact person is indicated (like in the <ref target="LIT4969EdictGala" type="bm">Edict of King Galāwdewos</ref>
+<p>There are also names of offices, where no exact person is indicated, as in the <ref target="LIT4969EdictGala" type="bm">Edict of King Galāwdewos</ref>:
   <egXML xmlns="http://www.tei-c.org/ns/Examples">
     <ab>ወለተሳየጦሂ፡ እምደቂቀ፡ ዐረብ፡ እንዘ፡ የአምር፡ ከመ፡ ውእቱ፡ ክርስቲያናዊ፡ ይንሥእዎ፡
     ኵሎ፡ ንዋዮ። ኵሉ፡ <roleName type="office">አዛዢ።</roleName>
@@ -62,7 +63,7 @@ name of the person can be typed in the
 is preferable, the <gi>persName</gi> element
 with the same ID can be repeated immediately after the first
 <gi>persName</gi> which contains
-<gi>roleName</gi>:</p>
+<gi>roleName</gi>. The following examples contain marked up <gi>roleName</gi>s in decriptive text for illustrative purposes, where in fact it would not be necessary to mark the <gi>roleName</gi> up.</p>
   <egXML xmlns="http://www.tei-c.org/ns/Examples">
 It lists the books belonging to <persName ref="PRS10796Tasfo"><roleName type="title">ʾabbā</roleName></persName><persName ref="PRS10796Tasfo"/>
 </egXML>
