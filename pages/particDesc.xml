@@ -17,32 +17,57 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
                 <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
             </sourceDesc>
-        </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+        </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+            <change who="DR" when="2018-05-23">Added example</change></revisionDesc>
     </teiHeader>
     <text>
         <body xml:id="particDescPersons">
 <div type="level3">
     <head>People in particDesc</head>
     <p>Important people related to the manuscript can be listed in <gi>particDesc</gi> with a
-        list of pointers to names with a specific <att>role</att> in <gi>persName</gi>.</p>
+        list of pointers to names with a specific <att>role</att> in <gi>persName</gi>:
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <particDesc>
+                <listPerson>
+                    <person>
+                        <persName ref="PRS2232AubertR" role="donor"/>
+                    </person>
+                    <person>
+                        <persName ref="PRS2233Audon" role="scribe"/>
+                    </person>
+                    <person>
+                        <persName ref="PRS2233Audon" role="other"/>
+                    </person>
+                </listPerson>
+            </particDesc>
+        </egXML>
+    </p>
     <p>Here it is enough to enumerate the scribe, owner, donor and patron, not everyone
         mentioned in the manuscript, and only if they are not anywhere else. If this information has already been stated elswhere in the
         description - which is preferable - it doesn't need to be repeated here.</p>
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-        <particDesc>
+    <p>If a person has two roles, for example because he is both scribe and owner of a manuscript,
+        the main <att>role</att> can be encoded in the text where the person is mentioned:
+        
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            ዝሰአታት፡ ዘ<persName
+                ref="PRS11959Pawlos" role="scribe"><roleName type="title">አቡነ፡</roleName>
+                ጰውሎስ፡</persName> 
+        </egXML>
+        
+        and the secondary role in <gi>particDesc</gi>:
+        
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <particDesc>
             <listPerson>
                 <person>
-                    <persName ref="PRS2232AubertR" role="donor"/>
-                </person>
-                <person>
-                    <persName ref="PRS2233Audon" role="scribe"/>
-                </person>
-                <person>
-                    <persName ref="PRS2233Audon" role="other"/>
+                    <persName
+                        ref="PRS11959Pawlos" role="owner"/>
                 </person>
             </listPerson>
         </particDesc>
-    </egXML>
+        </egXML>
+    </p>
+   
     <p>You can also be more precise and assign a <att>corresp</att> to the <gi>persName</gi> if for
         example a person has commissioned only a specific part.</p>
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
