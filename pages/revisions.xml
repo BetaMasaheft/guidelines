@@ -65,7 +65,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </p>
          <p>If one has to revert a commit of 40 files and all the commit says is "update" and there is no change element, anyone looking into the commit which caused the issue is forced to do hand comparing on each commit to find out which one might contain the mistake and then check each file by hand, i.e. the whole workflow and file versioning is rather vain. 
          </p>
-         <p>The <gi>revisionDesc</gi> in the files and the commits to GIT (titles and descriptions), are our way to keep track of the work easily and they become more and more important as we proceed, so please let us not skip these steps, they are not time consuming and they are of great importance in the short and long term.
+         <p>The <gi>revisionDesc</gi> in the files and the commits to GIT (titles and descriptions) are our way to keep track of the work easily and they become more and more important as we proceed, so please let us not skip these steps, they are not time consuming and they are of great importance in the short and long term.
          </p>
          <p>In <gi>change</gi>, please describe what you have changed in the file, e.g. "added msItems and transcription of divs". 
          </p>

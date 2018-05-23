@@ -30,7 +30,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <certainty locus='value' match="@to" notBefore="0605"/>
     </state>
 </egXML>
-         <p>Also the following is perfectly fine, and perhaps preferable,
+         <p>The following is also perfectly fine, and perhaps preferable,
     stating without further precision that the place is attested in one
     of the main periodizations, in this example Aksumite</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -40,12 +40,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     the permalink to the PeriodO definition, in this case
     http://n2t.net/ark:/99152/p03tcss4qvv.</p>
          <p>if this is an attested place only in one source, note down that
-    as well in @source or in a <gi>desc</gi> or
-    <gi>note</gi>. In the example below we found in
+    as well in <att>source</att> or in a <gi>desc</gi> or
+    <gi>note</gi>. In the example below, we found in
     Smith's Dictionary of Greek and Roman Geography the passage in
-    Ptolemy where port of the Adulitae is mentioned and we have added a
-    note about it linking to the bibl element as its source. The note
-    has also a cRef to point to the exact passage in perseus.</p>
+    Ptolemy where the port of the Adulitae is mentioned and we have added a
+    note about it linking to the <gi>bibl</gi> element as its source. The <gi>note</gi>
+    has also a <att>cRef</att> to point to the exact passage in perseus.</p>
          <p>example:</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <listBibl>
