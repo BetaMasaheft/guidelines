@@ -22,10 +22,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body xml:id="revisions">
          <head>Revisions</head>
-         <p>It is very important, at the end of each section of work of
-    improvement of a record to add a <gi>change</gi> in
-    the <gi>revisionDesc</gi> element of the
-    <gi>teiHeader</gi>. In the attribute
+         <p>It is very important to add a <gi>change</gi> in
+            the <gi>revisionDesc</gi> element of the
+            <gi>teiHeader</gi> at the end of each section of work of
+    improvement of a record. In the attribute
     <att>who</att> enter <ref target="teamids">your id</ref>, in the
     <att>when</att> enter the date of the change, in the
     format YYYY-MM-DD. You can use code templates in oXygen to do this. There is a set ready for you which also includes this. 

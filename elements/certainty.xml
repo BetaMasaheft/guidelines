@@ -24,7 +24,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <text>
         <body xml:id="certainty"><div type="level3">
     <head>Certainty</head>
-    <p>TEI can express much more precisely where the uncertainty about
+    <p>TEI can express very precisely where the uncertainty about
         a certain information provided is using the element certainty.</p>
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
         <title type="complete" ref="LIT1716Kidanz"><certainty locus="value" match="../@type" cert="low"/></title>
@@ -35,7 +35,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </egXML>
     <p>will express that the uncertainty is about the completeness of
         the work referenced, not about the work generally. Please refer to
-        the TEI guidelines for further guidance and example of how to use
+        the TEI guidelines for further guidance and examples of how to use
         this element. Note that an alternative for the aspect of the
         markup in question can be given in
         <att>assertedValue</att>:</p>

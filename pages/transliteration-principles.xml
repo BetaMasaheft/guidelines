@@ -244,7 +244,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          hyphen:</p>
          <p>kāhǝnāt wa-diyāqonāt</p>
          <p>Names containing prepositions are however, spelled as one word:</p>
-       <list>
+       <list type="unordered">
          <item>Baḫayla Mikāʾel and not Ba-Ḫayla Mikāʾel</item>
 
          <item>Zamikāʾel ʾAragāwi (not Za-Mikāʾel ʾAragāwi)</item>
