@@ -88,7 +88,7 @@ starting with http.</p>
 </egXML>
 </div>
 <div type="level2">
-  <head>Canonical text citations</head>
+  <head>Canonical text citations and quotations in text</head>
          <p>For citations like Matthew 14, 3, use <gi>ref</gi> with a <att>cRef</att> containing
     the URN which you can get from the Perseus catalogue searching for the
     passage. This will link to the Greek text and should therefore only be used when it is actually the Greek text that is intended.</p>
@@ -101,8 +101,10 @@ starting with http.</p>
  <ref cRef="urn:dts:betmas:LIT2075Number:21.8">Numbers 21:8</ref>
 </egXML>
          <p>To mark up a passage in the text which is a literal quotation of
-    another text you might use <gi>cit</gi>
-         </p>
+    another text you might use a <gi>cit</gi> containing a <gi>quote</gi> and the above <gi>ref</gi>
+  </p>
+  <p>please note the difference! In this case we say that the passage marked is a quotation of another text,
+    whilest ref is used here and there only to encode the actual canonical reference.</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <cit>
     <quote xml:lang="gez">
@@ -110,6 +112,10 @@ starting with http.</p>
     </quote>
     <ref cRef="urn:dts:betmas:LIT2075Number:21.8">Numbers 21:8</ref>
 </cit>
+</egXML>
+<p>The following example of markup is confusing and should be avoided as it claims that the content of the ref element is a reference, while it is a quote.</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+ለሙሴ᎓ <ref cRef="urn:dts:betmas:LIT2075Number:21.8">ግበር᎓ ለከ᎓ አርዌ᎓ ምድር᎓ ዘብረት᎓ ኵሉ᎓ ዘነሰኮ᎓ ይርአይ᎓ ኪያሁ᎓ ወይሕየው</ref>᎓ ኪዮስ
 </egXML>
 </div>
       </body>
