@@ -32,21 +32,18 @@ with a licence for it)</item>
 <div type="level2">
   <head>GITHUB</head>
   <p>Git is a shared repo, public on the web, where we keep our project
-  files and code. It contains several repositorires, which are just like
-  folders. Here are the files we work on and the documentation, such as
+  files and code. <ref target="https://github.com/BetaMasaheft">Our organization</ref> in GitHub.com contains several repositorires, which are just like
+  folders from a user perspective. Here are the files we work on and the documentation, such as
   guidelines and issue tracking. You will use this to:</p>
   <list type="ordered:arabic">
     <item>
       <p>Keep your files in sync with others</p>
     </item>
     <item>
-      <p>Read the guidelines</p>
-    </item>
-    <item>
       <p>Point out issues, problems requests</p>
     </item>
   </list>
-  <p>You will thus want to be always up to date. Here is what to do:</p>
+  <p>You will want to be always up to date. Here is what to do:</p>
   <list type="unordered">
     <item>
       <p>After you created and verified your account, you will need to
@@ -64,13 +61,13 @@ with a licence for it)</item>
       <p>Open Gihub desktop</p>
     </item>
     <item>
-      <p>Login</p>
+      <p>Login with your Github user name and password</p>
     </item>
     <item>
-      <p>Click the plus on the top left corner</p>
+      <p>Clone repositories from the application, if you are logged and have accepted the invitation to the group, the software will know that you are part of the Beta Masaheft organization and offer that among your possibilities. </p>
     </item>
     <item>
-      <p>Select the group SchAth</p>
+      <p>Select the group Beta Masaheft organization</p>
     </item>
     <item>
       <p>Select the schema repository</p>
@@ -79,7 +76,7 @@ with a licence for it)</item>
       <p>Click CLONE below</p>
     </item>
     <item>
-      <p>Select the folder BetMas and say ok</p>
+      <p>Select the folder BetMas on your machine as target location and say ok</p>
     </item>
     <item>
       <p>This will create a folder called schema into your BetMas folder
@@ -87,7 +84,7 @@ with a licence for it)</item>
       are online</p>
     </item>
     <item>
-      <p>Repeat the same operation for the repositories called
+      <p>Repeat the same operation for the repositories with the data that you need, most typically
       Manuscript, Persons, Places, Institutions and Works</p>
     </item>
   </list>
@@ -142,19 +139,12 @@ with a licence for it)</item>
       repositories you might need</p>
     </item>
   </list>
-  <p>The Schema repository contains model files, templates and most
-  importantly the schema. These templates will be for you to use daily.
-  You will only need to copy the file to your system from the folder.
-  Please, leave those files there.</p>
-  <p>Let's say you have a new manuscript file to add to the Manuscript
-  folder, where these are kept:</p>
+
+  <p>Let's say you have a new manuscript file or you have edited one from the newly cloned repository. To add a new file to the Manuscript
+  folder, simply put it in the manuscript folder which you have in BetMas.</p>
   <list type="unordered">
     <item>
-      <p>Simply put it in the manuscript folder which you have in
-      BetMas.</p>
-    </item>
-    <item>
-      <p>Open Gihub Desktop and select Manuscript</p>
+      <p>Open Gihub Desktop and select the Manuscripts repository on the left</p>
     </item>
     <item>
       <p>Click the CHANGE tab and you will see that it has recorded the
@@ -165,14 +155,14 @@ with a licence for it)</item>
       <p>Below the list of changes there is a Commit field enter a name
       such as &quot;new manuscript ready for review&quot; and a
       description about what you have done e.g. &quot;entered catalogue
-      entry 1234 from Catalogue X&quot;</p>
+      entry 1234 from Catalogue X&quot; Please see also this page on <ref target="revisions">revisions</ref> history.</p>
     </item>
     <item>
       <p>Click commit</p>
     </item>
     <item>
       <p>Once it has committed the changes on the top right corner click
-      SYNC. This will look for anything that has changed online and
+      SYNC (old version of github desktop) or PUSH. This will look for anything that has changed online and
       update your files locally, then will upload your file or update
       the online version from yours.</p>
     </item>
@@ -181,9 +171,9 @@ with a licence for it)</item>
     </item>
   </list>
   <p>If you have not updated in the last two or three days, it is
-  advisable to Sync all your repo before you begin a work session.</p>
-  <p>The SchAth repo contains instead two important parts, beside some
-  code used locally for the project. * the Wiki * the Issues</p>
+  advisable to Sync/fetch all your repo before you begin a work session.</p>
+  <p>The Documentation repo contains instead two important parts, beside some
+  code used locally for the project, the Wiki and the Issues</p>
 
 
 </div>
@@ -207,7 +197,8 @@ with a licence for it)</item>
   dependencies installation requests.</p>
   <p>You will then see errors messages and will get the autocompletion.
   it works very well!</p>
-  <p>You can also pull and push from gihub directly in atom, just click on the arrows pointing up and down in the bottom right corner and you will have really all in one place.</p>
+  <p>Note also that if you open a folder as project in atom, which is a git repository, you will be able to pull and push directly in ATOM, using the Github package which is shipped with it. It is awesome.</p>
+  <p>Just click on the arrows pointing up and down in the bottom right corner and you will have really all in one place.</p>
 </div>
 <div type="level1">
   <head>oXygen</head>
