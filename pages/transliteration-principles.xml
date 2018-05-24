@@ -18,7 +18,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
       </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
-        <change who="DR" when="2018-05-17">Added paragraph on Amharic</change></revisionDesc>
+        <change who="DR" when="2018-05-17">Added paragraph on Amharic</change>
+        <change who="DR" when="2018-05-24">Edited and added paragraph on other languages</change></revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="transliteration-principles">
@@ -243,14 +244,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          hyphen:</p>
          <p>kāhǝnāt wa-diyāqonāt</p>
          <p>Names containing prepositions are however, spelled as one word:</p>
-         <cit>
-           <quote>
-         Baḫayla Mikāʾel and not Ba-Ḫayla Mikāʾel
+       <list>
+         <item>Baḫayla Mikāʾel and not Ba-Ḫayla Mikāʾel</item>
 
-         Zamikāʾel ʾAragāwi (not Za-Mikāʾel ʾAragāwi)
+         <item>Zamikāʾel ʾAragāwi (not Za-Mikāʾel ʾAragāwi)</item>
 
-         Naʾakkwǝto Laʾab (not La-ʾAb)
-       </quote></cit>
+         <item>Naʾakkwǝto Laʾab (not La-ʾAb)</item>
+       </list>
          <p>See also <ref target="dubious-spelling">Dubious Spellings</ref> and especially the <ref target="standardisation-of-transcription-from-encyclopaedia-aethiopica">standardization rules for records coming from EAe</ref>.</p>
 
          <div type="level2">
@@ -307,15 +307,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
              </item>
            </list>
          </div>
-            <div type="level2">
-         <head>Capitalisation</head>
-         <p>In transliterated titles (whether the title of the work record or
-    the title of a manuscript containing the work), the first word and
-    all proper names should be spelled with a capital, so for example
-    Wəddāse ʾAmlāk.</p>
-         <p>Please open individual issues for particular cases that need
-    discussing.</p>
-    </div>
         <div type="level2">
           <head>Amharic transcriptions</head>
           <p>The same transcription system as that of Gǝʿǝz is applied. The orthography of the transcribed text is always followed, so for example
@@ -331,6 +322,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <p><hi rendition="simple:italic">Šarḥ sabab intiqāl mamlakat Sulaymān
          malik ʾIsrāʾīl ʾilā bilād an-naǧāšīya allatī hiya al-ḥabaša</hi></p>
        </div>
+        <div type="level2">
+          <head>Other languages</head>
+          <p>If you want to transliterate a language that is not or is only partially covered by these guidelines, please be sure to:
+            <list>
+              <item>check whether it has already been transliterated somewhere in the project</item>
+              <item>if so, decide whether or not you agree with the  transliteration used</item>
+              <item>open an issue describing the current state</item>
+              <item>after eventual discussion, document the transliteration here</item>
+            </list>
+          </p>
+          <p>Please do not start to wildly transliterate without following these steps. This would inevitably lead to inconsistencies and mistakes.</p>
+        </div>
       </body>
    </text>
 </TEI>
