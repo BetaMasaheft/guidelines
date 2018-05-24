@@ -21,6 +21,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
             <change who="PL" when="2018-04-24">stub of page</change>
             <change who="DR" when="2018-05-16">Edited and split from manuscript contents page</change>
+            <change who="DR" when="2018-05-23">Added paragraph on handNotes</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -115,6 +116,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </q>
                     </item>
                 </egXML>
+                
+                <p>In additions as anywhere in the manuscript description, a <gi>handNote</gi> should be created for each identifiable hand, whether it can be described from available pictures of the manuscript
+                    or whether the catalogue provides sufficient information for assigning certain additions to individual hands.
+                If no such information is available, no <gi>handNote</gi> should be created, as it cannot always be excluded that the addition is written in the hand of the main text.</p>
             </div>
                 
                 <div type="level2">

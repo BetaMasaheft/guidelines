@@ -21,12 +21,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body xml:id="relative-location">
-         <head>relative location</head>
+         <head>Relative Location</head>
          <p>If the location of an ancient place which does not exist any more
     is known only in relation to another place, you can use
     <tag>location type='relative'</tag> and provide a
     description, for example "5 days walk from Gondar". You
-    can encode with <gi>measure</gi> also the unit and
+    can also encode with <gi>measure</gi>  the unit and
     quantity of the distance if you can and want to.</p>
          <p>example:</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">

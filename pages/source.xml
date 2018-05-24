@@ -23,7 +23,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body xml:id="sourceAtt">
          <head>@source</head>
          <p>You can use the attribute <att>source</att> to point
-    to any xml:id within the file, most typically a bibl element to
+    to any <att>xml:id</att> within the file, most typically a <gi>bibl</gi> element to
     which you have assigned one. This is especially relevant if evidence
     is not clear and needs to be clearly attributed to a bibliographic
     source.</p>

@@ -17,7 +17,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+         <change who="DR" when="2018-05-23">Added example</change></revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="spaces">
@@ -45,6 +46,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 Galāwdewos
 </egXML>
+         
+         <p>Similarily, spaces in elements, attributes and values where they do not belong are wrong, even if not marked as an error by the schema:
+            <egXML xmlns="http://www.tei-c.org/ns/Examples"><persName xml:lang="gez " xml:id="n1">ባይሞት፡</persName></egXML>
+            <tag>xml:lang="gez "</tag> is wrong!
+         </p>
       </body>
    </text>
 </TEI>

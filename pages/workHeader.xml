@@ -47,11 +47,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    referring to this work, you can also use <att>type</att> with value <val>main</val> to signal
    the title which is to be used for labels, pointers and headers.
 </p>
-<p>The title which will be printed on the website will therefore be:
+<p>The title which will be printed on the website will therefore be, in order of priority
    <list>
-      <item>the one which has <att>type</att> with value <val>main</val>,</item>
-      <item>the one containing <tag>corresp='#t1' type='normalized'</tag>,</item>
-      <item>the one with <tag>xml:id='t1'</tag>.</item>
+      <item><tag>title[@type = 'main'][@corresp = '#t1']</tag></item>
+      <item><tag>title[@corresp = '#t1'][@xml:lang = 'am']</tag></item>
+      <item><tag>title[@corresp = '#t1'][@xml:lang = 'gez']</tag></item>
+      <item><tag>title[@corresp = '#t1'][@xml:lang = 'en']</tag></item>
+      <item><tag>title[@corresp = '#t1']</tag></item>
+      <item>  <tag> title[1]</tag></item>
    </list>
    In the example above, therefore <hi rendition="simple:italic">Maṣḥafa qǝddāse</hi> will be printed.
    Please be as careful in your encoding of titles as everywhere else to correctly encode the facts and not adapt them in order to achieve a certain visualization.
