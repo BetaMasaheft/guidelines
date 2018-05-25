@@ -18,7 +18,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
             </sourceDesc>
         </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
-            <change who="DR" when="2018-05-18">Edited and updated examples</change></revisionDesc>
+            <change who="DR" when="2018-05-18">Edited and updated examples</change>
+        <change who="ES" when="2018-05-25">Added lexicon relation example</change></revisionDesc>
     </teiHeader>
     <text>
         <body xml:id="relations">
@@ -71,6 +72,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </egXML>
     
     </p>
+            
+            <p>Note that there is a specific <gi>relation</gi> to link BM and the Dillmann lexicon; the complete URL should be provided for the lemma ID:
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <relation name="bm:hasLexiconEntry" active="LOC7011Meskwa" passive="http://betamasaheft.eu/Dillmann/lemma/L65ae0746b7f9428da90682226ae6cc75"></relation>
+            </egXML></p>
             <p>The following are some frequently used ones, but there are many more readily available from the schema (see <gi>relation</gi>) and you can use others which are in the <ref target="ontologyView">ontology</ref>.</p>
     <div type="section">
         <head>mss-mss</head>
