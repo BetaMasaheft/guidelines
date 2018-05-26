@@ -35,8 +35,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <p>Following these guidelines, you can edit the file and save it.</p>
     <p>Github will see the change and if you open it, you will see that it has recorded the
       changes you made (under the changes tab).
-      When you are ready, you can <ref target="revisions">make sure you have recorded your changes</ref>
-      and then commit them, leaving a commit message which explains nicely what you have done.
+      When you are ready, you can make sure you have <ref target="revisions">recorded your changes</ref>, that your files are <ref target="validation">valid</ref> and then you can commit them,
+   leaving a commit message which explains nicely and clearly what you have done (i.e. avoid commit messages like 'upd' or 'changes'...).
       After few seconds, you can eventually check your file in the web application.
   </p>
   <p>Some tasks, like finding the correct id for a reference or named entitiy, will need anyway to use the application, unless you prefer to search through the files directly in your editing software.</p>
