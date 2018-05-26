@@ -31,7 +31,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   <p>Open on your computer the folder where you have cloned the github repository, for example a BetMas
     folder on your desktop where you have the Manuscripts folder, which is actually the cloned repository.</p>
     <p>Select the file you want to edit, e.g. EMIP00001.xml.
-    Open the file with Atom or Oxygen or any other XML editing software you like.</p>
+    Open the file with Atom or Oxygen or any other XML editing software you like. <ref target="setup">You find more advice in the setup page for example to create a project, which will allow you to avoid having always to go back and between from your system and the software.</ref></p>
     <p>Following these guidelines, you can edit the file and save it.</p>
     <p>Github will see the change and if you open it, you will see that it has recorded the
       changes you made (under the changes tab).
