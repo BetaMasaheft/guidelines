@@ -39,6 +39,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       and then commit them, leaving a commit message which explains nicely what you have done.
       After few seconds, you can eventually check your file in the web application.
   </p>
+  <p>Some tasks, like finding the correct id for a reference or named entitiy, will need anyway to use the application, unless you prefer to search through the files directly in your editing software.</p>
+  <p>In very limited and checked cases you might need to create new entries. You need permission to do so via the application. then you can follow the guidance in the <ref target="newEntry">new record creation</ref> page.</p>
   </div>
          <div type="level2">
             <head>Batch editing files</head>
