@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
@@ -111,6 +111,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     namespace so, <tag>egXML xmlns="http://www.tei-c.org/ns/Examples"</tag>. This
                     allows the validation to skip the contents (i.e. do not add again the TEI
                     namespace in the examples).</p>
+                    <p>Good practice should be always used in providing examples, which should not be made up but reflect the encoding in a currently existing file. It is also good practice to add a <gi>ref</gi> with a link to the file where this is to be found.</p>
                 <p>You can use <gi>cit</gi> and <gi>quote</gi> for quotations.</p>
                 <p>If you really want to make something bold or italics use <tag>hi
                         rendition="simple:bold"</tag> and <tag>hi
