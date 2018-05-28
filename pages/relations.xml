@@ -73,7 +73,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     
     </p>
             
-            <p>Note that there is a specific <gi>relation</gi> to link BM and the Dillmann lexicon; the complete URL should be provided for the lemma ID:
+            <p>Note that there is a specific <gi>relation</gi> to link BM and the Dillmann lexicon; the complete URL should be provided for the lemma ID, as in the <ref target="LOC7011Meskwa" type="bm">sample file</ref>:
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                 <relation name="bm:hasLexiconEntry" active="LOC7011Meskwa" passive="http://betamasaheft.eu/Dillmann/lemma/L65ae0746b7f9428da90682226ae6cc75"></relation>
             </egXML></p>
