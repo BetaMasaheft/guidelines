@@ -147,7 +147,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <table>
                   <row role="label">
                      <cell>
-                        <p>description</p>
+                        <p>description (not the schema definition!)</p>
                      </cell>
                      <cell>
                         <p>tag</p>
@@ -283,8 +283,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </row>
                   <row>
                      <cell>
-                        <p>Words or lines skipped in omitted by the editor in
-            transcription</p>
+                        <p>Words or lines skipped in omitted by the editor in transcription</p>
                      </cell>
                      <cell>
                            <tag>gap reason='omitted'</tag>
