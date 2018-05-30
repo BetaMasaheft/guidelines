@@ -22,7 +22,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </revisionDesc>
    </teiHeader>
    <text>
-      <body xml:id="binding">
+      <body xml:id="bindingEl">
          <div>
             <head>binding</head>
             <p/>
