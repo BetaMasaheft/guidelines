@@ -29,7 +29,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <gi>objectDesc</gi> contains all the
                       information about the object as such. Within the
                       <att>form</att> you should specify one of the available values. The object is further described in <gi>supportDesc</gi>.</p>
-            
+
             <div type="level2">
                 <head>Support</head>
                      <p>Into <gi>support</gi> a series of
@@ -84,12 +84,12 @@ taken from <locus target="#6r"/>.
             <gi>locus</gi> immediately after the relative
             measure.</p>
             </div>
-            
+
             <div type="level2">
                 <head>Collation</head>
                      <p>
                         <gi>collation</gi> can be used to give
-            textual information about how the leaves are arranged using a 
+            textual information about how the leaves are arranged using a
                         <gi>list</gi> of <gi>item</gi> elements.</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <collation>
@@ -165,6 +165,15 @@ WRONG ENCODING EXAMPLE
             of each quire and formula notations. Added leaves are shown
             with hyphens, stubs are not shown, replaced leaves are
             dot-hyphen lines.</p>
+            <p>If you also want to add a note element, please do so before you add text as in this example from <ref target="EMIP00006" type="bm">the Herron Codex</ref>.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <item xml:id="q22" n="22">
+                                            <dim unit="leaf">3</dim>
+                                            <locus from="175" to="177"/>
+                                            <note>A folio stub is visible between ff. 175 and 176. F. 176 is cut off about midway between gutter and fore edge. </note>
+                                            2, stub after 1
+                                            </item>
+            </egXML>
                      <p>Sometimes you might need to describe the position of a
             quire using <gi>locus</gi> elements. Please,
             do this in a <gi>note</gi>, as the <gi>locus</gi> element is here reserved for
@@ -245,7 +254,7 @@ commented out as no example can be found, but there was an example and an implem
 </collation>
 </egXML>
             </div>
-            
+
             <div type="level2">
                 <head>Foliation</head>
                      <p>You might also use <gi>foliation</gi> with
@@ -272,7 +281,7 @@ commented out as no example can be found, but there was an example and an implem
 </foliation>
 </egXML>
             </div>
-            
+
             <div type="level2">
                 <head>Condition</head>
                      <p>You can also add a <gi>condition</gi>
@@ -285,7 +294,7 @@ commented out as no example can be found, but there was an example and an implem
 </egXML>
                      <p>If no information on the condition of the manuscript is available, the element should be simply not added to the record.</p>
                   </div>
-            
+
             <div type="level2">
                 <head>Layout Description</head>
                      <p>
