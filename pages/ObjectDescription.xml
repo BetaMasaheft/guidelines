@@ -139,7 +139,7 @@ WRONG ENCODING EXAMPLE
        </item>
 </egXML>
                      <p>To notate singletons and stubs, please use the following
-            pattern as in Ethio-Spare</p>
+            pattern as in Ethio-Spare, where the first digit is the relative position of the singleton (see example above).</p>
                      <cit>
                         <quote>
 6, stub after 3
