@@ -20,6 +20,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
           <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
           <change who="PL" when="2018-04-24">stub of page</change>
+            <change who="DR" when="2018-06-12">Adding mistara example</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -376,11 +377,15 @@ commented out as no example can be found, but there was an example and an implem
                      <p>The second <tag>dimension
             type=‘margin’</tag> contains the measures
             of the margins.</p>
-                     <p>Within a <gi>layout</gi> you can also use
+                     <p>Within a <gi>layout</gi> you can also encode information on ruling and pricking using
             <gi>ab</gi> as in the following examples:</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
  <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A/0-0/0-0/A.</ab>
  <ab type="pricking" subtype="pattern">Primary pricks are partly visible (s., e.g., fol. 37v).</ab>
+                         
+                         <layout>
+                             <ab type="ruling">A misṭāra was used for ruling.</ab>
+                         </layout>
 </egXML>
                      <p>
                         <gi>ab</gi> can contain
