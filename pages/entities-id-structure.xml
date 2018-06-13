@@ -32,18 +32,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <p>Manuscripts</p>
                <list type="unordered">
                   <item>
+                     <p>BLadd100 (LIBRARY + collection + shelfmark)</p>
+                  </item>
+                  <item>
+                     <p>BNFabb3 (LIBRARY + collection + shelfmark)</p>
+                  </item>
+                  
+                  <item>
                      <p>EMML2312</p>
                   </item>
                   <item>
                      <p>ESam002 (Ethio-Spare)</p>
                   </item>
-                  <item>
-                     <p>BLadd100 (British Library, fondo, numero)</p>
-                  </item>
-                  <item>
-                     <p>BNFabb3 (Bibliotheque nationale de France, fondo,
-            numero)</p>
-                  </item>
+                  
                </list>
             </item>
             <item>
