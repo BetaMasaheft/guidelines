@@ -451,7 +451,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             line</p>
                      </cell>
                      <cell>
-                           <tag>del rend="exponctuated"</tag>
+                           <tag>del rend="expunctuated"</tag>
                      </cell>
                      <cell/>
                   </row>
