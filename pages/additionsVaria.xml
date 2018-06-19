@@ -22,16 +22,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="PL" when="2018-04-24">stub of page</change>
             <change who="DR" when="2018-05-16">Edited and split from manuscript contents page</change>
             <change who="DR" when="2018-05-23">Added paragraph on handNotes</change>
+            <change who="PL" when="2018-06-18">Added summary of Issue 917</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body xml:id="additionsVaria">
     <head>Additions and Varia</head>
-    
-     
+
+
 
             <div type="level2">
                 <head>Additions</head>
+                <p>An "addition" is a neutral term to indicate that someting is "later
+added" or secondary from the view point of the cataloguer: it should
+never be used to mark a content, that presupposes another perspective.</p>
                 <p>Additions (or <hi rendition="simple:italic">additiones</hi>)
                     are very often written in
                     a secondary hand, and they are later than the main text(s) of
@@ -41,7 +45,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     provided for the <att>type</att> in the <gi>desc</gi>
                     element. </p>
                     <p>It is crucial that <gi>additions</gi> should be used only for
-                        elements added later to the text! Therefore, they do not include subscriptions or supplications written at the same time as the main texts.</p>
+                        elements added later to the text! Therefore, they do not include
+                        subscriptions or supplications written at the same time as the main texts.</p>
                     <p>When describing an addition, please provide if possible:
                     <list>
                         <item>language;</item>
@@ -55,7 +60,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <item>whether the addition is rhymed.</item>
                     </list>
                 </p>
-                <p>These additions are encoded in an 
+                <p>If you cannot decide if the text is a main content or an addition,
+                  follow the criteria identified by Andrist in the COMSt book (p. 512) to identify strata.
+                  Additions would always be quaternary strata (independent content, not indepedent material,
+                  autonomous writing project) whereas copied additions are primary strata.
+                  In the case in which a manuscript has a donation note which is a "added written element"
+                  thus preserving its writing project and the integrity of its content in comparison with the main text,
+                  but without material independence, than it is an addition, and we encode it as such.
+                  If instead the unit is part of a primary writing project,
+                  the fact that it is copied from an addition does not change the fact that it is an msItem in a msPart or msDesc.</p>
+                  <p>The example of the Liber Aksumae compilation, should be encoded as msItems. </p>
+                <p>These additions are encoded in an
                     <gi>additions</gi> element in <gi>physDesc</gi>, which will contain a
                     <gi>list</gi> of additions. A general note on all
                         additions can be added before <gi>list</gi>
@@ -63,7 +78,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                    <p>Each
                     <gi>item</gi> will have a structure as follows:
                 </p>
-               
+
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                     <list>
                     <item xml:id="a1">
@@ -73,7 +88,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </item>
                     </list>
                 </egXML>
-                
+
                 <p>
                     The <att>xml:id</att> of additions will use "a" and a
                     consecutive number. </p>
@@ -116,12 +131,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </q>
                     </item>
                 </egXML>
-                
+                <p>The same you can do if there is documentary text which you want to identify.
+                  When creating the record a keyword should then be used to put the text in its correct position as non-literary.
+                  We have in the category of keywords for Subjects for example "Other" but also "Legal Document".
+                  If <ref target="LIT4972Don" type="bm">LIT4972Don</ref> is in fact according to the definition in the schema a
+                  Donation Note, you can add that keyword to the work record.</p>
+<p>If the text is a primary strata and we happen to have also manuscripts where this text is an addition,
+  then you could add a <gi>relation</gi> (e.g. with  <val>saws:isCopyOf</val> for <att>name</att>) which connects the <gi>msItem</gi> with the addition in question.</p>
                 <p>In additions as anywhere in the manuscript description, a <gi>handNote</gi> should be created for each identifiable hand, whether it can be described from available pictures of the manuscript
                     or whether the catalogue provides sufficient information for assigning certain additions to individual hands.
                 If no such information is available, no <gi>handNote</gi> should be created, as it cannot always be excluded that the addition is written in the hand of the main text.</p>
             </div>
-                
+
                 <div type="level2">
                     <head>Varia</head>
 
@@ -177,12 +198,12 @@ the upper margin of the folio, sometimes within frames;</item>
 trials, notes crudely written in pencil or pen;</item>
 <item>scribbles and doodles.</item>
   </list></p>
-                    
+
                     <p>Please not that these phenomena should only be encoded under Varia if the text in which they occur is not transcribed. I.e. if space for
                     rubrications in left unfilled in incipits, and these incipits are transcribed in the manuscript description, the unfilled spaces should be encoded properly there and the
                     information does not need to be repeated under Varia.</p>
                     <p>See also <ref target="text-encoding">Text Encoding</ref>.</p>
-                    
+
                     <p>
                         The <att>xml:id</att> of varia will use "e" and a
                         consecutive number:
