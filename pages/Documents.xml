@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Documentary Texts</title>
+                <author>Pietro Liuzzo</author>
+            </titleStmt>
+            <publicationStmt>
+                <p/>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Encoded in XML</p>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+          <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+            <change who="PL" when="2018-04-24">stub of page</change>
+            <change who="DR" when="2018-05-16">Edited and split from manuscript contents page</change>
+            <change who="DR" when="2018-05-23">Added paragraph on handNotes</change>
+            <change who="PL" when="2018-06-18">Added summary of Issue 917</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body xml:id="Documents">
+    <head>Documentary texts</head>
+
+
+<div>
+
+            </div>
+
+        </body>
+    </text>
+</TEI>
