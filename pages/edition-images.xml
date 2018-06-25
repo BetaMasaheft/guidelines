@@ -30,10 +30,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
              <p>An example can be found in the <ref type="bm" target="LIT2170Peripl">Periplus of the Erythraean Sea</ref>. Start from encoding <ref target="work-teiHeader">witnesses</ref>. You will then have to provide the additional information like in the following example, inside a <gi>ptr</gi>.</p>
              <egXML xmlns="http://www.tei-c.org/ns/Examples">
-               <witness type="external" xml:id="P" corresp="Cod. Pal. graec. 398" facs="http://digi.ub.uni-heidelberg.de/diglit/cpgraec398/0569">
-               <ptr target="https://digi.ub.uni-heidelberg.de/diglit/iiif/cpgraec398/manifest.json"/>
-               Sammelhandschrift — Konstantinopel, letztes Viertel 9. Jh.
-               </witness>
+<witness type="external" xml:id="P" corresp="Cod. Pal. graec. 398" facs="http://digi.ub.uni-heidelberg.de/diglit/cpgraec398/0569">
+      <ptr target="https://digi.ub.uni-heidelberg.de/diglit/iiif/cpgraec398/manifest.json"/>
+      Sammelhandschrift — Konstantinopel, letztes Viertel 9. Jh.
+</witness>
              </egXML>
              <p>Note that in this example the resource is external, i.e. we do not and will not have this manuscript.</p>
              <p>At the point in the text where the manuscript page interruption occurs you can then add a <gi>pb</gi>.</p>
