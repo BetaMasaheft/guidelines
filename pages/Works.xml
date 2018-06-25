@@ -39,6 +39,7 @@ please read <ref target="definitionWorks">Definition of Works and Narrative Unit
                <item><ref target="structureWorks">General structure of the Work record</ref></item>
                <item><ref target="work-teiHeader">Work Description</ref></item>
                <item><ref target="edition">Edition and textparts</ref></item>
+               <item><ref target="edition-images">Linking IIIF Images to your text edition</ref></item>
             </list>
 
             <p>See also:

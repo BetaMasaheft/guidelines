@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Images of Manuscripts for editions</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+          </publicationStmt>
+         <sourceDesc>
+          <p>Natively encoded in TEI.</p>
+         </sourceDesc>
+      </fileDesc>       <revisionDesc>
+
+            <change who="PL" when="2018-06-25">first version of guidelines from Wiki</change>     </revisionDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="edition-images">
+         <div type="level1">
+            <head>Adding IIIF images of manuscripts to your edition</head>
+
+             <p>You can bind your edition to IIIF manifests so that a viewer will be visualized under the text/apparatus and translation of the text.</p>
+             <p>To do this you need to provide both the information about the location of the images explicitly and if you want the viewer to be at the page of the manuscript you want to look at, you need to tell it also this.</p>
+
+             <p>An example can be found in the <ref type="bm" target="LIT2170Peripl">Periplus of the Erythraean Sea</ref>. Start from encoding <ref target="work-teiHeader">witnesses</ref>. You will then have to provide the additional information like in the following example, inside a <gi>ptr</gi>.</p>
+             <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <witness type="external" xml:id="P" corresp="Cod. Pal. graec. 398" facs="http://digi.ub.uni-heidelberg.de/diglit/cpgraec398/0569">
+               <ptr target="https://digi.ub.uni-heidelberg.de/diglit/iiif/cpgraec398/manifest.json"/>
+               Sammelhandschrift — Konstantinopel, letztes Viertel 9. Jh.
+               </witness>
+             </egXML>
+             <p>Note that in this example the resource is external, i.e. we do not and will not have this manuscript.</p>
+             <p>At the point in the text where the manuscript page interruption occurs you can then add a <gi>pb</gi>.</p>
+             <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<pb n="40v" corresp="#P" facs="https://digi.ub.uni-heidelberg.de/diglit/iiif/cpgraec398/canvas/0084.json"/>
+             </egXML>
+             <p>If you have more than one witness for the edition, you can add as many of these as needed in the text, connecting them with the <att>corresp</att> to the correct <gi>witness</gi> in the file.</p>
+             <p>The content of <att>facs</att> needs to be the correct canvas of that page. This is usually visible in the page of the institution publishing the manuscript or directly looking into the IIIF manifest.</p>
+             <p>There is no way for the machine to infer what the foliation corresponds to in the image set, you have to check it. Usually the structure is quite simple, so, if you know your first page break is 0084, the following will be 0085.</p>
+         </div>
+      </body>
+   </text>
+</TEI>
