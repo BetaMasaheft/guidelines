@@ -18,7 +18,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>       <revisionDesc>
 
-            <change who="PL" when="2018-06-25">first version of guidelines from Wiki</change>     </revisionDesc>
+            <change who="PL" when="2018-06-25">first version of guidelines from example</change>     </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="edition-images">
