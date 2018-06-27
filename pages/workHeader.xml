@@ -281,13 +281,13 @@ statement:</p>
 <div type="level2">
 <head>Versions</head>
 <p>If you have multiple recensions/version of a text, these can be
-linked with a relation with
+linked with a <gi>relation</gi> with
 <tag>name='saws:isVersionOf'</tag> this will be used to
 pick up these in the text view. The same parallel content in the
 different versions should have the same @corresp to a NAR unit and
-there should always be a @resp in the div[@type='edition'] containing
+there should always be a <att>resp</att> in the <tag>div[@type='edition']</tag> containing
 this text part with multiple versions with either the initials of the
-editor or the pointer to the xml:id of the bibl element which has a
+editor or the pointer to the <att>xml:id</att> of the bibl element which has a
 pointer to the edition.</p>
 
 </div>
