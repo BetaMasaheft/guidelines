@@ -20,7 +20,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
           <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
           <change who="PL" when="2018-04-24">stub of page</change>
-            <change who="DR" when="2018-06-12">Adding mistara example</change>
+            <change who="DR" when="2018-06-12">Added mistara example</change>
+            <change who="DR" when="2018-07-06">Added paragraph on scroll strips</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -84,6 +85,17 @@ taken from <locus target="#6r"/>.
                      <p>You can also specify which leaves are blank, adding a
             <gi>locus</gi> immediately after the relative
             measure.</p>
+                <p>To indicate the number of strips sewn together to produce a scroll, you can add a <gi>measure</gi> in a <gi>note</gi>, as in <ref target="BDLaethf10" type="bm">BDLaethf10</ref>:
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <extent>
+                        <dimensions type="outer" unit="in">
+                            <height>78</height>
+                            <width>5.5</width>
+                        </dimensions>
+                        <note>Consists of <measure unit="strips">3</measure> strips.</note>
+                    </extent>
+                    </egXML>
+                </p>
             </div>
 
             <div type="level2">
