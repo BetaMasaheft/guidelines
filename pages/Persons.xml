@@ -18,7 +18,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
       </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
-         <change who="DR" when="2018-05-23">Added title priorities</change>     </revisionDesc>
+         <change who="DR" when="2018-05-23">Added title priorities</change> 
+         <change who="DR" when="2018-07-06">Added use of floruit</change> </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="persons">
@@ -30,6 +31,9 @@ guidelines for
                person
             </ref>
          </p>
+         <p>The elements of a person's record constitute in their entirety a brief biographical sketch of the record's subject. It is therefore not necessary to 
+         limit the description of the person's life to a single element. Instead, all information should be encoded at the appropriate place in the record, 
+         for example <gi>birth</gi>, <gi>death</gi> or <gi>floruit</gi>.</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <text>
       <body>
@@ -157,14 +161,14 @@ This is of course redundant when the <gi>persName</gi> you assign this attribute
          <div type="level1">
             <head>Commemoration</head>
             <p>For Saints you might wish to record the commemoration dates. Please
-  follow this example</p>
+  follow the following example. It is always preferable to include the source for the date (Sǝnkǝssār, Dǝggwā, EAe...).</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <note type="commemoration"><date type="diesNatalis">5 Maskaram</date></note>
 </egXML>
          </div>
          <div type="level1">
             <head>Epithet</head>
-            <p>Epithet should be recorded as
+            <p>Epithets should be recorded as
   <tag>addName type='epithet'</tag> and should have their
   <att>xml:id</att> with a chosen value. Assuming the
   <att>xml:id</att> is in this case "SaviourOfTheWorld" ID to be copied
@@ -191,6 +195,21 @@ This is of course redundant when the <gi>persName</gi> you assign this attribute
          </div>
          <div type="level1">
             <head>Information about this person</head>
+            <p><gi>floruit</gi> contains the date of the major active years of the record's subject. The paragraphical information given in <gi>floruit</gi> does not aim at describing
+            the whole life of the person in question, but focusses on what they have done in their active years. For instance, for metropolitans, kings etc. it would usually encompass the years between
+            their appointment and death or replacement. See for example <ref target="PRS1083AbbayHa" type="bm">ʾAbbāy Habta Ṣǝyon</ref>:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <birth when="1869"/>
+            <floruit notBefore="1889" notAfter="1914">He was among the last notables of 
+               <placeName ref="LOC3764Hamase"/>
+               to hold the office of <persName ref="PRS1083AbbayHa"><roleName type="title">baḥǝra nagāš</roleName></persName>. 
+               He was officially promoted by the Italians, he inherited the office from his uncle 
+               <persName ref="PRS4907Gwerade"/>. The decline of this office lead to the loss of effective executive power, but ʾAbbāy  became the spokesperson and the head 
+               of the indigenous population of  <placeName ref="LOC1579Asmara"/>, concentrated in its old quarters. 
+               It seems that thanks to his services the relationships with the 
+               Italian colonial administration, tense from time to time, stayed harmonious on the whole.</floruit>
+            <death when="1914">He died at <placeName ref="LOC1579Asmara"/> in <date>1914</date>. </death>
+            </egXML>
             <p>
                <gi>occupation</gi> can take
   <att>type</att> attribute.</p>
