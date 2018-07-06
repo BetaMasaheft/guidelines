@@ -25,7 +25,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <text>
         <body xml:id="identifiersStructure">
             <div type="level4">
-    <head>Identifiers</head>
+                <head>Manuscript identifiers and more than one identifier for a manuscript or a part of
+                    manuscript</head>
+                <p>Facilitating the finding of manuscripts is a priority, and therefore it is crucial for all known identifiers to be added to <gi>msIdentifier</gi>. Widespread variants of identifiers - such as Arabic 
+                instead of Roman numerals in the shelfmark - can also be added wherever this seems reasonable.</p>
+                <p>The element <gi>idno</gi> should contain the usual name or abbreviation of the collection and the number of the manuscript. Together with the name of the place at which the
+                manuscript is kept and the name of the library, this is currently used to refer to the manuscript on the web app. As always, keep in mind that the XML should not be adapted to suit a 
+                particular visualization need.</p>
+                <p>If there are other possible identifiers, add them with the
+                    following elements inside <gi>msIdentifier</gi></p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <msIdentifier>
+                        <repository ref="INS0317Frank"/>
+                        <idno>Frankfurt Ms. or. 133</idno>
+                        <altIdentifier>
+                            <idno>Goldschmidt 3</idno>
+                        </altIdentifier>
+                        <altIdentifier>
+                            <idno>Rüpp. II, 3</idno>
+                        </altIdentifier>
+                    </msIdentifier>
+                </egXML>
+            </div>
+            
+            <div type="level4">
+    <head>Identifiers eithin the manuscript record</head>
     <p>Each <gi>msPart</gi>,
         <gi>msItem</gi> and <gi>msFrag</gi>
         should have an <att>xml:id</att> with a letter
@@ -93,24 +117,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </egXML>
                 <p>See also <ref target="entities-id-structure">Entities ID Structure</ref>.</p>
             </div>
-    <div type="level4">
-        <head>More than one identifier for a manuscript or a part of
-            manuscript</head>
-        <p>If there are other possible identifiers, add them with the
-            following elements inside <gi>msIdentifier</gi></p>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          <msIdentifier>
-              <repository ref="INS0317Frank"/>
-              <idno>Frankfurt Ms. or. 133</idno>
-              <altIdentifier>
-                  <idno>Goldschmidt 3</idno>
-              </altIdentifier>
-              <altIdentifier>
-                <idno>Rüpp. II, 3</idno>
-              </altIdentifier>
-            </msIdentifier>
-        </egXML>
-    </div>
+  
         </body>
     </text>
 </TEI>
