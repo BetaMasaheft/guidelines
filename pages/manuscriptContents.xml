@@ -33,19 +33,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
         <msContents>
                 <summary/>
-                
+
                 <msItem xml:id="p2_i1">
                     <locus from="371a" to="422"/>
                     <title type="complete" ref="LIT2509Weddas"/>
                     <textLang mainLang="gez" otherLangs="am"/>
                     <note>Each sentence is translated continuously to Amharic.</note>
-                    
+
                     <msItem xml:id="p2_i1.1">
                         <locus from="371" to="278a"/>
                         <title type="complete" ref="LIT2509Weddas#Monday"/>
                         <textLang mainLang="gez"/>
                     </msItem>
-                    
+
                     <msItem xml:id="p2_i1.2">
                         <locus from="378b" to="383a"/>
                         <title type="complete" ref="LIT2509Weddas#Tuesday"/>
@@ -78,9 +78,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <locus from="40r" to="48r"/>
                 <title type="complete" ref="LIT3064RepCh344"/>
                 <textLang mainLang="gez"/>
-                <incipit xml:lang="gez">እሴብሕ፡ ጸጋኪ፡ ኦምልዕተ፡ ጸጋ፡ ወእትጋነይ፡ ለኪ፨ ኦምልዕተ፡ ውዳሴ፡ ተዘከርኩ፡ በልሌሊት፡ ንጽሐ፡ ድንግልናኪ፡</incipit> 
+                <incipit xml:lang="gez">እሴብሕ፡ ጸጋኪ፡ ኦምልዕተ፡ ጸጋ፡ ወእትጋነይ፡ ለኪ፨ ኦምልዕተ፡ ውዳሴ፡ ተዘከርኩ፡ በልሌሊት፡ ንጽሐ፡ ድንግልናኪ፡</incipit>
                 <explicit type="supplication">
-                    <hi rend="rubric"> ኦእግዚእየ፡ ኢየሱስ። ክርስቶስ፨ ዕቀበኒ፡</hi> እመክረ፨ ሥጋ፨ ወነፍስ፡ ለገብርከ፨ ገብርከ፡ 
+                    <hi rend="rubric"> ኦእግዚእየ፡ ኢየሱስ። ክርስቶስ፨ ዕቀበኒ፡</hi> እመክረ፨ ሥጋ፨ ወነፍስ፡ ለገብርከ፨ ገብርከ፡
                     <persName ref="PRS11944GabraM">ረ፨ ማርያም፨</persName> <hi rend="rubric">አሜን፡ ስብሀት፡ ለኪ፡ ማርም፡ በኁ</hi>
                 </explicit>
             </msItem>
@@ -140,6 +140,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 will have to be into a <gi>foreign</gi>
                 specifying the language of the translation. More than one
                 translation can be added.</p>
+                <p>The following example comes from <ref target="IVefiopsk12" type="bm">Saint Petersburg, Institut Vostočnyh Rukopisej Rossijskoj Akademii Nauk, IV Efiopsk. 12</ref>.</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <incipit>
+                  <locus target="#1r">
+                  በስመ᎓ ሥሉስ᎓ ቅዱስ᎓ ንወጥን᎓ በረኤተ᎓ እግዚአብሔር᎓ ወበሥነ᎓ ሀብቱ። በጸሒፈ᎓ ሰብዐቱ᎓ ጸሎታተ᎓ ሰዐታት᎓ ዘመዓልት᎓ ወዘሌሊት። ቀዳሚሁ᎓ ለለኵሉ᎓ ጊዜ᎓ ትብል።
+                  </locus>
+                  <foreign xml:lang="en">
+                  In the name of the Threefold, Holy One, we commence with the help of God and goodness of His richness the writing of the seven hours' prayers of the day and of the night. In the beginning, each time you will say.
+                  </foreign>
+                  </incipit>
+                </egXML>
             <p>Within the text all TEI markup can be used to indicate
                 mistakes, lacunas, editorial interventions, etc.</p>
             <p>The use of <gi>explicit</gi> follows the
@@ -177,18 +188,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 part of a work. If the content is partial, you can use
                 <att>defective</att> with the value true.
                 Default is false and is not encoded.</p>
-        
+
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <msItem xml:id="p1_i1.2">
                 <locus from="122v"/>
                 <title type="complete" ref="LIT1828Mahale"/>
                 <textLang mainLang="gez"/>
-                
+
                 <msItem xml:id="p1_i1.2.1">
                     <locus from="122v"/>
                     <title type="complete" ref="LIT1828Mahale#Moses1"/>
                 </msItem>
-                
+
                 <msItem xml:id="p1_i1.2.2">
                     <locus from="123v"/>
                     <title type="complete" ref="LIT1828Mahale#Moses2"/>
