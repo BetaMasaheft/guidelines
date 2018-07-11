@@ -22,7 +22,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </revisionDesc>
   </teiHeader>
   <text>
-    <body xml:id="additionalInfo">
+    <body xml:id="attributions">
       <head>Attributions</head>
       <p>You can attribute any single piece of information, as big as an edition in <tag>div type='edition'</tag> or as small as a variant reading (<gi>rdg</gi>) or <gi>date</gi>, etc., to the authority responsible for it.</p>
       <p>Typically this authority can be:
