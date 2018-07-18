@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Attribution of single statements</title>
+        <author>Pietro Liuzzo</author>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Originally encoded in XML</p>
+      </sourceDesc>
+    </fileDesc>
+    <revisionDesc>
+      <change who="PL" when="2018-07-11">first version of guidelines from Wiki</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body xml:id="attributions">
+      <head>Attributions</head>
+      <p>You can attribute any single piece of information, as big as an edition in <tag>div type='edition'</tag> or as small as a variant reading (<gi>rdg</gi>) or <gi>date</gi>, etc., to the authority responsible for it.</p>
+      <p>Typically this authority can be:
+<list type="ordered">
+<item>A project editor</item>
+<item>A cited publication</item>
+<item>A person</item>
+</list>
+      </p>
+      <p>The attribute <att>resp</att> can be used in all these cases.
+      <list type="ordered">
+      <item>For a project editior it will contain the editors initials, like in <tag>div type='edition' resp='MV'</tag></item>
+      <item>For cited publication, the <gi>bibl</gi> element with the citation will need to have an <att>xml:id</att> and
+    this will be referred to in the attribute, using the anchor as in <tag>div type='edition' resp='#hommel'</tag>.</item>
+      <item>If you directly want to attribute to a person in our person records, you can simply add the PRS id as in
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">ወ<supplied reason="undefined" resp="PRS10747Zotenbe">ት</supplied>ረ።</egXML></item>
+      </list>
+      </p>
+    </body>
+  </text>
+</TEI>
