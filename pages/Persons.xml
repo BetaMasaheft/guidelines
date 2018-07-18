@@ -235,6 +235,13 @@ This is of course redundant when the <gi>persName</gi> you assign this attribute
 </keywords>
 </textClass>
 </egXML>
+            <p>In similar way, <tag>occupation type="ruler"</tag> refers specifically an occupation of a king or a queen or 
+               in the contemporary system of political administration can it be a president (head of the state) or prime minister (in the parliamentary form of government). 
+               Therefore, in this case <tag>occupation type="ruler"</tag> uses for all Ethiopian kings, while <tag>occupation type="political"</tag> 
+               refers largely a person whose occupation belongs to the category of political but he/she can be a ruler
+               (governor of a province), courtier and other political posts.
+               It also entails the various occupations of medieval civil offices of the Christian kingdom of Ethiopia.
+            </p>
             <p>Also for <gi>faith</gi> you will find a list of values
   for <att>type</att> .</p>
          </div>
