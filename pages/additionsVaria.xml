@@ -131,7 +131,7 @@ never be used to mark a content, that presupposes another perspective.</p>
                         </q>
                     </item>
                 </egXML>
-                <p>The same you can do if there is documentary text which you want to identify.
+                <p>The same you can do if there is <ref target="Documents">documentary text</ref> which you want to identify.
                   When creating the record a keyword should then be used to put the text in its correct position as non-literary.
                   We have in the category of keywords for Subjects for example "Other" but also "Legal Document".
                   If <ref target="LIT4972Don" type="bm">LIT4972Don</ref> is in fact according to the definition in the schema a
