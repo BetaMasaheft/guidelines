@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Layout</title>
+        <author>Pietro Liuzzo</author>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Originally encoded in XML</p>
+      </sourceDesc>
+    </fileDesc>
+    <revisionDesc>
+      <change who="PL" when="2018-07-20">splitted from Object Description</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body xml:id="layoutDesc">
+      <div type="level2">
+          <head>Layout Description</head>
+               <p>
+                  <gi>layoutDesc</gi> contains the
+      description of how the text is laid out on the page.</p>
+               <p>Each layout information is given in a
+      <gi>layout</gi> element therein.</p>
+               <p>For example for measurement a series of specific purpose
+      attributes and elements can be used:</p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<layout columns="1" writtenLines="18">
+<dimensions unit="mm" rend="pricked ruled">
+<height>245</height>
+<width>210</width>
+<dim type="intercolumn">15</dim>
+</dimensions>
+<dimensions type="margin">
+<dim type="top">35</dim>
+<dim type="bottom">65</dim>
+<dim type="right">40</dim>
+<dim type="left">15</dim>
+</dimensions>
+</layout>
+</egXML>
+               <p>If the layout measurement refer to a specific part of the
+      manuscript a <gi>locus</gi> element can be
+      used within <gi>layout</gi> to provide the
+      range or a <att>corresp</att> with the ID of the <gi>msPart</gi>, <gi>msItem</gi> or
+      quire in the collation, whichever might be relevant.</p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<layout corresp="#p.1.1_i1" columns="1" writtenLines="18">
+…
+</layout>
+</egXML>
+               <p>or</p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<layout columns="1" writtenLines="18">
+<locus from="1r" to="20v"/>
+…
+</layout>
+</egXML>
+               <p>The leaf from which the measurements have been taken can
+      be indicated in a <gi>note</gi> inside
+      <gi>layout</gi>:</p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<layout columns="2" writtenLines="26">
+                     <locus from="119ra" to="132ra"/>
+                        <note corresp="#textarea #margin">Data on text area and margin dimensions taken from <locus
+                           target="#119r"/>.</note>
+                     <dimensions unit="mm" xml:id="textarea">
+                        <height>145</height>
+                        <width>100</width>
+                     </dimensions>
+                     <dimensions type="margin" unit="mm" xml:id="margin">
+                        <dim type="top">15</dim>
+                        <dim type="bottom">30</dim>
+                        <dim type="right">20</dim>
+                        <dim type="left">5</dim>
+                        <dim type="intercolumn">10</dim>
+                     </dimensions>
+                  </layout>
+</egXML>
+               <list type="unordered">
+                  <item>
+                     <p>
+                        <att>columns</att> contains the number
+                         of columns on a page. One column should be encoded as <tag>layout columns='1'</tag>, when no information is available, this element should not be added.</p>
+                  </item>
+                  <item>
+                     <p>
+                        <att>writtenLines</att> contains the
+          number of lines on a page.</p>
+                  </item>
+               </list>
+               <p>The first <gi>dimensions</gi> contains the
+      information about the text area. A
+      <att>rend</att> can be used to list separated
+      by spaces other visible characteristics.</p>
+               <p>The second <tag>dimension
+      type=‘margin’</tag> contains the measures
+      of the margins.</p>
+               <p>Within a <gi>layout</gi> you can also encode information on ruling and pricking using
+      <gi>ab</gi> as in the following examples, where the given formula follows the pattern described by D.Muzerelle <ref target="http://palaeographia.org/muzerelle/grecs1.htm">in this wonderfully clear and complete presentation</ref>:</p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A/0-0/0-0/A.</ab>
+<ab type="pricking" subtype="pattern">Primary pricks are partly visible (s., e.g., fol. 37v).</ab>
+
+                   <layout>
+                       <ab type="ruling">A misṭāra was used for ruling.</ab>
+                   </layout>
+</egXML>
+               <p>
+                  <gi>ab</gi> can contain
+      <gi>locus</gi> if you need to state precisely
+      where an event occours.</p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<ab type="punctuation" subtype="dividers">
+<list>
+ <item xml:id="div1" corresp="#p.1">Colon</item>
+ <item xml:id="div2" corresp="#p.2">
+     Five red and black dot vertical colon.
+     <locus from="30v" n="3"/>
+     <locus from="30v" n="11"/>
+     <locus from="31r" n="14"/>
+     <locus from="31v" n="10"/>
+ </item>
+</list>
+</ab>
+</egXML>
+            </div>
+      </body>
+      </text>
+      </TEI>

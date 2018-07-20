@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Collation</title>
+        <author>Pietro Liuzzo</author>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Originally encoded in XML</p>
+      </sourceDesc>
+    </fileDesc>
+    <revisionDesc>
+      <change who="PL" when="2018-07-20">splitted from Object Description</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body xml:id="collationDesc">
+      <div type="level2">
+          <head>Collation</head>
+               <p>
+                  <gi>collation</gi> can be used to give
+      textual information about how the leaves are arranged using a
+                  <gi>list</gi> of <gi>item</gi> elements.</p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<collation>
+<list>
+ <item xml:id="q1">
+     <dim unit="leaf">8</dim>
+     <locus from="1r" to="8v"/>
+3, stub after 6
+6, stub after 3
+ </item>
+ <item xml:id="q2">
+     <dim unit="leaf">10</dim>
+     <locus from="11r" to="20v"/>
+ </item>
+…
+</list>
+</collation>
+</egXML>
+               <p>Give a <att>xml:id</att> to each item in the
+      list to be able to refer to this unit, using "q" and a
+      consecutive number.</p>
+               <p>If only general information on the collation is provided
+      and no quire structure is given, this information can be
+      stated in a <gi>note</gi> inside
+      <gi>collation</gi>:</p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<collation>
+<note>
+The textual sequence of the manuscript is disturbed, see <ref target="#ms_i1.1"/>.
+</note>
+</collation>
+</egXML>
+                <p>Quires with an uneven <att>unit</att> for <gi>dim</gi>  will ALWAYS need
+      clarification of the phenomenon occurring as below. No item
+      view will be loaded if only the following is given:</p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+WRONG ENCODING EXAMPLE
+<item xml:id="q2">
+     <dim unit="leaf">9</dim>
+ </item>
+</egXML>
+               <p>you need at least the following:</p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<item xml:id="q2">
+     <dim unit="leaf">9</dim>
+1 added
+ </item>
+</egXML>
+               <p>To notate singletons and stubs, please use the following
+      pattern as in Ethio-Spare, where the first digit is the relative position of the singleton (see example above).</p>
+               <cit>
+                  <quote>
+6, stub after 3
+</quote>
+               </cit>
+               <p>Added leaves, where no stub is visible might be recorded
+      as</p>
+               <cit>
+                  <quote>
+1, no stub
+</quote>
+               </cit>
+               <p>where the number before the comma is the folio number of
+      the singleton.</p>
+               <p>Also, you can use with care for consistency the following
+      values</p>
+               <cit>
+                  <quote>
+3 replaced, 4 missing, 5 missing, 6 replaced, 9 added
+</quote>
+               </cit>
+               <p>This information will be analyzed to produce diagrams
+      of each quire and formula notations. Added leaves are shown
+      with hyphens, stubs are not shown, replaced leaves are
+      dot-hyphen lines.</p>
+      <p>If you also want to add a note element, please do so before you add text as in this example from <ref target="EMIP00006" type="bm">the Herron Codex</ref>.</p>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+        <item xml:id="q22" n="22">
+                                      <dim unit="leaf">3</dim>
+                                      <locus from="175" to="177"/>
+                                      <note>A folio stub is visible between ff. 175 and 176. F. 176 is cut off about midway between gutter and fore edge. </note>
+                                      2, stub after 1
+                                      </item>
+      </egXML>
+               <p>Sometimes you might need to describe the position of a
+      quire using <gi>locus</gi> elements. Please,
+      do this in a <gi>note</gi>, as the <gi>locus</gi> element is here reserved for
+      the quire extent.</p>
+               <!--<p>When a quire and not just a leaf is added into another
+      quire at some point, you can follow this example</p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<item xml:id="q11" rend="withInsertion" corresp="#q12">
+<dim unit="leaf">4</dim>
+<locus from="92r" to="99v"/>
+ X (<note>between <locus target="#94">94v</locus>
+ and <locus target="#99"> 99r</locus>: <ref target="#q12">the
+second codicological unit</ref></note>)
+</item>
+<item xml:id="q12" rend="inserted"  corresp="#q11">
+<dim unit="leaf">4</dim>
+<locus from="95" to="98"/>
+XI (s.l.: 2, stub after 4; 1, stub after 4)
+</item>
+</egXML>
+               <p>Here <att>rend</att> is used in the <gi>item</gi> for the quire and
+      takes two values (free), "inserted" or
+      "with insertion". The value of the
+      <gi>locus</gi> in the item, needs to have the
+      extremes of the quire, as in
+      <tag>locus from="92r" to="99v"/</tag>
+      this remains true, and is then clarified in the note as
+      necessary. You can use <att>corresp</att> to
+      express the linked quire. This assumes that the two quires
+      are described separately and that they are put in some
+      order. You might also decide to put the inserted quire at
+      the end of your list, then using
+      <att>corresp</att> is very important.</p>
+
+commented out as no example can be found, but there was an example and an implementation
+    -->
+               <p>Different numerations of quires are encoded as
+      follows:</p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<item xml:id="q26" n="25"> <num value="20">፳</num> <dim unit="leaf">8</dim> <locus from="195r" to="202v"/> </item>
+</egXML>
+               <list type="unordered">
+                  <item>
+                     <p>In <gi>item</gi> with <att>n</att> we encode the
+          progressive number of quires, assigning "a" as
+          value for initial guard leafs and "b" for
+          final guard leafs. This information was given in Roman
+          Numerals in DomLib, but needs to be in arabic numerals
+          here.</p>
+                  </item>
+                  <item>
+                     <p>The numeration given by the scribe is copied and
+          annotated with a simple
+                        <gi>num</gi> with <att>value</att> element.</p>
+                  </item>
+                  <item>
+                     <p>The number of leafs in the quire is given in
+          <gi>dim</gi>
+                     </p>
+                  </item>
+                  <item>
+                     <p>
+                        <gi>locus</gi> provides as usual the
+          extremes.</p>
+                  </item>
+               </list>
+               <p>Inside <gi>collation</gi> you can use
+      <gi>signatures</gi> for quire marks and
+      decoration of quiremarks.</p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<collation>
+<signatures> Decorated <note>Simply decorated quire marks are
+          written in the middle of the upper margin of fols. 3r, <locus target="#11r"/>, 19r, 27r.</note>
+</signatures>
+<list>
+...
+</list>
+</collation>
+</egXML>
+<p>Sometimes the information provided in the source cannot be checked and is imprecise. There are cases then
+when we cannot give the dimension of a quire, although the schema requires it.
+This is a good place for a comment, because this is something which simply needs to be fixed in the description looking at the manuscript.
+See <ref target="BAVet43" type="BM">Vatican City, Biblioteca Apostolica Vaticana, Aeth. 43</ref> where the quires missing the information have been commented out.</p>
+      </div>
+    </body>
+  </text>
+</TEI>
