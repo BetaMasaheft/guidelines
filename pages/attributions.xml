@@ -24,7 +24,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   <text>
     <body xml:id="attributions">
       <head>Attributions</head>
-      <p>You can attribute any single piece of information, as big as an edition in <tag>div type='edition'</tag> or as small as a variant reading (<gi>rdg</gi>) or <gi>date</gi>, etc., to the authority responsible for it.</p>
+      <p>You can attribute any single piece of information,
+        as big as an edition in <tag>div type='edition'</tag> or as small
+        as a variant reading (<gi>rdg</gi>) or <gi>date</gi>, etc., to the
+        authority responsible for it.</p>
       <p>Typically this authority can be:
 <list type="ordered">
 <item>A project editor</item>
@@ -34,10 +37,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </p>
       <p>The attribute <att>resp</att> can be used in all these cases.
       <list type="ordered">
-      <item>For a project editior it will contain the editors initials, like in <tag>div type='edition' resp='MV'</tag></item>
-      <item>For cited publication, the <gi>bibl</gi> element with the citation will need to have an <att>xml:id</att> and
-    this will be referred to in the attribute, using the anchor as in <tag>div type='edition' resp='#hommel'</tag>.</item>
-      <item>If you directly want to attribute to a person in our person records, you can simply add the PRS id as in
+      <item>For a project editor it will contain the editor's initials,
+        like in <tag>div type='edition' resp='MV'</tag></item>
+      <item>For cited publication, the <gi>bibl</gi> element
+      with the citation will need to have an <att>xml:id</att> and
+    this will be referred to in the attribute, using the
+    anchor as in <tag>div type='edition' resp='#hommel'</tag>.</item>
+      <item>If you directly want to attribute to a person
+        in our person records, you can simply add the PRS id as in
         <egXML xmlns="http://www.tei-c.org/ns/Examples">ወ<supplied reason="undefined" resp="PRS10747Zotenbe">ት</supplied>ረ።</egXML></item>
       </list>
       </p>

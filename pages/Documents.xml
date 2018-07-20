@@ -18,21 +18,33 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </sourceDesc>
         </fileDesc>
         <revisionDesc>
-          <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
-            <change who="PL" when="2018-04-24">stub of page</change>
-            <change who="DR" when="2018-05-16">Edited and split from manuscript contents page</change>
-            <change who="DR" when="2018-05-23">Added paragraph on handNotes</change>
-            <change who="PL" when="2018-06-18">Added summary of Issue 917</change>
+          <change who="PL" when="2018-07-20">first version of guidelines from Wiki</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body xml:id="Documents">
     <head>Documentary texts</head>
-
-
-<div>
-
-            </div>
+<p>Texts which are not literary <ref target="definitionWorks">works</ref>
+occur often in manuscripts as <ref target="additionsVaria">additions</ref>.
+That is way the list of types for this texts is in the
+<ref target="http://betamasaheft.eu/authority-files/list">Taxonomy</ref> under 'Additions'.</p>
+<p>Please, make sure you encode correctly these texts according to their actual
+  status in the manuscript.</p>
+<p>If you want to provide an ID for a given text of this type, you can do
+  so and create a Work record for it, where the same keywords used in <tag>desc type</tag>
+  are added as keywords to the record.
+</p>
+<p>You need not by any means to always assign an ID to each of these texts, they
+  already have one within the manuscript they belong to, which is unique and
+  precise enough and you can reference anywhere.</p>
+<p>You might find more appropriate to associate a document to
+  a <ref target="narratives">narrative unit</ref>,
+if the formalization is such, using a <att>corresp</att> in the
+addition <gi>item</gi> or in the <gi>div</gi>.</p>
+<p>For meaningful groups of documents you can also use the document <ref target="corpora">corpus</ref> grouping</p>
+<p>In case your text is in an <gi>additions</gi> <gi>item</gi> and it is composed of different sections,
+you can use <gi>seg</gi> with <att>ana</att> as specified in the above page.</p>
+<div></div>
 
         </body>
     </text>
