@@ -23,6 +23,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="DR" when="2018-05-16">Edited and split from manuscript contents page</change>
             <change who="DR" when="2018-05-23">Added paragraph on handNotes</change>
             <change who="PL" when="2018-06-18">Added summary of Issue 917</change>
+            <change who="DR" when="2018-08-03">Added encoding of owners in varia</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -203,7 +204,18 @@ trials, notes crudely written in pencil or pen;</item>
                     rubrications in left unfilled in incipits, and these incipits are transcribed in the manuscript description, the unfilled spaces should be encoded properly there and the
                     information does not need to be repeated under Varia.</p>
                     <p>See also <ref target="text-encoding">Text Encoding</ref>.</p>
-
+                    
+                    <p>Information provided in the catalogue which would ideally be marked up directly in a transcribed text, such as the names of owners or patrons mentioned in supplications or elsewhere,
+                    can also be recorded in Varia if the textual context is not provided by the catalogue:
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <item xml:id="e1">
+                            <locus target="#1r"/>
+                            <desc>The owner was <persName ref="PRS12179BatraG" role="owner"/>.</desc> 
+                            <q xml:lang="gez"/>
+                        </item>
+                    </egXML>
+                    </p>
+  
                     <p>
                         The <att>xml:id</att> of varia will use "e" and a
                         consecutive number:
