@@ -17,7 +17,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+         <change who="DR" when="2018-08-03">Addition on diacritica</change></revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="entities-id-structure">
@@ -25,6 +26,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          
          <div type="level2">
             <head>Structure of record IDs</head>
+            <p>All IDs of records have to be composed exclusively of ASCII alphanumeric combinations and contain no diacritica, Umlaute or other characters!</p>
          <p>The following principles for the creation of new IDs should be followed for new records:</p>
 
          <list type="unordered">
