@@ -17,11 +17,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>  
+         <change who="DR" when="2018-08-03">Addition on diacritics</change>  </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="entities-id-structure">
          <head>Entities ID structure</head>
+         
+         <p>IDs can contain no special characters, umlaut, underdots and other combining diacritics, only digits and latin characters!</p>
          
          <div type="level2">
             <head>Structure of record IDs</head>
