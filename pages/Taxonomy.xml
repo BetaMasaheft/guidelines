@@ -47,6 +47,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <item>create and sync an <ref target="authority-files">authority-file</ref> record for that;</item> 
                   <item>you will have then to update the <ref target="editingSchema">schema</ref> with the value.</item>
                </list></p>
+            
+            <p>If the concept has already a file, it can be added twice or more times in the taxonomy according to need. See for example Letter. 
+               The file needs NOT to be duplicated. 
+               Remember that the folders which have been created in the repository 
+               are only a finding aid and should not be taken to reproduce the hierarchy of the taxonomy.</p>
          </div>
       </body>
    </text>
