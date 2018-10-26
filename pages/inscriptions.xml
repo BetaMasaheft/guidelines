@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Inscriptions</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-10-26">Created page</change>     </revisionDesc>
+  </teiHeader>
+  <text>
+      <body xml:id="inscriptions">
+        <div>
+          <p>We treat Inscriptions in the same way <ref target="manuscripts">Manuscripts</ref>
+        and only add in <gi>objectDesc</gi> the value Inscription for <att>form</att>.</p>
+        <p>The same guidelines as for manuscripts apply here but you can do even better, if you make your inscription record
+        validate also to the <ref target="http://www.stoa.org/epidoc/gl/latest/">EpiDoc</ref> schema, which will allow interchange of files with other EpiDoc projects.</p>
+        <p><ref target="text-encoding">Text encoding</ref> is done in the same way,
+        although in the EpiDoc guidelines you might find more specific details
+        about the encoding of inscriptions texts.</p>
+<p>It is generally enough to encode the text of the inscription in the file,
+  but there are cases in which you might need to separate the content from the
+  support description, in which case, simply use a work record for the content
+  and place there the edition of the text.</p>
+      </div>
+      </body>
+   </text>
+</TEI>
