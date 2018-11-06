@@ -37,7 +37,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     read, etc.</p>
                 <p>All edits to the guidelines should be made as a pull request, and not be pushed directly to the main branch. This is to ensure that the guidelines do reflect the 
                 entire team's decisions and that everyone is aware of any changes made to them. It is not necessary to assign all team members as reviewers, but do assign those 
-                who seem to you the most competent to check the particular edit.</p>
+                who seem to you the most competent to check the particular edit. The reviewers should then check that the text of the guidelines reflects the decision taken, that the English is correct and
+                understandable and that all useful linkage is present.</p>
             </div>
             <div type="level3">
                 <head>Editing the XML</head>
