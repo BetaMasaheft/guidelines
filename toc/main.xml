@@ -23,13 +23,6 @@
                     <list>
                <item>manuscripts</item>
                <item>works</item>
-               <item><list>
-                  <item>definitionWorks</item>
-                  <item>structureWorks</item>
-                  <item>work-teiHeader</item>
-                  <item>edition</item>
-               </list>
-               </item>
                <item>places</item>
                <item>persons</item>
                <item>narrativeUnits</item>
@@ -41,7 +34,8 @@
                 </item>
             <item>zotero</item>
             <item>text-encoding</item>
-         </list>
+            <item>editingGuidelines</item>            
+            </list>
       </body>
    </text>
 </TEI>
