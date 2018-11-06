@@ -17,7 +17,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p>Encoded in TEI.</p>
             </sourceDesc>
         </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
-            <change who="DR" when="2018-05-14">Edited and added examples</change></revisionDesc>
+            <change who="DR" when="2018-05-14">Edited and added examples</change>
+        <change who="DR" when="2018-11-06">Added paragraph on pull requests</change></revisionDesc>
     </teiHeader>
     <text>
         <body xml:id="editingGuidelines">
@@ -34,6 +35,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p>If you edit and push (or make a pull request) to the above repos, the XML files will be
                     sent to the application and go live so that you can see them, search, browse,
                     read, etc.</p>
+                <p>All edits to the guidelines should be made as a pull request, and not be pushed directly to the main branch. This is to ensure that the guidelines do reflect the 
+                entire team's decisions and that everyone is aware of any changes made to them. It is not necessary to assign all team members as reviewers, but do assign those 
+                who seem to you the most competent to check the particular edit. The reviewers should then check that the text of the guidelines reflects the decision taken, that the English is correct and
+                understandable and that all useful linkage is present.</p>
             </div>
             <div type="level3">
                 <head>Editing the XML</head>
