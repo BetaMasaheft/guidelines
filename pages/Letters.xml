@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Letters</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-10-26">Created page</change>     </revisionDesc>
+  </teiHeader>
+  <text>
+      <body xml:id="letters">
+          <div>
+            <p>
+              Encoding letters on parchment or paper or whatever,
+              written in ink or typed with a machine follows the same guidelines available
+              for other <ref target="manuscripts">manuscripts</ref>.
+              It is suggested that the keyword Letter is used to mark these record as well
+              as those which contain letters as part of the
+              <ref target="manuscriptContents">main or secondary contents</ref>.
+
+<ref type="BM" target="IVEf921">Saint Petersburg, Institut Vostočnyh Rukopisej Rossijskoj Akademii Nauk, IV Ef.92.1</ref> is an example of such letter being recorded in the database.
+  Another case is a letter which is copied into a manuscript, which has no independent support, and is thus a secondary or main content according to the criteria to decide on that.
+  In this case the criteria for contents apply,
+  and you might or not want to create a work record.
+  If you do so, then give to that work record the keyword <q>Letter</q> to facilitate retrieval.
+</p><p>
+  There might be cases where you need to split a work and a manuscript record,
+  if for example a letter of which we do have the original is mentioned
+  somewhere for its text and a work record has been created for it to point it.
+  This is fine, and if and when we might end up having a record for the actual
+  manuscript letter then we will have it and point to the work record as usual.
+  If for example one of these letters is mentioned in a manuscript (another of the same letters?)
+  and you want to refer to it, then you could actually do that directly to the manuscript record,
+  with no need to create a work record.
+</p>
+<p>
+  This has NOTHING to do with Letters as a literary genre.
+</p>
+<p>The transcription of the letter can be done following the normal
+
+              <ref target="text-encoding">Text encoding</ref>
+              Guidelines.
+            </p>
+      </div>
+      </body>
+   </text>
+</TEI>

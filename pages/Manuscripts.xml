@@ -55,6 +55,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <item><ref target="manuscriptDescription">Description of the Manuscript</ref></item>
                <item><ref target="text-encoding">Text encoding</ref></item>
                <item><ref target="images">Images</ref></item>
+               <item><ref target="inscriptions">Inscriptions</ref></item>
+               <item><ref target="letters">Letters</ref></item>
             </list>
       </div>
       </body>
