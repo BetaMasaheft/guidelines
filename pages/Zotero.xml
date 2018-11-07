@@ -89,6 +89,13 @@ etc.), provide the scientific transcription and translation only
 (i.e. not the title in the original script).</p>
   </item>
   <item>
+      <p>The basis for transliteration of Cyrillic should be this table http://kodeks.uni-bamberg.de/AKSL/Schrift/Transliteration.htm</p>
+      <p>There are further rules to be followed:</p>
+<p>Pre-reform spelling (before 1918) of proper names should be standardazied according to modern spelling. Thus, not Bolotov" (Болотовъ), but Bolotov (Болотов).</p>
+<p>Pre-reform spelling (before 1918) of titles is tranliterated according to the pre-reform spelling, without standartization.
+ Thus, for example 'Описанiе двухъ эѳиопскихъ рукописей, пожертвованныхъ въ библiотеку Спб. Дух. Академiи преосвященнымъ Анатолiемъ, епископомъ балтскимъ (нынѣ острогожскимъ)'
+ should be transliterated as 'Opisanie dvuch" rukopisej, požertvovannych" v" biblioteku Spb. Duch. Akademii preosvjaščennym" Anatoliem", episkopom" baltskim" (nyně ostrogožskim")'.</p> </item>
+  <item>
      <p>A translation in English is necessary for titles in any
 language apart from the three in which Aethiopica accepts
 publications (Italian, French and German).</p>
@@ -148,6 +155,10 @@ inserted in the fields: author, editor and translator.</p>
            etc.) are not needed unless their removal would mislead the
            reader.</p>
                     </item>
+                    <item>
+                     <p>In case if the transliterated form of a contributor's name in the publication differs from the transliterated form according to the rules applied by the project, enter the standardized form in accordance with http://viaf.org/ into the corresponding field.
+                     In addition to that, ALWAYS provide in notes the actual spelling of a contributor's name, as it appears in the publication.</p>
+                      </item>
                  </list>
                  <p>NOTE: The name of the person(s) appearing on the book should be
        treated consistently with what was the author's and publisher's
