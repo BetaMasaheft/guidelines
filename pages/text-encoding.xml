@@ -413,6 +413,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </row>
                   <row>
                      <cell>
+                        <p>letters in a ligature</p>
+                     </cell>
+                     <cell>
+                        <tag>hi rend='ligature'</tag>
+                     </cell>
+                     <cell/>
+                  </row>
+                  <row>
+                     <cell>
                         <p>written in negative writing</p>
                      </cell>
                      <cell>
