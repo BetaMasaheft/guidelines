@@ -89,7 +89,7 @@ etc.), provide the scientific transcription and translation only
 (i.e. not the title in the original script).</p>
   </item>
   <item>
-      <p>The basis for transliteration of Cyrillic should be this table http://kodeks.uni-bamberg.de/AKSL/Schrift/Transliteration.htm</p>
+      <p>The basis for transliteration of Cyrillic should be this table <ref target="http://kodeks.uni-bamberg.de/AKSL/Schrift/Transliteration.htm"/></p>
       <p>There are further rules to be followed:</p>
 <p>Pre-reform spelling (before 1918) of proper names should be standardazied according to modern spelling. Thus, not Bolotov" (Болотовъ), but Bolotov (Болотов).</p>
 <p>Pre-reform spelling (before 1918) of titles is tranliterated according to the pre-reform spelling, without standartization.
@@ -156,8 +156,8 @@ inserted in the fields: author, editor and translator.</p>
            reader.</p>
                     </item>
                     <item>
-                     <p>In case if the transliterated form of a contributor's name in the publication differs from the transliterated form according to the rules applied by the project, enter the standardized form in accordance with http://viaf.org/ into the corresponding field.
-                     In addition to that, ALWAYS provide in notes the actual spelling of a contributor's name, as it appears in the publication.</p>
+                     <p>In case if the transliterated form of a contributor's name in the publication differs from the transliterated form according to the rules applied by the project, enter the standardized form in accordance with <ref target="http://viaf.org/"/> into the corresponding field.
+                     In addition to that, ALWAYS provide in a child note for this specific entry (see, <ref target="https://www.zotero.org/support/notes"></ref>) the actual spelling of a contributor's name, as it appears in the publication.</p>
                       </item>
                  </list>
                  <p>NOTE: The name of the person(s) appearing on the book should be
