@@ -38,7 +38,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </textClass>
                </egXML>
                </p>
-               <p>It is very usefull and important that at least one Period Keyword is assigned to each Work and Manuscript record.</p>
+               <p>It is very useful and important that at least one Period Keyword is assigned to each Work and Manuscript record.</p>
                <p>Each of these is linked to a stable URI provided by <ref target="https://test.perio.do/#/p/Canonical/periodCollections/p03tcss/">Perio.do</ref>.</p>
                <p>In the following table they are summarized although they are available in the contextual menu via the schema.</p>
                <table>
