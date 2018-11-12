@@ -204,6 +204,41 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </row>
                   <row>
                      <cell>
+                        <p>abbreviations</p>
+                     </cell>
+                     <cell>
+                        <gi>expan</gi>
+                        with children <tag>abbr</tag>
+                        and <tag>ex</tag>
+                        <gi>abbr</gi> can eventually contain <gi>am</gi> if the abbreviation sign is not made by one or more letters
+                        
+                     </cell>
+                     <cell>
+                        <p>The text presents an abbreviation of a name or a word</p>
+                     </cell>
+                     <cell>
+                        <p>t(ext)</p>
+                     </cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>monograms</p>
+                     </cell>
+                     <cell>
+                        <gi>expan</gi>
+                        with children <gi>abbr</gi>
+                        and <gi>ex</gi>
+                        <gi>abbr</gi> can eventually contain <gi>am</gi> if the abbreviation sign is not made by one or more letters
+                     </cell>
+                     <cell>
+                        <p>The text presents an abbreviation of a name or a word</p>
+                     </cell>
+                     <cell>
+                        <p>t(ext)</p>
+                     </cell>
+                  </row>
+                  <row>
+                     <cell>
                         <p>marginal signs</p>
                      </cell>
                      <cell>
@@ -408,6 +443,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                            <tag>hi rend='reversed'</tag>
+                     </cell>
+                     <cell/>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>letters in a ligature</p>
+                     </cell>
+                     <cell>
+                        <tag>hi rend='ligature'</tag>
                      </cell>
                      <cell/>
                   </row>
