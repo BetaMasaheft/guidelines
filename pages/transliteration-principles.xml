@@ -322,6 +322,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <p><hi rendition="simple:italic">Šarḥ sabab intiqāl mamlakat Sulaymān
          malik ʾIsrāʾīl ʾilā bilād an-naǧāšīya allatī hiya al-ḥabaša</hi></p>
        </div>
+       <div type="level2">
+         <head>Transliteration from Cyrillic</head>
+         <p>The basis for transliteration of Cyrillic should be this table <ref target="http://kodeks.uni-bamberg.de/AKSL/Schrift/Transliteration.htm"></ref></p>
+         <p>For more information on the transliteration rules, consult the page with Zotero guidlines (<ref target="zotero"></ref>).
+         </p>
+         </div>
         <div type="level2">
           <head>Other languages</head>
           <p>If you want to transliterate a language that is not or is only partially covered by these guidelines, please be sure to:
