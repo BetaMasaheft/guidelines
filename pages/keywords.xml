@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -38,22 +38,39 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </textClass>
                </egXML>
                </p>
+               <p>It is very usefull and important that at least one Period Keyword is assigned to each Work and Manuscript record.</p>
+               <p>Each of these is linked to a stable URI provided by <ref target="https://test.perio.do/#/p/Canonical/periodCollections/p03tcss/">Perio.do</ref>.</p>
+               <p>In the following table they are summarized although they are available in the contextual menu via the schema.</p>
+               <table>
+               <row role="label">
+               <cell>Keyword</cell>
+               <cell>Period</cell>
+             </row>
+             <row><cell>PreAks</cell><cell>Pre Aksumite</cell></row>
+             <row><cell>Eaks</cell><cell>Early Aksumite</cell></row>
+             <row><cell>Aks</cell><cell>Aksumite</cell></row>
+             <row><cell>Paks1</cell><cell>Post Aksumite I</cell></row>
+             <row><cell>Paks2</cell><cell>Post Aksumite II</cell></row>
+             <row><cell>Gon</cell><cell>Gondarine</cell></row>
+             <row><cell>ZaMa</cell><cell>Zamana Masāfǝnt</cell></row>
+             <row><cell>MoPe</cell><cell>Modern Period</cell></row>
+           </table>
          </div>
-         
+
          <div type="level2">
             <head>Keywords in manuscript records</head>
          <p>This means that it
                is not necessary to limit the keywords to the principal text, but keywords for any
                additional or minor texts contained in the manuscript should also be assigned.</p>
                </div>
-         
+
          <div type="level2">
             <head>Keywords in work records</head>
             <p>Always
                assign a period keyword, using the keywords referring to Ethiopian literary periods only
                in records actually belonging to the Ethiopian tradition. </p>
          </div>
-         
+
          <div type="level2">
             <head>Keywords in person records</head>
             <p>
@@ -66,32 +83,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </egXML>
             </p>
          </div>
-            
+
          <div type="level2">
             <head>Keywords in other parts of the files</head>
             <p>You can use <gi>term</gi> also in other parts of the files where the schema allows it. In the following example term is used in a <gi>decoNote</gi> but you can use it also in additions</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            
+
             <decoNote type="miniature" xml:id="d1">
                <locus target="#2r" facs="f17"/>
                <desc>
                   The <title type="complete" ref="LIT1349EpistlEusebius"/> runs between
-                  <locus from="2r" to="3r"/>  and is placed under brightly coloured 
-                  <term key="arch">arches</term> that rest 
-                  on <term key="curtain">curtained</term> 
+                  <locus from="2r" to="3r"/>  and is placed under brightly coloured
+                  <term key="arch">arches</term> that rest
+                  on <term key="curtain">curtained</term>
                   <term key="column">columns</term>.
                   Several <term key="bird">birds</term> are palced atop the arch. The opening page,
-                  <locus target="#2r"/> features a pair of  <foreign xml:lang="gez">ጣዎስ፡</foreign> 
+                  <locus target="#2r"/> features a pair of  <foreign xml:lang="gez">ጣዎስ፡</foreign>
                   flanking a <term key="cross">cross</term> and four
-                  <foreign xml:lang="gez">ዱራ፡</foreign> birds. 
-                  The following pages feature the <foreign xml:lang="gez">ጠይራት፡</foreign> 
+                  <foreign xml:lang="gez">ዱራ፡</foreign> birds.
+                  The following pages feature the <foreign xml:lang="gez">ጠይራት፡</foreign>
                   birds on arches decorated with <term key="interlace"/> patterns.
                </desc>
             </decoNote>
-            
+
          </egXML>
          </div>
-         
+
          <div type="level2">
             <head>Taxonomy and creating new keywords</head>
          <p>The values available for <att>key</att> have to be included in the <ref target="taxonomy">taxonomy</ref>. </p>
