@@ -147,6 +147,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               </div>
               </div>
 </egXML>
+<p>When assigning <att>xml:id</att>s to a <gi>div</gi>, please avoid to use values which
+are keywords. The above <q>Miracles</q> or <q>miracle1</q> are fine, but e.g. <q>miracle</q> is a value in the taxonomy, so, it will conflict in the application with that identifier.</p>
          </div>
          <div type="level2">
            <p>Other pages which you should look at for encoding works:</p>
