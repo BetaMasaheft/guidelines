@@ -180,6 +180,11 @@ work can be retrieved by the app while reserving
 <gi>listWit</gi> in the work records mainly for the
 manuscripts used for the edition.</p>
 
+<p>Please note that the list of manuscripts containing a work shown in the application
+  and the list of witnesses used for an edition are two different things.
+  The first picks up whatever information is available, it might be less or more then we actually know at the moment depending on what has been marked up and linked.
+  The <gi>listWit</gi> contains instead a statement, which can be nested about
+  the manuscripts used for an edition and might contain also manuscripts which we do not yet have.</p>
 </div>
 
 
