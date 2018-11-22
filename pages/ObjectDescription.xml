@@ -48,6 +48,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <p>In <gi>material</gi> with <att>key</att> enter the a value
             from the Writing Material taxonomy proposed from the schema.
             oXygen should prompt the values from the schema.</p>
+            <p>You can also add a <att>ref</att> with a uri of one of the values in
+            the EAGLE Vocabularies for <ref target="https://www.eagle-network.eu/voc/material.html">material</ref> and <ref target="https://www.eagle-network.eu/voc/objtyp.html">object type</ref> especially for inscriptions as
+            in the following example from <ref target="RIE246" type="BM"/>.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <support>
+              <material key="stone" ref="https://www.eagle-network.eu/voc/material/lod/138"/>
+              <objectType ref="https://www.eagle-network.eu/voc/objtyp/lod/2">Unspecified</objectType>
+              </support>
+</egXML>
             </div>
             <div type="level2">
                 <head>Extent</head>
