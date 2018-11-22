@@ -45,6 +45,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </egXML>
 
             </p>
+            <p>When using <att>type</att> <val>translation</val>
+            encoders have sometimes also specified the language of the translation
+          in a <att>xml:lang</att>. This is not saying that actually, so there is no need to add that.</p>
             <p>Secondary bibliographic references given in catalogues about a
   certain work can also be included here, as they do not belong to the
   manuscript description.</p>
