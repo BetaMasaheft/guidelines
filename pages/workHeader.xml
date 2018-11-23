@@ -160,13 +160,13 @@ manuscript records containing the work are displayed in the app anyway.</p>
 </egXML>
 <p>
 
-   <gi>listWit</gi>s can be nested if needed for example
+   <gi>listWit</gi>s can be nested if needed, for example
 to group them in families. Each <gi>witness</gi> will
 have to take a <att>corresp</att> pointing to the
-manuscript <att>xml:id</att>. If the manuscript is in
-beta mesaheft catalogue that is enough. If the manuscript is into an
-external catalogue, than use @type='external' as in
-listBibl[type='mss'] in the manuscript entity. You can use
+manuscript <att>xml:id</att>. If the manuscript is in already described in
+Beta maṣāḥǝft, that is enough. If the manuscript is described in an
+external catalogue, then use <tag>@type='external'</tag>  in
+<tag>listBibl[type='mss']</tag> in the manuscript entity. You can use
 <att>cert</att> to specify a degree of certainty
 regarding the manuscript you are listing. Please, note that each
 witness element can take a fully marked up description in relation to
@@ -182,9 +182,9 @@ manuscripts used for the edition.</p>
 
 <p>Please note that the list of manuscripts containing a work shown in the application
   and the list of witnesses used for an edition are two different things.
-  The first picks up whatever information is available, it might be less or more then we actually know at the moment depending on what has been marked up and linked.
-  The <gi>listWit</gi> contains instead a statement, which can be nested about
-  the manuscripts used for an edition and might contain also manuscripts which we do not yet have.</p>
+  The first picks up whatever information is available, it might be less or more than we actually know at the moment depending on what has been marked up and linked.
+  The <gi>listWit</gi> contains instead a statement about
+  the manuscripts used for an edition, which can be nested, and also might contain manuscripts which we do not have yet.</p>
 </div>
 
 
@@ -197,10 +197,10 @@ between this and more than one other entity.
 <att>name</att> contains the name of the relation.
 Allowed values for relations among works and authors are those in the
 <ref target="http://www.ancientwisdoms.ac.uk/media/ontology/doc/">SAWS
-Ontology</ref> and those used by syriaca.org you can filter them out
+Ontology</ref> and those used by syriaca.org. You can filter them out
 in oXygen typing syriaca: or saws: in the value list.</p>
 <p>
-   <att>active</att> should contain the xml:id of the
+   <att>active</att> should contain the <att>xml:id</att> of the
 current item. <att>passive</att> should contain the IDs
 of the related works, people, places, separated by a space</p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -311,10 +311,10 @@ the file with a proper ID as in the example below.</p>
 <date when="1555-06-23" corresp="#Pdamot">23 Sane (17 June) 1555</date> in <placeName ref="LOC2488Damot" xml:id="Pdamot">Damot</placeName>
 </egXML>
 <p>It is important that the ID of the referred place starts with P
-because there are cases where corresp is already used to point to
+because there are cases where <att>corresp</att> is already used to point to
 another ID, e.g. a work in another tradition title. Look at this
-fictitious example, where I have entered a placeName with Q item id
-from wikidata (Ethiopia) and assigned the second corresp and the id
+fictitious example, where I have entered a placeName with Q item ID
+from wikidata (Ethiopia) and assigned the second <att>corresp</att> and the ID
 with P</p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <creation corresp="#t2arabic #Ptest" when="1238-09" >
@@ -333,7 +333,7 @@ Claudii</ref>
 </p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <abstract>
-<p>A theological treatise believed to be a responce of king <persName
+<p>A theological treatise believed to be a response of king <persName
 ref="PRS4428Galawdew">Galāwdewos</persName> to the Jesuit missionaries headed by <persName
 ref="PRS7691Oviedo">Oviedo</persName>.
 </p>
