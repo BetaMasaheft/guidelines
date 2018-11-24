@@ -73,19 +73,19 @@ See for example LIT1960Mashaf#AnaphoraMary in <ref type="BM" target="FSUor15">Fr
                 </p>
             </item>
             <item>
-               <p>For these texts (both circulating independently and part of another work), a <gi>div</gi> should also be created, with a
+               <p>For these texts (both circulating as independent units and part of another unit), a <gi>div</gi> should also be created, with a
                   <att>corresp</att> giving the individual ID, in order to show the full content of a collection in
                   correct order.</p>
             </item>
             <item>
-               <p>If a textpart has an individual circulation in other traditions, but not in the Ethiopian tradition,
+               <p>If a textpart has an individual circulation in traditions other than the Ethiopic,
     all information on this text should be given in the <gi>div</gi>: multiple titles can be
     inserted, with bibliography linking to the IDs of these titles,
     relations for the authors of the titles, etc.</p>
             </item>
             <item>
                <p>For text portions (paragraphs, chapters, miracles, etc.) which are extant as different versions in multiple recensions of the same work or even in different works,
-                  create a <ref target="narrativeUnits">Narrative Unit</ref>.</p>
+                 a <ref target="narrativeUnits">Narrative Unit</ref> is created.</p>
             </item>
             <item>
                <p>The existing records inherited from the EAe index that do not
