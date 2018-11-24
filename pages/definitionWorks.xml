@@ -59,23 +59,24 @@ is not a work, it is a part of the work
                   ID and a derived ID in LIT1960Mashaf: the independent abstract work LIT1099Anapho (<ref type="BM" target="LIT1099Anapho">ʾAkkʷateta qʷǝrbān za-qǝddus
                   Hǝryāqos za-hagara Bǝhnǝsā</ref>) is what inside <ref type="BM" target="LIT1960Mashaf">Maṣḥafa qǝddāse</ref> is
                   identified with the <att>xml:id</att> <val>AnaphoraMary</val>.
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-  <div type="textpart" subtype="chapter" corresp="LIT1099Anapho" xml:id="AnaphoraMary">
-  <label>Anaphora of Mary</label>
-  </div>
-</egXML>
-The text is then identified as textual unit but also as part of the text where it is contained with reference to that. This corresponds to making a statament as
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-  <relation active="LIT1960Mashaf" name="saws:contains" passive="LIT1099Anapho"/>
-</egXML>
-You can then in a manuscript record decide what is more appropriate to point to, if it is better to point to the independent unit directly or if this is in a manuscript as part of another unit.
-See for example LIT1960Mashaf#AnaphoraMary in <ref type="BM" target="FSUor15">Frankfurt, Universitätsbibliothek Johann Christian Senckenberg, Frankfurt Ms. or. 15</ref>  and LIT1099Anapho in <ref type="BM" target="BAVet15">Vatican City, Biblioteca Apostolica Vaticana, Aeth. 15</ref>.
                 </p>
             </item>
             <item>
                <p>For these texts (both circulating as independent units and part of another unit), a <gi>div</gi> should also be created, with a
                   <att>corresp</att> giving the individual ID, in order to show the full content of a collection in
-                  correct order.</p>
+                  correct order.
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <div type="textpart" subtype="chapter" corresp="LIT1099Anapho" xml:id="AnaphoraMary">
+                    <label>Anaphora of Mary</label>
+                    </div>
+                  </egXML>
+                  The text is then identified as textual unit but also as part of the text where it is contained with reference to that. This corresponds to making a statament as
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <relation active="LIT1960Mashaf" name="saws:contains" passive="LIT1099Anapho"/>
+                  </egXML>
+                  You can then in a manuscript record decide what is more appropriate to point to, if it is better to point to the independent unit directly or if this is in a manuscript as part of another unit.
+                  See for example LIT1960Mashaf#AnaphoraMary in <ref type="BM" target="FSUor15">Frankfurt, Universitätsbibliothek Johann Christian Senckenberg, Frankfurt Ms. or. 15</ref>  and LIT1099Anapho in <ref type="BM" target="BAVet15">Vatican City, Biblioteca Apostolica Vaticana, Aeth. 15</ref>.
+                </p>
             </item>
             <item>
                <p>If a textpart has an individual circulation in traditions other than the Ethiopic,
