@@ -50,19 +50,20 @@ is not a work, it is a part of the work
          <list type="unordered">
             <item>
                <p>Texts provided with an independent circulation get an individual record with a first-level ID (such as LIT1931Mashaf), all
-    other are textparts. </p>
+    others are textparts. </p>
             </item>
             <item>
                <p>Texts which typically form part of other texts are equally assigned an
                   independent firs-level ID/record if they also have an independent circulation. For example, the
                   Anaphoras contained in LIT1960Mashaf (<ref type="BM" target="LIT1960Mashaf">Maṣḥafa qǝddāse</ref>) all have their independent
                   ID and a derived ID in LIT1960Mashaf: the independent abstract work LIT1099Anapho (<ref type="BM" target="LIT1099Anapho">ʾAkkʷateta qʷǝrbān za-qǝddus
-                  Hǝryāqos za-hagara Bǝhnǝsā</ref>) is what inside <ref type="BM" target="LIT1960Mashaf">Maṣḥafa qǝddāse</ref> is
-                  identified with the <att>xml:id</att> <val>AnaphoraMary</val>.
+                  Hǝryāqos za-hagara Bǝhnǝsā</ref>) is what  is
+                  identified with the <att>xml:id</att> <val>AnaphoraMary</val> inside <ref type="BM" target="LIT1960Mashaf">Maṣḥafa qǝddāse</ref>.
                 </p>
             </item>
             <item>
-               <p>For these texts (both circulating as independent units and part of another unit), a <gi>div</gi> should also be created, with a
+               <p>For these texts (both circulating as independent units and part of another unit), a <gi>div</gi> should also be created in the work record of the unit containing 
+                  them, with a
                   <att>corresp</att> giving the individual ID, in order to show the full content of a collection in
                   correct order.
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -70,11 +71,13 @@ is not a work, it is a part of the work
                     <label>Anaphora of Mary</label>
                     </div>
                   </egXML>
-                  The text is then identified as textual unit but also as part of the text where it is contained with reference to that. This corresponds to making a statament as
+                  The text is then identified as a textual unit but also as part of the text where it is contained with reference to its independent ID. 
+                  This corresponds to making a statement as
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                     <relation active="LIT1960Mashaf" name="saws:contains" passive="LIT1099Anapho"/>
                   </egXML>
-                  You can then in a manuscript record decide what is more appropriate to point to, if it is better to point to the independent unit directly or if this is in a manuscript as part of another unit.
+                  You can then decide in a manuscript record  what is more appropriate to point to, if it is better to point to the independent unit directly or if this is in a manuscript
+                  as part of another unit.
                   See for example LIT1960Mashaf#AnaphoraMary in <ref type="BM" target="FSUor15">Frankfurt, Universitätsbibliothek Johann Christian Senckenberg, Frankfurt Ms. or. 15</ref>  and LIT1099Anapho in <ref type="BM" target="BAVet15">Vatican City, Biblioteca Apostolica Vaticana, Aeth. 15</ref>.
                 </p>
             </item>
@@ -118,7 +121,7 @@ the version will have clearly defined relations with the others and the
 abstract Work.</p>
 
          <p>A further example: a text which is made of parts which can occur in
-different orders within different manuscripts. This will have 1 Work
+different order within different manuscripts. This will have 1 Work
 record, describing the ideal or majoritarian, or standard sequence,
 while each witness (Manuscript) will contain the specific order of the
 parts in it.</p>
