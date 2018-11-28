@@ -20,7 +20,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </fileDesc>       <revisionDesc>
 
         <change who="DR" when="2018-04-26">editing of the Work section of the guidelines</change>
-          <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+          <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+      </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="work-teiHeader">
@@ -112,7 +113,7 @@ work. If you come across records which use the author element, please
 correct them.</p>
 <p>You might need to express concept which need more than one
 relation. For example if Person A is author of a translation B of a
-work C in arabic, you will need a relation of authorship between A and
+work C in Arabic, you will need a relation of authorship between A and
 B (A isAuthorOf B) and the relation stating the fact that B is a
 translation of C (B isLooseTranslationOf C). If a digital edition of
 the translated work exists, please use that as a value in the
@@ -136,9 +137,12 @@ title in the language of the original.</p>
    <bibl type="KRZ"><ptr target="bm:KRZ"/><citedRange unit="item">123</citedRange></bibl>
 </listBibl>
 </egXML>
-<!--<p>containing IDs of the work pointing eventually to the title in
-titleStmt.</p> This is not entirely clear-->
-<p>You cannot have both <gi>p</gi> and <gi>listBibl</gi> in <gi>sourceDesc</gi>, so if you also need paragraphs, add another <gi>sourceDesc</gi>.</p>
+   <p>You cannot have both <gi>p</gi> and <gi>listBibl</gi> in <gi>sourceDesc</gi>, so if you also need paragraphs, add another <gi>sourceDesc</gi>.</p>
+   <p>Please use only the clavis IDs given in this example. If there is another clavis you would like to add to this list, please open an issue to discuss it. Other 
+      references to works in standardized lists, such as Chaîne's Répertoire or various publications listing the single Miracles of Mary can
+      be given as a bibliographic reference in <gi>listBibl</gi>, while references to external sources such as the Umwelttexte  
+    by Corpus Coranicum can be given in a <gi>relation</gi> between the record and the external reference in 
+   <gi>listRelation</gi>, see below.</p>
 </div>
 
 <div type="level2">
@@ -195,21 +199,26 @@ manuscripts used for the edition.</p>
 <gi>relation</gi>, even if the same relationship exists
 between this and more than one other entity.
 <att>name</att> contains the name of the relation.
-Allowed values for relations among works and authors are those in the
+<!--Allowed values for relations among works and authors are those in the
 <ref target="http://www.ancientwisdoms.ac.uk/media/ontology/doc/">SAWS
 Ontology</ref> and those used by syriaca.org. You can filter them out
-in oXygen typing syriaca: or saws: in the value list.</p>
+in oXygen typing syriaca: or saws: in the value list.--></p>
 <p>
-   <att>active</att> should contain the <att>xml:id</att> of the
-current item. <att>passive</att> should contain the IDs
-of the related works, people, places, separated by a space</p>
+   Usually, <att>active</att> should contain the <att>xml:id</att> of the
+current item. <att>passive</att> should contain the ID
+of the related work, person or place. In <gi>desc</gi>, the relation can be described with a sentence or two:</p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<listRelation>
-<relation name="syriaca:share-a-title" active="LIT1001Homili" passive="LIT1002title">
-<desc>It is always a nice idea to provide a description of this relations with a sentence or two.
-</desc>
-</relation>
-</listRelation>
+   <listRelation>
+   <relation name="saws:isAttributedToAuthor"
+      active="LIT1925Mashaf#t2arabic"
+      passive="PRS7509Nasralla">
+      <desc>It is not clear whether <persName ref="PRS7509Nasralla"/>, who is otherwise unknown, is the compiler or author.
+         <bibl>
+            <ptr target="bm:Pietruschka2005EAEFalasfa"/>
+         </bibl>
+      </desc>
+   </relation>
+   </listRelation>
 </egXML>
 <p>The relationship between a work and its subject is expressed in the
 person record:</p>
@@ -218,6 +227,37 @@ person record:</p>
 active="PRS4585Georgeo"
 passive="LIT1455GadlaG"/>
 </egXML>
+   
+   <p>External entries in databases or similar which concern a particular work can also be referenced in a <gi>relation</gi>. If, as in the case of the TUK IDs given by
+      Corpus Coranicum, the external entry refers only to a part of a work, it is preferable to add the <gi>relation</gi> in the exact <gi>div</gi> of this textpart in our 
+      edition, using <tag>relation name="skos:exactMatch"</tag>. If this is not possible, because we do not yet have the text of the work or because we 
+      follow different divisions than the other reference, <tag>relation name="skos:broadMatch"</tag> can be used at the most pertinent place of the record with the 
+      most precise pointer to our record possible in <att>passive</att>:</p>
+   <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <listRelation>
+      <relation name="skos:broadMatch" 
+         active="https://corpuscoranicum.de/kontexte/index/sure/6/vers/74/intertext/673"
+         passive="LIT1697Jubilees"/>
+      </listRelation>
+   </egXML>
+   <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <div type="textpart" subtype="chapter" n="47">
+         <ab>ወበውእቱ ፡ መዋዕል ፡ ዐርገት ፡ ጸሎተ ፡ ጻድቃን ፡ ወደመ ፡ ጻድቅ ፡ እምነ ፡ ምድር ፡ ቅድመ ፡ እግዚአ ፡ መናፍስት
+            ። በእሉ ፡ መዋዕል ፡ የኀብሩ ፡ ቅዱሳን ፡ እለ ፡ ይነብሩ ፡ መልዕልተ ፡ ሰማያት ፡ በ፩ቃል ፡ ወያስተበቊዑ ፡ ወይጼልዩ
+            ፡ ወይሴብሑ ፡ ወያአኲቱ ፡ ወይባርኩ ፡ ለስሙ ፡ ለእግዚአ ፡ መናፍስት ፡ በእንተ ፡ ደመ ፡ ጻድቃን ፡ ዘተክዕወ ፡
+            ወጸሎቶሙ ፡ ለጻድቃን ፡ ከመ ፡ ኢትፀራእ ፡ በቅድመ ፡ እግዚአ ፡ መናፍስት ፡ ከመ ፡ ይትገበር ፡ ሎሙ ፡ ኲነኔ ፡
+            ወትዕግሥት ፡ ኢይኩን ፡ ሎሙ ፡ ለዓለም ። ወበእማንቱ ፡ መዋዕል ፡ ርኢክዎ ፡ ለርእሰ ፡ መዋዕል ፡ ሶበ ፡ ነበረ ፡
+            በመንበረ ፡ ስብሐቲሁ ፡ ወመጻሕፍተ ፡ ሕያዋን ፡ በቅድሜሁ ፡ ተከሥቱ ፡ ወኲሉ ፡ ኀይሉ ፡ ዘመልዕልተ ፡ ሰማያት ፡ ወዐውደ
+            ፡ ዚአሁ ፡ ይቀውሙ ፡ ቅድሜሁ ። ወልቦሙ ፡ ለቅዱሳን ፡ ትመልእ ፡ ፍሥሐ ፡ እስመ ፡ በጽሐ ፡ ኊልቋ ፡ ለጽድቅ ፡
+            ወጸሎቶሙ ፡ ለጻድቃን ፡ ተሰምዐ ፡ ወደሙ ፡ ለጻድቅ ፡ በቅድመ ፡ እግዚአ ፡ መናፍስት ፡ ተፈቅደ ። </ab>
+         <listRelation><relation name="skos:broadMatch" 
+            active="https://corpuscoranicum.de/kontexte/index/sure/78/vers/38/intertext/913"
+            passive="urn:dts:betmas:LIT1340EnochE:2.47"/>
+            <relation name="skos:broadMatch" 
+               active="https://corpuscoranicum.de/kontexte/index/sure/10/vers/21/intertext/914"
+               passive="urn:dts:betmas:LIT1340EnochE:2.47"/></listRelation>
+      </div>
+   </egXML>
 </div>
 
 <div type="level2">
