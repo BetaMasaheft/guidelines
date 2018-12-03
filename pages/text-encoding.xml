@@ -20,6 +20,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </fileDesc>
       <revisionDesc>
         <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+         <change who="DR" when="2018-12-03">Added paragraph on locus indications of excerpts</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -44,7 +45,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 <div type="textpart" subtype="chapter" n="7" corresp="#ms_i3" xml:id="chapter7" xml:lang="gez">
     <ab>
-      <locus target="#103"/>
       <l n="1">በቀዳማዊ፡ ዐመተ፡ መንግሥቱ፡ ለበልጣሰር፡ ንጉሠ፡ ከለዴዎን፡ ሐለመ፡ ዳንኤል፡ ሕልመ፡ ወርእየ፡
         ርእሶ፡ በውስተ፡ ምስካቡ፡ ወጸሐፈ፡ ሕልሞ። </l>
       <l n="2">አነ፡ ዳንኤል፡ ሐለምኩ፡ ወርእኩ፡ አርባዕተ፡ ነፋሳተ፡
@@ -58,13 +58,40 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <p>Note that after each word there should be a separator or
     punctuation <hi rendition="simple:bold">without space</hi>.</p>
          <p>
-            <gi>locus</gi> can also be used but will be printed as
-    <cit><quote>(Excerpt from... )</quote></cit>
-
-    If the text contains biblical verses we will use
+            <gi>locus</gi> should not be used in <tag>div type="edition"</tag>. When transcribing the text of a manuscript in the manuscript record, the elements described below such as <gi>pb</gi> or <gi>cb</gi> should be used
+            as far as possible to state the location
+            of the text within the manuscript, whether the entire manuscript or parts of it are transcribed. Sometimes, the indications given by catalogues are too vague to allow for such precise encoding. 
+            In this case, the location of excerpts should be stated
+            in a <gi>note</gi> in the corresponding <gi>msItem</gi>, referring the excerpt with its <att>xml:id</att>, such as in the following example from <ref type="bm" target="BNFet117"/>:
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <msItem xml:id="ms_i1.3">
+                  <locus from="63rb" to="69vb"/>
+                  <title type="complete" ref="LIT1954Mashaf#Treatise3" xml:lang="gez">ቀዳሚ፡ ነገር፡ በእንተ፡ ምስጢረ፡ መለኮት።</title>
+                  <incipit xml:lang="gez">
+                     ኢሀሎ፡ አብ፡ ቅድመ፡ ወልድ። ወኢሀሎ፡ ወልድ፡
+                  </incipit>
+                  <note>This treatise contains the excerpt <ref target="#CommentaryHexameron"/> on  <locus target="#64v"/>.</note>
+               </msItem>
+            </egXML>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <div type="textpart"
+                  xml:lang="gez"
+                  corresp="#ms_i1.3"
+                  xml:id="CommentaryHexameron">
+                  <ab>
+                     ወእምድኅረ፡ ዝንቱ፡ ነገር፡ አውስአ፡ ብርሃናዊ፡ ወይቤሎ፡ ለአቡየ፡
+                     በኀይለ፡ ሚካኤል። ስማዕ፡ እንግርከ፡ በም<supplied reason="undefined" resp="PRS10747Zotenbe">ሥ</supplied>ጢር፡
+                     ፍካሬ፡ ፍጥረተ፡ ሰማይ፡ ወምድር።
+                  </ab>
+               </div>
+            </egXML>
+         </p>
+         
+         <p>
+    If the text contains biblical verses, we will use
     <gi>l</gi> as in the example above. Also
     <gi>lb</gi> can be used to mark linebreaks. Be
-    carefull: <gi>ab</gi> should be only in the lowest
+    careful: <gi>ab</gi> should be only in the lowest
     level div nesting!</p>
          <div type="level3">
             <head>Text Diplomatic Transcription features</head>
@@ -306,7 +333,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </row>
                   <row>
                      <cell>
-                        <p>undeciphrable words</p>
+                        <p>undecipherable words</p>
                      </cell>
                      <cell>
                            <gi>orig</gi>
@@ -408,7 +435,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </row>
                   <row>
                      <cell>
-                        <p>text supplied by copist in the
+                        <p>text supplied by copyist in the
             manuscript</p>
                      </cell>
                      <cell>
