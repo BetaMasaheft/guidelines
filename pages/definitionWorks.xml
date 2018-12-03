@@ -55,10 +55,10 @@ is not a work, it is a part of the work
             <item>
                <p>Texts which typically form part of other texts are equally assigned an
                   independent firs-level ID/record if they also have an independent circulation. For example, the
-                  Anaphoras contained in LIT1960Mashaf (<ref type="BM" target="LIT1960Mashaf">Maṣḥafa qǝddāse</ref>) all have their independent
-                  ID and a derived ID in LIT1960Mashaf: the independent abstract work LIT1099Anapho (<ref type="BM" target="LIT1099Anapho">ʾAkkʷateta qʷǝrbān za-qǝddus
+                  Anaphoras contained in LIT1960Mashaf (<ref type="bm" target="LIT1960Mashaf">Maṣḥafa qǝddāse</ref>) all have their independent
+                  ID and a derived ID in LIT1960Mashaf: the independent abstract work LIT1099Anapho (<ref type="bm" target="LIT1099Anapho">ʾAkkʷateta qʷǝrbān za-qǝddus
                   Hǝryāqos za-hagara Bǝhnǝsā</ref>) is what  is
-                  identified with the <att>xml:id</att> <val>AnaphoraMary</val> inside <ref type="BM" target="LIT1960Mashaf">Maṣḥafa qǝddāse</ref>.
+                  identified with the <att>xml:id</att> <val>AnaphoraMary</val> inside <ref type="bm" target="LIT1960Mashaf">Maṣḥafa qǝddāse</ref>.
                 </p>
             </item>
             <item>
@@ -78,7 +78,7 @@ is not a work, it is a part of the work
                   </egXML>
                   You can then decide in a manuscript record  what is more appropriate to point to, if it is better to point to the independent unit directly or if this is in a manuscript
                   as part of another unit.
-                  See for example LIT1960Mashaf#AnaphoraMary in <ref type="BM" target="FSUor15">Frankfurt, Universitätsbibliothek Johann Christian Senckenberg, Frankfurt Ms. or. 15</ref>  and LIT1099Anapho in <ref type="BM" target="BAVet15">Vatican City, Biblioteca Apostolica Vaticana, Aeth. 15</ref>.
+                  See for example LIT1960Mashaf#AnaphoraMary in <ref type="bm" target="FSUor15">Frankfurt, Universitätsbibliothek Johann Christian Senckenberg, Frankfurt Ms. or. 15</ref>  and LIT1099Anapho in <ref type="bm" target="BAVet15">Vatican City, Biblioteca Apostolica Vaticana, Aeth. 15</ref>.
                 </p>
             </item>
             <item>

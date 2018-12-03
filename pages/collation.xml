@@ -194,7 +194,7 @@ commented out as no example can be found, but there was an example and an implem
 <p>Sometimes the information provided in the source cannot be checked and is imprecise. There are cases then
 when we cannot give the dimension of a quire, although the schema requires it.
 This is a good place for a comment, because this is something which simply needs to be fixed in the description looking at the manuscript.
-See <ref target="BAVet43" type="BM">Vatican City, Biblioteca Apostolica Vaticana, Aeth. 43</ref> where the quires missing the information have been commented out.</p>
+See <ref target="BAVet43" type="bm">Vatican City, Biblioteca Apostolica Vaticana, Aeth. 43</ref> where the quires missing the information have been commented out.</p>
       </div>
     </body>
   </text>
