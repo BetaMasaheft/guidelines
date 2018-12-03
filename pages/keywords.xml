@@ -88,7 +88,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
            <p>You can also add a <att>ref</att> with a uri of one of the values in
            the EAGLE Vocabularies for <ref target="https://www.eagle-network.eu/voc/writing.html">type of inscription</ref>
             especially for inscriptions as
-           in the following example from <ref target="RIE180" type="BM"/>.</p>
+           in the following example from <ref target="RIE180" type="bm"/>.</p>
            <egXML xmlns="http://www.tei-c.org/ns/Examples">
              <keywords scheme="#ethioauthlist">
 <term key="Other" ref="https://www.eagle-network.eu/voc/typeins/lod/137" cert="low"/>

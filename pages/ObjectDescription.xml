@@ -50,7 +50,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             oXygen should prompt the values from the schema.</p>
             <p>You can also add a <att>ref</att> with a uri of one of the values in
             the EAGLE Vocabularies for <ref target="https://www.eagle-network.eu/voc/material.html">material</ref> and <ref target="https://www.eagle-network.eu/voc/objtyp.html">object type</ref> especially for inscriptions as
-            in the following example from <ref target="RIE246" type="BM"/>.</p>
+            in the following example from <ref target="RIE246" type="bm"/>.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
               <support>
               <material key="stone" ref="https://www.eagle-network.eu/voc/material/lod/138"/>

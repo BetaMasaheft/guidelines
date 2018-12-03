@@ -135,7 +135,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <p>You can also add a <tag>rs type='execution'</tag> with <att>ref</att> with a uri of one of the values in
 the EAGLE Vocabularies for <ref target="https://www.eagle-network.eu/voc/writing.html">execution technique</ref>
  especially for inscriptions as
-in the following example from <ref target="RIE246" type="BM"/>.</p>
+in the following example from <ref target="RIE246" type="bm"/>.</p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
   <layout>
   <rs type="execution" ref="https://www.eagle-network.eu/voc/writing/lod/21"/>

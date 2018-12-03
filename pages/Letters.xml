@@ -30,7 +30,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               as those which contain letters as part of the
               <ref target="manuscriptContents">main or secondary contents</ref>.
 
-<ref type="BM" target="IVEf921">Saint Petersburg, Institut Vostočnyh Rukopisej Rossijskoj Akademii Nauk, IV Ef.92.1</ref> is an example of such letter being recorded in the database.
+<ref type="bm" target="IVEf921">Saint Petersburg, Institut Vostočnyh Rukopisej Rossijskoj Akademii Nauk, IV Ef.92.1</ref> is an example of such letter being recorded in the database.
   Another case is a letter which is copied into a manuscript, which has no independent support, and is thus a secondary or main content according to the criteria to decide on that.
   In this case the criteria for contents apply,
   and you might or not want to create a work record.
