@@ -21,6 +21,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
         <change who="DR" when="2018-04-26">editing of the Work section of the guidelines</change>
           <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+         <change who="DR" when="2018-12-03">added paragraph on TUK IDs and relations with other databases</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -140,8 +141,8 @@ title in the language of the original.</p>
    <p>You cannot have both <gi>p</gi> and <gi>listBibl</gi> in <gi>sourceDesc</gi>, so if you also need paragraphs, add another <gi>sourceDesc</gi>.</p>
    <p>Please use only the clavis IDs given in this example. If there is another clavis you would like to add to this list, please open an issue to discuss it. Other 
       references to works in standardized lists, such as Chaîne's Répertoire or various publications listing the single Miracles of Mary can
-      be given as a bibliographic reference in <gi>listBibl</gi>, while references to external sources such as the Umwelttexte  
-    by Corpus Coranicum can be given in a <gi>relation</gi> between the record and the external reference in 
+      be given as a bibliographic reference in <gi>listBibl</gi>, while references to external sources such as the <ref target="https://corpuscoranicum.de/kontexte/uebersicht">Umwelttexte  
+    by Corpus Coranicum</ref>  can be given in a <gi>relation</gi> between the record and the external reference in 
    <gi>listRelation</gi>, see below.</p>
 </div>
 
@@ -232,7 +233,7 @@ passive="LIT1455GadlaG"/>
       Corpus Coranicum, the external entry refers only to a part of a work, it is preferable to add the <gi>relation</gi> in the exact <gi>div</gi> of this textpart in our 
       edition, using <tag>relation name="skos:exactMatch"</tag>. If this is not possible, because we do not yet have the text of the work or because we 
       follow different divisions than the other reference, <tag>relation name="skos:broadMatch"</tag> can be used at the most pertinent place of the record with the 
-      most precise pointer to our record possible in <att>passive</att>:</p>
+      most precise pointer to our record possible in <att>passive</att>, as for example in <ref type="bm" target="LIT1697Jubilees"/></p>
    <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <listRelation>
       <relation name="skos:broadMatch" 
@@ -240,6 +241,7 @@ passive="LIT1455GadlaG"/>
          passive="LIT1697Jubilees"/>
       </listRelation>
    </egXML>
+   <p>and in <ref type="bm" target="LIT1340EnochE"/>:</p>
    <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <div type="textpart" subtype="chapter" n="47">
          <ab>ወበውእቱ ፡ መዋዕል ፡ ዐርገት ፡ ጸሎተ ፡ ጻድቃን ፡ ወደመ ፡ ጻድቅ ፡ እምነ ፡ ምድር ፡ ቅድመ ፡ እግዚአ ፡ መናፍስት
