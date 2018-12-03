@@ -1,9 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -132,10 +129,10 @@ guidelines for
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
  <geo>14.308833 39.378683</geo>
 </egXML>
-            <p>For regions, areas, and all polygons, use geo[@rend='polygon']
+            <p>For regions, areas, and all polygons, use <tag>geo rend='polygon'</tag>
   using one line for each point. Please do not add spaces at the
-  beginning and end of the series. You can draw your polygon with (this
-  tool)[https://www.keene.edu/campus/maps/tool/] and copy paste directly
+  beginning and end of the series. You can draw your polygon with <ref target="https://www.keene.edu/campus/maps/tool/">this
+  tool</ref> and copy paste directly
   from there. Please take care to remove the commas.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 
@@ -204,13 +201,10 @@ guidelines for
   <ref target="LOC1261Adulis" type="bm">ʾAdulis</ref></p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <placeName xml:id="n4" xml:lang="la" type="alt" source="#FattovichMunro">Adulitae
-                     <note source="#Smith"><ref
-                        cRef="http://data.perseus.org/citations/urn:cts:greekLit:tlg0363.tlg007.perseus-grc1:4.7"
-                        >Ptolemy 4.7.8</ref></note><note source="#Epiphanius">
+                     <note source="#Smith"><ref cRef="http://data.perseus.org/citations/urn:cts:greekLit:tlg0363.tlg007.perseus-grc1:4.7">Ptolemy 4.7.8</ref></note><note source="#Epiphanius">
                      Epiphanius (listing nine kingdoms of the 'Indians', he refers to the Adulites
                      other then to the Aksumites)</note></placeName>
-               <placeName xml:id="n5" type="alt" source="#FattovichMunro">WDTT <note
-                     source="#FattovichMunro">The geographical lists of the Egyptian 18th
+               <placeName xml:id="n5" type="alt" source="#FattovichMunro">WDTT <note source="#FattovichMunro">The geographical lists of the Egyptian 18th
                      dynasty (<date when="-1450" precision="low">ca. 1450
                   B.C.</date>)</note></placeName>
 
@@ -238,9 +232,7 @@ Kingdom)</item>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <ab type="tabot">
    <measure quantity="4"/>
-   Tābots of <persName ref="PRS3249Cyriacus" type="tabot">Qirqos</persName>, <persName
-   ref="PRS9684Uriel" type="tabot">Urael</persName>, <persName ref="PRS6819Mary" type="tabot">Mary</persName>, <persName
-   ref="PRS10777Madhane" type="tabot">Madḫane ʿĀlam</persName>
+   Tābots of <persName ref="PRS3249Cyriacus" type="tabot">Qirqos</persName>, <persName ref="PRS9684Uriel" type="tabot">Urael</persName>, <persName ref="PRS6819Mary" type="tabot">Mary</persName>, <persName ref="PRS10777Madhane" type="tabot">Madḫane ʿĀlam</persName>
 </ab>
 </egXML>
             <p>If a tābot is dedicated to an inanimate entity, use a
