@@ -71,6 +71,127 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <p>You can always further specify this information within one
         of the <gi>decoNote</gi> elements within
         <gi>binding</gi>.</p>
-        </body>
+
+    <div type="level3">
+      <head>Boards</head>
+        <p>In the
+            <tag>decoNote type="Boards"</tag>
+            you can specify using keywords the wood type (if known) and
+            encode the presence of a textile inlay or of a mirror.
+        </p>
+    </div>
+
+    <div type="level3">
+      <head>Cover</head>
+       <p>In the
+             <tag>decoNote type="Cover"</tag>, using the keywords,
+             you can describe the the blind-tooling decoration
+             and record the presence of an additional leather patch.
+         </p>
+     </div>
+
+     <div type="level3">
+       <head>Sewing Stations</head>
+         <p>The
+             <tag>decoNote type="SewingStations"</tag>
+             requires to type a number, which has to be equal to the number
+             of sewing stations (not to the number of pairs of sewing stations).
+         </p>
+
+         <p>A further description of the sewing is possible
+             within a general <gi>decoNote</gi> with a progressive
+             <att>xml:id</att>. Here, if identified, you can specify with keywords the sewing pattern,
+             following Bozzacchi's classification <ref target="https://www.zotero.org/groups/358366/ethiostudies/items/itemKey/2968T6TC/q/bozzacchi"></ref>
+             and the origin of sewing thread.
+         </p>
+     </div>
+     <div type="level3">
+       <head>Endbands</head>
+         <p>Inside the
+             <tag>decoNote type="Endbands"</tag>
+             you can use the attribute <att>color</att>
+             and keywords in order to specify
+             the endband type.
+         </p>
+     </div>
+     <div type="level3">
+       <head>Endleaves</head>
+         <p>Inside the
+             <tag>decoNote type="Endleaves"</tag>
+             you can add the attribute <att>pastedown</att>
+             and choose up to three values prompted by the schema
+             in order to describe the position of the pastedown (if present).
+         </p>
+     </div>
+
+     <div type="level3">
+       <head>Spine</head>
+        <p>Special caratheristics of the spine can be recorded in the
+        <tag>decoNote type="Spine"</tag>
+        like, for example, a series of
+        holes related to the presence of tackets.
+        </p>
+      </div>
+
+      <div type="level3">
+        <head>Fastening</head>
+         <p>You can describe fastenings or the remaining
+            traces of them in the <tag>decoNote type="Fastenings"</tag>
+         </p>
+     </div>
+
+     <div type="level3">
+       <head>Leather case (māḥdar)</head>
+       <p>Inside the
+           <tag>decoNote type="SlipCase"</tag>
+           you can record and describe the leather case (māḥdar) where the codex is kept.
+       </p>
+     </div>
+
+
+     <div type="level3">
+       <head>Other</head>
+         <p>Inside the
+             <tag>decoNote type="Other"</tag>
+             is possible to use keywords to record other features.</p>
+
+             <list>
+             <item>
+               <p>You can record the presence of parchment <val>guard</val>s, their position
+               and the technique of attachment.
+              </p>
+             </item>
+             <item>
+               <p>It is possible to describe bookmarks using <val>leafStringMark</val> or <val>LeafTabMark</val> keywords.</p>
+
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+             <bindingDesc>
+                 <decoNote xml:id="b5" type="Other">
+                 <term key="leafStringMark"/>
+                 inserted in the the upper text prick of ff. 10, 20, ...
+                 </decoNote>
+             </bindingDesc>
+         </egXML>
+         <p>The leaf string marker is a bookmark made of one or several twisted threads, coloured or uncoloured, through a the leaf.
+         Examples:
+         image 1: leaf string marker inserted in the upper corner (MKMG 006)
+         image 2: leaf string marker inserted in the upper text prick (SSB-003)
+         image 3: leaf string marker inserted in the outer margin (MAKM-086b
+         </p>
+
+         <p>The leaf tab marker is a bookmark made of a small piece of textile inserted in the margin of a leaf.
+         Example:
+
+         <figure>
+           <graphic xml:id="g1" url="http://betamasaheft.eu/iiif/KY/013/KY-013_022.tif/info.json">
+             <desc>A leaf tab marker inserted in the outer margin</desc>
+           </graphic>
+         </figure>
+         </p>
+         </item>
+         </list>
+    </div>
+  
+</body>
     </text>
 </TEI>
