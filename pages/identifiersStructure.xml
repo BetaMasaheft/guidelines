@@ -24,7 +24,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </teiHeader>
     <text>
         <body xml:id="identifiersStructure">
-            <div type="level4">
+            <div type="level2">
                 <head>Manuscript identifiers and more than one identifier for a manuscript or a part of
                     manuscript</head>
                 <p>Facilitating the finding of manuscripts is a priority, and therefore it is crucial for all known identifiers to be added to <gi>msIdentifier</gi>. Widespread variants of identifiers - such as Arabic 
@@ -48,8 +48,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </egXML>
             </div>
             
-            <div type="level4">
-    <head>Identifiers eithin the manuscript record</head>
+            <div type="level2">
+    <head>Identifiers within the manuscript record</head>
     <p>Each <gi>msPart</gi>,
         <gi>msItem</gi> and <gi>msFrag</gi>
         should have an <att>xml:id</att> with a letter

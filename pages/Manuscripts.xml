@@ -17,17 +17,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+         <change who="DR" when="2018-12-07">Updated issue link, added link to TEI guidelines</change></revisionDesc>
   </teiHeader>
   <text>
       <body xml:id="manuscripts">
-          <p>To create a minimal record for referencing
+          <p>Any manuscripts referenced in our records should have at least a minimal record. To create such a minimal record for referencing
              use the form to <ref target="newEntry">create new items</ref> in the Beta maṣāḥǝft website.</p>
          <div type="level2">
-            <head>Manuscript Structure</head>
-         <p>Reading of
-    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mspt">TEI
-    guidelines</ref> is highly recommended. It also says <cit><quote>Since each
+            <head>Manuscript Structure: Use of <gi>msDesc</gi>, <gi>msPart</gi> and <gi>msFrag</gi></head>
+         <p>Reading of the
+            <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html">TEI
+    guidelines for manuscript description</ref> is highly recommended.
+            Regarding the structure of simple and composite manuscripts, they also state in <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mspt">Manuscript Parts</ref> 
+            <cit><quote>Since each
     component of such a composite manuscript will in all likelihood have
     its own content, physical description, history, and so on, the
     structure of msPart is in the main identical to that of msDesc,
@@ -37,11 +40,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <p>This means that for manuscripts made of only one part we will use
     only <gi>msDesc</gi>, but in any case where a
     structure in codicological units occurs we will use
-    <gi>msPart</gi>. <gi>msPart</gi> can contain other <gi>msPart</gi>.
+    <gi>msPart</gi>. <gi>msPart</gi> can contain other <gi>msPart</gi>s.
     <gi>msFrag</gi> can be used when there are at least two parts of one
             manuscript kept in different repositories and in our schema this is allowed also beside <gi>msPart</gi> for special cases like <ref target="BNFet45" type="bm">BNFet45</ref>.</p>
          <p>As for
-    <ref target="https://github.com/BetaMasaheft/ScAthiop/issues/368">issue
+            <ref target="https://github.com/BetaMasaheft/Documentation/issues/368">issue
     368</ref> we have decided to use <gi>msFrag</gi> and <gi>msPart</gi> as follows in
     cases where leaves or quires have been moved. The Ms containing
     currently the unit, will have a <gi>msPart</gi> with it, with an appropriate
@@ -49,6 +52,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     The Ms which has lost a unit will instead have a <gi>msFrag</gi> pointing to
     the Ms where the unit is now. Please, do not confuse this with cases
     where leaves or quires are lost.</p>
+         </div>
+         
+         <div type="level2">
+            <head>Manuscript Encoding: Overview</head>
             <list>
                <item><ref target="structure">General structure of the Manuscript record</ref></item>
                <item><ref target="identifiersStructure">Structure of the Identifiers in a Manuscript record</ref></item>
