@@ -22,12 +22,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <text>
         <body xml:id="manuscriptDescription">
             
+            <div type="level2">
             <head>Into msPart</head>
             <p>There should be a <gi>msIdentifier</gi> for the
-      manuscript as a whole, with a
-      <gi>repository</gi>. If this contains
-      <gi>msPart</gi>s then each of these only needs to
-      contain <gi>msIdentifier</gi> with an
+      manuscript as a whole with a
+      <gi>repository</gi>. If the manuscript contains
+      <gi>msPart</gi>s, then each of these only needs to
+      contain an <gi>msIdentifier</gi> with an
       <gi>idno</gi>
             </p>
             
@@ -35,15 +36,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       the events which affected the history of the manuscript can be
       added in  <gi>history</gi> 
       while additional informations about the manuscript (e.g.
-      <gi>surrogates</gi>, further bibliography, etc.) have a specific element
-      for them:
-                  <gi>additional</gi>
-               .</p>
+      <gi>surrogates</gi>, further bibliography, etc.) should be included in
+                  <gi>additional</gi>.</p>
             
             <list>
                 <item><ref target="manuscriptContents">Manuscript Contents</ref></item>
                 <item><ref target="manuscriptPhysDescription">Manuscript Physical Description</ref></item>
             </list>
+            </div>
             
             <div type="level2">
                 <head>Other information from the catalogues</head>
