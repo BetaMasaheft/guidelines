@@ -179,8 +179,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          image 3: leaf string marker inserted in the outer margin (MAKM-086b
          </p>
 
-         <p>The leaf tab marker is a bookmark made of a small piece of textile inserted in the margin of a leaf.
-         Example:
+         <p>The leaf tab marker is a bookmark made of a small piece of textile inserted in the margin of a leaf as shown in <ref type="figure" target="#g1"/>
 
          <figure>
            <graphic xml:id="g1" url="http://betamasaheft.eu/iiif/KY/013/KY-013_022.tif/info.json">
@@ -191,7 +190,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </item>
          </list>
     </div>
-  
+
 </body>
     </text>
 </TEI>
