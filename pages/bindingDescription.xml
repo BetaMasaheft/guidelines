@@ -172,12 +172,28 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                  </decoNote>
              </bindingDesc>
          </egXML>
-         <p>The leaf string marker is a bookmark made of one or several twisted threads, coloured or uncoloured, through a the leaf.
-         Examples:
-         image 1: leaf string marker inserted in the upper corner (MKMG 006)
-         image 2: leaf string marker inserted in the upper text prick (SSB-003)
-         image 3: leaf string marker inserted in the outer margin (MAKM-086b
-         </p>
+         <p>The leaf string marker is a bookmark made of one or several twisted threads, coloured or uncoloured, sewed through a the leaf.
+           It can be found in different positions as shown in the following examples.</p>
+         <list>
+         <item>
+           <p>A leaf string marker inserted in the upper corner (MKMG 006)</p>
+         <figure>
+           <graphic xml:id="g2" url="http://betamasaheft.eu/iiif/MKMG/006/MKMG-006_055.tif/info.json">
+           </graphic>
+         </figure>
+         </item>
+         <item>
+         <p>A leaf string marker inserted in the upper text prick (SSB-003)</p>
+         <figure>
+           <graphic xml:id="g3" url="http://betamasaheft.eu/iiif/SSB/003/SSB-003_098.tif/info.json">
+           </graphic>
+         </figure>
+         </item>
+         <!--<item>
+           <p>image 3: leaf string marker inserted in the outer margin (MAKM-086b) </p>
+         </item>-->
+
+         </list>
 
          <p>The leaf tab marker is a bookmark made of a small piece of textile inserted in the margin of a leaf as shown in <ref type="figure" target="#g1"/>
 
