@@ -185,7 +185,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <item>
          <p>A leaf string marker inserted in the upper text prick (SSB-003)</p>
          <figure>
-           <graphic xml:id="g3" url="http://betamasaheft.eu/iiif/SSB/003/SSB-003_098.tif/info.json">
+           <graphic xml:id="g3" url="http://betamasaheft.eu/iiif/SSB/003/SSB-003_096.tif/info.json">
            </graphic>
          </figure>
          </item>
