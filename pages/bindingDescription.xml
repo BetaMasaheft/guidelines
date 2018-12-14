@@ -72,6 +72,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         of the <gi>decoNote</gi> elements within
         <gi>binding</gi>.</p>
 
+<div type="level2">
+  <p>Here are some examples of how to use typed decoNote elements to provide specific information</p>
     <div type="level3">
       <head>Boards</head>
         <p>In the
@@ -84,7 +86,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <div type="level3">
       <head>Cover</head>
        <p>In the
-             <tag>decoNote type="Cover"</tag>, using the keywords,
+             <tag>decoNote type="Cover"</tag>, using the <ref target="keywordsIntro">keywords</ref>,
              you can describe the the blind-tooling decoration
              and record the presence of an additional leather patch.
          </p>
@@ -96,11 +98,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
              <tag>decoNote type="SewingStations"</tag>
              requires to type a number, which has to be equal to the number
              of sewing stations (not to the number of pairs of sewing stations).
+             See for example <ref type="BM" target="SHOr405">Hamburg, State and University Library Hamburg Carl von Ossietzky, Cod. Orient. 405</ref>:
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+<decoNote xml:id="b6" type="SewingStations">4</decoNote>
+</egXML>
          </p>
 
          <p>A further description of the sewing is possible
-             within a general <gi>decoNote</gi> with a progressive
-             <att>xml:id</att>. Here, if identified, you can specify with keywords the sewing pattern,
+             within a general <gi>decoNote</gi>. Here, if identified, you can specify with keywords the sewing pattern,
              following Bozzacchi's classification <ref target="https://www.zotero.org/groups/358366/ethiostudies/items/itemKey/2968T6TC/q/bozzacchi"></ref>
              and the origin of sewing thread.
          </p>
@@ -112,6 +117,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
              you can use the attribute <att>color</att>
              and keywords in order to specify
              the endband type.
+             See for example <ref type="BM" target="SHOr404">Hamburg, State and University Library Hamburg Carl von Ossietzky, Cod. Orient. 404</ref>:
+             <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <decoNote xml:id="b5" type="Endbands" color="red white">
+  Narrow
+  <term key="slitBraid">slit-braid</term>
+  endbands and are sewn to the text block using a thread of animal origin. The headband is sewn starting from the upper board while the tailband is sewn starting from the lower board.
+  </decoNote>
+</egXML>
          </p>
      </div>
      <div type="level3">
@@ -121,6 +134,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
              you can add the attribute <att>pastedown</att>
              and choose up to three values prompted by the schema
              in order to describe the position of the pastedown (if present).
+            See for example <ref type="BM" target="SHOr405">Hamburg, State and University Library Hamburg Carl von Ossietzky, Cod. Orient. 405</ref>:
+             <egXML xmlns="http://www.tei-c.org/ns/Examples">
+             <decoNote xml:id="b11" type="EndLeaves" pastedown="L OTI">
+The inner surface of the front board is covered with paper. Traces of paper are found also on the external surface.
+</decoNote>
+</egXML>
+
          </p>
      </div>
 
@@ -153,7 +173,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
        <head>Other</head>
          <p>Inside the
              <tag>decoNote type="Other"</tag>
-             is possible to use keywords to record other features.</p>
+             is possible to use <ref target="keywordsIntro">keywords</ref> from the specific
+             sections of the <ref target="taxonomy">taxonomy</ref> to record other features.</p>
 
              <list>
              <item>
@@ -206,7 +227,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </item>
          </list>
     </div>
-
+</div>
 </body>
     </text>
 </TEI>
