@@ -35,10 +35,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <p>እግዚአብሔር፡ | ʾƎgziʾabǝḥer (not ʾƎgziʾabḥer)</p>
             </item>
             <item>
+               <p>ኤልያስ፡ | ʾElyās (not ʾElǝyās)</p>
+            </item>
+            <item>
                <p>አምኃ፡ | ʾammǝḫā (not ʾamḫā)</p>
             </item>
             <item>
-               <p>እሙንቱ፡ | ʾǝmuntu (not ʾǝmuntu)</p>
+               <p>እሙንቱ፡ | ʾǝmuntu (not ʾǝmmuntu)</p>
             </item>
             <item>
                <p>እንድርያስ፡ | ʾƎndrǝyās (three consonants are accepted since the
@@ -48,11 +51,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <p>በእንተ፡ | baʾǝnta (not ba-ʾǝnta)</p>
             </item>
             <item>
+               <p>ብእሲ፡ | bǝʾsi (not bǝʾǝsi)</p>
+            </item>
+            <item>
                <p>ባሕቱ፡ | bāḥǝttu (not bāḥtu)</p>
             </item>
             <item>
                <p>ግዕዝ፡ | gǝʿz (not gǝʿǝz) [but this needs further
-        discussion]</p>
+        discussion, for now gǝʿǝz is used for the sake of homogeneity]</p>
             </item>
             <item>
                <p>ላዕለ፡ | lāʿla (not lāʿǝla)</p>
