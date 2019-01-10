@@ -73,7 +73,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </list>
          <p>The manuscript ID should be composed of: 
             <list type="unordered">
-               <item><p>The abbreviation of the repository holding the manuscript, as it is contained in the institution ID, written in capitals</p> </item>
+               <item><p>The abbreviation of the repository holding the manuscript, as it is contained in the repository ID, written in capitals</p> </item>
             <item><p>The abbreviation of the collection to which the manuscript belongs</p> </item>
             <item><p>a numeral: BAVet1</p></item>
             </list>

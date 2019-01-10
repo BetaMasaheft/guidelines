@@ -34,7 +34,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 </egXML>
          </p>
          <p>Before creating new entities for PLACES like Stuttgart, Paris,
-    London, etc. which unlike all institutions are very much unlikely to
+    London, etc. which unlike all repositories are very much unlikely to
     receive specific descriptions by this project, use external links to
     Wikidata IDs as follows.</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">

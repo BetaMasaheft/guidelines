@@ -27,7 +27,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <head>repository</head>
             <p>
                <gi>repository</gi> takes a
-               <att>ref</att> as well, pointing to the institution id,
+               <att>ref</att> as well, pointing to the repository ID,
                which will contain further place pointers.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <repository ref="INS0030Addaqaharsi"/>
