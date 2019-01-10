@@ -108,7 +108,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <p>A further description of the sewing is possible
              within a general <gi>decoNote</gi>. Here, if identified, you can specify with keywords the origin of sewing thread and the sewing pattern,
              following Bozzacchi's classification <ref target="https://www.zotero.org/groups/358366/ethiostudies/items/itemKey/2968T6TC/q/bozzacchi"></ref>.
-
+             Sewing stations are numbered starting from the head (first sewing station, second sewing station, third sewing station, etc.).
          </p>
      </div>
      <div type="level3">
