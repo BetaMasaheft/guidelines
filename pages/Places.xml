@@ -16,7 +16,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          </sourceDesc>
       </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
          <change who="DR" when="2018-05-22">Edited and updated examples</change>
-         <change who="DR" when="2019-01-10">Corrected link to repositories, updated Wagarā example</change></revisionDesc>
+         <change who="DR" when="2019-01-10">Corrected link to repositories, updated Wagarā example, removed outdated sentence</change></revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="places">
@@ -170,9 +170,7 @@ guidelines for
   <gi>settlement</gi>. Add one settlement for each set of
   information, but only one if there is only one set. Please do not
   remove text if it is there, simply mark it up as in the following
-  example. If you are adding info and you want to do it more quickly you
-  can also enter only empty <gi>placeName</gi>s with
-  <att>corresp</att> and <att>type</att>.</p>
+  example.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <settlement type="province" ref="LOC5932Tegray"/>
                <settlement when="2009-11-16" ref="LOC1564ASbiW" type="warada"/>
