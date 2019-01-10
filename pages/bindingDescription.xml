@@ -20,6 +20,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
           <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
           <change who="PL" when="2018-04-24">stub of page</change>
+          <change who="EDS" when="2019-01-08">content added</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -87,9 +88,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <head>Cover</head>
        <p>In the
              <tag>decoNote type="Cover"</tag>, using the <ref target="keywordsIntro">keywords</ref>,
-             you can describe the the blind-tooling decoration
-             and record the presence of an additional leather patch.
-         </p>
+             you can record the presence of an additional leather patch and describe the the blind-tooling decoration.
+             It is useful to specify where the decoration is found (boards, edges, turn-ins, spine).
+      </p>
      </div>
 
      <div type="level3">
@@ -105,9 +106,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </p>
 
          <p>A further description of the sewing is possible
-             within a general <gi>decoNote</gi>. Here, if identified, you can specify with keywords the sewing pattern,
-             following Bozzacchi's classification <ref target="https://www.zotero.org/groups/358366/ethiostudies/items/itemKey/2968T6TC/q/bozzacchi"></ref>
-             and the origin of sewing thread.
+             within a general <gi>decoNote</gi>. Here, if identified, you can specify with keywords the origin of sewing thread and the sewing pattern,
+             following Bozzacchi's classification <ref target="https://www.zotero.org/groups/358366/ethiostudies/items/itemKey/2968T6TC/q/bozzacchi"></ref>.
+
          </p>
      </div>
      <div type="level3">
@@ -129,7 +130,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      </div>
      <div type="level3">
        <head>Endleaves</head>
-         <p>Inside the
+         <p>Endleaves are leaves intended to protect the text leaves. Therefore they are placed at the beginning and/or at the end of the text. Endleaves can be extra leaves added by the binder during the sewing or they can be leaves belonging to the first or last quire, left blank by the scribe in order to protect the text. Later, endleaves can be filled with notes, additional texts, ecc.
+If an endleaf is pasted to the inside of a board it's called pastedown and it is important to record its position in relation with the turn-ins.
+Inside the <tag>decoNote type="Endleaves"</tag> you can add the attribute <att>pastedown</att>
+and choose up to three values prompted by the schema in order to describe the position of the pastedown. Inside the
              <tag>decoNote type="Endleaves"</tag>
              you can add the attribute <att>pastedown</att>
              and choose up to three values prompted by the schema
@@ -176,13 +180,12 @@ The inner surface of the front board is covered with paper. Traces of paper are 
              is possible to use <ref target="keywordsIntro">keywords</ref> from the specific
              sections of the <ref target="taxonomy">taxonomy</ref> to record other features.</p>
 
-             <list>
-             <item>
+
                <p>You can record the presence of parchment <val>guard</val>s, their position
                and the technique of attachment.
               </p>
-             </item>
-             <item>
+
+
                <p>It is possible to describe bookmarks using <val>leafStringMark</val> or <val>LeafTabMark</val> keywords.</p>
 
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -194,7 +197,8 @@ The inner surface of the front board is covered with paper. Traces of paper are 
              </bindingDesc>
          </egXML>
          <p>The leaf string marker is a bookmark made of one or several twisted threads, coloured or uncoloured, sewed through a the leaf.
-           It can be found in different positions as shown in the following examples (<ref type="figure" target="#g2"/> and <ref type="figure" target="#g3"/></p>)
+           It can be found in different positions as shown in the following examples (<ref type="figure" target="#g2"/> and <ref type="figure" target="#g3"/>)</p>
+
          <list>
          <item>
            <p>A leaf string marker inserted in the upper corner</p>
@@ -224,8 +228,8 @@ The inner surface of the front board is covered with paper. Traces of paper are 
            </graphic>
          </figure>
          </p>
-         </item>
-         </list>
+
+
     </div>
 </div>
 </body>
