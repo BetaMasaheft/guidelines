@@ -18,16 +18,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
       </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change> 
-         <change who="DR" when="2018-05-15">Edited and updated example</change> </revisionDesc>
+         <change who="DR" when="2018-05-15">Edited and updated example</change> 
+         <change who="DR" when="2019-01-10">Clarification</change> </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="institution">
 
          <div type="level1">
             <head>Specific encoding for repositories/institutions</head>
-            <p>For repositories where manuscripts are preserved all general guidelines and especially those for <ref target="places">places</ref> are valid, and some additional
-  information is required. Please, note in the example below the
-  <att>subtype</att> with <val>institution</val>.</p>
+            <p>For repositories where manuscripts are preserved all general guidelines and especially those for <ref target="places">places</ref> are valid. 
+               All repository records should have a <att>subtype</att> with <val>institution</val>.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <listPlace>
                   <place type="church dabr" subtype="institution">
