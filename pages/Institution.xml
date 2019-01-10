@@ -26,8 +26,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
          <div type="level1">
             <head>Specific encoding for repositories/institutions</head>
-            <p>For repositories where manuscripts are preserved all general guidelines and especially those for <ref target="places">places</ref> are valid. <!--, and some additional
-  information is required. What information exactly? DR 2019-01-10-->
+            <p>For repositories where manuscripts are preserved all general guidelines and especially those for <ref target="places">places</ref> are valid. 
                All repository records should have a <att>subtype</att> with <val>institution</val>.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <listPlace>
