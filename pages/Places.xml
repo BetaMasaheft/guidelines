@@ -15,7 +15,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
       </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
-         <change who="DR" when="2018-05-22">Edited and updated examples</change></revisionDesc>
+         <change who="DR" when="2018-05-22">Edited and updated examples</change>
+         <change who="DR" when="2019-01-10">Corrected link to repositories, updated Wagarā example</change></revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="places">
@@ -24,16 +25,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
   <item><ref target="https://pleiades.stoa.org/help/conceptual-overview">Pleiades Conceptual Overview</ref></item>
 <item><ref target="http://commons.pelagios.org/2017/08/report-ancient-places-in-the-chronicle-of-king-galawdewos/">an overview of our current work can be found here</ref></item>
 </list></p>
+         
+         <p>The information contained in this page is valid both for the encoding of place and repository records, see also <ref target="placeOrInstitution">Place or Repository</ref>.</p>
 
          <p>This example record contains information about a single place, at
 whatever granularity. It is thus important to state relationships with
 other places and typologies when possible , using <gi>relation</gi> and <att>sameAs</att>.</p>
        
-         <p>Place records can be expanded with much more information, following TEI
+         <p>Place records can be expanded with much more information, following the TEI
 guidelines for
 <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/de/html/ref-place.html">
-               place
-            </ref>
+              the element place</ref>.
          </p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <text>
@@ -88,7 +90,7 @@ guidelines for
          <div type="level2">
             <head>New records</head>
             <p>Before creating new entities for PLACES like Stuttgart, Paris,
-  London, etc. which unlike all <ref target="institutions">repositories</ref> are very much unlikely to
+  London, etc. which unlike all <ref target="institution">repositories</ref> are very much unlikely to
   receive specific descriptions by this project, use external links to
   Wikidata IDs as follows.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -107,9 +109,9 @@ guidelines for
   the authority file. Prefer Wikidata if an item is present, otherwise
   use geonames.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<place type="region" sameAs="Q2894614">
-               <placeName>Wägära</placeName>
-               <placeName type="alt">Wäggära</placeName>
+               <place type="region" sameAs="Q2894614">
+                  <placeName xml:lang="gez" xml:id="n1">ወገራ፡</placeName>
+                  <placeName xml:lang="gez" corresp="#n1" type="normalized">Wagarā</placeName>
             </place>
 </egXML>
             <p>GN ID number should use a prefix "gn:".</p>
