@@ -87,9 +87,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <div type="level3">
       <head>Cover</head>
        <p>In the
-             <tag>decoNote type="Cover"</tag>, using the <ref target="keywordsIntro">keywords</ref>,
+             <tag>decoNote type="Cover"</tag> you can describe the covering of the binding.
+             <!--If it covers only the spine and the back edge of the boards use the <att>key</att> quarterCover to encode it.-->
+             The attribute <att>color</att> is available
+             and using <ref target="keywordsIntro">keywords</ref>,
              you can record the presence of an additional leather patch and describe the the blind-tooling decoration.
              It is useful to specify where the decoration is found (boards, edges, turn-ins, spine).
+             <!--Additional keywords are available to describe the aspect of the turn-ins.-->
       </p>
      </div>
 
@@ -130,21 +134,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
      </div>
      <div type="level3">
        <head>Endleaves</head>
-         <p>Endleaves are leaves intended to protect the text leaves. Therefore they are placed at the beginning and/or at the end of the text. Endleaves can be extra leaves added by the binder during the sewing or they can be leaves belonging to the first or last quire, left blank by the scribe in order to protect the text. Later, endleaves can be filled with notes, additional texts, ecc.
-If an endleaf is pasted to the inside of a board it's called pastedown and it is important to record its position in relation with the turn-ins.
-Inside the <tag>decoNote type="Endleaves"</tag> you can add the attribute <att>pastedown</att>
-and choose up to three values prompted by the schema in order to describe the position of the pastedown. Inside the
-             <tag>decoNote type="Endleaves"</tag>
-             you can add the attribute <att>pastedown</att>
-             and choose up to three values prompted by the schema
-             in order to describe the position of the pastedown (if present).
-            See for example <ref type="BM" target="SHOr405">Hamburg, State and University Library Hamburg Carl von Ossietzky, Cod. Orient. 405</ref>:
-             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-             <decoNote xml:id="b11" type="EndLeaves" pastedown="L OTI">
-The inner surface of the front board is covered with paper. Traces of paper are found also on the external surface.
-</decoNote>
-</egXML>
-
+         <p>Endleaves are leaves intended to protect the text leaves. Therefore they are placed at the beginning and/or at the end of the text. Endleaves are left blank but later they can be used for marginal writings.
+           If an endleaf is pasted to the inside of a board it's called pastedown and it is important to record its position in relation with the turn-ins.
+           Inside the <tag>decoNote type="Endleaves"</tag> you can add the attribute <att>pastedown</att>
+           and choose up to three values prompted by the schema in order to describe the position of the pastedown.
+           See for example <ref type="BM" target="SHOr405">Hamburg, State and University Library Hamburg Carl von Ossietzky, Cod. Orient. 405</ref>:
+           <egXML xmlns="http://www.tei-c.org/ns/Examples">
+           <decoNote xml:id="b11" type="EndLeaves" pastedown="L OTI">
+           The inner surface of the front board is covered with paper. Traces of paper are found also on the external surface.
+           </decoNote>
+           </egXML>
          </p>
      </div>
 
