@@ -17,16 +17,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change> 
-         <change who="DR" when="2018-05-15">Edited and updated example</change> 
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+         <change who="DR" when="2018-05-15">Edited and updated example</change>
          <change who="DR" when="2019-01-10">Clarification</change> </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="institution">
 
          <div type="level1">
-            <head>Specific encoding for repositories/institutions</head>
-            <p>For repositories where manuscripts are preserved all general guidelines and especially those for <ref target="places">places</ref> are valid. 
+            <head>Specific encoding for repositories</head>
+            <p>For repositories where manuscripts are preserved all general guidelines and especially those for <ref target="places">places</ref> are valid.
                All repository records should have a <att>subtype</att> with <val>institution</val>.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <listPlace>
@@ -37,9 +37,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <placeName type="normalized" corresp="#n2">ʿAddaqāḥarsi Makāna Hǝywat Ṗarāqliṭos</placeName>
                      <country ref="LOC3010Ethiop"/>
                      <region notBefore="1991" type="RegionalState" ref="LOC5932Tegray"/>
-                     <settlement ref="LOC3640GuloMa" type="warada" when="2010-05-03"/> 
-                     <settlement when="2010-05-03" ref="LOC6517Kesad" type="tabiya"/> 
-                     <settlement when="2010-05-03" ref="LOC6518BetaP" type="qushat"/> 
+                     <settlement ref="LOC3640GuloMa" type="warada" when="2010-05-03"/>
+                     <settlement when="2010-05-03" ref="LOC6517Kesad" type="tabiya"/>
+                     <settlement when="2010-05-03" ref="LOC6518BetaP" type="qushat"/>
                      <location>
                         <geo>14.308833 39.378683</geo>
                         <height unit="m">2437.0</height>
@@ -47,13 +47,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <note>
                         <date type="foundation" notBefore="1400" notAfter="1500">1400-1500</date>
                         <desc type="foundation">Existed aready in the pre-Christian time as the religious site of South Arabian migrants; the church was founded in a later period.</desc>
-                        <ab type="history">Dabr. A new large church is under construction outside of the compound of the old church, both standing on the rock outcrop 
+                        <ab type="history">Dabr. A new large church is under construction outside of the compound of the old church, both standing on the rock outcrop
                            (below is the river of <placeName type="river" ref="LOC6519Wafadabbo">Wafadabbo</placeName>).
                         </ab>
                         <ab type="tabot">
                            <measure quantity="8"/>
-                           Tābots (8): <persName ref="PRS5684JesusCh" type="tabot">Jesus</persName>, <persName ref="PRS10775Trinity" type="tabot">Trinity</persName>, <persName ref="PRS6819Mary" type="tabot">Mary</persName>, unidentified marble, 
-                           <persName ref="PRS4377Gabriel" type="tabot">Gabriel</persName>, <persName ref="PRS10776Kidan" type="tabot">Kidāna Mǝḥrat</persName>, <persName ref="PRS7049Michael" type="tabot">Michael</persName>, 
+                           Tābots (8): <persName ref="PRS5684JesusCh" type="tabot">Jesus</persName>, <persName ref="PRS10775Trinity" type="tabot">Trinity</persName>, <persName ref="PRS6819Mary" type="tabot">Mary</persName>, unidentified marble,
+                           <persName ref="PRS4377Gabriel" type="tabot">Gabriel</persName>, <persName ref="PRS10776Kidan" type="tabot">Kidāna Mǝḥrat</persName>, <persName ref="PRS7049Michael" type="tabot">Michael</persName>,
                            <persName ref="PRS10774Paraq" type="tabot">Ṗarāqliṭos</persName>. The tābot of the local <persName ref="PRS10773SadeqP" type="tabot">Ṣādǝqān</persName> (Righteous Ones) was not mentioned, probably by mistake.</ab>
                         <ab type="description">52 Mss. photographed: <ref type="mss" corresp="ESap001">AP-001</ref> "Missal"; <ref type="mss" corresp="ESap002">AP-002</ref> "Hymnary"; <ref type="mss" corresp="ESap003">AP-003</ref> "Four Gospels"; <ref type="mss" corresp="ESap004">AP-004</ref> "Missal"; <ref type="mss" corresp="ESap005">AP-005</ref> "Homily of John Chrysostomos"; <ref type="mss" corresp="ESap006">AP-006</ref> "Homily of St. Michael"; <ref type="mss" corresp="ESap007">AP-007</ref> "Vita of Gäbrä Mänfäs Qǝddus"; <ref type="mss" corresp="ESap008">AP-008</ref> "Pauline Epistles"; <ref type="mss" corresp="ESap009">AP-009</ref> "The Rite of the Holy Week"; <ref type="mss" corresp="ESap010">AP-010</ref> "Vita of Gäbrä Mänfäs Qǝddus"; <ref type="mss" corresp="ESap011">AP-011</ref> "Homily of St. Michael"; <ref type="mss" corresp="ESap012">AP-012</ref> "Absolution of the Son"; <ref type="mss" corresp="ESap013">AP-013</ref> "Absolution of the Son"; <ref type="mss" corresp="ESap014">AP-014</ref> "Synaxarion"; <ref type="mss" corresp="ESap015">AP-015</ref> "Synaxarion"; <ref type="mss" corresp="ESap016">AP-016</ref> "Acts of the Apostles"; <ref type="mss" corresp="ESap017">AP-017</ref> "Vita of Kiros"; <ref type="mss" corresp="ESap018">AP-018</ref> "Vita of Kiros"; <ref type="mss" corresp="ESap019">AP-019</ref> "Acts of the Martyrs of Päraqlitos"; <ref type="mss" corresp="ESap020">AP-020</ref> "Homily of the Sabbath"; <ref type="mss" corresp="ESap021">AP-021</ref> "The Book of the Baptismal Rite"; <ref type="mss" corresp="ESap022">AP-022</ref> "Acts of the Martyrs of Päraqlitos"; <ref type="mss" corresp="ESap023">AP-023</ref> "Vita of Gäbrä Mänfäs Qǝddus"; <ref type="mss" corresp="ESap024">AP-024</ref> "Prayer of Incense"; <ref type="mss" corresp="ESap025">AP-025</ref> "Prayer of Incense"; <ref type="mss" corresp="ESap026">AP-026</ref> "Synoptic Lectionary for the Year"; <ref type="mss" corresp="ESap027">AP-027</ref> "The Book of the Matrimony Rite"; <ref type="mss" corresp="ESap028">AP-028</ref> "Miracles of Mary"; <ref type="mss" corresp="ESap029">AP-029</ref> "Miracles of Mary"; <ref type="mss" corresp="ESap030">AP-030</ref> "Vita of Täklä Haymanot"; <ref type="mss" corresp="ESap031">AP-031</ref> "The Book of the Funeral Rite"; <ref type="mss" corresp="ESap032">AP-032</ref> "The Book of the Funeral Rite"; <ref type="mss" corresp="ESap033">AP-033</ref> "The Glory of the Kings"; <ref type="mss" corresp="ESap034">AP-034</ref> "Acts of the Martyrs of Päraqlitos"; <ref type="mss" corresp="ESap035">AP-035</ref> "Miracles of Mary"; <ref type="mss" corresp="ESap036">AP-036</ref> "Story of the Trinity"; <ref type="mss" corresp="ESap037">AP-037</ref> "Synoptic Lectionary for the Year"; <ref type="mss" corresp="ESap038">AP-038</ref> "Miracles of Jesus"; <ref type="mss" corresp="ESap039">AP-039</ref> "Book of  ʾAsläṭi"; <ref type="mss" corresp="ESap040">AP-040</ref> "Collection of New Testament Readings"; <ref type="mss" corresp="ESap041">AP-041</ref> "Acts of the Apostles"; <ref type="mss" corresp="ESap042">AP-042</ref> "Homily of the Saviour of the World"; <ref type="mss" corresp="ESap043">AP-043</ref> "Vita of ʾArägawi"; <ref type="mss" corresp="ESap044">AP-044</ref> "Story of St. Mary"; <ref type="mss" corresp="ESap045">AP-045</ref> "Acts of the Martyrs of Päraqlitos"; <ref type="mss" corresp="ESap046">AP-046</ref> "Acts of the Martyrs of Päraqlitos"; <ref type="mss" corresp="ESap047">AP-047</ref> "Vita of Täklä Haymanot"; <ref type="mss" corresp="ESap048">AP-048</ref> "Vita of St. George"; <ref type="mss" corresp="ESap049">AP-049</ref> "fragments of several mss, including the poetry in honor of the Sadeqan."; <ref type="mss" corresp="ESap050">AP-050</ref> "Acts of the Martyrs of Päraqlitos"; <ref type="mss" corresp="ESap063">AP-063</ref> "Collection of Hymns"; <ref type="mss" corresp="ESap064">AP-064</ref> "New Testaments Texts; Apocalypse of John".</ab>
                         <ab type="appellations">
@@ -73,7 +73,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </place>
                </listPlace>
 </egXML>
-            
+
             <p>See also <ref target="placeOrInstitution">Place or Institution</ref>.</p>
          </div>
 
