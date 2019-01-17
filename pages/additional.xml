@@ -23,6 +23,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   <text>
     <body xml:id="additionalInfo">
       <head>Additional</head>
+
       <p>This is used for any <hi rendition="simple:bold">other</hi> information related to the
         manuscript, such as bibliographic references. Especially important is the <tag>listBibl type="catalogue"</tag> which contains
         the main catalogue references on which the record is based. This information is also retrieved for the <ref type="bm" target="/catalogues/list">catalogue view</ref>.
