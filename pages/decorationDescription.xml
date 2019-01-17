@@ -30,7 +30,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         the various decorative elements found in a manuscript. If
         multiple <gi>decoNote</gi> elements are present you can provide general
         observations in <gi>summary</gi> using it
-        directly into <gi>decoDesc</gi> like in the example below from <ref type="BM" target="BNFet32">Paris, Bibliothèque nationale de France, BnF Éthiopien 32</ref>. Within this
+        directly into <gi>decoDesc</gi> like in the example below from <ref type="bm" target="BNFet32">Paris, Bibliothèque nationale de France, BnF Éthiopien 32</ref>. Within this
         text simply use <gi>ref</gi> to refer to each
         <gi>decoNote</gi> or
         <gi>locus</gi> to refer to a folio. If there is
