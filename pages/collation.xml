@@ -196,6 +196,13 @@ when we cannot give the dimension of a quire, although the schema requires it.
 This is a good place for a comment, because this is something which simply needs to be fixed in the description looking at the manuscript.
 See <ref target="BAVet43" type="bm">Vatican City, Biblioteca Apostolica Vaticana, Aeth. 43</ref> where the quires missing the information have been commented out.</p>
       </div>
+      <div type="level2">
+        <head>Collation in composite manuscripts</head>
+        <p>
+          In composite manuscripts, <gi>collation</gi> can be added to the first <gi>physDesc</gi> which pertains to the entire manuscript
+          or to each individual <gi>msPart</gi>. It is up to the encoder to decide which is the more fitting place in each indivudal case.
+        </p>
+      </div>
     </body>
   </text>
 </TEI>
