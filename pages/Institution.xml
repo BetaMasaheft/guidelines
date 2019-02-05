@@ -27,7 +27,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <div type="level1">
             <head>Specific encoding for repositories</head>
             <p>For repositories where manuscripts are preserved all general guidelines and especially those for <ref target="places">places</ref> are valid.
-               All repository records should have a <att>subtype</att> with <val>institution</val>.</p>
+           All repository records should have a <att>subtype</att> with <val>institution</val>.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <listPlace>
                   <place type="church dabr" subtype="institution">
@@ -81,8 +81,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </place>
                </listPlace>
 </egXML>
+            
+            <p>See also <ref target="placeOrInstitution">Place or Repository</ref>.</p>
 
-            <p>See also <ref target="placeOrInstitution">Place or Institution</ref>.</p>
          </div>
 
 

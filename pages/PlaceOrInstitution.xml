@@ -21,16 +21,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </teiHeader>
     <text>
         <body xml:id="placeOrInstitution"><div type="level1">
-    <head>creating a new record or deciding between repository entity and
+    <head>Creating a new record or deciding between repository entity and
         place entity</head>
-    <p>All Monasteries and Churches in PLACES have also a parallel in
-        Repository in the institutions repo. The two lists have different origins, PLACES comes from
+    <p>All Monasteries and Churches in PLACES have also a parallel 
+        Repository record in the institutions repo. The two lists have different origins, PLACES comes from
         EA indexes, while the INSTITUTIONS list is an export of the records in
-        EthioSPaRe for institutions.</p>
+        EthioSPaRe for repositories.</p>
     <p>Please, proceed as follows in case of doubt:</p>
     <list type="ordered:arabic">
         <item>
-            <p>if the institution record for the institution you need does not
+            <p>if the repository record for the repository you need does not
                 exist, create one and assign an ID.</p>
         </item>
         <item>
@@ -39,11 +39,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 Oxygen or on the website looking at related entities.</p>
         </item>
         <item>
-            <p>modify those references that actually point to an institution
+            <p>modify those references that actually point to a repository
                 and not to a place, if any.</p>
         </item>
     </list>
-            <p>See also <ref target="places">Places</ref> <ref target="institution">Institutions</ref>.</p>
+            <p>See also <ref target="places">Places</ref> <ref target="institution">Repositories</ref>.</p>
 </div>
         </body>
     </text>
