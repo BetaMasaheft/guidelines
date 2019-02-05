@@ -19,6 +19,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </fileDesc>
     <revisionDesc>
       <change who="PL" when="2018-07-20">splitted from Object Description</change>
+      <change who="DR" when="2019-02-05">Added paragraph on collation in composite manuscripts</change>
     </revisionDesc>
   </teiHeader>
   <text>
