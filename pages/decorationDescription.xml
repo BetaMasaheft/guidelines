@@ -28,9 +28,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <p>
         <gi>decoDesc</gi> contains a description of
         the various decorative elements found in a manuscript. If
-        multiple elements are present you can provide general
+        multiple <gi>decoNote</gi> elements are present you can provide general
         observations in <gi>summary</gi> using it
-        directly into <gi>decoDesc</gi>. Within this
+        directly into <gi>decoDesc</gi> like in the example below from <ref type="bm" target="BNFet32">Paris, Bibliothèque nationale de France, BnF Éthiopien 32</ref>. Within this
         text simply use <gi>ref</gi> to refer to each
         <gi>decoNote</gi> or
         <gi>locus</gi> to refer to a folio. If there is
@@ -38,7 +38,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         certain type, then the sentence in description will point to
         the <gi>decoNote</gi>s involved.</p>
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-        <decoDesc>
+
             <summary>
                 The manuscript’s decorative features are typical of the period. It includes the Eusebian Apparatus
                 (3+7 arrangement) set under colourful stylized arches and followed by a Tempietto. As the pages
@@ -48,7 +48,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 the <term key="FirstSolomonicStyle"/> and recall examples produced between
                 <date notBefore="1300" notAfter="1450"/>. The decorations appear to have been paintedby the same artist.
             </summary>
-        </decoDesc>
+
     </egXML>
     <p>
         <hi rendition="simple:bold">N.B.</hi>
@@ -138,7 +138,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <decoDesc>
             <decoNote type="miniature" xml:id="d1">
                 <locus target="#viii"/>
-                <desc>Miniature of <persName ref="PRS5332hezqeyas"/> lying at the feet of <persName ref="PRS3417David"/>, 
+                <desc>Miniature of <persName ref="PRS5332hezqeyas"/> lying at the feet of <persName ref="PRS3417David"/>,
                     identified by the caption  <foreign xml:lang="gez">
                         <persName ref="PRS3417David">ዳዊት፡</persName> ንጉሥ።</foreign>.
                     <q xml:lang="gez">ዘከመ፡ ተማኅፀነ፡ ንጉሠ፡ <persName ref="PRS5332hezqeyas">ሕዝቅያስ።</persName>
