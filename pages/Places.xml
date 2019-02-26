@@ -25,13 +25,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
   <item><ref target="https://pleiades.stoa.org/help/conceptual-overview">Pleiades Conceptual Overview</ref></item>
 <item><ref target="http://commons.pelagios.org/2017/08/report-ancient-places-in-the-chronicle-of-king-galawdewos/">an overview of our current work can be found here</ref></item>
 </list></p>
-         
+
          <p>The information contained in this page is valid both for the encoding of place and repository records, see also <ref target="placeOrInstitution">Place or Repository</ref>.</p>
 
          <p>This example record contains information about a single place, at
 whatever granularity. It is thus important to state relationships with
 other places and typologies when possible , using <gi>relation</gi> and <att>sameAs</att>.</p>
-       
+
          <p>Place records can be expanded with much more information, following the TEI
 guidelines for
 <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/de/html/ref-place.html">
@@ -52,7 +52,7 @@ guidelines for
                <placeName corresp="#n3" xml:lang="am" type="normalized">Tǝgre</placeName>
                <state type="existence" notBefore="1991"/>
                <country ref="LOC3010Ethiop"/>
-               
+
                <location source="#Smidt">
                   <geo>14.1666 38.8333</geo>
                   <height>1975 m</height>
@@ -89,10 +89,18 @@ guidelines for
 </egXML>
          <div type="level2">
             <head>New records</head>
-            <p>Before creating new entities for PLACES like Stuttgart, Paris,
-  London, etc. which unlike all <ref target="institution">repositories</ref> are very much unlikely to
-  receive specific descriptions by this project, use external links to
-  Wikidata IDs as follows.</p>
+            <p>Before creating new entities for places like Stuttgart, Paris,
+  London, etc. which unlike all <ref target="institution">repositories</ref>
+  are very much unlikely to
+  receive specific descriptions with the scope of Ethiopian Literature and Manuscript Culture,
+  use external links to
+  Wikidata IDs in the text, e.g.
+</p>
+  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+    <placeName ref="Q649"/>
+    </egXML>
+  <p> and in an eventually already existing place record or repository record, you can use the same wikidata values
+    as follows in the same way as above for <gi>settlement</gi>, <gi>region</gi> and <gi>country</gi>.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
               <place type="city" sameAs="Q649">
               <placeName xml:id="n1" xml:lang="ru">Москва</placeName>
@@ -101,7 +109,6 @@ guidelines for
               <region ref="Q649"/>
               </place>
 </egXML>
-            <p>(same for <gi>placeName</gi> and <gi>region</gi>)</p>
 
          <div type="level2">
             <head>Alignment</head>
