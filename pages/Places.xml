@@ -109,7 +109,7 @@ guidelines for
               <region ref="Q649"/>
               </place>
 </egXML>
-
+<p>You are not allowed to add a <att>ref</att> in <gi>placeName</gi> or <gi>persName</gi> in a person or place record (it would not make that much sense either).</p>
          <div type="level2">
             <head>Alignment</head>
             <p>Use <att>sameAs</att> inside <gi>place</gi> to declare
