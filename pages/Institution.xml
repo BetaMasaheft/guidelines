@@ -19,12 +19,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </sourceDesc>
       </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
          <change who="DR" when="2018-05-15">Edited and updated example</change>
-         <change who="DR" when="2019-01-10">Clarification</change> </revisionDesc>
+         <change who="DR" when="2019-01-10">Clarification</change>
+         <change who="DR" when="2019-02-27">Added paragraph on private collections</change>
+      </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="institution">
 
-         <div type="level1">
+         <div type="level2">
             <head>Specific encoding for repositories</head>
             <p>For repositories where manuscripts are preserved all general guidelines and especially those for <ref target="places">places</ref> are valid.
            All repository records should have a <att>subtype</att> with <val>institution</val>.</p>
@@ -85,6 +87,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>See also <ref target="placeOrInstitution">Place or Repository</ref>.</p>
 
          </div>
+         
+         <div type="level2">
+            <head>Private collections</head>
+            <p>Repository records are also created for the private collections of individuals owning manuscripts. These have a <att>type</att> with <val>privateHouse</val>,
+               for example in <ref target="INS0368atohayle" type="bm">INS0368atohayle</ref>:
+               
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <place subtype="institution" type="privateHouse">
+                  <placeName xml:id="n1" xml:lang="en">Private Collection of Ato Hayle Bayyana</placeName>
+                  <settlement ref="LOC3577Gondar"/>
+                  <location>
+                     <geo>12.609389 37.468671</geo>
+                  </location>
+               </place>
+               </egXML>
+            </p>
+         </div>
+        
 
 
       </body>
