@@ -100,6 +100,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         the app by clicking the Versions button in the Text page of the work
         record.</p>
         </div>
+        <div type="level2">
+          <head>Linking Narrative Units and Keywords</head>
+          <p>In some cases the Narrative Unit will be especially related to a Keyword defining a type for an addition for example.</p>
+          <p>While the encoder should still remain free to associate to a given Narrative Unit and independently assign a type to an addition, you might at the same way want to associate the two.</p>
+          <p>You can do that quite simply using a <gi>relation</gi> like the one below from <ref target="NAR0001gwelt">Land donation</ref>.</p>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <relation name="skos:broadMatch" active="NAR0001gwelt" passive="bm:LandGrant"/>
+          </egXML>
+          <p>This will state an association between any Land donation which has been identified with a specific Narrative Unit, with a type. It can indeed be a many to many kind of relationship, so that you can state if relevant.</p>
+        </div>
 </div>
         </body>
     </text>
