@@ -25,7 +25,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <text>
         <body xml:id="Documents">
     <head>Documentary texts</head>
-<p>Texts which are not literary <ref target="definitionWorks">works</ref>
+<p>Texts which are not <ref target="definitionWorks">textual units</ref>
 occur often in manuscripts as <ref target="additionsVaria">additions</ref>.
 That is way the list of types for this texts is in the
 <ref target="http://betamasaheft.eu/authority-files/list">Taxonomy</ref> under 'Additions'.</p>

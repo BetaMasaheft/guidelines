@@ -51,6 +51,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </msItem>
           </egXML>
           <p>This is exactly the same which you would do for a Textual Unit (see page on <ref target="manuscriptContents">manuscript contents</ref>).</p>
+          <p>In the following example from
+            <ref target="BDLbruce93">Oxford,
+              Bodleian Library, Bodleian Bruce 93</ref>
+              you can see how the same Narrative unit is used for different
+              contents. Narrative units, being not
+              sequence bound, can be used like here for
+              several land donations.</p>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <msItem xml:id="p2_i3.3">
+              <locus target="#93r"/>
+              <title type="complete" ref="NAR0001gwelt">Land
+                donation by <persName ref="PRS11688WalattaM"/></title>
+               <textLang mainLang="gez"/>
+              </msItem>
+            <msItem xml:id="p2_i3.4">
+              <locus target="#93r"/>
+              <title type="complete" ref="NAR0001gwelt">Land
+                donation by <persName ref="PRS8595SayfaAr"/></title>
+              <textLang mainLang="gez"/>
+            </msItem>
+          </egXML>
           </div>
           <div type="level2">
             <head>Narrative Units in quaternary strata</head>
