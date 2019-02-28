@@ -22,6 +22,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <change who="DR" when="2018-04-26">editing of the Work section of the guidelines</change>
           <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
          <change who="DR" when="2018-12-03">added paragraph on TUK IDs and relations with other databases</change>
+        <change who="PL" when="2019-02-28">added example</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -139,10 +140,10 @@ title in the language of the original.</p>
 </listBibl>
 </egXML>
    <p>You cannot have both <gi>p</gi> and <gi>listBibl</gi> in <gi>sourceDesc</gi>, so if you also need paragraphs, add another <gi>sourceDesc</gi>.</p>
-   <p>Please use only the clavis IDs given in this example. If there is another clavis you would like to add to this list, please open an issue to discuss it. Other 
+   <p>Please use only the clavis IDs given in this example. If there is another clavis you would like to add to this list, please open an issue to discuss it. Other
       references to works in standardized lists, such as Chaîne's Répertoire or various publications listing the single Miracles of Mary can
-      be given as a bibliographic reference in <gi>listBibl</gi>, while references to external sources such as the <ref target="https://corpuscoranicum.de/kontexte/uebersicht">Umwelttexte  
-    by Corpus Coranicum</ref>  can be given in a <gi>relation</gi> between the record and the external reference in 
+      be given as a bibliographic reference in <gi>listBibl</gi>, while references to external sources such as the <ref target="https://corpuscoranicum.de/kontexte/uebersicht">Umwelttexte
+    by Corpus Coranicum</ref>  can be given in a <gi>relation</gi> between the record and the external reference in
    <gi>listRelation</gi>, see below.</p>
 </div>
 
@@ -228,15 +229,15 @@ person record:</p>
 active="PRS4585Georgeo"
 passive="LIT1455GadlaG"/>
 </egXML>
-   
+
    <p>External entries in databases or similar which concern a particular work can also be referenced in a <gi>relation</gi>. If, as in the case of the TUK IDs given by
-      Corpus Coranicum, the external entry refers only to a part of a work, it is preferable to add the <gi>relation</gi> in the exact <gi>div</gi> of this textpart in our 
-      edition, using <tag>relation name="skos:exactMatch"</tag>. If this is not possible, because we do not yet have the text of the work or because we 
-      follow different divisions than the other reference, <tag>relation name="skos:broadMatch"</tag> can be used at the most pertinent place of the record with the 
+      Corpus Coranicum, the external entry refers only to a part of a work, it is preferable to add the <gi>relation</gi> in the exact <gi>div</gi> of this textpart in our
+      edition, using <tag>relation name="skos:exactMatch"</tag>. If this is not possible, because we do not yet have the text of the work or because we
+      follow different divisions than the other reference, <tag>relation name="skos:broadMatch"</tag> can be used at the most pertinent place of the record with the
       most precise pointer to our record possible in <att>passive</att>, as for example in <ref type="bm" target="LIT1697Jubilees"/></p>
    <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <listRelation>
-      <relation name="skos:broadMatch" 
+      <relation name="skos:broadMatch"
          active="https://corpuscoranicum.de/kontexte/index/sure/6/vers/74/intertext/673"
          passive="LIT1697Jubilees"/>
       </listRelation>
@@ -252,10 +253,10 @@ passive="LIT1455GadlaG"/>
             በመንበረ ፡ ስብሐቲሁ ፡ ወመጻሕፍተ ፡ ሕያዋን ፡ በቅድሜሁ ፡ ተከሥቱ ፡ ወኲሉ ፡ ኀይሉ ፡ ዘመልዕልተ ፡ ሰማያት ፡ ወዐውደ
             ፡ ዚአሁ ፡ ይቀውሙ ፡ ቅድሜሁ ። ወልቦሙ ፡ ለቅዱሳን ፡ ትመልእ ፡ ፍሥሐ ፡ እስመ ፡ በጽሐ ፡ ኊልቋ ፡ ለጽድቅ ፡
             ወጸሎቶሙ ፡ ለጻድቃን ፡ ተሰምዐ ፡ ወደሙ ፡ ለጻድቅ ፡ በቅድመ ፡ እግዚአ ፡ መናፍስት ፡ ተፈቅደ ። </ab>
-         <listRelation><relation name="skos:broadMatch" 
+         <listRelation><relation name="skos:broadMatch"
             active="https://corpuscoranicum.de/kontexte/index/sure/78/vers/38/intertext/913"
             passive="urn:dts:betmas:LIT1340EnochE:2.47"/>
-            <relation name="skos:broadMatch" 
+            <relation name="skos:broadMatch"
                active="https://corpuscoranicum.de/kontexte/index/sure/10/vers/21/intertext/914"
                passive="urn:dts:betmas:LIT1340EnochE:2.47"/></listRelation>
       </div>
@@ -337,6 +338,11 @@ this text part with multiple versions with either the initials of the
 editor or the pointer to the <att>xml:id</att> of the bibl element which has a
 pointer to the edition.</p>
 
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+
+<relation name="saws:isVersionOf" active="LIT2231Saatat" passive="LIT1961Mashaf"> </relation>
+</egXML>
+<p>The above example is from <ref target="LIT2231Saatat" type="BM">Saʿātāt za-maʿālt</ref></p>
 </div>
 <div type="level2">
 <head>Dates</head>

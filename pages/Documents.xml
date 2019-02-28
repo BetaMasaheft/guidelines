@@ -19,6 +19,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <revisionDesc>
           <change who="PL" when="2018-07-20">first version of guidelines from Wiki</change>
+            <change who="PL" when="2019-02-28">updated with examples</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -39,8 +40,50 @@ That is way the list of types for this texts is in the
   precise enough and you can reference anywhere.</p>
 <p>You might find more appropriate to associate a document to
   a <ref target="narratives">narrative unit</ref>,
-if the formalization is such, using a <att>corresp</att> in the
-addition <gi>item</gi> or in the <gi>div</gi>.</p>
+if the formalization is such, using a <gi>title</gi> as discussed also in
+ the page about <ref target="additionsVaria">additions</ref>. The following example is from
+<ref type="BM" target="BMLor70">Florence, Biblioteca Medicea Laurenziana, BML Or. 70</ref>
+</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  <list>
+    <item xml:id="a1">
+        <locus target="#201v #203 #204" facs="211"/>
+        <desc  type="GuestText"><title ref="NAR0015ListForSingleFeasts"/></desc>
+    </item>
+    <item xml:id="a2">
+        <locus target="#204r" facs="214"/>
+        <desc><title ref="NAR0006monast"/> Rules on the relationship of the monks to the monastery when they leave.</desc>
+    </item>
+  </list>
+</egXML>
+<p>You do not have to always give a value to <att>type</att> in <gi>desc</gi>, neither
+you have to give a <gi>title</gi>, this depends on what is
+known and you wish to encode.</p>
+<p>There will be cases when it is only worth adding a value to <att>type</att> in <gi>desc</gi>,
+cases in which
+an association to a Narrative Unit is all that can be done, and cases in which the two
+might be very similar.</p>
+<p>While the value of <att>type</att> in <gi>desc</gi> is only providing a useful
+grouping keyword from the taxonomy,
+the identification with a Textual Unit or Narrative Unit specifies that the current text is an</p>
+<p>In the same way in which a document in a quaternary stratum
+   can be associated with a Narrative Unit a quaternary stratum content
+  which can be identified with a stable content
+  can be referenced in this same way,
+  like in <ref type="BM" target="BLorient481">London, British Library, BL Orient 481</ref></p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  <item xml:id="a15">
+    <locus target="#92r"/>
+      <desc type="Letter">A <title ref="LIT2665SD">letter</title>...
+      ...</desc>
+  </item>
+</egXML>
+<p>Here you will notice also how assigning a value to <att>type</att> in <gi>desc</gi>
+is different from identifying it with a Textual or Narrative Unit</p>
+<p>If a document is the main content of a manuscrips
+  it can be encoded in the same way as other main contents in <gi>msContents</gi>. If it
+  is not an identifiable Textual Unit,
+it might also be assigned a <ref target="narrativeUnits">Narrative Unit</ref> identifier in the same way.</p>
 <p>For meaningful groups of documents you can also use the document <ref target="corpora">corpus</ref> grouping</p>
 <p>In case your text is in an <gi>additions</gi> <gi>item</gi> and it is composed of different sections,
 you can use <gi>seg</gi> with <att>ana</att> as specified in the above page.</p>

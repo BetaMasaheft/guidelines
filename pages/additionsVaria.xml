@@ -107,15 +107,26 @@ never be used to mark a content, that presupposes another perspective.</p>
                     <att>rend</att> with value <val>marginal</val> or
                     <val>guardLeaf</val>.</p>
                 <p>If the type of document is known, then there should be a
-                    narrative entity to which a <att>ref</att> can be
-                    given.</p>
-                <!--example to be updated-->
+                    value in the <att>type</att> of the element <gi>desc</gi>.
+                    Additionally, if the content is actually identifiable with a Textual or Narrative Unit, this can be specified, adding <gi>title</gi> element with a <att>ref</att> in <gi>desc</gi>.
+                  </p>
+                <p>More examples are provided in the page about <ref target="documents">documents</ref>.
+                  The following example, from <ref target="BLorient494" type="BM">London, British Library, BL Oriental 494</ref> shows
+                  also how you can assert an alternative value for this identification.</p>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                    <item xml:id="a2" xml:lang="am" ref="NAR0001gwǝlt">
-                        <locus target="#3v"/>
-                        <p>Land donation (gwǝlt) of <persName ref="PRS8344sahlaDe">Śāhlā Dǝngǝl</persName> (A.D. 1832-40, and again 1841-55) to the priests of <placeName ref="LOC2550Darasg">Darasge</placeName>, in Amharic. </p>
-                    </item>
+                  <item xml:id="a6">
+                    <locus target="#48r"/>
+                      <desc type="GuestText">A piece entitled <title ref="NAR0012temple">ምሳሌ ፡ ቤተ ፡ መቅደስ ፡</title> or <title ref="NAR0012temple">Comparison of the
+                      Temple</title>, beginning
+                      ...
+                      </desc>
+                  </item>
                 </egXML>
+                <p>As clarified also in the page about <ref target="documents">documents</ref>,
+                although sometimes the value of <att>type</att> might be the same as the corresponding Narrative Unit, there is no requirement to put either or both, it is up to the encoder to decide what to do.</p>
+                <p>Selecting a value from the list of defined once for <gi>desc</gi> is already a
+                  grouping label option which can be assigned, eventually,
+                  for example if starting from a catalogue information, without any knowledge of the text.</p>
                 <p>If a work with its own work ID is added later to a
                     manuscript, it will be added as an addition specified with the
                     type "GuestText" having its work ID in the
@@ -132,11 +143,13 @@ never be used to mark a content, that presupposes another perspective.</p>
                         </q>
                     </item>
                 </egXML>
-                <p>The same you can do if there is <ref target="Documents">documentary text</ref> which you want to identify.
-                  When creating the record a keyword should then be used to put the text in its correct position as non-literary.
+                <p>The same you can do if there is <ref target="Documents">documentary text</ref>
+                which you want to identify.
+                  When creating the record a keyword should then be used to put
+                  the text in its correct position as non-literary.
                   We have in the category of keywords for Subjects for example "Other" but also "Legal Document".
-                  If <ref target="LIT4972Don" type="bm">LIT4972Don</ref> is in fact according to the definition in the schema a
-                  Donation Note, you can add that keyword to the work record.</p>
+                  If a given textual unit is in fact according to the definition in the schema a
+                  Donation Note or a letter, you can add that keyword to the work record.</p>
 <p>If the text is a primary strata and we happen to have also manuscripts where this text is an addition,
   then you could add a <gi>relation</gi> (e.g. with  <val>saws:isCopyOf</val> for <att>name</att>) which connects the <gi>msItem</gi> with the addition in question.</p>
                 <p>In additions as anywhere in the manuscript description, a <gi>handNote</gi> should be created for each identifiable hand, whether it can be described from available pictures of the manuscript
@@ -204,18 +217,18 @@ trials, notes crudely written in pencil or pen;</item>
                     rubrications in left unfilled in incipits, and these incipits are transcribed in the manuscript description, the unfilled spaces should be encoded properly there and the
                     information does not need to be repeated under Varia.</p>
                     <p>See also <ref target="text-encoding">Text Encoding</ref>.</p>
-                    
+
                     <p>Information provided in the catalogue which would ideally be marked up directly in a transcribed text, such as the names of owners or patrons mentioned in supplications or elsewhere,
                     can also be recorded in Varia if the textual context is not provided by the catalogue:
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <item xml:id="e1">
                             <locus target="#1r"/>
-                            <desc>The owner was <persName ref="PRS12179BatraG" role="owner"/>.</desc> 
+                            <desc>The owner was <persName ref="PRS12179BatraG" role="owner"/>.</desc>
                             <q xml:lang="gez"/>
                         </item>
                     </egXML>
                     </p>
-  
+
                     <p>
                         The <att>xml:id</att> of varia will use "e" and a
                         consecutive number:
