@@ -17,7 +17,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+         <change who="DR" when="2019-01-09">Added ʾElyās and bǝʾsi, corrected ʾǝmuntu</change>
+      </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="dubious-spelling">
@@ -35,10 +37,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <p>እግዚአብሔር፡ | ʾƎgziʾabǝḥer (not ʾƎgziʾabḥer)</p>
             </item>
             <item>
+               <p>ኤልያስ፡ | ʾElyās (not ʾElǝyās)</p>
+            </item>
+            <item>
                <p>አምኃ፡ | ʾammǝḫā (not ʾamḫā)</p>
             </item>
             <item>
-               <p>እሙንቱ፡ | ʾǝmuntu (not ʾǝmuntu)</p>
+               <p>እሙንቱ፡ | ʾǝmuntu (not ʾǝmmuntu)</p>
             </item>
             <item>
                <p>እንድርያስ፡ | ʾƎndrǝyās (three consonants are accepted since the
@@ -48,11 +53,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <p>በእንተ፡ | baʾǝnta (not ba-ʾǝnta)</p>
             </item>
             <item>
+               <p>ብእሲ፡ | bǝʾsi (not bǝʾǝsi)</p>
+            </item>
+            <item>
                <p>ባሕቱ፡ | bāḥǝttu (not bāḥtu)</p>
             </item>
             <item>
                <p>ግዕዝ፡ | gǝʿz (not gǝʿǝz) [but this needs further
-        discussion]</p>
+        discussion, for now gǝʿǝz is used for the sake of homogeneity]</p>
             </item>
             <item>
                <p>ላዕለ፡ | lāʿla (not lāʿǝla)</p>
