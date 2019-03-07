@@ -33,7 +33,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         description. You can mark up content as in any other entity.
         Recommended but not compulsory are a bibliography and a
         <gi>listRelation</gi>.</p>
-        <p>A narrative unit can be pointed to in any place where you can point to a <ref target="definitionWorks">Textual Unit</ref>.
+        <p>A Narrative Unit can be pointed to in any place where you can point to a <ref target="definitionWorks">Textual Unit</ref>.
           The following are some examples of the main types of use</p>
         <div type="level2">
           <head>Narrative Units in the main content</head>
@@ -54,8 +54,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <p>In the following example from
             <ref target="BDLbruce93">Oxford,
               Bodleian Library, Bodleian Bruce 93</ref>
-              you can see how the same Narrative unit is used for different
-              contents. Narrative units, being not
+              you can see how the same Narrative Unit is used for different
+              contents. Narrative Units, being not
               sequence bound, can be used like here for
               several land donations.</p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -83,7 +83,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </div>
         <div type="level2">
           <head>Narrative Units to associate different parts of a text</head>
-    <p>Narrative units can also be created for text portions (paragraphs,
+    <p>Narrative Units can also be created for text portions (paragraphs,
         chapters, miracles, etc.) which are extant as different versions in
         multiple recensions of the same work or even in different works.
         Creating these narrative units allows displaying in the app all the
