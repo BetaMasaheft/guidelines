@@ -89,7 +89,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     of material and content, thus
                     a transformation of type A1, and we do so
                     using the property SdC:hasTransformationModel. </p>
-
+<p>
                     During this process of transformation
                     part 1 and part 2 were produced
                     (SdC:produces) by this transformation,
