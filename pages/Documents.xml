@@ -27,9 +27,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <head>Documentary texts</head>
 <p>Texts which are not <ref target="definitionWorks">textual units</ref>
 occur often in manuscripts as <ref target="additionsVaria">additions</ref>.
-That is way the list of types for this texts is in the
+That is why the list of types for these texts is in the
 <ref target="http://betamasaheft.eu/authority-files/list">Taxonomy</ref> under 'Additions'.</p>
-<p>Please, make sure you encode correctly these texts according to their actual
+            <p>Please, make sure you encode these texts correctly according to their actual
   status in the manuscript.</p>
 <p>If you want to provide an ID for a given text of this type, you can do
   so and create a Work record for it, where the same keywords used in <tag>desc type</tag>
@@ -65,9 +65,9 @@ an association to a Narrative Unit is all that can be done, and cases in which t
 might be very similar.</p>
 <p>While the value of <att>type</att> in <gi>desc</gi> is only providing a useful
 grouping keyword from the taxonomy,
-the identification with a Textual Unit or Narrative Unit specifies that the current text is an</p>
+the identification with a Textual Unit or Narrative Unit specifies that the current text is an <!--what?--></p>
 <p>In the same way in which a document in a quaternary stratum
-   can be associated with a Narrative Unit a quaternary stratum content
+   can be associated with a Narrative Unit, a quaternary stratum content
   which can be identified with a stable content
   can be referenced in this same way,
   like in <ref type="BM" target="BLorient481">London, British Library, BL Orient 481</ref></p>
@@ -80,7 +80,7 @@ the identification with a Textual Unit or Narrative Unit specifies that the curr
 </egXML>
 <p>Here you will notice also how assigning a value to <att>type</att> in <gi>desc</gi>
 is different from identifying it with a Textual or Narrative Unit</p>
-<p>If a document is the main content of a manuscrips
+<p>If a document is the main content of a manuscript,
   it can be encoded in the same way as other main contents in <gi>msContents</gi>. If it
   is not an identifiable Textual Unit,
 it might also be assigned a <ref target="narrativeUnits">Narrative Unit</ref> identifier in the same way.</p>
