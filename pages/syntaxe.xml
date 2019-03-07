@@ -51,7 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 the stratigraphy using <gi>relation</gi>.</p>
                 <div type="level2">
                   <head>Production units added later</head>
-                  <p>In this example, from <ref target="BDLaeth8" type="bm">Oxford, Bodleian Library, Bodleian Aeth. e. 8</ref>,
+                  <p>In this example, from <ref target="BDLaethe8" type="bm">Oxford, Bodleian Library, Bodleian Aeth. e. 8</ref>,
                   we want to say that <gi>msPart</gi>s p1 and p2 where added later to the manuscript. From the catalogue information we can deduce that
                   this can be a transformation (this is the term used in the book, which I will not define here)
                   of type A1 (Andrist, Canart, and Maniaci 2013, 63).</p>
