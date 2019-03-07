@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>TEI</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2019-03-07">Example extraced from article for issue #35</change>     </revisionDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="syntaxe">
+         <head>La Syntaxe du Codex</head>
+         <p>Describing the stratigrapy
+           following <hi rendition="simple:italic">La Syntaxe du Codex.
+             Essai de codicologie structurale</hi>
+             <ref target="https://www.zotero.org/groups/358366/ethiostudies/items/itemKey/86TDDASU/">Andrist,
+               Canart, and Maniaci 2013</ref> requires reading the methodology outlined in the book.
+               It is not just an extraordinary book, it is also well
+               written and made clear by examples fully spelled out.</p>
+               <p>The Beta maṣāḥǝft application tries to support this
+                 methodology with tabular visualizations based also on RDF data which are
+                 exemplified by <ref type="bm" target="BAVcerulli37">Vatican City,
+                   Biblioteca Apostolica Vaticana, Biblioteca Apostolica Vaticana
+                   Cerulli 37</ref> and especially in its <ref target="https://betamasaheft.eu/manuscripts/BAVcerulli37/graph">syntaxe view</ref>.
+                 The workings of these are out of the scope of these guidelines and
+                 here only the way in which the information is encoded in the TEI will be described. An article by Pietro Liuzzo, <hi rendition="simple:italic">Linked Open Data based
+                   on La Syntaxe du Codex for Manuscripts in Beta maṣāḥǝft</hi>, has
+                   been submitted for the forthcoming <hi rendition="simple:italic">Linked
+                     Ancient Word Data Cookbook</hi>, ed. by Paul Dilley, Sarah Bond e
+                     Ryan Horne (ISAW papers).</p>
+              <p>The ontology used in the encoding can be
+                found <ref target="https://w3id.org/sdc/ontology">here</ref> and can
+                be viewed clicking on the ontology button in these guidelines.</p>
+                <p>Some of the values, especially properties, are also reproduced for convenience in the Schema.</p>
+              <p>The tabular visualizations are based on two aspects of the encoding. The first is the assignation of identifiers to
+              the relevant parts of the TEI description. The schema enforces the presence of <att>xml:id</att>. The second part is the use of <gi>relation</gi>
+              to make statements which work like stand off annotations about the stratigraphy.</p>
+              <p>Both these practices are documented in these guidelines
+                elsewhere and here we will focus on how to encode a statement about
+                the stratigraphy using <gi>relation</gi>.</p>
+                <div type="level2">
+                  <head>Production units added later</head>
+                  <p>In this example, from <ref target="BDLaeth8" type="bm">Oxford, Bodleian Library, Bodleian Aeth. e. 8</ref>,
+                  we want to say that <gi>msPart</gi>s p1 and p2 where added later to the manuscript. From the catalogue information we can deduce that
+                  this can be a transformation (this is the term used in the book, which I will not define here)
+                  of type A1 (Andrist, Canart, and Maniaci 2013, 63).</p>
+
+                  <p>We can then rely on the <att>xml:id</att>s of the description to describe this sitution in a series of <gi>relation</gi> elements.</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<listRelation>
+          <relation active="BDLaethe8#p3" name="SdC:constituteUnit" passive="BDLaethe8#UniCirc1"/>
+            <relation active="BDLaethe8#UniCirc1" name="SdC:undergoesTransformation" passive="BDLaethe8#tr1"/>
+            <relation active="BDLaethe8#tr1" name="SdC:hasTransformationModel" passive="SdC:A1"/>
+            <relation active="BDLaethe8#tr1" name="SdC:produces" passive="BDLaethe8#p1"/>
+            <relation active="BDLaethe8#tr1" name="SdC:produces" passive="BDLaethe8#p2"/>
+            <relation active="BDLaethe8#tr1" name="SdC:resultsIn" passive="BDLaethe8#UniCirc2"/>
+            <relation active="BDLaethe8#p1" name="SdC:constituteUnit" passive="BDLaethe8#UniCirc2"/>
+            <relation active="BDLaethe8#p2" name="SdC:constituteUnit" passive="BDLaethe8#UniCirc2"/>
+            <relation active="BDLaethe8#UniCirc2" name="dcterms:hasPart" passive="BDLaethe8#p1"/>
+            <relation active="BDLaethe8#UniCirc2" name="dcterms:hasPart" passive="BDLaethe8#p2"/>
+            <relation active="BDLaethe8#UniCirc2" name="dcterms:hasPart" passive="BDLaethe8#p3"/>
+            <relation active="BDLaethe8#UniCirc1" name="dcterms:hasPart" passive="BDLaethe8#p3"/>
+            <relation active="BDLaethe8#UniCirc2" name="skos:exactMatch" passive="BDLaethe8"/>
+</listRelation>
+
+                    </egXML>
+                  <p>Here we start defining only the part 3 as UniCirc,
+                    by assigning to it the ID ‘UniCirc1’
+                    using the property SdC:constituteUnit
+                    from the ontology.
+                    We continue saying that part 3 (UniCirc1)
+                    has undergone a transformation
+                    (property SdC:undergoesTransformation).
+                    We are actually defining a
+                    transformation with ID ‘tr1’ and we want to say that
+                    we know that this transformation is an addition
+                    of material and content, thus
+                    a transformation of type A1, and we do so
+                    using the property SdC:hasTransformationModel. </p>
+
+                    During this process of transformation
+                    part 1 and part 2 were produced
+                    (SdC:produces) by this transformation,
+                    which resulted (SdC:resultsIn) the UniCirc2.
+                    Now that the two parts have come into the game,
+                    we can also explicitly assign them to the UniCirc2
+                    with the property SdC:constituteUnit.
+                    We can then also repeat the dcterms:hasPart
+                    nodes for each UniCirc.
+                    </p>
+<p>
+The order of the encoded elements is irrelevant, we are just following the logic in the argument.
+We can additionally say that it is this one UniCirc with ID ‘UniCirc2’ which actually corresponds to the manuscript we have in our hands.
+We cannot make any further statement about UniProd or about the pertinence of the parts 1 and 2 to another UniCirc and we do not do so.
+</p>
+
+
+
+      </div>
+
+      <div type="level2">
+        <head>Added text in another hand</head>
+        <p>In <ref target="IVorlov20" type="bm">Saint Petersburg,
+                          Institut Vostočnyh Rukopisej Rossijskoj Akademii Nauk,
+                          Orlov20</ref>
+                          there are two cases, where according to
+                              Turaev’s description,
+                              some text was presumably added later in another hand.
+                              These added portions should be regarded as additions,
+                              because they are written in another hand, presumably later.
+                              And these texts might also be regarded as
+                              complete without these added information, so it was not about the completion of the text,
+                              rather adding new information. (this paragraph is an adaptation
+                              of the explanation given by Daria Elagina <ref target="https://github.com/BetaMasaheft/Documentation/issues/927">here</ref>)
+
+                      </p>
+
+                      <p>In the following example I reproduce the encoding I have made of this. (<gi>listRelation</gi> is allowed anywhere in the Beta Masaheft schema).</p>
+                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<msItem xml:id="p1_i14">
+    <locus target="#9v"/>
+    <title ref="LIT4952History" cert="medium"/>
+    <textLang mainLang="gez"/>
+    <msItem xml:id="p1_i14.1">
+        <title type="incomplete" ref="LIT4952History"/>
+        <note>Extends till <persName ref="PRS5616IyasuI"/></note>
+    </msItem>
+    <msItem xml:id="p1_i14.2" corresp="#h5">
+        <title type="incomplete" ref="LIT4952History"/>
+        <note>Starting from <persName ref="PRS10303Yekunno"/> till
+        <persName ref="PRS5616IyasuI"/> the text is written in another hand.
+        </note>
+    </msItem>
+    <listRelation>
+         <relation
+          active="IVorlov20#UniProd1"
+          name="SdC:undergoesTransformation"
+          passive="IVorlov20#tr2"/>
+         <relation
+          active="IVorlov20#tr2"
+          name="SdC:produces"
+          passive="IVorlov20#UniProd3"/>
+         <relation
+          active="IVorlov20#tr2"
+          name="SdC:resultsIn"
+          passive="IVorlov20#UniCirc2"/>
+         <relation
+          active="IVorlov20#tr2"
+          name="SdC:hasTransformationModel"
+          passive="SdC:A2"/>
+         <relation
+          active="IVorlov20#UniProd3"
+          name="skos:exactMatch"
+          passive="IVorlov20#p1_i14.2"/>
+         <relation
+          active="IVorlov20#UniProd3"
+          name="SdC:constituteUnit"
+          passive="IVorlov20#UniCont5"/>
+         <relation
+          active="IVorlov20#UniProd3"
+          name="SdC:constituteUnit"
+          passive="IVorlov20#UniMain5"/>
+    </listRelation>
+</msItem>
+                      </egXML>
+<p>The encoder had already structured the information about the content of the manuscript in
+  a series of nested <gi>msItem</gi>s and the information given by the cataloguer
+  is in a <gi>note</gi>. This would be already sufficient and serve well enough the users.
+  </p
+  ><p>In this example, since we do not know the order
+  in which the two additions of contents without material support
+  of which the cataloguer and the encoder speak, occurred,
+  I have not stated an explicit equation with the main identifier of
+  the manuscript, as we would normally do, to say that the
+  final UniCirc (circulation unit) corresponds to that final stage.
+  This is to say that we know that the manuscript being described is the
+      latest available unit of circulation, but
+      we do not know in which relation it
+      is with the units of circulation resulting
+      from each transformation. We also
+      do not know if the two additions in question are part
+      of a same action, so we have to consider them distinct for the moment.
+     </p>
+  <p>
+      I made instead two statements about the resulting UniCirc with
+      each addition, one of which can be seen in the example above at line 23.
+      The URI of the manuscript, as well as the UniCirc2 and UniCirc1 URIs
+      defined in these sets of triples will be all in the class of
+      circulation units, but we are not stating
+      which one come first and which one come after since we do not yet know.
+The numeric part of the UniCirc identifier has no
+ sequential value and is totally arbitrary, although it should be of course unique.
+ In the same way the UniProd anchors are set there and will become <term>URI</term>s
+in the RDF, but are here defined for the first time.</p>
+
+        </div>
+                <div type="level2">
+                  <p>Now that most probably nothing of
+                    this made sense to you, go read the book (that is really important!),
+                  then you can probably figure out much better who the ontology does not
+                  change much compared to that and you canuse its values here.</p>
+                  <p>Once you have an idea of the stratigraphy of your manuscript than it can most certainly be translated
+                    in a series of statements of the kind above and be formally described in this way.</p>
+                  <p>In this case the visualizations in the website are supposed
+                    to help you also in the process, by offering the table visualization and some graphs.</p>
+                    <p>So, try it out! and if you are not sure, drop an issue in the repo and we will be all happy to help.</p>
+
+                </div>
+      </body>
+   </text>
+</TEI>

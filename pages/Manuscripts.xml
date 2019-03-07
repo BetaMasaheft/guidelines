@@ -29,7 +29,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <p>Reading of the
             <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html">TEI
     guidelines for manuscript description</ref> is highly recommended.
-            Regarding the structure of simple and composite manuscripts, they also state in <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mspt">Manuscript Parts</ref> 
+            Regarding the structure of simple and composite manuscripts, they also state in <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mspt">Manuscript Parts</ref>
             <cit><quote>Since each
     component of such a composite manuscript will in all likelihood have
     its own content, physical description, history, and so on, the
@@ -53,7 +53,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     the Ms where the unit is now. Please, do not confuse this with cases
     where leaves or quires are lost.</p>
          </div>
-         
+
          <div type="level2">
             <head>Manuscript Encoding: Overview</head>
             <list>
@@ -61,6 +61,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <item><ref target="identifiersStructure">Structure of the Identifiers in a Manuscript record</ref></item>
                <item><ref target="manuscriptDescription">Description of the Manuscript</ref></item>
                <item><ref target="text-encoding">Text encoding</ref></item>
+               <item><ref target="syntaxe">Stratigraphic description (La Syntaxe du Codex)</ref></item>
                <item><ref target="images">Images</ref></item>
                <item><ref target="inscriptions">Inscriptions</ref></item>
                <item><ref target="letters">Letters</ref></item>
