@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>TEI</title>
+            <title>La Syntaxe du Codex</title>
             <author>Pietro Liuzzo</author>
          </titleStmt>
          <publicationStmt>
@@ -21,7 +21,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body xml:id="syntaxe">
-         <head>La Syntaxe du Codex</head>
          <p>Describing the stratigrapy
            following <hi rendition="simple:italic">La Syntaxe du Codex.
              Essai de codicologie structurale</hi>
