@@ -109,6 +109,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               <relation name="skos:broadMatch" active="NAR0001gwelt" passive="bm:LandGrant"/>
           </egXML>
           <p>This will state an association between any Land donation which has been identified with a specific Narrative Unit, with a type. It can indeed be a many to many kind of relationship, so that you can state if relevant.</p>
+<p>This is preferred compared to the use of a keyword in this case because a narrative unit would not support the definition of its content which is loose by definition.</p>
         </div>
 </div>
         </body>
