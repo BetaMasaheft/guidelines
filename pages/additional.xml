@@ -26,7 +26,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
       <p>This is used for any <hi rendition="simple:bold">other</hi> information related to the
         manuscript, such as bibliographic references. Especially important is the <tag>listBibl type="catalogue"</tag> which contains
-        the main catalogue references on which the record is based. This information is also retrieved for the <ref type="bm" target="/catalogues/list">catalogue view</ref>.
+        the main catalogue references on which the record is based. This information is also retrieved for
+        the <ref type="bm" target="/catalogues/list">catalogue view</ref>.
+        See the example below and <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aadditional">click here for all available examples</ref>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
           <additional>
             <adminInfo>
@@ -49,9 +51,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </adminInfo>
           </additional>
         </egXML>
-<ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aadditional">click here for more examples</ref>      </p>
+      </p>
 
-      <p>For custodial history events use <gi>custEvent</gi> with <att>subtype</att> with one of the suggested values from the corresponding taxonomy.
+      <p>For custodial history events use <gi>custEvent</gi> with <att>subtype</att>
+      with one of the suggested values from the corresponding taxonomy.
 
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <custodialHist>
