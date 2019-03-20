@@ -25,7 +25,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body xml:id="persons">
-         <p>This record contains information about a single individual, including
+         <p>This page contains information about how to encode information about a single individual, including
 names, occupation, nationality, birth, death, residence, etc.</p>
          <p>It can be expanded with much more information, following TEI
 guidelines for
@@ -33,6 +33,7 @@ guidelines for
                person
             </ref>
          </p>
+         <p>For the encoding of groups of persons see, <ref target="groups">groups</ref>.</p>
          <p>The elements of a person's record constitute in their entirety a brief biographical sketch of the record's subject. It is therefore not necessary to 
          limit the description of the person's life to a single element. Instead, all information should be encoded at the appropriate place in the record, 
          for example <gi>birth</gi>, <gi>death</gi> or <gi>floruit</gi>.</p>
