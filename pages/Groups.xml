@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Groups</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+          </publicationStmt>
+         <sourceDesc>
+            <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+            <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+         </sourceDesc>
+      </fileDesc>       
+      <revisionDesc>      
+         <change who="DR" when="2019-03-20">Split from persons page</change> 
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="groups">
+         <p>The basic rules for the encoding of <ref target="persons">persons</ref> also apply to the encoding of groups of persons.</p>
+      
+         <div type="level1">
+            <head>Groups of Persons</head>
+            <p>For distinct groups of people as an abstract notion (so a
+  "specific group of monks", but not "friary" or
+  "family") we use a record in TEI which is the same as that
+  for a person, but contains a <gi>personGrp</gi> in the
+  <gi>listPerson</gi>, with the <gi>persNames</gi> of the group. Relations should then be
+  used to provide evidence for members of this group, which can be fixed
+  or flexible. The members of the group can be indicated in the group
+  record by using snap:Group, however, it is sufficient to include the
+  relation saws:isMemberOf in each individual person record of members
+  of the group.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<listPerson>
+            <personGrp>
+               <persName xml:lang="gez" xml:id="n1">ደቂቀ፡ ኤዎስጣቴዎስ፡</persName>
+               <persName xml:lang="gez" type="normalized" corresp="#n1">daqiqa ʾEwosṭātewos</persName>
+               <persName xml:lang="en">ʾEwosṭāteans</persName>
+               <floruit notBefore="1300" precision="medium">The ʾEwostāteans are a religious movement and network of monasteries going back to <persName ref="PRS3932Ewostate"/>. They originated
+                  in Eastern <placeName ref="LOC6569Tegray"/> and were widely involved in the Christianization of the Northern Ethiopian provinces in the <date>14th and 15th century</date>.
+               </floruit>
+            </personGrp>
+         </listPerson>
+</egXML>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+ <relation name="saws:isMemberOf"
+                         active="PRS11228Yaeqob"
+                         passive="PRS11207Ewostateans"/>
+</egXML>
+            <p>Members of the group should have a relation saws:isMemberOf linking
+  to the group record. This is valid for example for monks belonging to
+  the orders of Takla Hāymānot, Sāmuʾel of Waldəbbā or ʾEwosṭātewos. In
+  a similar way, various bodies of military regiments are also be
+  represented:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+ <persName xml:lang="gez" xml:id="n1">ቊርባን፡</persName>
+</egXML>
+            <p>Qʷurbān</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <listPerson>
+               <personGrp>
+                <occupation type="military">guarding the king</occupation>
+               <floruit notBefore="1563" notAfter="1607">They were a distinct household troops of King
+              <persName ref="Śarḍa Dǝngǝl">Śarḍa Dǝngǝl</persName>.</floruit>
+            </personGrp>
+            <listRelation>
+                <relation name="lawd:hasAttestation"
+                    active="PRS11801Qurban"
+                    passive="LIT3951ChronSusenyos"/>
+            </listRelation>
+        </listPerson>
+</egXML>
+
+            <p/>
+         </div>
+      </body>
+   </text>
+</TEI>
