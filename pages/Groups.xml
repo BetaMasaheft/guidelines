@@ -20,6 +20,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </fileDesc>       
       <revisionDesc>      
          <change who="DR" when="2019-03-20">Split from persons page</change> 
+         <change who="DR" when="2019-03-20">Added links, reformulated</change> 
       </revisionDesc>
    </teiHeader>
    <text>
@@ -30,13 +31,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <head>Groups of Persons</head>
             <p>For distinct groups of people as an abstract notion (so a
   "specific group of monks", but not "friary" or
-  "family") we use a record in TEI which is the same as that
-  for a person, but contains a <gi>personGrp</gi> in the
+  "family") we create a TEI file, which has the same structure as that for a person, but contains a <gi>personGrp</gi> in the
   <gi>listPerson</gi>, with the <gi>persNames</gi> of the group. Relations should then be
   used to provide evidence for members of this group, which can be fixed
   or flexible. The members of the group can be indicated in the group
-  record by using snap:Group, however, it is sufficient to include the
-  relation saws:isMemberOf in each individual person record of members
+  record by using a <gi>relation</gi> with value snap:Group for the <att>name</att>, however, it is sufficient to include the
+               relation <gi>relation</gi> with value saws:isMemberOf for the <att>name</att> in each individual person record of members
   of the group.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <listPerson>
@@ -55,10 +55,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                          active="PRS11228Yaeqob"
                          passive="PRS11207Ewostateans"/>
 </egXML>
-            <p>Members of the group should have a relation saws:isMemberOf linking
+            <p>Members of the group should have a <gi>relation</gi> with value saws:isMemberOf for the <att>name</att>, linking
   to the group record. This is valid for example for monks belonging to
-  the orders of Takla Hāymānot, Sāmuʾel of Waldəbbā or ʾEwosṭātewos. In
-  a similar way, various bodies of military regiments are also be
+  the orders of <ref target="PRS11208HouseTakla" type="bm">Takla Hāymānot</ref>, <ref type="bm" target="PRS11232HouseSam">Sāmuʾel of Waldəbbā</ref> or <ref target="PRS11207Ewostateans" type="bm">ʾEwosṭātewos</ref>. In
+  a similar way, various bodies of military regiments can also be
   represented:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
  <persName xml:lang="gez" xml:id="n1">ቊርባን፡</persName>
