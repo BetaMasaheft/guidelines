@@ -366,7 +366,7 @@ from wikidata (Ethiopia) and assigned the second <att>corresp</att> and the ID
 with P</p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <creation corresp="#t2arabic #Ptest" when="1238-09" >
-<placeName ref="Q115" xml:id="Ptest"></placeName>
+<placeName ref="wd:Q115" xml:id="Ptest"></placeName>
 </creation>
 </egXML>
 <p>this sounds like a dirty hack to get it working... and it is!</p>

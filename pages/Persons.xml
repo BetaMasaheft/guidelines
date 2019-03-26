@@ -18,9 +18,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
       </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
-         <change who="DR" when="2018-05-23">Added title priorities</change> 
-         <change who="DR" when="2018-07-06">Added use of floruit</change> 
-         <change who="DR" when="2019-03-20">Split groups, added information on person types</change> 
+         <change who="DR" when="2018-05-23">Added title priorities</change>
+         <change who="DR" when="2018-07-06">Added use of floruit</change>
+         <change who="DR" when="2019-03-20">Split groups, added information on person types</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -34,8 +34,8 @@ guidelines for
             </ref>
          </p>
          <p>For the encoding of groups of persons see, <ref target="groups">groups</ref>.</p>
-         <p>The elements of a person's record constitute in their entirety a brief biographical sketch of the record's subject. It is therefore not necessary to 
-         limit the description of the person's life to a single element. Instead, all information should be encoded at the appropriate place in the record, 
+         <p>The elements of a person's record constitute in their entirety a brief biographical sketch of the record's subject. It is therefore not necessary to
+         limit the description of the person's life to a single element. Instead, all information should be encoded at the appropriate place in the record,
          for example <gi>birth</gi>, <gi>death</gi> or <gi>floruit</gi>.</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <text>
@@ -71,13 +71,13 @@ guidelines for
    </text>
 </egXML>
 
-         
+
          <div type="level1">
             <head>Names and roles</head>
-            
+
             <div type="level2">
                <head>Encoding of personal names</head>
-               
+
                <p>We usually assign <val>n1</val> to the standard name in Fidal, and point with <att>corresp</att> to that for transliteration and translations of the same.</p>
                <p>Other <gi>persName</gi>s will have other IDs, which can be anything which is a valid <att>xml:id</att> but better if the are in the format 'n\d+'.</p>
                <p>If you want to add a typical spelling which is used to search a name,
@@ -89,9 +89,9 @@ guidelines for
                   <persName xml:id="n1" xml:lang="gez">ማርያም፡</persName>
                   <persName xml:lang="gez" corresp="#n1" type="normalized">Māryām</persName>
                   <persName xml:lang="en" corresp="#n1" type="main">Mary</persName>
-                  
+
                </egXML>
-               
+
                <p>
                   This is of course redundant when the <gi>persName</gi> you assign this attribute would be already the one picked by the titles rules, which are in order of
                   priority:
@@ -105,32 +105,32 @@ guidelines for
                </p>
                <p>Changing the IDs to arrive at a certain visualization is deceptory as in the following example, where </p>
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <person sex="1" sameAs="Q671055">
+                  <person sex="1" sameAs="wd:Q671055">
                      <persName xml:lang="en" xml:id="n1" type="main">Cyprian of Antioch</persName>
                      <persName xml:lang="gez" xml:id="n2">ቆጵርያኖስ፡</persName>
                      <persName xml:lang="gez" corresp="#n2" type="normalized">Qoṗrǝyānos</persName>
                   </person>
                </egXML>
-               
+
                <p>The correct way to do this is</p>
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <person sex="1" sameAs="Q671055">
+                  <person sex="1" sameAs="wd:Q671055">
                      <persName xml:lang="gez" xml:id="n1">ቆጵርያኖስ፡</persName>
                      <persName xml:lang="gez" corresp="#n1" type="normalized">Qoṗrǝyānos</persName>
                      <persName xml:lang="en" xml:id="n2" type="main">Cyprian of Antioch</persName>
                   </person>
                </egXML>
                <p>which will print in the application 'Cyprian of Antioch' instead of the usual first candidate 'Qoṗrǝyānos', the normalized transcription of the name in Fidal.</p>
-               
+
                <p>
-                  Sometimes it is difficult to distinguish between the birth name and given name. 
-                  The name given at the time of birth, is encoded as the a <gi>persName</gi> with an attribute <att>type</att> with value <val>birth</val>. 
+                  Sometimes it is difficult to distinguish between the birth name and given name.
+                  The name given at the time of birth, is encoded as the a <gi>persName</gi> with an attribute <att>type</att> with value <val>birth</val>.
                   However, there are exceptions where a person has been forced to change his or her birth name to another name for various reasons.
-                  In this case a new name should be given to a person  with <att>type</att>=<val>given</val>. 
-                  In our person records there are persons who have both a birth name and a given name. 
-                  Here a typical example is a woman named  <ref target="PRS2170AsterGa" type="bm">Aster Gānnoo</ref>, who was an Oromo pioneer working 
-                   on the translation of the Bible into Oromo. Her Oromo name, 
-                  which she had got from her parents, was called ሰልባን፡ but later she changed her name to አስቴር፡. In this case, we mark ሰልባን፡ as birth name where as አስቴር፡ as a given name. 
+                  In this case a new name should be given to a person  with <att>type</att>=<val>given</val>.
+                  In our person records there are persons who have both a birth name and a given name.
+                  Here a typical example is a woman named  <ref target="PRS2170AsterGa" type="bm">Aster Gānnoo</ref>, who was an Oromo pioneer working
+                   on the translation of the Bible into Oromo. Her Oromo name,
+                  which she had got from her parents, was called ሰልባን፡ but later she changed her name to አስቴር፡. In this case, we mark ሰልባን፡ as birth name where as አስቴር፡ as a given name.
                   Please note that in cases where the name type is not known for certain, it not necessary to specify it.</p>
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <persName xml:lang="gez" xml:id="n1" type="given">አስቴር፡ ጋኖ፡</persName>
@@ -139,11 +139,11 @@ guidelines for
                   <persName xml:lang="gez" corresp="#n2" type="normalized">ʾAster Gano</persName>
                   <persName xml:lang="gez" xml:id="n3" type="birth">ሰልባን፡ ጋኖ፡</persName>
                   <persName xml:lang="gez" corresp="#n3" type="normalized">Salbāān Gānnoo</persName>
-                  
+
                </egXML>
-               
+
             </div>
-            
+
          <div type="level2">
             <head>Surname and Forename</head>
             <p>Use <gi>surname</gi> and <gi>forename</gi> only for European names. For other names
@@ -156,7 +156,7 @@ guidelines for
   should be used. "Saint" as a title should be spelled with a
   capital and can be abbreviated St (without dot)</p>
          </div>
-            
+
          <div type="level2">
             <head>Role</head>
             <p>If the name contains a role, please tag it as
@@ -171,7 +171,7 @@ guidelines for
             <p>Please note that <gi>roleName</gi> always has to be
   encoded within <gi>persName</gi> for indexing and consistency purposes.</p>
          </div>
-            
+
          <div type="level2">
             <head>Epithet</head>
             <p>Epithets should be recorded as
@@ -188,7 +188,7 @@ guidelines for
 <persName xml:lang="gez" corresp="#MadhaneAlam">Madḫāne ʿĀlam</persName>
 </egXML>
          </div>
-            
+
          <div type="level2">
             <head>Unknown or incomplete names</head>
             <p>If the name of a person is only partly attested in a manuscript,
@@ -201,7 +201,7 @@ guidelines for
   correctness.</p>
          </div>
          </div>
-         
+
          <div type="level1">
             <head>Commemoration</head>
             <p>For Saints you might wish to record the commemoration dates. Please
@@ -210,10 +210,10 @@ guidelines for
                <note type="commemoration"><date type="diesNatalis">5 Maskaram</date></note>
             </egXML>
          </div>
-         
+
          <div type="level1">
             <head>Further information about the person</head>
-            
+
             <div type="level2">
                <head>Period of activity</head>
             <p><gi>floruit</gi> contains the date of the major active years of the record's subject. The paragraphical information given in <gi>floruit</gi> does not aim at describing
@@ -221,24 +221,24 @@ guidelines for
             their appointment and death or replacement. See for example <ref target="PRS1083AbbayHa" type="bm">ʾAbbāy Habta Ṣǝyon</ref>:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <birth when="1869"/>
-            <floruit notBefore="1889" notAfter="1914">He was among the last notables of 
+            <floruit notBefore="1889" notAfter="1914">He was among the last notables of
                <placeName ref="LOC3764Hamase"/>
-               to hold the office of <persName ref="PRS1083AbbayHa"><roleName type="title">baḥǝra nagāš</roleName></persName>. 
-               He was officially promoted by the Italians, he inherited the office from his uncle 
-               <persName ref="PRS4907Gwerade"/>. The decline of this office lead to the loss of effective executive power, but ʾAbbāy  became the spokesperson and the head 
-               of the indigenous population of  <placeName ref="LOC1579Asmara"/>, concentrated in its old quarters. 
-               It seems that thanks to his services the relationships with the 
+               to hold the office of <persName ref="PRS1083AbbayHa"><roleName type="title">baḥǝra nagāš</roleName></persName>.
+               He was officially promoted by the Italians, he inherited the office from his uncle
+               <persName ref="PRS4907Gwerade"/>. The decline of this office lead to the loss of effective executive power, but ʾAbbāy  became the spokesperson and the head
+               of the indigenous population of  <placeName ref="LOC1579Asmara"/>, concentrated in its old quarters.
+               It seems that thanks to his services the relationships with the
                Italian colonial administration, tense from time to time, stayed harmonious on the whole.</floruit>
             <death when="1914">He died at <placeName ref="LOC1579Asmara"/> in <date>1914</date>. </death>
             </egXML>
             </div>
-            
+
             <div type="level2">
                <head>Faith</head>
             <p>For <gi>faith</gi>, the values
                for <att>type</att> can be used, considering their definition. If the faith of a person is not known, it is preferable not to encode it.</p>
             </div>
-            
+
             <div type="level2">
                <head>Occupation</head>
             <p>
@@ -251,26 +251,26 @@ guidelines for
       should be restricted to scholars involved in the study of
       Ethiopian manuscripts. All persons whose records contain
       <tag>occupation type="academic"</tag>
-                     are displayed on <ref target="https://betamasaheft.eu/academics.html">this page</ref>. 
+                     are displayed on <ref target="https://betamasaheft.eu/academics.html">this page</ref>.
                   </p>
-               <p>Similarily, <tag>occupation type="ruler"</tag> refers specifically to a head of state or government (queen, king, president, prime minister etc.). 
-                  Therefore,  <tag>occupation type="ruler"</tag> is used for all Ethiopian kings, while <tag>occupation type="political"</tag> 
+               <p>Similarily, <tag>occupation type="ruler"</tag> refers specifically to a head of state or government (queen, king, president, prime minister etc.).
+                  Therefore,  <tag>occupation type="ruler"</tag> is used for all Ethiopian kings, while <tag>occupation type="political"</tag>
                   refers to persons whose occupation belongs to the category of politics, whether they are rulers
                   (e.g., governor of a province), courtiers or occupy other political posts.
                   <tag>occupation type="political"</tag> therefore also includes the various occupations of civil offices of the Christian kingdom of Ethiopia.
                </p>
-               
+
                <p>Try to limit the use of
       <gi>occupation</gi> to actual occupations, otherwise use person types keywords.
       If you are unsure about whether some information on a person
       should be added in <gi>occupation</gi>, please open
-      a new issue. 
+      a new issue.
       </p>
                </div>
-            
+
             <div type="level2">
                <head>Person types</head>
-               <p>Generic information about types of persons which are not occupations, such as "saint" or "angel" are encoded with keywords. 
+               <p>Generic information about types of persons which are not occupations, such as "saint" or "angel" are encoded with keywords.
                   If you would like to add new person type keywords, or are unsure about whether to
                   encode an information as a person type keyword or occupation, please open a new issue.</p>
 
@@ -282,15 +282,15 @@ guidelines for
 </textClass>
 </egXML>
             </div>
-           
-         
+
+
          </div>
          <div type="level1">
             <head>Wikidata</head>
             <p>Use <att>sameAs</att> inside <gi>person</gi> to declare the authority file. Prefer
   Wikidata if an item is present, otherways use VIAF.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<person sex="1" sameAs="Q302">
+<person sex="1" sameAs="wd:Q302">
 <persName xml:lang="gez" xml:id="n1">ኢየሱስ፡ ክርስቶስ፡</persName>
 </person>
 </egXML>
@@ -353,7 +353,7 @@ active="PRS4585Georgeo"
 passive="LIT1455GadlaG"/>
 </egXML>
          </div>
-   
+
       </body>
    </text>
 </TEI>

@@ -97,7 +97,7 @@ guidelines for
   Wikidata IDs in the text, e.g.
 </p>
   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-    <placeName ref="Q649"/>
+    <placeName ref="wd:Q649"/>
     </egXML>
   <p> and in an eventually already existing place record or repository record, you can use the same wikidata values
     as follows in the same way as above for <gi>settlement</gi>, <gi>region</gi> and <gi>country</gi>.</p>
@@ -105,8 +105,8 @@ guidelines for
               <place type="city" sameAs="Q649">
               <placeName xml:id="n1" xml:lang="ru">Москва</placeName>
               <placeName corresp="#n1" xml:lang="en">Moscow</placeName>
-              <country ref="Q159"/>
-              <region ref="Q649"/>
+              <country ref="wd:Q159"/>
+              <region ref="wd:Q649"/>
               </place>
 </egXML>
 <p>You are not allowed to add a <att>ref</att> in <gi>placeName</gi> or <gi>persName</gi> in a person or place record (it would not make that much sense either).</p>
@@ -116,7 +116,7 @@ guidelines for
   the authority file. Prefer Wikidata if an item is present, otherwise
   use geonames.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-               <place type="region" sameAs="Q2894614">
+               <place type="region" sameAs="wd:Q2894614">
                   <placeName xml:lang="gez" xml:id="n1">ወገራ፡</placeName>
                   <placeName xml:lang="gez" corresp="#n1" type="normalized">Wagarā</placeName>
             </place>

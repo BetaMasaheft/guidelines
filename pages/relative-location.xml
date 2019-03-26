@@ -30,7 +30,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     quantity of the distance if you can and want to.</p>
          <p>example:</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<place type="port" sameAs="Q378940">
+<place type="port" sameAs="wd:Q378940">
                <placeName>Adulis</placeName>
                <location type="relative" source="#FattovichMunro"><desc>20 stades from the actual port</desc></location>
             <listBibl type="secondary">
