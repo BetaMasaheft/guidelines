@@ -17,7 +17,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
                 <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
             </sourceDesc>
-        </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+        </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     
+            <change who="DR" when="2019-01-11">Added link to Identifiers page</change>     </revisionDesc>
     </teiHeader>
     <text>
         <body xml:id="structure">
@@ -41,7 +42,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <gi>additional</gi>.</p>
     <p>The order for these elements should be for simple manuscripts:
         <list>
-            <item><gi>msIdentifier</gi>, see below</item>
+            <item><gi>msIdentifier</gi>, see <ref target="identifiersStructure"/></item>
             <item> <gi>msContents</gi></item>
             <item><gi>physDesc</gi></item>
             <item><gi>history</gi></item>
@@ -61,7 +62,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <list type="unordered">
         <item>
             <p>
-                <gi>msIdentifier</gi>, see below</p>
+                <gi>msIdentifier</gi></p>
         </item>
         <item>
             <p>
