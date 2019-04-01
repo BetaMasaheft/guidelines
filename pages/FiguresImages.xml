@@ -43,7 +43,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   <head>Linking images to the description</head>
   <div type="level2">
   <head>locus in manuscript records</head>
-  <p><ref target="images"/>.</p>
+  <p><ref target="images">See page on images</ref>.</p>
 </div>
 <div type="level2">
 <head>locus in other entities</head>
@@ -55,7 +55,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 </div>
 <div type="level1">
 <head>pb</head>
-<p><ref target="edition-images"/>.</p>
+<p><ref target="edition-images">See page on linking images to the edition of the text</ref>.</p>
 </div>
 </div>
     </body>
