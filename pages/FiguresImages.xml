@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Figures and Links to Images</title>
+        <author>Pietro Liuzzo</author>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Originally encoded in XML</p>
+      </sourceDesc>
+    </fileDesc>
+    <revisionDesc>
+      <change who="PL" when="2019-04-01">Drafted page</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body xml:id="FiguresImages">
+    <div type="level1">
+    <head>Adding a figure directly to your descriptions</head>
+    <p></p>
+    <p>You can link images or portions of images published by the project simply using the element <gi>figure</gi> and <gi>graphic</gi>
+    adding in the <att>url</att> of the latter the relative path to the image on the server.</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+    <figure>
+        <graphic
+            xml:id="g1"
+            url="KAE/011/KAE-011__005.tif">
+            <desc>Caption of the image</desc>
+        </graphic>
+    </figure>
+    </egXML>
+    <p>Please, note that adding an image in these guidelines is slightly different as it requires an absolute reference to the info.json, which is not needed here.</p>
+  </div>
+  <div type="level1">
+  <head>Linking images to the description</head>
+  <div type="level2">
+  <head>locus in manuscript records</head>
+  <p><ref target="images"/>.</p>
+</div>
+<div type="level2">
+<head>locus in other entities</head>
+<p>Add a <att>corresp</att> with the ID of the manuscript to which you are referring.</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+<locus corresp="EMML3031" target="#103a"/>
+</egXML>
+<p>If this has a <att>facs</att> then also the image viewer will become available on click.</p>
+</div>
+<div type="level1">
+<head>pb</head>
+<p><ref target="edition-images"/>.</p>
+</div>
+</div>
+    </body>
+  </text>
+</TEI>
