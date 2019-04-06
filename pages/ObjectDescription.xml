@@ -22,6 +22,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <change who="PL" when="2018-04-24">stub of page</change>
             <change who="DR" when="2018-06-12">Added mistara example</change>
             <change who="DR" when="2018-07-06">Added paragraph on scroll strips</change>
+            <change who="DR" when="2019-04-05">Updated foliation paragraph with real examples</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -115,28 +116,38 @@ taken from <locus target="#6r"/>.
             <div type="level2">
                 <head>Foliation</head>
                      <p>You might also use <gi>foliation</gi> with
-            a list of items in it to describe different numbering
-            systems used.</p>
+            a list of <gi>item</gi>s in it to describe different numbering
+            systems used. If more than one foliation system is described, it might be useful to indicate which one is followed in the record, as in this example from 
+            <ref target="DSEthiop2"/>:</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<foliation>
-<list>
-<item xml:id="fol1">
-    <locus from="1r" to="98v"/>
-    arabic numbers on the top right corner
-</item>
-
-<item xml:id="fol2">
-    <locus from="1r" to="45v"/>
-    ethiopic numbers on the left right corner
-</item>
-
-<item xml:id="fol3">
-    <locus from="1r" to="102v"/>
-    quire numbers on the bottom right
-</item>
-</list>
-</foliation>
+                         <foliation>
+                             <list>
+                                 <item xml:id="fol1">
+                                     <locus from="ir" to="84v"/>
+                                     Foliation in pencil in Eastern Arabic numerals  in the lower right corner, from <q xml:lang="ar">١</q> on
+                                     <locus target="#ir"/> until <q xml:lang="ar">٨٦</q> on <locus target="#84r"/>.
+                                 </item>
+                                 
+                                 <item xml:id="fol2" resp="DN DR">
+                                     <locus from="ir" to="84v"/>
+                                     Foliation in pencil in the middle of the bottom margin of the folio. This is the foliation used as reference in this record.
+                                 </item>
+                             </list>
+                         </foliation>
 </egXML>
+                
+                <p>If necessary, it is also possible to refer to more than one foliation in the <gi>msItems</gi> by adding several <gi>locus</gi>
+                    with <att>corresp</att> having the values of the respective <att>xml:id</att>s indicated in <gi>foliation</gi>, as in  <ref target="BNFabb66A"/>:
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <msItem xml:id="ms_i1.1.7.2">
+                        <locus from="6va" to="7vb" corresp="#fol1"/>
+                        <locus from="213ra" to="213vb" corresp="#fol1"/>
+                        <locus from="6va" to="8vb" corresp="#fol2"/>
+                        <title type="complete" ref="LIT4032SenkessarS#Mask7Sawiryanos"/>
+                        <textLang mainLang="gez"/>
+                    </msItem>
+                    </egXML>
+                </p>
             </div>
 
             <div type="level2">
