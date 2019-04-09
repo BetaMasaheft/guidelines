@@ -20,7 +20,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
          <revisionDesc>
            <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
-             <change who="DR" when="2019-04-09">Added paragraph on EMML/EMIP repositories</change>
          </revisionDesc>
     </teiHeader>
     <text>
@@ -45,19 +44,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <altIdentifier>
                             <idno>Rüpp. II, 3</idno>
                         </altIdentifier>
-                    </msIdentifier>
-                </egXML>
-                <p>Though <ref target="INS0004HMML" type="bm">HMML</ref> and <ref target="INS0447EMIP" type="bm">EMIP</ref> are currently indicated for practical reasons
-                    as the repositories of 
-                    most manuscripts photographed in these collections, these do no constitute actual repositories. In the course of editing these manuscripts, it is therefore advisable to 
-                    substitute these IDs by the manuscripts' real repositories. The reference to <ref target="INS0332EMML" type="bm">EMML</ref> and <ref target="INS0447EMIP" type="bm">EMIP</ref>
-                should remain in <gi>collection</gi>, and all shelfmarks should of course be given in <gi>altIdentifier</gi>s, as in this example from
-                <ref type="bm" target="EMML6952"/>:</p>
-                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                    <msIdentifier>
-                        <repository ref="INS0912BetaGabreel"/>
-                        <collection>Ethiopian Manuscript Microfilm Library</collection>
-                        <idno>EMML no. 6952</idno>
                     </msIdentifier>
                 </egXML>
             </div>
