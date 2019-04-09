@@ -18,12 +18,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
       </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
-         <change who="DR" when="2018-12-07">Updated issue link, added link to TEI guidelines</change></revisionDesc>
+         <change who="DR" when="2018-12-07">Updated issue link, added link to TEI guidelines</change>
+         <change who="DR" when="2019-04-09">Added before creating a manuscript record paragraph</change></revisionDesc>
   </teiHeader>
   <text>
       <body xml:id="manuscripts">
           <p>Any manuscripts referenced in our records should have at least a minimal record. To create such a minimal record for referencing
              use the form to <ref target="newEntry">create new items</ref> in the Beta maṣāḥǝft website.</p>
+         
+         <div type="level2">
+            <head>Before creating a manuscript record</head>
+            <p>Before creating a manuscript record, as for all entities, it is important to check whether it already exists! It is better not to check only the repository folder in 
+               which you would expect it in GitHub, but to
+                <ref target="https://betamasaheft.eu/as.html">search</ref> for the manuscript's shelfmark or other identifiers on the app as well.
+               Remember that particularly records for EMML and EMIP manuscripts might have already been created within their actual repository and vice versa.</p>
+         </div>
+               
+               
          <div type="level2">
             <head>Manuscript Structure: Use of <gi>msDesc</gi>, <gi>msPart</gi> and <gi>msFrag</gi></head>
          <p>Reading of the
