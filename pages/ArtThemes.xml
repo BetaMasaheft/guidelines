@@ -18,19 +18,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
       </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change> 
-         <change who="DR" when="2018-05-02">Updated examples and fixed links</change> </revisionDesc>
+         <change who="DR" when="2018-05-02">Updated examples and fixed links</change>
+         <change who="DR" when="2019-04-10">Included clarifications on art themes and caption encoding from issue 954, encoded lists,
+         added paragraph on relations</change></revisionDesc>
    </teiHeader>
    <text>
+      
       <body xml:id="artThemes">
+         
          <div type="level1">
             <head>Getting Started</head>
             <p>Each Art Theme gets a file with an ID assigned (= ATID). Before creating a new
   ATID make sure it does not already exist, if
   you create the file on the app make sure you:
-  <hi rendition="simple:bold">a)</hi> add the ID to the taxonomy in the
-  Art Themes section; <hi rendition="simple:bold">b)</hi> create a new
-  file and save it in new; <hi rendition="simple:bold">c)</hi> commit
-  the newly created file.</p>
+ <list><item><p>a) add the ID to the taxonomy in the
+  Art Themes section;</p> </item>
+ <item> <p>b) create a new
+  file and save it in new;</p> </item>
+  <item><p>c) commit
+  the newly created file.</p></item></list></p>
             <p>The ID should be concise, and should ideally allow identification
   of Theme/Object:</p>
             <list type="unordered">
@@ -40,14 +46,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </item>
             </list>
          </div>
+         
          <div type="level1">
             <head>Title</head>
             <p>For the title of the work, when possible:
-  <hi rendition="simple:bold">a)</hi> include most common definition in
-  British English; <hi rendition="simple:bold">b)</hi> include Ge'ez
-  title; <hi rendition="simple:bold">c)</hi> consider including
+  <list>
+     <item>
+        <p>a) include most common definition in
+  British English;</p>
+     </item> 
+  <item>
+     <p>b) include Ge'ez
+  title;</p>
+  </item> 
+  <item>
+     <p>c) consider including
   alternative titles used in principal art projects (e.g. ICONCLASS,
-  Artstor, Index of Christian Art). Minimally, it has to contain an English title:</p>
+  Artstor, Index of Christian Art).</p>
+  </item> 
+  </list>
+  Minimally, it has to contain an English title:</p>
             <p>Ex. 1</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <titleStmt>
@@ -55,15 +73,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 </titleStmt>
 </egXML>
          </div>
+         
          <div type="level1">
             <head>Description</head>
             <p>Each ATID should contain a brief description
-  outlining its subject-matter and principal recurring features. If more
+               outlining its subject-matter and principal recurring features. This saves repeating information in the actual description of the manuscript, where details and variants should be encoded.
+               If more
   than one typology is attested for a particular art theme in the
   Ethiopian tradition, provide a brief description of the features of
   each typology.</p>
             <p>In addition to this basic information you may choose to provide
-  references to Work IDs that inform the content
+  references to person and work IDs that inform the content
   of the ATID (e.g The Crucifixion will include a
   reference to the Gospels) and/or, where possible, to the relevant
   passages of that work with <att>cRef</att>:
@@ -80,10 +100,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   description can be expanded to mention whether a theme type is
   attested in other traditions, in which case provide relevant
   bibliographic data.</p>
-            <p>Similarly, WorkIDs can be used to specify
+            <p>The presence and text of captions and legends should be encoded and ideally transcribed in the manuscript description, not in the Art Theme record, 
+               see <ref target="decorationDescription">decoration description</ref>.</p>
+          <!--  <p>Similarly, Work IDs can be used to specify
   the particular scene in a miniature with a generic
   ATID within a
-  <gi>decoNote</gi>.</p>
+               <gi>decoNote</gi>. <!-\-DR 2019-04-10 Doesn't this belong to <ref target="decorationDescription">decoration description</ref>? Do we have an example?-\-></p>-->
             <p>Ex. 2</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <abstract>
@@ -109,7 +131,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>
                <hi rendition="simple:bold">N.B.</hi> Typologies are encoded using
   keywords, see the
-               <ref target="authority-files"/> for further details.</p>
+               <ref target="authority-files">authority files</ref> for further details.</p>
             <p>Consider including relevant keywords (e.g. The Theme of the
   Crucifixion should contain keywords such as Bible; Crucifixion;
   Passion of Jesus; New Testament) to link it to other works
@@ -126,6 +148,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 </textClass>
 </egXML>
          </div>
+         
+         <div type="level1">
+            <head>Relations</head>
+            <p>As in all other records, a <gi>listRelation</gi> can be added to Art Theme records to to list specific relations between this and other records.
+               For the encoding of relations, see <ref target="relations">Relations</ref>.
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <listRelation>
+                  <relation name="ecrm:P129_is_about" active="AT1108MMDaqseyos" passive="LIT3586Miracle"/>
+               </listRelation>
+               </egXML>
+            </p>
+         </div>
+         
          <div type="level1">
             <head>Bibliography</head>
             <p>Lastly, please include at least a couple of references to the
