@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng" 
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -17,53 +17,54 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change> 
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
          <change who="DR" when="2018-05-02">Updated examples and fixed links</change>
          <change who="DR" when="2019-04-10">Included clarifications on art themes and caption encoding from issue 954, encoded lists,
          added paragraph on relations</change></revisionDesc>
    </teiHeader>
    <text>
-      
+
       <body xml:id="artThemes">
-         
+
          <div type="level1">
             <head>Getting Started</head>
             <p>Each Art Theme gets a file with an ID assigned (= ATID). Before creating a new
   ATID make sure it does not already exist, if
   you create the file on the app make sure you:
- <list><item><p>a) add the ID to the taxonomy in the
-  Art Themes section;</p> </item>
- <item> <p>b) create a new
-  file and save it in new;</p> </item>
-  <item><p>c) commit
-  the newly created file.</p></item></list></p>
+ <list>
+   <item>a) add the ID to the taxonomy in the
+  Art Themes section;</item>
+ <item>b) create a new
+  file and save it in new;</item>
+  <item>c) commit
+  the newly created file.</item></list></p>
             <p>The ID should be concise, and should ideally allow identification
   of Theme/Object:</p>
             <list type="unordered">
                <item>
-                  <p>Art Theme ID (ATID) = AT1005Crucifixion (AT + incremental
-      number + first word of Art Theme)</p>
+                  Art Theme ID (ATID) = AT1005Crucifixion (AT + incremental
+      number + first word of Art Theme)
                </item>
             </list>
          </div>
-         
+
          <div type="level1">
             <head>Title</head>
             <p>For the title of the work, when possible:
   <list>
      <item>
-        <p>a) include most common definition in
-  British English;</p>
-     </item> 
+        a) include most common definition in
+  British English;
+     </item>
   <item>
-     <p>b) include Ge'ez
-  title;</p>
-  </item> 
+     b) include Ge'ez
+  title;
+  </item>
   <item>
-     <p>c) consider including
+     c) consider including
   alternative titles used in principal art projects (e.g. ICONCLASS,
-  Artstor, Index of Christian Art).</p>
-  </item> 
+  Artstor, Index of Christian Art).
+  </item>
   </list>
   Minimally, it has to contain an English title:</p>
             <p>Ex. 1</p>
@@ -73,7 +74,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 </titleStmt>
 </egXML>
          </div>
-         
+
          <div type="level1">
             <head>Description</head>
             <p>Each ATID should contain a brief description
@@ -83,7 +84,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   Ethiopian tradition, provide a brief description of the features of
   each typology.</p>
             <p>In addition to this basic information you may choose to provide
-  references to person and work IDs that inform the content
+  references to person, places and textual units IDs that inform the content
   of the ATID (e.g The Crucifixion will include a
   reference to the Gospels) and/or, where possible, to the relevant
   passages of that work with <att>cRef</att>:
@@ -100,7 +101,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   description can be expanded to mention whether a theme type is
   attested in other traditions, in which case provide relevant
   bibliographic data.</p>
-            <p>The presence and text of captions and legends should be encoded and ideally transcribed in the manuscript description, not in the Art Theme record, 
+            <p>The presence and text of captions and legends should be encoded and ideally transcribed in the manuscript description, not in the Art Theme record,
                see <ref target="decorationDescription">decoration description</ref>.</p>
           <!--  <p>Similarly, Work IDs can be used to specify
   the particular scene in a miniature with a generic
@@ -114,10 +115,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <persName ref="PRS5695John">John</persName>, the scene typically follows the account of the
                      <ref type="work" corresp="LIT1560Gospel">Gospels</ref>, but  may include iconographic elements inspired by
                      apocryphal sources.
-                     
+
                      The three main typologies attested in the Ethiopian tradition are:
                      <list>
-                        <item>Type 1 <desc>There is an Empty Cross and there are figures associated with it 
+                        <item>Type 1 <desc>There is an Empty Cross and there are figures associated with it
                            (i.e. it is not just an interlaced cross).</desc>
                         </item>
                         <item>Type 2 <desc>The body of  Living Jesus is nailed to the cross.</desc>
@@ -148,7 +149,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 </textClass>
 </egXML>
          </div>
-         
+
          <div type="level1">
             <head>Relations</head>
             <p>As in all other records, a <gi>listRelation</gi> can be added to Art Theme records to to list specific relations between this and other records.
@@ -160,7 +161,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </egXML>
             </p>
          </div>
-         
+
          <div type="level1">
             <head>Bibliography</head>
             <p>Lastly, please include at least a couple of references to the
