@@ -88,12 +88,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <head>Cover</head>
        <p>In the
              <tag>decoNote type="Cover"</tag> you can describe the covering of the binding.
-             <!--If it covers only the spine and the back edge of the boards use the <att>key</att> quarterCover to encode it.-->
+             If it covers only the spine and the back edge of the boards use the <att>key</att> quarterCover to encode it.
              The attribute <att>color</att> is available
              and using <ref target="keywordsIntro">keywords</ref>,
              you can record the presence of an additional leather patch and describe the the blind-tooling decoration.
              It is useful to specify where the decoration is found (boards, edges, turn-ins, spine).
-             <!--Additional keywords are available to describe the aspect of the turn-ins.-->
+             Additional keywords are available to describe the aspect of turn-ins corners.
       </p>
      </div>
 
@@ -104,15 +104,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
              requires to type a number, which has to be equal to the number
              of sewing stations (not to the number of pairs of sewing stations).
              See for example <ref type="BM" target="SHOr405">Hamburg, State and University Library Hamburg Carl von Ossietzky, Cod. Orient. 405</ref>:
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-<decoNote xml:id="b6" type="SewingStations">4</decoNote>
-</egXML>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <decoNote xml:id="b6" type="SewingStations">4</decoNote>
+            </egXML>
          </p>
 
          <p>A further description of the sewing is possible
-             within a general <gi>decoNote</gi>. Here, if identified, you can specify with keywords the origin of sewing thread and the sewing pattern,
-             following Bozzacchi's classification <ref target="https://www.zotero.org/groups/358366/ethiostudies/items/itemKey/2968T6TC/q/bozzacchi"></ref>.
-             Sewing stations are numbered starting from the head (first sewing station, second sewing station, third sewing station, etc.).
+             within a general <gi>decoNote</gi>. Sewing stations are numbered starting from the head (first sewing station, second sewing station, third sewing station, etc.).
+             Here, if identified, you can specify with keywords the origin of sewing thread. <!--and the sewing pattern,
+             following Bozzacchi's classification <ref target="https://www.zotero.org/groups/358366/ethiostudies/items/itemKey/2968T6TC/q/bozzacchi"></ref>.-->
          </p>
      </div>
      <div type="level3">
@@ -125,17 +125,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
              See for example <ref type="BM" target="SHOr404">Hamburg, State and University Library Hamburg Carl von Ossietzky, Cod. Orient. 404</ref>:
              <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <decoNote xml:id="b5" type="Endbands" color="red white">
-  Narrow
-  <term key="slitBraid">slit-braid</term>
-  endbands and are sewn to the text block using a thread of animal origin. The headband is sewn starting from the upper board while the tailband is sewn starting from the lower board.
-  </decoNote>
-</egXML>
+                 Narrow
+                 <term key="slitBraid">slit-braid</term>
+                 endbands and are sewn to the text block using a thread of animal origin. The headband is sewn starting from the upper board while the tailband is sewn starting from the lower board.
+               </decoNote>
+             </egXML>
          </p>
      </div>
      <div type="level3">
-       <head>Endleaves</head>
-         <p>Endleaves are leaves intended to protect the text leaves. Therefore they are placed at the beginning and/or at the end of the text. Endleaves are left blank but later they can be used for marginal writings.
-           If an endleaf is pasted to the inside of a board it's called pastedown and it is important to record its position in relation with the turn-ins.
+       <head>Endleaves and Pastedowns</head>
+         <p>Endleaves are one or more leaves added at the front and/or back of the textblock for its protection.
+           Endleaves are frequently left blank or without pricking and ruling;
+           but they can be used for marginal writing.
+           A pastedown is an endleaf adhered to the inside of the front of back board and it is important to record its position in relation with the turn-ins.
            Inside the <tag>decoNote type="Endleaves"</tag> you can add the attribute <att>pastedown</att>
            and choose up to three values prompted by the schema in order to describe the position of the pastedown.
            See for example <ref type="BM" target="SHOr405">Hamburg, State and University Library Hamburg Carl von Ossietzky, Cod. Orient. 405</ref>:
