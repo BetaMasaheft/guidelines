@@ -204,14 +204,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <item>
            <p>A leaf string marker inserted in the upper corner</p>
          <figure>
-           <graphic xml:id="g2" url="http://betamasaheft.eu/iiif/MKMG/006/MKMG-006_055.tif/info.json">
+           <graphic xml:id="g2" url="https://betamasaheft.eu/iiif/MKMG/006/MKMG-006_055.tif/info.json">
            </graphic>
          </figure>
          </item>
          <item>
          <p>A leaf string marker inserted in the upper text prick</p>
          <figure>
-           <graphic xml:id="g3" url="http://betamasaheft.eu/iiif/SSB/003/SSB-003_096.tif/info.json">
+           <graphic xml:id="g3" url="https://betamasaheft.eu/iiif/SSB/003/SSB-003_096.tif/info.json">
            </graphic>
          </figure>
          </item>
@@ -224,7 +224,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <p>The leaf tab marker is a bookmark made of a small piece of textile inserted in the margin of a leaf as shown in <ref type="figure" target="#g1"/>
 
          <figure>
-           <graphic xml:id="g1" url="http://betamasaheft.eu/iiif/KY/013/KY-013_022.tif/info.json">
+           <graphic xml:id="g1" url="https://betamasaheft.eu/iiif/KY/013/KY-013_022.tif/info.json">
              <desc>A leaf tab marker inserted in the outer margin</desc>
            </graphic>
          </figure>
