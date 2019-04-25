@@ -91,7 +91,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
              If it covers only the spine and the back edge of the boards use the <att>key</att> quarterCover to encode it.
              The attribute <att>color</att> is available
              and using <ref target="keywordsIntro">keywords</ref>,
-             you can record the presence of an additional leather patch and describe the the blind-tooling decoration.
+             you can record the presence of an additional leather patch and describe the blind-tooling decoration.
              It is useful to specify where the decoration is found (boards, edges, turn-ins, spine).
              Additional keywords are available to describe the aspect of turn-ins corners.
       </p>
@@ -158,7 +158,7 @@ the structure with 3 sewing stations actually is a structure on two paired sewin
 
      <div type="level3">
        <head>Spine</head>
-        <p>Special caratheristics of the spine can be recorded in the
+        <p>Special characteristics of the spine can be recorded in the
         <tag>decoNote type="Spine"</tag>
         like, for example, a series of
         holes related to the presence of tackets.
