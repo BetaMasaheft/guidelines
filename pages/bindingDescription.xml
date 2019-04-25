@@ -103,6 +103,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
              <tag>decoNote type="SewingStations"</tag>
              requires to type a number, which has to be equal to the number
              of sewing stations (not to the number of pairs of sewing stations).
+             The number
+             of sewing stations corresponds to the number of holes in centerfold of a quire
+             used for stitching, or the chain-stiched "rows" that can be seen on the spine of the codex.
+Thus, one pair of sewing stations corresponds to 2 sewing stations and two pairs of sewing stations
+corresponds (most of the times) to 4 sewing stations.
+It is important to encode the number of sewing stations because, even if less common,
+the structure with 3 sewing stations actually is a structure on two paired sewing stations (the one in the middle is shared).
              See for example <ref type="BM" target="SHOr405">Hamburg, State and University Library Hamburg Carl von Ossietzky, Cod. Orient. 405</ref>:
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
               <decoNote xml:id="b6" type="SewingStations">4</decoNote>
