@@ -20,6 +20,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
           <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
           <change who="PL" when="2018-04-24">stub of page</change>
+          <change who="EDS" when="2019-01-08">content added</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -71,6 +72,167 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <p>You can always further specify this information within one
         of the <gi>decoNote</gi> elements within
         <gi>binding</gi>.</p>
-        </body>
+
+<div type="level2">
+  <p>Here are some examples of how to use typed decoNote elements to provide specific information</p>
+    <div type="level3">
+      <head>Boards</head>
+        <p>In the
+            <tag>decoNote type="Boards"</tag>
+            you can specify using keywords the wood type (if known) and
+            encode the presence of a textile inlay or of a mirror.
+        </p>
+    </div>
+
+    <div type="level3">
+      <head>Cover</head>
+       <p>In the
+             <tag>decoNote type="Cover"</tag> you can describe the covering of the binding.
+             If it covers only the spine and the back edge of the boards use the <att>key</att> quarterCover to encode it.
+             The attribute <att>color</att> is available
+             and using <ref target="keywordsIntro">keywords</ref>,
+             you can record the presence of an additional leather patch and describe the the blind-tooling decoration.
+             It is useful to specify where the decoration is found (boards, edges, turn-ins, spine).
+             Additional keywords are available to describe the aspect of turn-ins corners.
+      </p>
+     </div>
+
+     <div type="level3">
+       <head>Sewing Stations</head>
+         <p>The
+             <tag>decoNote type="SewingStations"</tag>
+             requires to type a number, which has to be equal to the number
+             of sewing stations (not to the number of pairs of sewing stations).
+             See for example <ref type="BM" target="SHOr405">Hamburg, State and University Library Hamburg Carl von Ossietzky, Cod. Orient. 405</ref>:
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <decoNote xml:id="b6" type="SewingStations">4</decoNote>
+            </egXML>
+         </p>
+
+         <p>A further description of the sewing is possible
+             within a general <gi>decoNote</gi>. Sewing stations are numbered starting from the head (first sewing station, second sewing station, third sewing station, etc.).
+             Here, if identified, you can specify with keywords the origin of sewing thread. <!--and the sewing pattern,
+             following Bozzacchi's classification <ref target="https://www.zotero.org/groups/358366/ethiostudies/items/itemKey/2968T6TC/q/bozzacchi"></ref>.-->
+         </p>
+     </div>
+     <div type="level3">
+       <head>Endbands</head>
+         <p>Inside the
+             <tag>decoNote type="Endbands"</tag>
+             you can use the attribute <att>color</att>
+             and keywords in order to specify
+             the endband type.
+             See for example <ref type="BM" target="SHOr404">Hamburg, State and University Library Hamburg Carl von Ossietzky, Cod. Orient. 404</ref>:
+             <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <decoNote xml:id="b5" type="Endbands" color="red white">
+                 Narrow
+                 <term key="slitBraid">slit-braid</term>
+                 endbands and are sewn to the text block using a thread of animal origin. The headband is sewn starting from the upper board while the tailband is sewn starting from the lower board.
+               </decoNote>
+             </egXML>
+         </p>
+     </div>
+     <div type="level3">
+       <head>Endleaves and Pastedowns</head>
+         <p>Endleaves are one or more leaves added at the front and/or back of the textblock for its protection.
+           Endleaves are frequently left blank or without pricking and ruling;
+           but they can be used for marginal writing.
+           A pastedown is an endleaf adhered to the inside of the front of back board and it is important to record its position in relation with the turn-ins.
+           Inside the <tag>decoNote type="Endleaves"</tag> you can add the attribute <att>pastedown</att>
+           and choose up to three values prompted by the schema in order to describe the position of the pastedown.
+           See for example <ref type="BM" target="SHOr405">Hamburg, State and University Library Hamburg Carl von Ossietzky, Cod. Orient. 405</ref>:
+           <egXML xmlns="http://www.tei-c.org/ns/Examples">
+           <decoNote xml:id="b11" type="EndLeaves" pastedown="L OTI">
+           The inner surface of the front board is covered with paper. Traces of paper are found also on the external surface.
+           </decoNote>
+           </egXML>
+         </p>
+     </div>
+
+     <div type="level3">
+       <head>Spine</head>
+        <p>Special caratheristics of the spine can be recorded in the
+        <tag>decoNote type="Spine"</tag>
+        like, for example, a series of
+        holes related to the presence of tackets.
+        </p>
+      </div>
+
+      <div type="level3">
+        <head>Fastening</head>
+         <p>You can describe fastenings or the remaining
+            traces of them in the <tag>decoNote type="Fastenings"</tag>
+         </p>
+     </div>
+
+     <div type="level3">
+       <head>Leather case (māḥdar)</head>
+       <p>Inside the
+           <tag>decoNote type="SlipCase"</tag>
+           you can record and describe the leather case (māḥdar) where the codex is kept.
+       </p>
+     </div>
+
+
+     <div type="level3">
+       <head>Other</head>
+         <p>Inside the
+             <tag>decoNote type="Other"</tag>
+             is possible to use <ref target="keywordsIntro">keywords</ref> from the specific
+             sections of the <ref target="taxonomy">taxonomy</ref> to record other features.</p>
+
+
+               <p>You can record the presence of parchment <val>guard</val>s, their position
+               and the technique of attachment.
+              </p>
+
+
+               <p>It is possible to describe bookmarks using <val>leafStringMark</val> or <val>LeafTabMark</val> keywords.</p>
+
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+             <bindingDesc>
+                 <decoNote xml:id="b5" type="Other">
+                 <term key="leafStringMark"/>
+                 inserted in the the upper text prick of ff. 10, 20, ...
+                 </decoNote>
+             </bindingDesc>
+         </egXML>
+         <p>The leaf string marker is a bookmark made of one or several twisted threads, coloured or uncoloured, sewed through a the leaf.
+           It can be found in different positions as shown in the following examples (<ref type="figure" target="#g2"/> and <ref type="figure" target="#g3"/>)</p>
+
+         <list>
+         <item>
+           <p>A leaf string marker inserted in the upper corner</p>
+         <figure>
+           <graphic xml:id="g2" url="http://betamasaheft.eu/iiif/MKMG/006/MKMG-006_055.tif/info.json">
+           </graphic>
+         </figure>
+         </item>
+         <item>
+         <p>A leaf string marker inserted in the upper text prick</p>
+         <figure>
+           <graphic xml:id="g3" url="http://betamasaheft.eu/iiif/SSB/003/SSB-003_096.tif/info.json">
+           </graphic>
+         </figure>
+         </item>
+         <!--<item>
+           <p>image 3: leaf string marker inserted in the outer margin (MAKM-086b) </p>
+         </item>-->
+
+         </list>
+
+         <p>The leaf tab marker is a bookmark made of a small piece of textile inserted in the margin of a leaf as shown in <ref type="figure" target="#g1"/>
+
+         <figure>
+           <graphic xml:id="g1" url="http://betamasaheft.eu/iiif/KY/013/KY-013_022.tif/info.json">
+             <desc>A leaf tab marker inserted in the outer margin</desc>
+           </graphic>
+         </figure>
+         </p>
+
+
+    </div>
+</div>
+</body>
     </text>
 </TEI>
