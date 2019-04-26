@@ -20,7 +20,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
          <change who="DR" when="2018-05-02">Updated examples and fixed links</change>
          <change who="DR" when="2019-04-10">Included clarifications on art themes and caption encoding from issue 954, encoded lists,
-         added paragraph on relations</change></revisionDesc>
+         added paragraph on relations</change>
+         <change who="DR" when="2019-04-26">Specified use of ecrm:P129_is_about</change></revisionDesc>
    </teiHeader>
    <text>
 
@@ -153,7 +154,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <div type="level1">
             <head>Relations</head>
             <p>As in all other records, a <gi>listRelation</gi> can be added to Art Theme records to to list specific relations between this and other records.
-               For the encoding of relations, see <ref target="relations">Relations</ref>.
+               For the encoding of relations, see <ref target="relations">Relations</ref>. For the relation between an Art Theme and the entities it is depicting, use 
+              <tag> relation name="ecrm:P129_is_about"</tag>:
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <listRelation>
                   <relation name="ecrm:P129_is_about" active="AT1108MMDaqseyos" passive="LIT3586Miracle"/>

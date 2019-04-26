@@ -20,11 +20,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
            <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
             <change who="PL" when="2018-04-24">stub of page</change>
+            <change who="DR" when="2019-04-26">Added dividers</change>
         </revisionDesc>
     </teiHeader>
     <text>
+   
         <body xml:id="decorationDescription">
-    <head>Decoration Description</head>
+            <div type="level2">
+                <head>Decoration Description Overview</head>
+                
     <p>
         <gi>decoDesc</gi> contains a description of
         the various decorative elements found in a manuscript. If
@@ -51,7 +55,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
     </egXML>
     <p>
-        <hi rendition="simple:bold">N.B.</hi>
         <gi>summary</gi>
         <hi rendition="simple:italic">can also be used to provide
             information about the decorative features of the manuscript
@@ -64,6 +67,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             even though the theme is not included in the work in
             question.</hi>
     </p>
+            </div>
+            <div type="level2">
+                <head>DecoNote</head>
     <p>Each decorative element in the manuscript is listed in a
         <gi>decoNote</gi> as follows:</p>
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -117,6 +123,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         such features as the style and iconographic elements of a
         theme (<ref target="keywordsIntro">see relevant guidelines page</ref>).</item>
       </list></p>
+            </div>
+            <div type="level2">
+                <head>Legends and Captions</head>
     <p>Miniatures may include:
 <list>
 <item>legends that illustrate the
@@ -147,10 +156,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </decoNote>
         </decoDesc>
     </egXML>
+            </div>
+            <div type="level2">
+                <head>Miniature Collections</head>
     <p>Manuscripts that contain exclusively miniatures and no text
         receive the keyword miniatureCollection. Any other keywords
         relevant to these miniatures, such as for example Hagiography,
         can be assigned freely.</p>
+            </div>
         </body>
     </text>
 </TEI>
