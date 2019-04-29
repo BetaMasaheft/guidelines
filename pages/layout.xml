@@ -24,19 +24,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   </teiHeader>
   <text>
     <body xml:id="layoutDesc">
-      
+
       <div type="level2">
           <head>Use of <gi>layout</gi></head>
-        
+
                <p>
                   <gi>layoutDesc</gi> contains the
       description of how the text is laid out on the page grouped in <gi>layout</gi>.
                </p>
-        
+
                <p>
                  It is possible to use as many <gi>layout</gi>s as the manuscript has distinguishable layouts.
                </p>
-        
+
         <p>
           If the layout measurement refers to a specific part of the
           manuscript, this can be indicated by <gi>locus</gi> to provide the
@@ -56,14 +56,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </egXML>
         </p>
       </div>
-        
+
       <div type="level2">
         <head>Layout description</head>
-        
-        <p><gi>layout</gi> contains various information related to the manuscript's layout, such as measurements, punctuation, pricking and ruling, etc., 
+
+        <p><gi>layout</gi> contains various information related to the manuscript's layout, such as measurements, punctuation, pricking and ruling, etc.,
           as in this example from <ref type="bm" target="DSEthiop1">DS Ethiop 1</ref>:</p>
-             
-          
+
+
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                  <layout columns="2" writtenLines="26">
                    <locus from="119ra" to="132ra"/>
@@ -84,7 +84,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                    </dimensions>
                  </layout>
 </egXML>
-        
+
                <list type="unordered">
                   <item>
                      <p>
@@ -97,10 +97,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           number of lines on a page.</p>
                   </item>
                </list>
-        
+
         <p>The leaf from which the measurements have been taken should
           be indicated in a <gi>note</gi> if known.</p>
-        
+
                <p>The first <gi>dimensions</gi> contains the
       information about the text area. A
       <att>rend</att> can be used to list separated
@@ -108,7 +108,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <p>The second <tag>dimension
       type=‘margin’</tag> contains the measures
       of the margins.</p>
-        
+
         <p>You can also add a <tag>rs type='execution'</tag> with <att>ref</att> with a URI of one of the values in
           the EAGLE Vocabularies for <ref target="https://www.eagle-network.eu/voc/writing.html">execution technique</ref>,
           especially for inscriptions, as
@@ -119,19 +119,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           </layout>
         </egXML>
       </div>
-      
+
       <div type="level2">
         <head>Ruling and pricking</head>
-        
+
                <p>Within a <gi>layout</gi> you can also encode information on ruling and pricking using
                  <gi>ab</gi> as in the following example from <ref type="bm" target="DSEthiop12">DSEthiop12</ref> and
                  <ref type="bm" target="ESagm003">ESagm003</ref>, where the given formula follows the pattern described by
                  D. Muzerelle <ref target="http://palaeographia.org/muzerelle/grecs1.htm">in this wonderfully clear and complete presentation</ref>:</p>
-        
+
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
           <ab type="ruling">A misṭāra was used for ruling.</ab>
         </egXML>
-        
+
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                  <ab type="pricking">Ruling is partly visible; pricking is visible.</ab>
                  <ab type="ruling" subtype="pattern"> Ruling pattern:
@@ -142,12 +142,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                  <ab type="ruling"> The bottom line is written above the ruling.</ab>
                </egXML>
       </div>
-      
+
       <div type="level2">
         <head>Punctuation</head>
-        
+
         <p>Punctuation can be encoded in as much or less detail as desired within <tag>ab type='punctuation'</tag>, as in this example from <ref type="bm" target="ESam012">ESam012</ref></p>
-        
+
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
           <ab type="punctuation" subtype="Executed">more or less regularly</ab>
           <ab type="punctuation" subtype="Usage">not always logical</ab>
@@ -164,11 +164,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </list>
           </ab>
         </egXML>
-        
-        <p>The following list has been provided by Denis Nosnitsin as an overview of potentially to be described punctuation elements:
-        
+
+        <p>The following list has been provided by Denis Nosnitsin as an overview of potentially to be described punctuation elements:</p>
+
+<p>I. Word dividers</p>
           <list type="ordered:arabic">
-            <head>I. Word dividers</head>
+
             <item>Colon፡ (näṭǝb)</item>
             <item>Four dot asterisk/ Double colon ። (näqwet/ arat näṭǝb)
             </item>
@@ -183,24 +184,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </item>
             <item>Quotation sign</item>
         </list>
-          
+
+          <p>II./III. Sentence and Section / Text dividers</p>
           <list type="ordered:arabic">
-            <head>II./III. Sentence and Section / Text dividers</head>
+
             <item>Four dot asterisk / Double colon (näqwet/ arat näṭǝb) ።
             </item>
             <item>Five dot asterisks
             </item>
             <item>Nine dot asterisk ፨:
-              <p>Doubled nine dot asterisks, with/without dashes in between (mǝˁǝraf): ፨፨,
-                ፨ = = ፨</p>
-              <p>Doubled nine dot asterisk, with two lines in between ፨ === ፨</p>
-              <p>(Three and more) nine dot asterisks: ፨ ፨ ፨ ፨ ፨</p>
-              <p>(More than two) nine dot asterisks, connected with dashes: ፨ = = ፨ = = ፨ = = ፨ = = ፨ = = ፨</p>
-              <p>Doubled four dot asterisks, with/ without dashes in between (mǝˁǝraf): ።።, ። = = ።</p>
-              <p>Three and more four dot asterisks ። ። ። ። ። ።</p>
-              <p>More than two four dot asterisks, connected with dashes:
-                :: = = :: = = :: = = ::</p>
-              <p>More than two four dot asterisks, connected with lines</p>
+              <list>
+              <item>Doubled nine dot asterisks, with/without dashes in between (mǝˁǝraf): ፨፨,
+                ፨ = = ፨</item>
+              <item>Doubled nine dot asterisk, with two lines in between ፨ === ፨</item>
+              <item>(Three and more) nine dot asterisks: ፨ ፨ ፨ ፨ ፨</item>
+              <item>(More than two) nine dot asterisks, connected with dashes: ፨ = = ፨ = = ፨ = = ፨ = = ፨ = = ፨</item>
+              <item>Doubled four dot asterisks, with/ without dashes in between (mǝˁǝraf): ።።, ። = = ።</item>
+              <item>Three and more four dot asterisks ። ። ። ። ። ።</item>
+              <item>More than two four dot asterisks, connected with dashes:
+                :: = = :: = = :: = = ::</item>
+              <item>More than two four dot asterisks, connected with lines</item>
+              </list>
             </item>
             <item>“Reference mark”: ፠</item>
             <item>The paragraph sign on the left of a text column, accompanying sentence divider: ፦</item>
@@ -219,9 +223,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <item>Nine dot asterisks and chains of black and red right-pointing chevrons in between: ፨ >>>>>> ፨ >>>>>> ፨ >>>>>>>፨</item>
             <item>X-shape sign (with dashes above and below) (MQM-002).</item>
           </list>
-          
+
+<p>Others</p>
           <list type="ordered:arabic">
-            <head>Others</head>
+
             <item>Long black lines</item>
             <item>Long red lines</item>
             <item>Long black and red lines</item>
@@ -233,10 +238,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <item>Chain of coronis signs, under the chain of nine dot asterisks with thin red and black lines in between </item>
             <item>Rubricated X sign with chevron on the right: x></item>
           </list>
-        </p>
+          
       </div>
-      
- 
+
+
       </body>
       </text>
       </TEI>
