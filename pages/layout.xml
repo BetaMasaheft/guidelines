@@ -19,77 +19,77 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </fileDesc>
     <revisionDesc>
       <change who="PL" when="2018-07-20">splitted from Object Description</change>
+      <change who="DR" when="2019-04-29">Updated structure, paragraph on punctuation</change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body xml:id="layoutDesc">
+      
       <div type="level2">
-          <head>Layout Description</head>
+          <head>Use of <gi>layout</gi></head>
+        
                <p>
                   <gi>layoutDesc</gi> contains the
-      description of how the text is laid out on the page.</p>
-               <p>Each layout information is given in a
-      <gi>layout</gi> element therein.</p>
-               <p>For example for measurement a series of specific purpose
-      attributes and elements can be used:</p>
+      description of how the text is laid out on the page grouped in <gi>layout</gi>.
+               </p>
+        
+               <p>
+                 It is possible to use as many <gi>layout</gi>s as the manuscript has distinguishable layouts.
+               </p>
+        
+        <p>
+          If the layout measurement refers to a specific part of the
+          manuscript, this can be indicated by <gi>locus</gi> to provide the
+          range or a <att>corresp</att> with the <val>xml:id</val> of the <gi>msPart</gi>, <gi>msItem</gi> or
+          quire in the collation, whichever might be relevant:
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <layout columns="1" writtenLines="18">
+              <locus from="1r" to="20v"/>
+              …
+            </layout>
+          </egXML>
+        or
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <layout corresp="#p.1.1_i1" columns="1" writtenLines="18">
+            …
+          </layout>
+        </egXML>
+        </p>
+      </div>
+        
+      <div type="level2">
+        <head>Layout description</head>
+        
+        <p><gi>layout</gi> contains various information related to the manuscript's layout, such as measurements, punctuation, pricking and ruling, etc., 
+          as in this example from <ref type="bm" target="DSEthiop1">DS Ethiop 1</ref>:</p>
+             
+          
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<layout columns="1" writtenLines="18">
-<dimensions unit="mm" rend="pricked ruled">
-<height>245</height>
-<width>210</width>
-<dim type="intercolumn">15</dim>
-</dimensions>
-<dimensions type="margin">
-<dim type="top">35</dim>
-<dim type="bottom">65</dim>
-<dim type="right">40</dim>
-<dim type="left">15</dim>
-</dimensions>
-</layout>
+                 <layout columns="2" writtenLines="26">
+                   <locus from="119ra" to="132ra"/>
+                   <note>The number of characters: 1 line f. 121ra - 14; 1 line f. 121rb - 15;
+                     1 line f. 126ra - 16; 1 line f. 126rb - 15.</note>
+                   <note corresp="#textarea2 #margin2">Data on text area and margin dimensions taken from <locus
+                     target="#119r"/>.</note>
+                   <dimensions unit="mm" xml:id="textarea2">
+                     <height>145</height>
+                     <width>100</width>
+                   </dimensions>
+                   <dimensions type="margin" unit="mm" xml:id="margin2">
+                     <dim type="top">15</dim>
+                     <dim type="bottom">30</dim>
+                     <dim type="right">20</dim>
+                     <dim type="left">5</dim>
+                     <dim type="intercolumn">10</dim>
+                   </dimensions>
+                 </layout>
 </egXML>
-               <p>If the layout measurement refer to a specific part of the
-      manuscript a <gi>locus</gi> element can be
-      used within <gi>layout</gi> to provide the
-      range or a <att>corresp</att> with the ID of the <gi>msPart</gi>, <gi>msItem</gi> or
-      quire in the collation, whichever might be relevant.</p>
-               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<layout corresp="#p.1.1_i1" columns="1" writtenLines="18">
-…
-</layout>
-</egXML>
-               <p>or</p>
-               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<layout columns="1" writtenLines="18">
-<locus from="1r" to="20v"/>
-…
-</layout>
-</egXML>
-               <p>The leaf from which the measurements have been taken can
-      be indicated in a <gi>note</gi> inside
-      <gi>layout</gi>:</p>
-               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<layout columns="2" writtenLines="26">
-                     <locus from="119ra" to="132ra"/>
-                        <note corresp="#textarea #margin">Data on text area and margin dimensions taken from <locus
-                           target="#119r"/>.</note>
-                     <dimensions unit="mm" xml:id="textarea">
-                        <height>145</height>
-                        <width>100</width>
-                     </dimensions>
-                     <dimensions type="margin" unit="mm" xml:id="margin">
-                        <dim type="top">15</dim>
-                        <dim type="bottom">30</dim>
-                        <dim type="right">20</dim>
-                        <dim type="left">5</dim>
-                        <dim type="intercolumn">10</dim>
-                     </dimensions>
-                  </layout>
-</egXML>
+        
                <list type="unordered">
                   <item>
                      <p>
                         <att>columns</att> contains the number
-                         of columns on a page. One column should be encoded as <tag>layout columns='1'</tag>, when no information is available, this element should not be added.</p>
+                         of columns on a page. One column should be encoded as <tag>layout columns='1'</tag>, when no information is available, this attribute should not be added.</p>
                   </item>
                   <item>
                      <p>
@@ -97,6 +97,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           number of lines on a page.</p>
                   </item>
                </list>
+        
+        <p>The leaf from which the measurements have been taken should
+          be indicated in a <gi>note</gi> if known.</p>
+        
                <p>The first <gi>dimensions</gi> contains the
       information about the text area. A
       <att>rend</att> can be used to list separated
@@ -104,44 +108,135 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <p>The second <tag>dimension
       type=‘margin’</tag> contains the measures
       of the margins.</p>
+        
+        <p>You can also add a <tag>rs type='execution'</tag> with <att>ref</att> with a URI of one of the values in
+          the EAGLE Vocabularies for <ref target="https://www.eagle-network.eu/voc/writing.html">execution technique</ref>,
+          especially for inscriptions, as
+          in the following example from <ref target="RIE246" type="bm">RIE 246</ref>.</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <layout>
+            <rs type="execution" ref="https://www.eagle-network.eu/voc/writing/lod/21"/>
+          </layout>
+        </egXML>
+      </div>
+      
+      <div type="level2">
+        <head>Ruling and pricking</head>
+        
                <p>Within a <gi>layout</gi> you can also encode information on ruling and pricking using
-      <gi>ab</gi> as in the following examples, where the given formula follows the pattern described by D.Muzerelle <ref target="http://palaeographia.org/muzerelle/grecs1.htm">in this wonderfully clear and complete presentation</ref>:</p>
-               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A/0-0/0-0/A.</ab>
-<ab type="pricking" subtype="pattern">Primary pricks are partly visible (s., e.g., fol. 37v).</ab>
-
-                   <layout>
-                       <ab type="ruling">A misṭāra was used for ruling.</ab>
-                   </layout>
-</egXML>
-               <p>
-                  <gi>ab</gi> can contain
-      <gi>locus</gi> if you need to state precisely
-      where an event occours.</p>
-               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<ab type="punctuation" subtype="dividers">
-<list>
- <item xml:id="div1" corresp="#p.1">Colon</item>
- <item xml:id="div2" corresp="#p.2">
-     Five red and black dot vertical colon.
-     <locus from="30v" n="3"/>
-     <locus from="30v" n="11"/>
-     <locus from="31r" n="14"/>
-     <locus from="31v" n="10"/>
- </item>
-</list>
-</ab>
-</egXML>
-<p>You can also add a <tag>rs type='execution'</tag> with <att>ref</att> with a uri of one of the values in
-the EAGLE Vocabularies for <ref target="https://www.eagle-network.eu/voc/writing.html">execution technique</ref>
- especially for inscriptions as
-in the following example from <ref target="RIE246" type="bm"/>.</p>
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-  <layout>
-  <rs type="execution" ref="https://www.eagle-network.eu/voc/writing/lod/21"/>
-</layout>
-</egXML>
-            </div>
+                 <gi>ab</gi> as in the following example from <ref type="bm" target="DSEthiop12">DSEthiop12</ref> and
+                 <ref type="bm" target="ESagm003">ESagm003</ref>, where the given formula follows the pattern described by
+                 D. Muzerelle <ref target="http://palaeographia.org/muzerelle/grecs1.htm">in this wonderfully clear and complete presentation</ref>:</p>
+        
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <ab type="ruling">A misṭāra was used for ruling.</ab>
+        </egXML>
+        
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                 <ab type="pricking">Ruling is partly visible; pricking is visible.</ab>
+                 <ab type="ruling" subtype="pattern"> Ruling pattern:
+                   1A-1A-1A1A/0-0/0-0/C.</ab>
+                 <ab type="pricking"> Primary pricks are partly visible (s. <locus target="#29r">29r</locus>).</ab>
+                 <ab type="pricking"> Ruling pricks are mostly visible (s. <locus target="#20r">20r</locus>).</ab>
+                 <ab type="ruling"> The upper line is written above the ruling.</ab>
+                 <ab type="ruling"> The bottom line is written above the ruling.</ab>
+               </egXML>
+      </div>
+      
+      <div type="level2">
+        <head>Punctuation</head>
+        
+        <p>Punctuation can be encoded in as much or less detail as desired within <tag>ab type='punctuation'</tag>, as in this example from <ref type="bm" target="ESam012">ESam012</ref></p>
+        
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <ab type="punctuation" subtype="Executed">more or less regularly</ab>
+          <ab type="punctuation" subtype="Usage">not always logical</ab>
+          <ab type="punctuation">
+            <list>
+              <item xml:id="div1"> Dividers:</item>
+              <item xml:id="div2"> I. Colon; </item>
+              <item xml:id="div3"> II. Four dot asterisk; nine dot asterisk; five
+                red and black dot vertical colon;</item>
+              <item xml:id="div4"> III. Double nine dot asterisks, with chain of
+                black and red dots in between (e. g. <locus target="#15vb"
+                  >15vb</locus>); three nine dot asterisks (e. g. <locus
+                    target="#37ra">37ra</locus>).</item>
+            </list>
+          </ab>
+        </egXML>
+        
+        <p>The following list has been provided by Denis Nosnitsin as an overview of potentially to be described punctuation elements:
+        
+          <list type="ordered:arabic">
+            <head>I. Word dividers</head>
+            <item>Colon፡ (näṭǝb)</item>
+            <item>Four dot asterisk/ Double colon ። (näqwet/ arat näṭǝb)
+            </item>
+            <item>Short line with dots above and below (Comma 1) [= obelus]: ፥ (säräz)</item>
+            <item>Colon with dashes above and below (Comma 2 / Enumeration sign 1): ፤</item>
+            <item>Colon with dash above (Comma 3): ፣
+            </item>
+            <item>Five red and black dot colon (Comma 4/ Enumeration sign 2):</item>
+            <item>Three dot vertical colon: ፧
+            </item>
+            <item>Colon of two black dots and three red dashes (in-between, above, below)
+            </item>
+            <item>Quotation sign</item>
+        </list>
+          
+          <list type="ordered:arabic">
+            <head>II./III. Sentence and Section / Text dividers</head>
+            <item>Four dot asterisk / Double colon (näqwet/ arat näṭǝb) ።
+            </item>
+            <item>Five dot asterisks
+            </item>
+            <item>Nine dot asterisk ፨:
+              <p>Doubled nine dot asterisks, with/without dashes in between (mǝˁǝraf): ፨፨,
+                ፨ = = ፨</p>
+              <p>Doubled nine dot asterisk, with two lines in between ፨ === ፨</p>
+              <p>(Three and more) nine dot asterisks: ፨ ፨ ፨ ፨ ፨</p>
+              <p>(More than two) nine dot asterisks, connected with dashes: ፨ = = ፨ = = ፨ = = ፨ = = ፨ = = ፨</p>
+              <p>Doubled four dot asterisks, with/ without dashes in between (mǝˁǝraf): ።።, ። = = ።</p>
+              <p>Three and more four dot asterisks ። ። ። ። ። ።</p>
+              <p>More than two four dot asterisks, connected with dashes:
+                :: = = :: = = :: = = ::</p>
+              <p>More than two four dot asterisks, connected with lines</p>
+            </item>
+            <item>“Reference mark”: ፠</item>
+            <item>The paragraph sign on the left of a text column, accompanying sentence divider: ፦</item>
+            <item>Chi Rho</item>
+            <item>Crux ansata</item>
+            <item>Coronis (together with or separated from Crux ansata)</item>
+            <item>Chain of black dots .................</item>
+            <item>Chain of black and red dots ..........................
+            </item>
+            <item>Chain of black right-pointing chevrons >>>>>>>>>>>
+            </item>
+            <item>Chain of black and red right-pointing chevrons >>>>>>>>>>></item>
+            <item>Ornamental bars</item>
+            <item>Nine dot asterisks and chains of (black / red) dots in between: ፨ ������� ፨ �������������� ፨
+            </item>
+            <item>Nine dot asterisks and chains of black and red right-pointing chevrons in between: ፨ >>>>>> ፨ >>>>>> ፨ >>>>>>>፨</item>
+            <item>X-shape sign (with dashes above and below) (MQM-002).</item>
+          </list>
+          
+          <list type="ordered:arabic">
+            <head>Others</head>
+            <item>Long black lines</item>
+            <item>Long red lines</item>
+            <item>Long black and red lines</item>
+            <item>Chain of red and black dashes ---------------------</item>
+            <item>Black and red dots and dashes</item>
+            <item>Black dots and short dashes</item>
+            <item>“X” with dashes above and below</item>
+            <item>Black line with one (or more) chain of red and black dots in the middle</item>
+            <item>Chain of coronis signs, under the chain of nine dot asterisks with thin red and black lines in between </item>
+            <item>Rubricated X sign with chevron on the right: x></item>
+          </list>
+        </p>
+      </div>
+      
+ 
       </body>
       </text>
       </TEI>
