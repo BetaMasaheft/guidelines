@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>History</title>
+        <author>Dorothea Reule</author>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Natively encoded in TEI.</p>
+      </sourceDesc>
+    </fileDesc>       <revisionDesc>       <change who="DR" when="2019-04-26">Created page</change></revisionDesc>
+  </teiHeader>
+  <text>
+    <body xml:id="History">
+      <head>History</head>
+
+      <p>
+        <gi>history</gi> can contain the elements <gi>origin</gi>, <gi>acquisition</gi> and <gi>provenance</gi>,
+        in which the history of the manuscript can be described in as much detail as known and desired. Please consider the 
+        TEI definitions of these elements when deciding where to encode the information known to you:
+        <list>
+          <item><gi>origin</gi> contains any descriptive or other information concerning the origin of a manuscript, manuscript part, or other object. See also 
+          <ref type="bm" target="origin">origin</ref>.</item>
+          <item><gi>acquisition</gi> contains any descriptive or other information concerning the process by which a manuscript or manuscript part or other object entered the holding institution.</item>
+          <item><gi>provenance</gi> contains any descriptive or other information concerning a single identifiable episode during the history of a manuscript, manuscript part, or other object after its creation but before its acquisition.</item>
+        </list>
+      </p>
+      
+      <p>Note that therefore in the following example from <ref type="bm" target="BLorient581">BLorient581</ref>, <ref type="bm" target="INS0101MadhaneAlam">Madḫāne ʿĀlam</ref>
+      is not encoded as the original place of the manuscript, since it is not known where it was produced. Its looting from this church constitutes an event of its history and is encoded
+      in <gi>provenance</gi>:</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <history>
+            <origin>
+              <origDate notAfter="1868"/>
+            </origin>
+            <provenance>Looted by the British <persName ref="PRS7484Napier">Napier</persName>
+              expedition in <date>1868</date> from the church of <placeName ref="INS0101MadhaneAlam">Madḫāne ʿĀlam</placeName>.
+            </provenance>
+            
+            <acquisition>    
+              The manuscript was then sent to the Royal Library at Windsor and 
+              presented by <persName ref="PRS9745Victoria"/> to the <placeName ref="INS00001BL"/> on the <date>21st January 1869</date>.
+              <listBibl type="secondary">
+                <bibl><ptr target="bm:Wright1877BM"/><citedRange unit="page">iv</citedRange></bibl>
+              </listBibl>
+            </acquisition>
+          </history>
+        </egXML>
+
+    </body>
+  </text>
+</TEI>
