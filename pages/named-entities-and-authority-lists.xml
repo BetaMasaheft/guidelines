@@ -18,7 +18,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
       </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
-         <change who="DR" when="2018-05-18">Split dates</change></revisionDesc>
+         <change who="DR" when="2018-05-18">Split dates</change>
+       <change who="PL" when="2019-05-09">added certainty</change>
+     </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="named-entities-and-authority-lists">
@@ -120,6 +122,45 @@ notAfter="1559">ትግራይ፡</placeName>
             <p>you can also add a <att>resp</att> with the ID of one of our person records
   or editors and a <att>source</att> with a pointer to the ID assigned to a <gi>bibl</gi> in the file as shown <ref target="places">here </ref>.</p>
          </div>
+         <div type="level3">
+         <head>Certainty and uncertainty</head>
+<p>It is not always possible to be so sure as to give one identification. The following examples
+  are from the encoding of the <ref type="BM" target="LIT5019MonumentumAdulitanum2">text of RIE 277</ref>. In the first example,  the main identification
+  in <att>ref</att> is attributed to Salt by adding in <att>resp</att> the id of the corresponding bibliographical reference in the file.
+Alternative identifications are given with the <gi>certainty</gi> element inside <gi>placeName</gi> using <att>resp</att> to point to the author of that identification and <att>assertedValue</att>
+for the alternative identification.</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  <placeName ref="LOC6850Takkaze" cert="low" resp="#salt">
+  <certainty locus="value" match="../@ref" assertedValue="pleiades:727172" resp="#LIT5019MonumentumAdulitanum2"/>
+  <certainty locus="value" match="../@ref" assertedValue="LOC4560Marab" resp="#Fauvelle-Aymar"/>
+  Νείλου
+  </placeName>
+</egXML>
+
+<p>However, one can be much more precise in this respect and use as in the following example, the <gi>desc</gi> element inside <gi>certainty</gi>, or
+avoid entirely to provide an alternative identification.</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  <placeName ref="ETH1085Aggabe" xml:id="aggabe">
+        <certainty locus="value" match="../@ref" resp="#salt">
+             <desc><quote>Angabet or Andabet in Begemder</quote><ref
+            target="https://recogito.pelagios.org/document/t7e6q1bznco148#bfaa74d2-f350-4f3e-a072-019a9c811eab">
+            <q>Andabet</q>on Ludolf map (1683) south of<q>Axum</q></ref></desc>
+        </certainty>
+         <certainty locus="value" match="../@ref" resp="#Huntingford">
+              <desc><quote> a place called Angäba in the chiefdom of Sedya between
+                ʿAdwa and the river Bäläsa NW of Entäṣĕw; Angabĕ may also be the same as the Angao of DAE 9.</quote></desc>
+        </certainty>
+        <certainty locus="value" match="../@ref" resp="#DAE">
+               <desc>Angabo in DAE 9</desc>
+        </certainty>
+        <certainty locus="value" match="../@ref" resp="#dillmann">
+                <desc>Angot a sud du Tigré</desc>
+        </certainty>
+  Ἀγγαβὲ
+</placeName>
+</egXML>
+
+       </div>
          </div>
       </body>
    </text>
