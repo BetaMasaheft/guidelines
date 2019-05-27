@@ -325,7 +325,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
        <div type="level2">
          <head>Transliteration from Cyrillic</head>
          <p>The basis for transliteration of Cyrillic should be <ref target="http://kodeks.uni-bamberg.de/AKSL/Schrift/Transliteration.htm">
-         this table</ref></p>
+         this table.</ref></p>
          <p>For more information on the transliteration rules, consult the page with Zotero guidlines (<ref target="zotero"></ref>).
          </p>
          </div>
