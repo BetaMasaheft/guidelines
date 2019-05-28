@@ -202,7 +202,7 @@ guidelines for
 </egXML>
             <p>All <gi>placeName</gi>s can take an <att>xml:id</att> if it is needed for referencing,
   following the above example. i.e. nothing prevents Mary of Zion to
-  have a <att>xml:id</att>='n5' AND <att>corresp</att>='#n2'</p>
+  have a <att>xml:id</att>="n5" AND <att>corresp</att>="#n2"</p>
             <p>You can enter into <gi>placeName</gi> a <gi>note</gi> element
   where to describe the denomination more in detail, see for example
   <ref target="LOC1261Adulis" type="bm">ʾAdulis</ref></p>
@@ -232,8 +232,8 @@ Kingdom)</item>
          </div>
          <div type="level2">
             <head>Tābots</head>
-            <p>For tābots please use an <tag>ab type='tabot’</tag>
-  including the number of the tābots in a <gi>measure</gi> and <tag>persNames type='tabot'</tag> for
+            <p>For tābots please use an <tag>ab type="tabot"</tag>
+  including the number of the tābots in a <gi>measure</gi> and <tag>persNames type="tabot"</tag> for
   each of the dedicatory persons. Avoid using <att>type</att> for other persons
   mentioned in the texts.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">

@@ -31,7 +31,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     text on the catalogued manuscript, when available, whilst the edited
     text or the theoretical structure of it should be recorded into the
     <ref target="works">Work</ref> Entity. Text is entered in the <gi>body</gi> of a
-    TEI file into a <tag>div type='edition'</tag> .
+    TEI file into a <tag>div type="edition"</tag> .
     Each text part should be contained into a
     <gi>div</gi>. <gi>div</gi>s should
     always be well nested one into the other. These will always take a
@@ -348,7 +348,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <p>Words or lines skipped in omitted by the editor in transcription</p>
                      </cell>
                      <cell>
-                           <tag>gap reason='omitted'</tag>
+                           <tag>gap reason="omitted"</tag>
                      </cell>
                      <cell/>
                      <cell>
@@ -362,7 +362,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             etc.)</p>
                      </cell>
                      <cell>
-                           <tag>gap reason='ellipsis'</tag>
+                           <tag>gap reason="ellipsis"</tag>
                      </cell>
                      <cell/>
                      <cell>
@@ -374,7 +374,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <p>Lost text</p>
                      </cell>
                      <cell>
-                           <tag>gap reason='lost'</tag>
+                           <tag>gap reason="lost"</tag>
                      </cell>
                      <cell>
                         <p>used to indicate a material loss or a portion of
@@ -391,7 +391,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <p>text supplied by editor</p>
                      </cell>
                      <cell>
-                           <tag>supplied reason='lost'</tag>
+                           <tag>supplied reason="lost"</tag>
                      </cell>
                      <cell>
                         <p>are used to indicate some portions of text that
@@ -407,7 +407,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <p>text supplied by editor</p>
                      </cell>
                      <cell>
-                           <tag>supplied reason='omitted'</tag>
+                           <tag>supplied reason="omitted"</tag>
                      </cell>
                      <cell>
                         <p>are used to indicate some portions of text that
@@ -423,7 +423,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <p>text supplied by editor</p>
                      </cell>
                      <cell>
-                           <tag>supplied reason='undefined'</tag>
+                           <tag>supplied reason="undefined"</tag>
                      </cell>
                      <cell>
                         <p>please do not use this unless really necessary
