@@ -191,7 +191,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <p>red inks</p>
                      </cell>
                      <cell>
-                           <tag>hi rend='rubric'</tag>
+                           <tag>hi rend="rubric"</tag>
                      </cell>
                      <cell/>
                      <cell>
@@ -217,8 +217,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                            <gi>subst</gi>
-                           with children <tag>del rend='erasure'</tag>
-                           and <tag>add place='overstrike'</tag>
+                           with children <tag>del rend="erasure"</tag>
+                           and <tag>add place="overstrike"</tag>
 
                      </cell>
                      <cell>
@@ -469,7 +469,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <p>written upside down</p>
                      </cell>
                      <cell>
-                           <tag>hi rend='reversed'</tag>
+                           <tag>hi rend="reversed"</tag>
                      </cell>
                      <cell/>
                   </row>
@@ -478,7 +478,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <p>letters in a ligature</p>
                      </cell>
                      <cell>
-                        <tag>hi rend='ligature'</tag>
+                        <tag>hi rend="ligature"</tag>
                      </cell>
                      <cell/>
                   </row>
@@ -488,7 +488,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>
-                           <tag>hi rend='negative'</tag>
+                           <tag>hi rend="negative"</tag>
                         </p>
                      </cell>
                      <cell/>
@@ -499,7 +499,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             similar)</p>
                      </cell>
                      <cell>
-                           <tag>del rend=erasure</tag>
+                           <tag>del rend="erasure"</tag>
                      </cell>
                      <cell/>
                      <cell>
