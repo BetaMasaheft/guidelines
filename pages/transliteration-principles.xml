@@ -227,7 +227,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          and not ə (0259, Latin Small Letter Schwa)</p>
          <p>for Alif - please always use ʾ (02BE), not ˀ</p>
          <p>for Ayn – please always use ʿ (02BF), not ˁ</p>
-         <p>for č̣ - please combine out of č (010D) and ̣ (0323)</p>
+         <p>for č̣ - please combine out of "č "(010D) and " ̣" (0323)</p>
          <p>for apices use <gi>hi</gi></p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
        12<hi rend='apices'>th</hi>
