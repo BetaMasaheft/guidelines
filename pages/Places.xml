@@ -138,7 +138,7 @@ guidelines for
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
  <geo>14.308833 39.378683</geo>
 </egXML>
-            <p>For regions, areas, and all polygons, use <tag>geo rend='polygon'</tag>
+            <p>For regions, areas, and all polygons, use <tag>geo rend="polygon"</tag>
   using one line for each point. Please do not add spaces at the
   beginning and end of the series. You can draw your polygon with <ref target="https://www.keene.edu/campus/maps/tool/">this
   tool</ref> and copy paste directly
