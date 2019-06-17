@@ -23,6 +23,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
          <change who="DR" when="2018-12-03">added paragraph on TUK IDs and relations with other databases</change>
         <change who="PL" when="2019-02-28">added example</change>
+         <change who="DR" when="2019-06-17">added specification and example for title</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -84,8 +85,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    traditions, the relevant titles and references will be added in the appropriate
    <tag>div type='textpart'</tag>, not in <gi>titleStmt</gi>.
 </p>
+   
+   <p>For works for which no standard title is known, such as short prayers or hymns, it is preferable to use the beginning as title. A more generic title can then be 
+      given later, as in this example from <ref type="bm" target="LIT4719Eweddesa">LIT4719Eweddesa</ref>:
+   
+   <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <title xml:lang="gez" xml:id="t1">እዌድሳ፡ ለውድስት፡</title>
+      <title xml:lang="gez" corresp="#t1">ʾƎweddǝsā la-wǝddǝst</title>
+      <title xml:lang="en" corresp="#t1">I praise the praised one</title>
+      <title xml:lang="en" xml:id="t2">Hymn to Mary</title>
+   </egXML>
+   </p>
 
-   <!--editor-->
 </div>
 
 
