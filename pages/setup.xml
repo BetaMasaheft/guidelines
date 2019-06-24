@@ -17,7 +17,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+        <change who="DR" when="2019-06-24">Corrected typos</change></revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="setup">
@@ -31,8 +32,8 @@ with a licence for it)</item>
 </p>
 <div type="level2">
   <head>GITHUB</head>
-  <p>Git is a shared repo, public on the web, where we keep our project
-  files and code. <ref target="https://github.com/BetaMasaheft">Our organization</ref> in GitHub.com contains several repositorires, which are just like
+  <p>Git is a shared repository, public on the web, where we keep our project
+  files and code. <ref target="https://github.com/BetaMasaheft">Our organization</ref> in GitHub.com contains several repositories, which are just like
   folders from a user perspective. Here are the files we work on and the documentation, such as
   guidelines and issue tracking. You will use this to:</p>
   <list type="ordered:arabic">
@@ -44,30 +45,31 @@ with a licence for it)</item>
     </item>
   </list>
   <p>You will want to be always up to date. Here is what to do:</p>
-  <list type="unordered">
+<!--  <list type="unordered">
     <item>
       <p>After you created and verified your account, you will need to
       be added to the group; email Pietro to get this done.</p>
     </item>
     <item>
-      <p>Install <ref target="https://desktop.github.com/">Github
-      desktop</ref></p>
+      <p>Install <ref target="https://desktop.github.com/">GitHub
+      Desktop</ref></p>
     </item>
     <item>
       <p>Prepare in your computer, in a location of your choice, a
       folder called <hi rendition="simple:bold">BetMas</hi></p>
     </item>
     <item>
-      <p>Open Gihub desktop</p>
+      <p>Open GitHub Desktop</p>
     </item>
     <item>
-      <p>Login with your Github user name and password</p>
+      <p>Login with your GitHub user name and password</p>
     </item>
     <item>
-      <p>Clone repositories from the application, if you are logged and have accepted the invitation to the group, the software will know that you are part of the Beta Masaheft organization and offer that among your possibilities. </p>
+      <p>Clone repositories from the application, if you are logged in and have accepted the invitation to the group, the software will know that you are part of the Beta maṣāḥǝft organization 
+        and offer that among your possibilities. </p>
     </item>
     <item>
-      <p>Select the group Beta Masaheft organization</p>
+      <p>Select the group Beta maṣāḥǝft organization</p>
     </item>
     <item>
       <p>Select the schema repository</p>
@@ -76,33 +78,33 @@ with a licence for it)</item>
       <p>Click CLONE below</p>
     </item>
     <item>
-      <p>Select the folder BetMas on your machine as target location and say ok</p>
+      <p>Select the folder BetMas on your computer as target location and say ok</p>
     </item>
     <item>
-      <p>This will create a folder called schema into your BetMas folder
-      which is identical to that in Git and can be synced with it if you
+      <p>This will create a folder called schema in your BetMas folder
+      which is identical to that in GitHub and can be synced with it if you
       are online</p>
     </item>
     <item>
       <p>Repeat the same operation for the repositories with the data that you need, most typically
       Manuscript, Persons, Places, Repositories and Works</p>
     </item>
-  </list>
+  </list>-->
   <p>If you use the new version GitHub beta:</p>
   <list type="unordered">
     <item>
       <p>After you created and verified your account, you will need to
-      be added to the group. email Pietro to get this done.</p>
+      be added to the group. Email Pietro to get this done.</p>
     </item>
     <item>
-      <p>Install Github desktop</p>
+      <p>Install GitHub Desktop</p>
     </item>
     <item>
       <p>Prepare in your computer in a location of your choice a folder
       called BetMas</p>
     </item>
     <item>
-      <p>Ppen Gihub desktop</p>
+      <p>Open GitHub Desktop</p>
     </item>
     <item>
       <p>Login if you aren't automatically logged in</p>
@@ -117,11 +119,11 @@ with a licence for it)</item>
       <p>In your browser, go to https://github.com/BetaMasaheft</p>
     </item>
     <item>
-      <p>Click on &quot;Manuscripts&quot;</p>
+      <p>Click on &quot;Schema&quot;</p>
     </item>
     <item>
       <p>Add the URL (https://github.com/BetaMasaheft/Manuscripts) to
-      Github Desktop</p>
+      GitHub Desktop</p>
     </item>
     <item>
       <p>In &quot;Local path&quot;, select the folder BetMas</p>
@@ -130,29 +132,32 @@ with a licence for it)</item>
       <p>Click CLONE below</p>
     </item>
     <item>
-      <p>This will create a folder called schema into your BetMas folder
-      which is identical to that in Git and can be synced with it if you
+      <p>This will create a folder called schema in your BetMas folder
+      which is identical to that in GitHub and can be synced with it if you
       are online.</p>
     </item>
     <item>
       <p>repeat the same operation for all other BetaMasaheft
-      repositories you might need</p>
+        repositories you might need, most typically
+      Authority-Files, Manuscripts, Persons, Places, Repositories and Works</p>
     </item>
   </list>
 
-  <p>Let's say you have a new manuscript file or you have edited one from the newly cloned repository. To add a new file to the Manuscript
-  folder, simply put it in the manuscript folder which you have in BetMas.</p>
+  <p>Let's say you have edited a manuscript file from the newly cloned Manuscripts repository or created a new manuscript file. To add a new file to the Manuscripts
+  folder, create a new file in your XML editor and save it to the Manuscripts folder which you have in your BetMas folder.</p>
   <list type="unordered">
     <item>
-      <p>Open Gihub Desktop and select the Manuscripts repository on the left</p>
+      <p>Open GitHub Desktop and select the Manuscripts repository on the left</p>
+    </item>
+    <item>
+      <p>Before you commit your changes, make sure that you are synced: click on "fetch origin" in the upper right corner, and, if there are new commits by others, click on "pull"</p>
     </item>
     <item>
       <p>Click the CHANGE tab and you will see that it has recorded the
-      fact that you have added such file to the folder (or modified
-      it)</p>
+      fact that you have added a new file to the folder or modified an existing one</p>
     </item>
     <item>
-      <p>Below the list of changes there is a Commit field enter a name
+      <p>Below the list of changes there is a Commit field, where you can enter a name
       such as &quot;new manuscript ready for review&quot; and a
       description about what you have done e.g. &quot;entered catalogue
       entry 1234 from Catalogue X&quot; Please see also this page on <ref target="revisions">revisions</ref> history.</p>
@@ -161,8 +166,8 @@ with a licence for it)</item>
       <p>Click commit</p>
     </item>
     <item>
-      <p>Once it has committed the changes on the top right corner click
-      SYNC (old version of github desktop) or PUSH. This will look for anything that has changed online and
+      <p>Once it has committed the changes on the top right corner, click
+      SYNC (old version of GitHub Desktop) or PUSH. This will look for anything that has changed online and
       update your files locally, then will upload your file or update
       the online version from yours.</p>
     </item>
@@ -170,9 +175,9 @@ with a licence for it)</item>
       <p>N.B. THERE IS NO RISK of data to be overwritten or lost.</p>
     </item>
   </list>
-  <p>If you have not updated in the last two or three days, it is
-  advisable to Sync/fetch all your repo before you begin a work session.</p>
-  <p>The Documentation repo contains instead two important parts, beside some
+  <p>It is always
+  advisable to Sync/fetch all your repositories before you begin a work session.</p>
+  <p>The Documentation repo contains two other important parts, beside some
   code used locally for the project, the Wiki and the Issues</p>
 
 
@@ -211,53 +216,55 @@ with a licence for it)</item>
   open files from oXygen directly.
 <list>
   <item>click on PROJECT, then on NEW
-  project. call the file BetMas and save it into your BetMas folder,
+  project. Call the file BetMas and save it to your BetMas folder,
   where you cloned the repositories from GIT.</item>
-  <item>once created the project
-  will open in oXygen in a side bar on the left. </item>
+  <item>Once created, the project
+  will open in oXygen in a side bar on the left (if it doesn't, click on "Project" and "project view" in the upper menu bar). </item>
   <item>click with the
   secondary button on the icon of the project and select &quot;add
   Folder&quot;</item>
   <item>select the folders in the BetMas folder and add them
   all.</item>
-  <item>They will appear under the Project icon. try to open
-  manuscripts and click on a file to open it.</item>
+  <item>They will appear under the Project icon. Open the 
+  manuscripts folder and click on a file to open it.</item>
   </list>
   </p>
-  <p>While editing your file you might start from one of the models.
+  
+  <p>While editing your file you might start from one existing file, taking it as a model, and always reading and comparing other files. 
+    oXygen has several helpful features that will facilitate your work: 
 
     <list>
-<item>once you start typing a name of an element, oxygen will suggest you
+<item>Once you start typing a name of an element, oXygen will suggest you
 which elements can be used there.</item>
-<item>you can also use the elements and
-attributes view to select from a sidebar the element to add</item>
-<item>once you
+<item>You can also use the elements and
+attributes view to select from a sidebar the element to add.</item>
+<item>Once you
 have an element and you want to add an attribute, type the space
 separating the element name from the future attribute and oXygen will
 pull up a list of attributes from which you can select. If an
-attribute is compulsary, is bold.</item>
-<item>also values for attributes are
+attribute is compulsory, it is bold.</item>
+<item>Values for attributes are also
 suggested by oXygen based on the schema.</item>
-<item>to enter a element you can
+<item>To enter an element, you can
 either start typing it, or you can select a portion of text to tag and
 click CTRL+E which will open a small window where you can type the
 first letters of an element's name and select. </item>
-<item>you might need to
-repeatedly enter the same element. you can do the repeat with
+<item>You might need to
+repeatedly enter the same element. You can do the repeat with
 CTRL+/</item>
     </list>
     </p>
-  <p>You will often have to enter the the current date, for example when
+  <p>You will often have to enter the current date, for example when
   you describe your work in <gi>change</gi>. To
   facilitate this you can use the Code Templates function in oXygen. Set
   a Code Template for the XML Editor and assign it the current date
   value. Then, while editing to enter today's date open Document/Content
   Completion, start the assistant and enter the date.</p>
   <p>There is a green light on top right corner of your document. If it
-  is red, it means something is not valid. click on the small red bar
-  along the side of the document to go to that point and read the
-  message. Often this is enough, if you don't understand where is the
-  problem, ask Pietro.</p>
+  is red, it means something is not valid. Click on the small red bar
+  on the side of the document to go to that point and read the
+  message. Often this is enough, if you don't understand where the
+  problem is, ask Pietro.</p>
 
   <div type="level2">
     <head>Special Characters and letters with diacritics</head>
@@ -348,10 +355,10 @@ CTRL+/</item>
         <p>Ñ ñ (gn, Amharic)</p>
       </item>
     </list>
-    <p>You can use oXygen Content Completion. To do this make sure you
-    sync this repo. in the folder codetemplates there is all you need.
-    Open oxygen, go to Preferences and search &quot;Code
-    Templates&quot;. click on it on the menu list on the left. Once the
+    <p>You can use oXygen Content Completion. To do this, make sure you
+    sync the "Documentation" repository. In the folder codetemplates there is all you need.
+    Open oXygen, go to Preferences and search &quot;Code
+    Templates&quot;. Click on it on the menu list on the left. Once the
     list on the right appears, click IMPORT in the lower right corner.
     select the codetemplates.xml file from the codetemplates folder.
     Apply and close.</p>

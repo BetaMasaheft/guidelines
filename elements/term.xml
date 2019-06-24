@@ -25,7 +25,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body xml:id="term">
          <div>
             <head>term</head>
-            <p>You can enter in this element any id of an <ref target="authority-files">authority file</ref> from the <ref target="taxonomy">taxonomy</ref>. If the list below does not include a value, please add it to the schema following the indication <ref target="editingSchema">on this page</ref>.</p>
+            <p>You can enter in this element any ID of an <ref target="authority-files">authority file</ref> from the <ref target="taxonomy">taxonomy</ref>. If the list below does not include a value, please add it to the schema following the indication <ref target="editingSchema">on this page</ref>.</p>
          </div>
       </body>
    </text>
