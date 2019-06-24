@@ -16,21 +16,53 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <sourceDesc>
                 <p>Encoded in TEI.</p>
             </sourceDesc>
-        </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+        </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+            <change who="DR" when="2019-06-24">Added examples and developed</change></revisionDesc>
     </teiHeader>
     <text>
         <body xml:id="authority-files">
             <head>Authority files</head>
             <p>To each <gi>category</gi> in the <ref target="taxonomy">taxonomy</ref> corresponds a file in the authority-files repository.</p>
-            <p>In the Authority-Files repo there are currently a series of files
-                mainly generated from lists which have nothing but a title and an ID.</p>
-            <p>Each of these refers to one value so that they can be enriched with
-                a description which is out of the schema and they can be used for
-                relations and <gi>ref</gi> as the other IDs.</p>
-            <p>When reordering the hierarchy of the list, please remember to use
-                the same name you give in the taxonomy.xml file also for the filename
+            <p>In the Authority-Files repository, there are currently a series of files
+                mainly generated from lists which have nothing but a title and an ID. Each of them refers to one value.</p>
+            <p>For example, the <ref target="taxonomy">taxonomy</ref> contains the following category of keywords describing persons:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <category>
+                    <desc>Person Types</desc>
+                    <category>
+                        <catDesc>saint</catDesc>
+                    </category>
+                    <category>
+                        <catDesc>biblical</catDesc>
+                    </category>
+                    <category>
+                        <catDesc>prophet</catDesc>
+                    </category>
+                    <category>
+                        <catDesc>angel</catDesc>
+                    </category>
+                    <category>
+                        <catDesc>martyr</catDesc>
+                    </category>
+                </category>
+            </egXML>
+            <p>For each of the values listed in children <gi>category</gi>s of the first "Person Types" <gi>category</gi>, there should be therefore a corresponding record in the
+                Authority-Files repository, see for example <ref type="bm" target="saint">saint</ref>.</p>
+            <p>Authority files records can be quite minimal, adding to the record only a title, such as in <ref type="bm" target="saint">saint</ref>:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <titleStmt>
+                    <title>Saint</title>
+                    <editor role="generalEditor" key="AB"/>
+                    <editor key="DR"/>
+                    <funder>Akademie der Wissenschaften in Hamburg</funder>
+                </titleStmt>
+            </egXML>
+            <p>But despite their usual brevity, these records are complete records which can be edited and developed and whose IDs can be used in all places in which the
+                IDs of records of other entities are used, for example in relations and <gi>ref</gi>. </p>
+            <p>Please remember to use
+                the same name used in the taxonomy.xml file also for the filename
                 and the ID.</p>
-            <p>An example of description inside an authority file:</p>
+            <p>An example of a more developed description inside an authority file from <ref type="bm" target="AT1003Arrest">AT1003Arrest</ref>:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                 <abstract>
                     <p>A miniature showing <persName ref="PRS5684JesusCh">Jesus</persName> being arrested by the guards of the Temple,
@@ -48,9 +80,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </abstract>
             </egXML>
             
-            <p>Indeed these authority files for each keyword can also receive keywords and any further content, similarly to all other records. 
+            <p>These authority files for each keyword can also receive keywords and any further content, similarly to all other records. 
                 A special use case is for example that of <ref target="artThemes">Art Themes</ref>.</p>
-            <p>To create a new authority file, see the <ref target="newEntry">new entry creation page</ref>.</p>
+            <p>To create a new authority file, see the general <ref target="newEntry">new entry creation page</ref> and remember that each authority file needs to have a corresponding 
+                entry in the corresponding <gi>category</gi> in the <ref target="taxonomy">taxonomy</ref>, which you will have to add manually if you create a new 
+                authority file.</p>
             
         </body>
     </text>
