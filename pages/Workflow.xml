@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+<?xml-model href="https://raw.GitHubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+<?xml-model href="https://raw.GitHubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -22,24 +22,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body xml:id="workflow">
         <div type="level2">
-<p>In general the workflow for the app can be called github based. The app relies on data which is pushed from github and is validated.</p>
-<p>It can happen that a file goes out of sync, but the data is kept in the github repository separated from the code to be available for other implementations and applications.</p>
+<p>In general the workflow for the app can be called GitHub based. The app relies on data which is pushed from GitHub and is validated.</p>
+<p>It can happen that a file goes out of sync, but the data is kept in the GitHub repository separated from the code to be available for other implementations and applications.</p>
 <p>That is to say, if you do not see your data updated in few seconds, then please see the <ref target="validation">validation</ref> page and if this does not help, open an issue.</p>
         </div>
 <div type="level2">
-  <p>Once you have <ref target="setup">Github installed and the repositories are all up to date</ref> you are ready to start.</p>
-  <p>Open on your computer the folder where you have cloned the github repository, for example a BetMas
+  <p>Once you have <ref target="setup">GitHub installed and the repositories are all up to date</ref> you are ready to start.</p>
+  <p>Open on your computer the folder where you have cloned the GitHub repository, for example a BetMas
     folder on your desktop where you have the Manuscripts folder, which is actually the cloned repository.</p>
     <p>Select the file you want to edit, e.g. EMIP00001.xml.
     Open the file with Atom or Oxygen or any other XML editing software you like. <ref target="setup">You find more advice in the setup page for example to create a project, which will allow you to avoid having always to go back and between from your system and the software.</ref></p>
     <p>Following these guidelines, you can edit the file and save it.</p>
-    <p>Github will see the change and if you open it, you will see that it has recorded the
+    <p>GitHub will see the change and if you open it, you will see that it has recorded the
       changes you made (under the changes tab).
       When you are ready, you can make sure you have <ref target="revisions">recorded your changes</ref>, that your files are <ref target="validation">valid</ref> and then you can commit them,
    leaving a commit message which explains nicely and clearly what you have done (i.e. avoid commit messages like 'upd' or 'changes'...).
       After few seconds, you can eventually check your file in the web application.
   </p>
-  <p>Some tasks, like finding the correct id for a reference or named entitiy, will need anyway to use the application, unless you prefer to search through the files directly in your editing software.</p>
+  <p>Some tasks, like finding the correct ID for a reference or named entity, will need anyway to use the application, unless you prefer to search through the files directly in your editing software.</p>
   <p>In very limited and checked cases you might need to create new entries. You need permission to do so via the application. then you can follow the guidance in the <ref target="newEntry">new record creation</ref> page.</p>
   </div>
          <div type="level2">

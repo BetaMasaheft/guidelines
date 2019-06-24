@@ -26,7 +26,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             the <gi>revisionDesc</gi> element of the
             <gi>teiHeader</gi> at the end of each section of work of
     improvement of a record. In the attribute
-    <att>who</att> enter <ref target="teamids">your id</ref>, in the
+    <att>who</att> enter <ref target="teamids">your ID</ref>, in the
     <att>when</att> enter the date of the change, in the
     format YYYY-MM-DD. You can use code templates in oXygen to do this. There is a set ready for you which also includes this. 
     Inside the element, briefly describe the changes

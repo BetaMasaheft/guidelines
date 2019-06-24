@@ -44,7 +44,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     this will be referred to in the attribute, using the
     anchor as in <tag>div type='edition' resp='#hommel'</tag>.</item>
       <item>If you directly want to attribute to a person
-        in our person records, you can simply add the PRS id as in
+        in our person records, you can simply add the PRS ID as in
         <egXML xmlns="http://www.tei-c.org/ns/Examples">ወ<supplied reason="undefined" resp="PRS10747Zotenbe">ት</supplied>ረ።</egXML></item>
       </list>
       </p>
