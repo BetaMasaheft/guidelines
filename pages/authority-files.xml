@@ -48,16 +48,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </egXML>
             <p>For each of the values listed in children <gi>category</gi>s of the first "Person Types" <gi>category</gi>, there should be therefore a corresponding record in the
                 Authority-Files repository, see for example <ref type="bm" target="saint">saint</ref>.</p>
-            <p>Authority files records can be quite minimal, adding to the record only a title, such as in <ref type="bm" target="saint">saint</ref>:</p>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <titleStmt>
-                    <title>Saint</title>
-                    <editor role="generalEditor" key="AB"/>
-                    <editor key="DR"/>
-                    <funder>Akademie der Wissenschaften in Hamburg</funder>
-                </titleStmt>
-            </egXML>
-            <p>But despite their usual brevity, these records are complete records which can be edited and developed and whose IDs can be used in all places in which the
+ 
+            <p>Despite their usual brevity, these records are complete records which can be edited and developed and whose IDs can be used in all places in which the
                 IDs of records of other entities are used, for example in relations and <gi>ref</gi>. </p>
             <p>Please remember to use
                 the same name used in the taxonomy.xml file also for the filename
