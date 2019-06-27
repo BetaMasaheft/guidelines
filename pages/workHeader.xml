@@ -85,10 +85,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    traditions, the relevant titles and references will be added in the appropriate
    <tag>div type='textpart'</tag>, not in <gi>titleStmt</gi>.
 </p>
-   
-   <p>For works for which no standard title is known, such as short prayers or hymns, it is preferable to use the beginning as title. A more generic title can then be 
+
+   <p>For works for which no standard title is known, such as short prayers or hymns, it is preferable to use the beginning as title. A more generic title can then be
       given later, as in this example from <ref type="bm" target="LIT4719Eweddesa">LIT4719Eweddesa</ref>:
-   
+
    <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <title xml:lang="gez" xml:id="t1">እዌድሳ፡ ለውድስት፡</title>
       <title xml:lang="gez" corresp="#t1">ʾƎweddǝsā la-wǝddǝst</title>
@@ -175,6 +175,8 @@ manuscript records containing the work are displayed in the app anyway.</p>
       </listWit>
    </sourceDesc>
 </egXML>
+<p>Please, as in all other instances of ID assigning, make sure you do not assign an existing ID. If you really want to give as <att>xml:id</att> to the above witness with corresp ONBAeth4, the value of this cannot be this same string,
+which is the identifier of the manuscript. It is enough for example to use it in lower case.</p>
 <p>
 
    <gi>listWit</gi>s can be nested if needed, for example
