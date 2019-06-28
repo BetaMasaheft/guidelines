@@ -167,7 +167,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 the text, as
                 <tag>incipit type="supplication"</tag>
                 or
-                <tag>explicit type="supplication"</tag>.</p>
+                <tag>explicit type="supplication"</tag>. See <ref target="ColophSupplTit">colophons, titles and supplications</ref>.</p>
         </div>
         <div type="section">
             <head>Musical notation</head>

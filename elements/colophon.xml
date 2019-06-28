@@ -45,7 +45,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   colophon of a hagiographic manuscript from Tigray. </item>
   </list>
 
-
+See <ref target="ColophSupplTit">colophons, titles and supplications</ref>.
 
 </p>
             <p>inside any <gi>msItem</gi> in the description of the contents a
