@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Colophons, Titles and Supplications</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+          </publicationStmt>
+         <sourceDesc>
+            <p>Originally written in XML TEI</p>
+         </sourceDesc>
+      </fileDesc>       <revisionDesc>
+      <change who="PL" when="2019-06-28">first version from https://github.com/BetaMasaheft/Documentation/issues/946 and related issues, examples from document provided by Denis Nosnitsin and Dorothea Reule.</change>     </revisionDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="ColophSupplTit">
+        <head>Colophons, Titles and Supplications</head>
+        <p>These three concepts are here treated together as they tend to overlap in discussion. We will try in this page to clarify our understanding and the way in which we encode each case.</p>
+        <p>The elements used are <gi>title</gi> and <gi>div</gi> with <att>subtype</att>, <gi>colophon</gi>, <gi>incipit</gi>, <gi>explicit</gi>, <gi>seg</gi> with <att>type</att>.</p>
+        <p>In either case the list of values which can be used for the attribute <att>type</att> or <att>subtype</att> is the same. More than one value can be used, up to six.
+</p>
+<!-- needs to find its place in the schema as well! -->
+      <list>
+        <item>"expanded" contains the title, tafaṣṣama/malʾa and further information</item>
+        <item>"inscription" is used for a title occurring at the beginning of a work</item>
+        <item>"subscription" for a title occurring at the end of a work</item>
+        <item>"embedded" for a title copied together with the text</item>
+      </list>
+    <p>  When used in <gi>div</gi> or <gi>seg</gi> other two values can be used</p>
+      <list>
+        <item>"title" contains the title as well as tafaṣṣama/malʾa or similar expression</item>
+        <item>"desinit" to qualify expressions as tafaṣṣama/malʾa</item>
+          <item>"translation" to signal that the title is only of a translation</item>
+      </list>
+
+         <div type="chapter">
+         <head>Colophons</head>
+         <p>For a definition of the colophons of a manuscript, see <ref target="colophon">the page on colophon</ref>.</p>
+        <p>Titles (sometimes referred to aas "colophon of the work")
+          transmitted in all manuscripts will be encoded in the work record and titles particular to one manuscript in the manuscript record.
+          Cases like the ones discussed for Coptic Biblical Titles <ref target="https://www.aai.uni-hamburg.de/en/comst/pdf/bulletin3/comst-bulletin3-1-05-22.pdf">Buzi 2017, 5–6</ref> would need encoding in
+          each manuscript without any doubt.
+        The next section details a number of types of titles which can be encoded in a work, with examples of how to encode them.</p>
+       </div>
+        <div type="chapter">
+        <head>Titles (colophon of the work)</head>
+    <p>This can be encoded in the work record, but also in the manuscript description or transcription.</p>
+    <p>While the best option is to encode them in the manuscript transcription,
+      using an appropriate <gi>div</gi> with <att>subtype</att> using a combination of the values above,
+  it is often the case that there is no transcription, and the encoder is left to decide if to put this within the <gi>msItem</gi> or directly in the work record.</p>
+  <p>If adding a fixed text only in the work record, <gi>div</gi>
+   with <att>subtype</att>   or <gi>seg</gi> with <att>type</att>  using a combination of the values above.</p>
+
+<p>This is an example in the transcription of a manuscript <ref type="BM" target="BNFet152">BNFet152</ref>.</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  <div type="textpart" subtype="title" xml:lang="gez" corresp="#ms_i1">
+  <ab>
+  ዝንቱ፡ መጽሐፈ፡ ትምህርት፡ ዘልሳነ፡ ግዕዝ፡ ዛይሳመይ፡ ከሌዳዊ፡
+  <gap reason="omitted" extent="unknown" resp="PRS10747Zotenbe"/>
+  </ab>
+  </div>
+</egXML>
+<p>This is an example in the edition of a work, where also <val>title</val> is used from <ref target="LIT1968Mashaf" type="BM">LIT1968Mashaf</ref>.</p>
+
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  <div type="textpart" subtype="title inscription expanded">
+  <div type="textpart" subtype="paragraph" n="1">
+  <ab>
+  ዝንቱ፡ መጽሐፈ፡ ሥርዓት፡ ዘወፅአ፡ እመንበረ፡ ማርቆስ፡ ሐዋርያ፡ እመካነ፡ መዓልቃ፡ ዘምስር፡
+  </ab>
+  </div>
+  ...
+</div>
+</egXML>
+        <div type="section">
+        <head>Title of the (entire) work</head>
+        <p>See for example in the manuscripts with the <ref type="BM" target="LIT3179Revela">Revelation of John</ref>,
+        the wording like <foreign xml:lang="gez">ዝየ᎓ ተፈጸመ᎓ ራእየ᎓ ዮሐንስ᎓
+        አቡቀለምሲስ᎓ ዘውእቱ᎓ በሕይወቱ᎓ ራእይ᎓ ብሂል᎓</foreign> e.g. <ref target="https://betamasaheft.eu/manuscripts/IVsuhtelen252/main#ms_i1.2">Saint Petersburg, Institut Vostočnyh Rukopisej Rossijskoj Akademii Nauk, IV Suhtelen 252, content item 1.2</ref> </p>
+  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+    <msItem xml:id="ms_i1.2">
+  <locus from="66ra" to="99vb"/>
+  <title type="complete" ref="LIT3179Revela" xml:lang="gez"/>
+  <incipit xml:lang="gez">
+  <hi rend="rubric">ዘዮሐንስ᎓ እጲስ᎓</hi>
+  ቆጶስ᎓ ዘቍስጥንጥያ᎓ ምጥረ᎓ ጶሊስ᎓ አመ᎓ ሀለዎ᎓ ይሰደድ᎓ ራእዮ᎓ ለዮሐንስ᎓ ዘከመ᎓ ርእዮ᎓ ለኢየሱስ᎓ ክርስቶስ᎓ ዘወሀቦ᎓ እግዚኣብሔር᎓ ከመ᎓ ያርእዩሙ᎓ ለአግብርቲሁ᎓ ዘሀሎ᎓ ይኩን᎓ ፍጡነ ።
+  </incipit>
+  <explicit xml:lang="gez">
+  ዝየ᎓ ተፈጸመ᎓ ራእየ᎓ ዮሐንስ᎓ አቡቀለምሲስ᎓ ዘውእቱ᎓ ብሂል᎓ ዘርእየ᎓ በሕይወቱ᎓ ራእየ፨ ወእመቦ᎓ ዘገደፍኩ᎓ ወዘወሰኩ᎓ በኢያእምሮ᎓ ስረዩ᎓ ወባረኩ᎓ ላዕሌየ᎓ ወኢትርስዑኒ᎓ በሞትየ᎓ ወበሕይወትየ᎓ ሶበ᎓ አንበብክምዋ።
+  </explicit>
+  </msItem>
+</egXML>
+<p>This could have been added in a div in the transcription as well. Note
+  that in this case the encode has added no <att>type</att> in <gi>incipit</gi> or <gi>explicit</gi>.
+<gi>seg</gi> or <gi>title</gi> may be used inside these elements to markup the exact portion of the incipit of explicit which is an inscription or subscription, for example, either here or in the transcription as in the example above.</p>
+        <p>
+Other examples of short colophons can be found at the end of some of the Old Testament books (esp. Octateuch).
+Cp. <ref type="BM" target="ESaqg008">AQG-008</ref>, Octateuch: <foreign xml:lang="gez">ተፈጸመ᎓ ኦሪት᎓ ዘፀአት; ኦሪት᎓ ዘሌዋዊያን᎓ ተፈጸመ᎓</foreign>, etc.
+or at the end of Aksumite collection (<ref type="BM" target="ESum039">UM-039</ref>), <ref target="https://www.zotero.org/groups/358366/ethiostudies/items/tag/bm%3Abausi2016colof">Bausi 2016, 240</ref>.
+Cp. <ref type="BM" target="ESdd042">DD-042</ref>, Zena Ayhud, f. 158r-v
+<foreign xml:lang="gez">ተፈጸመ፡ መጽሐፈ፡ ዮሴፍ፡ ወልደ፡ ከርዮን፡ ካህን፡ ዘያየድዕ፡ ዜና፡ አይሁድ፡ ውስተ፡
+   ቤት፡ ዳግማዊ። ወዝክረ፡ ነገሥቶሙ፡ ወነገር፡ ዘኮነ፡ በመዋዕሊሆሙ፡ እም፡ አመ፡ ሕንጸተ፡ ቤት፡
+   ዳግማዊ፡ ወግአቶሙ፡ ኀቤሁ፡ እስከ፡ ተነሥተ፡ ወተፄወው፡ እምኔሁ። ስብሐት፡
+   ወአኰቴት። ዝማሬ፡ ወዕበይ፡  ስጊድ፡ ወክብር። ግናይ፡ ወውዳሴ፡ ክብር: ለእግዚአብሔር፡
+   ክቡር፡ ወልዑል። እስከ፡ ለዓለመ፡ ዓለም። ወለትውልደ፡ ትውልድ፡ ዘኢየሐልቅ፡ አሜን። ወአሜን፡ለይኩን፡ ለይኩ</foreign>
+</p>
+<figure>
+                  <graphic xml:id="g1" url="https://betamasaheft.eu/iiif/DD/042/DD-042_158.tif/full/full/0/default.jpg">
+                      <desc><ref type="BM" target="ESdd042">DD-042</ref>, Zena Ayhud, f. 158r</desc></graphic>
+                      <graphic xml:id="g2" url="https://betamasaheft.eu/iiif/DD/042/DD-042_159.tif/full/full/0/default.jpg">
+                          <desc><ref type="BM" target="ESdd042">DD-042</ref>, Zena Ayhud, f. 158v </desc></graphic>
+              </figure>
+<p>This could be reproduced in the manuscript transcription using
+  a <gi>div</gi> with <gi>subtype</gi> having the values title, embedded and subscription,
+  but would need to be in the manuscript transcription, not in the work because the fact it is embedded hints at the fact that it is not a constant of the tradition of this text.</p>
+
+<p>In a few cases the colophon of the work is extensive, e.g., in the <ref target="LIT3973GadlaT" type="BM">Vita of Takla Hāymānot</ref>.</p>
+        </div>
+        <div type="section">
+        <head>Title of the work which is a part of a collection</head>
+        <p>The identification of this type of title depends on how the structure of the work in question is understood.</p>
+
+        </div>
+
+        <div type="section">
+        <head>Title of the translation of the entire work</head>
+        <p>The identification of this type of title depends on how the structure of the work in question is understood.</p>
+
+        </div>
+
+        <div type="section">
+        <head>Title of a part of the work or of the translation of a work which is part of a collection</head>
+        <p>The identification of this type of title depends on how the structure of the work in question is understood.</p>
+
+        </div>
+      </div>
+       <div type="chapter">
+       <head>Supplications</head>
+       <p>Definition</p>
+       <div type="section">
+       <head>Examples</head>
+       </div>
+       <div type="section">
+       <head>Encoding Examples</head>
+       </div>
+     </div>
+     <div type="chapter">
+     <head>Querying this information</head>
+     </div>
+      </body>
+   </text>
+</TEI>
