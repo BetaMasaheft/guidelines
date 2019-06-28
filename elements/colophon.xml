@@ -25,6 +25,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body xml:id="colophon">
          <div>
             <head>Colophon</head>
+            <p>A colophon refers to production stages of the entire manuscript only, and is usually found to the end, in rare cases to the beginning of the manuscript.
+  Even if this is short and contains no date, it is still a colophon.
+  The core formulas are: <foreign xml:lang="gez">ዛቲ፡ መጽሐፍ፡ ተፈጸመት፡, or ተጽሕፈ፡ ዝንቱ፡ መጽሐፍ፡, መልአ᎓ ጽሕፈቱ᎓ ለ…</foreign>, or similar.
+</p>
+  <p>Examples of colophons recorded in Ethio-Spare are the following:
+<list>
+  <item>In <ref type="BM" target="ESqs006">QS-006</ref>, it is placed in the
+  beginning (possibly the same in other Deggwa manuscripts) and refers to the beginning of the copying. </item>
+  <item>  In <ref type="BM" target="ESap008">AP-008</ref>, f. 140v, it refers to the beginning and the end
+  of the copying: <foreign xml:lang="gez">ዘተወጥነ᎓ በዘመነ᎓ ማቴዎስ᎓ ተፈጸመ᎓ በዘመነ᎓ ማርቆስ᎓ በዘመነ᎓ ሢመቱ᎓ ለዘሚካኤል።</foreign></item>
+  <item>  Short colophons: e.g. <ref type="BM" target="ESqsm002">QSM-002</ref>; <ref type="BM" target="ESmy018">MY-018</ref>.</item>
+  <item>Very long colophons extended with narratives: <ref type="BM" target="ESaqg019">AQG-19</ref>rv (“rejected leaf”);
+  <ref target="https://www.zotero.org/groups/358366/ethiostudies/items/tag/bm%3Abausi2016colof">Bausi 2016, 248</ref>, colophon in Octateuch of
+  Dabra Bizan f. 574; 247-48, the so-called “Operetta di Arkaledes”, “Operetta di Yostinos”.
+   Probably <ref target="https://www.zotero.org/groups/358366/ethiostudies/items/tag/bm%3Abausi2016colof">Bausi 2016, 245</ref>,
+   colophon in <ref type="BM" target="BLorient691">BritLib Orient. 691</ref>.
+  <ref target="https://www.zotero.org/groups/358366/ethiostudies/items/tag/bm%3Abausi2016colof">Bausi 2016:255</ref>,
+  colophon of a hagiographic manuscript from Tigray. </item>
+  </list>
+
+
+
+</p>
             <p>inside any <gi>msItem</gi> in the description of the contents a
                <gi>colophon</gi> with
                <att>xml:id</att> with value <val>coloph</val> can be used to enter
