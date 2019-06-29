@@ -73,7 +73,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         by a cataloguer, the encoder might decide to have an <gi>incipit</gi> with a <att>type</att> <val>inscription</val>, 
         or copy the text in the title element of the <gi>msItem</gi>.</p>
       <p>A special note needs to be made for <gi>seg</gi> which can be used within <gi>colophon</gi>, <gi>incipit</gi>, <gi>explicit</gi>, <gi>div</gi> </p>
-      <div type="chapter">
+      <div type="level2">
         <head>Colophons</head>
         <p>For a definition of the colophons of a manuscript, see <ref target="colophon">the page on
             colophon</ref>.</p>
@@ -87,7 +87,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <p>There is no need to add a <att>type</att> to every <gi>colophon</gi>, but the attribute and values should be used cautiously, 
           so that when one searches for a colophon with a certain type, will match that and not something simply copied over.</p>
       </div>
-      <div type="chapter">
+      <div type="level2">
         <head>Titles (colophon of the work)</head>
         <p>This can be encoded in the work record, but also in the manuscript description or
           transcription.</p>
@@ -116,7 +116,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               <ab> ዝንቱ፡ መጽሐፈ፡ ሥርዓት፡ ዘወፅአ፡ እመንበረ፡ ማርቆስ፡ ሐዋርያ፡ እመካነ፡ መዓልቃ፡ ዘምስር፡ </ab>
             </div> ... </div>
         </egXML>
-        <div type="section">
+        <div type="level3">
           <head>Title of the (entire) work</head>
           <p>See for example in the manuscripts with the <ref type="bm" target="LIT3179Revela"
               >Revelation of John</ref>, the wording like <foreign xml:lang="gez">ዝየ᎓ ተፈጸመ᎓ ራእየ᎓
@@ -174,7 +174,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         
 
 
-        <div type="section">
+        <div type="level3">
           <head>Title of a work which is part of a collection</head>
           <p>The identification of this type of title depends on how the structure of the work in
             question is understood. However this level of interpretation will be encoded as well, so that the position of the information will be enough to provide the information about the fact that a 
@@ -196,7 +196,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
        
         
         
-        <div type="section">
+        <div type="level3">
           <head>Title of  a part of the work</head>
           <p>The identification of this type of title depends on how the structure of the work in
             question is understood. However this level of interpretation will be encoded as well, so that the position of the information will be enough to provide the information about the fact that a 
@@ -209,7 +209,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           </p>
         </div>
         
-        <div type="section">
+        <div type="level3">
           <head>Title of the translation of the entire work</head>
           <p>The identification of this type of title depends on how the structure of the work in
             question is understood.</p>
@@ -231,7 +231,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </div>
         
         
-        <div type="section">
+        <div type="level3">
           <head>Title of the translation of a work which is part of a
             collection</head>
           <p>Examples of titles of the translation of a part </p>
@@ -258,7 +258,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </div>
       
       </div>
-      <div type="chapter">
+      <div type="level2">
         <head>Supplications</head>
         <p>It is important to mark up supplications (or eulogy, or final blessing formula)
           wherever in a manuscript they can occur (beginning, end, within the text)</p>
@@ -310,7 +310,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <gi>div</gi>. However, if the names are changing, then ideally it would be even nicer to have this encoded in each manuscript.
         </p>
       </div>
-      <div type="chapter">
+      <div type="level2">
         <head>Redundancy</head>
         <p>Given these many options it is possible to be redundant. Consider the following example.</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -341,22 +341,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </list>
         </p>
       </div>
-      <div type="chapter">
+      <div type="level2">
         <head>Examples or queries to this information</head>
-        <div type="chapter">
+        <div type="level2">
           <head>Only bare titles of a work given in its text or in manuscript descriptions</head>
           <p>In the files of the work and of related manuscripts and parts or container of that work, with the manuscripts where those are contained,
             look for <gi>titles</gi>, <gi>explicit</gi>, <gi>incipit</gi>, <gi>colophon</gi>, <gi>div</gi> and <gi>seg</gi> which do NOT have the value <val>extended</val> for <att>type</att> or <att>subtype</att>.</p>
         </div>
-        <div type="chapter">
+        <div type="level2">
           <head> All types of colophons/titles referring to a work </head>
           <p>In the files of the work and of  manuscripts where it is contained look for any of the element discussed with at least one of the values discussed, (eventually could be expanded to include all).</p>
         </div>
-        <div type="chapter">
+        <div type="level2">
           <head> All translation colophons/titles</head>
           <p>Take any of the above elements with <att>type</att> or <att>subtype</att> with value 'translation'</p>
         </div>
-        <div type="chapter">
+        <div type="level2">
           <head> All translation colophons/titles in a subscription</head>
           <p>Take any of the above elements with <att>type</att> or <att>subtype</att> with value 'translation' and value 'subscription'.</p>
           <p>In the case of <gi>explicit</gi> take it also if it does not have <att>subtype</att> equal to subscription.</p>
