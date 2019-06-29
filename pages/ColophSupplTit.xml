@@ -45,12 +45,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <item>"subscription" for a title occurring at the end of a work</item>
         <item>"embedded" for a title copied together with the text</item>
         <item>"supplication" for a supplication</item>
+        <item>"translation" to signal that the title is only of a translation</item>
       </list>
       <p> When used in <gi>div</gi> or <gi>seg</gi> other two values can be used</p>
       <list>
         <item>"title" contains the title as well as tafaṣṣama/malʾa or similar expression</item>
         <item>"desinit" to qualify expressions as tafaṣṣama/malʾa</item>
-        <item>"translation" to signal that the title is only of a translation</item>
       </list>
       <p>types/subtypes should be combined to describe the exact situation as it presents itself in each work, 
         possibly in the form of, as in the following example from <ref type="bm" target="LIT5673AkkonuColl">LIT5673AkkonuColl</ref></p>
