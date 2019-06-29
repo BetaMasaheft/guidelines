@@ -155,9 +155,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           </p>
           <figure>
             <graphic xml:id="g1"
-              url="https://betamasaheft.eu/iiif/KAE/011/KAE-011__005.tif/info.json">
+              url="https://betamasaheft.eu/iiif/DD/042/DD-042_158.tif/info.json">
               <desc><ref type="bm" target="ESdd042">DD-042</ref>, Zena Ayhud, f. 158r</desc>
             </graphic>
+          </figure>
+          <figure>
             <graphic xml:id="g2"
               url="https://betamasaheft.eu/iiif/DD/042/DD-042_159.tif/info.json">
               <desc><ref type="bm" target="ESdd042">DD-042</ref>, Zena Ayhud, f. 158v </desc>
