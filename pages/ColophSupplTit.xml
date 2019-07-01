@@ -31,10 +31,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         case.</p>
       <p>The elements used are <gi>title</gi> and <gi>div</gi> with <att>subtype</att>,
           <gi>colophon</gi>, <gi>incipit</gi>, <gi>explicit</gi>, <gi>seg</gi> with
-        <att>type</att>. In <gi>title</gi> and <gi>div</gi> the attribute <att>type</att> is 
-      used for a more general typology. Each of these elements can take as much text as available 
+        <att>type</att>. In <gi>title</gi> and <gi>div</gi> the attribute <att>type</att> is
+      used for a more general typology. Each of these elements can take as much text as available
       and needed, from nothing to many thousands of words.</p>
-      <p>Since some of these elements, can be used also for additions, it is possible with the same set 
+      <p>Since some of these elements, can be used also for additions, it is possible with the same set
         of tags and attributes also to encode for example a supplication and an extended title added at a moment later than the copy of the text. </p>
       <p>In either case the list of values which can be used for the attribute <att>type</att> or
           <att>subtype</att> is the same. More than one value can be used, up to six. </p>
@@ -52,10 +52,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <item>"title" contains the title as well as tafaṣṣama/malʾa or similar expression</item>
         <item>"desinit" to qualify expressions as tafaṣṣama/malʾa</item>
       </list>
-      <p>types/subtypes should be combined to describe the exact situation as it presents itself in each work, 
+      <p>types/subtypes should be combined to describe the exact situation as it presents itself in each work,
         possibly in the form of, as in the following example from <ref type="bm" target="LIT5673AkkonuColl">LIT5673AkkonuColl</ref></p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
-  <div type="textpart" subtype="title inscriptio" xml:id="Title">
+  <div type="textpart" subtype="title inscription" xml:id="Title">
     <label>Title</label>
   </div>
 </egXML>
@@ -65,12 +65,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         are working on a manuscript record and we do not know enough the textual unit, so we need to
         register as much as possible, but not overstate. Fortunately, all these different
         informations can be collected together, and the use of the same set of attributes can
-        help. An additional reason for this is that these information can be joined to one 
-        another, there might be a colophon which contains a title, and certainly a generic 
-      incipit or explicit might contain, with other things also a title, but is generically the 
-      beginning of a text part, which needs not to be a title or anything else, although it might be. 
-      It is up to the encoder to make decisions for example if a long title before a text is all there is in a <gi>incipit</gi> given 
-        by a cataloguer, the encoder might decide to have an <gi>incipit</gi> with a <att>type</att> <val>inscription</val>, 
+        help. An additional reason for this is that these information can be joined to one
+        another, there might be a colophon which contains a title, and certainly a generic
+      incipit or explicit might contain, with other things also a title, but is generically the
+      beginning of a text part, which needs not to be a title or anything else, although it might be.
+      It is up to the encoder to make decisions for example if a long title before a text is all there is in a <gi>incipit</gi> given
+        by a cataloguer, the encoder might decide to have an <gi>incipit</gi> with a <att>type</att> <val>inscription</val>,
         or copy the text in the title element of the <gi>msItem</gi>.</p>
       <p>A special note needs to be made for <gi>seg</gi> which can be used within <gi>colophon</gi>, <gi>incipit</gi>, <gi>explicit</gi>, <gi>div</gi> </p>
       <div type="level2">
@@ -84,7 +84,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             >Buzi 2017, 5–6</ref> would need encoding in each manuscript without any doubt. The next
           section details a number of types of titles which can be encoded in a work, with examples
           of how to encode them.</p>
-        <p>There is no need to add a <att>type</att> to every <gi>colophon</gi>, but the attribute and values should be used cautiously, 
+        <p>There is no need to add a <att>type</att> to every <gi>colophon</gi>, but the attribute and values should be used cautiously,
           so that when one searches for a colophon with a certain type, will match that and not something simply copied over.</p>
       </div>
       <div type="level2">
@@ -173,35 +173,35 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <p>In a few cases the colophon of the work is extensive, e.g., in the <ref
               target="LIT3973GadlaT" type="bm">Vita of Takla Hāymānot</ref>.</p>
         </div>
-        
+
 
 
         <div type="level3">
           <head>Title of a work which is part of a collection</head>
           <p>The identification of this type of title depends on how the structure of the work in
-            question is understood. However this level of interpretation will be encoded as well, so that the position of the information will be enough to provide the information about the fact that a 
+            question is understood. However this level of interpretation will be encoded as well, so that the position of the information will be enough to provide the information about the fact that a
           title regards only a part: it will be nested into it, either as a <gi>div</gi> or a <gi>msItem</gi>.</p>
-          <p>An example of this can be <ref target="ESum018" type="bm">UM-018</ref>, f. 18vb, 
-            followed by a supplication; f. 37rb; possibly with a date, f. 56rb; 77vb, followed by a subscription; 
+          <p>An example of this can be <ref target="ESum018" type="bm">UM-018</ref>, f. 18vb,
+            followed by a supplication; f. 37rb; possibly with a date, f. 56rb; 77vb, followed by a subscription;
             possibly f. 88va; f. 123va; possibly f. 241b; f. 252vb.
-            
+
             In <ref target="ESmgm013" type="bm">MGM-013</ref>, the Vita of Gabra Manfas Qeddus
-            and the Miracles each has a colophon, f. 52va <foreign xml:lang="gez">ተፈጸመ፡ በዝየ፡ ገድለ፡ አቡነ፡</foreign>…; f. 68va, 
+            and the Miracles each has a colophon, f. 52va <foreign xml:lang="gez">ተፈጸመ፡ በዝየ፡ ገድለ፡ አቡነ፡</foreign>…; f. 68va,
             <foreign xml:lang="gez">ተፈጸመ፡ በዝየ፡ ተአምረ፡ አቡነ፡ ገብረ፡</foreign>….
             <ref
               target="https://www.zotero.org/groups/358366/ethiostudies/items/tag/bm%3Abausi2016colof"
-              >Bausi 2016, 253–54</ref>, for the Ethiopic Apocalypse of Peter (The last two lines<foreign xml:lang="gez"> ለዛቲ᎓ መጽሐፍ᎓ ዘአጽሐፋ᎓</foreign>… 
+              >Bausi 2016, 253–54</ref>, for the Ethiopic Apocalypse of Peter (The last two lines<foreign xml:lang="gez"> ለዛቲ᎓ መጽሐፍ᎓ ዘአጽሐፋ᎓</foreign>…
             can be considered also as a separate unit, a commissioner note or supplication for the commissioner).</p>
-          
+
         </div>
-       
-       
-        
-        
+
+
+
+
         <div type="level3">
           <head>Title of  a part of the work</head>
           <p>The identification of this type of title depends on how the structure of the work in
-            question is understood. However this level of interpretation will be encoded as well, so that the position of the information will be enough to provide the information about the fact that a 
+            question is understood. However this level of interpretation will be encoded as well, so that the position of the information will be enough to provide the information about the fact that a
             title regards only a part: it will be nested into a <gi>div</gi>.</p>
           <p><ref target="ESam002" type="bm">AM-002</ref>, Sinodos, f. 40vb ተፈጸመ᎓ ተፈሥሑ᎓ ቀዳሜ᎓ ብሔር᎓; f. 68rb: ተፈጸመ᎓ ኃምስ᎓ ብሔር᎓ etc.
             Aksumite collection (<ref target="ESmum039" type="bm">UM-039</ref>),
@@ -210,47 +210,47 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             Cp. <ref target="ESsdm008" type="bm">SDM-008</ref>.
           </p>
         </div>
-        
+
         <div type="level3">
           <head>Title of the translation of the entire work</head>
           <p>The identification of this type of title depends on how the structure of the work in
             question is understood.</p>
-          <p>Nearly all copies of Maṣḥafa krǝstǝnnā (sometimes it is preceded by the colophon of the work), 
+          <p>Nearly all copies of Maṣḥafa krǝstǝnnā (sometimes it is preceded by the colophon of the work),
             see, e.g., <ref target="ESdz011" type="bm">DZ-011</ref>, f. 47rb; <ref target="ESmr039" type="bm">MR-039</ref>, f. 36rb.
-            Nearly all copies of Aragāwi manfasāwi (sometimes followed by the colophon of the manuscript), 
+            Nearly all copies of Aragāwi manfasāwi (sometimes followed by the colophon of the manuscript),
             cp. <ref target="ESmakm012" type="bm">MAKM-012</ref>, <ref target="ESgkm011" type="bm">GKM-001</ref>.
             <ref target="ESdd015" type="bm">DD-015</ref>, Maṣḥafa ḥāwi, f. 12r, refers to the beginning and the end of the translation.
             <ref
               target="https://www.zotero.org/groups/358366/ethiostudies/items/tag/bm%3Abausi2016colof"
               >Bausi 2016, 249–50</ref>: the colophon of the Kebra nagast.
-            <ref target="ESdd012" type="bm">DD-012</ref>, Commentaries on the Epistle of John, f. 315vb:  
-            <foreign xml:lang="gez">ተፈጸመ፡ በረድኤተ፡ እግዚአብሔር፡ ልዑል፡ ወሀብተ፡ ጸገሁ፡ ወስብሀቲሁ፡ ትርጓሜ፡ አቡነ፡ ዓቢይ፡ በውስተ፡ ቅዱሳን፡ ዮሐንስ፡ አፈ፡ ወርቅ፡ 
-            መልእክተ፡ ጳውሎስ፡ ሐዋርያ፡ ኀበ፡ ሰብአ፡ ዕብራውያን፡ ጸሎቶሙ፡ ወበረከቶሙ፡ ወሀብተ፡ ረድኤቶሙ፡ የሀሉ፡ ምስለ፡ ገብሮሙ፡ ዝክረ፡ ማርያም። 
-            ተተርጐመት፡ እምልሳነ፡ ዓረብ፡ ለግዕዝ፡ በአፈ፡ ዕንባቆም፡ ወሚካኤል፡ በ፸፻፲ወ፭ዓመተ፡ ምሕረት። ወእምልደተ፡ ክርስቶስ፡ እግዚእነ፡ ወመድኃኒነ፡ 
+            <ref target="ESdd012" type="bm">DD-012</ref>, Commentaries on the Epistle of John, f. 315vb:
+            <foreign xml:lang="gez">ተፈጸመ፡ በረድኤተ፡ እግዚአብሔር፡ ልዑል፡ ወሀብተ፡ ጸገሁ፡ ወስብሀቲሁ፡ ትርጓሜ፡ አቡነ፡ ዓቢይ፡ በውስተ፡ ቅዱሳን፡ ዮሐንስ፡ አፈ፡ ወርቅ፡
+            መልእክተ፡ ጳውሎስ፡ ሐዋርያ፡ ኀበ፡ ሰብአ፡ ዕብራውያን፡ ጸሎቶሙ፡ ወበረከቶሙ፡ ወሀብተ፡ ረድኤቶሙ፡ የሀሉ፡ ምስለ፡ ገብሮሙ፡ ዝክረ፡ ማርያም።
+            ተተርጐመት፡ እምልሳነ፡ ዓረብ፡ ለግዕዝ፡ በአፈ፡ ዕንባቆም፡ ወሚካኤል፡ በ፸፻፲ወ፭ዓመተ፡ ምሕረት። ወእምልደተ፡ ክርስቶስ፡ እግዚእነ፡ ወመድኃኒነ፡
             በ፲፻ወ፭፻ዓመት። ወእምዓመተ፡ ሰማዕታትኒ፡ በ፲፻ወ፪፻፴ወ፱ዓመት፡ ወፍፃሜኒ፡ ኮነ፡ በዕለተ፡ ሰኑይ፡ በወርኃ፡ ነሐሴ፡ አሜን። </foreign>
           </p>
-          
+
         </div>
-        
-        
+
+
         <div type="level3">
           <head>Title of the translation of a work which is part of a
             collection</head>
           <p>Examples of titles of the translation of a part </p>
             <list>
-              <item><ref target="ESum018" type="bm">UM-018</ref>, f. 115rb 
-            <foreign xml:lang="gez">ወአዕለውነ᎓ ዘንተ᎓ ገድለ᎓ በመዋዕለ᎓ መፍቀሬ᎓ እግዚአብሔር᎓ ንጉሥ᎓ ገብረ᎓ መስቀል᎓ 
+              <item><ref target="ESum018" type="bm">UM-018</ref>, f. 115rb
+            <foreign xml:lang="gez">ወአዕለውነ᎓ ዘንተ᎓ ገድለ᎓ በመዋዕለ᎓ መፍቀሬ᎓ እግዚአብሔር᎓ ንጉሥ᎓ ገብረ᎓ መስቀል᎓
               ወዘተረጐሞ᎓ ቀሲስ᎓ ግብጻዊ᎓ ወስሙ᎓ ሚካኤል᎓ ወመካኑ᎓ ብሔረ᎓ ግብጽ᎓ ደብረ᎓ አባ᎓ ሲኖዳ</foreign>; f. 132r, etc.</item>
               <item><ref
                 target="https://www.zotero.org/groups/358366/ethiostudies/items/tag/bm%3Abausi2016colof"
-                >Bausi 2016, 243</ref>, colophon for the Vita of Bsoy (<ref target="BLorient692" type="bm">BritLib Orient 692</ref>, 
+                >Bausi 2016, 243</ref>, colophon for the Vita of Bsoy (<ref target="BLorient692" type="bm">BritLib Orient 692</ref>,
                 <ref target="EMML7602" type="bm">EMML 7602</ref> Gadla  samāʿtāt).</item>
               <item><ref
               target="https://www.zotero.org/groups/358366/ethiostudies/items/tag/bm%3Abausi2016colof"
               >Bausi 2016, 243–244</ref>, Vat. Et. 264, for the Vita of Nob.</item>
               <item><ref
               target="https://www.zotero.org/groups/358366/ethiostudies/items/tag/bm%3Abausi2016colof"
-              >Bausi 2016, 244</ref>, colophon with the date 678 in the <ref target="LIT2358Sirach" type="bm">Mashafa Sirak</ref> 
+              >Bausi 2016, 244</ref>, colophon with the date 678 in the <ref target="LIT2358Sirach" type="bm">Mashafa Sirak</ref>
             (<ref type="bm" target="BNFet27">BN éth. 6</ref>).</item>
               <item><ref
               target="https://www.zotero.org/groups/358366/ethiostudies/items/tag/bm%3Abausi2016colof"
@@ -258,16 +258,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             may be considered as composed of two units: colophon of the work, colophon of the translation).</item>
             </list>
         </div>
-      
+
       </div>
       <div type="level2">
         <head>Supplications</head>
         <p>It is important to mark up supplications (or eulogy, or final blessing formula)
           wherever in a manuscript they can occur (beginning, end, within the text)</p>
-        <p> In individual cases, it might be difficult to distinguish the colophon 
-          from other material surrounding it, such as supplications.  
-          Supplications, which are often not part of colophons or titles, are usually encoded 
-          as <tag>explicit type="supplication"</tag> or <tag>incipit type="supplication"</tag> 
+        <p> In individual cases, it might be difficult to distinguish the colophon
+          from other material surrounding it, such as supplications.
+          Supplications, which are often not part of colophons or titles, are usually encoded
+          as <tag>explicit type="supplication"</tag> or <tag>incipit type="supplication"</tag>
           as in this example from <ref type="bm" target="BDLpoc6">BDLpoc6</ref>. </p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
           <incipit type="supplication" xml:lang="gez">
@@ -282,10 +282,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           ወለነኒ፡ ይጸግወነ፡ በረከቶ፡ ወይክፍለነ፡ ርስቶ፡ ወመክፈልቶ። ወምስለ፡ ኵሎሙ፡ ...
         </explicit>
         </egXML>
-<p>        
-          However, a supplication can be immediately followed or preceded by a colophon or be seamlessly contained in it. 
+<p>
+          However, a supplication can be immediately followed or preceded by a colophon or be seamlessly contained in it.
           In such cases it might be desirable to encode the supplication as part of the colophon, using <gi>seg</gi> inside it.</p>
-        <p>The same can value for <att>subtype</att> can be used for a <gi>div</gi> in the 
+        <p>The same can value for <att>subtype</att> can be used for a <gi>div</gi> in the
           manuscript transcription or edition of a work as in the following example from <ref type="bm" target="LIT5061TaammeraA">LIT5061TaammeraA</ref>.</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
           <div type="textpart" subtype="supplication" xml:id="SupplicationTM" xml:lang="gez">
@@ -295,20 +295,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </ab>
           </div>
         </egXML>
-        <p>Supplications  in transcribed text that are integrated into the text and 
-          cannot logically be encoded in <gi>incipit</gi> or <gi>explicit</gi> must be encoded in 
-        either the manuscript transcription or the edition of the text, or both, using a 
+        <p>Supplications  in transcribed text that are integrated into the text and
+          cannot logically be encoded in <gi>incipit</gi> or <gi>explicit</gi> must be encoded in
+        either the manuscript transcription or the edition of the text, or both, using a
           <tag>div subtype="supplication"</tag> or <tag>seg type="supplication"</tag> with </p>
-        
-        <p>Where the supplication is present only in one manuscript, 
+
+        <p>Where the supplication is present only in one manuscript,
           clearly separated from the other textparts, it can be marked there, using either <gi>incipit</gi>, <gi>explicit</gi>, <gi>colophon</gi> or <gi>seg</gi>
         as in the previous example, only in the manuscript where it occurs.</p>
-        <p>Where the supplication is present only in one manuscript but seamlessly integrated into a 
+        <p>Where the supplication is present only in one manuscript but seamlessly integrated into a
           <gi>title</gi>, <gi>seg</gi> can be used or a portion of transcription be encoded with a <gi>div</gi> with the correct subtype.
         </p>
-        <p>Where the supplication can be said to be part of the work 
+        <p>Where the supplication can be said to be part of the work
           as it is transmitted in all manuscripts in the same place, but with varying names, the encoder my consider the option to use a narrative
-          unit, and assign a narrative unit id to its supplication, and the using it in the edition, as a value for <att>corresp</att> on the dedicated 
+          unit, and assign a narrative unit id to its supplication, and the using it in the edition, as a value for <att>corresp</att> on the dedicated
           <gi>div</gi>. However, if the names are changing, then ideally it would be even nicer to have this encoded in each manuscript.
         </p>
       </div>
@@ -332,12 +332,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </explicit>
           </msItem>
         </egXML>
-        <p>In here the encoder is declaring the relation between the <gi>msItem</gi> and a textual unit twice, 
-          once declaring an incipit, once not, and then also adding the incipit, which may contain the title again. There is no need to do all this, 
+        <p>In here the encoder is declaring the relation between the <gi>msItem</gi> and a textual unit twice,
+          once declaring an incipit, once not, and then also adding the incipit, which may contain the title again. There is no need to do all this,
         it is enough to either
         <list><item>add the type <val>inscription</val> to the <gi>title</gi></item>
           <item>add the type <val>inscription</val> to the <gi>incipit</gi></item>
-          <item>add the type <val>inscription</val> to a <gi>seg</gi> 
+          <item>add the type <val>inscription</val> to a <gi>seg</gi>
             inside the text copied either inside <gi>title</gi> or <gi>incipit</gi></item>
           <item>if this is fixed and is encoded in the work record, nothing really needs to be done here unless deviating from what is in the work record.</item>
         </list>
