@@ -70,12 +70,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 active="PRS11029Arkala"
                 passive="PRS11032EsetaM"/>
         </egXML>
-    
+
     </p>
-            
+
             <p>Note that there is a specific <gi>relation</gi> to link BM and the Dillmann lexicon; the complete URL should be provided for the lemma ID, as in the <ref target="LOC7011Meskwa" type="bm">sample file</ref>:
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <relation name="bm:hasLexiconEntry" active="LOC7011Meskwa" passive="http://betamasaheft.eu/Dillmann/lemma/L65ae0746b7f9428da90682226ae6cc75"></relation>
+                <relation name="betmas:hasLexiconEntry" active="LOC7011Meskwa" passive="http://betamasaheft.eu/Dillmann/lemma/L65ae0746b7f9428da90682226ae6cc75"></relation>
             </egXML></p>
             <p>The following are some frequently used ones, but there are many more readily available from the schema (see <gi>relation</gi>) and you can use others which are in the <ref target="ontologyView">ontology</ref>.</p>
     <div type="section">
@@ -106,10 +106,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </div>
     <div type="section">
         <head>person-person</head>
-        <p>bm:wifeOf</p>
-        <p>bm:husbandOf</p>
+        <p>betmas:wifeOf</p>
+        <p>betmas:husbandOf</p>
         <p>snap:AllianceWith</p>
-        <p>bm:ordainedBy</p>
+        <p>betmas:ordainedBy</p>
         <p>rel:enemyOf</p>
         <p>snap:SonOf</p>
         <p>snap:FatherOf</p>
