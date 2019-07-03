@@ -19,7 +19,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </fileDesc>       <revisionDesc>       <change who="PL" when="2019-07-03">first version of guidelines from Wiki</change>     </revisionDesc>
    </teiHeader>
    <text>
-      <body xml:id="general">
+      <body xml:id="canonicalizedTEI">
          <div type="level1">
             <head>A postprocessed version of the TEI encoded according to these guidelines</head>
           <p>The TEI described in these guidelines is highly customized, making use of the so-called ODD (One Document Does it all).
