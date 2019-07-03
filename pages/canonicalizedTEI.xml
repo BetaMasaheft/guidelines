@@ -111,6 +111,34 @@ for the <att>calendar</att> a list of <gi>calendar</gi> elements with <att>xml:i
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
   <repository ref="https://betamasaheft.eu/INS0344AksumS">ʾAksum Ṣǝyon</repository>
 </egXML>
+<p>In a similar way, the <gi>bibl</gi> containg in the TEI only a <gi>ptr</gi> with <att>target</att> is processed in the more canonical version, to include the entire
+rendering as TEI of the record pointed to in Zotero.</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  <bibl>
+<ptr target="bm:Rueppell1840Reise"/>
+</bibl>
+</egXML>
+<p>will be seen in the postprocessed TEI as</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  <bibl corresp="http://zotero.org/groups/358366/items/BRDJ9JFF" type="book">
+<title level="m">Reise in Abyssinien</title>
+<author>
+<forename>Eduard</forename>
+<surname>Rüppell</surname>
+</author>
+<pubPlace>Frankfurt am Main</pubPlace>
+<publisher>
+gedruckt auf Kosten des Verfassers, und in Commission bei Siegmund Schmerber
+</publisher>
+<date>1840</date>
+<biblScope unit="volume">II</biblScope>
+<note type="url">https://archive.org/details/reiseinabyssinie02rupp</note>
+</bibl>
+</egXML>
+<p><gi>locus</gi> is also populated with some text when this is not present and only the attributes are given.</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples"><locus from="1r" to="4v"/></egXML>
+<p>becomes</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples"><locus from="1r" to="4v">ff. 1r-4v </locus></egXML>
          </div>
       </body>
    </text>
