@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Canonicalized TEI</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>written in TEI</p>
+         </sourceDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2019-07-03">first version of guidelines from Wiki</change>     </revisionDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="general">
+         <div type="level1">
+            <head>A postprocessed version of the TEI encoded according to these guidelines</head>
+          <p>The TEI described in these guidelines is highly customized, making use of the so-called ODD (One Document Does it all).
+          Some of these customizations, although documented in the ODD and the derived schema, might make the data not so much interchangeable.</p>
+          <p>The Beta maṣāḥǝft project maintains a script which makes the data a bit more canonical,
+            which can be used also by others to the same effect. The post.xsl
+            transformation can be found <ref target="https://github.com/BetaMasaheft/BetMas/blob/master/BetMas/xslt/post.xsl">here</ref>.
+            It relies on a <ref target="https://github.com/BetaMasaheft/BetMas/blob/master/BetMas/lists/editors.xml">list of editors</ref>
+            of the project and a <ref target="https://github.com/BetaMasaheft/BetMas/blob/master/BetMas/lists/canonicaltaxonomy">canonicalized taxonomy</ref>.</p>
+            <p>We can start from the latter. While the taxonomy maintained with the data has the following format.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <category>
+                  <desc>Special Manuscripts</desc>
+                  <category>
+                      <catDesc>GoldenGospel</catDesc>
+                  </category>
+                  <category>
+                      <catDesc>miniatureCollection</catDesc>
+                  </category>
+              </category>
+            </egXML>
+            <p>This is not what the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-taxonomy.html">TEI guidelines</ref> describe, it is a much smaller version,
+              without <att>xml:id</att>, where the actual string used for reference is the content of
+          <gi>catDesc</gi> which corresponds exactly to the name of the
+          TEI file in the database for that concept. The canonicalized taxonomy looks instead like the following example.</p>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <category>
+                <desc>Special Manuscripts</desc>
+                <category xml:id="GoldenGospel" corresp="https://betamasaheft.eu/authority-files/GoldenGospel/main">
+                    <catDesc>Golden Gospel</catDesc>
+                </category>
+                <category xml:id="miniatureCollection" corresp="https://betamasaheft.eu/authority-files/miniatureCollection/main">
+                    <catDesc>Miniature Collection</catDesc>
+                </category>
+            </category>
+          </egXML>
+          <p>Here the values of <gi>catDesc</gi> are moved to a <att>xml:id</att> and the element value is replaced by looking at the <gi>title</gi> of that file.
+        Additionally, a <att>corresp</att> with the url to the landing page on the app for that concept is provided. </p>
+        <p>When in the postprocessed TEI, this is included, the file can point to these values internally. So, for example, <tag>term[@key]</tag> which uses a list of values
+      from the schema, reproduced from the taxonomy example above for the edited file, can be changed
+      to  <tag>term[@ana]</tag> where the value is a fragment URI (e.g. <val>#GoldenGospel</val>).</p>
+      <p>In Beta maṣāḥǝft the different versions can be shown and obtained. Pointing simply at the ID of the file .xml (e.g. https://betamasaheft.eu/BNFet32.xml)
+      the user obtains the file encoded according to these guidelines. prepending /tei/ (e.g. https://betamasaheft.eu/tei/BNFet32.xml) the TEI file encoded according
+    to these Guideilnes will be first transformed with post.xsl and then presented.</p>
+    <p>To stay with the example above, the edited file will not contain the <gi>taxonomy</gi> at all, as the values are replicated in the schema as values for the <att>key</att> attribute of <gi>term</gi> or
+  other elements and attributes. However in the postprocessed file, the entire taxonomy will be included, in the canonicalized form described above.</p>
+  <p>Another important difference regards the URIs. In the edited TEI file we want them to be as short as possible.
+    We use for identifiers of Beta maṣāḥǝft the plain ID of the file. This is to be interpreted using the
+  <att>xml:base</att> attribute, which contains the base URL of the app, and will allow interpreter to point to a full URI of the
+  web resource for that, which they can additionally use to retrieve any of the content types provided (HTML, XML or a RDF representation or centered graph).
+In the postprocessed version of the TEI, these <att>xml:base</att> are not needed, because all these pointers are spelled out entirely.</p>
+<p>Similarly, URIs of external resources are entered in the edited XML using prefixes. These are documented in the <gi>listPrefixDef</gi> which is actually also not physically present in the file, it is
+included. </p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+              href="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/prefixDef.xml">
+     <xi:fallback>
+        <p>Definitions of prefixes used.</p>
+     </xi:fallback>
+  </xi:include>
+</egXML>
+<p>The included TEI fragment contains statements like the following.</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  <prefixDef ident="wd"
+        matchPattern="([a-zA-Z0-9]+)"
+        replacementPattern="https://www.wikidata.org/entity/$1">
+    </prefixDef>
+</egXML>
+ <p>This information, which is edited once for all files used in the postprocessing to recontruct from a namespaced pointer the full URI.</p>
+ <egXML xmlns="http://www.tei-c.org/ns/Examples">
+   <relation name="skos:broadMatch" active="NAR0001gwelt" passive="betmas:LandGrant"/>
+ </egXML>
+ <p>Will be in the postprocessed file</p>
+ <egXML xmlns="http://www.tei-c.org/ns/Examples">
+   <relation name="skos:broadMatch"
+     ref="http://www.w3.org/2004/02/skos/core#broadMatch"
+     active="https://betamasaheft.eu/NAR0001gwelt"
+     passive="https://betamasaheft.eu/LandGrant"/>
+ </egXML>
+ <p>This makes also the <gi>prefixDef</gi>s not useful so they are removed from the postprocessed file.</p>
+ <p>Also values of <att>who</att> in <gi>change</gi>, or of <att>calendar</att> in <gi>date</gi> are governed by list of values in the schema.
+In the first case we want them instead to be in a more canonical way pointers to the <att>xml:id</att> of a <gi>editor</gi> or <gi>respStmt</gi>. In the postprocessed file this is transformed. Similarly
+for the <att>calendar</att> a list of <gi>calendar</gi> elements with <att>xml:id</att> is added, while the values in the attribute are transformed to references to those, by prepending a #.</p>
+<p>Another change which happens when postprocessing is that empty pointers are populated, so that a repository reference for example gets also a content.</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  <repository ref="INS0344AksumS"/>
+</egXML>
+<p>will become</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  <repository ref="https://betamasaheft.eu/INS0344AksumS">ʾAksum Ṣǝyon</repository>
+</egXML>
+         </div>
+      </body>
+   </text>
+</TEI>
