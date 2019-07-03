@@ -25,12 +25,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <head>Dates</head>
             <p>Dates anywhere in the text quoted can be tagged with
       precision using the <gi>date</gi> element:
-         
+
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
          He succeeded his father                   <persName ref="PRS8550sardaDe"><roleName type="title">ʾaṣe</roleName>
-            Śarḍa Dǝngǝl</persName> when he was 15 years old in <date>1597</date>. 
+            Śarḍa Dǝngǝl</persName> when he was 15 years old in <date>1597</date>.
          </egXML>
-         
+
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <date calendar="ethiopian" when="1888" when-custom="1881" evidence="internal">፲ወ፰፻፹ወ፩ ዓመት፡ ምሕረት፡ </date>
             </egXML>
@@ -153,6 +153,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </cell>
                </row>
             </table>
+
+            <p>You can align a commemoration to a day in the calendar, without that being a specific day in history using <att>calendar</att> and a <att>ref</att> like in the following example.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <date
+        ref="ethioCal:Maskaram1">
+         1st Maskaram
+  </date>
+  <p>The ethioCal namespace refers to the calendar file which can
+    be found <ref target="https://raw.githubusercontent.com/BetaMasaheft/BetMas/master/BetMas/calendars/ethiopian.xml">here</ref>, and Maskaram1 is an <att>xml:id</att> in that file.
+  Used in conjunction with the <val>commemoration</val> in <att>subtype</att> of <gi>div</gi> this can help collect commemorations for a given calendar day.</p>
+         </egXML>
       </body>
    </text>
 </TEI>

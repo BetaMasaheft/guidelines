@@ -22,6 +22,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body xml:id="summary-on-the-use-of-ref-and-corresp">
          <head>summary on the use of @ref and @corresp</head>
+         <p><ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SACS1">The TEI Guidelines</ref> provide the following clarification on <att>corresp</att>
+         <quote>Essentially, what the corresp attribute does is to specify that elements bearing this attribute and those to which the attribute points are doubly linked. ...
+            the correspondence relationship is not ‘from’ one to the other, but ‘between’ the two objects. </quote>
+</p>
          <p>For internal references you can use
            <list>
 <item><tag>ref type="quire" corresp="#q12"</tag></item>
