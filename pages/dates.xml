@@ -160,10 +160,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         ref="ethioCal:Maskaram1">
          1st Maskaram
   </date>
+  </egXML>
   <p>The ethioCal namespace refers to the calendar file which can
     be found <ref target="https://raw.githubusercontent.com/BetaMasaheft/BetMas/master/BetMas/calendars/ethiopian.xml">here</ref>, and Maskaram1 is an <att>xml:id</att> in that file.
   Used in conjunction with the <val>commemoration</val> in <att>subtype</att> of <gi>div</gi> this can help collect commemorations for a given calendar day.</p>
-         </egXML>
+
       </body>
    </text>
 </TEI>
