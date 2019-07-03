@@ -26,7 +26,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>TEI should always be referred to for definitions and use of elements and
                attributes.</p>
                <p>These guidelines however are about the use of a schema which is largely customized. The customization is documented in the ODD (see schema view), but
-               we also offer a <ref target="canonicalizedTEI">more canonical version</ref> of each single file, which populates empty pointers and expands abbreviated urls for example.</p>
+               we also offer a <ref target="canonicalizedTEI">more canonical version</ref> of each single file, which populates empty pointers and
+               expands abbreviated urls for example.</p>
             <p>However, TEI is not a prescriptive system or a schema, and the present guidelines
                describe the declension of the TEI for this project and its purposes. Whenever
                possible the reason for a particular encoding decision is given. This shall help also
