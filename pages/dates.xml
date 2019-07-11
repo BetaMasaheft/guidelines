@@ -157,7 +157,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>You can align a commemoration to a day in the calendar, without that being a specific day in history using <att>calendar</att> and a <att>ref</att> like in the following example.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
               <date
-        ref="ethioCal:Maskaram1">
+        ref="ethiocal:Maskaram1">
          1st Maskaram
   </date>
   </egXML>
