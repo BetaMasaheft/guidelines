@@ -122,7 +122,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <term key="arch">arches</term> that rest
                   on <term key="curtain">curtained</term>
                   <term key="column">columns</term>.
-                  Several <term key="bird">birds</term> are palced atop the arch. The opening page,
+                  Several <term key="bird">birds</term> are placed atop the arch. The opening page,
                   <locus target="#2r"/> features a pair of  <foreign xml:lang="gez">ጣዎስ፡</foreign>
                   flanking a <term key="cross">cross</term> and four
                   <foreign xml:lang="gez">ዱራ፡</foreign> birds.
