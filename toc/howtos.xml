@@ -18,11 +18,12 @@
         <body xml:id="howtos">
             <!--         content of item elements must correspond to an xml:id in the data-->
             <list>
-                
+
                 <item>workflow</item>
                 <item>newEntry</item>
                 <item>zotero</item>
                 <item>editingGuidelines</item>
+								<item>editingSchema</item>
             </list>
         </body>
     </text>
