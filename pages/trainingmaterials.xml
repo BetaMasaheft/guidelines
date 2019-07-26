@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Training Materials</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Written up in XML.</p>
+         </sourceDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2019-07-26">first version after the workshop held in July in Hamburg</change>     </revisionDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="trainingMaterials">
+        <div type="level2">
+         <head>On the use of these materials</head>
+         <p>You migth not be the kind of person that sits and read the guidelines page by page trying out new things. Or you might simply prefer another format or presentation.
+         For these reason, and to allow for a shared base of shared presentations, some of which originally based on the training materials
+         of <ref target="https://wiki.digitalclassicist.org/EpiDoc_Workshops">EpiDoc</ref>,  we share here the training materials we have used, divided in programms and single presentations.
+         The programms of each workshop will use a different selection of the presentations and at different moment in the life of the project. Those presentations as they were given at that point
+       will be linked in the programms, or only with the participants of that specific training, while the latest shareable version of a given presentation is linked below. </p>
+</div>
+       <div type="level2">
+         <head>Workshops</head>
+
+                <div type="level3">
+                  <head>Past </head>
+                  <table>
+                  <row role="label">
+                  <cell>date</cell>
+                <cell>place</cell>
+                <cell>title</cell>
+                <cell>programm</cell>
+              </row>
+              <row>
+              <cell>21-24 January 2019</cell>
+            <cell>Paris</cell>
+            <cell> Workshop “Ethiopian Studies and Digital Humanities: tools and projects
+(Beta maṣāḥəft, Ethiopian Manuscript Archives, EthioMap)”</cell>
+            <cell> </cell>
+          </row>
+          <row>
+          <cell>21-24 July 2019</cell>
+        <cell>Hamburg</cell>
+        <cell>TEI Workshop for Ethiopian Studies</cell>
+        <cell><ref target="https://www.betamasaheft.uni-hamburg.de/en/news/2019tei-hlces.html">programm</ref></cell>
+      </row>
+                </table>
+                </div>
+                       <div type="level3">
+                         <head>Future </head>
+                         <p>There is no workshop planned at the moment. There is usually at least one workshop a year held in Hamburg, which will be advertised and listed here as soon as its dates are known. </p>
+                         <table>
+                         <row role="label">
+                         <cell>date</cell>
+                       <cell>place</cell>
+                       <cell>title</cell>
+                       <cell>programm</cell>
+                     </row>
+                       </table>
+                       </div>
+       </div>
+              <div type="level2">
+                <head>Presentations</head>
+                <p>linked programms should contain the links to the presentations actually given at a given workshop, here </p>
+                <table>
+                <row role="label">
+                <cell>title</cell>
+              <cell>description</cell>
+              <cell>links</cell>
+              <cell>Refers to...</cell>
+            </row>
+
+            <row>
+              <cell>Introduction to XML</cell>
+              <cell>description</cell>
+              <cell>links</cell>
+              <cell>GL links</cell>
+            </row>
+            <row>
+              <cell>Introduction to TEI</cell>
+              <cell>description</cell>
+              <cell>links</cell>
+              <cell>GL links</cell>
+            </row>
+            <row>
+              <cell>Introduction to Beta maṣāḥǝft</cell>
+              <cell>description</cell>
+              <cell>links</cell>
+              <cell>GL links</cell>
+            </row>
+            <row>
+              <cell>Introduction to the Beta maṣāḥǝft Guidelines</cell>
+              <cell>description</cell>
+              <cell>links</cell>
+              <cell>GL links</cell>
+            </row>
+            <row>
+              <cell>Beta maṣāḥǝft Guidelines for relationships</cell>
+              <cell>description</cell>
+              <cell>links</cell>
+              <cell>GL links</cell>
+            </row>
+            <row>
+              <cell>Places/Repositories encoding and Toponyms annotations in texts</cell>
+              <cell>description</cell>
+              <cell>links</cell>
+              <cell>GL links</cell>
+            </row>
+            <row>
+              <cell>The Synaxarion</cell>
+              <cell>description</cell>
+              <cell>links</cell>
+              <cell>GL links</cell>
+            </row>
+
+            <row>
+              <cell>Introduction to the Beta maṣāḥǝft Schema</cell>
+              <cell>description</cell>
+              <cell>links</cell>
+              <cell>GL links</cell>
+            </row>
+            <row>
+              <cell>Using taxonomy and authority files</cell>
+              <cell>description</cell>
+              <cell>links</cell>
+              <cell>GL links</cell>
+            </row>
+            <row>
+              <cell>Beta maṣāḥǝft Guidelines for taxonomy and authority files</cell>
+              <cell>description</cell>
+              <cell>links</cell>
+              <cell>GL links</cell>
+            </row>
+            <row>
+              <cell>Persons encoding and description</cell>
+              <cell>description</cell>
+              <cell>links</cell>
+              <cell>GL links</cell>
+            </row>
+
+            <row>
+              <cell>Beta maṣāḥǝft Guidelines for persons</cell>
+              <cell>description</cell>
+              <cell>links</cell>
+              <cell>GL links</cell>
+            </row>
+
+            <row>
+              <cell>Beta maṣāḥǝft Guidelines on Manuscripts and general structure of manuscript records</cell>
+              <cell>description</cell>
+              <cell>links</cell>
+              <cell>GL links</cell>
+            </row>
+
+            <row>
+              <cell>Encoding of manuscripts' content and textual units</cell>
+              <cell>description</cell>
+              <cell>links</cell>
+              <cell>GL links</cell>
+            </row>
+
+            <row>
+              <cell>Art Themes and Decorations</cell>
+              <cell>description</cell>
+              <cell>links</cell>
+              <cell>GL links</cell>
+            </row>
+
+            <row>
+              <cell>Images</cell>
+              <cell>description</cell>
+              <cell>links</cell>
+              <cell>GL links</cell>
+            </row>
+
+            <row>
+              <cell>Reusing Data</cell>
+              <cell>description</cell>
+              <cell>links</cell>
+              <cell>GL links</cell>
+            </row>
+
+              </table>
+              </div>
+              <div type="level2">
+                <head>Contacts</head>
+                <p>You can use these materials, programs and presentations, given the workings above, to run your own workshop. We are happy to support you on this or if you prefer to come and deliver a training at your institution. Just <ref target="mailto:pietro.liuzzo@uni-hamburg.de">contact us</ref>.</p>
+              </div>
+
+     </body>
+   </text>
+ </TEI>
