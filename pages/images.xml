@@ -17,7 +17,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+         <change who="DR" when="2019-07-26">Added information on where the path for images hosted on our server can be found</change></revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="images">
@@ -52,7 +53,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <div type="level2">
             <head>Links to images hosted on our server</head>
          <p>Links to images hosted on our server in the additional disks
-           should use the relevant part of the path, i.e.
+           should use the relevant part of the path (which can be found in the URL when opening an image of the manuscript in domlib), i.e.
     BMQ/003/BMQM-003 for example. If the number of the photos are
     separated with two underscores, then "KAE/011/KAE-011_", see for example <ref target="ESkae011" type="bm">KAE-011</ref>:</p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
