@@ -114,7 +114,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </row>
             <row>
               <cell>Beta maṣāḥǝft Guidelines for relationships</cell>
-              <cell>describes the use of the element <gi>relation</gi></cell>
+              <cell>describes how different entities are related with one another across the hierarchy of the TEI files.</cell>
               <cell>links</cell>
               <cell></cell><cell><gi>relation</gi> </cell>
             </row>
@@ -122,7 +122,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               <cell>Places/Repositories encoding and Toponyms annotations in texts</cell>
               <cell>The structure of place and Repositories record. How occurrences of places and persons in texts are annotated.</cell>
               <cell>links</cell>
-              <cell><ref target="places"/>,  <ref target="persons"/>, <ref target="named-entities-and-authority-lists"/></cell>
+              <cell><ref target="places">places</ref>,
+              <ref target="persons">persons</ref>,
+              <ref target="named-entities-and-authority-lists">named entities</ref></cell>
               <cell> <gi>place</gi> <gi>placeName</gi></cell>
             </row>
             <row>
@@ -154,7 +156,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               <cell>description</cell>
               <cell>links</cell>
               <cell>
-              <ref target="persons"/></cell>
+              <ref target="persons">persons</ref></cell>
               <cell><gi>person</gi>, <gi>persName</gi></cell>
             </row>
 
@@ -164,8 +166,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               <cell>structure of <gi>teiHeader</gi>, including physical description and binding</cell>
               <cell>links</cell>
               <cell>
-                            <ref target="manuscriptDescription"/>,
-                            <ref target="manuscriptPhysDescription"/></cell>
+                            <ref target="manuscriptDescription">manuscript description</ref>,
+                            <ref target="manuscriptPhysDescription">Physical description</ref></cell>
                             <cell><gi>msDesc</gi>, <gi>msPart</gi></cell>
             </row>
 
@@ -173,7 +175,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               <cell>Encoding of manuscripts' content and textual units</cell>
               <cell>description</cell>
               <cell>links</cell>
-              <cell><ref target="manuscriptContents"/></cell>
+              <cell><ref target="manuscriptContents">contents of the manusript</ref></cell>
               <cell><gi>msContents</gi></cell>
             </row>
 
@@ -181,7 +183,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               <cell>Art Themes and Decorations</cell>
               <cell>description</cell>
               <cell>links</cell>
-              <cell><ref target="artThemes"/>, <ref target="decorationDescription"/></cell>
+              <cell><ref target="artThemes">Art Themes</ref>, <ref target="decorationDescription">decorations</ref></cell>
               <cell></cell>
             </row>
 
@@ -189,7 +191,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               <cell>Images</cell>
               <cell>IIIF storage and presentation of images, how to encode links to images</cell>
               <cell><ref target="https://drive.google.com/file/d/1KtqJGvib1te6JiQOxhOwEmH28-xM0szW/view">links</ref></cell>
-              <cell><ref target="images"/></cell>
+              <cell><ref target="images">images</ref></cell>
               <cell><gi>idno</gi>, <gi>locus</gi></cell>
             </row>
 
