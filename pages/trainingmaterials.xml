@@ -70,7 +70,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
        </div>
               <div type="level2">
                 <head>Presentations</head>
-                <p>linked programms should contain the links to the presentations actually given at a given workshop, here </p>
+                <p>Linked programms should contain the links to the presentations actually given at a given workshop. Because these slides have been used in different occasions they might contain errors, overlapping contents, old screenshoots, etc. with no guarantee.</p>
                 <table>
                 <row role="label">
                 <cell>title</cell>
@@ -81,39 +81,45 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
             <row>
               <cell>Introduction to XML</cell>
-              <cell>description</cell>
-              <cell>links</cell>
-              <cell>GL links</cell>
+              <cell>What is XML, what it is useful for, basic terminology, example markup of bibliography. Contains some simple exercises.</cell>
+              <cell><ref target="https://drive.google.com/file/d/1ejOETSfYcQ78bHnd3Apc31rnLsm2lmd_/view">link</ref></cell>
+              <cell> </cell>
             </row>
             <row>
               <cell>Introduction to TEI</cell>
-              <cell>description</cell>
-              <cell>links</cell>
-              <cell>GL links</cell>
+              <cell>What is TEI, TEI guidelines and community, more precision obtained with TEI</cell>
+              <cell><ref target="https://drive.google.com/file/d/10Zy7mNwt_4NpI2kSl1fTzAEwh0lTMBfg/view">links</ref></cell>
+              <cell> </cell>
             </row>
             <row>
-              <cell>Introduction to Beta maṣāḥǝft</cell>
-              <cell>description</cell>
-              <cell>links</cell>
-              <cell>GL links</cell>
+              <cell>Introduction to Beta maṣāḥǝft website</cell>
+              <cell>What is Beta maṣāḥǝft, general introduction, scope, website features</cell>
+              <cell>links<!-- https://drive.google.com/drive/u/0/folders/1U6DRF4DcF7_4y8GRqVjuak88q69XoXhc --></cell>
+              <cell> </cell>
+            </row>
+            <row>
+              <cell>Introduction to Beta maṣāḥǝft research environment</cell>
+              <cell>What is Beta maṣāḥǝft research environment, GIT Workflow, APIs access, collaboration</cell>
+              <cell><ref target="https://drive.google.com/drive/u/0/folders/1t0IMyUIqzVoINcur_JzfdVhBVE_-Yqcm">links</ref></cell>
+              <cell><ref target="setup"/></cell>
             </row>
             <row>
               <cell>Introduction to the Beta maṣāḥǝft Guidelines</cell>
-              <cell>description</cell>
+              <cell>Describes the different sources of guidelines and the reference materials to keep bookmarked</cell>
               <cell>links</cell>
-              <cell>GL links</cell>
+              <cell></cell>
             </row>
             <row>
               <cell>Beta maṣāḥǝft Guidelines for relationships</cell>
-              <cell>description</cell>
+              <cell>describes the use of the element <gi>relation</gi></cell>
               <cell>links</cell>
               <cell>GL links</cell>
             </row>
             <row>
               <cell>Places/Repositories encoding and Toponyms annotations in texts</cell>
-              <cell>description</cell>
+              <cell>The structure of place and Repositories record. How occurrences of places and persons in texts are annotated.</cell>
               <cell>links</cell>
-              <cell>GL links</cell>
+              <cell><ref target="places"/>,  <ref target="persons"/>, <ref target="named-entities-and-authority-lists"/></cell>
             </row>
             <row>
               <cell>The Synaxarion</cell>
@@ -124,76 +130,85 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
             <row>
               <cell>Introduction to the Beta maṣāḥǝft Schema</cell>
-              <cell>description</cell>
+              <cell>The ODD (One Document Does it all), the TEI modules, XPath</cell>
               <cell>links</cell>
               <cell>GL links</cell>
             </row>
             <row>
               <cell>Using taxonomy and authority files</cell>
-              <cell>description</cell>
+              <cell>The taxonomy, use of the authority file, use of <gi>term</gi></cell>
               <cell>links</cell>
-              <cell>GL links</cell>
-            </row>
-            <row>
-              <cell>Beta maṣāḥǝft Guidelines for taxonomy and authority files</cell>
-              <cell>description</cell>
-              <cell>links</cell>
-              <cell>GL links</cell>
+              <cell>
+
+              <ref target="taxonomy"/>,
+              <ref target="authority-files"/></cell>
             </row>
             <row>
               <cell>Persons encoding and description</cell>
               <cell>description</cell>
-              <cell>links</cell>
+              <cell>
+              <ref target="persons"/></cell>
               <cell>GL links</cell>
             </row>
 
-            <row>
-              <cell>Beta maṣāḥǝft Guidelines for persons</cell>
-              <cell>description</cell>
-              <cell>links</cell>
-              <cell>GL links</cell>
-            </row>
 
             <row>
               <cell>Beta maṣāḥǝft Guidelines on Manuscripts and general structure of manuscript records</cell>
-              <cell>description</cell>
+              <cell>structure of <gi>teiHeader</gi>, <gi>msDesc</gi>, <gi>msPart</gi>, including physical description and binding</cell>
               <cell>links</cell>
-              <cell>GL links</cell>
+              <cell>
+                            <ref target="manuscriptDescription"/>,
+                            <ref target="manuscriptPhysDescription"/></cell>
             </row>
 
             <row>
               <cell>Encoding of manuscripts' content and textual units</cell>
               <cell>description</cell>
               <cell>links</cell>
-              <cell>GL links</cell>
+              <cell><ref target="manuscriptContents"/></cell>
             </row>
 
             <row>
               <cell>Art Themes and Decorations</cell>
               <cell>description</cell>
               <cell>links</cell>
-              <cell>GL links</cell>
+              <cell><ref target="artThemes"/>, <ref target="decorationDescription"/></cell>
             </row>
 
             <row>
               <cell>Images</cell>
-              <cell>description</cell>
-              <cell>links</cell>
-              <cell>GL links</cell>
+              <cell>IIIF storage and presentation of images, how to encode links to images</cell>
+              <cell><ref target="https://drive.google.com/file/d/1KtqJGvib1te6JiQOxhOwEmH28-xM0szW/view">links</ref></cell>
+              <cell><ref target="images"/></cell>
             </row>
 
             <row>
               <cell>Reusing Data</cell>
-              <cell>description</cell>
-              <cell>links</cell>
-              <cell>GL links</cell>
+              <cell>Resuing the data from stored dumps, citing Beta maṣāḥǝft, reusing the bibliography, resuing the database,APIs available.</cell>
+              <cell><ref target="https://drive.google.com/file/d/1MS6SgSRi0ODvYc78LuHdqs1rBmD_8Wpl/view">links</ref></cell>
+              <cell></cell>
             </row>
+            <row>
+              <cell>DTS</cell>
+              <cell>Distributed Text Services implementation of Beta maṣāḥǝft.</cell>
+<cell><ref target="https://docs.google.com/presentation/d/1fUgpqz22ltXl2KNmQvdm5Lb3TBHfjX7SadqM0c1bGC8/edit?usp=sharing">links</ref></cell>
+
+<cell>GL links</cell>
+</row>
 
               </table>
               </div>
+
+              <div type="level2">
+                <head>Usefull links</head>
+                <list>
+                  <item><ref target="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html">TEI Guidelines</ref></item>
+                  </list>
+                </div>
+
               <div type="level2">
                 <head>Contacts</head>
-                <p>You can use these materials, programs and presentations, given the workings above, to run your own workshop. We are happy to support you on this or if you prefer to come and deliver a training at your institution. Just <ref target="mailto:pietro.liuzzo@uni-hamburg.de">contact us</ref>.</p>
+                <p>You can use these materials, programs and presentations, given the workings above, to run your own workshop. We are happy to support you on this or if you prefer to come and deliver a training at your institution. Just <ref target="https://betamasaheft.eu/contacts.html">contact us</ref>.</p>
               </div>
 
      </body>
