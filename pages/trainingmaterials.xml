@@ -16,17 +16,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <sourceDesc>
             <p>Written up in XML.</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2019-07-26">first version after the workshop held in July in Hamburg</change>     </revisionDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2019-07-26">first version after the workshop held in July in Hamburg</change>
+        <change who="DR" when="2019-07-31">Corrected typos, added link to Paris workshop program</change></revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="trainingMaterials">
         <div type="level2">
          <head>On the use of these materials</head>
-         <p>You migth not be the kind of person that sits and read the guidelines page by page trying out new things. Or you might simply prefer another format or presentation.
+         <p>You might not be the kind of person that sits and read the guidelines page by page trying out new things. Or you might simply prefer another format or presentation.
          For these reason, and to allow for a shared base of shared presentations, some of which originally based on the training materials
-         of <ref target="https://wiki.digitalclassicist.org/EpiDoc_Workshops">EpiDoc</ref>,  we share here the training materials we have used, divided in programms and single presentations.
-         The programms of each workshop will use a different selection of the presentations and at different moment in the life of the project. Those presentations as they were given at that point
-       will be linked in the programms, or only with the participants of that specific training, while the latest shareable version of a given presentation is linked below. </p>
+         of <ref target="https://wiki.digitalclassicist.org/EpiDoc_Workshops">EpiDoc</ref>,  we share here the training materials we have used, divided in programs and single presentations.
+         The programs of each workshop will use a different selection of the presentations and at different moment in the life of the project. Those presentations as they were given at that point
+       will be linked in the programs, or only with the participants of that specific training, while the latest shareable version of a given presentation is linked below. </p>
 </div>
        <div type="level2">
          <head>Workshops</head>
@@ -38,20 +39,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <cell>date</cell>
                 <cell>place</cell>
                 <cell>title</cell>
-                <cell>programm</cell>
+                <cell>program</cell>
               </row>
               <row>
               <cell>21-24 January 2019</cell>
             <cell>Paris</cell>
             <cell> Workshop “Ethiopian Studies and Digital Humanities: tools and projects
 (Beta maṣāḥəft, Ethiopian Manuscript Archives, EthioMap)”</cell>
-            <cell> </cell>
+                <cell><ref target="https://www.betamasaheft.uni-hamburg.de/en/news/2019tei-hlces.html">program</ref></cell>
           </row>
           <row>
           <cell>21-24 July 2019</cell>
         <cell>Hamburg</cell>
         <cell>TEI Workshop for Ethiopian Studies</cell>
-        <cell><ref target="https://www.betamasaheft.uni-hamburg.de/en/news/2019tei-hlces.html">programm</ref></cell>
+            <cell><ref target="https://www.aai.uni-hamburg.de/en/ethiostudies/news/2019paris.html">information and program</ref></cell>
       </row>
                 </table>
                 </div>
@@ -63,14 +64,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                          <cell>date</cell>
                        <cell>place</cell>
                        <cell>title</cell>
-                       <cell>programm</cell>
+                       <cell>program</cell>
                      </row>
                        </table>
                        </div>
        </div>
               <div type="level2">
                 <head>Presentations</head>
-                <p>Linked programms should contain the links to the presentations actually given at a given workshop. Because these slides have been used in different occasions they might contain errors, overlapping contents, old screenshoots, etc. with no guarantee.</p>
+                <p>Linked programs should contain the links to the presentations actually given at a given workshop. Because these slides have been used in different occasions they might contain errors, overlapping contents, old screenshots, etc. with no guarantee.</p>
                 <table>
                 <row role="label">
                 <cell>title</cell>
@@ -175,7 +176,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               <cell>Encoding of manuscripts' content and textual units</cell>
               <cell>description</cell>
               <cell>links</cell>
-              <cell><ref target="manuscriptContents">contents of the manusript</ref></cell>
+              <cell><ref target="manuscriptContents">contents of the manuscript</ref></cell>
               <cell><gi>msContents</gi></cell>
             </row>
 
@@ -197,7 +198,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
             <row>
               <cell>Reusing Data</cell>
-              <cell>Resuing the data from stored dumps, citing Beta maṣāḥǝft, reusing the bibliography, resuing the database,APIs available.</cell>
+              <cell>Reusing the data from stored dumps, citing Beta maṣāḥǝft, reusing the bibliography, reusing the database,APIs available.</cell>
               <cell><ref target="https://drive.google.com/file/d/1MS6SgSRi0ODvYc78LuHdqs1rBmD_8Wpl/view">links</ref></cell>
               <cell></cell>
               <cell></cell>
@@ -215,7 +216,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               </div>
 
               <div type="level2">
-                <head>Usefull links</head>
+                <head>Useful links</head>
                 <list>
                   <item><ref target="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html">TEI Guidelines</ref></item>
                   </list>
@@ -223,7 +224,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
               <div type="level2">
                 <head>Contacts</head>
-                <p>You can use these materials, programs and presentations, given the workings above, to run your own workshop. We are happy to support you on this or if you prefer to come and deliver a training at your institution. Just <ref target="https://betamasaheft.eu/contacts.html">contact us</ref>.</p>
+                <p>You can use these materials, programs and presentations, given the workings above, to run your own workshop. 
+                  We are happy to support you on this or if you prefer to come and deliver a training at your institution. Just <ref target="https://betamasaheft.eu/contacts.html">contact us</ref>.</p>
               </div>
 
      </body>
