@@ -91,8 +91,8 @@ etc.), provide the scientific transcription and translation only
   <item>
       <p>The basis for transliteration of Cyrillic should be this table <ref target="http://kodeks.uni-bamberg.de/AKSL/Schrift/Transliteration.htm"/></p>
       <p>There are further rules to be followed:</p>
-<p>Pre-reform spelling (before 1918) of proper names should be standardazied according to modern spelling. Thus, not Bolotov" (Болотовъ), but Bolotov (Болотов).</p>
-<p>Pre-reform spelling (before 1918) of titles is tranliterated according to the pre-reform spelling, without standardization.
+<p>Pre-reform spelling (before 1918) of proper names should be standardized according to modern spelling. Thus, not Bolotov" (Болотовъ), but Bolotov (Болотов).</p>
+<p>Pre-reform spelling (before 1918) of titles is transliterated according to the pre-reform spelling, without standardization.
  Thus, for example 'Описанiе двухъ эѳиопскихъ рукописей, пожертвованныхъ въ библiотеку Спб. Дух. Академiи преосвященнымъ Анатолiемъ, епископомъ балтскимъ (нынѣ острогожскимъ)'
  should be transliterated as 'Opisanie dvuch" rukopisej, požertvovannych" v" biblioteku Spb. Duch. Akademii preosvjaščennym" Anatoliem", episkopom" baltskim" (nyně ostrogožskim")'.</p> </item>
   <item>
@@ -357,7 +357,7 @@ H for Hegira.</p>
                <item>
                   <p>EACH Encyclopaedia entry must have volume and short title
       indicated if you want to get the correct citation style for
-      Aethiopica. eg. ‘Mikaʾel Sǝḥul’, EAe, III (2007), 962b–964b (J.
+      Aethiopica. e.g.. ‘Mikaʾel Sǝḥul’, EAe, III (2007), 962b–964b (J.
       Abbink)</p>
                </item>
                <item>
@@ -369,18 +369,18 @@ H for Hegira.</p>
                </item>
                <item>
                   <p>If your entry is to be used in BetaMasaheft or Dillmann Online,
-      then you need to add a tag with this format and using only latin
+      then you need to add a tag with this format and using only Latin
       alphabet letters</p>
       <p>bm:AuthorYYYYkeyword</p>
       <p>Please make sure <hi rendition="simple:bold">this contains no
 special characters, umlaut, underdots and other combining
-diacritics</hi>, only digits and latin characters. To check that this
+diacritics</hi>, only digits and Latin characters. To check that this
 is unique, after saving the record in Zotero, click on the tag and
 check that only one item has this tag. If not, change the keyword of
 the tag just assigned.</p>
                   <p><hi rendition="simple:bold">Please do not change existing tags</hi>, as they probably already have been used in Beta maṣāḥǝft or Dillmann.
-                     Small inconsistencies and typos in tags can be ignored. Adjusting their cosmetics to feet your taste is only going to harm.</p>
-                     <p>In case double bm: tags have been assigned, please proceede immediately to check which one is actually in use. Update the occurrences of the minority attestation and remove the unneeded tag.</p>
+                     Small inconsistencies and typos in tags can be ignored. Adjusting their cosmetics to fit your taste is only going to harm.</p>
+                     <p>In case double bm: tags have been assigned, please proceed immediately to check which one is actually in use. Update the occurrences of the minority attestation and remove the unneeded tag.</p>
                      <p>In case of double entries each with a bm: tag, the guidelines have not been followed for the one created the latest. You are welcome to blame them and move to the author of the
                        mistake the need to immediately clean the Zotero database from the wrongly created record AND update all occurrences of the tag assigned to it with the correct tag of the correct entry.</p>
                        <p>Please always be very careful. If you think it is a double but you are not sure, ASK. For example sometimes two records seem the same
