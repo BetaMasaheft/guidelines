@@ -223,14 +223,11 @@ guidelines for
                their appointment to death or replacement. See for example <ref target="PRS6229LebnaDe" type="bm">Lǝbna Dǝngǝl</ref>:</p>
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <birth when="1496">1496</birth>
-                  <floruit from="1508" to="1540"> He sat on Solomonic throne, when he succeeded his father King <persName ref="PRS7481NaodA">Nāʿod</persName> 
-                     and ruled the kingdom until <date>1540</date>. During his minority, however, the kingom was effectively governed by a group 
-                     of leading court figures and nobels among whom his step grand mother, <persName ref="PRS3706eleni"/> was paramount. 
-                     Next importance came <persName ref="PRS10077WasanS"><roleName type="title">rās</roleName> </persName> and 
-                     his mother <persName ref="PRS7482NaodMo"/>. The years before the wars with <persName ref="PRS1522Ahmadb"/>
-                     were mostly peaceful for the Christian kingdom, and it was a time of economic and cultural prosperity. 
-                     Lǝbna Dǝngǝl was defeated by <persName ref="PRS1522Ahmadb"/>
-                     forces in the battle of <placeName ref="LOC5667Sember"/>, in <date>1529</date>, which made him fugitive in his own realm. 
+                  <floruit from="1508" to="1540">He sat on Solomonic throne, when he succeeded his father King <persName ref="PRS7481NaodA">Nāʿod</persName> and ruled the kingdom until <date>1540</date>. 
+                     During his minority, however, the kingom was effectively governed by a group of leading court figures and nobels among whom his step grand mother, <persName ref="PRS3706eleni"/> was paramount. 
+                     Next importance came <persName ref="PRS10077WasanS"><roleName type="title">rās</roleName>Wasan Sagad</persName> and his mother <persName ref="PRS7482NaodMo"/>. 
+                     The years before the wars with <persName ref="PRS1522Ahmadb"/> were mostly peaceful for the Christian kingdom, and it was a time of economic and cultural prosperity.
+                     Lǝbna Dǝngǝl was defeated by <persName ref="PRS1522Ahmadb"/> forces in the battle of <placeName ref="LOC5667Sember"/>, in <date>1529</date>, which made him fugitive in his own realm.
                      Being chased from <placeName ref="LOC5597Sawa"/> to <placeName ref="LOC2488Damot"/> to <placeName ref="LOC6135Wag"/> to
                      <placeName ref="LOC6568Amhara"/> to <placeName ref="LOC2481Dambey"/> and finally he found a refugee in the 
                      monastery of <placeName ref="LOC2255DabraD"/>, where he died in <date>1540</date>. 
