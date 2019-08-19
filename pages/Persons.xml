@@ -217,8 +217,32 @@ guidelines for
             <div type="level2">
                <head>Period of activity</head>
             <p><gi>floruit</gi> contains the date of the major active years of the record's subject. The paragraphical information given in <gi>floruit</gi> does not aim at describing
-            the whole life of the person in question, but focusses on what they have done in their active years. For instance, for metropolitans, kings etc. it would usually encompass the years between
-            their appointment and death or replacement. See for example <ref target="PRS1083AbbayHa" type="bm">ʾAbbāy Habta Ṣǝyon</ref>:</p>
+               the whole life of the person in question, but focusses on what they have done in their active years. In this case, for Ethiopian kings (for most of them) 
+               we have conventionally known years of reigns which is considered as a period of activity that we should 
+               encode <att>from</att> (indicates the starting point of the period) and <att>to</att> (indicates the ending point). And also for metropolitans it would usually encompass the years from
+               their appointment to death or replacement. See for example <ref target="PRS6229LebnaDe" type="bm">Lǝbna Dǝngǝl</ref>:</p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <birth when="1496"/>
+                  <floruit from="1508" to="1540">He sat on Solomonic throne, when he succeeded his father King <persName ref="PRS7481NaodA">Nāʿod</persName> 
+                     and ruled the kingdom until <date>1540</date>. During his minority, however, the kingom was effectively governed by a group 
+                     of leading court figures and nobels among whom his step grand mother, <persName ref="PRS3706eleni"/> was paramount. Next importance came <persName ref="PRS10077WasanS"> 
+                        <roleName type="title">rās</roleName> </persName> and his mother <persName ref="PRS7482NaodMo"/>. The years before the wars with <persName ref="PRS1522Ahmadb"/>
+                     were mostly peaceful for the
+                     Christian kingdom, and it was a time of economic and cultural prosperity. Lǝbna Dǝngǝl was defeated by <persName ref="PRS1522Ahmadb"/>
+                     forces in the battle of <placeName ref="LOC5667Sember"/>,  in <date>1529</date>, which made him fugitive in his own realm. 
+                     Being chased from <placeName ref="LOC5597Sawa"/> to <placeName ref="LOC2488Damot"/> to <placeName ref="LOC6135Wag"/> to
+                     <placeName ref="LOC6568Amhara"/> to <placeName ref="LOC2481Dambey"/> and finally he found a refugee in the 
+                     monastery of <placeName ref="LOC2255DabraD"/>, where he died in <date>1540</date>. 
+                  </floruit>
+                  <death when="1540"></death>
+                  
+                    </egXML>
+               
+               <p>However, when we are not sure of the exact date of <gi>floruit</gi>,
+                  period of the person's activity, but we have supporting evidence to claim the approximate period of <gi>floruit</gi>,  
+                  we should use <att>notBefore</att> (specifies the earliest possible date for the event) and <att>notAfter</att> (specifies the latest possible date for the event). 
+                  See for example <ref target="PRS1083AbbayHa" type="bm">ʾAbbāy Habta Ṣǝyon</ref>:</p>
+                  
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <birth when="1869"/>
             <floruit notBefore="1889" notAfter="1914">He was among the last notables of
