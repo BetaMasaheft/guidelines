@@ -25,16 +25,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body xml:id="manuscripts">
           <p>Any manuscripts referenced in our records should have at least a minimal record. To create such a minimal record for referencing
              use the form to <ref target="newEntry">create new items</ref> in the Beta maṣāḥǝft website.</p>
-         
+
          <div type="level2">
             <head>Before creating a manuscript record</head>
-            <p>Before creating a manuscript record, as for all entities, it is important to check whether it already exists! It is better not to check only the repository folder in 
+            <p>Before creating a manuscript record, as for all entities, it is important to check whether it already exists! It is better not to check only the repository folder in
                which you would expect it in GitHub, but to
                 <ref target="https://betamasaheft.eu/as.html">search</ref> for the manuscript's shelfmark or other identifiers on the app as well.
                Remember that particularly records for EMML and EMIP manuscripts might have already been created within their actual repository and vice versa.</p>
          </div>
-               
-               
+
+
          <div type="level2">
             <head>Manuscript Structure: Use of <gi>msDesc</gi>, <gi>msPart</gi> and <gi>msFrag</gi></head>
          <p>Reading of the
@@ -64,7 +64,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     the Ms where the unit is now. Please, do not confuse this with cases
     where leaves or quires are lost.</p>
          </div>
-
+         <div type="level2">
+            <head>Double records</head>
+            <p>It can be that you find out the same manuscript is present under 2 identifiers.</p>
+            <p>You can fix this by merging the two records in one and deleting the one with less information. Remember when doing this to check for references to the id which will go missing, and update them to point to the other identifier.</p>
+            </div>
          <div type="level2">
             <head>Manuscript Encoding: Overview</head>
             <list>
