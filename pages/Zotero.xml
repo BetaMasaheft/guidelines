@@ -17,7 +17,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change> 
+         <change who="DR" when="2019-11-05">Corrected link to Cyrillic transliteration</change> </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="zotero">
@@ -89,7 +90,7 @@ etc.), provide the scientific transcription and translation only
 (i.e. not the title in the original script).</p>
   </item>
   <item>
-      <p>The basis for transliteration of Cyrillic should be this table <ref target="http://kodeks.uni-bamberg.de/AKSL/Schrift/Transliteration.htm"/></p>
+     <p>The basis for transliteration of Cyrillic should be <ref target="http://kodeks.uni-bamberg.de/AKSL/Schrift/Transliteration.htm">this table</ref>.</p>
       <p>There are further rules to be followed:</p>
 <p>Pre-reform spelling (before 1918) of proper names should be standardized according to modern spelling. Thus, not Bolotov" (Болотовъ), but Bolotov (Болотов).</p>
 <p>Pre-reform spelling (before 1918) of titles is transliterated according to the pre-reform spelling, without standardization.
