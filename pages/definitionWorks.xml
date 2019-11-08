@@ -20,7 +20,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </fileDesc>       <revisionDesc>
 
         <change who="DR" when="2018-04-26">editing of the Work section of the guidelines</change>
-            <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+            <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+         <change who="DR" when="2019-11-08">minor edits according to Alessandro Bausi's corrections</change></revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="definitionWorks">
@@ -49,14 +50,14 @@ is not a work, it is a part of the work
 
          <list type="unordered">
             <item>
-               <p>Texts provided with an independent circulation get an individual record with a first-level ID (such as LIT1931Mashaf), all
+               <p>Texts provided with an independent circulation get an individual record with a first-level ID (such as LIT1931Mashaf); all
     others are textparts. </p>
             </item>
             <item>
                <p>Texts which typically form part of other texts are equally assigned an
-                  independent firs-level ID/record if they also have an independent circulation. For example, the
+                  independent first-level ID/record if they also have an independent circulation. For example, the
                   Anaphoras contained in LIT1960Mashaf (<ref type="bm" target="LIT1960Mashaf">Maṣḥafa qǝddāse</ref>) all have their independent
-                  ID and a derived ID in LIT1960Mashaf: the independent abstract work LIT1099Anapho (<ref type="bm" target="LIT1099Anapho">ʾAkkʷateta qʷǝrbān za-qǝddus
+                  IDs and a derived ID in LIT1960Mashaf: the independent abstract work LIT1099Anapho (<ref type="bm" target="LIT1099Anapho">ʾAkkʷateta qʷǝrbān za-qǝddus
                   Hǝryāqos za-hagara Bǝhnǝsā</ref>) is what  is
                   identified with the <att>xml:id</att> <val>AnaphoraMary</val> inside <ref type="bm" target="LIT1960Mashaf">Maṣḥafa qǝddāse</ref>.
                 </p>
@@ -88,7 +89,7 @@ is not a work, it is a part of the work
     relations for the authors of the titles, etc.</p>
             </item>
             <item>
-               <p>For text portions (paragraphs, chapters, miracles, etc.) which are extant as different versions in multiple recensions of the same work or even in different works,
+               <p>For text portions (paragraphs, chapters, miracles, or episodes which are not explicitly highlighted as textpart with individual circulation) which are extant as different versions in multiple recensions of the same work or even in different works,
                  a <ref target="narrativeUnits">Narrative Unit</ref> is created.</p>
             </item>
             <item>
@@ -111,13 +112,13 @@ happen that different researchers have different opinions on the
 relation between the versions and the manuscripts and in this we will be
 able to host them all.</p>
 
-         <p>For example. If the Work A has four versions 1, 2, 3 and 4, 1 being a
-short version of 2 and 3 a later version of 4 while 2 and 4 differ from
-one another only in the order in which the content is organized, there
-will be 5 records, one for the abstract work, one for each version.
-While the abstract work will point to each of the 4 version with
+            <p>For example. If the Work A has four versions 1, 2, 3 and 4 — 1 being a
+short version of 2 and 3 a later version of 4, while 2 and 4 differ from
+one another only in the order in which the content is organized — there
+will be 5 records: one for the abstract Work, one for each version.
+While the abstract Work will point to each of the 4 versions with
 relations and might contain a general description of the work, each of
-the version will have clearly defined relations with the others and the
+the versions will have clearly defined relations with the others and the
 abstract Work.</p>
 
          <p>A further example: a text which is made of parts which can occur in
