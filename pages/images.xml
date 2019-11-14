@@ -63,7 +63,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 </msIdentifier>
   </egXML>
   <p><att>n</att> in the example above is the total number of images and it is a fundamental information to produce the links and the IIIF presentation manifest used by the viewer.</p>
-
+<p>If more than one set of images are available, there is a work around, namely, give another value in an altIdentifier. This will produce a viewer with as many loaded manifests as there are in the encoding.</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  <msIdentifier>
+                  <repository ref="INS0346DL"/>
+                  <idno facs="Ham/1993/Eri_1993" n="39">Golden Gospel</idno>
+                  <altIdentifier xml:id="photos1994">
+                     <idno facs="Ham/1994/Eri_1994" n="19">Golden Gospel</idno>
+                  </altIdentifier>
+               </msIdentifier>
+  </egXML>
 <p>To add the value for the <att>facs</att> of an image or range to be linked you can check the number in the viewer (after the above step has been saved and the images appear).
 The sequence number of the images is the one you want to assign. in <ref target="https://betamasaheft.eu/manuscripts/BMLacq755/viewer"/> you can see in the sequence of
 images below the main viewer that the image of the recto side of the first folio is numbered 3. Then you will enter this number in the file, in the three digits format.</p>
