@@ -17,7 +17,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p></p>
          </sourceDesc>
       </fileDesc>       <revisionDesc>
-        <change who="DR" when="2019-11-20">Created file</change></revisionDesc>
+        <change who="PL" when="2019-11-20">Created file</change></revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="create">
@@ -26,7 +26,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <p>If you are not, ask to be added.</p>
         <p>You can always check the data and add in the folder called "new" correct and validating files which adhere to these guidelines, with one exception:
           <ref target="Works">Work</ref> records can only be created in the application, because their IDs become CAe identifiers.</p>
-        <p>Please follow the instructions given on the application after the creation of a new file with that procedure. After downloading and before commiting 
+        <p>Please follow the instructions given on the application after the creation of a new file with that procedure. After downloading and before commiting
          the new file, always open it in your editor to make sure that it is valid and, if necessary (which it nearly always is!), edit it.</p>
 </div>
         </body>
