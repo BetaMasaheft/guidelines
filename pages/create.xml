@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Create a new file</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+          </publicationStmt>
+         <sourceDesc>
+            <p></p>
+         </sourceDesc>
+      </fileDesc>       <revisionDesc>
+        <change who="DR" when="2019-11-20">Created file</change></revisionDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="create">
+<div type="level1">
+        <p>If you have editors rights, you can create a file once logged in the application from the relevant page.</p>
+        <p>If you are not, ask to be added.</p>
+        <p>You can always check the data and add in the folder called "new" correct and validating files which adhere to these guidelines, with one exception:
+          <ref target="Works">Work</ref> records can only be created in the application, because their IDs become CAe identifiers.</p>
+        <p></p>
+</div>
+        </body>
+        </text>
+        </TEI>
