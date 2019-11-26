@@ -65,7 +65,7 @@ with a licence for it)</item>
       <p>Login with your GitHub user name and password</p>
     </item>
     <item>
-      <p>Clone repositories from the application, if you are logged in and have accepted the invitation to the group, the software will know that you are part of the Beta maṣāḥǝft organization 
+      <p>Clone repositories from the application, if you are logged in and have accepted the invitation to the group, the software will know that you are part of the Beta maṣāḥǝft organization
         and offer that among your possibilities. </p>
     </item>
     <item>
@@ -194,7 +194,7 @@ with a licence for it)</item>
   <p>You can use <ref target="https://atom.io/">Atom</ref> to edit
   files, but to validate and get schema related support (like
   autocompletion) you will need to install a package.</p>
-  <p><ref target="https://atom.io/packages/linter-autocomplete-jing">linter-autocomplete-jing</ref></p>
+  <p><ref target="https://atom.io/packages/linter-autocomplete-jing">linter-autocomplete-jing</ref> Normally, Atom will install dependencies for you, if it fails to do so, at the moment, the current version of this package needs Java to be installed on your machine, and the following additional packages: busy-signal, intentions, linter, linter-ui-default.</p>
   <p>once you have Atom installed, inside Atom, go to settings (or
   preferences on mac), then click on + install on the left and search
   the above string.</p>
@@ -225,13 +225,13 @@ with a licence for it)</item>
   Folder&quot;</item>
   <item>select the folders in the BetMas folder and add them
   all.</item>
-  <item>They will appear under the Project icon. Open the 
+  <item>They will appear under the Project icon. Open the
   manuscripts folder and click on a file to open it.</item>
   </list>
   </p>
-  
-  <p>While editing your file you might start from one existing file, taking it as a model, and always reading and comparing other files. 
-    oXygen has several helpful features that will facilitate your work: 
+
+  <p>While editing your file you might start from one existing file, taking it as a model, and always reading and comparing other files.
+    oXygen has several helpful features that will facilitate your work:
 
     <list>
 <item>Once you start typing a name of an element, oXygen will suggest you
