@@ -26,8 +26,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 work for the project</p>
 <p>You will need:
 <list><item>an account in GIT (github.com)</item>
-<item>Atom (or oXygen
-with a licence for it)</item>
+<item>Atom (or oXygen with a licence for it)</item>
 <item>an account in Zotero</item></list>
 </p>
 <div type="level2">
@@ -90,7 +89,6 @@ with a licence for it)</item>
       Manuscript, Persons, Places, Repositories and Works</p>
     </item>
   </list>-->
-  <p>If you use the new version GitHub beta:</p>
   <list type="unordered">
     <item>
       <p>After you created and verified your account, you will need to
@@ -100,14 +98,13 @@ with a licence for it)</item>
       <p>Install GitHub Desktop</p>
     </item>
     <item>
-      <p>Prepare in your computer in a location of your choice a folder
-      called BetMas</p>
+      <p>Prepare in your computer in a location of your choice a folder called BetMas or any name you will remember</p>
     </item>
     <item>
       <p>Open GitHub Desktop</p>
     </item>
     <item>
-      <p>Login if you aren't automatically logged in</p>
+      <p>Login if you aren't automatically logged in and follow the authentication procedure, which involves the generation of a token and will be prompted for you.</p>
     </item>
     <item>
       <p>Click &quot;file&quot; on the top left corner</p>
@@ -115,46 +112,38 @@ with a licence for it)</item>
     <item>
       <p>Select &quot;clone repository&quot;</p>
     </item>
+    <item>If you are already in the group, you will find the Beta Masaheft repository listed there, select the one you want</item>
     <item>
-      <p>In your browser, go to https://github.com/BetaMasaheft</p>
-    </item>
-    <item>
-      <p>Click on &quot;Schema&quot;</p>
-    </item>
-    <item>
-      <p>Add the URL (https://github.com/BetaMasaheft/Manuscripts) to
-      GitHub Desktop</p>
-    </item>
-    <item>
-      <p>In &quot;Local path&quot;, select the folder BetMas</p>
+      <p>When aksed where to clone in the form, select the directory you have created before.</p>
     </item>
     <item>
       <p>Click CLONE below</p>
     </item>
     <item>
-      <p>This will create a folder called schema in your BetMas folder
+      <p>This will create a folder with the same name of the repository in your BetMas folder
       which is identical to that in GitHub and can be synced with it if you
       are online.</p>
     </item>
     <item>
       <p>repeat the same operation for all other BetaMasaheft
-        repositories you might need, most typically
+        repositories which you may need, most typically
       Authority-Files, Manuscripts, Persons, Places, Repositories and Works</p>
     </item>
   </list>
 
   <p>Let's say you have edited a manuscript file from the newly cloned Manuscripts repository or created a new manuscript file. To add a new file to the Manuscripts
-  folder, create a new file in your XML editor and save it to the Manuscripts folder which you have in your BetMas folder.</p>
+  folder, <ref target="create">create a new file</ref> in your XML editor and save it to the Manuscripts folder which you have in your BetMas folder.</p>
   <list type="unordered">
     <item>
       <p>Open GitHub Desktop and select the Manuscripts repository on the left</p>
     </item>
     <item>
-      <p>Before you commit your changes, make sure that you are synced: click on "fetch origin" in the upper right corner, and, if there are new commits by others, click on "pull"</p>
+      <p>Before you commit your changes, make sure that you are synced, and that other collaborators to your branch know you are sending this PR:
+        click on "fetch origin" in the upper right corner, and, if there are new commits by others, click on "pull"</p>
     </item>
     <item>
       <p>Click the CHANGE tab and you will see that it has recorded the
-      fact that you have added a new file to the folder or modified an existing one</p>
+      fact that you have added a new file to the folder or modified an existing one in your branch</p>
     </item>
     <item>
       <p>Below the list of changes there is a Commit field, where you can enter a name
@@ -167,16 +156,21 @@ with a licence for it)</item>
     </item>
     <item>
       <p>Once it has committed the changes on the top right corner, click
-      SYNC (old version of GitHub Desktop) or PUSH. This will look for anything that has changed online and
+      SYNC (old version of GitHub Desktop) or PUSH. This will look for anything that has changed online in your current branch and
       update your files locally, then will upload your file or update
       the online version from yours.</p>
     </item>
     <item>
       <p>N.B. THERE IS NO RISK of data to be overwritten or lost.</p>
     </item>
+    <item>
+      <p>However, under no circumstances do a Force Push to the repository unless advised by the Tech Lead of the project to proceed this way.</p>
+    </item>
   </list>
+<p>Once you are finished with your edits and want to send them live, select your branch and create a new Pull Request. This will merge the changes in your branch to the master branch, and thus make them live in the web application.</p>
+<p>Before this can happen a review of the encoding takes place and once this has been successful, the Pull Request is merged by a  member of the team into master.</p>
   <p>It is always
-  advisable to Sync/fetch all your repositories before you begin a work session.</p>
+  advisable to Sync/fetch the master branch all your repositories before you begin a work session.</p>
   <p>The Documentation repo contains two other important parts, beside some
   code used locally for the project, the Wiki and the Issues</p>
 
