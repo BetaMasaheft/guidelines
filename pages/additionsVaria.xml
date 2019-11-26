@@ -137,13 +137,20 @@ never be used to mark a content, that presupposes another perspective.</p>
                         <desc type="GuestText">
                             <title type="Complete" ref="LIT3957SalotaB">ጸሎተ፡ ቡራኬ፡ ዘቅዱስ፡ ባስልዮስ።</title>
                         </desc>
-                        <q xml:lang="gez">
-                            <desc>The following is the incipit:</desc>
-                            ኦሥሉስ፡ ቅዱስ፡ አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ባርክ፡ ዲበ፡ ሕዝብከ፡ ፍቁራን፡ ክርስቶሳውያን፡ በበረከት፡ ሰማያዊት፡
-                        </q>
                     </item>
                 </egXML>
-                <p>The same you can do if there is <ref target="Documents">documentary text</ref>
+                <p>You can add texts in more than one language. For example below, in <ref type="BM" target="DSEthiop13">Egypt, Dayr as-Suryān, DS Ethiop. 13</ref>
+                the title was added in two languages.</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<item xml:id="e6">
+  <locus target="#1r"/>
+  <desc>Arabic and English titles written in pencil.</desc>
+  <q xml:lang="ar">صلوات</q>
+  <q xml:lang="en">song</q>
+  </item>
+</egXML>
+<p>If you are providing a translation of the added text, you can use the same method, but add <att>type</att> with value <val>translation</val> to the translation <gi>q</gi>.</p>
+                <p>The same you can do if there is a <ref target="Documents">documentary text</ref>
                 which you want to identify.
                   When creating the record a keyword should then be used to put
                   the text in its correct position as non-literary.

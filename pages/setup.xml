@@ -188,7 +188,7 @@ work for the project</p>
   <p>You can use <ref target="https://atom.io/">Atom</ref> to edit
   files, but to validate and get schema related support (like
   autocompletion) you will need to install a package.</p>
-  <p><ref target="https://atom.io/packages/linter-autocomplete-jing">linter-autocomplete-jing</ref></p>
+  <p><ref target="https://atom.io/packages/linter-autocomplete-jing">linter-autocomplete-jing</ref> Normally, Atom will install dependencies for you, if it fails to do so, at the moment, the current version of this package needs Java to be installed on your machine, and the following additional packages: busy-signal, intentions, linter, linter-ui-default.</p>
   <p>once you have Atom installed, inside Atom, go to settings (or
   preferences on mac), then click on + install on the left and search
   the above string.</p>
