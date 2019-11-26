@@ -17,7 +17,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
                 <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
             </sourceDesc>
-        </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+        </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change> 
+        <change who="ES" when="2019-11-26">added example</change></revisionDesc>
     </teiHeader>
     <text>
         <body xml:id="placeOrInstitution"><div type="level1">
@@ -45,7 +46,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 and not to a place, if any.</p>
         </item>
         <item>
-            <p>you can link the place and repository by adding a relation of the skos:exactMatch type
+            <p>you can link the place and repository by adding a relation of the skos:exactMatch type as e.g. in <ref  type="bm" target="INS0017UM">ʿUra Qirqos</ref>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                 <listRelation>
                     <relation name="skos:exactMatch" active="INS0017UM" passive="LOC6063UraMas"/>
