@@ -27,7 +27,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         Repository record in the institutions repo. The two lists have different origins, PLACES comes from
         EA indexes, while the INSTITUTIONS list is an export of the records in
         EthioSPaRe for repositories.</p>
-    <p>Please, proceed as follows in case of doubt:</p>
+            <p>In principle, all geographical locations should have a PLACE-type record, with co-ordinates and administrative division provided wherever possible, and all repositories (places where manuscripts are preserved) should have a REPOSITORY-type record. 
+                In case of "doublets" the records must be disambiguated. </p>
+                <p>Please, proceed as follows in case of doubt:</p>
     <list type="ordered:arabic">
         <item>
             <p>if the repository record for the repository you need does not
@@ -41,6 +43,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <item>
             <p>modify those references that actually point to a repository
                 and not to a place, if any.</p>
+        </item>
+        <item>
+            <p>you can link the place and repository by adding a relation of the skos:exactMatch type
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <listRelation>
+                    <relation name="skos:exactMatch" active="INS0017UM" passive="LOC6063UraMas"/>
+                </listRelation>
+                </egXML>
+            </p>
         </item>
     </list>
             <p>See also <ref target="places">Places</ref> <ref target="institution">Repositories</ref>.</p>
