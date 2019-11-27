@@ -26,8 +26,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <item><ref target="navigation">Navigation</ref></item>
         <item><ref target="hypothesis">Annotations with hypothesis</ref></item>
         </list>
-        <p>Contributing</p>
+        <p><ref target="https://github.com/BetaMasaheft/Documentation/blob/master/CONTRIBUTING.md">Contributing</ref></p>
         <list>
+          <item><ref target="https://github.com/BetaMasaheft/Documentation/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</ref></item>
         <item><ref target="workflow">General workflow</ref></item>
         <item><ref target="setup">Setting up your workspace</ref></item>
         <item><ref target="zotero">Familiarizing with the bibliography editing</ref></item>
