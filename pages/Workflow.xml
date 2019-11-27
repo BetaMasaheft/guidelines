@@ -51,6 +51,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   <p>Some tasks, like finding the correct ID for a reference or named entity, will need anyway to use the application, unless you prefer to search through the files directly in your editing software.</p>
   <p>In very limited and checked cases you might need to create new entries. You need permission to do so via the application. then you can follow the guidance in the <ref target="newEntry">new record creation</ref> page.</p>
   </div>
+  <div type="level2">
+    <p>Although it is highly advisable that while encoding you do not concern yourself with "how it will look like" and thus modify unproperly your encoding
+    to feet a specific visualization, there are cases in which you may want to support your editing with a preview of the information you are encoding.</p>
+    <p>If you wish to use this option, you will need to clone also the BetMas repository from the organization on GitHub: this is where the application code is maintained.</p>
+    <p>Once you have cloned this repository, make sure to know the absolute location of the directory inside the repository where the application files are stored, e.g. /Users/name/path/BetMas/BetMas/</p>
+<p>You will need Oxygen, or another way to run a XSLT transformation locally. In the following steps we assume you are using Oxygen</p>
+  <list>
+    <item>Open in Oxygen XML the file you want to preview.</item>
+  <item>Click on Configure Transformation Scenario and click on NEW to create a new scenario. Select XSLT Transformation.</item>
+<item>Select as input for XML URL the current file (this is the default option)</item>
+<item>Select as input for XSL URL one of the four XSLT which are found in the repository of the application under XSLT, and are called localView*.xslt . the last part of the filename is the type of record you want to preview. You will need one scenario pointing at a different XSLT for each of the record types.</item>
+<item>Click on parameters, and double click on absolutePathApplication. In the text box which opens copy the absolute path to the application repository cloned on your machine, e.g. /Users/name/path/BetMas/BetMas/ . be sure to include the last / .  </item>
+<item>Switch to the output panel and set it to save a file with a name with extension ".html" of your choice in a location which is not an official repository, e.g. on your desktop. Select Open in Browser and unselect the option to show as XML in the results view.</item>
+<item>Once all is set,  click ok to run the transformation. The preview will open in your browser.</item>
+</list>
+    </div>
+    <div type="level2">
+    <p>For small changes to files, please consider the use of the EDIT button on top of each record. Just hit it, and then click on EDIT in the GitHub file view. Once done, click on Propose Changes making in this way a Pull Request.</p></div>
          <div type="level2">
             <head>Batch editing files</head>
             <p>You can find and replace strings or regex patterns throughout the
