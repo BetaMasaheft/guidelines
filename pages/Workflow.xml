@@ -62,6 +62,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   <item>Click on Configure Transformation Scenario and click on NEW to create a new scenario. Select XSLT Transformation.</item>
 <item>Select as input for XML URL the current file (this is the default option)</item>
 <item>Select as input for XSL URL one of the four XSLT which are found in the repository of the application under XSLT, and are called localView*.xslt . the last part of the filename is the type of record you want to preview. You will need one scenario pointing at a different XSLT for each of the record types.</item>
+<item>Set the processor to the latest Saxon version available, e.g. PE 9.6.0.7.</item>
 <item>Click on parameters, and double click on absolutePathApplication. In the text box which opens copy the absolute path to the application repository cloned on your machine, e.g. /Users/name/path/BetMas/BetMas/ . be sure to include the last / .  </item>
 <item>Switch to the output panel and set it to save a file with a name with extension ".html" of your choice in a location which is not an official repository, e.g. on your desktop. Select Open in Browser and unselect the option to show as XML in the results view.</item>
 <item>Once all is set,  click ok to run the transformation. The preview will open in your browser.</item>
