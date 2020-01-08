@@ -21,7 +21,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
         <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
          <change who="DR" when="2018-12-03">Added paragraph on locus indications of excerpts</change>
-         <change who="DR" when="2019-12-09">Added line take up/down information, small edits for readability</change>
+         <change who="DR" when="2019-12-09">Added line take-up/down information, small edits for readability</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -673,7 +673,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </row>
                   <row>
                      <cell>
-                        <p>line take up</p>
+                        <p>line take-up</p>
                      </cell>
                      <cell>
                         <tag>seg rend="above"</tag>
@@ -682,7 +682,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </row>
                   <row>
                      <cell>
-                        <p>line take down</p>
+                        <p>line take-down</p>
                      </cell>
                      <cell>
                         <tag>seg rend="below"</tag>
