@@ -26,66 +26,66 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   <text>
     <body xml:id="ColophSupplTit">
       <head>Colophons, Titles and Supplications</head>
-      <p>These three concepts are here treated together as they tend to overlap in discussion. We
-        will try in this page to clarify our understanding and the way in which we encode each
+      <p>These three concepts and their encoding in manuscript and work records are treated together here as they tend to overlap in discussion. In this page, we
+        will try to clarify our understanding and the way in which we encode each
         case.</p>
       <p>The elements used are <gi>title</gi> and <gi>div</gi> with <att>subtype</att>,
           <gi>colophon</gi>, <gi>incipit</gi>, <gi>explicit</gi>, <gi>seg</gi> with
         <att>type</att>. In <gi>title</gi> and <gi>div</gi> the attribute <att>type</att> is 
       used for a more general typology. Each of these elements can take as much text as available 
       and needed, from nothing to many thousands of words.</p>
-      <p>Since some of these elements, can be used also for additions, it is possible with the same set 
-        of tags and attributes also to encode for example a supplication and an extended title added at a moment later than the copy of the text. </p>
-      <p>In either case the list of values which can be used for the attribute <att>type</att> or
-          <att>subtype</att> is the same. More than one value can be used, up to six. </p>
+      <p>Since some of these elements can also be used for additions, it is possible to encode for example a supplication or an extended title added
+        after the copying of the main text with the same set 
+        of tags and attributes . </p>
+      <p>Whether used for the encoding of the main content or later additions, the list of values which can be used for the attributes <att>type</att> or
+          <att>subtype</att> is the same. More than one value can be used, up to six.</p>
       <!-- needs to find its place in the schema as well! -->
       <list>
-        <item>"expanded" contains the title, tafaṣṣama/malʾa and further information</item>
-        <item>"inscription" is used for a title occurring at the beginning of a work</item>
-        <item>"subscription" for a title occurring at the end of a work</item>
-        <item>"embedded" for a title copied together with the text</item>
-        <item>"supplication" for a supplication</item>
-        <item>"translation" to signal that the title is only of a translation</item>
+        <item><val>expanded</val>"contains the title, <foreign xml:lang="gez">tafaṣṣama</foreign>/<foreign xml:lang="gez">malʾa</foreign> and further information</item>
+        <item><val>inscription</val> is used for a title occurring at the beginning of a work</item>
+        <item><val>subscription</val> for a title occurring at the end of a work</item>
+        <item><val>embedded</val> for a title copied together with the text</item>
+        <item><val>supplication</val> for a supplication</item>
+        <item><val>translation</val> to signal that the title is only of a translation</item>
       </list>
-      <p> When used in <gi>div</gi> or <gi>seg</gi> other two values can be used</p>
+      <p> When used in <gi>div</gi> or <gi>seg</gi> other two values can be used:</p>
       <list>
-        <item>"title" contains the title as well as tafaṣṣama/malʾa or similar expression</item>
-        <item>"desinit" to qualify expressions as tafaṣṣama/malʾa</item>
+        <item><val>title</val> contains the title as well as <foreign xml:lang="gez">tafaṣṣama</foreign>/<foreign xml:lang="gez">malʾa</foreign> or similar expressions</item>
+        <item><val>desinit</val> to qualify expressions as <foreign xml:lang="gez">tafaṣṣama</foreign>/<foreign xml:lang="gez">malʾa</foreign>.</item>
       </list>
-      <p>types/subtypes should be combined to describe the exact situation as it presents itself in each work, 
-        possibly in the form of, as in the following example from <ref type="bm" target="LIT5673AkkonuColl">LIT5673AkkonuColl</ref></p>
+      <p>Types/subtypes should be combined to describe the exact situation as it presents itself in each work,
+        as in the following example from <ref type="bm" target="LIT5673AkkonuColl">LIT5673AkkonuColl</ref>:</p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
   <div type="textpart" subtype="title inscriptio" xml:id="Title">
     <label>Title</label>
   </div>
 </egXML>
-      <p>Why so many ways to do this, which might seam one single topic? Because of the way
-        information is entered. There are cases when we know there is a colophon and that is it, we
-        do not know what its content is and we have no way to retrieve that information. Sometime we
-        are working on a manuscript record and we do not know enough the textual unit, so we need to
-        register as much as possible, but not overstate. Fortunately, all these different
-        informations can be collected together, and the use of the same set of attributes can
-        help. An additional reason for this is that these information can be joined to one 
-        another, there might be a colophon which contains a title, and certainly a generic 
+      <p>Why are there so many ways to do this? Because of the way
+        information is entered. There are cases in which we only know of the presence of a colophon, but do not know its content. Sometimes we
+        are working on a manuscript record and we do not know the textual unit well enough, so we need to
+        register as much as possible, but not overstate. Fortunately, all this different
+        information can be collected together, and the use of the same set of attributes can
+        help. An additional reason for this is that this information can be joined to one 
+        another: there might be for example a colophon which contains a title. A generic 
       incipit or explicit might contain, with other things also a title, but is generically the 
       beginning of a text part, which needs not to be a title or anything else, although it might be. 
       It is up to the encoder to make decisions for example if a long title before a text is all there is in a <gi>incipit</gi> given 
         by a cataloguer, the encoder might decide to have an <gi>incipit</gi> with a <att>type</att> <val>inscription</val>, 
-        or copy the text in the title element of the <gi>msItem</gi>.</p>
-      <p>A special note needs to be made for <gi>seg</gi> which can be used within <gi>colophon</gi>, <gi>incipit</gi>, <gi>explicit</gi>, <gi>div</gi> </p>
+        or to copy the text in the <gi>title</gi> element of the <gi>msItem</gi>.</p>
+      <p>A special note needs to be made for <gi>seg</gi> which can be used within <gi>colophon</gi>, <gi>incipit</gi>, <gi>explicit</gi>, <gi>div</gi>.</p>
       <div type="level2">
         <head>Colophons</head>
         <p>For a definition of the colophons of a manuscript, see <ref target="colophon">the page on
-            colophon</ref>.</p>
+            colophons</ref>.</p>
         <p>Titles (sometimes referred to as "colophon of the work") transmitted in all manuscripts
           will be encoded in the work record and titles particular to one manuscript in the
           manuscript record. Cases like the ones discussed for Coptic Biblical Titles <ref
             target="https://www.aai.uni-hamburg.de/en/comst/pdf/bulletin3/comst-bulletin3-1-05-22.pdf"
-            >Buzi 2017, 5–6</ref> would need encoding in each manuscript without any doubt. The next
+            >Buzi 2017, 5–6</ref> would need encoding in each manuscript. The next
           section details a number of types of titles which can be encoded in a work, with examples
           of how to encode them.</p>
         <p>There is no need to add a <att>type</att> to every <gi>colophon</gi>, but the attribute and values should be used cautiously, 
-          so that when one searches for a colophon with a certain type, will match that and not something simply copied over.</p>
+          so that a search for a colophon with a certain type will match only this case.</p>
       </div>
       <div type="level2">
         <head>Titles (colophon of the work)</head>
