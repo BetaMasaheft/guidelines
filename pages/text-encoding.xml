@@ -21,25 +21,30 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
         <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
          <change who="DR" when="2018-12-03">Added paragraph on locus indications of excerpts</change>
+         <change who="DR" when="2019-12-09">Added line take-up/down information, small edits for readability</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="text-encoding">
          <head>Text Encoding</head>
          <p>TEI records are for <hi rendition="simple:bold">Text</hi>
-    encoding. We record in <ref target="manuscripts">Manuscripts</ref> records the Transcription of the
-    text on the catalogued manuscript, when available, whilst the edited
-    text or the theoretical structure of it should be recorded into the
-    <ref target="works">Work</ref> Entity. Text is entered in the <gi>body</gi> of a
-    TEI file into a <tag>div type="edition"</tag> .
-    Each text part should be contained into a
+    encoding, and this page deals with any text encoded in any type of record. This page does not constitute a prescriptive list of features to be encoded when
+    working with text. It simply lists the possibilities of text encoding employed until now in the project. It is always up to the encoder to decide which of these features
+    they want to encode in a particular record.
+         </p>
+    <p>
+    We record in <ref target="manuscripts">Manuscript</ref> records the Transcription of the
+       text of the catalogued manuscript, when available, whilst   <ref target="works">Work</ref> records contain the edited
+    text or its  theoretical structure. Text is entered in the <gi>body</gi> of a
+    TEI file in a <tag>div type="edition"</tag> .
+    Each text part should be contained in a
     <gi>div</gi>. <gi>div</gi>s should
     always be well nested one into the other. These will always take a
     <att>subtype</att> with <val>textpart</val> and a
     <att>subtype</att> with the desired value. There should
     always be also a <att>n</att> identifying for example chapter 3 as well as a
     <att>corresp</att> pointing to the appropriate
-    <gi>msPart</gi> or <gi>msItem</gi>
+    <gi>msPart</gi> or <gi>msItem</gi> in the case of manuscript transcriptions.
          </p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
 
@@ -95,8 +100,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     level div nesting!</p>
          <div type="level3">
             <head>Text Diplomatic Transcription features</head>
-            <p>PLEASE, NOTE THAT THESE ELEMENTS CAN BE USED EVERYWHERE YOU HAVE
-      TEXT, FOR EXAMPLE IN ADDITIONS, IN INCIPIT AND EXPLICIT.</p>
+            <p>Please, note that these elements can be used everywhere you have text, for example in additions, incipits or explicits.</p>
+            <p>If any of the features listed here are unclear to you or use unfamiliar terminology, please open an issue or be in touch otherwise and ask for clarification.</p>
             <div type="level4">
                <head>Text Structure</head>
                <p>Use an empty <gi>pb</gi> for each page break.
@@ -116,8 +121,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 </ab>
 </div>
                </egXML>
-
-               <p>Avoid trying to reproduce the layout of the text in the transcription, this has no use and the image can give much better information.</p>
             </div>
             <div type="level4">
                <head>Hand Shifts</head>
@@ -668,6 +671,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell/>
                   </row>
+                  <row>
+                     <cell>
+                        <p>line take-up</p>
+                     </cell>
+                     <cell>
+                        <tag>seg rend="above"</tag>
+                     </cell>
+                     <cell/>
+                  </row>
+                  <row>
+                     <cell>
+                        <p>line take-down</p>
+                     </cell>
+                     <cell>
+                        <tag>seg rend="below"</tag>
+                     </cell>
+                     <cell/>
+                  </row>
                </table>
                </p>
                <p>TEI is made for this and there are a number of other things
@@ -677,9 +698,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         available, this should be stated temporarily in a note with a
         commentary for future changes in the respective msItem:</p>
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                 <note>This prayer is written in negative writing. </note> <!--Information belongs to text transcription--></egXML>
-               <p>Note, however, the different usage for the information about
-        rubrication.</p>
+                 <note>This prayer is written in negative writing. </note> <!--Information belongs to text transcription-->
+               </egXML>
+               <p>Note, however, the different usage for the information about 
+                  rubrication, which is entered in <gi>handNote</gi>, see <ref target="handDescription">Hands Description</ref>.</p>
             </div>
          </div>
 
