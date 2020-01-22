@@ -41,7 +41,7 @@ guidelines for
 <text>
       <body>
          <listPlace>
-            <place type="RegionalState" sameAs="Q200127">
+            <place type="RegionalState" sameAs="wd:Q200127">
                <placeName xml:id="n1" xml:lang="am">ብሔራዊ፡ ክልላዊ፡ መንግሥቲ፡ ትግራይ፡</placeName>
                <placeName corresp="#n1" xml:lang="am" type="normalized">Bǝḥerāwi Kǝllǝlāwi Mangǝśti
                   Tǝgrāy</placeName>
@@ -102,7 +102,7 @@ guidelines for
   <p> and in an eventually already existing place record or repository record, you can use the same wikidata values
     as follows in the same way as above for <gi>settlement</gi>, <gi>region</gi> and <gi>country</gi>.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <place type="city" sameAs="Q649">
+              <place type="city" sameAs="wd:Q649">
               <placeName xml:id="n1" xml:lang="ru">Москва</placeName>
               <placeName corresp="#n1" xml:lang="en">Moscow</placeName>
               <country ref="wd:Q159"/>
