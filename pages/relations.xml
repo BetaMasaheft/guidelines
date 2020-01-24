@@ -31,7 +31,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         the schema and can be updated.</p>
     <p>
         <gi>listRelation</gi> is allowed
-        EVERYWHERE.</p>
+        everywhere.</p>
     <p>For example, in a manuscript record within a <gi>msItem</gi> such
         relations and a description of them should be given within the
         element <gi>filiation</gi>
@@ -78,59 +78,59 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <relation name="betmas:hasLexiconEntry" active="LOC7011Meskwa" passive="http://betamasaheft.eu/Dillmann/lemma/L65ae0746b7f9428da90682226ae6cc75"></relation>
             </egXML></p>
             <p>The following are some frequently used ones, but there are many more readily available from the schema (see <gi>relation</gi>) and you can use others which are in the <ref target="ontologyView">ontology</ref>.</p>
-    <div type="section">
+    <div type="level2">
         <head>mss-mss</head>
-        <p>saws:isDirectCopyOf</p>
-        <p>saws:isAncestorOf</p>
+        <p><code>saws:isDirectCopyOf</code></p>
+        <p><code>saws:isAncestorOf</code></p>
     </div>
-    <div type="section">
+    <div type="level2">
         <head>mss-work</head>
         <p/>
     </div>
-    <div type="section">
+    <div type="level2">
         <head>work-work</head>
-        <p>saws:formsPartOf</p>
-        <p>saws:isVersionInAnotherLanguageOf</p>
-        <p>saws:contains</p>
-        <p>ecrm:CLP46i_may_form_part_of</p>
-        <p>saws:isDifferentTo</p>
-        <p>saws:isShorterVersionOf</p>
-        <p>saws:isRelatedTo</p>
-        <p>saws:follows</p>
+        <p><code>saws:formsPartOf</code></p>
+        <p><code>saws:isVersionInAnotherLanguageOf</code></p>
+        <p><code>saws:contains</code></p>
+        <p><code>ecrm:CLP46i_may_form_part_of</code></p>
+        <p><code>saws:isDifferentTo</code></p>
+        <p><code>saws:isShorterVersionOf</code></p>
+        <p><code>saws:isRelatedTo</code></p>
+        <p><code>saws:follows</code></p>
     </div>
-    <div type="section">
+    <div type="level2">
         <head>work-person</head>
-        <p>saws:isAttributedToAuthor</p>
-        <p>ecrm:P129_is_about</p>
-        <p>dcterms:creator</p>
+        <p><code>saws:isAttributedToAuthor</code></p>
+        <p><code>ecrm:P129_is_about</code></p>
+        <p><code>dcterms:creator</code></p>
     </div>
-    <div type="section">
+    <div type="level2">
         <head>person-person</head>
-        <p>betmas:wifeOf</p>
-        <p>betmas:husbandOf</p>
-        <p>snap:AllianceWith</p>
-        <p>betmas:ordainedBy</p>
-        <p>rel:enemyOf</p>
-        <p>snap:SonOf</p>
-        <p>snap:FatherOf</p>
+        <p><code>betmas:wifeOf</code></p>
+        <p><code>betmas:husbandOf</code></p>
+        <p><code>snap:AllianceWith</code></p>
+        <p><code>betmas:ordainedBy</code></p>
+        <p><code>rel:enemyOf</code></p>
+        <p><code>snap:SonOf</code></p>
+        <p><code>snap:FatherOf</code></p>
     </div>
-    <div type="section">
+    <div type="level2">
         <head>person-mss</head>
-        <p>saws:isCopierOf</p>
-        <p>saws:hasOwned</p>
-        <p>lawd:hasAttestation</p>
+        <p><code>saws:isCopierOf</code></p>
+        <p><code>saws:hasOwned</code></p>
+        <p><code>lawd:hasAttestation</code></p>
     </div>
-    <div type="section">
+    <div type="level2">
         <head>person-work</head>
-        <p>ecrm:P129i_is_subject_of</p>
+        <p><code>ecrm:P129i_is_subject_of</code></p>
     </div>
-    <div type="section">
+    <div type="level2">
         <head>place-place</head>
         <p/>
     </div>
-    <div type="section">
+    <div type="level2">
         <head>person-place</head>
-        <p>syriaca:has-relation-to-place</p>
+        <p><code>syriaca:has-relation-to-place</code></p>
     </div>
 
         </body>
