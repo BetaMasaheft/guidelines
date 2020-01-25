@@ -84,13 +84,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 detailed elsewhere, like the one above, but for many other values we have not done
                 that yet. Open an issue, we will then agree on a way to proceed and update also this
                 page.</p>
-            <p>Most <gi>relation</gi> statements are not required at any level, they can be used to enrich the network of information. They are in any case much more useful when explained with a <gi>desc</gi>.</p>
-            <p>We have provided examples which are as much as possible self explanatory, with preference to those where some additional information was given.</p>
+            <p>Most <gi>relation</gi> statements are not required at any level, they can be used to
+                enrich the network of information. They are in any case much more useful when
+                explained with a <gi>desc</gi>.</p>
+            <p>We have provided examples which are as much as possible self explanatory, with
+                preference to those where some additional information was given.</p>
             <div type="level2">
                 <head>generic relations</head>
                 <p>generic properties like <code>skos:exactMatch</code>,
                         <code>skos:broadMatch</code>, etc. are used in specific cases documented in
                     this guidelines where appropriate.</p>
+
+                <p><code>lawd:hasAttestation</code> is used to say that a named entity, a person, a
+                    place, a textual unit is attested in a textual unit or in a manuscript or one of
+                    its parts. It cannot be used to relate persons to persons or persons to places,
+                    and so on. </p>
             </div>
             <div type="level2">
                 <head>Manuscript to Manuscript</head>
@@ -140,52 +148,63 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </div>
             <div type="level2">
                 <head>Work to Manuscript</head>
-                <p>Because this is a collaborative effort and is continuously in progress, we have plenty of records for which we do not have enough encoding.</p>
-                <p>It is not possible to fix everything as we go, there is too much. so, in cases in which you are editing a Work, and you know it is contained in a manuscript, you can say so in the Work record, instead of
-                    tackling the manuscript description, by saying that the work has a generic attestation in that manuscript. To this aim we are currently using <code>lawd:hasAttestation</code> as in the below example.
-                <egXML xmlns="http://www.tei-c.org/ns/Examples"> 
-                    <relation name="lawd:hasAttestation" active="LIT5106MiraclePriest" passive="EMML6938">
-                        <desc>
-                            <locus corresp="EMML6938" target="#41v"/>
-                        </desc>
-                    </relation>
-                </egXML>
-                </p>
-            </div>
-            <div type="level2">
-                <head>Work to Work</head>
-                <p><code>saws:formsPartOf</code> is used to declare that a defined Textual Unit is always part of another one.
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation name="saws:formsPartOf" active="LIT3854KingList" passive="LIT1507GadlaT">
-                            <desc>The king list B is embedded within the Dabra Libānos recension of Gadla Takla Hāymānot.</desc>
-                        </relation>
-                    </egXML>
-                </p>
-                <p><code>ecrm:CLP46i_may_form_part_of</code> can be used for texts which are not always included in another one.
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation name="ecrm:CLP46i_may_form_part_of" active="LIT1758Lefafa" passive="LIT1931Mashaf">
-                            <desc>The <foreign xml:lang="gez">Lǝfāfa ṣǝdǝq</foreign> can circulate both as an
-                                independent work and as a part of the <foreign xml:lang="gez">Maṣḥafa
-                                    gǝnzat</foreign>
+                <p>Because this is a collaborative effort and is continuously in progress, we have
+                    plenty of records for which we do not have enough encoding.</p>
+                <p>It is not possible to fix everything as we go, there is too much. so, in cases in
+                    which you are editing a Work, and you know it is contained in a manuscript, you
+                    can say so in the Work record, instead of tackling the manuscript description,
+                    by saying that the work has a generic attestation in that manuscript. To this
+                    aim we are currently using <code>lawd:hasAttestation</code> as in the below
+                    example. <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="lawd:hasAttestation" active="LIT5106MiraclePriest"
+                            passive="EMML6938">
+                            <desc>
+                                <locus corresp="EMML6938" target="#41v"/>
                             </desc>
                         </relation>
                     </egXML>
                 </p>
-                
+            </div>
+            <div type="level2">
+                <head>Work to Work</head>
+                <p><code>saws:formsPartOf</code> is used to declare that a defined Textual Unit is
+                    always part of another one. <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="saws:formsPartOf" active="LIT3854KingList"
+                            passive="LIT1507GadlaT">
+                            <desc>The king list B is embedded within the Dabra Libānos recension of
+                                Gadla Takla Hāymānot.</desc>
+                        </relation>
+                    </egXML>
+                </p>
+                <p><code>ecrm:CLP46i_may_form_part_of</code> can be used for texts which are not
+                    always included in another one. <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="ecrm:CLP46i_may_form_part_of" active="LIT1758Lefafa"
+                            passive="LIT1931Mashaf">
+                            <desc>The <foreign xml:lang="gez">Lǝfāfa ṣǝdǝq</foreign> can circulate
+                                both as an independent work and as a part of the <foreign
+                                    xml:lang="gez">Maṣḥafa gǝnzat</foreign>
+                            </desc>
+                        </relation>
+                    </egXML>
+                </p>
+
                 <p>
                     <code>saws:isVersionOf</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation  name="saws:isVersionOf" active="LIT2230Saatat" passive="LIT1961Mashaf">
-                            <desc>Saʿātāt za-gǝbṣ is a version of the<ref type="work" corresp="LIT1961Mashaf">Maṣḥafa saʿātāt</ref>.</desc>
+                        <relation name="saws:isVersionOf" active="LIT2230Saatat"
+                            passive="LIT1961Mashaf">
+                            <desc>Saʿātāt za-gǝbṣ is a version of the<ref type="work"
+                                    corresp="LIT1961Mashaf">Maṣḥafa saʿātāt</ref>.</desc>
                         </relation>
                     </egXML>
                 </p>
                 <p><code>saws:isVersionInAnotherLanguageOf</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1978Mashaf#t1" passive="LIT1978Mashaf#t4arabic">
-                            <desc>The Ethiopic version of the Maṣḥafa ṭomār was translated from the Arabic version based on a Syriac version. 
-                                Guidi suggests that the Maṣḥafa ṭomār may have been translated in the mid-16th century.
-                                <bibl>
+                        <relation name="saws:isVersionInAnotherLanguageOf" active="LIT1978Mashaf#t1"
+                            passive="LIT1978Mashaf#t4arabic">
+                            <desc>The Ethiopic version of the Maṣḥafa ṭomār was translated from the
+                                Arabic version based on a Syriac version. Guidi suggests that the
+                                Maṣḥafa ṭomār may have been translated in the mid-16th century. <bibl>
                                     <ptr target="bm:Guidi1932storia"/>
                                     <citedRange unit="page">72-73</citedRange>
                                 </bibl>
@@ -197,181 +216,208 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </relation>
                     </egXML>
                 </p>
-                <p><code>saws:contains</code> can be used if you are sure that a textual unit always contains another textual unit (the letter may circulate also independently).
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation  name="saws:contains" active="LIT2317Senodo" passive="LIT2696Hom"/>
+                <p><code>saws:contains</code> can be used if you are sure that a textual unit always
+                    contains another textual unit (the letter may circulate also independently).
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="saws:contains" active="LIT2317Senodo" passive="LIT2696Hom"/>
                     </egXML>
                 </p>
                 <p><code>saws:isRelatedTo</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation name="saws:isRelatedTo" active="LIT1940Mashaf#t1" passive="LIT1940Mashaf#t1coptic">
-                            <desc>According to  <persName ref="PRS10747Zotenbe"/>, the recension of the Maṣḥafa krǝstǝnnā in <ref type="mss" corresp="BNFet78"/> 
-                                agrees nearly entirely to the Coptic baptismal rite edited by Assemani in <bibl>
+                        <relation name="saws:isRelatedTo" active="LIT1940Mashaf#t1"
+                            passive="LIT1940Mashaf#t1coptic">
+                            <desc>According to <persName ref="PRS10747Zotenbe"/>, the recension of
+                                the Maṣḥafa krǝstǝnnā in <ref type="mss" corresp="BNFet78"/> agrees
+                                nearly entirely to the Coptic baptismal rite edited by Assemani in <bibl>
                                     <ptr target="bm:Assemani1749Catechumenis"/>
                                     <citedRange unit="page">141-167</citedRange>
-                                </bibl>,
-                                <bibl>
+                                </bibl>, <bibl>
                                     <ptr target="bm:Assemani1749Baptismo"/>
                                     <citedRange unit="page">150-193</citedRange>
-                                </bibl> and 
-                                <bibl>
+                                </bibl> and <bibl>
                                     <ptr target="bm:Assemani1749Confirmatione"/>
                                     <citedRange unit="page">82-117</citedRange>
-                                </bibl>.</desc>  
+                                </bibl>.</desc>
                         </relation>
                     </egXML>
                 </p>
                 <p><code>saws:follows</code>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> 
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="saws:follows" active="LIT1586Hayman" passive="LIT1978Mashaf">
-                            <desc>The <foreign xml:lang="gez">Maṣḥafa ṭomār</foreign> very often follows
-                                Hāymānota ʾabaw and precedes the table of content.</desc>
+                            <desc>The <foreign xml:lang="gez">Maṣḥafa ṭomār</foreign> very often
+                                follows Hāymānota ʾabaw and precedes the table of content.</desc>
                         </relation>
                     </egXML>
                 </p>
                 <p>
-                    <code>ecrm:P129_is_about</code> is used to say that a Textual Unit speaks about another Textual Unit. Please note that for persons which are subject of a Textual Unit there is a dedicated property.
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation name="ecrm:P129_is_about" active="LIT5327MiracleVisit" passive="LIT3575Mashaf"/>
+                    <code>ecrm:P129_is_about</code> is used to say that a Textual Unit speaks about
+                    another Textual Unit. Please note that for persons which are subject of a
+                    Textual Unit there is a dedicated property. <egXML
+                        xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="ecrm:P129_is_about" active="LIT5327MiracleVisit"
+                            passive="LIT3575Mashaf"/>
                     </egXML>
                 </p>
                 <p>
                     <code>saws:isCommentOn</code>
-                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                    <relation name="saws:isCommentOn" active="LIT4591TergwameM" passive="LIT1340EnochE#Luminaries"/>
-                </egXML>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="saws:isCommentOn" active="LIT4591TergwameM"
+                            passive="LIT1340EnochE#Luminaries"/>
+                    </egXML>
                 </p>
                 <p>
                     <code>saws:hasUsed</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation name="saws:hasUsed" active="LIT2230Saatat" passive="LIT3564Psalmodia">
-                            <desc>Parts of <ref type="work" corresp="LIT3564Psalmodia"/>, mainly <ref type="work" corresp="LIT3566Theotokia"/> and <ref type="work" corresp="LIT3568Psalis"/> 
-                                are among additional material included in <ref type="work" corresp="LIT2230Saatat"/>, but not in <ref type="work" corresp="LIT3570Agbiya"/>.</desc>
+                        <relation name="saws:hasUsed" active="LIT2230Saatat"
+                            passive="LIT3564Psalmodia">
+                            <desc>Parts of <ref type="work" corresp="LIT3564Psalmodia"/>, mainly
+                                    <ref type="work" corresp="LIT3566Theotokia"/> and <ref
+                                    type="work" corresp="LIT3568Psalis"/> are among additional
+                                material included in <ref type="work" corresp="LIT2230Saatat"/>, but
+                                not in <ref type="work" corresp="LIT3570Agbiya"/>.</desc>
                         </relation>
                     </egXML>
                 </p>
                 <p>
                     <code>saws:fallsWithin</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation name="saws:fallsWithin" active="LIT3944ArdeetChL" passive="LIT1931Mashaf">
-                            <desc>The Maṣḥafa ʾardǝʾǝt circulates both as an independent work and as a part of the Maṣḥafa gǝnzat</desc>
+                        <relation name="saws:fallsWithin" active="LIT3944ArdeetChL"
+                            passive="LIT1931Mashaf">
+                            <desc>The Maṣḥafa ʾardǝʾǝt circulates both as an independent work and as
+                                a part of the Maṣḥafa gǝnzat</desc>
                         </relation>
                     </egXML>
                 </p>
                 <p>
                     <code>saws:isShorterVersionOf</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation name="saws:isShorterVersionOf" active="LIT1120Apocal" passive="LIT1127Apocal">
+                        <relation name="saws:isShorterVersionOf" active="LIT1120Apocal"
+                            passive="LIT1127Apocal">
                             <desc>according to <bibl>
-                                <ptr target="bm:Leslau1951Falasha"/>
-                                <citedRange unit="page">63</citedRange>
-                            </bibl>
-                            </desc> 
+                                    <ptr target="bm:Leslau1951Falasha"/>
+                                    <citedRange unit="page">63</citedRange>
+                                </bibl>
+                            </desc>
                         </relation>
                     </egXML>
                 </p>
                 <p>
                     <code>saws:isLongerVersionOf</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation  name="saws:isLongerVersionOf" active="LIT3944ArdeetChL" passive="LIT3943ArdeetChS"/>
+                        <relation name="saws:isLongerVersionOf" active="LIT3944ArdeetChL"
+                            passive="LIT3943ArdeetChS"/>
                     </egXML>
                 </p>
                 <p>
                     <code>saws:isVariantOf</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation name="saws:isVariantOf" active="LIT2444Temher" passive="LIT3978Elmastoagya"/>
+                        <relation name="saws:isVariantOf" active="LIT2444Temher"
+                            passive="LIT3978Elmastoagya"/>
                     </egXML>
                 </p>
                 <p>
                     <code>saws:isVariantTranslationOf</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation name="saws:isVariantTranslationOf" active="LIT3953MashafaQ" passive="LIT3952MashafaQ"/>
+                        <relation name="saws:isVariantTranslationOf" active="LIT3953MashafaQ"
+                            passive="LIT3952MashafaQ"/>
                     </egXML>
                 </p>
                 <p><code>saws:hasDescendant</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation name="saws:hasDescendant" active="LIT2230Saatat" passive="LIT1544Gebrah">
-                            <desc>Parts of <ref type="work" corresp="LIT2230Saatat"/> survive in <ref type="work" corresp="LIT1544Gebrah"/>.</desc>
+                        <relation name="saws:hasDescendant" active="LIT2230Saatat"
+                            passive="LIT1544Gebrah">
+                            <desc>Parts of <ref type="work" corresp="LIT2230Saatat"/> survive in
+                                    <ref type="work" corresp="LIT1544Gebrah"/>.</desc>
                         </relation>
                     </egXML>
                 </p>
                 <p><code>syriaca:share-a-title</code>
-                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                    <relation 
-                        name="syriaca:share-a-title" active="LIT2296Sayfas" passive="LIT2286ZenaSellase"/>
-                </egXML>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="syriaca:share-a-title" active="LIT2296Sayfas"
+                            passive="LIT2286ZenaSellase"/>
+                    </egXML>
                 </p>
                 <p>
                     <code>saws:isDifferentTo</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation name="saws:isDifferentTo" active="LIT4031EgziabeherN" passive="LIT2001Mazmur">
+                        <relation name="saws:isDifferentTo" active="LIT4031EgziabeherN"
+                            passive="LIT2001Mazmur">
                             <desc>Both works have often be confused with each other, for example in <bibl>
-                                <ptr target="bm:Ewald1846Tuebingen"/>
-                                <citedRange unit="page">37-38</citedRange>
-                            </bibl>, <bibl>
-                                <ptr target="bm:Abbadie1859Cat"/>
-                                <citedRange unit="page">149-150</citedRange>
-                            </bibl> and <bibl>
-                                <ptr target="bm:Dillmann1865Lexicon"/>
-                                <citedRange unit="part">Prolegomena</citedRange>
-                                <citedRange unit="column">XI</citedRange>
-                            </bibl>. See <bibl>
-                                <ptr target="bm:Zotenberg1877Catalogue"/>
-                                <citedRange unit="page">196</citedRange>
-                            </bibl>.</desc>
+                                    <ptr target="bm:Ewald1846Tuebingen"/>
+                                    <citedRange unit="page">37-38</citedRange>
+                                </bibl>, <bibl>
+                                    <ptr target="bm:Abbadie1859Cat"/>
+                                    <citedRange unit="page">149-150</citedRange>
+                                </bibl> and <bibl>
+                                    <ptr target="bm:Dillmann1865Lexicon"/>
+                                    <citedRange unit="part">Prolegomena</citedRange>
+                                    <citedRange unit="column">XI</citedRange>
+                                </bibl>. See <bibl>
+                                    <ptr target="bm:Zotenberg1877Catalogue"/>
+                                    <citedRange unit="page">196</citedRange>
+                                </bibl>.</desc>
                         </relation>
                     </egXML>
                 </p>
                 <p>
                     <code>syriaca:different-from</code>
-                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                    <relation  name="syriaca:different-from" active="LIT2932RepCh213" passive="LIT4971MalkeaErgata"/>
-                </egXML>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="syriaca:different-from" active="LIT2932RepCh213"
+                            passive="LIT4971MalkeaErgata"/>
+                    </egXML>
                 </p>
                 <p>
                     <code>syriaca:possibly-identical</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation  name="syriaca:possibly-identical" active="LIT5200MiracleInkDawit" passive="LIT3590Miracle">
-                            <desc>The miracles seem to share part of their text, it would be desirable
-                                to consult more manuscripts containing them for a certain identification.</desc>
+                        <relation name="syriaca:possibly-identical" active="LIT5200MiracleInkDawit"
+                            passive="LIT3590Miracle">
+                            <desc>The miracles seem to share part of their text, it would be
+                                desirable to consult more manuscripts containing them for a certain
+                                identification.</desc>
                         </relation>
                     </egXML>
                 </p>
                 <p>
                     <code>saws:hasPart</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation name="saws:hasPart" active="LIT4985AkalaKrestos" passive="LIT4986GadlaAkalaKrestos"/>
+                        <relation name="saws:hasPart" active="LIT4985AkalaKrestos"
+                            passive="LIT4986GadlaAkalaKrestos"/>
                     </egXML>
                 </p>
                 <p>
                     <code>dcterms:isPartOf</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation name="dcterms:isPartOf" active="LIT3973GadlaT" passive="LIT1008DossierTH">
-                            <desc>Vita of Takla Hāymānot is part of a hagiographic dossier of Takla Hāymānot</desc>
+                        <relation name="dcterms:isPartOf" active="LIT3973GadlaT"
+                            passive="LIT1008DossierTH">
+                            <desc>Vita of Takla Hāymānot is part of a hagiographic dossier of Takla
+                                Hāymānot</desc>
                         </relation>
                     </egXML>
                 </p>
                 <p>
                     <code>dcterms:hasPart</code>
-                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                    <relation  name="dcterms:hasPart" active="LIT1100Anapho" passive="LIT2461Testam">
-                        <desc>Inside the Missal manuscripts, it is often preceded by an by the excerpt from the <title ref="LIT2461Testam">Testamentum
-                            domini</title> (cp. <bibl>
-                                <ptr target="bm:1962Qeddase"/>
-                                <citedRange>IV, Qǝddāse ʾǝgziʾ, §§1-17</citedRange>
-                            </bibl>)</desc> 
-                    </relation>
-                </egXML>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="dcterms:hasPart" active="LIT1100Anapho"
+                            passive="LIT2461Testam">
+                            <desc>Inside the Missal manuscripts, it is often preceded by an by the
+                                excerpt from the <title ref="LIT2461Testam">Testamentum
+                                    domini</title> (cp. <bibl>
+                                    <ptr target="bm:1962Qeddase"/>
+                                    <citedRange>IV, Qǝddāse ʾǝgziʾ, §§1-17</citedRange>
+                                </bibl>)</desc>
+                        </relation>
+                    </egXML>
                 </p>
             </div>
             <div type="level2">
                 <head>work-person</head>
-                <p><code>saws:isAttributedToAuthor</code> is used to state that a Textual Unit has been attributed to a person.
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation  name="saws:isAttributedToAuthor" active="LIT1287Dersan" passive="PRS9481Theodoto">
-                            <desc>The Homily on St George is traditionally attributed to <persName ref="PRS9481Theodoto"/>. Though this
-                                attribution already appears in Coptic tradition, it is probably apocryphal.
-                                <bibl>
+                <p><code>saws:isAttributedToAuthor</code> is used to state that a Textual Unit has
+                    been attributed to a person. <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="saws:isAttributedToAuthor" active="LIT1287Dersan"
+                            passive="PRS9481Theodoto">
+                            <desc>The Homily on St George is traditionally attributed to <persName
+                                    ref="PRS9481Theodoto"/>. Though this attribution already appears
+                                in Coptic tradition, it is probably apocryphal. <bibl>
                                     <ptr target="bm:Witakowski2010EAETheodotos"/>
                                     <citedRange unit="page">945a</citedRange>
                                 </bibl>
@@ -379,17 +425,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </relation>
                     </egXML>
                 </p>
-                
-                <p><code>dcterms:creator</code> is used to state the authorship of a work. In this case we are completely sure.
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation name="dcterms:creator" active="LIT4836ZenaEskenderyawit" passive="PRS9167TaklaHa"/>
+
+                <p><code>dcterms:creator</code> is used to state the authorship of a work. In this
+                    case we are completely sure. <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="dcterms:creator" active="LIT4836ZenaEskenderyawit"
+                            passive="PRS9167TaklaHa"/>
                     </egXML>
                 </p>
                 <p><code>ecrm:P129_is_about</code> is used to state a subject of a Textual Unit.
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation name="ecrm:P129_is_about" active="LIT5284MiracleDawit" passive="PRS3429DawitII">
-                            <desc>Although Dāwit is not mentioned by name in the miracle,
-                                his identification is certain according to <ref target="#Getatchew"/>.</desc>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="ecrm:P129_is_about" active="LIT5284MiracleDawit"
+                            passive="PRS3429DawitII">
+                            <desc>Although Dāwit is not mentioned by name in the miracle, his
+                                identification is certain according to <ref target="#Getatchew"
+                                />.</desc>
                         </relation>
                     </egXML>
                 </p>
@@ -411,9 +460,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p><code>rel:enemyOf</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
                 </p>
-                <p>The following SNAP examples use Classes rather than properties (see the capital letters?). 
-                    This is indeed confusing. It should be however correctly modelled in the transformation to RDF and makes your encoder live a bit easier by sparing the encoding of all the triples needed.</p>
-                
+                <p>The following SNAP examples use Classes rather than properties (see the capital
+                    letters?). This is indeed confusing. It should be however correctly modelled in
+                    the transformation to RDF and makes your encoder live a bit easier by sparing
+                    the encoding of all the triples needed.</p>
+
                 <p><code>snap:SonOf</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
                 </p>
@@ -423,20 +474,40 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p>
                     <code>snap:Group</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                       <relation  name="snap:Group" active="ETH2324Salnna" passive="ETH1083Agaw"/>
+                        <relation name="snap:Group" active="ETH2324Salnna" passive="ETH1083Agaw"/>
                     </egXML>
                 </p>
             </div>
             <div type="level2">
                 <head>person-mss</head>
-                <p><code>saws:isCopierOf</code>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                <p><code>saws:isCopierOf</code> you would normally add this with a <gi>persName</gi>
+                    with <att>role</att> equal to scribe, but sometimes you are not into the editing
+                    of the manuscript record, and want to add this information with the person or
+                    wherever you are editing. <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="saws:isCopierOf" active="PRS12823Akala" passive="ESktm005"/>
+                    </egXML>
                 </p>
-                <p><code>saws:hasOwned</code>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                <p><code>saws:hasOwned</code> you would normally add this with a <gi>persName</gi>
+                    with <att>role</att> equal to owner, but sometimes you are not into the editing
+                    of the manuscript record, and want to add this information with the person or
+                    wherever you are editing. <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="saws:hasOwned" active="PRS12813Hawaryat"
+                            passive="BLorient639"/>
+                    </egXML>
                 </p>
-                <p><code>lawd:hasAttestation</code>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                <p>
+                    <code>dcterms:creator</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="dcterms:creator" active="PRS12734BaedaMaryam"
+                            passive="IVkoriander5"/>
+                    </egXML>
+                </p>
+                <p>
+                    <code>saws:hasWritten</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="saws:hasWritten" active="PRS11501Endreyas"
+                            passive="BAVet8#a1"/>
+                    </egXML>
                 </p>
             </div>
             <div type="level2">
@@ -514,14 +585,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     currently used, but you are more then welcome to do so and add an example
                     here.</p>
             </div>
-<div>
-    <head>Art Themes</head>
-    <p><code>ecrm:P129_is_about</code>
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-        <relation name="ecrm:P129_is_about" active="AT1132MMSophia" passive="LIT3611Miracle"/>
-    </egXML>
-    </p>
-</div>
+            <div type="level2">
+                <head>Art Themes</head>
+                <p><code>ecrm:P129_is_about</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="ecrm:P129_is_about" active="AT1132MMSophia"
+                            passive="LIT3611Miracle"/>
+                    </egXML>
+                </p>
+                <p><code>saws:contains</code> is used also to say that an abstract art theme contains a representation of a specific person
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <relation name="saws:contains" active="AT1010Entombment" passive="PRS5684JesusCh"/>
+                </egXML>
+                </p>
+            </div>
         </body>
     </text>
 </TEI>
