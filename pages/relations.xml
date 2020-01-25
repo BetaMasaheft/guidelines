@@ -77,11 +77,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                 <relation name="betmas:hasLexiconEntry" active="LOC7011Meskwa" passive="http://betamasaheft.eu/Dillmann/lemma/L65ae0746b7f9428da90682226ae6cc75"></relation>
             </egXML></p>
-            <p>The following are some frequently used relation names, but there are many more readily available from the schema (see <gi>relation</gi>) and you can use others which are in the <ref target="ontologyView">ontology</ref>.</p>
+            <p>The following are some frequently used relation names,
+              but there are many more readily available from the schema (see <gi>relation</gi>) and you can use
+              others which are in the <ref target="ontologyView">ontology</ref>. In the  <gi>relation</gi> page,
+              as well as in your preferred editor, you will find in the schema a link to the
+              actual concept and to a search for instances of that property in the project website.</p>
+              <p>Before using one of these relations, please make sure you are aligned to others encoder usage. 
+                Below we provide some examples, and some more specific cases are detailed elsewhere, like the one above,
+              but for many other values we have not done that yet. Open an issue, we will then agree on a way to proceed and update also this page.</p>
     <div type="level2">
         <head>mss-mss</head>
-        <p><code>saws:isDirectCopyOf</code>
+        <p><code>saws:isDirectCopyOf</code> is used as in the example below to state that a manuscript is a direct copy of another manuscript
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
+        <relation name="saws:isDirectCopyOf" active="FSUffhludolfII21" passive="BNFet1">
+            <desc>This manuscript is a direct copy of <ref type="mss" corresp="BNFet1"/>.</desc>
+          </relation>
       </egXML>
       </p>
         <p><code>saws:isAncestorOf</code>
