@@ -366,14 +366,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </div>
             <div type="level2">
                 <head>work-person</head>
-                <p><code>saws:isAttributedToAuthor</code>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                <p><code>saws:isAttributedToAuthor</code> is used to state that a Textual Unit has been attributed to a person.
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation  name="saws:isAttributedToAuthor" active="LIT1287Dersan" passive="PRS9481Theodoto">
+                            <desc>The Homily on St George is traditionally attributed to <persName ref="PRS9481Theodoto"/>. Though this
+                                attribution already appears in Coptic tradition, it is probably apocryphal.
+                                <bibl>
+                                    <ptr target="bm:Witakowski2010EAETheodotos"/>
+                                    <citedRange unit="page">945a</citedRange>
+                                </bibl>
+                            </desc>
+                        </relation>
+                    </egXML>
                 </p>
-                <p><code>ecrm:P129_is_about</code>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                
+                <p><code>dcterms:creator</code> is used to state the authorship of a work. In this case we are completely sure.
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="dcterms:creator" active="LIT4836ZenaEskenderyawit" passive="PRS9167TaklaHa"/>
+                    </egXML>
                 </p>
-                <p><code>dcterms:creator</code>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                <p><code>ecrm:P129_is_about</code> is used to state a subject of a Textual Unit.
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="ecrm:P129_is_about" active="LIT5284MiracleDawit" passive="PRS3429DawitII">
+                            <desc>Although Dāwit is not mentioned by name in the miracle,
+                                his identification is certain according to <ref target="#Getatchew"/>.</desc>
+                        </relation>
+                    </egXML>
                 </p>
             </div>
             <div type="level2">
