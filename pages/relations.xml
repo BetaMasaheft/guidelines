@@ -17,212 +17,215 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
                 <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
             </sourceDesc>
-        </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+        </fileDesc>
+        <revisionDesc>
+            <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
             <change who="DR" when="2018-05-18">Edited and updated examples</change>
-        <change who="ES" when="2018-05-25">Added lexicon relation example</change></revisionDesc>
+            <change who="ES" when="2018-05-25">Added lexicon relation example</change>
+        </revisionDesc>
     </teiHeader>
     <text>
         <body xml:id="relations">
-    <head>Relations</head>
-    <p>Relations can be listed in all entities  in a
-        specific <gi>listRelation</gi>. This will
-        contain <gi>relation</gi> elements with
-        <att>name</att> taken from a list of values in
-        the schema and can be updated.</p>
-    <p>
-        <gi>listRelation</gi> is allowed
-        everywhere.</p>
-    <p>For example, in a manuscript record within a <gi>msItem</gi> such
-        relations and a description of them should be given within the
-        element <gi>filiation</gi>
-    </p>
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-        <filiation>
-            <listRelation>
-                <relation name="saws:isDirectCopyOf"
-                    active="FSUffhludolfII21"
-                    passive="BNFet1">
-                    <desc>This manuscript is a direct copy of <ref type="mss" corresp="BNFet1"/>.</desc>
-                </relation>
-            </listRelation>
-        </filiation>
-    </egXML>
-    <p>These relations can be much more precise than a simple list
-        of <gi>ref</gi> elements stating similarity, and this is therefore the
-        recommended way to encode similar manuscripts. Multiple
-        relations can be stated if needed, for example if a manuscript
-        A is a copy from two different manuscripts B and C of which
-        one is certainly a translation from a Coptic manuscript D: one
-        might have a relation between A and B, A and C, C and D or
-        parts of them.</p>
-    <p>In the <att>active</att> and <att>passive</att> attributes, please don't use #
-        as this hinders the possibility to use further specific IDs
-        within the record, and to point to a specific msItem, e.g.</p>
-    <p>It is preferable to have a separate
-        <gi>relation</gi> for each relationship,
-        even if the same relation exists between one and several more
-        items:
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <relation name="snap:FatherOf"
-                active="PRS11029Arkala"
-                passive="PRS11031WalattaM"/>
-            <relation name="snap:FatherOf"
-                active="PRS11029Arkala"
-                passive="PRS11032EsetaM"/>
-        </egXML>
-
-    </p>
-
-            <p>Note that there is a specific <gi>relation</gi> to link BM and the Dillmann lexicon; the complete URL should be provided for the lemma ID, as in the <ref target="LOC7011Meskwa" type="bm">sample file</ref>:
+            <head>Relations</head>
+            <p>Relations can be listed in all entities in a specific <gi>listRelation</gi>. This
+                will contain <gi>relation</gi> elements with <att>name</att> taken from a list of
+                values in the schema and can be updated.</p>
+            <p>
+                <gi>listRelation</gi> is allowed everywhere.</p>
+            <p>For example, in a manuscript record within a <gi>msItem</gi> such relations and a
+                description of them should be given within the element <gi>filiation</gi>
+            </p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <relation name="betmas:hasLexiconEntry" active="LOC7011Meskwa" passive="http://betamasaheft.eu/Dillmann/lemma/L65ae0746b7f9428da90682226ae6cc75"></relation>
-            </egXML></p>
-            <p>The following are some frequently used relation names,
-              but there are many more readily available from the schema (see <gi>relation</gi>) and you can use
-              others which are in the <ref target="ontologyView">ontology</ref>. In the  <gi>relation</gi> page,
-              as well as in your preferred editor, you will find in the schema a link to the
-              actual concept and to a search for instances of that property in the project website.</p>
-              <p>Before using one of these relations, please make sure you are aligned to others encoder usage. 
-                Below we provide some examples, and some more specific cases are detailed elsewhere, like the one above,
-              but for many other values we have not done that yet. Open an issue, we will then agree on a way to proceed and update also this page.</p>
-    <div type="level2">
-        <head>mss-mss</head>
-        <p><code>saws:isDirectCopyOf</code> is used as in the example below to state that a manuscript is a direct copy of another manuscript
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-        <relation name="saws:isDirectCopyOf" active="FSUffhludolfII21" passive="BNFet1">
-            <desc>This manuscript is a direct copy of <ref type="mss" corresp="BNFet1"/>.</desc>
-          </relation>
-      </egXML>
-      </p>
-        <p><code>saws:isAncestorOf</code>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          </egXML>
-      </p>
-    </div>
-    <div type="level2">
-        <head>mss-work</head>
-        <p>
-          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <filiation>
+                    <listRelation>
+                        <relation name="saws:isDirectCopyOf" active="FSUffhludolfII21"
+                            passive="BNFet1">
+                            <desc>This manuscript is a direct copy of <ref type="mss"
+                                    corresp="BNFet1"/>.</desc>
+                        </relation>
+                    </listRelation>
+                </filiation>
             </egXML>
-        </p>
-    </div>
-    <div type="level2">
-        <head>work-work</head>
-        <p><code>saws:formsPartOf</code>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          </egXML>
-      </p>
-        <p><code>saws:isVersionInAnotherLanguageOf</code>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          </egXML>
-      </p>
-        <p><code>saws:contains</code>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          </egXML>
-      </p>
-        <p><code>ecrm:CLP46i_may_form_part_of</code>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          </egXML>
-      </p>
-        <p><code>saws:isDifferentTo</code>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          </egXML>
-      </p>
-        <p><code>saws:isShorterVersionOf</code>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          </egXML>
-      </p>
-        <p><code>saws:isRelatedTo</code>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          </egXML>
-      </p>
-        <p><code>saws:follows</code>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          </egXML>
-      </p>
-    </div>
-    <div type="level2">
-        <head>work-person</head>
-        <p><code>saws:isAttributedToAuthor</code>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          </egXML>
-      </p>
-        <p><code>ecrm:P129_is_about</code>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          </egXML>
-      </p>
-        <p><code>dcterms:creator</code>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          </egXML>
-      </p>
-    </div>
-    <div type="level2">
-        <head>person-person</head>
-        <p><code>betmas:wifeOf</code>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          </egXML>
-      </p>
-        <p><code>betmas:husbandOf</code>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          </egXML>
-      </p>
-        <p><code>snap:AllianceWith</code>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          </egXML>
-        </p>
-        <p><code>betmas:ordainedBy</code>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          </egXML>
-      </p>
-        <p><code>rel:enemyOf</code>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          </egXML>
-      </p>
-        <p><code>snap:SonOf</code>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          </egXML>
-      </p>
-        <p><code>snap:FatherOf</code>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          </egXML>
-      </p>
-    </div>
-    <div type="level2">
-        <head>person-mss</head>
-        <p><code>saws:isCopierOf</code>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          </egXML>
-      </p>
-        <p><code>saws:hasOwned</code>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          </egXML>
-      </p>
-        <p><code>lawd:hasAttestation</code>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          </egXML>
-      </p>
-    </div>
-    <div type="level2">
-        <head>person-work</head>
-        <p><code>ecrm:P129i_is_subject_of</code>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          </egXML>
-      </p>
-    </div>
-    <div type="level2">
-        <head>place-place</head>
-        <p>
-          <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            </egXML>
-        </p>
-    </div>
-    <div type="level2">
-        <head>person-place</head>
-        <p><code>syriaca:has-relation-to-place</code>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-          </egXML>
-      </p>
-    </div>
+            <p>These relations can be much more precise than a simple list of <gi>ref</gi> elements
+                stating similarity, and this is therefore the recommended way to encode similar
+                manuscripts. Multiple relations can be stated if needed, for example if a manuscript
+                A is a copy from two different manuscripts B and C of which one is certainly a
+                translation from a Coptic manuscript D: one might have a relation between A and B, A
+                and C, C and D or parts of them.</p>
+            <p>In the <att>active</att> and <att>passive</att> attributes, please don't use # as
+                this hinders the possibility to use further specific IDs within the record, and to
+                point to a specific msItem, e.g.</p>
+            <p>It is preferable to have a separate <gi>relation</gi> for each relationship, even if
+                the same relation exists between one and several more items: <egXML
+                    xmlns="http://www.tei-c.org/ns/Examples">
+                    <relation name="snap:FatherOf" active="PRS11029Arkala"
+                        passive="PRS11031WalattaM"/>
+                    <relation name="snap:FatherOf" active="PRS11029Arkala" passive="PRS11032EsetaM"
+                    />
+                </egXML>
+            </p>
+
+            <p>Note that there is a specific <gi>relation</gi> to link BM and the Dillmann lexicon;
+                the complete URL should be provided for the lemma ID, as in the <ref
+                    target="LOC7011Meskwa" type="bm">sample file</ref>: <egXML
+                    xmlns="http://www.tei-c.org/ns/Examples">
+                    <relation name="betmas:hasLexiconEntry" active="LOC7011Meskwa"
+                        passive="http://betamasaheft.eu/Dillmann/lemma/L65ae0746b7f9428da90682226ae6cc75"
+                    />
+                </egXML></p>
+            <p>The following are some frequently used relation names, but there are many more
+                readily available from the schema (see <gi>relation</gi>) and you can use others
+                which are in the <ref target="ontologyView">ontology</ref>. In the <gi>relation</gi>
+                page, as well as in your preferred editor, you will find in the schema a link to the
+                actual concept and to a search for instances of that property in the project
+                website.</p>
+            <p>Before using one of these relations, please make sure you are aligned to others
+                encoder usage. Below we provide some examples, and some more specific cases are
+                detailed elsewhere, like the one above, but for many other values we have not done
+                that yet. Open an issue, we will then agree on a way to proceed and update also this
+                page.</p>
+            <div type="level2">
+                <head>mss-mss</head>
+                <p><code>saws:isDirectCopyOf</code> is used as in the example below to state that a
+                    manuscript is a direct copy of another manuscript <egXML
+                        xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="saws:isDirectCopyOf" active="FSUffhludolfII21"
+                            passive="BNFet1">
+                            <desc>This manuscript is a direct copy of <ref type="mss"
+                                    corresp="BNFet1"/>.</desc>
+                        </relation>
+                    </egXML>
+                   </p>
+                <p>The <ref target="http://www.ancientwisdoms.ac.uk/method/ontology/">SAWS ontology</ref> defines classes and properties to 
+                    describe the relations between manuscripts (families, etc.) very deeply, but we do not have any example of this being used. If you would like to venture into this, it would be very interesting
+                    so you are more than welcome! We will then add the examples here.</p>
+           <!--     <p><code>saws:isAncestorOf</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                </p>-->
+            </div>
+            <div type="level2">
+                <head>mss-work</head>
+                <p>
+                    Most of the many relations between a manuscript and the abstract records identifying its contents are extracted directly from the semantics of the TEI encoding. If you feel the need to add such a relation
+                    explicitly, open an issue to discuss the case, please.
+                </p>
+            </div>
+            <div type="level2">
+                <head>work-work</head>
+                <p><code>saws:formsPartOf</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                </p>
+                <p><code>saws:isVersionInAnotherLanguageOf</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                </p>
+                <p><code>saws:contains</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                </p>
+                <p><code>ecrm:CLP46i_may_form_part_of</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                </p>
+                <p><code>saws:isDifferentTo</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                </p>
+                <p><code>saws:isShorterVersionOf</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                </p>
+                <p><code>saws:isRelatedTo</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                </p>
+                <p><code>saws:follows</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                </p>
+            </div>
+            <div type="level2">
+                <head>work-person</head>
+                <p><code>saws:isAttributedToAuthor</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                </p>
+                <p><code>ecrm:P129_is_about</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                </p>
+                <p><code>dcterms:creator</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                </p>
+            </div>
+            <div type="level2">
+                <head>person-person</head>
+                <p><code>betmas:wifeOf</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                </p>
+                <p><code>betmas:husbandOf</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                </p>
+                <p><code>snap:AllianceWith</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                </p>
+                <p><code>betmas:ordainedBy</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                </p>
+                <p><code>rel:enemyOf</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                </p>
+                <p><code>snap:SonOf</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                </p>
+                <p><code>snap:FatherOf</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                </p>
+            </div>
+            <div type="level2">
+                <head>person-mss</head>
+                <p><code>saws:isCopierOf</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                </p>
+                <p><code>saws:hasOwned</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                </p>
+                <p><code>lawd:hasAttestation</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                </p>
+            </div>
+            <div type="level2">
+                <head>person-work</head>
+                <p><code>ecrm:P129i_is_subject_of</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                </p>
+            </div>
+            <div type="level2">
+                <head>place-place</head>
+                <p><code>gn:locatedIn</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="gn:locatedIn" active="LOC6577WestGondar" passive="LOC1426Amhara">
+                            <desc>The West Gondar Zone is located in the ʾAmharā kǝllǝl.</desc>
+                        </relation>
+                    </egXML>
+                </p>
+                <p><code>gn:nearBy</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="gn:nearBy" active="LOC6564MaryamS" passive="LOC1311AksumS">
+                            <desc>The new church of Māryām Ṣǝyon was built next to the old church of ʾAksum Ṣǝyon.</desc>
+                        </relation>
+                    </egXML>
+                </p>
+                <p><code>dc:relation</code> can be used to state a generic relation between two places
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation  name="dc:relation" active="LOC3577Gondar" passive="LOC6552Amhara">
+                            <desc>Gondar was the capital of the Governo dell'Amhara during the Italian occupation.</desc>
+                        </relation>
+                    </egXML>
+                </p>
+            </div>
+            <div type="level2">
+                <head>person-place</head>
+                <p><code>syriaca:has-relation-to-place</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="syriaca:has-relation-to-place" active="PRS4015Fasilada" passive="LOC3589Gorgor">
+                            <desc>Fāsiladas ordered the burning of the library of the Jesuits' mission in
+                                Gorgorā</desc>
+                        </relation>
+                    </egXML>
+                </p>
+            </div>
 
         </body>
     </text>
