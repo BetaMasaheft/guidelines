@@ -85,7 +85,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 that yet. Open an issue, we will then agree on a way to proceed and update also this
                 page.</p>
             <div type="level2">
-                <head>mss-mss</head>
+                <head>generic relations</head>
+                <p>generic properties like <code>skos:exactMatch</code>,
+                        <code>skos:broadMatch</code>, etc. are used in specific cases documented in
+                    this guidelines where appropriate.</p>
+            </div>
+            <div type="level2">
+                <head>Manuscript to Manuscript</head>
                 <p><code>saws:isDirectCopyOf</code> is used as in the example below to state that a
                     manuscript is a direct copy of another manuscript <egXML
                         xmlns="http://www.tei-c.org/ns/Examples">
@@ -95,23 +101,57 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     corresp="BNFet1"/>.</desc>
                         </relation>
                     </egXML>
-                   </p>
-                <p>The <ref target="http://www.ancientwisdoms.ac.uk/method/ontology/">SAWS ontology</ref> defines classes and properties to 
-                    describe the relations between manuscripts (families, etc.) very deeply, but we do not have any example of this being used. If you would like to venture into this, it would be very interesting
-                    so you are more than welcome! We will then add the examples here.</p>
-           <!--     <p><code>saws:isAncestorOf</code>
+                </p>
+                <p>
+                    <code>saws:isCloseTranslationOf</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="saws:isCloseTranslationOf" active="BAVet2#ms_i1.2"
+                            passive="BAVet2#ms_i2.1"/>
+                    </egXML>
+                </p>
+                <p><code>betmas:isAntigraphOf</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="betmas:isAntigraphOf" active="BNFet141"
+                            passive="FSUor41#p3_i1"/>
+                    </egXML>
+                </p>
+                <p>The <ref target="http://www.ancientwisdoms.ac.uk/method/ontology/">SAWS
+                        ontology</ref> defines classes and properties to describe the relations
+                    between manuscripts (families, etc.) very deeply, but we do not have any example
+                    of this being used. If you would like to venture into this, it would be very
+                    interesting so you are more than welcome! We will then add the examples
+                    here.</p>
+                <p>Properties of the Syntaxe du Codex Ontology (prefixed sdc:) are not discussed
+                    here.</p>
+                <p><code>saws:formsPartOf</code> is used also to associate a document to a corpus.
+                    See the <ref target="corpora">corpus</ref> page for this.</p>
+                <!--     <p><code>saws:isAncestorOf</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
                 </p>-->
             </div>
             <div type="level2">
-                <head>mss-work</head>
-                <p>
-                    Most of the many relations between a manuscript and the abstract records identifying its contents are extracted directly from the semantics of the TEI encoding. If you feel the need to add such a relation
-                    explicitly, open an issue to discuss the case, please.
+                <head>Manuscript to Work</head>
+                <p> Most of the many relations between a manuscript and the abstract records
+                    identifying its contents are extracted directly from the semantics of the TEI
+                    encoding. If you feel the need to add such a relation explicitly, open an issue
+                    to discuss the case, please. </p>
+            </div>
+            <div type="level2">
+                <head>Work to Manuscript</head>
+                <p>Because this is a collaborative effort and is continuously in progress, we have plenty of records for which we do not have enough encoding.</p>
+                <p>It is not possible to fix everything as we go, there is too much. so, in cases in which you are editing a Work, and you know it is contained in a manuscript, you can say so in the Work record, instead of
+                    tackling the manuscript description, by saying that the work has a generic attestation in that manuscript. To this aim we are currently using <code>lawd:hasAttestation</code> as in the below example.
+                <egXML xmlns="http://www.tei-c.org/ns/Examples"> 
+                    <relation name="lawd:hasAttestation" active="LIT5106MiraclePriest" passive="EMML6938">
+                        <desc>
+                            <locus corresp="EMML6938" target="#41v"/>
+                        </desc>
+                    </relation>
+                </egXML>
                 </p>
             </div>
             <div type="level2">
-                <head>work-work</head>
+                <head>Work to Work</head>
                 <p><code>saws:formsPartOf</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
                 </p>
@@ -135,6 +175,132 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </p>
                 <p><code>saws:follows</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                </p>
+                <p>
+                    <code>ecrm:P129_is_about</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation xmlns="http://www.tei-c.org/ns/1.0" name="ecrm:P129_is_about" active="LIT5327MiracleVisit" passive="LIT3575Mashaf"/>
+                    </egXML>
+                </p>
+                <p>
+                    <code>saws:isCommentOn</code>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <relation name="saws:isCommentOn" active="LIT4591TergwameM" passive="LIT1340EnochE#Luminaries"/>
+                </egXML>
+                </p>
+                <p>
+                    <code>saws:hasUsed</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="saws:hasUsed" active="LIT2230Saatat" passive="LIT3564Psalmodia">
+                            <desc>Parts of <ref type="work" corresp="LIT3564Psalmodia"/>, mainly <ref type="work" corresp="LIT3566Theotokia"/> and <ref type="work" corresp="LIT3568Psalis"/> 
+                                are among additional material included in <ref type="work" corresp="LIT2230Saatat"/>, but not in <ref type="work" corresp="LIT3570Agbiya"/>.</desc>
+                        </relation>
+                    </egXML>
+                </p>
+                <p>
+                    <code>saws:fallsWithin</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="saws:fallsWithin" active="LIT3944ArdeetChL" passive="LIT1931Mashaf">
+                            <desc>The Maṣḥafa ʾardǝʾǝt circulates both as an independent work and as a part of the Maṣḥafa gǝnzat</desc>
+                        </relation>
+                    </egXML>
+                </p>
+                <p>
+                    <code>saws:isShorterVersionOf</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="saws:isShorterVersionOf" active="LIT1120Apocal" passive="LIT1127Apocal">
+                            <desc>according to <bibl>
+                                <ptr target="bm:Leslau1951Falasha"/>
+                                <citedRange unit="page">63</citedRange>
+                            </bibl>
+                            </desc> 
+                        </relation>
+                    </egXML>
+                </p>
+                <p>
+                    <code>saws:isLongerVersionOf</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation  name="saws:isLongerVersionOf" active="LIT3944ArdeetChL" passive="LIT3943ArdeetChS"/>
+                    </egXML>
+                </p>
+                <p>
+                    <code>saws:isVariantOf</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="saws:isVariantOf" active="LIT2444Temher" passive="LIT3978Elmastoagya"/>
+                    </egXML>
+                </p>
+                <p>
+                    <code>saws:isVariantTranslationOf</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="saws:isVariantTranslationOf" active="LIT3953MashafaQ" passive="LIT3952MashafaQ"/>
+                    </egXML>
+                </p>
+                <p><code>saws:hasDescendant</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="saws:hasDescendant" active="LIT2230Saatat" passive="LIT1544Gebrah">
+                            <desc>Parts of <ref type="work" corresp="LIT2230Saatat"/> survive in <ref type="work" corresp="LIT1544Gebrah"/>.</desc>
+                        </relation>
+                    </egXML>
+                </p>
+                <p><code>syriaca:share-a-title</code>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <relation 
+                        name="syriaca:share-a-title" active="LIT2296Sayfas" passive="LIT2286ZenaSellase"/>
+                </egXML>
+                </p>
+                <p>
+                    <code>saws:isDifferentTo</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="saws:isDifferentTo" active="LIT4031EgziabeherN" passive="LIT2001Mazmur">
+                            <desc>Both works have often be confused with each other, for example in <bibl>
+                                <ptr target="bm:Ewald1846Tuebingen"/>
+                                <citedRange unit="page">37-38</citedRange>
+                            </bibl>, <bibl>
+                                <ptr target="bm:Abbadie1859Cat"/>
+                                <citedRange unit="page">149-150</citedRange>
+                            </bibl> and <bibl>
+                                <ptr target="bm:Dillmann1865Lexicon"/>
+                                <citedRange unit="part">Prolegomena</citedRange>
+                                <citedRange unit="column">XI</citedRange>
+                            </bibl>. See <bibl>
+                                <ptr target="bm:Zotenberg1877Catalogue"/>
+                                <citedRange unit="page">196</citedRange>
+                            </bibl>.</desc>
+                        </relation>
+                    </egXML>
+                </p>
+                <p>
+                    <code>syriaca:different-from</code>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <relation  name="syriaca:different-from" active="LIT2932RepCh213" passive="LIT4971MalkeaErgata"/>
+                </egXML>
+                </p>
+                <p>
+                    <code>syriaca:possibly-identical</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation xmlns="http://www.tei-c.org/ns/1.0" name="syriaca:possibly-identical" active="LIT5200MiracleInkDawit" passive="LIT3590Miracle">
+                            <desc>The miracles seem to share part of their text, it would be desirable
+                                to consult more manuscripts containing them for a certain identification.</desc>
+                        </relation>
+                    </egXML>
+                </p>
+                <p>
+                    <code>saws:hasPart</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="saws:hasPart" active="LIT4985AkalaKrestos" passive="LIT4986GadlaAkalaKrestos"/>
+                    </egXML>
+                </p>
+                <p>
+                    <code>dcterms:hasPart</code>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <relation  name="dcterms:hasPart" active="LIT1100Anapho" passive="LIT2461Testam">
+                        <desc>Inside the Missal manuscripts, it is often preceded by an by the excerpt from the <title ref="LIT2461Testam">Testamentum
+                            domini</title> (cp. <bibl>
+                                <ptr target="bm:1962Qeddase"/>
+                                <citedRange>IV, Qǝddāse ʾǝgziʾ, §§1-17</citedRange>
+                            </bibl>)</desc> 
+                    </relation>
+                </egXML>
                 </p>
             </div>
             <div type="level2">
@@ -166,11 +332,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p><code>rel:enemyOf</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
                 </p>
+                <p>The following SNAP examples use Classes rather than properties (see the capital letters?). 
+                    This is indeed confusing. It should be however correctly modelled in the transformation to RDF and makes your encoder live a bit easier by sparing the encoding of all the triples needed.</p>
+                
                 <p><code>snap:SonOf</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
                 </p>
                 <p><code>snap:FatherOf</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                </p>
+                <p>
+                    <code>snap:Group</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                       <relation  name="snap:Group" active="ETH2324Salnna" passive="ETH1083Agaw"/>
+                    </egXML>
                 </p>
             </div>
             <div type="level2">
@@ -188,26 +363,33 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <div type="level2">
                 <head>person-work</head>
                 <p><code>ecrm:P129i_is_subject_of</code>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> 
-                        <relation name="ecrm:P129i_is_subject_of" active="PRS11855Diyosqoros" passive="LIT2375Synaxa">
-                            <desc>Commemorated
-                                on 3 Maskaram</desc>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="ecrm:P129i_is_subject_of" active="PRS11855Diyosqoros"
+                            passive="LIT2375Synaxa">
+                            <desc>Commemorated on 3 Maskaram</desc>
                         </relation>
                     </egXML>
                 </p>
-                <p><code>dcterms:creator</code> a relation in this form is equivalent to say that this person is the author of the work
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> 
-                        <relation  name="dcterms:creator" active="PRS12817Anestasyos" passive="LIT5809OntheBurial"/>
+                <p><code>dcterms:creator</code> a relation in this form is equivalent to say that
+                    this person is the author of the work <egXML
+                        xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="dcterms:creator" active="PRS12817Anestasyos"
+                            passive="LIT5809OntheBurial"/>
                     </egXML>
                 </p>
-                <p><code>betmas:isAuthorOfEthiopicTranslation</code> a relation in this form is equivalent to say that this person is the author of the Ethiopic translation of this work
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> 
-                        <relation name="betmas:isAuthorOfEthiopicTranslation" active="PRS9187TaklaMa" passive="LIT2064Naydaq"/>
+                <p><code>betmas:isAuthorOfEthiopicTranslation</code> a relation in this form is
+                    equivalent to say that this person is the author of the Ethiopic translation of
+                    this work <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="betmas:isAuthorOfEthiopicTranslation"
+                            active="PRS9187TaklaMa" passive="LIT2064Naydaq"/>
                     </egXML>
                 </p>
-                <p><code>saws:isAttributedAuthorOf</code> a relation in this form states that this person is an attributed author of this work. It would be nice to have some more details about this attribution when possible, for example, the source of the attribution.
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> 
-                        <relation name="saws:isAttributedAuthorOf" active="PRS8746Semon" passive="LIT5334MiracleFurnishings"/>
+                <p><code>saws:isAttributedAuthorOf</code> a relation in this form states that this
+                    person is an attributed author of this work. It would be nice to have some more
+                    details about this attribution when possible, for example, the source of the
+                    attribution. <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="saws:isAttributedAuthorOf" active="PRS8746Semon"
+                            passive="LIT5334MiracleFurnishings"/>
                     </egXML>
                 </p>
             </div>
@@ -215,7 +397,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <head>place-place</head>
                 <p><code>gn:locatedIn</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation name="gn:locatedIn" active="LOC6577WestGondar" passive="LOC1426Amhara">
+                        <relation name="gn:locatedIn" active="LOC6577WestGondar"
+                            passive="LOC1426Amhara">
                             <desc>The West Gondar Zone is located in the ʾAmharā kǝllǝl.</desc>
                         </relation>
                     </egXML>
@@ -223,14 +406,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p><code>gn:nearBy</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="gn:nearBy" active="LOC6564MaryamS" passive="LOC1311AksumS">
-                            <desc>The new church of Māryām Ṣǝyon was built next to the old church of ʾAksum Ṣǝyon.</desc>
+                            <desc>The new church of Māryām Ṣǝyon was built next to the old church of
+                                ʾAksum Ṣǝyon.</desc>
                         </relation>
                     </egXML>
                 </p>
-                <p><code>dc:relation</code> can be used to state a generic relation between two places
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation  name="dc:relation" active="LOC3577Gondar" passive="LOC6552Amhara">
-                            <desc>Gondar was the capital of the Governo dell'Amhara during the Italian occupation.</desc>
+                <p><code>dc:relation</code> can be used to state a generic relation between two
+                    places <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="dc:relation" active="LOC3577Gondar" passive="LOC6552Amhara">
+                            <desc>Gondar was the capital of the Governo dell'Amhara during the
+                                Italian occupation.</desc>
                         </relation>
                     </egXML>
                 </p>
@@ -239,14 +424,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <head>person-place</head>
                 <p><code>syriaca:has-relation-to-place</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation name="syriaca:has-relation-to-place" active="PRS4015Fasilada" passive="LOC3589Gorgor">
-                            <desc>Fāsiladas ordered the burning of the library of the Jesuits' mission in
-                                Gorgorā</desc>
+                        <relation name="syriaca:has-relation-to-place" active="PRS4015Fasilada"
+                            passive="LOC3589Gorgor">
+                            <desc>Fāsiladas ordered the burning of the library of the Jesuits'
+                                mission in Gorgorā</desc>
                         </relation>
                     </egXML>
                 </p>
+                <p>Syriaca.org has defined other relations between persons and places which are not
+                    currently used, but you are more then welcome to do so and add an example
+                    here.</p>
             </div>
-
+<div>
+    <head>Art Themes</head>
+    <p><code>ecrm:P129_is_about</code>
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+        <relation name="ecrm:P129_is_about" active="AT1132MMSophia" passive="LIT3611Miracle"/>
+    </egXML>
+    </p>
+</div>
         </body>
     </text>
 </TEI>
