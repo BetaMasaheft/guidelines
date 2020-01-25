@@ -445,17 +445,40 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </div>
             <div type="level2">
                 <head>person-person</head>
-                <p><code>betmas:wifeOf</code>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                <p><code>betmas:wifeOf</code>, <code>betmas:husbandOf</code>,
+                        <code>betmas:fatherInLawOf</code>, <code>betmas:motherInLawOf</code>,
+                        <code>betmas:sonInLawOf</code>, <code>betmas:daughterInLawOf</code> have
+                    been added as fast forward properties, to be used where the direct relationships
+                    are not known. <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="betmas:fatherInLawOf" active="PRS7458NagadaI"
+                            passive="PRS11767RomanaWarq"/>
+                    </egXML>
                 </p>
-                <p><code>betmas:husbandOf</code>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
-                </p>
-                <p><code>snap:AllianceWith</code>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                <p>
+                    <code>betmas:isPredecessorOf</code> and <code>betmas:isSuccessorOf</code> are
+                    used to order the kings and emperors of ethiopian dinasties. <egXML
+                        xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="betmas:isPredecessorOf" active="PRS1854Amdase"
+                            passive="PRS8595SayfaAr"/>
+                    </egXML>
                 </p>
                 <p><code>betmas:ordainedBy</code>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="betmas:ordainedBy" active="PRS4070FereMik"
+                            passive="PRS3801endreyas"/>
+                    </egXML>
+                </p>
+                <p><code>betmas:hasOrdained</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="betmas:hasOrdained" active="PRS4351Gabrase"
+                            passive="PRS6876Matewos"/>
+                    </egXML>
+                </p>
+                <p><code>betmas:baptizedBy</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="betmas:baptizedBy" active="PRS7188Motalami"
+                            passive="PRS9162TaklaHa"/>
+                    </egXML>
                 </p>
                 <p><code>rel:enemyOf</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
@@ -464,17 +487,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     letters?). This is indeed confusing. It should be however correctly modelled in
                     the transformation to RDF and makes your encoder live a bit easier by sparing
                     the encoding of all the triples needed.</p>
+                <p>All SNAP classes of relationship are listed in the schema and are not reproduced
+                    here for all cases</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <relation name="snap:SonOf" active="PRS11720WahibaSellase"
+                        passive="PRS11722GabraMaryam"/>
+                </egXML>
 
-                <p><code>snap:SonOf</code>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
-                </p>
-                <p><code>snap:FatherOf</code>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
-                </p>
                 <p>
                     <code>snap:Group</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="snap:Group" active="ETH2324Salnna" passive="ETH1083Agaw"/>
+                    </egXML>
+                </p>
+                <p><code>agrelon:hasFounder</code> is used to relate a person to a persons group
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="agrelon:hasFounder" active="PRS11232HouseSam"
+                            passive="PRS8491Samuel"/>
                     </egXML>
                 </p>
             </div>
@@ -593,10 +622,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             passive="LIT3611Miracle"/>
                     </egXML>
                 </p>
-                <p><code>saws:contains</code> is used also to say that an abstract art theme contains a representation of a specific person
-                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                    <relation name="saws:contains" active="AT1010Entombment" passive="PRS5684JesusCh"/>
-                </egXML>
+                <p><code>saws:contains</code> is used also to say that an abstract art theme
+                    contains a representation of a specific person <egXML
+                        xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="saws:contains" active="AT1010Entombment"
+                            passive="PRS5684JesusCh"/>
+                    </egXML>
                 </p>
             </div>
         </body>
