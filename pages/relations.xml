@@ -188,7 +188,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <div type="level2">
                 <head>person-work</head>
                 <p><code>ecrm:P129i_is_subject_of</code>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> 
+                        <relation name="ecrm:P129i_is_subject_of" active="PRS11855Diyosqoros" passive="LIT2375Synaxa">
+                            <desc>Commemorated
+                                on 3 Maskaram</desc>
+                        </relation>
+                    </egXML>
+                </p>
+                <p><code>dcterms:creator</code> a relation in this form is equivalent to say that this person is the author of the work
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> 
+                        <relation  name="dcterms:creator" active="PRS12817Anestasyos" passive="LIT5809OntheBurial"/>
+                    </egXML>
+                </p>
+                <p><code>betmas:isAuthorOfEthiopicTranslation</code> a relation in this form is equivalent to say that this person is the author of the Ethiopic translation of this work
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> 
+                        <relation name="betmas:isAuthorOfEthiopicTranslation" active="PRS9187TaklaMa" passive="LIT2064Naydaq"/>
+                    </egXML>
+                </p>
+                <p><code>saws:isAttributedAuthorOf</code> a relation in this form states that this person is an attributed author of this work. It would be nice to have some more details about this attribution when possible, for example, the source of the attribution.
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> 
+                        <relation name="saws:isAttributedAuthorOf" active="PRS8746Semon" passive="LIT5334MiracleFurnishings"/>
+                    </egXML>
                 </p>
             </div>
             <div type="level2">
