@@ -410,7 +410,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </p>
             </div>
             <div type="level2">
-                <head>work-person</head>
+                <head>Work to Person</head>
                 <p><code>saws:isAttributedToAuthor</code> is used to state that a Textual Unit has
                     been attributed to a person. <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="saws:isAttributedToAuthor" active="LIT1287Dersan"
@@ -444,7 +444,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </p>
             </div>
             <div type="level2">
-                <head>person-person</head>
+                <head>Person to Person</head>
                 <p><code>betmas:wifeOf</code>, <code>betmas:husbandOf</code>,
                         <code>betmas:fatherInLawOf</code>, <code>betmas:motherInLawOf</code>,
                         <code>betmas:sonInLawOf</code>, <code>betmas:daughterInLawOf</code> have
@@ -508,7 +508,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </p>
             </div>
             <div type="level2">
-                <head>person-mss</head>
+                <head>Person to Manuscript</head>
                 <p><code>saws:isCopierOf</code> you would normally add this with a <gi>persName</gi>
                     with <att>role</att> equal to scribe, but sometimes you are not into the editing
                     of the manuscript record, and want to add this information with the person or
@@ -540,7 +540,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </p>
             </div>
             <div type="level2">
-                <head>person-work</head>
+                <head>Person to Work</head>
                 <p><code>ecrm:P129i_is_subject_of</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="ecrm:P129i_is_subject_of" active="PRS11855Diyosqoros"
@@ -573,7 +573,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </p>
             </div>
             <div type="level2">
-                <head>place-place</head>
+                <head>Place to Place</head>
                 <p><code>gn:locatedIn</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="gn:locatedIn" active="LOC6577WestGondar"
@@ -600,7 +600,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </p>
             </div>
             <div type="level2">
-                <head>person-place</head>
+                <head>Person to Place</head>
                 <p><code>syriaca:has-relation-to-place</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="syriaca:has-relation-to-place" active="PRS4015Fasilada"
