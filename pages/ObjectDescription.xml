@@ -23,6 +23,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="DR" when="2018-06-12">Added mistara example</change>
             <change who="DR" when="2018-07-06">Added paragraph on scroll strips</change>
             <change who="DR" when="2019-04-05">Updated foliation paragraph with real examples</change>
+            <change who="DR" when="2020-02-11">Added weight</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -94,7 +95,7 @@ taken from <locus target="#6r"/>.
 </extent>
 </egXML>
                      <p>Measurements in <gi>dimensions</gi> should
-            always be given in millimiters, unless the source catalogues provides them otherwise.</p>
+                         always be given in millimetres, unless the source catalogues provides them otherwise.</p>
                      <p>You can also specify which leaves are blank, adding a
             <gi>locus</gi> immediately after the relative
             measure.</p>
@@ -107,6 +108,12 @@ taken from <locus target="#6r"/>.
                         </dimensions>
                         <note>Consists of <measure unit="strips">3</measure> strips.</note>
                     </extent>
+                    </egXML>
+                </p>
+                
+                <p>The weight of manuscripts, if known, can be provided in a separate <gi>dimensions</gi> and should be given in grammes:
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <measure type="weight" unit="g">84</measure>
                     </egXML>
                 </p>
             </div>
