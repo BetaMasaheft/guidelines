@@ -22,6 +22,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
             <change who="DR" when="2018-05-18">Edited and updated examples</change>
             <change who="ES" when="2018-05-25">Added lexicon relation example</change>
+            <change who="DR" when="2020-03-05">Corrected typos</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -76,24 +77,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>The following are some frequently used relation names, but there are many more
                 readily available from the schema (see <gi>relation</gi>) and you can use others
                 which are in the <ref target="ontologyView">ontology</ref>. In the <gi>relation</gi>
-                page, as well as in your preferred editor, you will find in the schema a link to the
+                page, as well as in your preferred editor, you will find a link in the schema to the
                 actual concept and to a search for instances of that property in the project
                 website.</p>
-            <p>Before using one of these relations, please make sure you are aligned to others
-                encoder usage. Below we provide some examples, and some more specific cases are
+            <p>Before using one of these relations, please make sure you are aligned to the other
+                encoders' usage. Below we provide some examples, and some more specific cases are
                 detailed elsewhere, like the one above, but for many other values we have not done
                 that yet. Open an issue, we will then agree on a way to proceed and update also this
                 page.</p>
             <p>Most <gi>relation</gi> statements are not required at any level, they can be used to
-                enrich the network of information. They are in any case much more useful when
+                enrich the network of information. They are much more useful when
                 explained with a <gi>desc</gi>.</p>
-            <p>We have provided examples which are as much as possible self explanatory, with
+            <p>We have provided examples which are as much as possible self-explanatory, with
                 preference to those where some additional information was given.</p>
             <div type="level2">
-                <head>generic relations</head>
-                <p>generic properties like <code>skos:exactMatch</code>,
+                <head>Generic Relations</head>
+                <p>Generic properties like <code>skos:exactMatch</code>,
                         <code>skos:broadMatch</code>, etc. are used in specific cases documented in
-                    this guidelines where appropriate.</p>
+                    these guidelines where appropriate.</p>
 
                 <p><code>lawd:hasAttestation</code> is used to say that a named entity, a person, a
                     place, a textual unit is attested in a textual unit or in a manuscript or one of
@@ -150,12 +151,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <head>Work to Manuscript</head>
                 <p>Because this is a collaborative effort and is continuously in progress, we have
                     plenty of records for which we do not have enough encoding.</p>
-                <p>It is not possible to fix everything as we go, there is too much. so, in cases in
+                <p>It is not possible to fix everything as we go, there is too much. Therefore, in cases in
                     which you are editing a Work, and you know it is contained in a manuscript, you
                     can say so in the Work record, instead of tackling the manuscript description,
                     by saying that the work has a generic attestation in that manuscript. To this
-                    aim we are currently using <code>lawd:hasAttestation</code> as in the below
-                    example. <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    aim we are currently using <code>lawd:hasAttestation</code> as in the 
+                    example below. <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="lawd:hasAttestation" active="LIT5106MiraclePriest"
                             passive="EMML6938">
                             <desc>
@@ -217,7 +218,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </egXML>
                 </p>
                 <p><code>saws:contains</code> can be used if you are sure that a textual unit always
-                    contains another textual unit (the letter may circulate also independently).
+                    contains another textual unit (the latter may circulate also independently).
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="saws:contains" active="LIT2317Senodo" passive="LIT2696Hom"/>
                     </egXML>
@@ -251,8 +252,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </p>
                 <p>
                     <code>ecrm:P129_is_about</code> is used to say that a Textual Unit speaks about
-                    another Textual Unit. Please note that for persons which are subject of a
-                    Textual Unit there is a dedicated property. <egXML
+                    another Textual Unit. <egXML
                         xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="ecrm:P129_is_about" active="LIT5327MiracleVisit"
                             passive="LIT3575Mashaf"/>
@@ -279,7 +279,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </egXML>
                 </p>
                 <p>
-                    <code>saws:fallsWithin</code>
+                    <code>saws:fallsWithin</code><!--is this used in the same way ecrm:CLP46i_may_form_part_of or saws:formsPartOf?-->
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="saws:fallsWithin" active="LIT3944ArdeetChL"
                             passive="LIT1931Mashaf">
@@ -360,7 +360,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </egXML>
                 </p>
                 <p>
-                    <code>syriaca:different-from</code>
+                    <code>syriaca:different-from</code> <!--same as saws:isDifferentTo?-->
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="syriaca:different-from" active="LIT2932RepCh213"
                             passive="LIT4971MalkeaErgata"/>
@@ -395,7 +395,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </egXML>
                 </p>
                 <p>
-                    <code>dcterms:hasPart</code>
+                    <code>dcterms:hasPart</code> <!--same as saws:hasPart?-->
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="dcterms:hasPart" active="LIT1100Anapho"
                             passive="LIT2461Testam">
@@ -449,14 +449,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <code>betmas:fatherInLawOf</code>, <code>betmas:motherInLawOf</code>,
                         <code>betmas:sonInLawOf</code>, <code>betmas:daughterInLawOf</code> have
                     been added as fast forward properties, to be used where the direct relationships
-                    are not known. <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    are not known.<!-- I do not understand the last sentence DR-->
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="betmas:fatherInLawOf" active="PRS7458NagadaI"
                             passive="PRS11767RomanaWarq"/>
                     </egXML>
                 </p>
                 <p>
                     <code>betmas:isPredecessorOf</code> and <code>betmas:isSuccessorOf</code> are
-                    used to order the kings and emperors of ethiopian dinasties. <egXML
+                    used to order the kings and emperors of Ethiopian dynasties. <egXML
                         xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="betmas:isPredecessorOf" active="PRS1854Amdase"
                             passive="PRS8595SayfaAr"/>
@@ -483,9 +484,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p><code>rel:enemyOf</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
                 </p>
-                <p>The following SNAP examples use Classes rather than properties (see the capital
-                    letters?). This is indeed confusing. It should be however correctly modelled in
-                    the transformation to RDF and makes your encoder live a bit easier by sparing
+                <p>The following SNAP examples use classes rather than properties (this can be seen by the capital letters which they use). 
+                    This is indeed confusing. It should be however correctly modelled in
+                    the transformation to RDF and makes your encoding life a bit easier by sparing
                     the encoding of all the triples needed.</p>
                 <p>All SNAP classes of relationship are listed in the schema and are not reproduced
                     here for all cases</p>
@@ -510,14 +511,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <div type="level2">
                 <head>Person to Manuscript</head>
                 <p><code>saws:isCopierOf</code> you would normally add this with a <gi>persName</gi>
-                    with <att>role</att> equal to scribe, but sometimes you are not into the editing
+                    with <att>role</att> equal to scribe in the manuscript record, but sometimes you are not editing
                     of the manuscript record, and want to add this information with the person or
                     wherever you are editing. <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="saws:isCopierOf" active="PRS12823Akala" passive="ESktm005"/>
                     </egXML>
                 </p>
                 <p><code>saws:hasOwned</code> you would normally add this with a <gi>persName</gi>
-                    with <att>role</att> equal to owner, but sometimes you are not into the editing
+                    with <att>role</att> equal to owner in the manuscript record, but sometimes you are not editing
                     of the manuscript record, and want to add this information with the person or
                     wherever you are editing. <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="saws:hasOwned" active="PRS12813Hawaryat"
@@ -525,7 +526,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </egXML>
                 </p>
                 <p>
-                    <code>dcterms:creator</code>
+                    <code>dcterms:creator</code> <!--I do not understand this relation DR-->
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="dcterms:creator" active="PRS12734BaedaMaryam"
                             passive="IVkoriander5"/>
@@ -611,7 +612,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </egXML>
                 </p>
                 <p>Syriaca.org has defined other relations between persons and places which are not
-                    currently used, but you are more then welcome to do so and add an example
+                    currently used, but you are more than welcome to do so and add an example
                     here.</p>
             </div>
             <div type="level2">
