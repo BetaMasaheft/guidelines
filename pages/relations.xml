@@ -543,13 +543,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </relation>
                     </egXML>
                 </p>
-                <p><code>dcterms:creator</code> a relation in this form is equivalent to say that
-                    this person is the author of the work <egXML
-                        xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation name="dcterms:creator" active="PRS12817Anestasyos"
-                            passive="LIT5809OntheBurial"/>
-                    </egXML>
-                </p>
                 <p><code>betmas:isAuthorOfEthiopicTranslation</code> a relation in this form is
                     equivalent to say that this person is the author of the Ethiopic translation of
                     this work <egXML xmlns="http://www.tei-c.org/ns/Examples">
