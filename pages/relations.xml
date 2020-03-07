@@ -553,7 +553,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p><code>saws:isAttributedAuthorOf</code> a relation in this form states that this
                     person is an attributed author of this work. It would be nice to have some more
                     details about this attribution when possible, for example, the source of the
-                    attribution. <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    attribution. Please note that the domain (@active) and range (@passive)
+                    of this statement are inverted when compared to the inverse property 
+                    <code>saws:isAttributedToAuthor</code> (which you can use alternatively to this, with the very same meaning)
+                    or the property <code>dcterms:creator</code> 
+                    used for certain authorship attribution, and which you can find above.
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="saws:isAttributedAuthorOf" active="PRS8746Semon"
                             passive="LIT5334MiracleFurnishings"/>
                     </egXML>
