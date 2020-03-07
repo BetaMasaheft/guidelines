@@ -526,13 +526,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </egXML>
                 </p>
                 <p>
-                    <code>dcterms:creator</code> <!--I do not understand this relation DR-->
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation name="dcterms:creator" active="PRS12734BaedaMaryam"
-                            passive="IVkoriander5"/>
-                    </egXML>
-                </p>
-                <p>
                     <code>saws:hasWritten</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="saws:hasWritten" active="PRS11501Endreyas"
