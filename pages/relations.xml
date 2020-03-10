@@ -503,10 +503,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <relation name="snap:Group" active="ETH2324Salnna" passive="ETH1083Agaw"/>
                     </egXML>
                 </p>
-                <p><code>agrelon:hasFounder</code> is used to relate a person to a persons group
+                <p><code>agrelon:hasFounder</code> is used to relate a person to a persons group, like a monastic group.
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="agrelon:hasFounder" active="PRS11232HouseSam"
                             passive="PRS8491Samuel"/>
+                    </egXML>
+                </p>
+                <p><code>foaf:member</code> is used to relate a person to a persons group, like a monastic group or group of Saints.
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation name="foaf:member"
+                            active="PRS12196NineSaints"
+                            passive="PRS1467Afse"/>
                     </egXML>
                 </p>
             </div>

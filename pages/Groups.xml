@@ -35,8 +35,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   <gi>listPerson</gi>, with the <gi>persNames</gi> of the group. Relations should then be
   used to provide evidence for members of this group, which can be fixed
   or flexible. The members of the group can be indicated in the group
-  record by using a <gi>relation</gi> with value snap:Group for the <att>name</att>, however, it is sufficient to include the
-               relation <gi>relation</gi> with value saws:isMemberOf for the <att>name</att> in each individual person record of members
+  record by using a <gi>relation</gi> with value <code>snap:Group</code> for the <att>name</att>, however, it is sufficient to include the
+               relation <gi>relation</gi> with value <code>foaf:member</code> for the <att>name</att> in each individual person record of members
   of the group.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <listPerson>
@@ -51,11 +51,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </listPerson>
 </egXML>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
- <relation name="saws:isMemberOf"
-                         active="PRS11228Yaeqob"
-                         passive="PRS11207Ewostateans"/>
+ <relation name="foaf:member"
+                   active="PRS11207Ewostateans"
+                     passive="PRS11228Yaeqob"/>
 </egXML>
-            <p>Members of the group should have a <gi>relation</gi> with value saws:isMemberOf for the <att>name</att>, linking
+            <p>Members of the group should have a <gi>relation</gi> with value <code>foaf:member</code> for the <att>name</att>, linking
   to the group record. This is valid for example for monks belonging to
   the orders of <ref target="PRS11208HouseTakla" type="bm">Takla Hāymānot</ref>, <ref type="bm" target="PRS11232HouseSam">Sāmuʾel of Waldəbbā</ref> or <ref target="PRS11207Ewostateans" type="bm">ʾEwosṭātewos</ref>. In
   a similar way, various bodies of military regiments can also be
