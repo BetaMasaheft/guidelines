@@ -99,7 +99,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p><code>lawd:hasAttestation</code> is used to say that a named entity, a person, a
                     place, a textual unit is attested in a textual unit or in a manuscript or one of
                     its parts. It cannot be used to relate persons to persons or persons to places,
-                    and so on. </p>
+                    and so on. This also means that if you are working on a set of records and do not want to
+                touch the manuscripts, either start writing a list of witnesses, you can use this relation to say
+                that a textual unit is present in a manuscript.</p>
             </div>
             <div type="level2">
                 <head>Manuscript to Manuscript</head>

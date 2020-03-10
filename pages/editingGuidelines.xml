@@ -110,7 +110,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </item>
                     </list></p>
                 <p>Please always use <gi>gi</gi>, <gi>tag</gi>, <gi>att</gi> and <gi>val</gi> to
-                    mark up respectively element names, tags, attributes names and values. You do
+                    mark up respectively element names, tags, attributes names and values. Only in case the value is actually a 
+                    class or property with a prefix, then use <gi>code</gi>, e.g. <code>foaf:member</code>.You do
                     not need to type angle brackets and escape them or to add @ in front of every
                     attribute, this will be done during the visualization. For elements a link will
                     also be given to the page for that element.</p>
