@@ -268,10 +268,10 @@ passive="LIT1455GadlaG"/>
             ወጸሎቶሙ ፡ ለጻድቃን ፡ ተሰምዐ ፡ ወደሙ ፡ ለጻድቅ ፡ በቅድመ ፡ እግዚአ ፡ መናፍስት ፡ ተፈቅደ ። </ab>
          <listRelation><relation name="skos:broadMatch"
             active="https://corpuscoranicum.de/kontexte/index/sure/78/vers/38/intertext/913"
-            passive="urn:dts:betmas:LIT1340EnochE:2.47"/>
+            passive="betmas:LIT1340EnochE:2.47"/>
             <relation name="skos:broadMatch"
                active="https://corpuscoranicum.de/kontexte/index/sure/10/vers/21/intertext/914"
-               passive="urn:dts:betmas:LIT1340EnochE:2.47"/></listRelation>
+               passive="betmas:LIT1340EnochE:2.47"/></listRelation>
       </div>
    </egXML>
 </div>

@@ -98,7 +98,7 @@ starting with http.</p>
          <p>You can also point to our texts, for example the Ethiopic text of Numbers 21, 8 like
     this:</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
- <ref cRef="urn:dts:betmas:LIT2075Number:21.8">Numbers 21:8</ref>
+ <ref cRef="betmas:LIT2075Number:21.8">Numbers 21:8</ref>
 </egXML>
          <p>To mark up a passage in the text which is a literal quotation of
     another text you might use a <gi>cit</gi> containing a <gi>quote</gi> and the above <gi>ref</gi>
@@ -110,12 +110,12 @@ starting with http.</p>
     <quote xml:lang="gez">
          ለሙሴ᎓ ግበር᎓ ለከ᎓ አርዌ᎓ ምድር᎓ ዘብረት᎓ ኵሉ᎓ ዘነሰኮ᎓ ይርአይ᎓ ኪያሁ᎓ ወይሕየው᎓ ኪዮስ᎓
     </quote>
-    <ref cRef="urn:dts:betmas:LIT2075Number:21.8">Numbers 21:8</ref>
+    <ref cRef="betmas:LIT2075Number:21.8">Numbers 21:8</ref>
 </cit>
 </egXML>
 <p>The following example of markup is confusing and should be avoided as it claims that the content of the ref element is a reference, while it is a quote.</p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
-ለሙሴ᎓ <ref cRef="urn:dts:betmas:LIT2075Number:21.8">ግበር᎓ ለከ᎓ አርዌ᎓ ምድር᎓ ዘብረት᎓ ኵሉ᎓ ዘነሰኮ᎓ ይርአይ᎓ ኪያሁ᎓ ወይሕየው</ref>᎓ ኪዮስ
+ለሙሴ᎓ <ref cRef="betmas:LIT2075Number:21.8">ግበር᎓ ለከ᎓ አርዌ᎓ ምድር᎓ ዘብረት᎓ ኵሉ᎓ ዘነሰኮ᎓ ይርአይ᎓ ኪያሁ᎓ ወይሕየው</ref>᎓ ኪዮስ
 </egXML>
 </div>
       </body>
