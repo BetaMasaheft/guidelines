@@ -37,7 +37,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <hi rendition="simple:italic">exactly</hi> as it appears in the URL
     for that page (so, not the folio number!).</p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
-    <locus target="#30v" facs="f62"/>
+   <locus target="#30v" facs="f62"/>
+   <locus target="#86v #87r" facs="089"/>
     <locus target="#64v #65v #110r" facs="f134 f136 f225"/>
     <locus from="31" to="33" facs="f62"/>
     <locus from="31" facs="f62"/>
