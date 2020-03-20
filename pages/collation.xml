@@ -20,91 +20,118 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <revisionDesc>
       <change who="PL" when="2018-07-20">splitted from Object Description</change>
       <change who="DR" when="2019-02-05">Added paragraph on collation in composite manuscripts</change>
+      <change who="DR" when="2020-03-20">Added detailed explanations provided by Denis Nosnitsin</change>
     </revisionDesc>
   </teiHeader>
   <text>
-    <body xml:id="collationDesc">
+    <body xml:id="collationDesc"
+      >
       <div type="level2">
-          <head>Collation</head>
+          <head>General Remarks</head>
                <p>
-                  <gi>collation</gi> can be used to give
-      textual information about how the leaves are arranged using a
-                  <gi>list</gi> of <gi>item</gi> elements.</p>
+                  Information on the structure of the textblock is encoded in <gi>collation</gi>with a 
+                 <gi>list</gi> of <gi>item</gi> elements. See this example from <ref target="BAVet91" type="bm">BAVet91</ref>:</p>
+        
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<collation>
-<list>
- <item xml:id="q1">
-     <dim unit="leaf">8</dim>
-     <locus from="1r" to="8v"/>
-3, stub after 6
-6, stub after 3
- </item>
- <item xml:id="q2">
-     <dim unit="leaf">10</dim>
-     <locus from="11r" to="20v"/>
- </item>
-…
-</list>
-</collation>
+                 <collation>
+                   <list>
+                     <item xml:id="q1" n="1">
+                       <dim unit="leaf">8</dim>
+                       <locus from="1r" to="8v"></locus>
+                     </item>
+                     <item xml:id="q2" n="2">
+                       <dim unit="leaf">8</dim>
+                       <locus from="9r" to="16v"></locus>
+                     </item>
+                     <item xml:id="q3" n="3">
+                       <dim unit="leaf">10</dim>
+                       <locus from="17r" to="26v"></locus>
+                     </item>
+                     <item xml:id="q4" n="4">
+                       <dim unit="leaf">8</dim>
+                       <locus from="27r" to="34v"></locus>
+                     </item>
+                     …
+                   </list>
+                 </collation>
 </egXML>
-               <p>Give a <att>xml:id</att> to each item in the
-      list to be able to refer to this unit, using "q" and a
-      consecutive number.</p>
-               <p>If only general information on the collation is provided
-      and no quire structure is given, this information can be
-      stated in a <gi>note</gi> inside
-      <gi>collation</gi>:</p>
-               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<collation>
-<note>
-The textual sequence of the manuscript is disturbed, see <ref target="#ms_i1.1"/>.
-</note>
-</collation>
-</egXML>
-                <p>Quires with an uneven <att>unit</att> for <gi>dim</gi>  will ALWAYS need
-      clarification of the phenomenon occurring as below. No item
-      view will be loaded if only the following is given:</p>
-               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-WRONG ENCODING EXAMPLE
-<item xml:id="q2">
-     <dim unit="leaf">9</dim>
- </item>
-</egXML>
-               <p>you need at least the following:</p>
-               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<item xml:id="q2">
-     <dim unit="leaf">9</dim>
-1 added
- </item>
-</egXML>
-               <p>To notate singletons and stubs, please use the following
-      pattern as in Ethio-Spare, where the first digit is the relative position of the singleton (see example above).</p>
-               <cit>
-                  <quote>
-6, stub after 3
-</quote>
-               </cit>
-               <p>Added leaves, where no stub is visible might be recorded
-      as</p>
-               <cit>
-                  <quote>
-1, no stub
-</quote>
-               </cit>
-               <p>where the number before the comma is the folio number of
-      the singleton.</p>
-               <p>Also, you can use with care for consistency the following
-      values</p>
-               <cit>
-                  <quote>
-3 replaced, 4 missing, 5 missing, 6 replaced, 9 added
-</quote>
-               </cit>
-               <p>This information will be analyzed to produce diagrams
-      of each quire and formula notations. Added leaves are shown
-      with hyphens, stubs are not shown, replaced leaves are
-      dot-hyphen lines.</p>
-      <p>If you also want to add a note element, please do so before you add text as in this example from <ref target="EMIP00006" type="bm">the Herron Codex</ref>.</p>
+        
+        <p>Each <gi>item</gi> has an attribute <att>xml:id</att> with a value "q" followed by the consecutive number that indicates 
+          the physical position of the quire in the textblock. This allows to refer to each particular quire. 
+          The element <gi>dim</gi> with <tag>unit="leaf"</tag> indicates the number of leaves within the quire while the 
+          <gi>locus</gi> element contains  information on the quire's boundaries.</p>
+        
+        <p>Each <gi>item</gi> can also have the attribute <att>n</att> with a consecutive numeral as a value, in which we encode the
+            progressive number of quires, assigning "a" as
+            value for initial guard leafs and "b" for
+            final guard leafs, as in this example from <!--<ref target="" type="bm"></ref>-->
+        </p>
+      </div>
+      
+      <div type="level2">
+        <head>Encoding the quire structure</head>
+        
+        <p>The leaves of the quire are counted from left to right, over the centrefold, and referred to with the numbers 1, 2, 3, 4, etc.</p>
+        
+        
+        <p>
+          The number of leaves in the quire can be odd (1, 3, 5, etc.). In this case, it is necessary to indicate the position of each single leaf and its stub, 
+          i.e. the short part of the leaf that "hooks" it into the textblock, in relation to the other leaves of the quire (see fig. 2). 
+          This can be recorded in the following way:
+          <list>
+            <item>(number of the single leaf), stub before (number of the leaf following the stub)</item>
+            <item>(number of the single leaf), stub after (number of the leaf preceding the stub)</item>
+          </list>
+          
+          In some cases (esp. if you work on images), no stub can be detected. This can be recorded as:
+          <list>
+            <item>(number of the single leaf), no stub </item>
+          </list>
+          
+        </p>
+        
+        <p>The quire can include two or more single leaves even if the total number is even:</p>
+        
+        <p>An unbalanced quire with an uneven number of units for <gi>dim</gi> always needs clarification. 
+          You have to indicate which leaf is single using the formulas for the single leaf and its stub as above. 
+          No quire structure will be visualized if only the following is given:</p>
+        
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          WRONG ENCODING EXAMPLE
+          <item xml:id="q2">
+            <dim unit="leaf">9</dim>
+          </item>
+        </egXML>
+        
+      </div>
+      
+      <div type="level2">
+        <head>Encoding of further features</head>
+        
+        <p>Further features of the quire structure can be encoded with the help of the following terms:
+         <list>
+           <item>replaced</item>
+          <item>missing</item> 
+          <item>added</item>
+         </list>
+          These allow you to indicate that the quire was disturbed and one leaf was taken out of it or added into it; 
+          you can explain more on the nature or cause of this modification in a <gi>note</gi> (for instance that the leaf was cut, torn off etc.). 
+        </p>
+        <p>
+          For instance, to show that the quire of 9 leaves represents originally a 8-leaf quire ("quaternion") augmented with one leaf (8+1=9), 
+          you write as follows:
+          
+          This means exactly that the leaf introduced later is the 2nd leaf of the quire, it's stub is located between leaves 8 and 9. 
+        </p>
+        
+      <p>
+        If you have found out that the quire comprising 7 leaves represents the original quire of 8 leaves 
+        ("quaternion") where the 4th leaf was lost (8-1=7) you can record this as follows:
+      </p>
+        
+        <p>Further explanations might be added in a note elemen before the text,
+          as in this example from the <ref target="EMIP00006" type="bm">Marwick Codex 2
+          </ref>.</p>
       <egXML xmlns="http://www.tei-c.org/ns/Examples">
         <item xml:id="q22" n="22">
                                       <dim unit="leaf">3</dim>
@@ -113,10 +140,85 @@ WRONG ENCODING EXAMPLE
                                       2, stub after 1
                                       </item>
       </egXML>
-               <p>Sometimes you might need to describe the position of a
-      quire using <gi>locus</gi> elements. Please,
-      do this in a <gi>note</gi>, as the <gi>locus</gi> element is here reserved for
-      the quire extent.</p>
+        
+        
+        <p>Sometimes you might also need to describe the position of a
+          quire using <gi>locus</gi> elements. Please, also
+          do this in a <gi>note</gi>, as the <gi>locus</gi> element is here reserved for
+          the quire extent.</p>
+      </div>
+      
+      <div type="level2">
+        <head>Quire signatures</head>
+        <p>The presence, absence and further properties of quire marks (usually Ethiopic numerals assigned by the manuscript-makers to quires, 
+          to keep the sequence) such as location, structure, decoration or hand can be described in the
+          <gi>signatures</gi> element in <gi>collation</gi>, summarily or one by one:</p>
+        
+        <p>
+          Precise information on the quire signatures/marks given by the scribes
+          can be stated by means of the element <gi>num</gi> with <att>value</att>:
+       
+        </p>
+      </div>
+      
+      <div type="level2">
+        <head>Visualisation (diagrams and quire formula)</head>
+        
+        <p>All information encoded in this way will be visualized. Added leaves are shown with hyphens, replaced leaves are 
+          dot-hyphen lines (stubs are not shown currently). 
+          In addition to that, the same information expressed in the Ethio-SPaRe formula will appear below.</p>
+        
+        <p>
+          "Collation" as described above reflects the formula that has been applied in the project Ethio-SPaRe
+          (representing the so-called "English formula", slightly modified and expanded). If you have encoded the information on the
+          quire structure correctly,  the numerical "Collation formula" and the structure of each quire ("Quire diagrams") will be visualised.
+          The formula is as follows, from the example <ref target="ESum024" type="bm"/>: 
+          
+          A(4/fols. 1r-4v) – I(8/fols. 5r-12v) – II(8+1/fols. 13r-21v/s.l. 9: fol. 21) – III(6/fols. 22r-27v) – IV(10/s.l. 1: fol. 28; 10: fol. 37/28r-37v) –
+          V(6/fols. 38r-43v) – VI(10/ s.l. 1: fol. 44; 10: fol. 53/ fols. 44r-53v) – VII(6/fols. 54r-59v) – VIII(8/fols. 60r-67v) – IX(8/fols. 68r-75v) –
+          X(8/fols. 76r-83v) – XI(10/fols. 84r-93v) – XII(8/fols. 94r-101v) – XIII(8+1/ s.l. 9, fol. 110/ fols. 102r-110v) – 
+          XIV(6+1/ s.l. 7, fol. 117/ fols. 111r-117v) – XV(8/fols. 118r-125v) – XVI(8-2/fols. 126r-131v) – XVII(8/fols. 132r-139v) – 
+          XVIII(8/fols. 140r-147v) – XIX(8/fols. 148r-155v) – XX(8/fols. 156r-163v) – XXI(6/fols. 164r-169v) – XXII(8/fols. 170r-177v).
+          
+        </p>
+        
+        <p>
+          Here are explanations to the elements of the quire formula: 
+       <list>   
+         <item>a Roman numeral indicates the physical position of the quire</item>
+          <item>the letters "A" and "B" refer to the guard leaf quires at the beginning and the end of the textblock, resp. </item>
+          <item>the string in the upper in brackets, in the upper case includes 1) the number of the leaves (from which the type of the quire can be deduced); 
+          2) the information on the position of single leaves (s.l.) and their stubs;
+          3) the extension of the quire.</item>
+          <item>formulas with + or - indicate that the original quire was extended or that some leaves were taken out (5+1, or 7+1, or 9-1, etc.).</item>
+          <item>indications to quire signatures precede the Roman numerals (in case the quire mark is written on the first leaf of the quire) or follow it
+          (in case the quire mark is written on the last leaf of the quire). </item>
+       </list>
+          
+        </p>
+      </div>
+      
+      <div type="level2">
+        <head>General or fragmentary information on the quire structure</head>
+      
+      <p>
+        Many catalogues do not provide any information on the quire structure. Sometimes it is only possible to provide
+        general information or fragmentary observations on the quire structure. Sometimes the information is imprecise and can be 
+        ascertained only by means of a direct check of the physical manuscript. In any case, all available data of whatever kind can be
+        summarized in a  <gi>note</gi> inside
+        <gi>collation</gi>, as in this example from <ref type="bm" target="BDLaethf7">BDLaethf7</ref>:</p>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+        <collation>
+          <note>
+            The textual sequence of the manuscript is disturbed, see <ref target="#ms_i1.1"/>.
+          </note>
+        </collation>
+      </egXML>
+      </div>
+        
+        
+     
+      
                <!--<p>When a quire and not just a leaf is added into another
       quire at some point, you can follow this example</p>
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -149,61 +251,6 @@ XI (s.l.: 2, stub after 4; 1, stub after 4)
 
 commented out as no example can be found, but there was an example and an implementation
     -->
-               <p>Different numerations of quires are encoded as
-      follows:</p>
-               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<item xml:id="q26" n="25"> <num value="20">፳</num> <dim unit="leaf">8</dim> <locus from="195r" to="202v"/> </item>
-</egXML>
-               <list type="unordered">
-                  <item>
-                     <p>In <gi>item</gi> with <att>n</att> we encode the
-          progressive number of quires, assigning "a" as
-          value for initial guard leafs and "b" for
-          final guard leafs. This information was given in Roman
-          Numerals in DomLib, but needs to be in arabic numerals
-          here.</p>
-                  </item>
-                  <item>
-                     <p>The numeration given by the scribe is copied and
-          annotated with a simple
-                        <gi>num</gi> with <att>value</att> element.</p>
-                  </item>
-                  <item>
-                     <p>The number of leafs in the quire is given in
-          <gi>dim</gi>
-                     </p>
-                  </item>
-                  <item>
-                     <p>
-                        <gi>locus</gi> provides as usual the
-          extremes.</p>
-                  </item>
-               </list>
-               <p>Inside <gi>collation</gi> you can use
-      <gi>signatures</gi> for quire marks and
-      decoration of quiremarks.</p>
-               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<collation>
-<signatures> Decorated <note>Simply decorated quire marks are
-          written in the middle of the upper margin of fols. 3r, <locus target="#11r"/>, 19r, 27r.</note>
-</signatures>
-<list>
-...
-</list>
-</collation>
-</egXML>
-<p>Sometimes the information provided in the source cannot be checked and is imprecise. There are cases then
-when we cannot give the dimension of a quire, although the schema requires it.
-This is a good place for a comment, because this is something which simply needs to be fixed in the description looking at the manuscript.
-See <ref target="BAVet43" type="bm">Vatican City, Biblioteca Apostolica Vaticana, Aeth. 43</ref> where the quires missing the information have been commented out.</p>
-      </div>
-      <div type="level2">
-        <head>Collation in composite manuscripts</head>
-        <p>
-          In composite manuscripts, <gi>collation</gi> can be added to the first <gi>physDesc</gi> which pertains to the entire manuscript
-          or to each individual <gi>msPart</gi>. It is up to the encoder to decide which is the more fitting place in each indivudal case.
-        </p>
-      </div>
     </body>
   </text>
 </TEI>
