@@ -69,7 +69,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <head>Encoding the quire structure</head>
         
         <p>The leaves of the quire are counted from left to right, over the centrefold, and referred to with the numbers 1, 2, 3, 4, etc.</p>
-        <!--figure 1  -->
+        <figure>
+          <graphic xml:id="example1" url="http://betamasaheft.eu/iiif/guidelines/collation/1.tif/info.json">
+            <desc></desc></graphic>
+        </figure>
         
         <p>
           The number of leaves in the quire is normally even, but can frequently also be odd (1, 3, 5, etc.).
@@ -86,7 +89,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <item>(number of the single leaf), no stub </item>
           </list>
           
-          <!--Figure 2-->
+          <figure>
+            <graphic xml:id="example2" url="http://betamasaheft.eu/iiif/guidelines/collation/2.tif/info.json">
+              <desc></desc></graphic>
+          </figure>
           
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <collation>
@@ -106,7 +112,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         
         <p>The quire can include two or more single leaves even if the total number is even:</p>
         
-        <!--Figure 3-->
+        <figure>
+          <graphic xml:id="example3" url="http://betamasaheft.eu/iiif/guidelines/collation/3.tif/info.json">
+            <desc></desc></graphic>
+        </figure>
         
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
           <collation>
