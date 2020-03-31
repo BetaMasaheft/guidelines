@@ -21,6 +21,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <change who="PL" when="2018-07-20">split from Object Description</change>
       <change who="DR" when="2019-02-05">Added paragraph on collation in composite manuscripts</change>
       <change who="DR" when="2020-03-20">Added detailed explanations provided by Denis Nosnitsin</change>
+      <change who="DR" when="2020-03-31">Added link to images provided by Denis Nosnitsin, added captions</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -71,13 +72,29 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <p>The leaves of the quire are counted from left to right, over the centrefold, and referred to with the numbers 1, 2, 3, 4, etc.</p>
         <figure>
           <graphic xml:id="example1" url="http://betamasaheft.eu/iiif/guidelines/collation/1.tif/info.json">
-            <desc></desc></graphic>
+            <desc>Schematic depiction of a quire consisting of 10 leaves (quinion)</desc></graphic>
         </figure>
         
         <p>
           The number of leaves in the quire is normally even, but can frequently also be odd (1, 3, 5, etc.).
           In this case, it is necessary to indicate the positions of each single leaf and its stub (the short part of the leaf that "hooks" it into the textblock),
           in relation to the other  leaves of the quire. 
+          
+          This is how stubs can look like in manuscripts:
+          
+          <figure>
+            <graphic xml:id="example4" url="http://betamasaheft.eu/iiif/guidelines/collation/4.tif/info.json">
+              <desc>Example of a stub</desc>
+            </graphic>
+          </figure>
+          
+          <figure>
+            <graphic xml:id="example5" url="http://betamasaheft.eu/iiif/guidelines/collation/5.tif/info.json">
+              <desc>Example of a stub</desc>
+            </graphic>
+          </figure>
+          
+          
           This can be recorded in the following way:
           <list type="unordered">
             <item>(number of the single leaf), stub before (number of the leaf following the stub)</item>
@@ -91,7 +108,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           
           <figure>
             <graphic xml:id="example2" url="http://betamasaheft.eu/iiif/guidelines/collation/2.tif/info.json">
-              <desc></desc></graphic>
+              <desc>Schematic depiction of a quire in which leaf 2 is a single leaf whose stub 
+                is visible between leaves 4 and 5</desc></graphic>
           </figure>
           
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -114,7 +132,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         
         <figure>
           <graphic xml:id="example3" url="http://betamasaheft.eu/iiif/guidelines/collation/3.tif/info.json">
-            <desc></desc></graphic>
+            <desc>Schematic depiction of a quire containing two single leaves and with stubs</desc></graphic>
         </figure>
         
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
