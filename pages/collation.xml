@@ -329,19 +329,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       
       <div type="level2">
         <head>Composite manuscripts</head>
-        <p>In composite manuscripts, <gi>collation</gi>  can be added to the first <gi>physDesc</gi> that pertains to the entire manuscript, 
-           to each individual <gi>msPart</gi> or to both. It is up to the encoder to decide which place is more fitting.</p>
+        <p>In composite manuscripts, <gi>collation</gi> can be added to the first <gi>physDesc</gi>
+          that pertains to the entire manuscript, directly descendant of <gi>msDesc</gi>, or to the
+            <gi>physDesc</gi> of each individual <gi>msPart</gi>. If needed, nothing prevents to
+          have <gi>collation</gi> in both places, it is up to the encoder to decide which
+            <gi>physDesc</gi> is more appropriate.</p>
       </div>
       
       <div type="level2">
         <head>General or fragmentary information on the quire structure</head>
         
-        <p>
-          Many catalogues do not provide any information on the quire structure. Sometimes it is only possible to provide
-          general information or fragmentary observations on the quire structure. Sometimes the information is imprecise and can be 
-          ascertained only by means of a direct check of the physical manuscript. In any case, all available data of whatever kind can be
-          summarized in a  <gi>note</gi> inside
-          <gi>collation</gi>, as in this example from <ref type="bm" target="BDLaethf7">BDLaethf7</ref>:</p>
+        <p>Many catalogues do not provide any information on the quire structure. Sometimes it is
+          only possible to provide general information or fragmentary observations on the quire
+          structure. Sometimes the information is imprecise and can be ascertained only by means of
+          a direct check of the physical manuscript. In any case, all available data of whatever
+          kind can be summarized in a <gi>note</gi> inside <gi>collation</gi>, as in this example
+          from <ref type="bm" target="BDLaethf7">BDLaethf7</ref>:</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
           <collation>
             <note>
@@ -354,13 +357,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <div type="level2">
         <head>Visualisation (diagrams and quire formula)</head>
         
-        <p>Here the ways in which the correctly encoded quire structure is currently visualised on the web application are explained.
-        As always, please do not let your encoding diverge from these guidelines in order to produce another visualisation. If you wish for
-        another visualisation or encounter problems while encoding that are not covered by these guidelines, please open an issue.</p>
+        <p>Here the ways in which the correctly encoded quire structure is currently visualised on
+          the web application are explained. As always, please do not try and "adapt" your encoding
+          to obtain a specific visualisation. Although this section of the guidelines is strongly
+          related to the visualization tools in the portal, it uses standard TEI and formal text
+          content which is based on previous projects (Ethio-SPaRe especially). If you wish for
+          another visualisation for your own purposes you should have all needed information. If you
+          encounter problems while encoding that are not covered by these guidelines, please open an
+          issue.</p>
         
-        <p>All information encoded in this way will be visualized. Added leaves are shown with hyphens, replaced leaves are 
-          dot-hyphen lines (stubs are not shown currently). 
-          In addition to that, the same information expressed in the Ethio-SPaRe formula will appear below.</p>
+        <p>All information encoded in the way described here will be visualized in the Beta Masaheft
+          application using <ref target="https://github.com/KislakCenter/VisColl">VisColl</ref>. Added leaves are shown with hyphens, replaced leaves
+          are dot-hyphen lines (stubs are not shown currently). In addition to that, the same
+          information expressed in the Ethio-SPaRe formula will appear below.</p>
         
         <!--<p>
           "Collation" as described above reflects the formula that has been applied in the project Ethio-SPaRe
