@@ -193,6 +193,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </list>
           </collation>
         </egXML>
+        
+        <p>
+          To identify a flyleaf quire is frequently not as simple as it appears. Normally it is a quire of a smaller size, binion or quaternion, but it can be also just one single leaf. The flyleaf quires were meant exclusively for preventing the first and the last text pages from the contact to the coarse surface of the boards. The flyleaf quire can be left unruled or partly ruled. It can be of irregular size, or is made of reused leaves. Scribbles and pen trials, marginal notes or added texts frequently obscure the original function of the flyleaf quires. 
+        </p>
        </div>
       
       <div type="level2">
@@ -253,6 +257,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           quire using <gi>locus</gi> elements. Please, also
           do this in a <gi>note</gi>, as the <gi>locus</gi> element is here reserved for
           the quire extent.</p>
+        <!--here we need an example-->
       </div>
       
       <div type="level2">
