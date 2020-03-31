@@ -84,13 +84,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           
           <figure>
             <graphic xml:id="example4" url="http://betamasaheft.eu/iiif/guidelines/collation/4.tif/info.json">
-              <desc>Example of a stub</desc>
+              <desc>Example of a stub from  BMQM-010, ff. 103v-104r</desc>
             </graphic>
           </figure>
           
           <figure>
             <graphic xml:id="example5" url="http://betamasaheft.eu/iiif/guidelines/collation/5.tif/info.json">
-              <desc>Example of a stub</desc>
+              <desc>Example of a stub from MHG-010, ff. 69v-70r </desc>
             </graphic>
           </figure>
           
