@@ -203,7 +203,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <item>missing</item>
             <item>added</item>
           </list>Please, note that because these are parts of text which are actually used in the
-          Beta Masaheft portal, there is no flexibility of usage, these are fixed and reserved
+          Beta maṣāḥǝft portal, there is no flexibility of usage, these are fixed and reserved
           words, and so is the formulation used. These terms allow you to indicate that the quire
           was disturbed and one leaf was taken out of it or added into it; you can explain more on
           the nature or cause of this modification in a <gi>note</gi> (for instance that the leaf
