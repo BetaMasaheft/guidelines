@@ -261,10 +261,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </egXML>
 
 
-        <p>Sometimes you might need to describe the position of a
-          quire using <gi>locus</gi> elements. Please
-          do this in a <gi>note</gi>, as the <gi>locus</gi> element is here reserved for
-          the quire extent, like in this example from <ref type="BM" target="EMIP01992">Washington, D.C., Howard University School of Divinity, Tweed Codex 043</ref></p>
+        <p>It is also possible to use <gi>locus</gi> elements in such further descriptive notes,
+          like in this example from <ref type="BM" target="EMIP01992">Washington, D.C., Howard University School of Divinity, Tweed Codex 043</ref></p>
        <egXML xmlns="http://www.tei-c.org/ns/Examples">
          <item xml:id="q3" n="2">
            <dim unit="leaf">10</dim>
