@@ -21,6 +21,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
            <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
             <change who="PL" when="2018-04-24">stub of page</change>
             <change who="DR" when="2019-04-26">Added dividers</change>
+            <change who="DR" when="2020-04-07">Added example for translation of legends</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -50,7 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 and John <locus target="#203v"/> contain inventories and notes it is possible that they were originally
                 intended to receive <ref type="authFile" corresp="AT1013EvaPortrait"/>. The miniatures are painted in
                 the <term key="FirstSolomonicStyle"/> and recall examples produced between
-                <date notBefore="1300" notAfter="1450"/>. The decorations appear to have been paintedby the same artist.
+                <date notBefore="1300" notAfter="1450"/>. The decorations appear to have been painted by the same artist.
             </summary>
 
     </egXML>
@@ -139,7 +140,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         provided at the end of <gi>desc</gi>
         inside the corresponding
         <gi>decoNote</gi> and use
-        <gi>q</gi>. </p>
+        <gi>q</gi>. 
+    Translations of legends can also be included in a separate <gi>q</gi> if desired, always including the respective <att>xml:lang</att>, as 
+in this example from <ref type="bm" target="DSEthiop1">DS Ethiop. 1</ref>:</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <q xml:lang="gez">ዘከመ፡ ባረከቶ፡ እግዝእትነ፡ ለ<persName ref="PRS3827Ephrem">ኤፍሬም፡</persName></q>
+                    <q xml:lang="en">How our Lady blessed Ephrem.</q>
+                </egXML>
+                
         <p>Captions should be associated
         to the relevant iconographic element using
         <gi>foreign</gi>:</p>
@@ -160,7 +168,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <div type="level2">
                 <head>Miniature Collections</head>
     <p>Manuscripts that contain exclusively miniatures and no text
-        receive the keyword miniatureCollection. Any other keywords
+            receive the keyword miniatureCollection. Any other keywords
         relevant to these miniatures, such as for example Hagiography,
         can be assigned freely.</p>
             </div>
