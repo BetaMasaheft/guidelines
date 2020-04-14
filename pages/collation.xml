@@ -84,13 +84,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           and its stub (the short part of the single leaf that "hooks" it into the textblock), in relation
           to the other leaves of the quire. This is how stubs can look like in manuscripts: <figure>
             <graphic xml:id="example4"
-              url="http://betamasaheft.eu/iiif/guidelines/collation/4.tif/info.json">
+              url="https://betamasaheft.eu/iiif/guidelines/collation/4.tif/info.json">
               <desc>Example of a stub from BMQM-010, ff. 103v-104r</desc>
             </graphic>
           </figure>
           <figure>
             <graphic xml:id="example5"
-              url="http://betamasaheft.eu/iiif/guidelines/collation/5.tif/info.json">
+              url="https://betamasaheft.eu/iiif/guidelines/collation/5.tif/info.json">
               <desc>Example of a stub from MHG-010, ff. 69v-70r </desc>
             </graphic>
           </figure></p>
@@ -107,7 +107,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           </list>
           <figure>
             <graphic xml:id="example2"
-              url="http://betamasaheft.eu/iiif/guidelines/collation/2.tif/info.json">
+              url="https://betamasaheft.eu/iiif/guidelines/collation/2.tif/info.json">
               <desc>Schematic depiction of a quire in which leaf 2 is a single leaf whose stub is
                 visible between leaves 4 and 5</desc>
             </graphic>
@@ -125,7 +125,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <p>The quire can include two or more single leaves even if the total number is even:</p>
 
         <figure>
-          <graphic xml:id="example3" url="http://betamasaheft.eu/iiif/guidelines/collation/3.tif/info.json">
+          <graphic xml:id="example3" url="https://betamasaheft.eu/iiif/guidelines/collation/3.tif/info.json">
             <desc>Schematic depiction of a quire containing two single leaves and with stubs</desc></graphic>
         </figure>
 
