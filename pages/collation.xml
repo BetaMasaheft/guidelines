@@ -75,7 +75,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
         <p>The leaves of the quire are counted from left to right, over the centrefold, and referred to with the numbers 1, 2, 3, 4, etc.</p>
         <figure>
-          <graphic xml:id="example1" url="http://betamasaheft.eu/iiif/guidelines/collation/1.tif/info.json">
+          <graphic xml:id="example1" url="https://betamasaheft.eu/iiif/guidelines/collation/1.tif/info.json">
             <desc>Schematic depiction of a quire consisting of 10 leaves (i.e. five bifolios, "quinion")</desc></graphic>
         </figure>
 
