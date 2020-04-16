@@ -57,7 +57,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 </egXML>
             <p>Members of the group should have a <gi>relation</gi> with value <code>foaf:member</code> for the <att>name</att>, linking
   to the group record. This is valid for example for monks belonging to
-  the orders of <ref target="PRS11208HouseTakla" type="bm">Takla Hāymānot</ref>, <ref type="bm" target="PRS11232HouseSam">Sāmuʾel of Waldəbbā</ref> or <ref target="PRS11207Ewostateans" type="bm">ʾEwosṭātewos</ref>. In
+  the orders of <ref target="PRS11208HouseTakla" type="bm">Takla Hāymānot</ref>, <ref type="bm" target="PRS11232HouseSam">Sāmuʾel of Waldǝbbā</ref> or <ref target="PRS11207Ewostateans" type="bm">ʾEwosṭātewos</ref>. In
   a similar way, various bodies of military regiments can also be
   represented:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
