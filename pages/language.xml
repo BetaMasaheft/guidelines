@@ -42,7 +42,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <langUsage>
                <language ident="en">English</language>
                <language ident="it">Italian</language>
-               <language ident="gez">Gəʿəz</language>
+               <language ident="gez">Gǝʿǝz</language>
             </langUsage>
          </egXML>
          <p>If you add somewhere e.g.</p>
@@ -57,8 +57,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <p>The values of <att>ident</att> here are restricted, so you should not be able to add
             e.g. amh as value for <att>ident</att> and consequently use it in the file as value of
                <att>xml:lang</att>.</p>
-         <p>Regardless of the validity of this transliteration, Gəʿəz is always referred to by
-            "Gəʿəz" to ensure consistency.</p>
+         <p>Regardless of the validity of this transliteration, Gǝʿǝz is always referred to by
+            "Gǝʿǝz" to ensure consistency.</p>
          <p>For text in another language from the main one stated, use <gi>foreign</gi>:
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
          The midpoint of the Psalms of David is indicated with the word <foreign xml:lang="gez">መንፈቁ፡</foreign>, encircled in black ink
