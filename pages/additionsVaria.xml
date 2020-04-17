@@ -149,6 +149,26 @@ never be used to mark a content, that presupposes another perspective.</p>
   <q xml:lang="en">song</q>
   </item>
 </egXML>
+                <p>You may have additions which are rather long. You can use <gi>seg</gi> with <att>part</att>
+                to let the reader know what part you are copying in the catalogue record.</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <item xml:id="a6">
+                        <locus from="75rb" to="76ra"/>
+                        <desc type="GuestText">
+                            <title ref="LIT4859Litany"/>
+                        </desc>
+                        <q xml:lang="gez">
+                            <seg part="I">ወካእበ፡ ናስተበቈኦ፡ ለአምላከ፡ ምሕረት፡ 
+                                ዘረዳእከ፡ ለአብርሃም፡ አመ፡ ይቀት፡ ሎሙ፡ ለነገስት፡ 
+                                ዘአድሐንኮ፡ ለይስሐቅ፡ እምነ፡ መጥባሕት፡ ዘመራሕኮ፡ 
+                                ለያዕቆብ፡ በውስተ፡ መንገድ፡</seg>
+                            <gap reason="ellipsis" resp="DN"/>
+                            <seg part="F">ፈኑ፡ እማዴ፡ ሰማይ፡ ወምድር፡ ባርክ፡ 
+                                ማህበረነ፡ በኵሉ፡ ጊዜ፡ ወበኩሉ፡ ሰአት፡ በአሐዱ፡ 
+                                ወልድከ፡ ዘቦቱ፡ ለከ፡ ምስሌሁ፡</seg>
+                        </q>
+                    </item>
+                </egXML>
 <p>If you are providing a translation of the added text, you can use the same method, but add <att>type</att> with value <val>translation</val> to the translation <gi>q</gi>.</p>
                 <p>The same you can do if there is a <ref target="Documents">documentary text</ref>
                 which you want to identify.
