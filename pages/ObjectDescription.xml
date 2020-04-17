@@ -24,6 +24,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="DR" when="2018-07-06">Added paragraph on scroll strips</change>
             <change who="DR" when="2019-04-05">Updated foliation paragraph with real examples</change>
             <change who="DR" when="2020-02-11">Added weight</change>
+            <change who="DR" when="2020-04-17">Added examples to support and foliation</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -39,27 +40,37 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
             <div type="level2">
                 <head>Support</head>
-                     <p>Into <gi>support</gi> a series of
-            information about the material support are given.</p>
+                     <p>In <gi>support</gi> 
+            information about the material support is given.</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <support>
-  <watermark/>
   <material key="Parchment"/>
 </support>
 </egXML>
-                     <p>In <gi>material</gi> with <att>key</att> enter the a value
+                     <p>In <gi>material</gi> with <att>key</att> enter the a 
             from the Writing Material taxonomy proposed from the schema.
             oXygen should prompt the values from the schema.</p>
             <p>You can also add a <att>ref</att> with a uri of one of the values in
-            the EAGLE Vocabularies for <ref target="https://www.eagle-network.eu/voc/material.html">material</ref> and <ref target="https://www.eagle-network.eu/voc/objtyp.html">object type</ref> especially for inscriptions as
-            in the following example from <ref target="RIE246" type="bm"/>.</p>
+            the EAGLE Vocabularies for <ref target="https://www.eagle-network.eu/voc/material.html">material</ref> 
+                and <ref target="https://www.eagle-network.eu/voc/objtyp.html">object type</ref> especially for inscriptions as
+            in the following example from <ref target="RIE246" type="bm">RIE 246</ref>.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
               <support>
               <material key="stone" ref="https://www.eagle-network.eu/voc/material/lod/138"/>
               <objectType ref="https://www.eagle-network.eu/voc/objtyp/lod/2">Unspecified</objectType>
               </support>
 </egXML>
+                
+                <p>It is also possible to further describe the material and its characteristics in paragraphic form in a <gi>p</gi> in <gi>support</gi>, 
+                as in this example from <ref target="DSEthiop5" type="bm">DS Ethiop 5</ref>:</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <support>
+                        <material key="parchment"/>
+                        <p>Parchment repairs on <locus target="#23 #26"/>. Hole in the parchment on <locus target="#46"/>.</p>
+                    </support>
+                </egXML>
             </div>
+            
             <div type="level2">
                 <head>Extent</head>
                      <p>
@@ -122,10 +133,16 @@ taken from <locus target="#6r"/>.
 
             <div type="level2">
                 <head>Foliation</head>
-                     <p>You might also use <gi>foliation</gi> with
-            a list of <gi>item</gi>s in it to describe different numbering
-            systems used. If more than one foliation system is described, it might be useful to indicate which one is followed in the record, as in this example from 
-            <ref target="DSEthiop2"/>:</p>
+                <p>Any information available on the foliation of the manuscript can be entered in <gi>foliation</gi>, 
+                as in this example from <ref target="DSEthiop3" type="bm">DS Ethiop. 3</ref>:</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <foliation resp="DR DN">Foliation in pencil in the middle of the bottom margin.</foliation>
+                </egXML>
+                
+                     <p>If different numbering systems are present in the manuscript,  a <gi>list</gi> of <gi>item</gi>s can be 
+                         used. If more than one foliation system is described, it might be useful to indicate which one is followed in the record, 
+                         as in this example from 
+            <ref target="DSEthiop2" type="bm">DS Ethiop. 2</ref>:</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
                          <foliation>
                              <list>
