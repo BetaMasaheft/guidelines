@@ -140,12 +140,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 will have to be into a <gi>foreign</gi>
                 specifying the language of the translation. More than one
                 translation can be added.</p>
-                <p>The following example comes from <ref target="IVefiopsk12" type="bm">Saint Petersburg, Institut Vostočnyh Rukopisej Rossijskoj Akademii Nauk, IV Efiopsk. 12</ref>.</p>
+            <p>The following example comes from <ref target="RNBefns12" type="bm">Saint Petersburg, Rossijskaja Nacionalnaja Biblioteka, RNB Ef. n.s. 12</ref>.</p>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <incipit>
-                  <locus target="#1r">
+                  <incipit xml:lang="gez">
+                  <locus target="#1r"/>
                   በስመ᎓ ሥሉስ᎓ ቅዱስ᎓ ንወጥን᎓ በረኤተ᎓ እግዚአብሔር᎓ ወበሥነ᎓ ሀብቱ። በጸሒፈ᎓ ሰብዐቱ᎓ ጸሎታተ᎓ ሰዐታት᎓ ዘመዓልት᎓ ወዘሌሊት። ቀዳሚሁ᎓ ለለኵሉ᎓ ጊዜ᎓ ትብል።
-                  </locus>
                   <foreign xml:lang="en">
                   In the name of the Threefold, Holy One, we commence with the help of God and goodness of His richness the writing of the seven hours' prayers of the day and of the night. In the beginning, each time you will say.
                   </foreign>
