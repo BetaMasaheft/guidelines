@@ -23,7 +23,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </revisionDesc>
   </teiHeader>
   <text>
-    <body xml:id="layoutDesc">
+    <body xml:id="layoutDescPage">
 
       <div type="level2">
           <head>Use of <gi>layout</gi></head>
@@ -238,7 +238,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <item>Chain of coronis signs, under the chain of nine dot asterisks with thin red and black lines in between </item>
             <item>Rubricated X sign with chevron on the right: x></item>
           </list>
-          
+
       </div>
 
 
