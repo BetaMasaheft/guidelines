@@ -158,10 +158,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               <tag> relation name="ecrm:P129_is_about"</tag>:
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <listRelation>
-                  <relation name="ecrm:P129_is_about" active="AT1108MMDaqseyos" passive="LIT3586Miracle"/>
+                  <relation 
+                      name="ecrm:P129_is_about" 
+                      active="AT1108MMDaqseyos" 
+                      passive="LIT3586Miracle"/>
                </listRelation>
                </egXML>
             </p>
+            <p>
+               Also relations to external authorities, like ICONCLASS 
+               are very useful, for disambiguation and enrichment of the data.
+               In <ref target="AT1026NativityMary" type="BM">Nativity of Mary</ref> 
+               you can see the connections which can be based on a 
+               simple relation like the following.
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     <relation 
+                        name="skos:exactMatch" 
+                        active="AT1026NativityMary" 
+                        passive="ic:73A31"/>
+               </egXML>
+              </p>
          </div>
 
          <div type="level1">
