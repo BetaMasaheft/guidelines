@@ -61,12 +61,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </div>
          <div type="level1">
             <head>Delete</head>
-            <p>If you make a mistake, or find a doublet which need to be cleaned up, you will delete a record. 
-            Doing so as normally as you can do with a commit to the public repositories in GitHub, 
+            <p>If you make a mistake, or find a doublet 
+               which need to be cleaned up, or need 
+               to <ref target="definitionWorks">reorganize Textual Units</ref> by making one formerly independent 
+               part of another, you will delete a record. 
+            Doing so as normally as you can do with a commit to the 
+            public repositories in GitHub, 
             will add a value to a list of deleted records and if a 
                <gi>relation</gi> with <att>name</att> 
-               <code>betmas:formerlyAlsoListedAs</code> is present in another record of which
-            the deleted one was a double, then requesting the deleted item will redirect to that record.
+               <code>betmas:formerlyAlsoListedAs</code> 
+               is present in another record of which
+            the deleted one was a double, then requesting 
+            the deleted item will redirect to that record.
             </p>
          </div>
         </body>
