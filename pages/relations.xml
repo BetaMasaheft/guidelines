@@ -95,6 +95,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p>Generic properties like <code>skos:exactMatch</code>,
                         <code>skos:broadMatch</code>, etc. are used in specific cases documented in
                     these guidelines where appropriate.</p>
+                
+                <p>The special property <code>betmas:formerlyAlsoListedAs</code>
+                is reserved for marking the relation between a deleted record and a record which 
+                contains information formerly described in that<ref target="create"> deleted record</ref>.</p>
 
                 <p><code>lawd:hasAttestation</code> is used to say that a named entity, a person, a
                     place, a textual unit is attested in a textual unit or in a manuscript or one of
