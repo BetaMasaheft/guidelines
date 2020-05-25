@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Create a new file</title>
+            <title>Create a new file, delete existing, deal with doublets</title>
             <author>Pietro Liuzzo</author>
          </titleStmt>
          <publicationStmt>
@@ -22,13 +22,59 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body xml:id="create">
 <div type="level1">
-        <p>If you have editors rights, you can create a file once logged in the application from the relevant page.</p>
+   <head>Create</head>
+        <p>If you have editors' rights, you can create a file once logged in the application from the relevant page.</p>
         <p>If you are not, ask to be added.</p>
         <p>You can always check the data and add in the folder called "new" correct and validating files which adhere to these guidelines, with one exception:
           <ref target="Works">Work</ref> records can only be created in the application, because their IDs become CAe identifiers.</p>
-        <p>Please follow the instructions given on the application after the creation of a new file with that procedure. After downloading and before commiting
+        <p>Please follow the instructions given on the application after the creation of a new file with that procedure. After downloading and before committing
          the new file, always open it in your editor to make sure that it is valid and, if necessary (which it nearly always is!), edit it.</p>
 </div>
+         <div type="level1">
+            <head>Doublets</head>
+            <p>It can happen that doublets are identified. This happens especially when Textual Units are created without enough disambiguation information
+            or when one same manuscript is entered in the system from different sources without prior knowledge 
+            and due diligence to identify the already existing record. It is however normal and will always happen.</p>
+            <p>If you identify a doublet, it is wise to deal with it in some way or another 
+            and it is often advisable to consult with other editors and collaborators about this, exactly 
+            because there may be reasons to have those different records.</p>
+            <p>
+               If it is clear that a record is superfluous, 
+               delete it, properly document this in the commit, make sure the deleted identifier is
+               not used elsewhere, update existing references,
+               but also add a relation in the record which survives, like the following.
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <relation 
+                     name="betmas:formerlyAlsoListedAs" 
+                     active="IDofthesurvivedrecord"
+                     passive="IDofthedeletedrecord"/>
+               </egXML>
+               If you delete more than one, the same can be said for each. If the deleted ID is requested
+               a redirect will fetch the surviving record.
+            </p>
+            <p>It may be also that in cases of doubt or for other reasons that the editors and collaborators will discuss
+            you want to keep the double record. In this case you can always use a <gi>relation</gi>
+               with <att>name</att> <code>skos:exactMatch</code>,  <code>skos:broadMatch</code> 
+               or <code>skos:closeMatch</code>. It will be even more useful than usual to give a <gi>desc</gi>
+               in your <gi>relation</gi>. No redirect will be produced in this case when one of the two is requested, 
+               the relations will be visualized, and in case of <code>skos:exactMatch</code> this will be with the header.</p>
+         </div>
+         <div type="level1">
+            <head>Delete</head>
+            <p>If you make a mistake, or find a doublet 
+               which needs to be cleaned up, or need 
+               to <ref target="definitionWorks">reorganize Textual Units</ref> by making one formerly independent 
+               part of another, you will delete a record. 
+            Doing so as you do normally, with a commit to the 
+            public repositories in GitHub, 
+            will add a value to a list of deleted records and if a 
+               <gi>relation</gi> with <att>name</att> 
+               <code>betmas:formerlyAlsoListedAs</code> 
+               is present in another record of which
+            the deleted one was a double, then requesting 
+            the deleted item will redirect to that record.
+            </p>
+         </div>
         </body>
         </text>
         </TEI>
