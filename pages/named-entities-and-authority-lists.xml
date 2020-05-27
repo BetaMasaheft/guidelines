@@ -42,7 +42,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
             vicaire en la paroisse de <placeName ref="wd:Q272084">Bourron</placeName>
 </egXML>
-         <p>(same for placeName and region)</p>
+         <p>(same for persName and region)</p>
          <p>To decide whether to create a new place record or not if in
          doubt, see the page on creating <ref target="newEntry">new records</ref>.</p>
          <p>
