@@ -156,6 +156,19 @@ title in the language of the original.</p>
       be given as a bibliographic reference in <gi>listBibl</gi>, while references to external sources such as the <ref target="https://corpuscoranicum.de/kontexte/uebersicht">Umwelttexte
     by Corpus Coranicum</ref>  can be given in a <gi>relation</gi> between the record and the external reference in
    <gi>listRelation</gi>, see below.</p>
+   <p>If there is a need to assign an external clavis ID to textparts of a work, this should be done within
+     <tag>div type="edition"</tag>. A Clavis ID should be assigned for each textpart inside <gi>listBible</gi>:</p>
+   <egXML xmlns="http://www.tei-c.org/ns/Examples">
+   <div type="textpart" xml:id="Theophilos2">
+                 <label>Extract from the 21st Festal letter (Graf 1937, 383)</label>
+                 <listBibl type="clavis">
+                    <bibl type="CPG">
+                       <ptr target="bm:CPG2"/>
+                       <citedRange unit="item">2589</citedRange>
+                    </bibl>
+                 </listBibl>
+              </div>
+    </egXML>
 </div>
 
 <div type="level2">
