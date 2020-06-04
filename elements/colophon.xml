@@ -19,6 +19,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </fileDesc>
       <revisionDesc>
          <change who="PL" when="2018-04-24">stub of page</change>
+         <change who="DR" when="2020-06-04">Added paragraph on the use of note</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -45,15 +46,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   colophon of a hagiographic manuscript from Tigray. </item>
   </list>
 
-See <ref target="ColophSupplTit">colophons, titles and supplications</ref>.
+See <ref target="ColophSupplTit">Colophons, titles and supplications</ref>.
 
 </p>
-            <p>inside any <gi>msItem</gi> in the description of the contents a
+            <p>Inside any <gi>msItem</gi> in the description of the contents a
                <gi>colophon</gi> with
                <att>xml:id</att> with value <val>coloph</val> can be used to enter
-               the text of the Colophon and a description. This will be
-               entered with a special element <gi>colophon</gi>
-               within the <gi>msItem</gi>
+               the text of the Colophon and a description. 
             </p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <colophon xml:lang="gez" xml:id="coloph1" >
@@ -76,6 +75,17 @@ See <ref target="ColophSupplTit">colophons, titles and supplications</ref>.
             <p>Translations of the colophon should occur in the translation of the manuscript transcription, if any, inside a <tag>div type='translations'</tag>.</p>
             <p>You can use <att>type</att> with values like
                 <q>subscription</q> as in <ref target="ESsmm003" type="BM">SMM-003</ref>.</p>
+            <p>Paragraphic information on the colophon can be entered inside <gi>colophon</gi> in a <gi>note</gi>, 
+            as in this example from <ref type="bm" target="DSEthiop7">DSEthiop7</ref>:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <colophon xml:id="coloph1" xml:lang="ti">
+                  <locus target="#73v"/>
+                  <note>Short colophon written in the main hand, mentioning only the day of the week (Tuesday),
+                     followed by a Tigrinya note stating that the manuscript was owned by <persName ref="PRS12557Barha"/>.</note>
+                  ተፈጸመ፡ በዕለተ፡ ሠሉስ፡ እዚ፡ መጽሐፍ፡ ናይ፡ <persName ref="PRS12557Barha">በርሄ</persName>፡ እዩ፡፡
+               </colophon>
+               
+            </egXML>
          </div>
       </body>
    </text>
