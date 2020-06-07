@@ -122,7 +122,8 @@ guidelines for
             </place>
 </egXML>
             <p>GN ID number should use a prefix "gn:".</p>
-
+            <p>Do not add <att>xml:lang</att> if you do not know the language in which the name is attested, 
+               prefer not to say anything instead of defaulting on a possibly untrue value.</p>
             <p>
                <att>type</att> contains a value from the
   <ref target="taxonomy">controlled
