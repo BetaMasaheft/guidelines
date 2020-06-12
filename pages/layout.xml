@@ -173,7 +173,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <item>Colon፡ (naṭǝb)</item>
             <item>Four dot asterisk/ Double colon ። (naqʷet/ arat naṭǝb)
             </item>
-            <item>Short line with dots above and below (Comma 1) [= obelus]: ፥ (säräz)</item>
+            <item>Short line with dots above and below (Comma 1) [= obelus]: ፥ (saraz)</item>
             <item>Colon with dashes above and below (Comma 2 / Enumeration sign 1): ፤</item>
             <item>Colon with dash above (Comma 3): ፣
             </item>
@@ -199,7 +199,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               <item>Doubled nine dot asterisk, with two lines in between ፨ === ፨</item>
               <item>(Three and more) nine dot asterisks: ፨ ፨ ፨ ፨ ፨</item>
               <item>(More than two) nine dot asterisks, connected with dashes: ፨ = = ፨ = = ፨ = = ፨ = = ፨ = = ፨</item>
-              <item>Doubled four dot asterisks, with/ without dashes in between (mǝˁǝraf): ።።, ። = = ።</item>
+                <item>Doubled four dot asterisks, with/ without dashes in between (mǝʿǝrāf): ።።, ። = = ።</item>
               <item>Three and more four dot asterisks ። ። ። ። ። ።</item>
               <item>More than two four dot asterisks, connected with dashes:
                 :: = = :: = = :: = = ::</item>
