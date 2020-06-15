@@ -171,7 +171,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <list type="ordered:arabic">
 
             <item>Colon፡ (naṭǝb)</item>
-            <item>Four dot asterisk/ Double colon ። (naqʷet/ arat naṭǝb)
+            <item>Four dot asterisk/ Double colon ። (naqʷet/ ʾarātt naṭǝb)
             </item>
             <item>Short line with dots above and below (Comma 1) [= obelus]: ፥ (saraz)</item>
             <item>Colon with dashes above and below (Comma 2 / Enumeration sign 1): ፤</item>
@@ -188,18 +188,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <p>II./III. Sentence and Section / Text dividers</p>
           <list type="ordered:arabic">
 
-            <item>Four dot asterisk / Double colon (naqʷet/ arat naṭǝb) ።
+            <item>Four dot asterisk / Double colon (naqʷet/ ʾarātt naṭǝb) ።
             </item>
             <item>Five dot asterisks
             </item>
             <item>Nine dot asterisk ፨:
               <list>
-                <item>Doubled nine dot asterisks, with/without dashes in between (mǝʿǝrāf): ፨፨,
+                <item>Doubled nine dot asterisks, with/without dashes in between (mǝʿrāf ): ፨፨,
                 ፨ = = ፨</item>
               <item>Doubled nine dot asterisk, with two lines in between ፨ === ፨</item>
               <item>(Three and more) nine dot asterisks: ፨ ፨ ፨ ፨ ፨</item>
               <item>(More than two) nine dot asterisks, connected with dashes: ፨ = = ፨ = = ፨ = = ፨ = = ፨ = = ፨</item>
-                <item>Doubled four dot asterisks, with/ without dashes in between (mǝʿǝrāf): ።።, ። = = ።</item>
+                <item>Doubled four dot asterisks, with/ without dashes in between (mǝʿrāf ): ።።, ። = = ።</item>
               <item>Three and more four dot asterisks ። ። ። ። ። ።</item>
               <item>More than two four dot asterisks, connected with dashes:
                 :: = = :: = = :: = = ::</item>
