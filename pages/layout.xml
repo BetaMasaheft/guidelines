@@ -20,6 +20,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <revisionDesc>
       <change who="PL" when="2018-07-20">splitted from Object Description</change>
       <change who="DR" when="2019-04-29">Updated structure, paragraph on punctuation</change>
+      <change who="ES" when="2020-06-12">Corrected spelling, added subtype dividers in the example to punctuation</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -151,13 +152,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
           <ab type="punctuation" subtype="Executed">more or less regularly</ab>
           <ab type="punctuation" subtype="Usage">not always logical</ab>
-          <ab type="punctuation">
-            <list>
-              <item xml:id="div1"> Dividers:</item>
-              <item xml:id="div2"> I. Colon; </item>
-              <item xml:id="div3"> II. Four dot asterisk; nine dot asterisk; five
+          <ab type="punctuation" subtype="Dividers">
+            <list>              
+              <item xml:id="div1"> I. Colon; </item>
+              <item xml:id="div2"> II. Four dot asterisk; nine dot asterisk; five
                 red and black dot vertical colon;</item>
-              <item xml:id="div4"> III. Double nine dot asterisks, with chain of
+              <item xml:id="div3"> III. Double nine dot asterisks, with chain of
                 black and red dots in between (e. g. <locus target="#15vb"
                   >15vb</locus>); three nine dot asterisks (e. g. <locus
                     target="#37ra">37ra</locus>).</item>
@@ -170,10 +170,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <p>I. Word dividers</p>
           <list type="ordered:arabic">
 
-            <item>Colon፡ (näṭǝb)</item>
-            <item>Four dot asterisk/ Double colon ። (näqwet/ arat näṭǝb)
+            <item>Colon፡ (naṭǝb)</item>
+            <item>Four dot asterisk/ Double colon ። (naqʷet/ ʾarātt naṭǝb)
             </item>
-            <item>Short line with dots above and below (Comma 1) [= obelus]: ፥ (säräz)</item>
+            <item>Short line with dots above and below (Comma 1) [= obelus]: ፥ (saraz)</item>
             <item>Colon with dashes above and below (Comma 2 / Enumeration sign 1): ፤</item>
             <item>Colon with dash above (Comma 3): ፣
             </item>
@@ -188,18 +188,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <p>II./III. Sentence and Section / Text dividers</p>
           <list type="ordered:arabic">
 
-            <item>Four dot asterisk / Double colon (näqwet/ arat näṭǝb) ።
+            <item>Four dot asterisk / Double colon (naqʷet/ ʾarātt naṭǝb) ።
             </item>
             <item>Five dot asterisks
             </item>
             <item>Nine dot asterisk ፨:
               <list>
-              <item>Doubled nine dot asterisks, with/without dashes in between (mǝˁǝraf): ፨፨,
+                <item>Doubled nine dot asterisks, with/without dashes in between (mǝʿrāf ): ፨፨,
                 ፨ = = ፨</item>
               <item>Doubled nine dot asterisk, with two lines in between ፨ === ፨</item>
               <item>(Three and more) nine dot asterisks: ፨ ፨ ፨ ፨ ፨</item>
               <item>(More than two) nine dot asterisks, connected with dashes: ፨ = = ፨ = = ፨ = = ፨ = = ፨ = = ፨</item>
-              <item>Doubled four dot asterisks, with/ without dashes in between (mǝˁǝraf): ።።, ። = = ።</item>
+                <item>Doubled four dot asterisks, with/ without dashes in between (mǝʿrāf ): ።።, ። = = ።</item>
               <item>Three and more four dot asterisks ። ። ። ። ። ።</item>
               <item>More than two four dot asterisks, connected with dashes:
                 :: = = :: = = :: = = ::</item>
@@ -221,7 +221,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <item>Nine dot asterisks and chains of (black / red) dots in between: ፨ ������� ፨ �������������� ፨
             </item>
             <item>Nine dot asterisks and chains of black and red right-pointing chevrons in between: ፨ >>>>>> ፨ >>>>>> ፨ >>>>>>>፨</item>
-            <item>X-shape sign (with dashes above and below) (MQM-002).</item>
+            <item>X-shape sign (with dashes above and below) (<ref type="bm" target="ESmqm002">MQM-002</ref>).</item>
           </list>
 
 <p>Others</p>
