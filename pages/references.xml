@@ -17,7 +17,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change> 
+         <change who="PL" when="2020-06-16">introduced text and example for referencing 
+         based on DTS navigation and document support</change>     
+      </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="references">
@@ -40,7 +45,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <p>this happens also in <ref target="#q14">the final quire</ref></p>
 </egXML>
          <p>This second method preserves your text and creates a link. However, please note that multiple
-    references will be splitted in several links, so having something
+    references will be split in several links, so having something
     like</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <p>this happens also in <ref target="#q14 #q15">the final quires</ref></p>
@@ -76,6 +81,135 @@ This manuscript is in the same hand as <ref type="hand" corresp="ESap002#h2"/>
          <p>Please specify the <att>type</att> for each
     reference. Allowed values are encoded in the schema.</p>
 </div>
+         
+         <div type="level2">
+            <head>References to text passages</head>
+            <p>You may use references to parts of a text, in some cases, like <gi>locus</gi>, 
+               also when we do not yet have
+               this text transcription at all. These references are 
+               valuable information connecting to a real word artefact.
+               However, for these references to be resolvable to a fragment of text, 
+               this text needs to be present
+               and for all the cases in which a reference can be constructed 
+               but there is no text, at least this 
+               structure must be declared by encoding it. So, if you change 
+               the structure of a text edition, 
+               translation or transcription, please make sure that any pointer to that is still valid. 
+               For example, you
+               decide to add a <gi>div</gi> in between your <gi>div</gi> with <att>type</att> 
+               edition and a series of previously existing <gi>div</gi>s. You are
+               also now making any reference to this invalid, and you need to fix it.
+            </p>
+            <div type="level3">
+               <head>General Structure of references</head>
+               
+               <p><code>ID_(ED|TR)_(@xml:id).1.2.3</code></p>
+               <p>This is made of three main parts.
+                  The first is separated from the second by <q>_</q> .
+                  the second is separated from the third by <q>.</q>. 
+               While the first part is also the main ID of the record, the second part is mapped to
+               a parameter "edition", which is implementation specific, while the last part is mapped to
+                  <ref target="https://distributed-text-services.github.io/specifications/">Distributed Text Services</ref> 
+                  navigation and document parameters <code>ref</code>, <code>start</code> and <code>end</code> and are 
+                  resolved in the application based on our implementation of the specification, which is surfaced in the text view.</p>
+               <p>The following section provide details on each part of this references.</p>
+               <div type="level4">
+                  <head>First part (identifier)</head>
+               <p><code>ID</code></p>
+                  <p>This is the ID of the manuscript or Textual unit, <ref target="entities-id-structure">as normally used</ref>.
+               Anchors are inconsistent with the aim of this structured referencing system and alternative to it. 
+               The following example is what is discussed here, as a pointer to a specific passage in the text TUid123 at a subdivision named 1 which is child of another subdivision named 1.
+               if could be a verse in a chapter or a chapter in a book.</p>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples"><ref type="work" corresp="TUid123.1.1"/></egXML>
+                     
+                  <p>Please note the difference between this reference, and the more generic reference as discussed above
+                  to an anchor (the <att>xml:id</att> on an element which is unique in that file).</p>
+                     
+               </div>
+               
+               <div type="level4">
+                  <head>Second part (editions transcriptions and translations)</head>
+              <p><code> _(ED|TR)_(@xml:id)</code></p>
+              <p>This second, optional part of a reference 
+                 identifies the translation or edition, with its type, 
+                 which is ED for edition and TR for translation and eventually, 
+                 after the second underscore
+               the @xml:id of the edition/translation, which is especially important if there are more than one edition or translation.
+               If this section of the reference is not provided, the default is <tag>div[@type='edition']</tag>.</p>
+                  <p>For example, at the time of writing 
+                     <ref target="LIT1758Lefafa" type="BM">Lǝfāfa ṣǝdǝq</ref> has two <tag>div[@type='edition']</tag>, one with and one without <att>xml:id</att>.
+               <code>LIT1758Lefafa_ED_</code> can be used for the edition in 
+                  the <tag>div[@type='edition']</tag> without <att>xml:id</att>
+               <code>LIT1758Lefafa_ED_editionBudge</code> for the edition in 
+                     the <gi>div</gi> with a <att>xml:id</att></p>
+              <p>It is important that there are not 
+               two or more <gi>div</gi> of the same type without 
+                     an <att>xml:id</att> to distinguish them.
+               </p>
+                  <p>If I want to point to the translation of the
+                     <ref target="LIT2170Peripl" type="BM">Periplus of the 
+                        Erythraean Sea</ref>, which is one, even if it had an <att>xml:id</att> 
+                     I can use <code>LIT2170Peripl_TR_</code></p>
+               <p>For these records, if no edition is specified, 
+                  all available references (i.e. double or triple)
+               will be valid references and will be returned.</p>
+               </div>
+              
+               <div type="level4">
+                  <head>Third part (reference)</head>
+               
+               <p>This part, introduced by a <q>.</q> is a 
+               reference to a specific passage within the selected text and edition/translation
+               and can be a specific
+               reference to a passage or a range.
+               each level is separated by a dot. 
+               Levels of the citations depend on the encoded text, they are not fixed, each position
+               in the reference is only relevant to that text and how it is encoded and thus
+               structured. <gi>div</gi>, <gi>l</gi>, <gi>pb</gi>, <gi>cb</gi> and <gi>lb</gi>
+                  are the structuring elements. <gi>div</gi>s can be nested and
+                  each nested level  will be a citation level. <gi>pb</gi>, <gi>cb</gi> and <gi>lb</gi>
+                  are all empty elements whose hierarchy is only dependent on their position, i.e. a column of a page
+                  starts at the <gi>cb</gi> which occurs after that <gi>pb</gi>, logically.</p>
+               
+               <p>The levels in this text reference 
+                  can be constructed as a series sub references, one for
+               each level is separated by a dot, e.g. 1.1. The value for each level is extracted from
+               <list>
+                  <item>a <att>n</att></item>
+                  <item>a <att>xml:id</att></item>
+                  <item>a <att>corresp</att></item>
+                  <item>a concatenation of <att>subtype</att> and <att>n</att>
+               </item></list>
+               </p>
+                  <p>the total number of levels should not be greater than the citation depth, that is the
+                     number of nested countable structures. If there is a <gi>div</gi> with <gi>lb</gi>s in it only,
+                     I will only have 2 levels, I cannot point to 1.1.1, because the last level of my reference will not match anything.
+             </p>
+                  <p>
+                     For <gi>pb</gi> support for multiple citations structures exists, like in
+                     the following example from <ref target="LIT2170Peripl" type="BM">Periplus of the 
+                        Erythraean Sea</ref>
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <pb n="1" corresp="#frisk"/>
+                        <pb n="51" corresp="#casson"/>
+                        <pb n="257" corresp="#mueller"/>
+                        <pb n="9r" corresp="#L"/>
+                     </egXML>
+                     can be pointed to and 
+                     retrieved as <code>1.1[frisk]</code>, <code>1.51[casson]</code>, 
+                     <code>1.257[mueller]</code>, <code>1.9r[L]</code>
+                     as far as the nodes are there and there is a corresponding 
+                     bibliography item with <att>xml:id</att>. 
+                    </p>
+               </div>
+            </div>
+            <div type="level3">
+               <p>More detailed information and examples are available in the following two pages.</p>
+             <list>
+               <item><ref target="referencing-the-manuscript">Adding precise references to places in the manuscript transcription</ref></item>
+               <item><ref target="referencing-the-text"/>Adding precise references to places in text editions</item>
+            </list></div>
+         </div>
 <div  type="level2">
   <head>External links</head>
     <p>You can also use <att>target</att> to point to
@@ -85,37 +219,6 @@ starting with http.</p>
     permalink in the metadata.</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
  <ref type="mss" target="https://w3id.org/vhmml/readingRoom/view/133001"/>
-</egXML>
-</div>
-<div type="level2">
-  <head>Canonical text citations and quotations in text</head>
-         <p>For citations like Matthew 14, 3, use <gi>ref</gi> with a <att>cRef</att> containing
-    the URN which you can get from the Perseus catalogue searching for the
-    passage. This will link to the Greek text and should therefore only be used when it is actually the Greek text that is intended.</p>
-         <egXML xmlns="http://www.tei-c.org/ns/Examples">
- <ref cRef="urn:cts:greekLit:tlg0031.tlg001.perseus-grc1:14.3">Matthew 14, 3</ref>
-</egXML>
-         <p>You can also point to our texts, for example the Ethiopic text of Numbers 21, 8 like
-    this:</p>
-         <egXML xmlns="http://www.tei-c.org/ns/Examples">
- <ref cRef="betmas:LIT2075Number:21.8">Numbers 21:8</ref>
-</egXML>
-         <p>To mark up a passage in the text which is a literal quotation of
-    another text you might use a <gi>cit</gi> containing a <gi>quote</gi> and the above <gi>ref</gi>
-  </p>
-  <p>please note the difference! In this case we say that the passage marked is a quotation of another text,
-    whilest ref is used here and there only to encode the actual canonical reference.</p>
-         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<cit>
-    <quote xml:lang="gez">
-         ለሙሴ᎓ ግበር᎓ ለከ᎓ አርዌ᎓ ምድር᎓ ዘብረት᎓ ኵሉ᎓ ዘነሰኮ᎓ ይርአይ᎓ ኪያሁ᎓ ወይሕየው᎓ ኪዮስ᎓
-    </quote>
-    <ref cRef="betmas:LIT2075Number:21.8">Numbers 21:8</ref>
-</cit>
-</egXML>
-<p>The following example of markup is confusing and should be avoided as it claims that the content of the ref element is a reference, while it is a quote.</p>
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-ለሙሴ᎓ <ref cRef="betmas:LIT2075Number:21.8">ግበር᎓ ለከ᎓ አርዌ᎓ ምድር᎓ ዘብረት᎓ ኵሉ᎓ ዘነሰኮ᎓ ይርአይ᎓ ኪያሁ᎓ ወይሕየው</ref>᎓ ኪዮስ
 </egXML>
 </div>
       </body>
