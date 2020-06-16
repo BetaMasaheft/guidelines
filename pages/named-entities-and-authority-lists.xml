@@ -163,7 +163,7 @@ avoid entirely to provide an alternative identification.</p>
    Ethnonyms, which have identifiers inherited from the Encyclopaedia Aethiopica Indexes
    prefixed with ETH can be used as well.
    If you are annotating an occurrence of the name of a people or group, you can use these 
-   in <gi>persName</gi>, while meeting an occurrence of a refernce to the land of a certain people, you may use 
+   in <gi>persName</gi>, while meeting an occurrence of a reference to the land of a certain people, you may use 
    <gi>placeName</gi>.
    
 </p>
