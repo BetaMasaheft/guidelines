@@ -159,7 +159,22 @@ avoid entirely to provide an alternative identification.</p>
   Ἀγγαβὲ
 </placeName>
 </egXML>
-
+<p>
+   Ethnonyms, which have identifiers inherited from the Encyclopaedia Aethiopica Indexes
+   prefixed with ETH can be used as well.
+   If you are annotating an occurrence of the name of a people or group, you can use these 
+   in <gi>persName</gi>, while meeting an occurrence of a reference to the land of a certain people, you may use 
+   <gi>placeName</gi>.
+   
+</p>
+            <p>For an example of use as "land of" see the following example from <ref type="BM" target="in LIT5019MonumentumAdulitanum2">Monumentum Adulitanum</ref>.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <placeName ref="ETH1085Aggabe" xml:id="aggabe"/> 
+            </egXML>
+            <p>For an example of use as "people" see the following example from <ref type="BM" target="in LOC1311AksumS">ʾAksum Ṣǝyon</ref>.</p>
+            <egXML  xmlns="http://www.tei-c.org/ns/Examples">
+               <persName ref="ETH1973Oromo">Oromo</persName>
+            </egXML>
        </div>
          </div>
       </body>
