@@ -76,6 +76,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <item><ref target="identifiersStructure">Structure of the Identifiers in a Manuscript record</ref></item>
                <item><ref target="manuscriptDescription">Description of the Manuscript</ref></item>
                <item><ref target="text-encoding">Text encoding</ref></item>
+               <item><ref target="references">References</ref></item>
                <item><ref target="syntaxe">Stratigraphic description (La Syntaxe du Codex)</ref></item>
                <item><ref target="images">Images</ref></item>
                <item><ref target="inscriptions">Inscriptions</ref></item>

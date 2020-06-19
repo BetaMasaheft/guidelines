@@ -208,7 +208,13 @@ This manuscript is in the same hand as <ref type="hand" corresp="ESap002#h2"/>
              <list>
                <item><ref target="referencing-the-manuscript">Adding precise references to places in the manuscript transcription</ref></item>
                <item><ref target="referencing-the-text"/>Adding precise references to places in text editions</item>
-            </list></div>
+            </list>
+            <p>A note on the way in which the Beta Masaheft application uses these references, 
+            which is entirely application dependent. The structure described above is mapped to 
+            parameters, so that your request for https://betamasaheft.eu/LIT1758Lefafa_ED_editionBudge.2 
+            is actually redirected to https://betamasaheft.eu/works/LIT1758Lefafa/text?edition=_ED_editionBudge&amp;ref=2
+            </p>
+            </div>
          </div>
 <div  type="level2">
   <head>External links</head>
