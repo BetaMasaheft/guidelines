@@ -110,6 +110,10 @@ taken from <locus target="#6r"/>.
                      <p>You can also specify which leaves are blank, adding a
             <gi>locus</gi> immediately after the relative
             measure.</p>
+                <p>To record the presence of protective leaves, please use a syntax involving only arabic numerals, like 3+69+1 to indicate that there are three guard leaves at the beginning and another one at the end.</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <measure unit="leaf">3+69+1</measure>
+                </egXML>
                 <p>To indicate the number of strips sewn together to produce a scroll, you can add a <gi>measure</gi> in a <gi>note</gi>, as in <ref target="BDLaethf10" type="bm">BDLaethf10</ref>:
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                     <extent>
