@@ -78,7 +78,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <item><ref target="text-encoding">Text encoding</ref></item>
                <item><ref target="syntaxe">Stratigraphic description (La Syntaxe du Codex)</ref></item>
                <item><ref target="images">Images</ref></item>
+            </list>
+            <p>Some more specific types of written artefacts,  </p>
+            <list>
                <item><ref target="inscriptions">Inscriptions</ref></item>
+               <item><ref target="scrolls">Scrolls</ref></item>
                <item><ref target="letters">Letters</ref></item>
             </list>
       </div>

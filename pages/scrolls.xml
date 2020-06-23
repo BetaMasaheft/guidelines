@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Scrolls</title>
+                <author>Pietro Liuzzo</author>
+            </titleStmt>
+            <publicationStmt>
+                <p/>
+            </publicationStmt>
+            <sourceDesc>
+                <p>encodedd in TEI</p>
+            </sourceDesc>
+        </fileDesc>       
+        <revisionDesc>       
+            <change who="PL" when="2020-06-22">Created page</change>     
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body xml:id="scrolls">
+            <div>
+                <p>We treat Scrolls in the same way as we do with <ref target="manuscripts">Manuscripts</ref> and any other written artefacts,
+                    and only add in <gi>objectDesc</gi> the value Scroll for <att>form</att>.</p>
+               <p>when structuring the text transcription of your scroll 
+                   for <ref target="references">referencing</ref> you may consider
+               to use specific <gi>div</gi>s for recto and verso.</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <div type="edition">
+                        <div type="textpart" subtype="recto">
+                            ...
+                        </div>
+                        <div type="textpart" subtype="verso">
+                            ...
+                        </div>
+                    </div>
+                </egXML>
+                <p>If you have <gi>lb</gi> inside these divisions you will of course be able to use them
+                as a referencing structure.</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <ref cRef="MyScroll1.recto.12"/>
+                </egXML>
+                <p>The same method can be used if desired to encode parchment strips, however it is likely that
+                hierarchies problems will arise, it is thus advisable to use 
+                a simple <tag>milestone unit="parchmentStip"</tag> with <att>n</att>. 
+                    This will not become a referencing structure in the BM application
+                but will allow you to encode in any point of the text where this is 
+                convenient the occurrence of this change. While a page break occurs only in one point, this 
+                type of change, as the one of block of stone for a running 
+                architectural inscription for example, are likely to occur several times in one transcription.
+                You will have where convenient this <gi>milestone</gi> as many times as needed (with the same <att>n</att>).
+                </p>
+                <p>It is generally enough to encode the text of the inscription in the file,
+                    but there are cases in which you might need to separate the content from the
+                    support description, in which case, simply use a work record for the content
+                    and place there the edition of the text.</p>
+            </div>
+        </body>
+    </text>
+</TEI>
