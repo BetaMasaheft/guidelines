@@ -30,7 +30,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <p> A <gi>locus</gi> element can be used almost everywhere (see content model) to indicate
             the physical location of a content item or other unit of interest which can be delimited
             with reference to a defined portion of text. <gi>locus</gi> contains always either two
-            attributes <att>from</att> and <gi>to</gi> or am attribute <att>target</att> with one or
+            attributes <att>from</att> and <gi>to</gi> or the attribute <att>target</att> with one or
             more references listed which are not a range. Please do not use other numbering systems
             or spaces within these attributes.</p>
 
@@ -39,7 +39,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             text of the manuscript using references to <gi>pb</gi>, <gi>cb</gi> and <gi>lb</gi>.
             Although for these to be resolvable the text needs to be present and encoded, their
             semantic value with reference to the selected passage remains even when the actual
-            elements and text is not present and the reference is intended to the material object.
+            elements (<gi>pb</gi>, <gi>cb</gi> and <gi>lb</gi>) and text are not present and the reference is intended to the material object.
             The following are possible references: <list type="ordered">
                <item>a folio, e.g. <code>1</code> (<tag>div[@type='folio'][@n]</tag>)</item>
                <item>a page, e.g. <code>1r </code>(<tag>pb[@n]</tag>)</item>
@@ -47,11 +47,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <item>a line, e.g. <code>2.1</code>
                      (<tag>div[@type='folio'][@n]</tag>,<tag>lb[@n]</tag>). Note that this is the
                   same very generic referencing system of any numbered division declared in the
-                  document, if can refer to a line in a folio, but also to a chapter in a book or a
+                  document, it can refer to a line in a folio, but also to a chapter in a book or a
                   day in a month, depending on what is declared in the file.</item>
-               <item>a line, e.g. <code>2</code> (<tag>lb[@n]</tag>), if the folio structure is not
+               <item>A line, e.g. <code>2</code> (<tag>lb[@n]</tag>), if the folio structure is not
                   present.</item>
-               <item>a line, eventually in a specific page and column, e.g. <code>2ra1</code>
+               <item>A line, eventually in a specific page and column, e.g. <code>2ra1</code>
                      (<tag>pb[@n]</tag>,<tag>cb[@n]</tag>, <tag>lb[@n]</tag>)</item>
             </list> This assumes consistent numbering.</p>
          <p> It is possible to use the same syntax for a reference to a page in one of more defined
@@ -76,7 +76,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <p>NOT <tag>locus from="20r" to="unknown"</tag>
          </p>
          <p>A manuscript's existing foliation should not be shifted - it is possible to point to
-            folia not included in the foliation by assigning individual leave numbers. This will
+            folia not included in the foliation by assigning individual leaf numbers. This will
             lead to the inability to calculate the foliation, but the semantic will be valid and if
             encoded the reference may be resolvable.</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples"> Two folios between <locus target="#66"/>
@@ -89,7 +89,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <p>While <gi>l</gi>, <gi>lb</gi>, <gi>pb</gi> and <gi>cb</gi> all need to have
             <att>n</att>, <gi>div</gi>s not always have this attribute and sometimes have
                <att>corresp</att>, sometimes <att>subtype</att> or an <att>xml:id</att> or a
-            combination of these. For canonical referencing of structures in the text encode with
+            combination of these. For canonical referencing of structures in the text encoded with
                <gi>div</gi>s, any of the basic values or combinations detailed in <ref
                target="references">referencing</ref> can be used.</p>
 
@@ -102,35 +102,35 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <code>BLorient718.1ra1</code> or <code>BLorient718.1.1ra1</code>, but note the
             different semantic flavouring.</p>
          <p>In real life daily encoding fun, you need to either use the existing references as
-            offered in the /text view or in the DTS Navigation API, or know the structure of the XML
-            to build one option which you like more and is valid according go the guidance offered
+            offered in the text view or in the DTS Navigation API, or know the structure of the XML
+            to build one option which you like more and is valid according to the guidance offered
             here. The canonical reference displayed in the text view will be the better one
-            available at the time of loading the page. Here are some more examples of this
-            references <list>
-               <item><code>BLorient718.1</code> gives the folio 1</item>
-               <item><code>BLorient718.1r</code> gives the recto of folio 1</item>
-               <item><code>BLorient718.1ra</code> gives column a on the recto of folio 1</item>
+            available at the time of loading the page. Here are some more examples of these
+            references:<list>
+               <item><code>BLorient718.1</code> gives the folio 1.</item>
+               <item><code>BLorient718.1r</code> gives the recto of folio 1.</item>
+               <item><code>BLorient718.1ra</code> gives column a on the recto of folio 1.</item>
                <item><code>BLorient718.1ra1</code> gives the first line of column a on the recto of folio
-                  1</item>
+                  1.</item>
                <item><code>BLorient718.1ra1-1ra3</code> gives line 1 to 3 of column a on the recto of folio
-                  1</item>
+                  1.</item>
                <item><code>BLorient718.1ra1-2vb6</code> gives from line 1 of column a on the recto of folio 1 to
                   line 6 of column b on the verso of folio 2. <code>BLorient718.1.1</code> can be used to point
-                  to a line, if this is uniquely identified with <att>n</att></item>
+                  to a line, if this is uniquely identified with <att>n</att>.</item>
                <item><code>EMIP01859.month1.day1</code> is also a valid reference and will fetch the element in
                   the manuscript transcription associated with the specified structure of type and
-                  names </item>
+                  names. </item>
                <item><code>EMIP01859.1.1.1</code> is also a valid reference and will fetch the nested structured
-                  marked with n </item>
+                  marked with n. </item>
                <item><code>EMIP01859.month1.day1.NAR0019SBarkisos</code> 
                   is also a valid reference and will fetch
                   the element in the manuscript transcription associated with the specified
                   narrative unit. If you want to fetch passages connected to a narrative unit
-                  without specifying the manuscript, add the narrative unit id instead </item>
+                  without specifying the manuscript, add the narrative unit ID instead. </item>
                <item><code>EMIP01859.NAR0019SBarkisos</code> is also a valid reference and will fetch the element
                   in the manuscript transcription associated with the specified narrative unit. If
                   you want to fetch passages connected to a narrative unit without specifying the
-                  manuscript, add the narrative unit id instead </item>
+                  manuscript, add the narrative unit ID instead. </item>
                <item><code>IVEf921</code> is a letter only encoded into a <tag>div type="edition"</tag>. You can still point to a line in it
                   by saying IVEf921.1 but this will not be resolvable. 
                   The moment you add a <gi>pb</gi> or a <gi>lb</gi>,

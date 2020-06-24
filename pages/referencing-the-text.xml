@@ -43,10 +43,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <ref cRef="betmas:LIT2075Number.21.8">Numbers 21:8</ref>
                 </egXML>
                 <p>To mark up a passage in the text which is a literal quotation of another text you
-                    might use a <gi>cit</gi> containing a <gi>quote</gi> and the above <gi>ref</gi>
+                    might use a <gi>cit</gi> containing a <gi>quote</gi> and the above <gi>ref</gi>.
                 </p>
-                <p>please note the difference! In this case we say that the passage marked is a
-                    quotation of another text, whilest ref is used here and there only to encode the
+                <p>Please note the difference! In this case we say that the passage marked is a
+                    quotation of another text, whilst ref is used here and there only to encode the
                     actual canonical reference.</p>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                     <cit>
@@ -71,9 +71,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 (<att>xml:id</att>.<att>xml:id</att>)</item>
                         </list>
                     </p>
-                    <p>It is however possible to use these references, in whichever format is
+                    <p>It is  possible to use these references in whichever format is
                         allowed and can be navigated in the text view anywhere within
-                            <att>cRef</att>, where they will need the ID of the manuscript or work </p>
+                            <att>cRef</att>, where they will need the ID of the manuscript or work: </p>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <ref cRef="betmas:TUid123.1.2.3"/>
                         <ref cRef="betmas:MSid123_ED_myxmlid.sec1.col2.3"/>
@@ -154,13 +154,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <item>etc.</item>
                     </list>
                     </p>
-<p>Yes, you cannot refer validly, in a nested structure to a line without referring to entire passage reference structure, 
+<p>You cannot refer validly, in a nested structure, to a line without referring to an entire passage reference structure, 
 for the same reason for which giving a reference to Gen l.1 is incorrect.</p>
-                    <p>The Beta maṣāḥǝft web application will produce in the /text view a 
+                    <p>The Beta maṣāḥǝft web application will produce in the text view a 
                         list based on the DTS Navigation API of all available 
                         references for a given level of browsing, so, if you are not sure and there is some text structure, you can always use those. </p>
-
-
 
                 </div>
             </div>
