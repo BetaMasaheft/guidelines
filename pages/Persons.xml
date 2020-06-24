@@ -94,7 +94,7 @@ guidelines for
 <p>Do not add <att>xml:lang</att> if you do not know the language in which the name is attested, 
    prefer not to say anything instead of defaulting on a possibly untrue value.</p>
                <p>So, any proper name reported in Geez should receive the attribute xml:lang="gez", 
-                  though it might be of Arabic, Amharic, Oromo, or whatever origin. Ethymology can be discussed in the record.</p>
+                  though it might be of Arabic, Amharic, Oromo, or whatever origin. Etymology can be discussed in the record.</p>
                <p>
                   This is of course redundant when the <gi>persName</gi> you assign this attribute would be already the one picked by the titles rules, which are in order of
                   priority:
