@@ -84,17 +84,22 @@ This manuscript is in the same hand as <ref type="hand" corresp="ESap002#h2"/>
          
          <div type="level2">
             <head>References to text passages</head>
-            <p>In manuscript and work records, you may use references to parts of a text, like <gi>locus</gi>, 
+            <p>In manuscript and work records, you 
+               may use references to parts of a text, like <gi>locus</gi>, 
                also when we do not yet have
                this text transcription at all. These references are 
-               valuable information connecting to a real word artefact.
-               However, for these references to be resolvable to a fragment of text, 
+               valuable information connecting to a real word artefact. You do not need to have somewhere 
+               a <gi>div</gi> or any other element, you are actually adding a structured string which refers to
+               the actual real life object, as you would do in any text.
+               However, for these references to be resolvable  to a fragment of text 
+               (i.e. for you to be able to let the machine retrieve that piece of text you are referring to), 
                this text needs to be present
                and for all the cases in which a reference can be constructed 
                but there is no text, at least the text's 
                structure must be declared by encoding it. So, if you change 
-               the structure of a text edition, 
-               translation or transcription, please make sure that any pointer to that is still valid. 
+               the structure of a text edition, translation or transcription which have made up (that is, it cannot have 
+               a real word resolution allowing you to go to folio 1 recto column b line 4 of the real object), 
+               please make sure that any pointer to that is still valid. 
                For example, you
                decide to add a <gi>div</gi> in between your <gi>div</gi> with <att>type</att> 
                edition and a series of previously existing <gi>div</gi>s. You are
@@ -105,13 +110,22 @@ This manuscript is in the same hand as <ref type="hand" corresp="ESap002#h2"/>
                
                <p><code>ID_(ED|TR)_(@xml:id).1.2.3</code></p>
                <p>This is made of three main parts.
-                  The first is separated from the second by <q>_</q> .
-                  the second is separated from the third by <q>.</q>. 
+                  The first part (ID) is separated from the second ((ED|TR)_(@xml:id)) by <q>_</q> .
+                  The second part is separated from the third (1.2.3) by <q>.</q>. 
                The first part is also the main ID of the record. The second part is mapped to
                a parameter "edition", which is implementation specific. The last part is mapped to
                   <ref target="https://distributed-text-services.github.io/specifications/">Distributed Text Services</ref> 
-                  navigation and document parameters <code>ref</code>, <code>start</code> and <code>end</code> and are 
-                  resolved in the application based on our implementation of the specification, which is surfaced in the text view.</p>
+                  navigation and document parameters <code>ref</code>, 
+                  <code>start</code> and <code>end</code> and are 
+                  resolved in the application (i.e. if you point your browser there, 
+                  it will return that passage precisely if available) based on our implementation 
+                  of the specification, which is surfaced in the text view.</p>
+               <p>You can have the first part of the reference alone, to point to the entire text,
+               or you can have a pointer to an edition (first and second part, e.g. TUid123text_TR_translation) 
+               or to a passage without specifying the edition
+               (first and third part, e.g. TUid123text.1.2.3) which will return as 
+               many versions as the editions (most of the time, one) 
+               or a reference to text, edition and passage with all three parts (e.g. TUid123text_TR_translation.1.2.3).</p>
                <p>The following section provides details on each part of these references.</p>
                <div type="level4">
                   <head>First part (identifier)</head>
