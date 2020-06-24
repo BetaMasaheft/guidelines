@@ -172,8 +172,8 @@ This manuscript is in the same hand as <ref type="hand" corresp="ESap002#h2"/>
                   starts at the <gi>cb</gi> which occurs after that <gi>pb</gi>.</p>
                
                <p>The levels in this text reference 
-                  can be constructed as a series of sub references, one for
-               each level is separated by a dot, e.g. 1.1. The value for each level is extracted from
+                  can be constructed as a series of sub references. Each
+                level is separated by a dot, e.g. 1.1. The value for each level is extracted from
                <list>
                   <item>a <att>n</att></item>
                   <item>a <att>xml:id</att></item>

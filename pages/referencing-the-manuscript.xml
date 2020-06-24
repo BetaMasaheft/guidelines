@@ -182,10 +182,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </egXML>
          </p>
 
-         <p>Some Manuscripts are paginated instead of being foliated. You will have in such cases
+         <p>Some manuscripts are paginated instead of being foliated. You will have in such cases
             most probably to be consistent and provide inside <gi>extent</gi> a <tag>measure
                unit="page"</tag>. This will then alter the behaviour of the visualization and use p.
-            a pp. instead of f. and ff. . However, the values you may enter inside <att>from</att>,
+            and pp. instead of f. and ff.. However, the values you may enter inside <att>from</att>,
                <att>to</att> or <att>target</att> are still the foliation references, so, 1v, not 2,
             2v, not 4.</p>
          <p>The markup in <gi>locus</gi> of a paginated manuscript will look like in the following
