@@ -7,7 +7,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Locus</title>
+            <title>Referencing parts of the manuscript</title>
             <author>Pietro Liuzzo</author>
          </titleStmt>
          <publicationStmt>
@@ -17,62 +17,187 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+         <change who="PL" when="2020-06-16">introduced text and example for referencing based on DTS
+            navigation and document support</change>
+      </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="referencing-the-manuscript">
-         <head>Locus</head>
-         <p>
-            <gi>locus</gi> element can be used almost
-    everywhere to indicate the physical location of an item. It contains
-    always the two attributes <att>from</att> and
-    <gi>to</gi>. Please do not use other numbering systems
-    or spaces within these attributes.</p>
-         <p/>
-         <p>When a line number is given, use:</p>
-         <list type="unordered">
-            <item>
-               <p>in case of an exact locus, line indicated by @n:
-        <tag>locus target="#1v" n="1"/</tag>
-               </p>
-            </item>
-            <item>
-               <p>in case of a range, lines indicated as a content :
-                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                     <locus from="1v" to="2ra">the text begins on 1v in line 1 and ends on 2ra in line 6 </locus></egXML>
-        OR with two <gi>locus</gi> elements:
-        <tag>locus from="134rb" n="11"</tag> <tag>locus to="135ra" n="28"</tag>
-               </p>
-            </item>
-         </list>
-         <p>A list of individual references at page level (without line
-    indication) can be given in a single <gi>layout</gi>
-    with a <att>target</att>
-         </p>
-         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<locus target="#28v #33r #49r #50v #55v #82r #82v #83r #83v #84v #85r"/>
-</egXML>
-         <p>Please DO NOT use unknown as a value for any of these attributes.
-    Simply do not enter the attribute if its value is not known.</p>
-         <egXML xmlns="http://www.tei-c.org/ns/Examples">
- <locus from="20r"/>
-</egXML>
-         <p>NOT
-    <tag>locus from="20r" to="unknown"</tag>
-         </p>
-         <p>A manuscript's existing foliation should not be shifted - it is
-    possible to point to folia not included in the foliation by
-    assigning individual leave numbers. This will lead to the inability
-    to calculate the foliation.</p>
-         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-Two folios between <locus target="#66"/> and <locus target="#67"/>, <locus target="#66i"/> and <locus target="#66ii"/>, are so badly mutilated that only small corners - each not containing more than fragments of 4 letters - are preserved which have not been taken into account for the foliation of the manuscript.
-</egXML>
+         <head>Referencing parts of the text</head>
+         <p> A <gi>locus</gi> element can be used almost everywhere (see content model) to indicate
+            the physical location of a content item or other unit of interest which can be delimited
+            with reference to a defined portion of text. <gi>locus</gi> contains always either two
+            attributes <att>from</att> and <gi>to</gi> or the attribute <att>target</att> with one or
+            more references listed which are not a range. Please do not use other numbering systems
+            or spaces within these attributes.</p>
 
-<p>Some Manuscripts are paginated instead of being foliated. You will have in such cases most probably to be consistent and provide inside <gi>extent</gi> a <tag>measure unit="page"</tag>. This will then alter the behaviour of the visualization and use p. a pp. instead of f. and ff. . However, the values you MIGHT enter inside <att>from</att>, <att>to</att> or <att>target</att> are still the foliation references, so, 1v, not 2, 2v, not 4.</p>
-<p>The locus markup of a paginated manuscript will look like in the following example</p>
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-<locus from="1ra" to="6vb">1-12</locus>
-</egXML>
+
+         <p>Beside the basic referencing structures (<gi>div</gi>) you may refer to parts of the
+            text of the manuscript using references to <gi>pb</gi>, <gi>cb</gi> and <gi>lb</gi>.
+            Although for these to be resolvable the text needs to be present and encoded, their
+            semantic value with reference to the selected passage remains even when the actual
+            elements (<gi>pb</gi>, <gi>cb</gi> and <gi>lb</gi>) and text are not present and the reference is intended to the material object.
+            The following are possible references: <list type="ordered">
+               <item>a folio, e.g. <code>1</code> (<tag>div[@type='folio'][@n]</tag>)</item>
+               <item>a page, e.g. <code>1r </code>(<tag>pb[@n]</tag>)</item>
+               <item>a column, e.g. <code>1va</code> (<tag>pb[@n]</tag>,<tag>cb[@n]</tag>)</item>
+               <item>a line, e.g. <code>2.1</code>
+                     (<tag>div[@type='folio'][@n]</tag>,<tag>lb[@n]</tag>). Note that this is the
+                  same very generic referencing system of any numbered division declared in the
+                  document, it can refer to a line in a folio, but also to a chapter in a book or a
+                  day in a month, depending on what is declared in the file.</item>
+               <item>A line, e.g. <code>2</code> (<tag>lb[@n]</tag>), if the folio structure is not
+                  present.</item>
+               <item>A line, eventually in a specific page and column, e.g. <code>2ra1</code>
+                     (<tag>pb[@n]</tag>,<tag>cb[@n]</tag>, <tag>lb[@n]</tag>)</item>
+            </list> This assumes consistent numbering.</p>
+         <p> It is possible to use the same syntax for a reference to a page in one of more defined
+            paging systems, e.g. based on different editions. e.g. <code>1[frisk]</code>
+               (<tag>pb[@n][@corresp]</tag>). </p>
+
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <locus from="1v1" to="2ra6">the text begins on 1v in line 1 and ends on 2ra in line 6
+            </locus>
+         </egXML>
+         <p>A list of individual references at page level (without line indication) can be given in
+               <att>target</att>
+         </p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <locus target="#28v #33r #49r #50v #55v #82r #82v #83r #83v #84v #85r"/>
+         </egXML>
+         <p>Please DO NOT use unknown as a value for any of these attributes. Simply do not enter
+            the attribute if its value is not known.</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <locus from="20r"/>
+         </egXML>
+         <p>NOT <tag>locus from="20r" to="unknown"</tag>
+         </p>
+         <p>A manuscript's existing foliation should not be shifted - it is possible to point to
+            folia not included in the foliation by assigning individual leaf numbers. This will
+            lead to the inability to calculate the foliation, but the semantic will be valid and if
+            encoded the reference may be resolvable.</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples"> Two folios between <locus target="#66"/>
+            and <locus target="#67"/>, <locus target="#66i"/> and <locus target="#66ii"/>, are so
+            badly mutilated that only small corners - each not containing more than fragments of 4
+            letters - are preserved which have not been taken into account for the foliation of the
+            manuscript. </egXML>
+
+
+         <p>While <gi>l</gi>, <gi>lb</gi>, <gi>pb</gi> and <gi>cb</gi> all need to have
+            <att>n</att>, <gi>div</gi>s not always have this attribute and sometimes have
+               <att>corresp</att>, sometimes <att>subtype</att> or an <att>xml:id</att> or a
+            combination of these. For canonical referencing of structures in the text encoded with
+               <gi>div</gi>s, any of the basic values or combinations detailed in <ref
+               target="references">referencing</ref> can be used.</p>
+
+         <p>This simply means, for example in the Beta maṣāḥǝft web application and related services
+            that the text view when listing available references to passages for EMIP01859, e.g. at
+            the third level of depth, will show <code>1.1.1</code> but you can use to refer to that
+            same passage a number or alternative references e.g.
+               <code>EMIP01859.month1.day1.NAR0019SBarkisos</code>, <code>EMIP01859.1.day1.1</code>,
+            etc. <code>BLorient718.1.1</code> can be used as an alternative to
+               <code>BLorient718.1ra1</code> or <code>BLorient718.1.1ra1</code>, but note the
+            different semantic flavouring.</p>
+         <p>In real life daily encoding fun, you need to either use the existing references as
+            offered in the text view or in the DTS Navigation API, or know the structure of the XML
+            to build one option which you like more and is valid according to the guidance offered
+            here. The canonical reference displayed in the text view will be the better one
+            available at the time of loading the page. Here are some more examples of these
+            references:<list>
+               <item><code>BLorient718.1</code> gives the folio 1.</item>
+               <item><code>BLorient718.1r</code> gives the recto of folio 1.</item>
+               <item><code>BLorient718.1ra</code> gives column a on the recto of folio 1.</item>
+               <item><code>BLorient718.1ra1</code> gives the first line of column a on the recto of folio
+                  1.</item>
+               <item><code>BLorient718.1ra1-1ra3</code> gives line 1 to 3 of column a on the recto of folio
+                  1.</item>
+               <item><code>BLorient718.1ra1-2vb6</code> gives from line 1 of column a on the recto of folio 1 to
+                  line 6 of column b on the verso of folio 2. <code>BLorient718.1.1</code> can be used to point
+                  to a line, if this is uniquely identified with <att>n</att>.</item>
+               <item><code>EMIP01859.month1.day1</code> is also a valid reference and will fetch the element in
+                  the manuscript transcription associated with the specified structure of type and
+                  names. </item>
+               <item><code>EMIP01859.1.1.1</code> is also a valid reference and will fetch the nested structured
+                  marked with n. </item>
+               <item><code>EMIP01859.month1.day1.NAR0019SBarkisos</code> 
+                  is also a valid reference and will fetch
+                  the element in the manuscript transcription associated with the specified
+                  narrative unit. If you want to fetch passages connected to a narrative unit
+                  without specifying the manuscript, add the narrative unit ID instead. </item>
+               <item><code>EMIP01859.NAR0019SBarkisos</code> is also a valid reference and will fetch the element
+                  in the manuscript transcription associated with the specified narrative unit. If
+                  you want to fetch passages connected to a narrative unit without specifying the
+                  manuscript, add the narrative unit ID instead. </item>
+               <item><code>IVEf921</code> is a letter only encoded into a <tag>div type="edition"</tag>. You can still point to a line in it
+                  by saying IVEf921.1 but this will not be resolvable. 
+                  The moment you add a <gi>pb</gi> or a <gi>lb</gi>,
+                  this will become resolvable and a request for that part of text will return that part of text.
+                  
+               </item>
+               <item><code>RIE193</code> is an inscription with <gi>div</gi>s. you can point to specific ones.</item>
+            </list></p>
+         <p>It is not possible to canonically reference a part of text transcribed e.g. in an <gi>incipit</gi> inside
+         <gi>msContents</gi>, but don't panic, you still have your <att>xml:id</att>! Anchors, 
+            informally referred to as "sub-IDs" are a perfectly valid, standard way of referring to an element with an
+         <att>xml:id</att>, but they are not canonical citation of the structure of the text in one of its
+         manifestations. With a canonical reference you are referring to the text in one of its abstractions
+         using a canonical model, which you may have encoded; with an anchor pointing to an 
+            <att>xml:id</att> you are referring to that specific element node in an XML tree.</p>
+         <p> Inside locus these can be used to refer internally to a piece of text transcription.
+            this use in <att>from</att> <att>to</att> and <att>target</att> follows the 
+            usual conventions, 
+            i.e. does not need the
+            manuscript ID.</p> 
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <locus from="1r" to="2ra" facs="004"/>
+               <locus from="1ra1" to="34vb4"/>
+               <locus target="#1ra1 #34vb4"/>
+               <locus from="1r" to="2ra" corresp="#fol1"/>
+            </egXML> 
+            
+           <p>You may still wish to use your own text for a reference</p>
+
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <locus from="1ra1" to="34vb4">1ra up until the fourth line of column b on the verso of
+               folio 34</locus>
+            <locus from="1r11" to="1r18">f. 1r lines 11-18</locus>
+         </egXML>
+
+         <p>If <gi>locus</gi> is not for you, 
+            or you do not want to use a folio/page/column/line reference
+            string, for example because you have an inscription or a scroll or a shred of pottery,
+            you may opt for a simple <gi>ref</gi>, where you use the 
+            reference in full according to the
+            structure you have encoded in the file. 
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <ref type="mss" corresp="MSid123.section1.column2.text3.4-5"/>
+            </egXML> 
+            For a formal citation of a passage, you may use a  canonical reference in <att>cRef</att> .
+            <egXML
+               xmlns="http://www.tei-c.org/ns/Examples">
+               <ref cRef="betmas:MSid123.section1.column2.text3.4-5"/>
+            </egXML>
+         </p>
+
+         <p>Some manuscripts are paginated instead of being foliated. You will have in such cases
+            most probably to be consistent and provide inside <gi>extent</gi> a <tag>measure
+               unit="page"</tag>. This will then alter the behaviour of the visualization and use p.
+            and pp. instead of f. and ff.. However, the values you may enter inside <att>from</att>,
+               <att>to</att> or <att>target</att> are still the foliation references, so, 1v, not 2,
+            2v, not 4.</p>
+         <p>The markup in <gi>locus</gi> of a paginated manuscript will look like in the following
+            example</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <locus from="1ra" to="6vb">1-12</locus>
+         </egXML>
+         <p>However, you may use the equivalent markup for a generic reference 
+            instead (see also <ref target="referencing-the-text">references to text passages</ref>).</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <ref corresp="PaginatedMSid123.1-12">1-12</ref>
+         </egXML>
       </body>
    </text>
 </TEI>

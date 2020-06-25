@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>References to a text and its structure</title>
+                <author>Pietro Liuzzo</author>
+            </titleStmt>
+            <publicationStmt>
+                <p/>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
+                <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+            <change who="PL" when="2020-06-16">introduced text and example for referencing based on
+                DTS navigation and document support</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body xml:id="referencing-the-text">
+
+            <div type="level2">
+                <head>Canonical text citations and quotations in text</head>
+                <p>For citations like Matthew 14, 3, use <gi>ref</gi> with a <att>cRef</att>
+                    containing the URN which you can get from the Perseus catalogue searching for
+                    the passage. This will link to the Greek text and should therefore only be used
+                    when it is actually the Greek text that is intended.</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <ref cRef="urn:cts:greekLit:tlg0031.tlg001.perseus-grc1:14.3">Matthew 14,
+                        3</ref>
+                </egXML>
+                <p>You can also point to our texts, for example the Ethiopic text of Numbers 21, 8
+                    like this:</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <ref cRef="betmas:LIT2075Number.21.8">Numbers 21:8</ref>
+                </egXML>
+                <p>To mark up a passage in the text which is a literal quotation of another text you
+                    might use a <gi>cit</gi> containing a <gi>quote</gi> and the above <gi>ref</gi>.
+                </p>
+                <p>Please note the difference! In this case we say that the passage marked is a
+                    quotation of another text, whilst ref is used here and there only to encode the
+                    actual canonical reference.</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <cit>
+                        <quote xml:lang="gez"> ለሙሴ᎓ ግበር᎓ ለከ᎓ አርዌ᎓ ምድር᎓ ዘብረት᎓ ኵሉ᎓ ዘነሰኮ᎓ ይርአይ᎓ ኪያሁ᎓
+                            ወይሕየው᎓ ኪዮስ᎓ </quote>
+                        <ref cRef="betmas:LIT2075Number.21.8">Numbers 21:8</ref>
+                    </cit>
+                </egXML>
+                <p>The following example of markup is confusing and should be avoided as it claims
+                    that the content of the ref element is a reference, while it is a quote.</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples"> ለሙሴ᎓ <ref
+                        cRef="betmas:LIT2075Number.21.8">ግበር᎓ ለከ᎓ አርዌ᎓ ምድር᎓ ዘብረት᎓ ኵሉ᎓ ዘነሰኮ᎓ ይርአይ᎓
+                        ኪያሁ᎓ ወይሕየው</ref>᎓ ኪዮስ </egXML>
+                <div type="level3">
+                    <head>Structure of the reference</head>
+                    <p>What should I put after the <q>.</q> in my reference?</p>
+                    <p>Here are some examples, but please see <ref target="references"> the main
+                            page on references</ref>. <list>
+                            <item>LIT1546Genesi.Gen1.1 (<att>xml:id</att>.<att>n</att>)</item>
+                            <item>LIT1546Genesi.1.verse1 (<att>n</att>.<att>xml:id</att>)</item>
+                            <item>LIT1546Genesi.Gen1.verse1
+                                (<att>xml:id</att>.<att>xml:id</att>)</item>
+                        </list>
+                    </p>
+                    <p>It is  possible to use these references in whichever format is
+                        allowed and can be navigated in the text view anywhere within
+                            <att>cRef</att>, where they will need the ID of the manuscript or work: </p>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <ref cRef="betmas:TUid123.1.2.3"/>
+                        <ref cRef="betmas:MSid123_ED_myxmlid.sec1.col2.3"/>
+                        <ref type="mss" corresp="MSid123.month1.day1"/>
+                        <ref type="work" corresp="TUid123.1.1"/>
+                    </egXML>
+
+                    <p> In collatex these can be further limited to the first occurrence of a string
+                        with <q>@</q>. This is possible because the text is reduced to a string only and can be
+                    sliced.</p>
+
+                    <p>Here we have a fictitious example with a scroll which 
+                        has a translation and two editions. Below we will give examples of 
+                        references to different portions of text.</p>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples"><body>
+                            <div type="translation" xml:id="myTransl" source="#biblid"
+                                corresp="#ed1" xml:lang="it">
+
+                                <div type="textpart" n="1">Un immagine.</div>
+                                <div type="textpart" n="2">Per ogni riga un nome di frutti, animali,
+                                    ninja, o cose della natura.</div>
+                            </div>
+                            <div type="edition" xml:id="ed1">
+                                <div type="textpart" subtype="section" n="1" xml:id="sec1">
+                                    <div type="textpart" subtype="picture" n="1" xml:id="pic1"/>
+                                </div>
+                                <div type="textpart" subtype="section" n="2" xml:id="sec2">
+                                    <div type="textpart" subtype="column" n="1" xml:id="col1">
+                                        <div type="textpart" subtype="text" n="1"
+                                            xml:id="sec2col1text1">
+                                            <lb n="1"/> Apples <lb n="2"/> Bananas <lb n="3"/>
+                                            Berries </div>
+                                    </div>
+                                    <div type="textpart" subtype="column" n="2" xml:id="col2">
+                                        <div type="textpart" subtype="text" n="1"
+                                            xml:id="sec2col2text1">
+                                            <lb n="1"/> Lion <lb n="2"/> Tiger <lb n="3"/> Fox </div>
+                                        <div type="textpart" subtype="text" n="2"
+                                            xml:id="sec2col2text2">
+                                            <lb n="1"/> Jay <lb n="2"/> Lloyd <lb n="3"/> Nya </div>
+                                        <div type="textpart" subtype="text" n="3"
+                                            xml:id="sec2col2text3">
+                                            <lb n="1"/> Tree <lb n="2"/> Grass <lb n="3"/> Flower
+                                        </div>
+                                    </div>
+                                </div>
+                                <div type="textpart" subtype="drawingsquares" n="1"
+                                    xml:id="drawingquares"/>
+                            </div>
+                            <div type="edition" xml:id="ed2" resp="PL">
+                                <div type="textpart" n="1"/>
+                                <div type="textpart" n="2"/>
+                                <div type="textpart" n="3"/>
+                            </div>
+                        </body>
+                    </egXML>
+
+                    <p>In the above example, which is identified by Example123 I can
+                        <list>
+                            <item>point to the second edition 
+                                with <code>Example123_ED_ed2</code></item>
+                            <item>point to the second section of the translation 
+                                with <code>Example123_TR_myTransl.2</code></item>
+                            <item>point to the second section of the first edition
+                                with <code>Example123_ED_ed1.2</code> using <att>n</att> or
+                                <code>Example123_ED_ed1.sec2</code> using <att>xml:id</att> or
+                                <code>Example123_ED_ed1.section2</code>  using 
+                                a concatenation of <att>xml:id</att>
+                            </item>
+                            <item>point to the second column of the second section of the first edition
+                                with <code>Example123_ED_ed1.2.2</code> or any other combination at each level of citation.</item>
+                            <item>point to  the third text in the second column of the second section of the first edition
+                                with <code>Example123_ED_ed1.2.2.3</code> or any other combination at each level of citation.</item>
+                            <item>point to "Flower", in the third line of the third text in the second column of the second section of the first edition
+                                with <code>Example123_ED_ed1.2.2.3.3</code> or any other combination at each level of citation.</item>
+                            <item>point to the second edition 
+                                with <code>Example123_ED_ed2</code></item>
+                            <item>etc.</item>
+                    </list>
+                    </p>
+<p>You cannot refer validly, in a nested structure, to a line without referring to an entire passage reference structure, 
+for the same reason for which giving a reference to Gen l.1 is incorrect.</p>
+                    <p>The Beta maṣāḥǝft web application will produce in the text view a 
+                        list based on the DTS Navigation API of all available 
+                        references for a given level of browsing, so, if you are not sure and there is some text structure, you can always use those. </p>
+
+                </div>
+            </div>
+        </body>
+    </text>
+</TEI>
