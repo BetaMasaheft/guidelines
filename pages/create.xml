@@ -31,6 +31,49 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          the new file, always open it in your editor to make sure that it is valid and, if necessary (which it nearly always is!), edit it.</p>
 </div>
          <div type="level1">
+            <head>Example workflow</head>
+            <p>It is not rare that a single unit of work will involve several commits to several branches of different repositories. Here is an example</p>
+            <list rend="ordered">
+               <item>The contributor starts to edit a manuscript record,</item>
+               <item>she thinks an identifier for a new Textual Unit is needed,</item>
+            <item> she      opens an issue, labeled Textual Unit Identification, ping relevant people and 
+               make sure it is the case 
+               (this helps also contributors who do not have enough permissions to 
+               create Textual Units in the app). In the while, there is no need to add a <att>ref</att> to
+            <gi>title</gi> in <gi>msItem</gi>, for example, and a comment can be left that there is a pending issue about the identification of the Textual Unit.</item>
+              <item> 
+                 If the result of the discussion is positive and a new records is needed,
+                 the editor or some other collaborator creates it in the app (it needs to, is a textual unit!),</item>
+              <item> 
+                 Because the Textual Unit record has been created in the app, it needs to be synced.
+                 Make a PR to Works repository and make sure it is promptly reviewed, corrected and merged. 
+                 Planning this 
+                 in the issue where you discussed the creation is a good idea.
+                 Please note that it really needs to be merged quickly, to keep the app in sync.
+              </item> 
+               <item>Anyone can now use the newly created 
+                  Textual Unit ID in  manuscript records.
+              </item> 
+               <item>Once she is ready, a PR for the manuscript can be done to Manuscript.
+               </item>
+               <item>During review it turns out it was not necessary to create a Textual Unit, alas. A collaborator reviewing this PR did not see the discussion and could not intervene before.
+               </item>
+               <item>The editor or any other collaborator can now delete the 
+                  record in the Works repository and make a PR justified by the
+                  review of the manuscript, and eventually needs no review if linked to that.
+                  By doing this also the app, where the record was created, gets to know and stays in sync.
+             </item>
+            </list>
+            <p>A record creation in the app should always be promptly followed by a 
+               commit and a PR to align to the database in any case. If the discussion about this 
+               operation has already happened, review only needs to focus on typos and contents of the record.
+              The app will have learned about the new files because they were created in there 
+              in the first place, but if you do not merge them into master, as a result of a PR and delete them
+              the app will never get to know that the record was deleted, 
+              because you deleted it somewhere else. 
+              That is why we need a commit and a PR, so that repository and database stay in sync.</p>
+         </div>
+         <div type="level1">
             <head>Doublets</head>
             <p>It can happen that doublets are identified. This happens especially when Textual Units are created without enough disambiguation information
             or when one same manuscript is entered in the system from different sources without prior knowledge 
