@@ -35,7 +35,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             or spaces within these attributes.</p>
 
 
-         <p>Beside the basic referencing structures (<gi>div</gi>) you may refer to parts of the
+         <p>Besides the basic referencing structures (<gi>div</gi>) you may refer to parts of the
             text of the manuscript using references to <gi>pb</gi>, <gi>cb</gi> and <gi>lb</gi>.
             Although for these to be resolvable the text needs to be present and encoded, their
             semantic value with reference to the selected passage remains even when the actual
@@ -54,7 +54,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <item>A line, eventually in a specific page and column, e.g. <code>2ra1</code>
                      (<tag>pb[@n]</tag>,<tag>cb[@n]</tag>, <tag>lb[@n]</tag>)</item>
             </list> This assumes consistent numbering.</p>
-         <p> It is possible to use the same syntax for a reference to a page in one of more defined
+         <p> It is possible to use the same syntax for a reference to a page in one of a more defined
             paging systems, e.g. based on different editions. e.g. <code>1[frisk]</code>
                (<tag>pb[@n][@corresp]</tag>). </p>
 
@@ -93,7 +93,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <gi>div</gi>s, any of the basic values or combinations detailed in <ref
                target="references">referencing</ref> can be used.</p>
 
-         <p>This simply means, for example in the Beta maṣāḥǝft web application and related services
+         <p>This simply means, for example, in the Beta maṣāḥǝft web application and related services
             that the text view when listing available references to passages for EMIP01859, e.g. at
             the third level of depth, will show <code>1.1.1</code> but you can use to refer to that
             same passage a number or alternative references e.g.
@@ -131,7 +131,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   in the manuscript transcription associated with the specified narrative unit. If
                   you want to fetch passages connected to a narrative unit without specifying the
                   manuscript, add the narrative unit ID instead. </item>
-               <item><code>IVEf921</code> is a letter only encoded into a <tag>div type="edition"</tag>. You can still point to a line in it
+               <item><code>IVEf921</code> is a letter only encoded into a <tag>div type="edition"</tag>. You can point to a line in it
                   by saying IVEf921.1 but this will not be resolvable. 
                   The moment you add a <gi>pb</gi> or a <gi>lb</gi>,
                   this will become resolvable and a request for that part of text will return that part of text.
@@ -140,7 +140,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <item><code>RIE193</code> is an inscription with <gi>div</gi>s. you can point to specific ones.</item>
             </list></p>
          <p>It is not possible to canonically reference a part of text transcribed e.g. in an <gi>incipit</gi> inside
-         <gi>msContents</gi>, but don't panic, you still have your <att>xml:id</att>! Anchors, 
+         <gi>msContents</gi>, but don't panic, you have your <att>xml:id</att>! Anchors, 
             informally referred to as "sub-IDs" are a perfectly valid, standard way of referring to an element with an
          <att>xml:id</att>, but they are not canonical citation of the structure of the text in one of its
          manifestations. With a canonical reference you are referring to the text in one of its abstractions
@@ -158,7 +158,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <locus from="1r" to="2ra" corresp="#fol1"/>
             </egXML> 
             
-           <p>You may still wish to use your own text for a reference</p>
+           <p>You may wish to use your text for a reference</p>
 
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <locus from="1ra1" to="34vb4">1ra up until the fourth line of column b on the verso of
@@ -168,7 +168,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
          <p>If <gi>locus</gi> is not for you, 
             or you do not want to use a folio/page/column/line reference
-            string, for example because you have an inscription or a scroll or a shred of pottery,
+            string, for example, because you have an inscription or a scroll or a shred of pottery,
             you may opt for a simple <gi>ref</gi>, where you use the 
             reference in full according to the
             structure you have encoded in the file. 

@@ -23,7 +23,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body xml:id="spaces">
          <head>Spaces</head>
-         <p>Remember, in contents put spaces <hi rendition="simple:bold">only where you really want them</hi>.
+         <p>Remember, in contents put spaces <hi rendition="simple:bold">only where you want them</hi>.
     As much as you want.</p>
          <p>This following WRONG encoding</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -47,7 +47,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 Galāwdewos
 </egXML>
          
-         <p>Similarily, spaces in elements, attributes and values where they do not belong are wrong, even if not marked as an error by the schema:
+         <p>Similarly, spaces in elements, attributes and values where they do not belong are wrong, even if not marked as an error by the schema:
             <egXML xmlns="http://www.tei-c.org/ns/Examples"><persName xml:lang="gez " xml:id="n1">ባይሞት፡</persName></egXML>
             <tag>xml:lang="gez "</tag> is wrong!
          </p>

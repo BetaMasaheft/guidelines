@@ -25,10 +25,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <head>Creating a new record or deciding between repository entity and
         place entity</head>
     <p>All Monasteries and Churches in PLACES have also a parallel 
-        Repository record in the institutions repo. The two lists have different origins, PLACES comes from
-        EA indexes, while the INSTITUTIONS list is an export of the records in
+        Repository record in the institutions repository. The two lists have different origins, PLACES comes from
+        EA indexes, while the Institutions list is an export of the records in
         EthioSPaRe for repositories.</p>
-            <p>In principle, all geographical locations should have a PLACE-type record, with co-ordinates and administrative division provided wherever possible, and all repositories (places where manuscripts are preserved) should have a REPOSITORY-type record. 
+            <p>In principle, all geographical locations should have a PLACE-type record, with co-ordinates and administrative division provided wherever possible, and all repositories (places where manuscripts are preserved) should have a repository-type record. 
                 In case of "doublets" the records must be disambiguated. </p>
                 <p>Please, proceed as follows in case of doubt:</p>
     <list type="ordered:arabic">
@@ -42,7 +42,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 Oxygen or on the website looking at related entities.</p>
         </item>
         <item>
-            <p>modify those references that actually point to a repository
+            <p>modify those references that point to a repository
                 and not to a place, if any.</p>
         </item>
         <item>

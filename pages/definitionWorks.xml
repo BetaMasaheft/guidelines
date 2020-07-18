@@ -65,7 +65,7 @@ is not a work, it is a part of the work
             <item>
                <p>For these texts (both circulating as independent units and part of another unit), a <gi>div</gi> should also be created in the work record of the unit containing 
                   them, with a
-                  <att>corresp</att> giving the individual ID, in order to show the full content of a collection in
+                  <att>corresp</att> giving the individual ID, to show the full content of a collection in
                   correct order.
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                     <div type="textpart" subtype="chapter" corresp="LIT1099Anapho" xml:id="AnaphoraMary">
@@ -79,21 +79,21 @@ is not a work, it is a part of the work
                   </egXML>
                   You can then decide in a manuscript record  what is more appropriate to point to, if it is better to point to the independent unit directly or if this is in a manuscript
                   as part of another unit.
-                  See for example LIT1960Mashaf#AnaphoraMary in <ref type="bm" target="FSUor15">Frankfurt, Universitätsbibliothek Johann Christian Senckenberg, Frankfurt Ms. or. 15</ref>  and LIT1099Anapho in <ref type="bm" target="BAVet15">Vatican City, Biblioteca Apostolica Vaticana, Aeth. 15</ref>.
+                  See, for example, LIT1960Mashaf#AnaphoraMary in <ref type="bm" target="FSUor15">Frankfurt, Universitätsbibliothek Johann Christian Senckenberg, Frankfurt Ms. or. 15</ref>  and LIT1099Anapho in <ref type="bm" target="BAVet15">Vatican City, Biblioteca Apostolica Vaticana, Aeth. 15</ref>.
                 </p>
             </item>
             <item>
-               <p>If a textpart has an individual circulation in traditions other than the Ethiopic,
+               <p>If a text part has an individual circulation in traditions other than the Ethiopic,
     all information on this text should be given in the <gi>div</gi>: multiple titles can be
     inserted, with bibliography linking to the IDs of these titles,
     relations for the authors of the titles, etc.</p>
             </item>
             <item>
-               <p>For text portions (paragraphs, chapters, miracles, or episodes which are not explicitly highlighted as textpart with individual circulation) which are extant as different versions in multiple recensions of the same work or even in different works,
+               <p>For text portions (paragraphs, chapters, miracles, or episodes which are not explicitly highlighted as text part with individual circulation) which are extant as different versions in multiple recensions of the same work or even in different works,
                  a <ref target="narrativeUnits">Narrative Unit</ref> is created.</p>
             </item>
             <item>
-               <p>The existing records inherited from the EAe index that do not
+               <p>The existing records, inherited from the EAe index, that do not
     have an independent circulation in Ethiopic should be <ref target="create">deleted</ref>.</p>
             </item>
          </list>
@@ -107,21 +107,21 @@ make. We accept as a principle to create <hi rendition="simple:bold">the
 maximum number of record as it is sensible</hi> and to state
 <hi rendition="simple:bold">the minimum number of relations needed among
 them</hi> with a view on expanding them potentially to all what is not
-essential, in order to clarify their relation with each other. It might
-happen that different researchers have different opinions on the
+essential, to clarify their relation with each other. Different researchers might
+have different opinions on the
 relation between the versions and the manuscripts and in this we will be
 able to host them all.</p>
 
-            <p>For example. If the Work A has four versions 1, 2, 3 and 4 — 1 being a
+            <p>For example: if the Work A has four versions 1, 2, 3 and 4 — 1 being a
 short version of 2 and 3 a later version of 4, while 2 and 4 differ from
 one another only in the order in which the content is organized — there
 will be 5 records: one for the abstract Work, one for each version.
 While the abstract Work will point to each of the 4 versions with
 relations and might contain a general description of the work, each of
-the versions will have clearly defined relations with the others and the
+the versions will have clearly-defined relations with the others and the
 abstract Work.</p>
 
-         <p>A further example: a text which is made of parts which can occur in
+         <p>A further example: a text which is made of parts which can occur in a
 different order within different manuscripts. This will have 1 Work
 record, describing the ideal or majoritarian, or standard sequence,
 while each witness (Manuscript) will contain the specific order of the

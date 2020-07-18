@@ -25,8 +25,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <p>This page is intended to guide team members to a stable setting to
 work for the project</p>
 <p>You will need:
-<list><item>an account in GIT (github.com)</item>
-<item>Atom (or oXygen with a licence for it)</item>
+<list><item>an account in GitHub (github.com)</item>
+<item>Atom (or Oxygen with a licence for it)</item>
 <item>an account in Zotero</item></list>
 </p>
 <div type="level2">
@@ -92,7 +92,7 @@ work for the project</p>
   <list type="unordered">
     <item>
       <p>After you created and verified your account, you will need to
-      be added to the group. Email Pietro to get this done.</p>
+      be added to the group. Email the technical lead to get this done.</p>
     </item>
     <item>
       <p>Install GitHub Desktop</p>
@@ -114,7 +114,7 @@ work for the project</p>
     </item>
     <item>If you are already in the group, you will find the Beta Masaheft repository listed there, select the one you want</item>
     <item>
-      <p>When aksed where to clone in the form, select the directory you have created before.</p>
+      <p>When asked where to clone in the form, select the directory you have created before.</p>
     </item>
     <item>
       <p>Click CLONE below</p>
@@ -138,7 +138,7 @@ work for the project</p>
       <p>Open GitHub Desktop and select the Manuscripts repository on the left</p>
     </item>
     <item>
-      <p>Before you commit your changes, make sure that you are synced, and that other collaborators to your branch know you are sending this PR:
+      <p>Before you commit your changes, make sure that you are synced, and that other collaborators to your branch know you are sending this Pull Request:
         click on "fetch origin" in the upper right corner, and, if there are new commits by others, click on "pull"</p>
     </item>
     <item>
@@ -171,7 +171,7 @@ work for the project</p>
 <p>Before this can happen a review of the encoding takes place and once this has been successful, the Pull Request is merged by a  member of the team into master.</p>
   <p>It is always
   advisable to Sync/fetch the master branch all your repositories before you begin a work session.</p>
-  <p>The Documentation repo contains two other important parts, beside some
+  <p>The Documentation repository contains two other important parts, besides some
   code used locally for the project, the Wiki and the Issues</p>
 
 
@@ -199,23 +199,23 @@ work for the project</p>
   <p>You will then see errors messages and will get the autocompletion.
   it works very well!</p>
   <p>Note also that if you open a folder as project in atom, which is a git repository, you will be able to pull and push directly in ATOM, using the Github package which is shipped with it. It is awesome.</p>
-  <p>Just click on the arrows pointing up and down in the bottom right corner and you will have really all in one place.</p>
+  <p>Just click on the arrows pointing up and down in the bottom right corner and you will have all in one place.</p>
 </div>
 <div type="level1">
-  <head>oXygen</head>
-  <p>oXygen is a text editor which is very smart with XML.
-  oXygen is designed to help you write XML and it does it in a wonderful
-  way, with all possible tools to help you in your workflow. Very often
+  <head>Oxygen</head>
+  <p>Oxygen is a text editor which is very smart with XML.
+  Oxygen is designed to help you write XML and it does it wonderfully, 
+  with all possible tools to help you in your workflow. Very often
   you will only use a few of the options provided. Some things you might
   find useful to know:</p>
   <p>You can create a project and add to it your folders, so you can
-  open files from oXygen directly.
+  open files from Oxygen directly.
 <list>
   <item>click on PROJECT, then on NEW
   project. Call the file BetMas and save it to your BetMas folder,
   where you cloned the repositories from GIT.</item>
   <item>Once created, the project
-  will open in oXygen in a side bar on the left (if it doesn't, click on "Project" and "project view" in the upper menu bar). </item>
+  will open in Oxygen in a sidebar on the left (if it doesn't, click on "Project" and "project view" in the upper menu bar). </item>
   <item>click with the
   secondary button on the icon of the project and select &quot;add
   Folder&quot;</item>
@@ -227,20 +227,20 @@ work for the project</p>
   </p>
 
   <p>While editing your file you might start from one existing file, taking it as a model, and always reading and comparing other files.
-    oXygen has several helpful features that will facilitate your work:
+    Oxygen has several helpful features that will facilitate your work:
 
     <list>
-<item>Once you start typing a name of an element, oXygen will suggest you
+<item>Once you start typing a name of an element, Oxygen will suggest you
 which elements can be used there.</item>
 <item>You can also use the elements and
 attributes view to select from a sidebar the element to add.</item>
 <item>Once you
 have an element and you want to add an attribute, type the space
-separating the element name from the future attribute and oXygen will
+separating the element name from the future attribute and Oxygen will
 pull up a list of attributes from which you can select. If an
 attribute is compulsory, it is bold.</item>
 <item>Values for attributes are also
-suggested by oXygen based on the schema.</item>
+suggested by Oxygen based on the schema.</item>
 <item>To enter an element, you can
 either start typing it, or you can select a portion of text to tag and
 click CTRL+E which will open a small window where you can type the
@@ -250,9 +250,9 @@ repeatedly enter the same element. You can do the repeat with
 CTRL+/</item>
     </list>
     </p>
-  <p>You will often have to enter the current date, for example when
+  <p>You will often have to enter the current date, for example, when
   you describe your work in <gi>change</gi>. To
-  facilitate this you can use the Code Templates function in oXygen. Set
+  facilitate this you can use the Code Templates function in Oxygen. Set
   a Code Template for the XML Editor and assign it the current date
   value. Then, while editing to enter today's date open Document/Content
   Completion, start the assistant and enter the date.</p>
@@ -260,7 +260,7 @@ CTRL+/</item>
   is red, it means something is not valid. Click on the small red bar
   on the side of the document to go to that point and read the
   message. Often this is enough, if you don't understand where the
-  problem is, ask Pietro.</p>
+  problem is, ask.</p>
 
   <div type="level2">
     <head>Special Characters and letters with diacritics</head>
@@ -351,9 +351,9 @@ CTRL+/</item>
         <p>Ñ ñ (gn, Amharic)</p>
       </item>
     </list>
-    <p>You can use oXygen Content Completion. To do this, make sure you
+    <p>You can use Oxygen Content Completion. To do this, make sure you
     sync the "Documentation" repository. In the folder codetemplates there is all you need.
-    Open oXygen, go to Preferences and search &quot;Code
+    Open Oxygen, go to Preferences and search &quot;Code
     Templates&quot;. Click on it on the menu list on the left. Once the
     list on the right appears, click IMPORT in the lower right corner.
     select the codetemplates.xml file from the codetemplates folder.

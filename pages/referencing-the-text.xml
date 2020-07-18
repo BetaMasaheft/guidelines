@@ -32,12 +32,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p>For citations like Matthew 14, 3, use <gi>ref</gi> with a <att>cRef</att>
                     containing the URN which you can get from the Perseus catalogue searching for
                     the passage. This will link to the Greek text and should therefore only be used
-                    when it is actually the Greek text that is intended.</p>
+                    when it is the Greek text that is intended.</p>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                     <ref cRef="urn:cts:greekLit:tlg0031.tlg001.perseus-grc1:14.3">Matthew 14,
                         3</ref>
                 </egXML>
-                <p>You can also point to our texts, for example the Ethiopic text of Numbers 21, 8
+                <p>You can also point to our texts, for example, the Ethiopic text of Numbers 21, 8
                     like this:</p>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                     <ref cRef="betmas:LIT2075Number.21.8">Numbers 21:8</ref>
@@ -45,7 +45,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p>To mark up a passage in the text which is a literal quotation of another text you
                     might use a <gi>cit</gi> containing a <gi>quote</gi> and the above <gi>ref</gi>.
                 </p>
-                <p>Please note the difference! In this case we say that the passage marked is a
+                <p>Please note the difference! In this case, we say that the passage marked is a
                     quotation of another text, whilst ref is used here and there only to encode the
                     actual canonical reference.</p>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">

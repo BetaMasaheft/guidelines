@@ -99,7 +99,7 @@ guidelines for
   <egXML xmlns="http://www.tei-c.org/ns/Examples">
     <placeName ref="wd:Q649"/>
     </egXML>
-  <p> and in an eventually already existing place record or repository record, you can use the same wikidata values
+  <p> and in an eventually already existing place record or repository record, you can use the same Wikidata values
     as follows in the same way as above for <gi>settlement</gi>, <gi>region</gi> and <gi>country</gi>.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
               <place type="city" sameAs="wd:Q649">
@@ -132,7 +132,7 @@ guidelines for
          <div type="level2">
             <head>Coordinates</head>
             <p>Coordinates are used to display the place on a map and can be
-               obtained from openstreetmap for example, adding a pointer for a place
+               obtained from OpenStreetMap, for example, adding a pointer for a place
                there.</p>
             <p>Coordinates must provide latitude longitude and be separated only
   by one white space.</p>
@@ -142,7 +142,7 @@ guidelines for
             <p>For regions, areas, and all polygons, use <tag>geo rend="polygon"</tag>
   using one line for each point. Please do not add spaces at the
   beginning and end of the series. You can draw your polygon with <ref target="https://www.keene.edu/campus/maps/tool/">this
-  tool</ref> and copy paste directly
+  tool</ref> and copy-paste directly
   from there. Please take care to remove the commas.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 
@@ -203,9 +203,9 @@ guidelines for
 </egXML>
             <p>All <gi>placeName</gi>s can take an <att>xml:id</att> if it is needed for referencing,
   following the above example. i.e. nothing prevents Mary of Zion to
-  have a <att>xml:id</att>="n5" AND <att>corresp</att>="#n2"</p>
+  have an <att>xml:id</att>="n5" AND <att>corresp</att>="#n2"</p>
             <p>You can enter into <gi>placeName</gi> a <gi>note</gi> element
-  where to describe the denomination more in detail, see for example
+  where to describe the denomination more in detail, see, for example,
   <ref target="LOC1261Adulis" type="bm">ʾAdulis</ref></p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <placeName xml:id="n4" xml:lang="la" type="alt" source="#FattovichMunro">Adulitae

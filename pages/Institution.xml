@@ -91,7 +91,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <div type="level2">
             <head>Private collections</head>
             <p>Repository records are also created for the private collections of individuals owning manuscripts. These have a <att>type</att> with <val>privateHouse</val>,
-               for example in <ref target="INS0368atohayle" type="bm">INS0368atohayle</ref>:
+               for example, in <ref target="INS0368atohayle" type="bm">INS0368atohayle</ref>:
                
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <place subtype="institution" type="privateHouse">

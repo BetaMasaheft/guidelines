@@ -35,7 +35,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>The description of the manuscript part is contained in <gi>physDesc</gi>,
       the events which affected the history of the manuscript can be
       added in  <gi>history</gi> 
-      while additional informations about the manuscript (e.g.
+      while additional information about the manuscript (e.g.
       <gi>surrogates</gi>, further bibliography, etc.) should be included in
                   <gi>additional</gi>.</p>
             
@@ -50,7 +50,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p>Information given in the catalogues about manuscripts
                     belonging to other traditions, i.e. Arabic, should not be
                     included in our description.</p>
-                <p>Field like information about persons related to the manuscript if not already encoded can be provided in <ref target="particDescPersons">particDesc</ref>.</p>
+                <p>Information about persons related to the manuscript if not already encoded can be provided in <ref target="particDescPersons">particDesc</ref>.</p>
                 <p>Catalogue references and other information related to record and custody can be added to <ref target="additionalInfo">additional.</ref></p>
             </div>
             
@@ -61,7 +61,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     references can be given in each <gi>msItem</gi>.
                     References to similar manuscripts can instead be given with a
                     <gi>ref</gi>s as described above. Note that
-                    informations about these manuscripts should be stored with the
+                    information about these manuscripts should be stored with the
                     manuscripts for coherence, thus a pointer to the manuscript
                     file will be given and that will contain the bibliographical
                     references, date, etc.</p>
@@ -87,7 +87,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </bibl>
                     </listBibl>
                 </egXML>
-                <p>Alternatively you can use <ref target="relations">relations</ref> which is often a better and quicker solution.</p>
+                <p>Alternatively, you can use <ref target="relations">relations</ref> which is often a better and quicker solution.</p>
             </div>
             
         </body>

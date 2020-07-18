@@ -30,7 +30,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <head>Internal References</head>
          <p>Any <att>xml:id</att> within the file can be pointed
     to with an element <gi>ref</gi> with a
-    <att>target</att> attribute. oXygen will not let you
+    <att>target</att> attribute. Oxygen will not let you
     enter a double ID, and will pull up a list of
     <att>xml:id</att> when you attempt to enter
     <att>target</att> or
@@ -45,7 +45,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <p>this happens also in <ref target="#q14">the final quire</ref></p>
 </egXML>
          <p>This second method preserves your text and creates a link. However, please note that multiple
-    references will be split in several links, so having something
+    references will be split into several links, so having something
     like</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <p>this happens also in <ref target="#q14 #q15">the final quires</ref></p>
@@ -89,8 +89,8 @@ This manuscript is in the same hand as <ref type="hand" corresp="ESap002#h2"/>
                also when we do not yet have
                this text transcription at all. These references are 
                valuable information connecting to a real word artefact. You do not need to have somewhere 
-               a <gi>div</gi> or any other element, you are actually adding a structured string which refers to
-               the actual real life object, as you would do in any text.
+               a <gi>div</gi> or any other element, you are adding a structured string which refers to
+               the actual real-life object, as you would do in any text.
                However, for these references to be resolvable  to a fragment of text 
                (i.e. for you to be able to let the machine retrieve that piece of text you are referring to), 
                this text needs to be present
@@ -113,7 +113,7 @@ This manuscript is in the same hand as <ref type="hand" corresp="ESap002#h2"/>
                   The first part (ID) is separated from the second ((ED|TR)_(@xml:id)) by <q>_</q> .
                   The second part is separated from the third (1.2.3) by <q>.</q>. 
                The first part is also the main ID of the record. The second part is mapped to
-               a parameter "edition", which is implementation specific. The last part is mapped to
+               a parameter "edition", which is implementation-specific. The last part is mapped to
                   <ref target="https://distributed-text-services.github.io/specifications/">Distributed Text Services</ref> 
                   navigation and document parameters <code>ref</code>, 
                   <code>start</code> and <code>end</code> and are 
@@ -157,7 +157,7 @@ This manuscript is in the same hand as <ref type="hand" corresp="ESap002#h2"/>
                <code>LIT1758Lefafa_ED_</code> can be used for the edition in 
                   the <tag>div[@type='edition']</tag> without <att>xml:id</att>
                <code>LIT1758Lefafa_ED_editionBudge</code> for the edition in 
-                     the <gi>div</gi> with a <att>xml:id</att>.</p>
+                     the <gi>div</gi> with an <att>xml:id</att>.</p>
               <p>It is important that there are not 
                two or more <gi>div</gi> of the same type without 
                      an <att>xml:id</att> to distinguish them.
@@ -190,7 +190,7 @@ This manuscript is in the same hand as <ref type="hand" corresp="ESap002#h2"/>
                 level is separated by a dot, e.g. 1.1. The value for each level is extracted from
                <list>
                   <item>a <att>n</att></item>
-                  <item>a <att>xml:id</att></item>
+                  <item>an <att>xml:id</att></item>
                   <item>a <att>corresp</att></item>
                   <item>a concatenation of <att>subtype</att> and <att>n</att>.
                </item></list>
@@ -226,7 +226,7 @@ This manuscript is in the same hand as <ref type="hand" corresp="ESap002#h2"/>
             <p>A note on the way in which the Beta maṣāḥǝft application uses these references, 
             which is entirely application dependent. The structure described above is mapped to 
             parameters, so that your request for https://betamasaheft.eu/LIT1758Lefafa_ED_editionBudge.2 
-            is actually redirected to https://betamasaheft.eu/works/LIT1758Lefafa/text?edition=_ED_editionBudge&amp;ref=2
+            is redirected to https://betamasaheft.eu/works/LIT1758Lefafa/text?edition=_ED_editionBudge&amp;ref=2
             </p>
             </div>
          </div>

@@ -30,7 +30,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 
 
-            <p>There is very good tutorial to <ref
+            <p>There is a very good tutorial to <ref
                     target="http://www.tei-c.org/Guidelines/Customization/odds.xml">edit ODD (One
                     Document Does it all)</ref> among the TEI resources.</p>
             <p>In most cases, you

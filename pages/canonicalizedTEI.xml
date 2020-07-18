@@ -21,7 +21,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body xml:id="canonicalizedTEI">
          <div type="level1">
-            <head>A postprocessed version of the TEI encoded according to these guidelines</head>
+            <head>A post-processed version of the TEI encoded according to these guidelines</head>
           <p>The TEI described in these guidelines is highly customized, making use of the so-called ODD (One Document Does it all).
           Some of these customizations, although documented in the ODD and the derived schema, might make the data not so much interchangeable.</p>
           <p>The Beta maṣāḥǝft project maintains a script which makes the data a bit more canonical,
@@ -43,7 +43,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </egXML>
             <p>This is not what the <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-taxonomy.html">TEI guidelines</ref> describe, it is a much smaller version,
               without <att>xml:id</att>, where the actual string used for reference is the content of
-          <gi>catDesc</gi> which corresponds exactly to the name of the
+          <gi>catDesc</gi> which corresponds to the name of the
           TEI file in the database for that concept. The canonicalized taxonomy looks instead like the following example.</p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <category>
@@ -56,22 +56,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </category>
             </category>
           </egXML>
-          <p>Here the values of <gi>catDesc</gi> are moved to a <att>xml:id</att> and the element value is replaced by looking at the <gi>title</gi> of that file.
-        Additionally, a <att>corresp</att> with the url to the landing page on the app for that concept is provided. </p>
-        <p>When in the postprocessed TEI, this is included, the file can point to these values internally. So, for example, <tag>term[@key]</tag> which uses a list of values
+          <p>Here the values of <gi>catDesc</gi> are moved to an <att>xml:id</att> and the element value is replaced by looking at the <gi>title</gi> of that file.
+        Additionally, a <att>corresp</att> with the URL to the landing page on the app for that concept is provided. </p>
+        <p>When in the post-processed TEI, this is included, the file can point to these values internally. So, for example, <tag>term[@key]</tag> which uses a list of values
       from the schema, reproduced from the taxonomy example above for the edited file, can be changed
       to  <tag>term[@ana]</tag> where the value is a fragment URI (e.g. <val>#GoldenGospel</val>).</p>
       <p>In Beta maṣāḥǝft the different versions can be shown and obtained. Pointing simply at the ID of the file .xml (e.g. https://betamasaheft.eu/BNFet32.xml)
       the user obtains the file encoded according to these guidelines. prepending /tei/ (e.g. https://betamasaheft.eu/tei/BNFet32.xml) the TEI file encoded according
-    to these Guideilnes will be first transformed with post.xsl and then presented.</p>
+    to these Guidelines will be first transformed with post.xsl and then presented.</p>
     <p>To stay with the example above, the edited file will not contain the <gi>taxonomy</gi> at all, as the values are replicated in the schema as values for the <att>key</att> attribute of <gi>term</gi> or
-  other elements and attributes. However in the postprocessed file, the entire taxonomy will be included, in the canonicalized form described above.</p>
-  <p>Another important difference regards the URIs. In the edited TEI file we want them to be as short as possible.
+  other elements and attributes. However, in the post-processed file, the entire taxonomy will be included, in the canonicalized form described above.</p>
+  <p>Another important difference regards the URIs. In the edited TEI file, we want them to be as short as possible.
     We use for identifiers of Beta maṣāḥǝft the plain ID of the file. This is to be interpreted using the
-  <att>xml:base</att> attribute, which contains the base URL of the app, and will allow interpreter to point to a full URI of the
-  web resource for that, which they can additionally use to retrieve any of the content types provided (HTML, XML or a RDF representation or centered graph).
-In the postprocessed version of the TEI, these <att>xml:base</att> are not needed, because all these pointers are spelled out entirely.</p>
-<p>Similarly, URIs of external resources are entered in the edited XML using prefixes. These are documented in the <gi>listPrefixDef</gi> which is actually also not physically present in the file, it is
+  <att>xml:base</att> attribute, which contains the base URL of the app, and will allow an interpreter to point to a full URI of the
+  web resource for that, which they can additionally use to retrieve any of the content types provided (HTML, XML or an RDF representation or centred graph).
+In the post-processed version of the TEI, this <att>xml:base</att> is not needed, because all these pointers are spelt out entirely.</p>
+<p>Similarly, URIs of external resources are entered in the edited XML using prefixes. These are documented in the <gi>listPrefixDef</gi> which is also not physically present in the file, it is
 included. </p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -88,22 +88,22 @@ included. </p>
         replacementPattern="https://www.wikidata.org/entity/$1">
     </prefixDef>
 </egXML>
- <p>This information, which is edited once for all files used in the postprocessing to recontruct from a namespaced pointer the full URI.</p>
+ <p>This information, which is edited once for all files used in the post-processing to reconstruct from a name-spaced pointer the full URI.</p>
  <egXML xmlns="http://www.tei-c.org/ns/Examples">
    <relation name="skos:broadMatch" active="NAR0001gwelt" passive="betmas:LandGrant"/>
  </egXML>
- <p>Will be in the postprocessed file</p>
+ <p>Will be in the post-processed file</p>
  <egXML xmlns="http://www.tei-c.org/ns/Examples">
    <relation name="skos:broadMatch"
      ref="http://www.w3.org/2004/02/skos/core#broadMatch"
      active="https://betamasaheft.eu/NAR0001gwelt"
      passive="https://betamasaheft.eu/LandGrant"/>
  </egXML>
- <p>This makes also the <gi>prefixDef</gi>s not useful so they are removed from the postprocessed file.</p>
- <p>Also values of <att>who</att> in <gi>change</gi>, or of <att>calendar</att> in <gi>date</gi> are governed by list of values in the schema.
-In the first case we want them instead to be in a more canonical way pointers to the <att>xml:id</att> of a <gi>editor</gi> or <gi>respStmt</gi>. In the postprocessed file this is transformed. Similarly
-for the <att>calendar</att> a list of <gi>calendar</gi> elements with <att>xml:id</att> is added, while the values in the attribute are transformed to references to those, by prepending a #.</p>
-<p>Another change which happens when postprocessing is that empty pointers are populated, so that a repository reference for example gets also a content.</p>
+ <p>This makes also the <gi>prefixDef</gi>s not useful so they are removed from the post-processed file.</p>
+ <p>Also values of <att>who</att> in <gi>change</gi>, or of <att>calendar</att> in <gi>date</gi> are governed by a list of values in the schema.
+In the first case, we want them instead to be, in a more canonical way, pointers to the <att>xml:id</att> of an <gi>editor</gi> or <gi>respStmt</gi>. In the post-processed file this is transformed. Similarly
+for the <att>calendar</att> a list of <gi>calendar</gi> elements with <att>xml:id</att> is added, while the values in the attribute are transformed to references to those, by pre-pending a #.</p>
+<p>Another change which happens when post-processing is that empty pointers are populated so that a repository reference, for example, gets also a content.</p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
   <repository ref="INS0344AksumS"/>
 </egXML>
@@ -111,14 +111,14 @@ for the <att>calendar</att> a list of <gi>calendar</gi> elements with <att>xml:i
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
   <repository ref="https://betamasaheft.eu/INS0344AksumS">ʾAksum Ṣǝyon</repository>
 </egXML>
-<p>In a similar way, the <gi>bibl</gi> containg in the TEI only a <gi>ptr</gi> with <att>target</att> is processed in the more canonical version, to include the entire
+<p>Similarly, the <gi>bibl</gi> containing in the TEI only a <gi>ptr</gi> with <att>target</att> is processed in the more canonical version, to include the entire
 rendering as TEI of the record pointed to in Zotero.</p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
   <bibl>
 <ptr target="bm:Rueppell1840Reise"/>
 </bibl>
 </egXML>
-<p>will be seen in the postprocessed TEI as</p>
+<p>will be seen in the post-processed TEI as</p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
   <bibl corresp="http://zotero.org/groups/358366/items/BRDJ9JFF" type="book">
 <title level="m">Reise in Abyssinien</title>

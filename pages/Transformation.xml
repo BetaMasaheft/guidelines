@@ -22,133 +22,86 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body xml:id="transformation">
          <p>Once you have your XML file nice and complete and you have validated
-it and all is green light, you might wish to test what you have done and
-see without tags. We have a test html view which you can use for this.
+it and all is fine, you might wish to test what you have done and
+see without tags. We have a test HTML view which you can use for this.
 it can be useful to check for white spaces, for information missing of
-mis typed, etc. This assumes you have set up you machine to have all the
-project repos in one folder called BetMes as described in the
-<ref target="Project-Workplace-Setup#github">github setup</ref> and that
-you have checked out and updated you ScAthiop repo.</p>
+mistyped, etc. This assumes you have set up your machine to have all the
+project repositories in one folder called BetMes as described in the
+<ref target="Project-Workplace-Setup#github">GitHub setup</ref> and that
+you have checked out and updated you BetaMasaheft repository.</p>
          <p>Here is what you need to do to set up the transformation</p>
          <list type="ordered:arabic">
             <item>
-               <p>Open in oXygen the file you want to see in html</p>
+               <p>Open in Oxygen the file you want to see in HTML</p>
             </item>
             <item>
                <p>Click the little tool icon on the top which says Configure
-    Transformation scenario <figure>
-                     <head>Configure</head>
-                     <graphic url="https://github.com/BetaMasaheft/ScAthiop/blob/master/utility/img/1configTrScButton.png"/>
-                  </figure>
-               </p>
-            </item>
-            <item>
-               <p>The following window will appear <figure>
-                     <head>Configure</head>
-                     <graphic url="https://github.com/BetaMasaheft/ScAthiop/blob/master/utility/img/2ConfigTrScwindow.png"/>
-                  </figure>
+    Transformation scenario.
                </p>
             </item>
             <item>
                <p>Now click on NEW and select "XML Transformation with
-    XSLT" <figure>
-                     <head>Configure</head>
-                     <graphic url="https://github.com/BetaMasaheft/ScAthiop/blob/master/utility/img/3newscenario.png"/>
-                  </figure>
+    XSLT" .
                </p>
             </item>
             <item>
                <p>First thing, select from the Transformer menu the highest version
-    of SAXON available <figure>
-                     <head>Configure</head>
-                     <graphic url="https://github.com/BetaMasaheft/ScAthiop/blob/master/utility/img/4setTransformer.png"/>
-                  </figure>
+    of SAXON available.
                </p>
             </item>
             <item>
-               <p>Now name your preview transformation <figure>
-                     <head>Configure</head>
-                     <graphic url="https://github.com/BetaMasaheft/ScAthiop/blob/master/utility/img/5giveName.png"/>
-                  </figure>
+               <p>Now name your preview transformation.
                </p>
             </item>
             <item>
-               <p>You need now to tell oXygen where to find the XSLT to start the
+               <p>You need now to tell Oxygen where to find the XSLT to start the
     transformation. Click on the browse icon and navigate into your
-    local ScAthiop repo <figure>
-                     <head>Configure</head>
-                     <graphic url="https://github.com/BetaMasaheft/ScAthiop/blob/master/utility/img/6browseforxslt.png"/>
-                  </figure>
+    local BetaMasaheft repository.
                </p>
             </item>
             <item>
-               <p>You will find there a preview folder with several xslt files,
-    select only <gi>preview.xslt</gi> 
-                  <figure>
-                     <head>Configure</head>
-                     <graphic url="https://github.com/BetaMasaheft/ScAthiop/blob/master/utility/img/7selectxslt.png"/>
-                  </figure>
+               <p>You will find there a preview folder with several XSLT files,
+    select only <gi>preview.xslt</gi>.
                </p>
             </item>
             <item>
                <p>You should be back to the previous window, then click the Output
     tab on top and lets set where the results of your transformation
-    will be saved. <figure>
-                     <head>Configure</head>
-                     <graphic url="https://github.com/BetaMasaheft/ScAthiop/blob/master/utility/img/8setOutput.png"/>
-                  </figure>
+    will be saved. 
                </p>
             </item>
             <item>
-               <p>there is a folder prepared for your output. Please, save it there
-    to avoid confusion in other folders. It is always in
-    ScAthiop/preview/html <figure>
-                     <head>Configure</head>
-                     <graphic url="https://github.com/BetaMasaheft/ScAthiop/blob/master/utility/img/9selectfolderforOutput.png"/>
-                  </figure>
+               <p>Save it to an appropriate location .
                </p>
             </item>
             <item>
-               <p>leave a random name, we will then change it. <figure>
-                     <head>Configure</head>
-                     <graphic url="https://github.com/BetaMasaheft/ScAthiop/blob/master/utility/img/10setfilename.png"/>
-                  </figure>
+               <p>Leave a random name, we will then change it. 
                </p>
             </item>
             <item>
-               <p>once you have selected the folder and given a mock name, we will
+               <p>Once you have selected the folder and given a mock name, we will
     substitute that name with a function which will give the same name
     as your original file. click on the little green arrow pointing down
     and select ${cfn} current file name. We want to change the
-    extension, so, after entering that type <gi>.html</gi>
-                  <figure>
-                     <head>Configure</head>
-                     <graphic url="https://github.com/BetaMasaheft/ScAthiop/blob/master/utility/img/11checkfilenameextension.png"/>
-                  </figure>
+    extension, so, after entering that type .html .
                </p>
             </item>
             <item>
                <p>I would suggest also to open directly in your browser the saved
-    file, ticking the option right there. <figure>
-                     <head>Configure</head>
-                     <graphic url="https://github.com/BetaMasaheft/ScAthiop/blob/master/utility/img/12TickOpenInBrowser.png"/>
-                  </figure>
+    file, ticking the option right there. 
                </p>
             </item>
             <item>
-               <p>All set! Apply and enjoy! <figure>
-                     <head>Configure</head>
-                     <graphic url="https://github.com/BetaMasaheft/ScAthiop/blob/master/utility/img/13Apply.png"/>
-                  </figure>
+               <p>All set! Apply and enjoy! 
                </p>
             </item>
          </list>
          <p>Attention!</p>
          <list type="unordered">
             <item>
-               <p>if oXygen says the file ended prematurely, it is highly likely
+               <p>if Oxygen says the file ended prematurely, it is highly likely
     that something is wrong with your pointers to Zotero, as this is the
-    only live api call being done.</p>
+    only live API call being done.</p>
             </item>
             <item>
                <p>To correctly see bibliography citations and maps you need to be
@@ -156,7 +109,7 @@ you have checked out and updated you ScAthiop repo.</p>
             </item>
             <item>
                <p>There are a series of tests embedded in this transformation, to
-    help check your contents. For example if a person ID does not exist,
+    help check your contents. For example, if a person ID does not exist,
     you will see a bold red sentence telling you about it. Fix the issue
     and the transform will be fine.</p>
             </item>

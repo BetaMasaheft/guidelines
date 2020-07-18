@@ -27,15 +27,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         in which the history of the manuscript can be described in as much detail as known and desired. Please consider the 
         TEI definitions of these elements when deciding where to encode the information known to you:
         <list>
-          <item><gi>origin</gi> contains any descriptive or other information concerning the origin of a manuscript, manuscript part, or other object. See also 
+          <item><gi>origin</gi> contains any descriptive or other information concerning the origin of a manuscript, manuscript part, or another object. See also 
           <ref type="bm" target="origin">origin</ref>.</item>
-          <item><gi>acquisition</gi> contains any descriptive or other information concerning the process by which a manuscript or manuscript part or other object entered the holding institution.</item>
-          <item><gi>provenance</gi> contains any descriptive or other information concerning a single identifiable episode during the history of a manuscript, manuscript part, or other object after its creation but before its acquisition.</item>
+          <item><gi>acquisition</gi> contains any descriptive or other information concerning the process by which a manuscript or manuscript part or another object entered the holding institution.</item>
+          <item><gi>provenance</gi> contains any descriptive or other information concerning a single identifiable episode during the history of a manuscript, manuscript part, or another object after its creation but before its acquisition.</item>
         </list>
       </p>
       
       <p>Note that therefore in the following example from <ref type="bm" target="BLorient581">BLorient581</ref>, <ref type="bm" target="INS0101MadhaneAlam">Madḫāne ʿĀlam</ref>
-      is not encoded as the original place of the manuscript, since it is not known where it was produced. Its looting from this church constitutes an event of its history and is encoded
+      is not encoded as the original place of the manuscript, since it is not known where it was produced. The looting from this church constitutes an event of its history and is encoded
       in <gi>provenance</gi>:</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
           <history>

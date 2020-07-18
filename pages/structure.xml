@@ -25,7 +25,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <head>General Structure of Manuscript Records (Simple and
         Composite)</head>
     <p>It is recommended when starting encoding manuscript records to
-        read these guidelines alongside with example records, for example
+        read these guidelines alongside with example records, for example,
         of the <ref type="bm" target="/manuscripts/INS0003BAV/list">BAV</ref> or <ref type="bm" target="/manuscripts/INS0312BDL/list">BDL</ref> collections.</p>
     <p>Each manuscript record should contain in
         <gi>msDesc</gi> a description of the
@@ -55,7 +55,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         aspects and origins, all the above mentioned elements can and
         should be used as needed within each separate
         <gi>msPart</gi>. However, the shared aspects
-        of the manuscript - for example parts of its history, or the
+        of the manuscript - for example, parts of its history, or the
         description of the binding - can also be encoded for the entire
         manuscript. Therefore, the <gi>msDesc</gi>
         of a composite manuscript might have the following structure:</p>
@@ -67,12 +67,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <item>
             <p>
                 <gi>physDesc</gi> Containing the
-                physical description pertaining to the entire manuscript</p>
+                physical description about the entire manuscript</p>
         </item>
         <item>
             <p>
                 <gi>history</gi> Containing
-                information on the origin and provenance pertaining to the
+                information on the origin and provenance about the
                 entire manuscript</p>
         </item>
         <item>
@@ -111,7 +111,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <gi>msContents</gi> as well as all the above
         elements, limited now to the description of this particular
         <gi>msPart</gi>. If no further information
-        is available for example on the history of a particular
+        is available, for example, on the history of a particular
         <gi>msPart</gi> or if no other source than
         the one already specified in the first
         <gi>additional</gi> element concerning the

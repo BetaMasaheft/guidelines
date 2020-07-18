@@ -29,12 +29,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <p>The titles of persons, such as ʾabbā, wayzaro, makʷannǝn etc.,
 should be encoded with
 <tag>roleName type="title"</tag> at
-the place in the texts where they occur. In order to be reasonably
+the place in the texts where they occur. To be reasonably
 retrievable, <gi>roleName</gi> always has to
 be encoded within <gi>persName</gi>. However, because <gi>roleName</gi> can also be used alone, you will have to be careful, the schema cannot help here.
 
 So, when encoding names of persons, which might include the name of a role they have covered,
-use of <gi>roleName</gi> inside <gi>persName</gi> to encode the role associated to that person in that text.
+use of <gi>roleName</gi> inside <gi>persName</gi> to encode the role associated with that person in that text.
 </p>
   <p>It is not necessary to mark up <gi>roleName</gi>s in descriptive text added by us: What interests us are the actual attestations of role names in  Ethiopic texts.</p>
 </div>
@@ -50,10 +50,18 @@ use of <gi>roleName</gi> inside <gi>persName</gi> to encode the role associated 
     አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ወበአፈ፡ ኵሎሙ፡ አበው፡ ዘተወክፈቶሙ፡ ቤተ ክርስቲያን። </ab>
   </egXML>
 
-In this case use <gi>roleName</gi> alone to encode the name of the office.</p>
+In this case, use <gi>roleName</gi> alone to encode the name of the office.</p>
 
-<p>If looking at an unidentified officer named only via his role in a text, also use a roleName alone. The visualization should pull up a list of parallel marked up texts and might help you to identify the person and consequently mark it up.</p>
-<p>You can use roleName also in other places in the encoding, like in titles or in notes or in paragraphs, especially if you think that it would be relevant. For example in the <ref type="bm" target="BDLbruce92">following manuscript description</ref> we know the title of a work about some offices, of which we have no trascription.</p>
+<p>If looking at an unidentified officer named only via his role in a text, also use 
+  a <gi>roleName</gi> alone. The visualization should pull up a 
+  list of parallel marked-up texts and might help you to identify the 
+  person and consequently mark it up.</p>
+<p>You can use <gi>roleName</gi> also in other places in the encoding, 
+  like in titles or notes or paragraphs, especially if you think that it would be 
+  relevant. For example, in the 
+  <ref type="bm" target="BDLbruce92">following manuscript 
+    description</ref>, we know the title of a work about some offices, 
+  of which we have no transcription.</p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
   <msItem xml:id="ms_i1.3.1">
 <title type="complete">
@@ -74,7 +82,7 @@ name of the person can be typed in the
 is preferable, the <gi>persName</gi> element
 with the same ID can be repeated immediately after the first
 <gi>persName</gi> which contains
-<gi>roleName</gi>. The following examples contain marked up <gi>roleName</gi>s in decriptive text for illustrative purposes, where in fact it would not be necessary to mark the <gi>roleName</gi> up.</p>
+<gi>roleName</gi>. The following examples contain marked-up <gi>roleName</gi>s in descriptive text for illustrative purposes, where it would not be necessary to mark the <gi>roleName</gi> up.</p>
   <egXML xmlns="http://www.tei-c.org/ns/Examples">
 It lists the books belonging to <persName ref="PRS10796Tasfo"><roleName type="title">ʾabbā</roleName></persName><persName ref="PRS10796Tasfo"/>
 </egXML>
@@ -91,9 +99,9 @@ up in the following way:</p>
 he was also appointed as <persName ref="PRS5309hesanMo"><roleName type="title">qāla nǝguś</roleName></persName> of King <persName ref="PRS2334BaedaM">Baʾǝda Māryām I</persName>
 </egXML>
   <p>The use of <gi>roleName</gi> has to be
-clearly separated from the use of <att>role</att>. The first is used to mark
+separated from the use of <att>role</att>. The first is used to mark
 up a concrete title mentioned in a text, the second specifies the
-role the person has in regard to the record in which it is
+role the person has regarding the record in which it is
 mentioned. This applies for instance to scribes or owners of
 manuscripts.</p>
   <p>If possible, persNames should take a

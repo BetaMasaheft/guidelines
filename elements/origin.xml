@@ -38,7 +38,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <att>notAfter</att> (or only one of them, if
                that’s all we have) the range of dates in the Gregorian
                calendar for the production of the manuscript.</p>
-            <p>If a precise date is know, please use
+            <p>If a precise date is known, please use
                <att>when</att> instead of
                <att>notBefore</att> and
                <att>notAfter</att>.</p>
@@ -47,7 +47,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                use this attribute in a <gi>date</gi> element ,
                e.g. marking up the colophon text. If the date is known by
                another source, such as the date of the reign of a ruler or
-               paleography, please choose the relevant value prompted by the
+               palaeography, please choose the relevant value prompted by the
                schema for @evidence.</p>
             <p>It is possible to add more than one
                <gi>origDate</gi> if alternative datings

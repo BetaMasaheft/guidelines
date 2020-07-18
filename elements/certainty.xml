@@ -25,7 +25,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <body xml:id="certainty"><div type="level3">
     <head>Certainty</head>
     <p>TEI can express very precisely where the uncertainty about
-        a certain information provided is using the element certainty.</p>
+        an information provided is, using the element <gi>certainty</gi>.</p>
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
         <title type="complete" ref="LIT1716Kidanz"><certainty locus="value" match="../@type" cert="low"/></title>
     </egXML>

@@ -54,7 +54,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>For the title of the work, when possible:
   <list>
      <item>
-        a) include most common definition in
+        a) include a most common definition in
   British English;
      </item>
   <item>
@@ -112,7 +112,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <abstract>
                   <p> A miniature showing the Crucifixion of  <persName ref="PRS5684JesusCh">Jesus</persName>.
-                     The scene may include a number of additional figures, such as the  <persName ref="PRS6819Mary">Virgin Mary</persName> or
+                     The scene may include several additional figures, such as the  <persName ref="PRS6819Mary">Virgin Mary</persName> or
                      <persName ref="PRS5695John">John</persName>, the scene typically follows the account of the
                      <ref type="work" corresp="LIT1560Gospel">Gospels</ref>, but  may include iconographic elements inspired by
                      apocryphal sources.
@@ -153,7 +153,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
          <div type="level1">
             <head>Relations</head>
-            <p>As in all other records, a <gi>listRelation</gi> can be added to Art Theme records to to list specific relations between this and other records.
+            <p>As in all other records, a <gi>listRelation</gi> can be added to Art Theme records to list specific relations between this and other records.
                For the encoding of relations, see <ref target="relations">Relations</ref>. For the relation between an Art Theme and the entities it is depicting, use 
               <tag> relation name="ecrm:P129_is_about"</tag>:
                <egXML xmlns="http://www.tei-c.org/ns/Examples">

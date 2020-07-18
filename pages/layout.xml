@@ -165,7 +165,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           </ab>
         </egXML>
 
-        <p>The following list has been provided by Denis Nosnitsin as an overview of potentially to be described punctuation elements:</p>
+        <p>The following list has been provided by Denis Nosnitsin as an overview of punctuation elements which may be described:</p>
 
 <p>I. Word dividers</p>
           <list type="ordered:arabic">

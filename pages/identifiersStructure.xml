@@ -28,7 +28,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <div type="level2">
                 <head>Manuscript identifiers and more than one identifier for a manuscript or a part of
                     manuscript</head>
-                <p>Facilitating the finding of manuscripts is a priority, and therefore it is crucial for all known identifiers to be added to <gi>msIdentifier</gi>. Widespread variants of identifiers - such as Arabic 
+                <p>Facilitating the finding of manuscripts is a priority, and, therefore, all known identifiers must be added to <gi>msIdentifier</gi>. Widespread variants of identifiers - such as Arabic 
                 instead of Roman numerals in the shelfmark - can also be added wherever this seems reasonable.</p>
                 <p>The element <gi>idno</gi> should contain the usual name or abbreviation of the collection and the number of the manuscript. Together with the name of the place at which the
                 manuscript is kept and the name of the library, this is currently used to refer to the manuscript on the web app. As always, keep in mind that the XML should not be adapted to suit a 

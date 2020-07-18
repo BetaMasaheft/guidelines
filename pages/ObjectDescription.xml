@@ -47,10 +47,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   <material key="Parchment"/>
 </support>
 </egXML>
-                     <p>In <gi>material</gi> with <att>key</att> enter the a
+                     <p>In <gi>material</gi> with <att>key</att> enter the value
             from the Writing Material taxonomy proposed from the schema.
-            oXygen should prompt the values from the schema.</p>
-            <p>You can also add a <att>ref</att> with a uri of one of the values in
+            Oxygen should prompt the values from the schema.</p>
+            <p>You can also add a <att>ref</att> with a URI of one of the values in
             the EAGLE Vocabularies for <ref target="https://www.eagle-network.eu/voc/material.html">material</ref>
                 and <ref target="https://www.eagle-network.eu/voc/objtyp.html">object type</ref> especially for inscriptions as
             in the following example from <ref target="RIE246" type="bm">RIE 246</ref>.</p>
@@ -110,7 +110,7 @@ taken from <locus target="#6r"/>.
                      <p>You can also specify which leaves are blank, adding a
             <gi>locus</gi> immediately after the relative
             measure.</p>
-                <p>To record the presence of protective leaves, please use a syntax involving only arabic numerals, like 3+69+1 to indicate that there are three guard leaves at the beginning and another one at the end.</p>
+                <p>To record the presence of protective leaves, please use a syntax involving only Arabic numerals, like 3+69+1 to indicate that there are three guard leaves at the beginning and another one at the end.</p>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                     <measure unit="leaf">3+69+1</measure>
                 </egXML>
@@ -126,7 +126,7 @@ taken from <locus target="#6r"/>.
                     </egXML>
                 </p>
 
-                <p>The weight of manuscripts, if known, can be provided in a separate <gi>dimensions</gi> and should be given in grammes:
+                <p>The weight of manuscripts, if known, can be provided in a separate element <gi>dimensions</gi> and should be given in grammes:
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <measure type="weight" unit="g">84</measure>
                     </egXML>
@@ -181,7 +181,7 @@ taken from <locus target="#6r"/>.
             <div type="level2">
                 <head>Condition</head>
                      <p>You can also add a <gi>condition</gi>
-            element containing a fully marked up description of the
+            element containing a fully marked-up description of the
             condition of the manuscript. Do indicate a general
             value from the State of Preservation Taxonomy proposed from the schema for indexing
             purposes.</p>

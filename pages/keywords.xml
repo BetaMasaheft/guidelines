@@ -49,7 +49,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </p>
                <p>It is very useful and important that at least one Period Keyword is assigned to each work and manuscript record.</p>
                <p>Each of these is linked to a stable URI provided by <ref target="https://test.perio.do/#/p/Canonical/periodCollections/p03tcss/">Perio.do</ref>.</p>
-               <p>In the following table they are summarized although they are available in the contextual menu via the schema.</p>
+               <p>In the following table, they are summarized although they are available in the contextual menu via the schema.</p>
                <table>
                <row role="label">
                <cell>Keyword</cell>
@@ -77,13 +77,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <head>Keywords in work records</head>
             <p>Always
                assign a period keyword, using the keywords referring to Ethiopian literary periods only
-               in records actually belonging to the Ethiopian tradition. </p>
+               in records belonging to the Ethiopian tradition. </p>
          </div>
 
          <div type="level3">
             <head>Keywords in person records</head>
             <p>
-               Generic information on types of persons are also encoded as keywords. For the difference between person types and occupation, see <ref target="persons">persons</ref>.
+               Generic information on types of persons is also encoded as keywords. For the difference between person types and occupation, see <ref target="persons">persons</ref>.
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <textClass>
                   <keywords>
@@ -95,8 +95,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </div>
 
          <div type="level3">
-           <p>You can also add a <att>ref</att> with a uri of one of the values in
-           the EAGLE Vocabularies for <ref target="https://www.eagle-network.eu/voc/writing.html">type of inscription</ref>
+           <p>You can also add a <att>ref</att> with a URI of one of the values in
+           the EAGLE Vocabularies for the <ref target="https://www.eagle-network.eu/voc/writing.html">type of inscription</ref>
             especially for inscriptions as
            in the following example from <ref target="RIE180" type="bm"/>.</p>
            <egXML xmlns="http://www.tei-c.org/ns/Examples">

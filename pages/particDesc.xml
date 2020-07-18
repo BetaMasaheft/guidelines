@@ -43,9 +43,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </egXML>
     </p>
     <p>Here it is enough to enumerate the scribe, owner, donor and patron, not everyone
-        mentioned in the manuscript, and only if they are not anywhere else. If this information has already been stated elswhere in the
+        mentioned in the manuscript, and only if they are not anywhere else. If this information has already been stated elsewhere in the
         description - which is preferable - it doesn't need to be repeated here.</p>
-    <p>If a person has two roles, for example because he is both scribe and owner of a manuscript,
+    <p>If a person has two roles, for example, because he is both scribe and owner of a manuscript,
         the main <att>role</att> can be encoded in the text where the person is mentioned:
         
         <egXML xmlns="http://www.tei-c.org/ns/Examples">

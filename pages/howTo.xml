@@ -37,9 +37,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 </list>
 <p>Useful things to know working with XML</p>
 <list>
-  <item><ref target="transformation">how to run a XSLT transformation in oXygen</ref> (there are many much better tutorials online!)</item>
+  <item><ref target="transformation">how to run a XSLT transformation in Oxygen</ref> (there are many much better tutorials online!)</item>
         <item><ref target="https://www.w3schools.com/xml/xpath_intro.asp">use XPath</ref></item>
-        <item><ref target="https://regexr.com/">use REGEX to search in the files</ref></item>
+        <item><ref target="https://regexr.com/">use Regex to search in the files</ref></item>
       </list>
       <p>Reusing the data</p>
       <list>

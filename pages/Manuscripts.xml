@@ -43,22 +43,22 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             Regarding the structure of simple and composite manuscripts, they also state in <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mspt">Manuscript Parts</ref>
             <cit><quote>Since each
     component of such a composite manuscript will in all likelihood have
-    its own content, physical description, history, and so on, the
+    its content, physical description, history, and so on, the
     structure of msPart is in the main identical to that of msDesc,
     allowing one to retain the top level of identity (msIdentifier), but
     to branch out thereafter into as many parts, or even subparts, as
     necessary.</quote></cit></p>
          <p>This means that for manuscripts made of only one part we will use
-    only <gi>msDesc</gi>, but in any case where a
-    structure in codicological units occurs we will use
+    only <gi>msDesc</gi>, but in any case, where a
+    structure in codicological units occurs, we will use
     <gi>msPart</gi>. <gi>msPart</gi> can contain other <gi>msPart</gi>s.
     <gi>msFrag</gi> can be used when there are at least two parts of one
-            manuscript kept in different repositories and in our schema this is allowed also beside <gi>msPart</gi> for special cases like <ref target="BNFet45" type="bm">BNFet45</ref>.</p>
+            manuscript kept in different repositories and our schema this is allowed also beside <gi>msPart</gi> for special cases like <ref target="BNFet45" type="bm">BNFet45</ref>.</p>
          <p>As for
             <ref target="https://github.com/BetaMasaheft/Documentation/issues/368">issue
     368</ref> we have decided to use <gi>msFrag</gi> and <gi>msPart</gi> as follows in
     cases where leaves or quires have been moved. The Ms containing
-    currently the unit, will have a <gi>msPart</gi> with it, with an appropriate
+    currently the unit will have a <gi>msPart</gi> with it, with an appropriate
     description and pointer to the manuscript where the unit comes from.
     The Ms which has lost a unit will instead have a <gi>msFrag</gi> pointing to
     the Ms where the unit is now. Please, do not confuse this with cases

@@ -24,7 +24,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body xml:id="entities-id-structure">
          <head>Entities ID structure</head>
          
-         <p>IDs can contain no special characters, umlaut, underdots and other combining diacritics, only digits and latin characters!</p>
+         <p>IDs can contain no special characters, umlaut, underdots and other combining diacritics, only digits and Latin characters!</p>
          
          <div type="level2">
             <head>Structure of record IDs</head>
@@ -52,15 +52,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </item>
             <item>
                <p>Works = LIT1001Homili (LIT + incremental number + first word
-        of title)</p>
+        of the title)</p>
             </item>
             <item>
                <p>Places = LOC2969Ensala (LOC + incremental number + first word
-        of place name)</p>
+        of the place name)</p>
             </item>
             <item>
                <p>People = PRS1001AbbaTam (PRS + incremental number + first
-        word of name)</p>
+        word of the name)</p>
             </item>
             <item>
                <p>Repositories = INS0030Addaqaharsi (INS + 4 digit number +
@@ -68,7 +68,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </item>
             <item>
                <p>Art Themes = AT1005Crucifixion (AT + incremental number +
-        title of art theme)</p>
+        title of the art theme)</p>
             </item>
          </list>
          <p>The manuscript ID should be composed of: 

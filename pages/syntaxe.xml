@@ -21,13 +21,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body xml:id="syntaxe">
-         <p>Describing the stratigrapy
+         <p>Describing the stratigraphy
            following <hi rendition="simple:italic">La Syntaxe du Codex.
              Essai de codicologie structurale</hi>
              <ref target="https://www.zotero.org/groups/358366/ethiostudies/items/itemKey/86TDDASU/">Andrist,
                Canart, and Maniaci 2013</ref> requires reading the methodology outlined in the book.
                It is not just an extraordinary book, it is also well
-               written and made clear by examples fully spelled out.</p>
+               written and made clear by examples fully spelt out.</p>
                <p>The Beta maṣāḥǝft application tries to support this
                  methodology with tabular visualizations based also on RDF data which are
                  exemplified by <ref type="bm" target="BAVcerulli37">Vatican City,
@@ -52,7 +52,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <div type="level2">
                   <head>Production units added later</head>
                   <p>In this example, from <ref target="BDLaethe8" type="bm">Oxford, Bodleian Library, Bodleian Aeth. e. 8</ref>,
-                  we want to say that <gi>msPart</gi>s p1 and p2 where added later to the manuscript. From the catalogue information we can deduce that
+                  we want to say that <gi>msPart</gi>s p1 and p2 were added later to the manuscript. From the catalogue information we can deduce that
                   this can be a transformation (this is the term used in the book, which I will not define here)
                   of type A1 (Andrist, Canart, and Maniaci 2013, 63).</p>
 
@@ -82,7 +82,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     We continue saying that part 3 (UniCirc1)
                     has undergone a transformation
                     (property sdc:undergoesTransformation).
-                    We are actually defining a
+                    We are defining a
                     transformation with ID ‘tr1’ and we want to say that
                     we know that this transformation is an addition
                     of material and content, thus
@@ -101,7 +101,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </p>
 <p>
 The order of the encoded elements is irrelevant, we are just following the logic in the argument.
-We can additionally say that it is this one UniCirc with ID ‘UniCirc2’ which actually corresponds to the manuscript we have in our hands.
+We can additionally say that it is this one UniCirc with ID ‘UniCirc2’ which corresponds to the manuscript we have in our hands.
 We cannot make any further statement about UniProd or about the pertinence of the parts 1 and 2 to another UniCirc and we do not do so.
 </p>
 
@@ -120,7 +120,7 @@ We cannot make any further statement about UniProd or about the pertinence of th
                               These added portions should be regarded as additions,
                               because they are written in another hand, presumably later.
                               And these texts might also be regarded as
-                              complete without these added information, so it was not about the completion of the text,
+                              complete without this added information, so it was not about the completion of the text,
                               rather adding new information. (this paragraph is an adaptation
                               of the explanation given by Daria Elagina <ref target="https://github.com/BetaMasaheft/Documentation/issues/927">here</ref>)
 
@@ -207,14 +207,14 @@ in the RDF, but are here defined for the first time.</p>
         </div>
                 <div type="level2">
                   <p>Now that most probably nothing of
-                    this made sense to you, go read the book (that is really important!),
+                    this made sense to you, go read the book (that is important!),
                   then you can probably figure out much better who the ontology does not
-                  change much compared to that and you canuse its values here.</p>
+                  change much compared to that and you can use its values here.</p>
                   <p>Once you have an idea of the stratigraphy of your manuscript than it can most certainly be translated
-                    in a series of statements of the kind above and be formally described in this way.</p>
-                  <p>In this case the visualizations in the website are supposed
+                    into a series of statements of the kind above and be formally described in this way.</p>
+                  <p>In this case, the visualizations in the website are supposed
                     to help you also in the process, by offering the table visualization and some graphs.</p>
-                    <p>So, try it out! and if you are not sure, drop an issue in the repo and we will be all happy to help.</p>
+                    <p>So, try it out! and if you are not sure, drop an issue in the repository and we will be all happy to help.</p>
 
                 </div>
       </body>

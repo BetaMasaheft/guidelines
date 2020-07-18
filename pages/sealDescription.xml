@@ -26,7 +26,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <body xml:id="sealDescription">
     <head>Seals</head>
     <p>you can use <gi>sealDesc</gi> and seal for seals reported in the
-        catologue description. This should only be used for seals made
+        catalogue description. This should only be used for seals made
         out of wax and not be confused with stamps and ownership
         marks, which are encoded under "extras", see <ref target="additionsVaria">Additions and Varia</ref>.</p>
     <egXML xmlns="http://www.tei-c.org/ns/Examples">

@@ -24,7 +24,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <div>
           <p>We treat Inscriptions in the same way <ref target="manuscripts">Manuscripts</ref>
         and only add in <gi>objectDesc</gi> the value Inscription for <att>form</att>.</p>
-        <p>The same guidelines as for manuscripts apply here but you can do even better, if you make your inscription record
+        <p>The same guidelines as for manuscripts apply here but you can do even better if you make your inscription record
         validate also to the <ref target="http://www.stoa.org/epidoc/gl/latest/">EpiDoc</ref> schema, which will allow interchange of files with other EpiDoc projects.</p>
         <p><ref target="text-encoding">Text encoding</ref> is done in the same way,
         although in the EpiDoc guidelines you might find more specific details

@@ -63,7 +63,7 @@ of Galawdewos</ref> or the <ref target="LIT4915PhysA" type="bm">Dǝrsān za-bǝ�
    </egXML>
    
    <p>Note that in the above example there are more than one <tag>div type="edition"</tag>
-   each with a <att>xml:id</att> starting with 'ed' and that a <att>resp</att> has also been used to distinguish the two.</p>
+   each with an <att>xml:id</att> starting with 'ed' and that a <att>resp</att> has also been used to distinguish the two.</p>
    <p>The  <tag>div type="textpart" subtype="chapter"</tag> has been associated to a <ref target="narratives">narrative unit</ref>.</p>
    <p>The apparatus is inline and the <att>wit</att> provides always pointers to the <gi>witness</gi> elements with that ID which point to the correct manuscript using its ID.</p>
    <p>To separate different types of apparatus notes, use the

@@ -61,7 +61,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <item>  <tag> title[1]</tag></item>
    </list>
    In the example above, therefore <hi rendition="simple:italic">Maṣḥafa qǝddāse</hi> will be printed.
-   Please be as careful in your encoding of titles as everywhere else to correctly encode the facts and not adapt them in order to achieve a certain visualization.
+   Please be as careful in your encoding of titles as everywhere else to correctly encode the facts and not adapt 
+   them to achieve a certain visualization.
     </p>
 
    <p>Titles of the same work in another tradition will be reported
@@ -113,7 +114,7 @@ authorship.</p>
 <p>If a work is traditionally attributed to an author whose authorship
 is not currently considered to be historical, this can be expressed
 verbally with bibliographic references in the description of the
-relation, for example LIT1608hoheta:</p>
+relation, for example, LIT1608hoheta:</p>
 <p>
    <tag>relation name='saws:isAttributedToAuthor' active='LIT1608hoheta' passive="PRS4709Giyorgis'</tag>
 </p>
@@ -125,7 +126,7 @@ relation, for example LIT1608hoheta:</p>
 work. If you come across records which use the author element, please
 correct them.</p>
 <p>You might need to express concept which need more than one
-relation. For example if Person A is author of a translation B of a
+relation. For example, if Person A is author of a translation B of a
 work C in Arabic, you will need a relation of authorship between A and
 B (A isAuthorOf B) and the relation stating the fact that B is a
 translation of C (B isLooseTranslationOf C). If a digital edition of
@@ -175,7 +176,7 @@ title in the language of the original.</p>
 <head>Witnesses</head>
 
 <p>We use <gi>witness</gi> for those manuscripts
-which are <hi rendition="simple:bold">actually used</hi> for the
+which are <hi rendition="simple:bold">used</hi> for the
 edition we are going to provide in the
 <tag>div type='edition'</tag>. All
 manuscript records containing the work are displayed in the app anyway.</p>
@@ -188,11 +189,11 @@ manuscript records containing the work are displayed in the app anyway.</p>
       </listWit>
    </sourceDesc>
 </egXML>
-<p>Please, as in all other instances of ID assigning, make sure you do not assign an existing ID. If you really want to give as <att>xml:id</att> to the above witness with corresp ONBAeth4, the value of this cannot be this same string,
-which is the identifier of the manuscript. It is enough for example to use it in lower case.</p>
+<p>Please, as in all other instances of ID assigning, make sure you do not assign an existing ID. If you want to give as <att>xml:id</att> to the above witness with corresp ONBAeth4, the value of this cannot be this same string,
+which is the identifier of the manuscript. It is enough, for example, to use it in lower case.</p>
 <p>
 
-   <gi>listWit</gi>s can be nested if needed, for example
+   <gi>listWit</gi>s can be nested if needed, for example,
 to group them in families. Each <gi>witness</gi> will
 have to take a <att>corresp</att> pointing to the
 manuscript <att>xml:id</att>. If the manuscript is in already described in
@@ -201,11 +202,11 @@ external catalogue, then use <tag>@type='external'</tag>  in
 <tag>listBibl[type='mss']</tag> in the manuscript entity. You can use
 <att>cert</att> to specify a degree of certainty
 regarding the manuscript you are listing. Please, note that each
-witness element can take a fully marked up description in relation to
+witness element can take a fully marked-up description about
 the text.</p>
 <p>As information provided by the catalogues we are working with
 should not be lost, whenever a catalogue description contains
-references to other manuscripts containing the same work, mini ms
+references to other manuscripts containing the same work, minimal manuscript
 records containing the work ID should be created for those
 manuscripts. This assures that all the manuscripts containing the same
 work can be retrieved by the app while reserving
@@ -214,7 +215,7 @@ manuscripts used for the edition.</p>
 
 <p>Please note that the list of manuscripts containing a work shown in the application
   and the list of witnesses used for an edition are two different things.
-  The first picks up whatever information is available, it might be less or more than we actually know at the moment depending on what has been marked up and linked.
+  The first picks up whatever information is available, it might be less or more than we know at the moment depending on what has been marked-up and linked.
   The <gi>listWit</gi> contains instead a statement about
   the manuscripts used for an edition, which can be nested, and also might contain manuscripts which we do not have yet.</p>
 </div>
@@ -257,10 +258,10 @@ passive="LIT1455GadlaG"/>
 </egXML>
 
    <p>External entries in databases or similar which concern a particular work can also be referenced in a <gi>relation</gi>. If, as in the case of the TUK IDs given by
-      Corpus Coranicum, the external entry refers only to a part of a work, it is preferable to add the <gi>relation</gi> in the exact <gi>div</gi> of this textpart in our
+      Corpus Coranicum, the external entry refers only to a part of a work, it is preferable to add the <gi>relation</gi> in the exact <gi>div</gi> of this text part in our
       edition, using <tag>relation name="skos:exactMatch"</tag>. If this is not possible, because we do not yet have the text of the work or because we
       follow different divisions than the other reference, <tag>relation name="skos:broadMatch"</tag> can be used at the most pertinent place of the record with the
-      most precise pointer to our record possible in <att>passive</att>, as for example in <ref type="bm" target="LIT1697Jubilees"/></p>
+      most precise pointer to our record possible in <att>passive</att>, as, for example, in <ref type="bm" target="LIT1697Jubilees"/></p>
    <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <listRelation>
       <relation name="skos:broadMatch"
@@ -388,7 +389,7 @@ the file with a proper ID as in the example below.</p>
 because there are cases where <att>corresp</att> is already used to point to
 another ID, e.g. a work in another tradition title. Look at this
 fictitious example, where I have entered a placeName with Q item ID
-from wikidata (Ethiopia) and assigned the second <att>corresp</att> and the ID
+from Wikidata (Ethiopia) and assigned the second <att>corresp</att> and the ID
 with P</p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <creation corresp="#t2arabic #Ptest" when="1238-09" >
@@ -414,7 +415,7 @@ ref="PRS7691Oviedo">Oviedo</persName>.
 </abstract>
 </egXML>
 <p>The abstract can also mention the total number of words, which
-might be then marked up with a
+might be then marked-up with a
 <tag>measure type='words'</tag> within the
 <gi>abstract</gi>.</p>
 <p>Summaries given in catalogues can be copied here and edited.</p>

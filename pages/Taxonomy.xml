@@ -23,7 +23,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body xml:id="taxonomy">
          <div type="level1">
             <head>Taxonomies</head>
-            <p>The taxonomy is split from the single files and kept in one single file called taxonomy.xml. This is actually only a <gi>classDecl</gi> which contains a <gi>taxonomy</gi></p>
+            <p>The taxonomy is split from the single files and kept in one single file called taxonomy.xml. This is only a <gi>classDecl</gi> which contains a <gi>taxonomy</gi></p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <taxonomy xml:id="ethioauthlist">
                   <category>
@@ -49,7 +49,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <item>update the <ref target="editingSchema">schema</ref> with the value.</item>
                </list></p>
             
-            <p>An existing file can be added twice or more times in different places in the taxonomy according to need. See for example Letter. 
+            <p>An existing file can be added twice or more times in different places in the taxonomy according to need. See, for example, <q>Letter</q>. 
                The file needs NOT to be duplicated. 
                Remember that the folders which have been created in the repository 
                are only a finding aid and should not be taken to reproduce the hierarchy of the taxonomy.</p>

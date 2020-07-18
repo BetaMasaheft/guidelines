@@ -49,7 +49,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <att>contemporary</att> to provide general information.</p>
     <p>
         <gi>decoNote</gi> elements in <gi>binding</gi>
-        Description MUST have a <att>xml:id</att>
+        Description MUST have an <att>xml:id</att>
         starting with the letter 'b' followed by a progressive number,
         e.g. b1, b2, b3.</p>
     <p>Some of these decoNote can take a special form (which was
@@ -66,7 +66,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 you can add the element <gi>material</gi>
                 with a <att>key</att> equal to one of the
                 values of the corresponding taxonomy from the schema.
-                oXygen should prompt the values from the schema.</p>
+                Oxygen should prompt the values from the schema.</p>
         </item>
     </list>
     <p>You can always further specify this information within one
@@ -109,8 +109,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 Thus, one pair of sewing stations corresponds to 2 sewing stations and two pairs of sewing stations
 corresponds (most of the times) to 4 sewing stations.
 It is important to encode the number of sewing stations because, even if less common,
-the structure with 3 sewing stations actually is a structure on two paired sewing stations (the one in the middle is shared).
-             See for example <ref type="BM" target="SHOr405">Hamburg, State and University Library Hamburg Carl von Ossietzky, Cod. Orient. 405</ref>:
+the structure with 3 sewing stations is a structure on two paired sewing stations (the one in the middle is shared).
+             See, for example, <ref type="BM" target="SHOr405">Hamburg, State and University Library Hamburg Carl von Ossietzky, Cod. Orient. 405</ref>:
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
               <decoNote xml:id="b6" type="SewingStations">4</decoNote>
             </egXML>
@@ -127,9 +127,9 @@ the structure with 3 sewing stations actually is a structure on two paired sewin
          <p>Inside the
              <tag>decoNote type="Endbands"</tag>
              you can use the attribute <att>color</att>
-             and keywords in order to specify
+             and keywords to specify
              the endband type.
-             See for example <ref type="BM" target="SHOr404">Hamburg, State and University Library Hamburg Carl von Ossietzky, Cod. Orient. 404</ref>:
+             See, for example, <ref type="BM" target="SHOr404">Hamburg, State and University Library Hamburg Carl von Ossietzky, Cod. Orient. 404</ref>:
              <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <decoNote xml:id="b5" type="Endbands" color="red white">
                  Narrow
@@ -144,10 +144,10 @@ the structure with 3 sewing stations actually is a structure on two paired sewin
          <p>Endleaves are one or more leaves added at the front and/or back of the textblock for its protection.
            Endleaves are frequently left blank or without pricking and ruling;
            but they can be used for marginal writing.
-           A pastedown is an endleaf adhered to the inside of the front of back board and it is important to record its position in relation with the turn-ins.
+           A pastedown is an endleaf adhered to the inside of the front or back board and it is important to record its position in relation with the turn-ins.
            Inside the <tag>decoNote type="Endleaves"</tag> you can add the attribute <att>pastedown</att>
-           and choose up to three values prompted by the schema in order to describe the position of the pastedown.
-           See for example <ref type="BM" target="SHOr405">Hamburg, State and University Library Hamburg Carl von Ossietzky, Cod. Orient. 405</ref>:
+           and choose up to three values prompted by the schema to describe the position of the pastedown.
+           See, for example, <ref type="BM" target="SHOr405">Hamburg, State and University Library Hamburg Carl von Ossietzky, Cod. Orient. 405</ref>:
            <egXML xmlns="http://www.tei-c.org/ns/Examples">
            <decoNote xml:id="b11" type="EndLeaves" pastedown="L OTI">
            The inner surface of the front board is covered with paper. Traces of paper are found also on the external surface.
@@ -204,7 +204,7 @@ the structure with 3 sewing stations actually is a structure on two paired sewin
                  </decoNote>
              </bindingDesc>
          </egXML>
-         <p>The leaf string marker is a bookmark made of one or several twisted threads, coloured or uncoloured, sewed through a the leaf.
+         <p>The leaf string marker is a bookmark made of one or several twisted threads, coloured or uncoloured, sewed through a leaf.
            It can be found in different positions as shown in the following examples (<ref type="figure" target="#g2"/> and <ref type="figure" target="#g3"/>)</p>
 
          <list>

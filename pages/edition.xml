@@ -76,7 +76,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   other. These will always take a
   <tag>subtype='textpart'</tag> and a
   <att>subtype</att> with the desired value. There should
-  always be also a <att>n</att> identifying for example chapter 3 as well as a
+  always be also a <att>n</att> identifying, for example, chapter 3 as well as a
   <att>corresp</att> pointing to the appropriate
   <gi>msPart</gi> or <gi>msItem</gi>
             </p>
@@ -97,7 +97,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Please be careful in always stating the sources for the description
   of a work, especially for the division of the work into textparts and
   other structural decisions. Ideally this source should be an edition,
-  but if none exists, state if the description follows for example the
+  but if none exists, state if the description follows, for example, the
   EAe or a manuscript.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <div type="edition">
@@ -108,7 +108,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   punctuation without space.</p>
             <p>If the text contains verses we will use <gi>l</gi> as
   in the example above.  <gi>lb</gi> can also be used to
-  mark linebreaks, for example in Inscriptions. Be careful:
+  mark linebreaks, for example, in Inscriptions. Be careful:
   <gi>ab</gi> should be only used in the lowest level div
   nesting:
                <egXML xmlns="http://www.tei-c.org/ns/Examples">

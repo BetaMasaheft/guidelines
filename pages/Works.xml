@@ -28,7 +28,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <head>Works</head>
 
             <p>We consider a <hi rendition="simple:bold">work</hi> any text with an
-independent circulation. To decide whether a work record should be created for a particular text, or whether it should be a Narrative Unit or a textpart of another work,
+independent circulation. To decide whether a work record should be created for a particular text, or whether it should be a Narrative Unit or a text part of another work,
 please read <ref target="definitionWorks">Definition of Works and Narrative Units</ref>.</p>
 
             <p>Please consider carefully whether any information should be encoded in the work record, or in the record of a manuscript containing this work.

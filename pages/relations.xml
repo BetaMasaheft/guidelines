@@ -48,8 +48,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </filiation>
             </egXML>
             <p>These relations can be much more precise than a simple list of <gi>ref</gi> elements
-                stating similarity, and this is therefore the recommended way to encode similar
-                manuscripts. Multiple relations can be stated if needed, for example if a manuscript
+                stating similarity, and this is, therefore, the recommended way to encode similar
+                manuscripts. Multiple relations can be stated if needed, for example, if a manuscript
                 A is a copy from two different manuscripts B and C of which one is certainly a
                 translation from a Coptic manuscript D: one might have a relation between A and B, A
                 and C, C and D or parts of them.</p>
@@ -101,7 +101,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 contains information formerly described in that<ref target="create"> deleted record</ref>.</p>
 
                 <p><code>lawd:hasAttestation</code> is used to say that a named entity, a person, a
-                    place, a textual unit is attested in a textual unit or in a manuscript or one of
+                    place, a textual unit is attested in a textual unit or a manuscript or one of
                     its parts. It cannot be used to relate persons to persons or persons to places,
                     and so on. This also means that if you are working on a set of records and do not want to
                 touch the manuscripts, either start writing a list of witnesses, you can use this relation to say
@@ -348,7 +348,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="saws:isDifferentTo" active="LIT4031EgziabeherN"
                             passive="LIT2001Mazmur">
-                            <desc>Both works have often be confused with each other, for example in <bibl>
+                            <desc>Both works have often be confused with each other, for example, in <bibl>
                                     <ptr target="bm:Ewald1846Tuebingen"/>
                                     <citedRange unit="page">37-38</citedRange>
                                 </bibl>, <bibl>

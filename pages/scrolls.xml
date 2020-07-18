@@ -51,7 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 but will allow you to encode in any point of the text where this is 
                 convenient the occurrence of this change. While a page break occurs only in one point, this 
                 type of change, as the one of block of stone for a running 
-                architectural inscription for example, are likely to occur several times in one transcription.
+                architectural inscription, for example, are likely to occur several times in one transcription.
                 You will have where convenient this <gi>milestone</gi> as many times as needed (with the same <att>n</att>).
                 </p>
                 <p>It is generally enough to encode the text of the inscription in the file,

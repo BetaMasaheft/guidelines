@@ -42,7 +42,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     always be well nested one into the other. These will always take a
     <att>subtype</att> with <val>textpart</val> and a
     <att>subtype</att> with the desired value. There should
-    always be also a <att>n</att> identifying for example chapter 3 as well as a
+    always be also a <att>n</att> identifying, for example, chapter 3 as well as a
     <att>corresp</att> pointing to the appropriate
     <gi>msPart</gi> or <gi>msItem</gi> in the case of manuscript transcriptions.
          </p>
@@ -100,7 +100,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     level div nesting!</p>
          <div type="level3">
             <head>Text Diplomatic Transcription features</head>
-            <p>Please, note that these elements can be used everywhere you have text, for example in additions, incipits or explicits.</p>
+            <p>Please, note that these elements can be used everywhere you have text, for example, in additions, incipits or explicits.</p>
             <p>If any of the features listed here are unclear to you or use unfamiliar terminology, please open an issue or be in touch otherwise and ask for clarification.</p>
             <div type="level4">
                <head>Text Structure</head>
@@ -398,7 +398,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>are used to indicate some portions of text that
-            were restored on the basis of philological and textual
+            were restored based on philological and textual
             considerations</p>
                      </cell>
                      <cell>
@@ -414,7 +414,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell>
                         <p>are used to indicate some portions of text that
-            were integrated on the basis of philological and textual
+            were integrated based on philological and textual
             considerations</p>
                      </cell>
                      <cell>
@@ -429,7 +429,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <tag>supplied reason="undefined"</tag>
                      </cell>
                      <cell>
-                        <p>please do not use this unless really necessary
+                        <p>please do not use this unless necessary
             there are other nice options.</p>
                      </cell>
                      <cell>
@@ -691,10 +691,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </row>
                </table>
                </p>
-               <p>TEI is made for this and there are a number of other things
+               <p>TEI is made for this and there are many other things
         which can be much better and more precisely encoded.</p>
                <p>When the record does not yet contain any text transcription,
-        but information about some of the above listed phenomena is
+        but information about some of the above-listed phenomena is
         available, this should be stated temporarily in a note with a
         commentary for future changes in the respective msItem:</p>
                <egXML xmlns="http://www.tei-c.org/ns/Examples">

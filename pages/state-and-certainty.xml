@@ -37,7 +37,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <state type="existence" ref="Aks"/>
 </egXML>
          <p>the ref points to an Authority list file Aks.xml which contains
-    the permalink to the PeriodO definition, in this case
+    the permalink to the PeriodO definition, in this case,
     http://n2t.net/ark:/99152/p03tcss4qvv.</p>
          <p>if this is an attested place only in one source, note down that
     as well in <att>source</att> or in a <gi>desc</gi> or
@@ -45,7 +45,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     Smith's Dictionary of Greek and Roman Geography the passage in
     Ptolemy where the port of the Adulitae is mentioned and we have added a
     note about it linking to the <gi>bibl</gi> element as its source. The <gi>note</gi>
-    has also a <att>cRef</att> to point to the exact passage in perseus.</p>
+    has also a <att>cRef</att> to point to the exact passage in Perseus.</p>
          <p>example:</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <listBibl>

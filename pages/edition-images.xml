@@ -40,13 +40,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 </witness>
              </egXML>
              <p>Note that in this example the resource is external, i.e. we do not and will not have this manuscript.</p>
-             <p>At the point in the text where the manuscript page interruption occurs you can then add a <gi>pb</gi>.</p>
+             <p>At the point in the text where the manuscript page interruption occurs, you can then add a <gi>pb</gi>.</p>
              <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <pb n="40v" corresp="#P" facs="https://digi.ub.uni-heidelberg.de/diglit/iiif/cpgraec398/canvas/0084.json"/>
              </egXML>
              <p>If you have more than one witness for the edition, you can add as many of these as needed in the text, connecting them with the <att>corresp</att> to the correct <gi>witness</gi> in the file.</p>
              <p>The content of <att>facs</att> needs to be the correct canvas of that page. This is usually visible in the page of the institution publishing the manuscript or directly looking into the IIIF manifest.</p>
-             <p>There is no way for the machine to infer what the foliation corresponds to in the image set, you have to check it. Usually the structure is quite simple, so, if you know your first page break is 0084, the following will be 0085.</p>
+             <p>There is no way for the machine to infer what the foliation corresponds to in the image set, you have to check it. Usually, the structure is quite simple, so, if you know your first-page break is 0084, the following will be 0085.</p>
          </div>
       </body>
    </text>

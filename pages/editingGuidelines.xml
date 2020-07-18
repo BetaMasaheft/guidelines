@@ -34,7 +34,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         target="https://github.com/BetaMasaheft/guidelines">Beta maṣāḥǝft schema
                         repository</ref> and the <ref target="https://github.com/BetaMasaheft/RDF"
                         >Beta maṣāḥǝft ontology (this is not via webhook)</ref>.</p>
-                <p>If you edit and push (or make a pull request) to the above repos, the XML files will be
+                <p>If you edit and push (or make a pull request) to the above repositories, the XML files will be
                     sent to the application and go live so that you can see them, search, browse,
                     read, etc.</p>
                 <p>All edits to the guidelines should be made as a pull request, and not be pushed directly to the main branch. This is to ensure that the guidelines do reflect the
@@ -48,9 +48,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     see
                     <ref target="editingSchema">editing the Schema</ref>.</p>
                 <p>There is a Beta maṣāḥǝft Guidelines Schema which validates the files you
-                    are pushing to the app when editing the guidelines and will notify you if anything goes wrong. Actually,
-                    there are processing instructions in every single file that should allow your
-                    editor to validate your XML BEFORE you push it to the repo. </p>
+                    are pushing to the app when editing the guidelines and will notify you if anything goes wrong. 
+                    There are processing instructions in every single file that should allow your
+                    editor to validate your XML BEFORE you push it to the repository. </p>
             </div>
             <div type="level3">
                 <head>Principles</head>
@@ -110,7 +110,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </item>
                     </list></p>
                 <p>Please always use <gi>gi</gi>, <gi>tag</gi>, <gi>att</gi> and <gi>val</gi> to
-                    mark up respectively element names, tags, attributes names and values. Only in case the value is actually a 
+                    mark up respectively element names, tags, attributes names and values. Only in case the value is a 
                     class or property with a prefix, then use <gi>code</gi>, e.g. <code>foaf:member</code>.You do
                     not need to type angle brackets and escape them or to add @ in front of every
                     attribute, this will be done during the visualization. For elements a link will
@@ -121,15 +121,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     namespace in the examples).</p>
                     <p>Good practice should be always used in providing examples, which should not be made up but reflect the encoding in a currently existing file. It is also good practice to add a <gi>ref</gi> with a link to the file where this is to be found.</p>
                 <p>You can use <gi>cit</gi> and <gi>quote</gi> for quotations.</p>
-                <p>If you really want to make something bold or italics use <tag>hi
+                <p>If you want to make something bold or italics use <tag>hi
                         rendition="simple:bold"</tag> and <tag>hi
                     rendition="simple:italic"</tag></p>
                 <p>In a Table of contents file, please only use <gi>list</gi> and enter as content of the <gi>item</gi>s only the ID of the page you want the ToC to point to.</p>
             </div>
             <div type="level3">
               <head>Figures</head>
-              <p>You can add figures like in the following example, adding the info.json url of any IIIF available image on the web.</p>
-              <p>For images published by the project, i.e. the Ethio-SPaRe manuscript images, the format of these urls is always as the one in the example.</p>
+              <p>You can add figures like in the following example, adding the info.json URL of any IIIF available image on the web.</p>
+              <p>For images published by the project, i.e. the Ethio-SPaRe manuscript images, the format of these URLs is always as the one in the example.</p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
               <figure>
                   <graphic

@@ -28,7 +28,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <head>Manuscript Contents</head>
     <p>The contents of each manuscript part should be given into the
         smallest possible unit (<gi>msPart</gi>) to which
-        they refer to, into an <gi>msContent</gi>, but
+        they refer to, into a <gi>msContent</gi>, but
         they can be added at any level in a hierarchy of parts.</p>
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
         <msContents>
@@ -58,7 +58,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <gi>title</gi> should point with a
         <att>ref</att> to the identifier of the <ref target="works">Work</ref> in the
         <ref target="/works/list" type="bm">Clavis</ref>. In the Work file <ref target="structureWorks">alternative titles</ref> in different
-        languages should be given, here the title should be reported if relevant, e.g. if non standard.</p>
+        languages should be given, here the title should be reported if relevant, e.g. if non-standard.</p>
     <div type="level2">
         <head>Summary</head>
         <p>
@@ -150,7 +150,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </foreign>
                   </incipit>
                 </egXML>
-            <p>Within the text all TEI markup can be used to indicate
+            <p>Within the text, all TEI markup can be used to indicate
                 mistakes, lacunas, editorial interventions, etc.</p>
             <p>The use of <gi>explicit</gi> follows the
                 TEI definition.</p>

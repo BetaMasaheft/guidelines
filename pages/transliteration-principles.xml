@@ -243,7 +243,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <p>Prepositions are always separated by the following word by a
          hyphen:</p>
          <p>kāhǝnāt wa-diyāqonāt</p>
-         <p>Names containing prepositions are however, spelled as one word:</p>
+         <p>Names containing prepositions are, however, spelt as one word:</p>
        <list type="unordered">
          <item>Baḫayla Mikāʾel and not Ba-Ḫayla Mikāʾel</item>
 
@@ -257,7 +257,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
            <head>Capitalisation</head>
            <p>In transliterated titles (whether the title of the work record or
            the title of a manuscript containing the work), the first word and
-           all proper names should be spelled with a capital, so for example
+           all proper names should be spelt with a capital, for example,
            Wəddāse ʾAmlāk.</p>
            <p>Please open individual issues for particular cases that need
            discussing.</p>
@@ -309,7 +309,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </div>
         <div type="level2">
           <head>Amharic transcriptions</head>
-          <p>The same transcription system as that of Gǝʿǝz is applied. The orthography of the transcribed text is always followed, so for example
+          <p>The same transcription system as that of Gǝʿǝz is applied. The orthography of the transcribed text is always followed, for example,
             ከወልወል፡ እስከ፡ ማይጨው፡ is transcribed as Ka-walwal ʾǝska Māyč̣aw.
           </p>
           <p>Again, if you come across a case which you feel is not properly covered by the guidelines or have any doubts, please open an issue.</p>

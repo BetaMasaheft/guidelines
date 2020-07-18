@@ -80,7 +80,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </figure>
 
         <p> The number of leaves in the quire is normally even, but can frequently also be odd (1,
-          3, 5, etc.). In this case, it is necessary to indicate the positions of each single leaf
+          3, 5, etc.). In this case, it is necessary to indicate the positions of every single leaf
           and its stub (the short part of the single leaf that "hooks" it into the textblock), in relation
           to the other leaves of the quire. This is how stubs can look like in manuscripts: <figure>
             <graphic xml:id="example4"
@@ -211,7 +211,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <item>replaced</item>
             <item>missing</item>
             <item>added</item>
-          </list>Please, note that because these are parts of text which are actually used in the
+          </list>Please, note that because these are parts of text which are used in the
           Beta maṣāḥǝft portal, there is no flexibility of usage, these are fixed terms, and so is the formulation used.
           These terms allow you to indicate that the quire
           was disturbed and one leaf was taken out of it or added into it; you can explain more on
@@ -284,7 +284,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
         <p>
           Precise information on the quire signatures/marks written by the scribes
-          can be provided by means of the element <gi>num</gi> with <att>value</att>:
+          can be provided using the element <gi>num</gi> with <att>value</att>:
 
        <egXML xmlns="http://www.tei-c.org/ns/Examples">
          <collation>
@@ -352,7 +352,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
         <p>Many catalogues do not contain any information on the quire structure. Sometimes it is
           only possible to provide general information or fragmentary observations on the quire
-          structure. Sometimes the information is imprecise and can be ascertained only by means of
+          structure. Sometimes the information is imprecise and can be ascertained only using
           a direct check of the physical manuscript. In any case, all available data of whatever
           kind can be summarized in a <gi>note</gi> inside <gi>collation</gi>, as in this example
           from <ref type="bm" target="BDLaethf7">BDLaethf7</ref>:</p>
@@ -373,7 +373,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           to obtain a specific visualisation. Although this section of the guidelines is strongly
           related to the visualization tools in the portal, it uses standard TEI and formal text
           content which is based on previous projects (Ethio-SPaRe especially). If you wish for
-          another visualisation for your own purposes you should have all needed information. If you
+          another visualisation for your purposes you should have all the needed information. If you
           encounter problems while encoding that are not covered by these guidelines, please open an
           issue.</p>
 

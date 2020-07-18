@@ -26,13 +26,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body xml:id="colophon">
          <div>
             <head>Colophon</head>
-            <p>A colophon refers to production stages of the entire manuscript only, and is usually found to the end, in rare cases to the beginning of the manuscript.
+            <p>A colophon refers to production stages of the entire manuscript only and is usually found to the end, in rare cases to the beginning of the manuscript.
   Even if this is short and contains no date, it is still a colophon.
   The core formulas are: <foreign xml:lang="gez">ዛቲ፡ መጽሐፍ፡ ተፈጸመት፡, or ተጽሕፈ፡ ዝንቱ፡ መጽሐፍ፡, መልአ᎓ ጽሕፈቱ᎓ ለ…</foreign>, or similar.
 </p>
   <p>Examples of colophons recorded in Ethio-Spare are the following:
 <list>
-  <item>In <ref type="BM" target="ESqs006">QS-006</ref>, it is placed in the
+  <item>In <ref type="BM" target="ESqs006">QS-006</ref>, it is placed at the
   beginning (possibly the same in other Deggwa manuscripts) and refers to the beginning of the copying. </item>
   <item>  In <ref type="BM" target="ESap008">AP-008</ref>, f. 140v, it refers to the beginning and the end
   of the copying: <foreign xml:lang="gez">ዘተወጥነ᎓ በዘመነ᎓ ማቴዎስ᎓ ተፈጸመ᎓ በዘመነ᎓ ማርቆስ᎓ በዘመነ᎓ ሢመቱ᎓ ለዘሚካኤል።</foreign></item>

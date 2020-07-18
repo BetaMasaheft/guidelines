@@ -30,19 +30,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               as those which contain letters as part of the
               <ref target="manuscriptContents">main or secondary contents</ref>.
 
-<ref type="bm" target="IVEf921">Saint Petersburg, Institut Vostočnyh Rukopisej Rossijskoj Akademii Nauk, IV Ef.92.1</ref> is an example of such letter being recorded in the database.
+<ref type="bm" target="IVEf921">Saint Petersburg, Institut Vostočnyh Rukopisej Rossijskoj Akademii Nauk, IV Ef.92.1</ref> is an example of such a letter being recorded in the database.
   Another case is a letter which is copied into a manuscript, which has no independent support, and is thus a secondary or main content according to the criteria to decide on that.
-  In this case the criteria for contents apply,
+  In this case, the criteria for contents apply,
   and you might or not want to create a work record.
   If you do so, then give to that work record the keyword <q>Letter</q> to facilitate retrieval.
 </p><p>
   There might be cases where you need to split a work and a manuscript record,
-  if for example a letter of which we do have the original is mentioned
+  if, for example, a letter of which we do have the original is mentioned
   somewhere for its text and a work record has been created for it to point it.
   This is fine, and if and when we might end up having a record for the actual
   manuscript letter then we will have it and point to the work record as usual.
-  If for example one of these letters is mentioned in a manuscript (another of the same letters?)
-  and you want to refer to it, then you could actually do that directly to the manuscript record,
+  If, for example, one of these letters is mentioned in a manuscript (another of the same letters?)
+  and you want to refer to it, then you could do that directly to the manuscript record,
   with no need to create a work record.
 </p>
 <p>

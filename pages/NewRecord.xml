@@ -44,8 +44,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     leaving the page you will get a warning every time, intended to make you stop
                     before you carry on without syncing. The generated file will have a consistent
                     new ID and will insert it in the appropriate place in the file. This should
-                    avoid the really frequent problem of IDs not being updated after copy-pasting a
-                    master file. It remains entirely possible to create your files in oXygen as
+                    avoid the frequent problem of IDs not being updated after copy-pasting a
+                    master file. It remains entirely possible to create your files in Oxygen as
                     previously, but the application interface is recommended as it makes sure your ID is unique.
                     The file will also have the correct type and a <gi>change</gi> element with your initials
                     and current date.</p>
@@ -58,10 +58,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 our list</item>
 <item>if yes, then
 <list>
-<item>check if there is also a wikidata item
+<item>check if there is also a Wikidata item
 (you can simply google what you are looking for, open the correct
-wikipedia page you find and hit the wikidata item link on the left).</item>
-  <item><list><item>if yes add a <att>sameAs</att> attribute with the Q ID in the URL or at the
+Wikipedia page you find and hit the Wikidata item link on the left).</item>
+  <item><list><item>if yes add a <att>sameAs</att> attribute with the Q-ID in the URL or at the
   top of the item.</item></list></item>
   <item>check if there is also a record in geonames.org</item>
   <item><list><item>if yes add a <att>sameAs</att> attribute to place linking to such geonames
@@ -71,10 +71,10 @@ wikipedia page you find and hit the wikidata item link on the left).</item>
 <item>add a ref to our record</item>
 <item>if not,
 then</item>
-<item>check if there is also a wikidata item</item>
+<item>check if there is also a Wikidata item</item>
 <item>check if it is in
 geonames.org</item>
-<item>if yes add the uri in the  <att>ref</att> </item>
+<item>if yes add the URI in the  <att>ref</att> </item>
 <item>if not (but check
 thoroughly, because it would be an exception) create a new place
 record</item>
@@ -83,10 +83,10 @@ record</item>
                 to an authority file for places out of scope which we are not going
                 to describe or give details about. If there is already a record, no
                 need to delete it or update it. Simply add the Wikidata Entity.</p>
-                <p>Adding references to places not in our db:
+                <p>Adding references to places not in our database:
 <list>
 <item>for ancient place
-prefer pleiades, with namespace pleiades</item>
+prefer Pleiades, with namespace Pleiades</item>
 <item>for places related to the
 Coptic literary tradition use PAThs</item>
 </list>

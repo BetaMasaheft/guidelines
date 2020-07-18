@@ -17,62 +17,72 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+      </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="revisions">
          <head>Revisions</head>
-         <p>It is very important to add a <gi>change</gi> in
-            the <gi>revisionDesc</gi> element of the
-            <gi>teiHeader</gi> at the end of each section of work of
-    improvement of a record. In the attribute
-    <att>who</att> enter <ref target="teamids">your ID</ref>, in the
-    <att>when</att> enter the date of the change, in the
-    format YYYY-MM-DD. You can use code templates in oXygen to do this. There is a set ready for you which also includes this. 
-    Inside the element, briefly describe the changes
-    you have made.</p>
+         <p>It is very important to add a <gi>change</gi> in the <gi>revisionDesc</gi> element of
+            the <gi>teiHeader</gi> at the end of each section of work of improvement of a record. In
+            the attribute <att>who</att> enter <ref target="teamids">your ID</ref>, in the
+               <att>when</att> enter the date of the change, in the format YYYY-MM-DD. You can use
+            code templates in Oxygen to do this. There is a set ready for you which also includes
+            this. Inside the element, briefly describe the changes you have made.</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<revisionDesc>
-   <change when="2010-12-04">registered</change>
-   <change who="DN" when="2015-09-11">last edited</change>
-   <change who="PL" when="2016-03-10">transformed from mycore to TEI P5</change>
-</revisionDesc>
-</egXML>
+            <revisionDesc>
+               <change when="2010-12-04">registered</change>
+               <change who="DN" when="2015-09-11">last edited</change>
+               <change who="PL" when="2016-03-10">transformed from mycore to TEI P5</change>
+            </revisionDesc>
+         </egXML>
          <p>Best thing would be to do this every time you are not simply adding a comma.</p>
-         
-               <p>The file should be submitted for revision to a second author
-                  taking care of describing according to guidelines the event.</p>
-               <list type="ordered:arabic">
-                  <item>
-                     <p>Cataloguer will enter a <gi>change</gi>
-                        with content <hi rendition="simple:italic">Submitted for
-                           review</hi>, once she is finished.</p>
-                  </item>
-                  <item>
-                     <p>Reviewer will add a <gi>change</gi> with
-                        content <hi rendition="simple:italic">Reviewed and
-                           Corrected</hi>,</p>
-                  </item>
-                  <item>
-                     <p>General editor will enter a <gi>change</gi>
-                        with value <hi rendition="simple:italic">Approved</hi>
-                     </p>
-                  </item>
-               </list>
-         
-         <p> If you change for example an ID in many files you don't want to go back to each and add a <gi>change</gi>, but in that case there is also the  GIT commit message which will help. Please use it!
-         There is no need to commit immediately every small change made, thus multiplying them and their titles and descriptions, but when we do commit something (after checking, validating, checking again and being very sure), it is extremely  important to give a proper title and any relevant information helping to investigate the change in the future. 
-         </p>
-         <p>If one has to revert a commit of 40 files and all the commit says is "update" and there is no change element, anyone looking into the commit which caused the issue is forced to do hand comparing on each commit to find out which one might contain the mistake and then check each file by hand, i.e. the whole workflow and file versioning is rather vain. 
-         </p>
-         <p>The <gi>revisionDesc</gi> in the files and the commits to GIT (titles and descriptions) are our way to keep track of the work easily and they become more and more important as we proceed, so please let us not skip these steps, they are not time consuming and they are of great importance in the short and long term.
-         </p>
-         <p>In <gi>change</gi>, please describe what you have changed in the file, e.g. "added msItems and transcription of divs". 
-         </p>
-         <p>In the commit title, try to provide a descriptive title which will make it as easy as possible to know at a glance what you have committed there. so, "added IDs" is way much better of "minor correction" (and shorter!) "added perName elements" is better than "changed something".
-         </p>
-         <p>You can use the commit description to link and refer to issues, if the explanation of what you have done is there. The issue will also receive that information and provide a link to the commit.
-         </p>
+
+         <p>The file should be submitted for revision to a second author taking care of describing,
+            according to the guidelines, the event.</p>
+         <list type="ordered:arabic">
+            <item>
+               <p>Cataloguer will enter a <gi>change</gi> with content <hi rendition="simple:italic"
+                     >Submitted for review</hi>, once she is finished.</p>
+            </item>
+            <item>
+               <p>Reviewer will add a <gi>change</gi> with content <hi rendition="simple:italic"
+                     >Reviewed and Corrected</hi>,</p>
+            </item>
+            <item>
+               <p>General editor will enter a <gi>change</gi> with value <hi
+                     rendition="simple:italic">Approved</hi>
+               </p>
+            </item>
+         </list>
+
+         <p> If you change, for example, an ID in many files you don't want to go back to each and
+            add a <gi>change</gi>, but in that case there is also the GIT commit message which will
+            help. Please use it! There is no need to commit immediately every small change made,
+            thus multiplying them and their titles and descriptions, but when we do commit something
+            (after checking, validating, checking again and being very sure), it is extremely
+            important to give a proper title and any relevant information helping to investigate the
+            change in the future. </p>
+         <p>If one has to revert a commit of 40 files and all the commit says is "update" and there
+            is no change element, anyone looking into the commit which caused the issue is forced to
+            do hand comparing on each commit to find out which one might contain the mistake and
+            then check each file by hand, i.e. the whole workflow and file versioning is rather
+            vain. </p>
+         <p>The <gi>revisionDesc</gi> in the files and the commits to GIT (titles and descriptions)
+            are our way to keep track of the work easily and they become more and more important as
+            we proceed, so please let us not skip these steps, they are not time-consuming and they
+            are of great importance in the short and long term. </p>
+         <p>In <gi>change</gi>, please describe what you have changed in the file, e.g. "added
+            msItems and transcription of divs". </p>
+         <p>In the commit title, try to provide a descriptive title which will make it as easy as
+            possible to know at a glance what you have committed there. so, "added IDs" is way much
+            better of "minor correction" (and shorter!) "added perName elements" is better than
+            "changed something". </p>
+         <p>You can use the commit description to link and refer to issues, if the explanation of
+            what you have done is there. The issue will also receive that information and provide a
+            link to the commit. </p>
       </body>
    </text>
 </TEI>

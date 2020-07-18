@@ -35,7 +35,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       Encyclopedia article, etc.). For papers in Conference proceedings
       - use "Book section" in Zotero, do not use
       "Conference paper" as the publication type as then you
-      cannot enter series number and some other things in the mask.</p>
+      cannot enter the series number and some other things in the mask.</p>
                </item>
                <item>
                   <p>The titles must be quoted in full (not abbreviated), in the way
@@ -44,7 +44,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <list type="ordered:loweralpha">
   <item>
      <p>Titles in English should use maximal capitalization (i.e.
-capitalize every words apart from articles and conjunctions),
+capitalize every word apart from articles and conjunctions),
 unless the title is not originally in upper case, then follow the
 capitalization as it appears on the book cover. Titles in
 languages other than English should use minimal capitalization
@@ -67,8 +67,7 @@ German).</p>
   subtitle.</p>
     </item>
     <item>
-       <p>If more subtitles are present, they should be divided by a
-  comma and capitalized.</p>
+       <p>If more subtitles are present, they should be divided by comma and capitalized.</p>
     </item>
     <item>
        <p>Use a full stop between titles in different languages in
@@ -94,7 +93,7 @@ etc.), provide the scientific transcription and translation only
       <p>There are further rules to be followed:</p>
 <p>Pre-reform spelling (before 1918) of proper names should be standardized according to modern spelling. Thus, not Bolotov" (Болотовъ), but Bolotov (Болотов).</p>
 <p>Pre-reform spelling (before 1918) of titles is transliterated according to the pre-reform spelling, without standardization.
- Thus, for example 'Описанiе двухъ эѳиопскихъ рукописей, пожертвованныхъ въ библiотеку Спб. Дух. Академiи преосвященнымъ Анатолiемъ, епископомъ балтскимъ (нынѣ острогожскимъ)'
+ Thus, for example, 'Описанiе двухъ эѳиопскихъ рукописей, пожертвованныхъ въ библiотеку Спб. Дух. Академiи преосвященнымъ Анатолiемъ, епископомъ балтскимъ (нынѣ острогожскимъ)'
  should be transliterated as 'Opisanie dvuch" rukopisej, požertvovannych" v" biblioteku Spb. Duch. Akademii preosvjaščennym" Anatoliem", episkopom" baltskim" (nyně ostrogožskim")'.</p> </item>
   <item>
      <p>A translation in English is necessary for titles in any
@@ -133,8 +132,8 @@ inserted in the fields: author, editor and translator.</p>
                <item n="4">
                   <p>For the names of the authors/editors, Zotero has the option to
       choose between the “Surname, First name” and simply “Name” (one
-      field) form. Make sure that you use 2 fields for occidental names,
-      and the 1-field mode for oriental (Ethiopian) names. You can
+      field) form. Make sure that you use two fields for occidental names
+      and the one-field mode for oriental (Ethiopian) names. You can
       switch between the options clicking on the field to the right of
       the name.</p>
                  <list type="ordered:loweralpha">
@@ -151,13 +150,13 @@ inserted in the fields: author, editor and translator.</p>
                        <p>Author's names in Zotero should be given in full as they appear
            on the publication, but if the full first name is not available
            please provide the initials as given on the book with full points
-           AND divided by a space (e.g. 'Mudimbe, V. Y.' and NOT 'Mudimbe, V
+           AND divided by space (e.g. 'Mudimbe, V. Y.' and NOT 'Mudimbe, V
            Y' OR 'Mudimbe, V.Y.' Titular prefixes (Sir, Revd, Dr, Captain,
            etc.) are not needed unless their removal would mislead the
            reader.</p>
                     </item>
                     <item>
-                     <p>In case if the transliterated form of a contributor's name in the publication differs from the transliterated form according to the rules applied by the project, enter the standardized form in accordance with <ref target="http://viaf.org/"/> into the corresponding field.
+                     <p>In case if the transliterated form of a contributor's name in the publication differs from the transliterated form according to the rules applied by the project, enter the standardized form following <ref target="http://viaf.org/"/> into the corresponding field.
                      In addition to that, ALWAYS provide in a child note for this specific entry (see, <ref target="https://www.zotero.org/support/notes"></ref>) the actual spelling of a contributor's name, as it appears in the publication.</p>
                       </item>
                  </list>
@@ -176,9 +175,9 @@ inserted in the fields: author, editor and translator.</p>
                <item>
                   <p>Each discrete printed entity that potentially may be quotable
       separately is a separate Zotero entry. Meaning a collection
-      (Festschrift, Conference proceedings etc etc) get separate entries
+      (Festschrift, Conference proceedings etc.) get separate entries
       as "Books", and each article in the collection gets its
-      own entry as "Book section". In electronic publications,
+       entry as "Book section". In electronic publications,
       both the book and each chapter get independent DOIs.</p>
                </item>
                <item>
@@ -202,7 +201,7 @@ inserted in the fields: author, editor and translator.</p>
       and complete, <hi rendition="simple:bold">Never</hi> import from
       specific library catalogues as you may inherit too many mistakes
       and you risk to import a compilation created only in that specific
-      library and actually not existing elsewhere. Do not import any
+      library and not existing elsewhere. Do not import any
       library-specific data like shelfmarks, buildings, etc.</p>
                </item>
                <item>
@@ -221,8 +220,8 @@ inserted in the fields: author, editor and translator.</p>
 means 'no place')</p>
       </item>
       <item>
-         <p>Abbreviations in city’s and states name are written without
-full point and without space in British English, e.g. Washington
+         <p>Abbreviations in city’s and states name are written without a
+full point and space in British English, e.g. Washington
 DC not Washington D.C. or Washington D. C. or Washington, DC USA
 not U.S.A or U. S. A.</p>
       </item></list>
@@ -290,7 +289,7 @@ use n.pub. instead (it means 'no publisher')</p>
       'Urbana–Chicago: University of Illinois Press'</p>
                </item>
                <item>
-                  <p>If there are more than one publisher involved and operating in
+                  <p>If there is more than one publisher involved and operating in
       the same city, then the publishers’ name should be divided by an n
       rule, e.g. 'Addis Ababa: CFEE–Institute of Ethiopian Studies'.</p>
                </item>
@@ -381,13 +380,13 @@ check that only one item has this tag. If not, change the keyword of
 the tag just assigned.</p>
                   <p><hi rendition="simple:bold">Please do not change existing tags</hi>, as they probably already have been used in Beta maṣāḥǝft or Dillmann.
                      Small inconsistencies and typos in tags can be ignored. Adjusting their cosmetics to fit your taste is only going to harm.</p>
-                     <p>In case double bm: tags have been assigned, please proceed immediately to check which one is actually in use. Update the occurrences of the minority attestation and remove the unneeded tag.</p>
+                     <p>In case of double bm: tags have been assigned, please proceed immediately to check which one is in use. Update the occurrences of the minority attestation and remove the unneeded tag.</p>
                      <p>In case of double entries each with a bm: tag, the guidelines have not been followed for the one created the latest. You are welcome to blame them and move to the author of the
                        mistake the need to immediately clean the Zotero database from the wrongly created record AND update all occurrences of the tag assigned to it with the correct tag of the correct entry.</p>
-                       <p>Please always be very careful. If you think it is a double but you are not sure, ASK. For example sometimes two records seem the same
-but they are not as for instance the publisher is different. In that case
+                       <p>Please always be very careful. If you think it is a double but you are not sure, ask. For example, sometimes two records seem the same
+but they are not for instance the publisher is different. In that case,
 they are not double records and should not be removed.</p>
-<p>To check the occurrences of a tab you can use the search by zotero tag in the BM and Dillmann applications.</p>
+<p>To check the occurrences of a tab you can use the search by Zotero tag in the BM and Dillmann applications.</p>
                </item>
             </list>
 

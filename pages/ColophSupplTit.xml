@@ -34,7 +34,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <att>type</att>. In <gi>title</gi> and <gi>div</gi> the attribute <att>type</att> is 
       used for a more general typology. Each of these elements can take as much text as available 
       and needed, from nothing to many thousands of words.</p>
-      <p>Since some of these elements can also be used for additions, it is possible to encode for example a supplication or an extended title added
+      <p>Since some of these elements can also be used for additions, it is possible to encode, for example, a supplication or an extended title added
         after the copying of the main text with the same set 
         of tags and attributes . </p>
       <p>Whether used for the encoding of the main content or later additions, the list of values which can be used for the attributes <att>type</att> or
@@ -66,10 +66,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         register as much as possible, but not overstate. Fortunately, all this different
         information can be collected together, and the use of the same set of attributes can
         help. An additional reason for this is that this information can be joined to one 
-        another: there might be for example a colophon which contains a title. A generic 
+        another: there might be, for example, a colophon which contains a title. A generic 
       incipit or explicit might contain, with other things also a title, but is generically the 
       beginning of a text part, which needs not to be a title or anything else, although it might be. 
-      It is up to the encoder to make decisions for example if a long title before a text is all there is in a <gi>incipit</gi> given 
+      It is up to the encoder to make decisions, for example, if a long title before a text is all there is in a <gi>incipit</gi> given 
         by a cataloguer, the encoder might decide to have an <gi>incipit</gi> with a <att>type</att> <val>inscription</val>, 
         or to copy the text in the <gi>title</gi> element of the <gi>msItem</gi>.</p>
       <p>A special note needs to be made for <gi>seg</gi> which can be used within <gi>colophon</gi>, <gi>incipit</gi>, <gi>explicit</gi>, <gi>div</gi>.</p>
@@ -82,7 +82,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           manuscript record. Cases like the ones discussed for Coptic Biblical Titles <ref
             target="https://www.aai.uni-hamburg.de/en/comst/pdf/bulletin3/comst-bulletin3-1-05-22.pdf"
             >Buzi 2017, 5–6</ref> would need encoding in each manuscript. The next
-          section details a number of types of titles which can be encoded in a work, with examples
+          section details several types of titles which can be encoded in a work, with examples
           of how to encode them.</p>
         <p>There is no need to add a <att>type</att> to every <gi>colophon</gi>, but the attribute and values should be used cautiously, 
           so that a search for a colophon with a certain type will match only this case.</p>
@@ -118,7 +118,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </egXML>
         <div type="level3">
           <head>Title of the (entire) work</head>
-          <p>See for example in the manuscripts with the <ref type="bm" target="LIT3179Revela"
+          <p>See, for example, in the manuscripts with the <ref type="bm" target="LIT3179Revela"
               >Revelation of John</ref>, the wording like <foreign xml:lang="gez">ዝየ᎓ ተፈጸመ᎓ ራእየ᎓
               ዮሐንስ᎓ አቡቀለምሲስ᎓ ዘውእቱ᎓ በሕይወቱ᎓ ራእይ᎓ ብሂል᎓</foreign> e.g. <ref
               target="https://betamasaheft.eu/manuscripts/IVsuhtelen252/main#ms_i1.2">Saint
@@ -295,20 +295,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </ab>
           </div>
         </egXML>
-        <p>Supplications  in transcribed text that are integrated into the text and 
+        <p>Supplications  in a transcribed text that are integrated into the text and 
           cannot logically be encoded in <gi>incipit</gi> or <gi>explicit</gi> must be encoded in 
         either the manuscript transcription or the edition of the text, or both, using a 
           <tag>div subtype="supplication"</tag> or <tag>seg type="supplication"</tag> with </p>
         
         <p>Where the supplication is present only in one manuscript, 
-          clearly separated from the other textparts, it can be marked there, using either <gi>incipit</gi>, <gi>explicit</gi>, <gi>colophon</gi> or <gi>seg</gi>
+           separated from the other textparts, it can be marked there, using either <gi>incipit</gi>, <gi>explicit</gi>, <gi>colophon</gi> or <gi>seg</gi>
         as in the previous example, only in the manuscript where it occurs.</p>
         <p>Where the supplication is present only in one manuscript but seamlessly integrated into a 
           <gi>title</gi>, <gi>seg</gi> can be used or a portion of transcription be encoded with a <gi>div</gi> with the correct subtype.
         </p>
         <p>Where the supplication can be said to be part of the work 
-          as it is transmitted in all manuscripts in the same place, but with varying names, the encoder my consider the option to use a narrative
-          unit, and assign a narrative unit id to its supplication, and the using it in the edition, as a value for <att>corresp</att> on the dedicated 
+          as it is transmitted in all manuscripts in the same place, but with varying names, the encoder may consider the option to use a narrative
+          unit, and assign a narrative unit id to its supplication, and then using it in the edition, as a value for <att>corresp</att> on the dedicated 
           <gi>div</gi>. However, if the names are changing, then ideally it would be even nicer to have this encoded in each manuscript.
         </p>
       </div>
@@ -339,7 +339,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <item>add the type <val>inscription</val> to the <gi>incipit</gi></item>
           <item>add the type <val>inscription</val> to a <gi>seg</gi> 
             inside the text copied either inside <gi>title</gi> or <gi>incipit</gi></item>
-          <item>if this is fixed and is encoded in the work record, nothing really needs to be done here unless deviating from what is in the work record.</item>
+          <item>if this is fixed and is encoded in the work record, nothing needs to be done here unless deviating from what is in the work record.</item>
         </list>
         </p>
       </div>

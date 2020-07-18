@@ -34,18 +34,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
             <div type="level2">
                 <head>Additions</head>
-                <p>An "addition" is a neutral term to indicate that someting is "later
-added" or secondary from the view point of the cataloguer: it should
+                <p>An "addition" is a neutral term to indicate that something is "later
+added" or secondary from the viewpoint of the cataloguer: it should
 never be used to mark a content, that presupposes another perspective.</p>
                 <p>Additions (or <hi rendition="simple:italic">additiones</hi>)
                     are very often written in
                     a secondary hand, and they are later than the main text(s) of
                     the manuscript. They mark the so-called "secondary life" of
                     the manuscript as the latter is used as a repository of
-                    documentary information, i.e. a true archive. These value are
+                    documentary information, i.e. a true archive. These values are
                     provided for the <att>type</att> in the <gi>desc</gi>
                     element. </p>
-                    <p>It is crucial that <gi>additions</gi> should be used only for
+                    <p><gi>additions</gi> must be used only for
                         elements added later to the text! Therefore, they do not include
                         subscriptions or supplications written at the same time as the main texts. See <ref target="ColophSupplTit">colophons, titles and supplications</ref>.</p>
                     <p>When describing an addition, please provide if possible:
@@ -63,14 +63,14 @@ never be used to mark a content, that presupposes another perspective.</p>
                 </p>
                 <p>If you cannot decide if the text is a main content or an addition,
                   follow the criteria identified by Andrist in the COMSt book (p. 512) to identify strata.
-                  Additions would always be quaternary strata (independent content, not indepedent material,
+                  Additions would always be quaternary strata (independent content, not-independent material,
                   autonomous writing project) whereas copied additions are primary strata.
                   In the case in which a manuscript has a donation note which is a "added written element"
                   thus preserving its writing project and the integrity of its content in comparison with the main text,
-                  but without material independence, than it is an addition, and we encode it as such.
-                  If instead the unit is part of a primary writing project,
-                  the fact that it is copied from an addition does not change the fact that it is an msItem in a msPart or msDesc.</p>
-                  <p>The example of the Liber Aksumae compilation, should be encoded as msItems. </p>
+                  but without material independence, then it is an addition, and we encode it as such.
+                  If instead, the unit is part of a primary writing project,
+                  the fact that it is copied from an addition does not change the fact that it is an <gi>msItem</gi> in a <gi>msPart</gi> or <gi>msDesc</gi>.</p>
+                  <p>The example of the <hi rend="simple:italics">Liber Aksumae</hi> compilation should be encoded as <gi>msItem</gi>s. </p>
                 <p>These additions are encoded in an
                     <gi>additions</gi> element in <gi>physDesc</gi>, which will contain a
                     <gi>list</gi> of additions. A general note on all
@@ -108,7 +108,7 @@ never be used to mark a content, that presupposes another perspective.</p>
                     <val>guardLeaf</val>.</p>
                 <p>If the type of document is known, then there should be a
                     value in the <att>type</att> of the element <gi>desc</gi>.
-                    Additionally, if the content is actually identifiable with a Textual or Narrative Unit, this can be specified, adding <gi>title</gi> element with a <att>ref</att> in <gi>desc</gi>.
+                    Additionally, if the content is identifiable with a Textual or Narrative Unit, this can be specified, adding <gi>title</gi> element with a <att>ref</att> in <gi>desc</gi>.
                   </p>
                 <p>More examples are provided in the page about <ref target="documents">documents</ref>.
                   The following example, from <ref target="BLorient494" type="BM">London, British Library, BL Oriental 494</ref> shows
@@ -126,8 +126,8 @@ never be used to mark a content, that presupposes another perspective.</p>
                 although sometimes the value of <att>type</att> might be the same as the corresponding Narrative Unit, there is no requirement to put either or both, it is up to the encoder to decide what to do.</p>
                 <p>Selecting a value from the list of defined once for <gi>desc</gi> is already a
                   grouping label option which can be assigned, eventually,
-                  for example if starting from a catalogue information, without any knowledge of the text.</p>
-                <p>If a work with its own work ID is added later to a
+                  for example, if starting from a piece of catalogue information, without any knowledge of the text.</p>
+                <p>If a work with its work ID is added later to a
                     manuscript, it will be added as an addition specified with the
                     type "GuestText" having its work ID in the
                     description:</p>
@@ -139,7 +139,7 @@ never be used to mark a content, that presupposes another perspective.</p>
                         </desc>
                     </item>
                 </egXML>
-                <p>You can add texts in more than one language. For example below, in <ref type="BM" target="DSEthiop13">Egypt, Dayr as-Suryān, DS Ethiop. 13</ref>
+                <p>You can add texts in more than one language. For example, below, in <ref type="BM" target="DSEthiop13">Egypt, Dayr as-Suryān, DS Ethiop. 13</ref>
                 the title was added in two languages.</p>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <item xml:id="e6">
@@ -174,9 +174,9 @@ never be used to mark a content, that presupposes another perspective.</p>
                 which you want to identify.
                   When creating the record a keyword should then be used to put
                   the text in its correct position as non-literary.
-                  We have in the category of keywords for Subjects for example "Other" but also "Legal Document".
-                  If a given textual unit is in fact according to the definition in the schema a
-                  Donation Note or a letter, you can add that keyword to the work record.</p>
+                  We have in the category of keywords for Subjects, for example, "Other" but also "Legal Document".
+                  If a given textual unit is, according to the definition in the schema, a
+                  Donation Note or a Letter, you can add that keyword to the work record.</p>
 <p>If the text is a primary strata and we happen to have also manuscripts where this text is an addition,
   then you could add a <gi>relation</gi> (e.g. with  <val>saws:isCopyOf</val> for <att>name</att>) which connects the <gi>msItem</gi> with the addition in question.</p>
                 <p>In additions as anywhere in the manuscript description, a <gi>handNote</gi> should be created for each identifiable hand, whether it can be described from available pictures of the manuscript
@@ -240,12 +240,12 @@ trials, notes crudely written in pencil or pen;</item>
 <item>scribbles and doodles.</item>
   </list></p>
 
-                    <p>Please not that these phenomena should only be encoded under Varia if the text in which they occur is not transcribed. I.e. if space for
+                    <p>Please note that these phenomena should only be encoded under Varia if the text in which they occur is not transcribed. I.e. if space for
                     rubrications in left unfilled in incipits, and these incipits are transcribed in the manuscript description, the unfilled spaces should be encoded properly there and the
                     information does not need to be repeated under Varia.</p>
                     <p>See also <ref target="text-encoding">Text Encoding</ref>.</p>
 
-                    <p>Information provided in the catalogue which would ideally be marked up directly in a transcribed text, such as the names of owners or patrons mentioned in supplications or elsewhere,
+                    <p>Information provided in the catalogue which would ideally be marked-up directly in a transcribed text, such as the names of owners or patrons mentioned in supplications or elsewhere,
                     can also be recorded in Varia if the textual context is not provided by the catalogue:
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <item xml:id="e1">

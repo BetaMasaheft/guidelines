@@ -88,7 +88,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         ATIDs for subjects that cannot be
         confidently identified (e.g. Saints on Horseback, Holy Men,
         Group of Figures). These latter IDs are to be used only when
-        identification is not possible by means of attributes and/or
+        identification is not possible using attributes and/or
         captions and/or iconography and/or context. For consistency,
         when editing miniature and drawing
         <att>type</att>s in
@@ -169,7 +169,7 @@ in this example from <ref type="bm" target="DSEthiop1">DS Ethiop. 1</ref>:</p>
                 <head>Miniature Collections</head>
     <p>Manuscripts that contain exclusively miniatures and no text
             receive the keyword miniatureCollection. Any other keywords
-        relevant to these miniatures, such as for example Hagiography,
+        relevant to these miniatures, such as, for example, Hagiography,
         can be assigned freely.</p>
             </div>
         </body>

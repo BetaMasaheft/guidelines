@@ -21,7 +21,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body xml:id="hypothesis">
         <p>With <ref target="https://web.hypothes.is/">hypothesis</ref> you can annotate wherever on the web you want to and the link to that annotation will be displayed on the app.</p>
-<p>Let's imagine you find a blog post where the Bitter Water Ordeal is discussed or a you find a photo somewhere which you would like to link to that Art Theme.</p>
+<p>Let's imagine you find a blog post where the Bitter Water Ordeal is discussed or you find a photo somewhere which you would like to link to that Art Theme.</p>
 <p>Then on that page make an Hypothes.is annotation and add to it the tag BetMas:AT1004Bitter.</p>
 <p>Users loading those annotations will see the annotation you have made in the app.</p>
         </body>

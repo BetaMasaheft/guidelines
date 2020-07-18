@@ -20,7 +20,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <revisionDesc>
         <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
-        <change who="PL" when="2019-02-28">added links, split in three parts to define most common uses of the Narrative Unit</change>
+        <change who="PL" when="2019-02-28">added links, split into three parts to define most common uses of the Narrative Unit</change>
       </revisionDesc>
     </teiHeader>
     <text>
@@ -40,7 +40,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <p>
             In the following example from
             <ref type="BM" target="BLadd16217">London, British Library, BL Add. 16,217</ref>
-            a main content of the manuscript could not be identified with a Textual Unit. It has been associted with a Narrative Unit
+            a main content of the manuscript could not be identified with a Textual Unit. It has been associated with a Narrative Unit
           instead.
           </p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -50,13 +50,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 ...
             </msItem>
           </egXML>
-          <p>This is exactly the same which you would do for a Textual Unit (see page on <ref target="manuscriptContents">manuscript contents</ref>).</p>
+          <p>This is the same which you would do for a Textual Unit (see the page on <ref target="manuscriptContents">manuscript contents</ref>).</p>
           <p>In the following example from
             <ref target="BDLbruce93">Oxford,
               Bodleian Library, Bodleian Bruce 93</ref>
               you can see how the same Narrative Unit is used for different
-              contents. Narrative Units, being not
-              sequence bound, can be used like here for
+              contents. Narrative Units, since they are not bound to a sequence, can be used like here for
               several land donations.</p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <msItem xml:id="p2_i3.3">
@@ -102,14 +101,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </div>
         <div type="level2">
           <head>Linking Narrative Units and Keywords</head>
-          <p>In some cases the Narrative Unit will be especially related to a Keyword defining a type for an addition for example.</p>
-          <p>While the encoder should still remain free to associate to a given Narrative Unit and independently assign a type to an addition, you might at the same way want to associate the two.</p>
+          <p>In some cases, the Narrative Unit will be especially related to a Keyword defining a type for an addition, for example.</p>
+          <p>While the encoder should remain free to associate to a given Narrative Unit and independently assign a type to an addition, you might at the same way want to associate the two.</p>
           <p>You can do that quite simply using a <gi>relation</gi> like the one below from <ref target="NAR0001gwelt">Land donation</ref>.</p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
               <relation name="skos:broadMatch" active="NAR0001gwelt" passive="bm:LandGrant"/>
           </egXML>
-          <p>This will state an association between any Land donation which has been identified with a specific Narrative Unit, with a type. It can indeed be a many to many kind of relationship, so that you can state if relevant.</p>
-<p>This is preferred compared to the use of a keyword in this case because a narrative unit would not support the definition of its content which is loose by definition.</p>
+          <p>This will state an association between any Land donation which has been identified with a specific Narrative Unit, with a type. It can indeed be a many-to-many kind of relationship, so that you can state if relevant.</p>
+<p>This is preferred compared to the use of a keyword, in this case, because a narrative unit would not support the definition of its content which is loose by definition.</p>
         </div>
 </div>
         </body>

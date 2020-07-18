@@ -24,9 +24,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <div type="level2">
          <head>On the use of these materials</head>
          <p>You might not be the kind of person that sits and read the guidelines page by page trying out new things. Or you might simply prefer another format or presentation.
-         For these reason, and to allow for a shared base of shared presentations, some of which originally based on the training materials
-         of <ref target="https://wiki.digitalclassicist.org/EpiDoc_Workshops">EpiDoc</ref>,  we share here the training materials we have used, divided in programs and single presentations.
-         The programs of each workshop will use a different selection of the presentations and at different moment in the life of the project. Those presentations as they were given at that point
+         For these reasons, and to allow for a shared base of shared presentations, some of which originally based on the training materials
+         of <ref target="https://wiki.digitalclassicist.org/EpiDoc_Workshops">EpiDoc</ref>,  we share here the training materials we have used, divided into programs and single presentations.
+         The programs of each workshop will use a different selection of the presentations and at a different moment in the life of the project. Those presentations as they were given at that point
        will be linked in the programs, or only with the participants of that specific training, while the latest shareable version of a given presentation is linked below. </p>
 </div>
        <div type="level2">
@@ -71,7 +71,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
        </div>
               <div type="level2">
                 <head>Presentations</head>
-                <p>Linked programs should contain the links to the presentations actually given at a given workshop. Because these slides have been used in different occasions they might contain errors, overlapping contents, old screenshots, etc. with no guarantee.</p>
+                <p>Linked programs should contain the links to the presentations given at a given workshop. Because these slides have been used in different occasions they might contain errors, overlapping contents, old screenshots, etc. with no guarantee.</p>
                 <table>
                 <row role="label">
                 <cell>title</cell>
@@ -224,8 +224,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
               <div type="level2">
                 <head>Contacts</head>
-                <p>You can use these materials, programs and presentations, given the workings above, to run your own workshop. 
-                  We are happy to support you on this or if you prefer to come and deliver a training at your institution. Just <ref target="https://betamasaheft.eu/contacts.html">contact us</ref>.</p>
+                <p>You can use these materials, programs and presentations, given the workings above, to run your workshop. 
+                  We are happy to support you on this or if you prefer to come and deliver training at your institution. Just <ref target="https://betamasaheft.eu/contacts.html">contact us</ref>.</p>
               </div>
 
      </body>
