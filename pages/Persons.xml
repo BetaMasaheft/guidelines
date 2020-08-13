@@ -71,6 +71,14 @@ guidelines for
    </text>
 </egXML>
 
+<p>Within <gi>birth</gi> you can use other elements, for example <gi>placeName</gi> for a place of birth.</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <birth when="1419">
+               He was born at
+               <placeName ref="LOC6569Tegray">Tǝgrāy</placeName>
+               in <date>1419</date>.
+            </birth>
+         </egXML>
 
          <div type="level1">
             <head>Names and roles</head>
