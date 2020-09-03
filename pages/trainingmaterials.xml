@@ -66,6 +66,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                        <cell>title</cell>
                        <cell>program</cell>
                      </row>
+                           <row>
+                             <cell>28-30 September 2020</cell>
+                             <cell>Hamburg (online)</cell>
+                             <cell>TEI for Ethiopian and Eritrean manuscript cataloguing</cell>
+                             <cell><ref target="https://www.betamasaheft.uni-hamburg.de/en/news/2020tei/">program</ref></cell>
+                           </row>
                        </table>
                        </div>
        </div>
