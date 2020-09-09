@@ -23,7 +23,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
          <p>Please read the content at the following links before starting:
 <list>
   <item><ref target="https://pleiades.stoa.org/help/conceptual-overview">Pleiades Conceptual Overview</ref></item>
-<item><ref target="http://commons.pelagios.org/2017/08/report-ancient-places-in-the-chronicle-of-king-galawdewos/">an overview of our current work can be found here</ref></item>
+   <item><ref target="https://doi.org/10.25592/uhhfdm.269">an overview of our current work can be found here</ref></item>
 </list></p>
 
          <p>The information contained in this page is valid both for the encoding of place and repository records, see also <ref target="placeOrInstitution">Place or Repository</ref>.</p>
