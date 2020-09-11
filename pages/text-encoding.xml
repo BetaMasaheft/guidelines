@@ -704,7 +704,37 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   rubrication, which is entered in <gi>handNote</gi>, see <ref target="handDescription">Hands Description</ref>.</p>
             </div>
          </div>
-
+<div type="level3">
+   <head>Translations</head>
+   <p>As there is a <tag>div type='edition'</tag> there can be a <tag>div type='translation'</tag>, a feature inherited 
+      from the main structural <gi>div</gi>s of an edition from the <ref target="https://epidoc.stoa.org/gl/latest/supp-translation.html">EpiDoc Guidelines</ref>. 
+      You can add this beside your <tag>div type='edition'</tag> in any manuscript or textual unit file where you want to provide a translation. 
+      To align parts of the translation to parts of the text, edition or transcription, you can use standard linking practices, that is to say, point to the correct <att>xml:id</att>.</p>
+   <p>The following example is taken from <ref type="BM" target="LIT5064HEpA">History of the Episcopate of Alexandria</ref>.</p>
+   <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <div type="edition" xml:lang="gez" xml:id="etiopica">
+         <div type="textpart" subtype="chapter" n="30" xml:id="chapter30Eth">
+            <ab>
+               ወእንዘ፡ ያንጐርጐሩ፡ ብዙኃን፡ በእንተ፡
+               ...
+            </ab>
+         </div>
+      </div>
+      <div type="translation" xml:lang="en" xml:id="translationEthio" corresp="#etiopica">
+         <div type="textpart" subtype="chapter" n="30" xml:id="transchapter30Eth">
+            <ab>While many murmured for the fact that the appointment
+               ...
+            </ab>
+         </div>
+      </div>
+   </egXML>
+   <p>You can of course also add <att>corresp</att> to the text parts if you so wish.</p>
+   <p>As long as you give them an <att>xml:id</att> and possibly link them to the edition on which they are based, 
+      you can add as many translations as you want, in the same way in which you can add as many editions or transcriptions as you want.
+      Please, see <ref target="referencing-the-text">this referencing page</ref> for how to point to a specific translation.
+   </p>
+   
+</div>
       </body>
    </text>
 </TEI>
