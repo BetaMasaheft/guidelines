@@ -115,7 +115,8 @@ images below the main viewer that the image of the recto side of the first folio
 </egXML></div>
          <div type="level2">
             <head>Add a link to an image zone</head>
-            <p>To add a image of a feature as a specimen in your descriptions, you can use 
+            <p>To add a image of a feature as a specimen in your descriptions, you can use <gi>rs</gi>
+               with <att>type</att> with value "inline". 
                
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <rs type="inline">
@@ -124,6 +125,12 @@ images below the main viewer that the image of the recto side of the first folio
                      url="https://betamasaheft.eu/iiif/EMIP/Codices/1928/015.tif/1780,500,40,35/full/0/default.jpg"/>
                   </rs>
                </egXML>
+               
+               The value of <att>url</att> can be any absolute path to an image. But be careful about what you wish. 
+               If you link a big image, you will get a big image. In the example, we are exploiting the IIIF Image API
+               to fetch a specific region of an image, which is 40*35 pixel, so, more or less a thumbnail. 
+               Linked images do not need to be of any special kind.
+               
                </p>
          </div>
       </body>
