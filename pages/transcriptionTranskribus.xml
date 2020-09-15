@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Transcriptions with Transkribus</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Created as an XML page.</p>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+        <change who="PL" when="2020-09-15">first version draft</change></revisionDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="transcription-transkribus">
+         <head>Transcriptions with Transkribus</head>
+          <p>
+              
+          </p>
+         <div type="level3">
+             <head>Generating a transcription</head>
+             <p>Transkribus Guidelines and documentation</p>
+             <p>BM model</p>
+             <p>layout analysis</p>
+             <p>HTR</p>
+             <p>fixing</p>
+         </div>
+          
+          <div type="level3">
+              <head>Downloading TEI from Transkribus</head>
+              <p>options</p>
+              <p>what you get</p>
+          </div>
+          
+          <div type="level3">
+              <head>Generating a transcription for BM</head>
+              <p>The transformation and its parameters</p>
+              <p>How to edit the file to add the transcription</p>
+              <p>dd a sourceDesc paragraph about the fact that the transcription is done with Transkribus
+                  add a change element detailing the transcription work carried out (corrected, not corrected, precision declared by the model, how has done the alignment and when, etc.)
+                  note in the transcription div that the status of the transcription</p>
+          </div>
+          
+          <div type="level3">
+              <head>Behaviour of the application</head>
+          </div>
+      </body>
+   </text>
+</TEI>

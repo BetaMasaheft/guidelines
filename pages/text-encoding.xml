@@ -32,6 +32,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     working with text. It simply lists the possibilities of text encoding employed until now in the project. It is always up to the encoder to decide which of these features
     they want to encode in a particular record.
          </p>
+         <p>You may have already a lot of text from a <ref target="transcription-transkribus">transcription</ref>, which you want to further encode for specific features, for example.</p>
     <p>
     We record in <ref target="manuscripts">Manuscript</ref> records the Transcription of the
        text of the catalogued manuscript, when available, whilst   <ref target="works">Work</ref> records contain the edited
