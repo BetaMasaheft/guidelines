@@ -696,12 +696,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <p>When the record does not yet contain any text transcription,
         but information about some of the above-listed phenomena is
         available, this should be stated temporarily in a note with a
-        commentary for future changes in the respective msItem:</p>
+        commentary for future changes in the respective <gi>msItem</gi>:</p>
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                  <note>This prayer is written in negative writing. </note> <!--Information belongs to text transcription-->
                </egXML>
                <p>Note, however, the different usage for the information about 
                   rubrication, which is entered in <gi>handNote</gi>, see <ref target="handDescription">Hands Description</ref>.</p>
+               <p>Partial rubrication, where only parts of an element (typically numerals and punctuation marks) are rubricated can be marked up by 
+               pointing to a <gi>rendition</gi> element</p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <rendition xml:id="partialRubric">Red ink is used only partially (e.g.!!!)</rendition>
+               </egXML>
+               <p>This can be referred to with <att>rendition</att> when encoding a part of text like in the following example.</p>
+               <egXML  xmlns="http://www.tei-c.org/ns/Examples">
+                  <hi rend="rubric" rendition="#partialRubric">፨</hi>
+               </egXML>
+               <p>If possible, this becomes even more interesting if related also to a specific <gi>handNote</gi>.
+                  <egXML  xmlns="http://www.tei-c.org/ns/Examples">
+                  <hi rend="rubric" rendition="#partialRubric" hand="#h1">፨</hi>
+                  </egXML>
+               </p>
             </div>
          </div>
 <div type="level3">
