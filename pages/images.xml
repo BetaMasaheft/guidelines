@@ -115,7 +115,7 @@ images below the main viewer that the image of the recto side of the first folio
 </egXML></div>
          <div type="level2">
             <head>Add a link to an image zone</head>
-            <p>To add a image of a feature as a specimen in your descriptions, you can use <gi>rs</gi>
+            <p>To add an image of a feature as a specimen in your descriptions, you can use <gi>rs</gi>
                with <att>type</att> with value "inline". 
                
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
