@@ -65,8 +65,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 
         <p>In  <gi>surrogates</gi>,
-         for example, microfilms or photographs can be recorded.</p>
-
+         for example, microfilms or photographs can be recorded. This goes after <gi>adminInfo</gi>.</p>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+        <surrogates>
+          <bibl xml:id="sur1"><title type="gmd">digital images</title><date>1994</date><author>Mario Rossi</author></bibl>
+          <bibl xml:id="sur2"><title type="gmd">microfilm</title><date>1978</date></bibl>
+        </surrogates>
+      </egXML>
+<p>Anything that can be used in <gi>bibl</gi> can be 
+  used to improve the description of the image sets, 
+  especially if there are several. If these sets of images are available, 
+  you can use, within <gi>bibl</gi> a <gi>ref</gi> with a pointer to 
+  the correct images set linked from <gi>idno</gi>.</p>
     </body>
   </text>
 </TEI>

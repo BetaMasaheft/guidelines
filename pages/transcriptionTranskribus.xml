@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Transcriptions with Transkribus</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Created as an XML page.</p>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+        <change who="PL" when="2020-09-15">first version draft</change></revisionDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="transcription-transkribus">
+         <head>Transcriptions with Transkribus</head>
+          <p>
+              
+          </p>
+         <div type="level3">
+             <head>Generating a transcription</head>
+             <p>Even if you already worked through each page of your manuscript to produce a transcription,
+                 doing it again with <ref target="https://transkribus.eu/Transkribus/">Transkribus</ref> and checking it has many advantages, chiefly the alignment of
+                 the text regions and lines on the base image to the transcription. If you do not know this too, please refer to their 
+                 <ref target="https://transkribus.eu/wiki/index.php/Main_Page">guidelines and documentation</ref>.</p>
+             <p>The first step you will run in Transkribus is a layout analysis. Once that process has completed, please, make sure to go through each image and fix it, 
+                 especially considering openings which are badly folded in the middle or areas of excessive match. Quite often red ink is not picked up by this step, for example.</p>
+             <p>A transcription model has been trained with several materials provided by all our project's collaborators which can be used either to train more specific models
+                 or to directly transcribe images of written artefacts.</p>
+             <p>You can use this model picking it from those available in the Handwritten Text Recognition step. Once finished, the aligned transcription will be loaded below the images.
+             Up to this point everything stays in Transkribus, but it can be now fruitfully moved to the project data and made available to everyone.</p>
+             <p>You may wish to do some fixing of this transcription in Transkribus before exporting. This is especially beneficial if you are using your transcription. 
+                 Transkribus, as an expert tool, allows you 
+             to keep track of what you are transcribing line by line, and thus helps the accuracy of your work. </p>
+         </div>
+          
+          <div type="level3">
+              <head>Downloading TEI from Transkribus</head>
+              <p>Now that your images are transcribed, you can download using the export functionalities of the Transkribus tool, the work you have done. 
+              To download a TEI encoded version of this transcription, please select the option to export TEI (I use this client-side),
+              leave the default options for Zones selected and additionally select the option to use bounding box coordinates and to use Line Breaks <gi>lb</gi>. Then click OK.</p>
+              <p>The TEI file you will get contains all your aligned transcription, linked between the regions of the image and the text. It has however to follow the structure of the images.
+              If you transcribed images, for example, of openings, logically you will have a page break for each image. 
+              This TEI is thus not ready to be copy pasted into a BM Manuscript record. The next section details some tools available to make it work.</p>
+              <p>You can proceed to the next step directly if you used images from the project. If not, also the images need to be delivered with the transcription and stored in BM, because the alignment of the 
+              transcription is done on those files.</p>
+          </div>
+          
+          <div type="level3">
+              <head>Generating a transcription for BM</head>
+              <p>You can of course fix everything by hand, or using regex in your preferred editor. We have however also an XSLT transformation which can be used, called
+                  <ref target="https://github.com/BetaMasaheft/Documentation/blob/master/utility/transkribus2BM.xsl">transkribus2BM.xsl</ref> and which 
+                  will restructure the TEI to fit the project's requirements.
+                  This transformation, which you can run with your engine or software of choice, e.g. in OxygenXML Editor,
+                  takes as input your Transkribus-exported TEI and needs to be given some parameters: the total number of foliated leaves, the number of protection leaves at the beginning, 
+                  if this are part of your image set, the type of images, if single side or openings. The assumption is that your set of images will be tidy in this respect.</p>
+              <p>The result of this transformation is ready to be pasted into the correct Manuscript record but you may still want to fix some of the structure, or move around text regions which, for example, contain additions
+              or other types of contents, like legends of decorations, or extras.</p>
+              <p>When adding this transcription to a record, please add a <gi>sourceDesc</gi> <gi>p</gi>aragraph about the fact that the transcription is done with Transkribus
+                  and add a <gi>change</gi> element detailing the transcription work carried out (corrected, not corrected, precision declared by the model, who has done the alignment and when, etc.).
+                  It will also be useful to other users to add a <gi>note</gi> about the status of the transcription.</p>
+          </div>
+          
+          <div type="level3">
+              <head>Behaviour of the application</head>
+              <p>This transcription, once added via a normal PR process, will become part of the database, will be searchable, will be navigable, citable and hopefully offer great help to researchers.</p>
+              <p>If a transcription or parts of it are available, <gi>incipit</gi>s and <gi>explicit</gi> do not need to be copied over, neither the text of additions, the locus reference will be enough to move to the appropriate piece of text.</p>
+          </div>
+      </body>
+   </text>
+</TEI>
