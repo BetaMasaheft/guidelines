@@ -204,6 +204,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </row>
                   <row>
                      <cell>
+                        <p>superfluous text</p>
+                     </cell>
+                     <cell>
+                        <gi>surplus</gi>
+                     </cell>
+                     <cell>the scribe writes e.g. ክርስቶቶስ፡ instead of ክርስቶስ፡ you can encode this as ክርስቶ<surplus>ቶ</surplus>ስ፡</cell>
+                     <cell>
+                        <p>ክርስቶ{ቶ}ስ፡</p>
+                     </cell>
+                  </row>
+                  <row>
+                     <cell>
                         <p>later correction</p>
                      </cell>
                      <cell>
