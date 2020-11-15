@@ -107,6 +107,13 @@ taken from <locus target="#6r"/>.
 </egXML>
                      <p>Measurements in <gi>dimensions</gi> should
                          always be given in millimetres, unless the source catalogues provides them otherwise.</p>
+                <p>You can add more precise information on a range of dimension using 
+                    <att>atLeast</att> and <att>atMost</att>, which will be given priority in the visualization
+                    but, please, add a single valid value as content as in the following example.
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <height unit="mm" atLeast="310" atMost="330">320</height>
+                </egXML>
+                </p>
                      <p>You can also specify which leaves are blank, adding a
             <gi>locus</gi> immediately after the relative
             measure.</p>
