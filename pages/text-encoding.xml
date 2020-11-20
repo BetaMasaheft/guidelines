@@ -22,6 +22,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
          <change who="DR" when="2018-12-03">Added paragraph on locus indications of excerpts</change>
          <change who="DR" when="2019-12-09">Added line take-up/down information, small edits for readability</change>
+         <change who="DR" when="2020-11-20">Added explanations on text in work and manuscript records from Pietro
+            Liuzzo's and Daria Elagina's remarks in https://github.com/BetaMasaheft/Documentation/issues/1570</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -32,16 +34,40 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     working with text. It simply lists the possibilities of text encoding employed until now in the project. It is always up to the encoder to decide which of these features
     they want to encode in a particular record.
          </p>
-         <p>You may have already a lot of text from a <ref target="transcription-transkribus">transcription</ref>, which you want to further encode for specific features, for example.</p>
+         <p>While text can be contained in all kinds of records, large portions of text will typically be encoded in manuscript and work records. 
+            We record in <ref target="manuscripts">manuscript</ref> records the transcription of the
+            text of the catalogued manuscript, when available, whilst   <ref target="works">work</ref> records contain the edited
+            text or its  theoretical structure. Sometimes however, a text does not clearly fall into one of these two groups and
+            it is not immediately clear whether it should be encoded in a manuscript or work record.
+            This can then be decided on a  case by case basis by the encoder (an issue can always be opened to discuss the best solution).
+            It is always crucial to mention the source of the text
+            whenever this might not be completely obvious. Here are some guiding principles for this decision:
+         <list>
+            <item>The (diplomatic) transcription of a manuscript, which represents the text with all its features as it is in that particular witness, 
+               belongs to the manuscript record. One manuscript may contain, from different sources, more than one transcription of the same manuscript.
+           </item>
+            <item>An edition of a work, i.e. a critical edition, based on one or more manuscripts (transcriptions) belongs to the work record. 
+               This is structured as the text requires, in chapters, verses, etc., and may contain an apparatus criticus.</item>
+            <item>If there is text available that would belong in a manuscript record, but there is no record planned for this manuscript or its 
+            encoding is not planned, this text might also be included in the relevant work record. It particularly important to mention the source of the text in
+            these cases.</item>
+            <item>The same is true for text of manuscripts in the process of being catalogued which might not be made available soon. It might then 
+            be useful for all to make the transcribed texts such as incipits and explicits available in the work records.</item>
+            <item>It is not necessary to copy a manuscript transcription to the work record (unless the transcription is the starting point 
+            for a critical edition which will be carried out in the work record) simply to have it in both places. On the web application, manuscript witnesses of works can 
+            easily be retrieved.</item>
+            <item>In such cases, judgment might be applied in deciding which markup pertaining to the text's features in a manuscript witness
+               will be preserved in the work record. </item>
+         </list>
+         </p>
+         
     <p>
-    We record in <ref target="manuscripts">Manuscript</ref> records the Transcription of the
-       text of the catalogued manuscript, when available, whilst   <ref target="works">Work</ref> records contain the edited
-    text or its  theoretical structure. Text is entered in the <gi>body</gi> of a
+    In both manuscript and work records, text is entered in the <gi>body</gi> of a
     TEI file in a <tag>div type="edition"</tag> .
     Each text part should be contained in a
     <gi>div</gi>. <gi>div</gi>s should
     always be well nested one into the other. These will always take a
-    <att>subtype</att> with <val>textpart</val> and a
+    <att>type</att> with <val>textpart</val> and a
     <att>subtype</att> with the desired value. There should
     always be also a <att>n</att> identifying, for example, chapter 3 as well as a
     <att>corresp</att> pointing to the appropriate
@@ -101,6 +127,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     level div nesting!</p>
          <div type="level3">
             <head>Text Diplomatic Transcription features</head>
+            <p>You may have already a lot of text from a <ref target="transcription-transkribus">transcription</ref>, 
+               which you want to further encode for specific features.</p>
             <p>Please, note that these elements can be used everywhere you have text, for example, in additions, incipits or explicits.</p>
             <p>If any of the features listed here are unclear to you or use unfamiliar terminology, please open an issue or be in touch otherwise and ask for clarification.</p>
             <div type="level4">
@@ -476,7 +504,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <cell>
                         <p>this will print the corrected version in bold and a
             tooltip which reports the original version and the author of
-            it clicking on the correct form will toogle the
+            it, clicking on the correct form will toggle the
             other</p>
                      </cell>
                   </row>
