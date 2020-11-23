@@ -65,7 +65,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         are working on a manuscript record and we do not know the textual unit well enough, so we need to
         register as much as possible, but not overstate. Fortunately, all this different
         information can be collected together, and the use of the same set of attributes can
-        help. An additional reason for this is that this information can be joined to one 
+        help. An additional <att>reason</att> for this is that this information can be joined to one 
         another: there might be, for example, a colophon which contains a title. A generic 
       incipit or explicit might contain, with other things also a title, but is generically the 
       beginning of a text part, which needs not to be a title or anything else, although it might be. 
