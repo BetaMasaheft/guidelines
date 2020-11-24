@@ -495,6 +495,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </row>
                   <row>
                      <cell>
+                        <p>text deleted by scribe in the
+                           manuscript</p>
+                     </cell>
+                     <cell>
+                        <tag>del </tag>, eventually with <att>rend</att> and <att>cause</att>
+                     </cell>
+                     <cell>
+                        <p></p>
+                     </cell>
+                     <cell>
+                        <p></p>
+                     </cell>
+                  </row>
+                  <row>
+                     <cell>
                         <p>correction by editor</p>
                      </cell>
                      <cell>

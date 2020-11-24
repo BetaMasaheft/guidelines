@@ -19,13 +19,35 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </fileDesc>
       <revisionDesc>
          <change who="PL" when="2018-04-24">stub of page</change>
+         <change who="SH" when="2020-11-23">https://github.com/BetaMasaheft/Documentation/issues/1571</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="del">
          <div>
             <head>del</head>
-            <p/>
+            <p>
+               <list>
+                  <item>A) something was deleted because it was incorrect: for example erroneously written twice (dittography) or superfluous characters
+               </item><item>B) for other reasons like former names of former owners of the manuscript.
+    </item></list>           
+              
+              E.g. 
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <hi rend="rubric">ነዓ፡ ኀቤየ፡ ኦእግዚእየ፡ 
+                     ኢየሱስ፡ ክርስቶስ፡ ወልደ፡ 
+                     እግዚአ</hi><del 
+                        rend="expunctuated" 
+                        cause="dittography">እግዚአ</del>ብሔር፡ 
+                  ሕያው። ወወልደ፡ <hi rend="rubric">ማርያም፡</hi> 
+                  ሥግው። መ<del rend="effaced" cause="superfluous">ለ</del>ብረቀ፡ 
+                  <hi rend="rubric">መለኮት፡</hi> መደንግፅ። ፍሕ
+               </egXML>
+               <p>The values of <att>rend</att> can be multiple, so you can improve the example above by adding more than one value, like in the following example.</p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <del rend="expunctuated effaced">እግዚአ</del>
+               </egXML>
+            </p>
          </div>
       </body>
    </text>
