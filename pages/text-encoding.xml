@@ -510,7 +510,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </row>
                   <row>
                      <cell>
-                        <p>correction</p>
+                        <p>correction by editor</p>
                      </cell>
                      <cell>
                            <gi>choice</gi> with children <gi>sic</gi> and <gi>corr</gi>
@@ -521,6 +521,20 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             tooltip which reports the original version and the author of
             it, clicking on the correct form will toggle the
             other</p>
+                     </cell>
+                  </row>
+                  <row>
+                     <cell>ancient correction</cell>
+                     <cell>
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <choice>
+                        <orig>ቦ</orig>
+                        <corr>በ</corr>
+                     </choice>
+                     </egXML>
+                     </cell>
+                     <cell>
+                        <p>this will print the corrected version in {}</p>
                      </cell>
                   </row>
                   <row>
