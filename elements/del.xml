@@ -43,7 +43,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   ሥግው። መ<del rend="effaced" cause="superfluous">ለ</del>ብረቀ፡ 
                   <hi rend="rubric">መለኮት፡</hi> መደንግፅ። ፍሕ
                </egXML>
-               
+               <p>The values of <att>rend</att> can be multiple, so you can improve the example above by adding more than one value, like in the following example.</p>
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <del rend="expunctuated effaced">እግዚአ</del>
                </egXML>
