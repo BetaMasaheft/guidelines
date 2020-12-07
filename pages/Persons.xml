@@ -218,7 +218,7 @@ guidelines for
             <p>For Saints, you might wish to record the commemoration dates. Please
                follow the following example. Please always include the source for the date (Sǝnkǝssār, Dǝggwā, EAe...).</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-               <note type="commemoration"><date type="diesNatalis">5 Maskaram</date></note>
+               <note type="commemoration"><date type="diesNatalis" ref="ethiocal:Maskaram5">5 Maskaram</date></note>
             </egXML>
          </div>
 
