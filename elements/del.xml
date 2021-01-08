@@ -61,7 +61,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p><ref type="figure" target="#example3"></ref> is an example of encircled letters.</p>
             
             <figure>
-               <graphic xml:id="example3" url="https://betamasaheft.eu/iiif/guidelines/del/3.tif/info.json">
+               <graphic xml:id="example3" url="https://betamasaheft.eu/iiif/guidelines/del/1.tif/info.json">
                   <desc>encircled letters, sometimes due to optimizing the pen movement for lines above and below</desc></graphic>
             </figure>
             
