@@ -42,11 +42,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   ሕያው። ወወልደ፡ <hi rend="rubric">ማርያም፡</hi> 
                   ሥግው። መ<del rend="effaced" cause="superfluous">ለ</del>ብረቀ፡ 
                   <hi rend="rubric">መለኮት፡</hi> መደንግፅ። ፍሕ
-               </egXML></p>
+               </egXML>
+            </p>
                <p>The values of <att>rend</att> can be multiple, so you can improve the example above by adding more than one value, like in the following example.</p>
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <del rend="expunctuated effaced">እግዚአ</del>
                </egXML>
+            <figure>
+               <graphic xml:id="example1" url="https://betamasaheft.eu/iiif/guidelines/del/1.tif/info.json">
+                  <desc>letters with lines above and below</desc></graphic>
+            </figure>
+            
+            <figure>
+               <graphic xml:id="example2" url="https://betamasaheft.eu/iiif/guidelines/del/2.tif/info.json">
+                  <desc>encircled letters, sometimes due to optimizing the pen movement for lines above and below</desc></graphic>
+            </figure>
             
          </div>
       </body>
