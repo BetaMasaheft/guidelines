@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Using Xinclude</title>
+                <author>Pietro Liuzzo</author>
+            </titleStmt>
+            <publicationStmt>
+                <p/>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Created as an XML page.</p>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change who="PL" when="2021-02-08">first version draft</change></revisionDesc>
+    </teiHeader>
+    <text>
+        <body xml:id="xiinclude">
+            <head>Splitting XML files and using xi:include</head>
+            <p>Sometimes files just get too big to be usable. You may than split them up and use <gi>xi:include</gi> to stick them together, including one into the other.
+            In this page we will see how to do this for manuscript files, but the same technique can be used for any other file and the same precautions apply for these to be 
+            supported by the application.</p>
+            <div type="level3">
+                <head cert="high" />
+                <p>If you are using <ref target="transcription-transkribus">transcription done with transkribus</ref> you are likely to have a very large file with a <gi>facsimile</gi> 
+                taking thousand of lines which nobody is likely to enjoy scrolling.</p>
+                <p>In this and other similar cases you can use <gi>xi:include</gi> to move parts of your file into separate files. First, make a collection/folder which has the name of your file.
+                Then move your file inside it. This way we are sure not to have duplicates.  You can now make a separate XML file which contains your facsimile element with all its contents and call it
+                for example <code>facsimile.xml</code> and do the same for the text generated from Transkribus. You will have something like this.</p>
+                <p>
+                    <list>
+                        <item>ESap028
+                            <list>
+                                <item>ESap028.xml</item>
+                                <item>facsimile.xml</item>
+                                <item>transkribusText.xml
+                                </item>
+                            </list>
+                        </item>
+                    </list>
+                </p>
+                <p>Remember to reproduce the TEI namespace, at the top element of the included files.
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <div  
+                            xmlns="http://www.tei-c.org/ns/1.0" 
+                            type="edition" 
+                            xml:id="Transkribus" 
+                            subtype="transkribus" >
+                            ...
+                        </div>
+                    </egXML>
+                </p>
+                <p>Another small step you need to take is to remove <att>xml:base</att> from <gi>text</gi>.</p>
+                <p>Now that those files exist and contain parts of your initial huge file, you can include them into the, now thin, manuscript file with <gi>xi:include</gi> like in the
+                following example.
+                
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    &lt;xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
+                        href="facsimile.xml"&gt;
+                        &lt;xi:fallback&gt;
+                            <!-- facsimile -->
+                    &lt;/xi:fallback&gt;
+                    &lt;/xi:include&gt;
+                </egXML>
+              
+                </p>
+                <p>You can include in files which are included, but please do not go deeper with folders than this order, just keep them all in the same folder, so that the relative path 
+                in <att>href</att> can be simply the filename.</p>
+                <p>Now, there are some qui-pro-quos. For example, validation will only be run from the main file. If you are working on any part you should look at errors
+                report in the main file. Also, Atom does not support this.</p>
+            </div>
+        </body>
+    </text>
+</TEI>
