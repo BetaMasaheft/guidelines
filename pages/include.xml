@@ -56,18 +56,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </div>
                     </egXML>
                 </p>
-                <p>Another small step you need to take is to remove <att>xml:base</att> from <gi>text</gi>.</p>
+                <p>Another small step you need to take is to remove <att>xml:base</att> from <gi>text</gi></p>
                 <p>Now that those files exist and contain parts of your initial huge file, you can include them into the, now thin, manuscript file with <gi>xi:include</gi> like in the
                 following example.
                 
-                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <eg>
                     &lt;xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
                         href="facsimile.xml"&gt;
                         &lt;xi:fallback&gt;
                             <!-- facsimile -->
                     &lt;/xi:fallback&gt;
                     &lt;/xi:include&gt;
-                </egXML>
+                </eg>
               
                 </p>
                 <p>You can include in files which are included, but please do not go deeper with folders than this order, just keep them all in the same folder, so that the relative path 
