@@ -58,17 +58,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </p>
                 <p>Another small step you need to take is to remove <att>xml:base</att> from <gi>text</gi></p>
                 <p>Now that those files exist and contain parts of your initial huge file, you can include them into the, now thin, manuscript file with <gi>xi:include</gi> like in the
-                following example.
-                
-                <eg>
-                    &lt;xi:include xmlns:xi="http://www.w3.org/2001/XInclude" 
-                        href="facsimile.xml"&gt;
-                        &lt;xi:fallback&gt;
-                            <!-- facsimile -->
-                    &lt;/xi:fallback&gt;
-                    &lt;/xi:include&gt;
-                </eg>
-              
+                    <ref target="https://github.com/BetaMasaheft/Manuscripts/pull/978/files">ESap008 example</ref>.
                 </p>
                 <p>You can include in files which are included, but please do not go deeper with folders than this order, just keep them all in the same folder, so that the relative path 
                 in <att>href</att> can be simply the filename.</p>
