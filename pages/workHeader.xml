@@ -191,6 +191,7 @@ manuscript records containing the work are displayed in the app anyway.</p>
 </egXML>
 <p>Please, as in all other instances of ID assigning, make sure you do not assign an existing ID. If you want to give as <att>xml:id</att> to the above witness with corresp ONBAeth4, the value of this cannot be this same string,
 which is the identifier of the manuscript. It is enough, for example, to use it in lower case.</p>
+  
 <p>
 
    <gi>listWit</gi>s can be nested if needed, for example,
@@ -198,8 +199,30 @@ to group them in families. Each <gi>witness</gi> will
 have to take a <att>corresp</att> pointing to the
 manuscript <att>xml:id</att>. If the manuscript is in already described in
 Beta maṣāḥǝft, that is enough. If the manuscript is described in an
-external catalogue, then use <tag>@type='external'</tag>  in
-<tag>listBibl[type='mss']</tag> in the manuscript entity. You can use
+external catalogue, then use <tag>@type='external'</tag>. 
+   <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <listWit>
+         <witness type="external" xml:id="P" 
+            corresp="http://digi.ub.uni-heidelberg.de/diglit/cpgraec398/0569" 
+            facs="http://digi.ub.uni-heidelberg.de/diglit/cpgraec398/0569">
+            <idno>Cod. Pal. graec. 398</idno>
+            <ptr target="https://digi.ub.uni-heidelberg.de/diglit/iiif/cpgraec398/manifest.json"/>
+            Sammelhandschrift — Konstantinopel, letztes Viertel 9. Jh.
+         </witness>
+         <witness type="external" xml:id="L" 
+            corresp="http://www.bl.uk/manuscripts/Viewer.aspx?ref=add_ms_19391_f009r" 
+            facs="http://www.bl.uk/manuscripts/Viewer.aspx?ref=add_ms_19391_f009r">
+            <idno>British Library Add MS 19391</idno>
+         </witness>
+      </listWit>
+   </egXML>
+   A simpler form, with only the link would also be ok.
+   <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <witness corresp="https://eap.bl.uk/archive-file/EAP286-1-1-133" type="external"/>
+   </egXML>
+</p>
+<p>   
+   You can use
 <att>cert</att> to specify a degree of certainty
 regarding the manuscript you are listing. Please, note that each
 witness element can take a fully marked-up description about
