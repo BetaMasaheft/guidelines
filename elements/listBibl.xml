@@ -25,7 +25,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body xml:id="listBibl">
          <div>
             <head>listBibl</head>
-            <p/>
          </div>
       </body>
    </text>

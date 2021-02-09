@@ -30,6 +30,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <head>Specific encoding for repositories</head>
             <p>For repositories where manuscripts are preserved all general guidelines and especially those for <ref target="places">places</ref> are valid.
            All repository records should have a <att>subtype</att> with <val>institution</val>.</p>
+            <p>Please, note the difference between place and repository. A repository can change of place, it is a different conceptual entity. The fact that churches in Ethiopia are 
+            here considered repository may generate confusion in this regard as a church is always a repository and a place and is very unlikely to change of place. However, do consider the necessary 
+            alignment with other repositories more likely to change their premises over time, like libraries or museums. See also <ref target="placeOrInstitution">Place or Repository</ref>.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <listPlace>
                   <place type="church dabr" subtype="institution">
@@ -83,9 +86,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </place>
                </listPlace>
 </egXML>
+            <p>Note that inside <gi>note</gi>, if you are giving a date the <att>type</att> with value 'foundation' is required.</p>
+            <p><gi>ab</gi> in <gi>note</gi> is used inside <gi>listPlace</gi> for repositories 
+               and should always have a <att>type</att> equal to 'history' or 'description'. 
+               <att>type</att> with value 'appellation' can be used to list a series of ways in which a repository is 
+               called which are not necessarily <gi>placeName</gi>s. This is expected to be a simple list of appellations.</p>
             
-            <p>See also <ref target="placeOrInstitution">Place or Repository</ref>.</p>
-
          </div>
          
          <div type="level2">
