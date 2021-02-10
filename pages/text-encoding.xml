@@ -817,7 +817,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       you can add as many translations as you want, in the same way in which you can add as many editions or transcriptions as you want.
       Please, see <ref target="referencing-the-text">this referencing page</ref> for how to point to a specific translation.
    </p>
-   
+   <p>Usually, if you have done a lot of encoding in a text which you are translating, you do not want, neither need to replicate that in the translation.
+   You may however wish to mark up features of the translation itself, like omitted text which are translating or the text of the translation reports. This 
+   is especially important if the translation itself is an historical work and made choices of some respect.</p>
+   <p>For example you could use <gi>supplied</gi> with <att>reason</att> 'subaudible' or 'omitted'. 
+      Here we use the same values which <ref target="https://epidoc.stoa.org/gl/latest/supp-translation.html">EpiDoc</ref> uses.</p>
+<!--   here we may add examples from the French Translation of the Historia of Ludolf and the note that Ludolf makes about the omissions-->
 </div>
       </body>
    </text>
