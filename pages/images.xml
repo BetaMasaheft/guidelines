@@ -26,11 +26,42 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
        <div type="level2">
           <head>Links to Digital Copies of Manuscripts</head>
           <p>A link to a digital copy of a manuscript can be added to the main
-    identifier by adding in the <gi>idno</gi> descendant of the main <gi>msDesc</gi> a <att>facs</att> attribute:
+    identifier by adding in the <gi>idno</gi> descendant of the main 
+             <gi>msDesc</gi> a <att>facs</att> attribute:
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <idno facs="http://gallica.bnf.fr/ark:/12148/btv1b52507611w">BnF Éthiopien 14</idno>
             </egXML>
          for example, as in <ref target="BNFet14" type="bm">BnF Éthiopien 14</ref>.</p>
+          <p>This is a shortcut, and only covers for one set of images. You can do the same in <gi>idno</gi> 
+          for any <gi>altIdentifier</gi> or, if you have a <gi>facsimile</gi> or more, you can point to that. 
+          Consider the following example from Dabra Libanos.</p>
+          
+<!--          set like in DabraLibanosGG1. idno/@FACS should, when possible, 
+          point at the facsimile xml:id, which should have a corresp to the iiif location-->
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+             <msIdentifier>
+                <repository ref="INS0346DL"/>
+                <idno facs="#valievaliuzzo2020" n="39">Golden Gospel</idno>
+                <altIdentifier xml:id="photos1975">
+                   <idno facs="#schneider1975" n="24"/>
+                </altIdentifier>
+                <altIdentifier xml:id="photos1993">
+                   <idno facs="#bausi1993" n="19"/>
+                </altIdentifier>
+                <altIdentifier xml:id="photos1994">
+                   <idno facs="#bausi1993" n="19"/>
+                </altIdentifier>
+             </msIdentifier>
+          </egXML>
+          <p>Here the <att>facs</att> links to the <gi>facsimile</gi> elements which in turn link to the location of images.
+             For example:</p>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+             <facsimile xml:id="schneider1975" resp="#schneider" facs="/Ham/1975/">
+                ....
+             </facsimile>
+          </egXML>
+          <p>You can thus also have multiple digital facsimiles listed as such and link one, another, some or all of them.</p>
+          
           <p>In <gi>locus</gi>, add <att>facs</att> together with the other
     attributes,  containing
     only the reference to the first page in the range indicated
