@@ -29,6 +29,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>In the element <gi>choice</gi>, errors and their corrections can be marked up with <gi>sic</gi>, <gi>orig</gi>, and <gi>corr</gi>. All  
             can take <att>resp</att> to state the person who identified the marked up error and/or provided a correction. If <att>resp</att> is used only with <gi>choice</gi>, it 
             will be assumed that this statement is valid for all of its child elements.</p>
+            <p>A <att>resp</att> in <gi>choice</gi> refers to both the identification of the mistake and the providing of its correction. When only on one of the children elements responsibility is limited to the error or the correction.</p>
          </div>
       </body>
    </text>
