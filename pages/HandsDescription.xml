@@ -26,17 +26,43 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <body xml:id="handDescription">
     <head>Hands Description</head>
     <p> <gi>handDesc</gi> can contain  as many
-        <gi>handNote</gi>s as you wish.</p>
+        <gi>handNote</gi>s as you wish. The following is an example 
+        from <ref target="DSEthiop11" type="BM">Egypt, Dayr as-Suryān, DS Ethiop. 11</ref></p>
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
         <handNote script="Ethiopic" xml:id="h1" corresp="#p1.2 #p1.3 #a4">
-            <seg type="script"> 15th Century square script?</seg>
-            <seg type="ink">Black, red</seg>
-            <seg type="rubrication">nomina sacra</seg>
-            <persName role="scribe" ref="PRS1691Alib"/>
-            <date>Mid 15th - mid 15th-cent.</date>
-            <desc>Regular, by a well-trained hand</desc>
+            <seg type="script">First half of the twentieth-century script.</seg>
+            <seg type="ink">Black, red.</seg>
+            <seg type="rubrication"/>
+            <date notBefore="1900" notAfter="1949">First half of the 20th century.</date>
+            <desc>
+                Careful, somewhat irregular; by a good scribe (name:
+                <persName role="scribe" ref="PRS11958WaldaM">Walda Māryām</persName>
+                ).
+            </desc>
         </handNote>
     </egXML>
+            <p>In practice, <tag>seg type="script"</tag> contains a categorization, as "square script" in the example, gwəlḥ or 
+                similar and for <gi>desc</gi> contains any other or more general description of the script.</p>
+            <p>The categorization of "square script", "gwəlḥ", "compressed script", etc. is based on S. Uhlig's works
+                and relates to very broad "palaeographic periods", not really to true, well-defined scripts. 
+                Thus a definition "square script" is, according to this system, equivalent to mid-14 - mid-15th century. 
+               Cataloguers should try to compare the handwriting in a manuscript with Uhlig's division 
+               (working closely <ref target="https://www.zotero.org/groups/358366/ethiostudies/search/Uhlig/titleCreatorYear/items/MIBCP4VG/item-list">with the book "Äthiopische Paläographie" and samples</ref>) 
+               and locate the script broadly within one of the periods or between them. 
+               One can also look at dating obtained from other sources and check that it
+               would not be contradicted by palaeographic evidence - this is even better. 
+               E.g., <ref type="BM" target="BAVet7">BAVet7</ref>:
+                
+               <egXML xmlns="http://www.tei-c.org/ns/Examples"> 
+                   <handNote xml:id="h1" script="Ethiopic">
+                    <seg type="script">Written in a mediocre handwriting.</seg>
+                    <seg type="ink">Black, red</seg>
+                    <date notBefore="1400" notAfter="1499">15th century</date>
+               </handNote>  </egXML>
+            </p>
+                   <p>Please note the distinction between "script" and its variety produced by an individual scribe, which is "hand". We describe here the hand and 
+                       associate it with a script, thus start from evidence.</p>
+                      <p> Quality evaluation as 'fine', 'mediocre', 'poor', even if subjective, is helpful.</p>
     <p>Give an <att>xml:id</att> to each handNote to be
         able to refer to it in other parts of the record. You can also
         use <att>corresp</att> to point to
