@@ -41,11 +41,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </desc>
         </handNote>
     </egXML>
-            <p>In practice, <tag>seg type="script"</tag> contains a categorization, as "square script" in the example, Gwelh or 
+            <p>In practice, <tag>seg type="script"</tag> contains a categorization, as "square script" in the example, gwəlḥ or 
                 similar and for <gi>desc</gi> contains any other or more general description of the script.</p>
-            <p>The categorization of "square script", "gwelh", "compressed script", etc. is based on S. Uhlig's works
+            <p>The categorization of "square script", "gwəlḥ", "compressed script", etc. is based on S. Uhlig's works
                 and relates to very broad "palaeographic periods", not really to true, well-defined scripts. 
-                Thus a definition "broad script" is, according to this system, equivalent to mid-14 - mid-15th century. 
+                Thus a definition "square script" is, according to this system, equivalent to mid-14 - mid-15th century. 
                Cataloguers should try to compare the handwriting in a manuscript with Uhlig's division 
                (working closely <ref target="https://www.zotero.org/groups/358366/ethiostudies/search/Uhlig/titleCreatorYear/items/MIBCP4VG/item-list">with the book "Äthiopische Paläographie" and samples</ref>) 
                and locate the script broadly within one of the periods or between them. 
