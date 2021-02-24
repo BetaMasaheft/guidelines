@@ -23,7 +23,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body xml:id="tei">
          <head>TEI</head>
          <p>The root element <gi>TEI</gi> should contain always an <att>xml:id</att> and
-            <att>xml:lang</att> as well as a <att>type</att> to quickly identify entities with one of the values suggested, auth, mss, work, pers, place, or narr.</p>
+            <att>xml:lang</att> as well as a <att>type</att> to quickly identify entities with one of the values suggested, 
+            <val>auth</val>, <val>mss</val>, <val>work</val>, <val>pers</val>, <val>place</val>, <val>narr</val>, or <val>studies</val>.</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <TEI xml:id="AT1004Bitter" xml:lang="en" type="auth">
                ...

@@ -70,6 +70,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <p>Art Themes = AT1005Crucifixion (AT + incremental number +
         title of the art theme)</p>
             </item>
+            <item>
+               <p>Studies = STU0001Commentarius (STU + incremental number +
+                  recognizable word of title)</p>
+            </item>
          </list>
          <p>The manuscript ID should be composed of: 
             <list type="unordered">
