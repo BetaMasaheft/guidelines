@@ -316,7 +316,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </div>
        <div type="level2">
          <head>Arabic transcriptions</head>
-         <p>In general, the same transcription system as that of the EAe is
+         <p>In general, the <ref target="https://dmg-web.de/page/transliteration_de/denkschrift.pdf">DMG</ref> transcription system is
          applied. However, Hamzat qaṭʿ is always to be transcribed. Titles and
          names are transcribed without case endings:</p>
          <p><hi rendition="simple:italic">Šarḥ sabab intiqāl mamlakat Sulaymān
