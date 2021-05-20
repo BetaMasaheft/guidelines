@@ -58,7 +58,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </div>
                        <div type="level3">
                          <head>Future </head>
-                         <p>There is no workshop planned at the moment. There is usually at least one workshop a year held in Hamburg, which will be advertised and listed here as soon as its dates are known. </p>
+                         <p>There is no open workshop planned at the moment. There is usually at least one workshop a year held in Hamburg, which will be advertised and listed here as soon as its dates are known. </p>
                          <table>
                          <row role="label">
                          <cell>date</cell>
@@ -217,7 +217,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <cell></cell>
 <cell></cell>
 </row>
+<row>
+    <cell>GitHub</cell>
+      <cell></cell>
+  <cell><ref target="https://docs.google.com/presentation/d/e/2PACX-1vQAPXvs7w6-kyTggSsFbaTnpTWyIUwnf3F8qA_Uziy7TotHKiyubH2vTRIHTl-8HN2Hd5DuTqjmXJ9f/pub?start=false&amp;loop=false&amp;delayms=3000&amp;slide=id.p">Using GitHub (Atom and GitHub Desktop)</ref>.</cell>
 
+      <cell></cell>
+        <cell></cell>
+</row>
               </table>
               </div>
 
@@ -230,7 +237,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
               <div type="level2">
                 <head>Contacts</head>
-                <p>You can use these materials, programs and presentations, given the workings above, to run your workshop. 
+                <p>You can use these materials, programs and presentations, given the workings above, to run your workshop.
                   We are happy to support you on this or if you prefer to come and deliver training at your institution. Just <ref target="https://betamasaheft.eu/contacts.html">contact us</ref>.</p>
               </div>
 
