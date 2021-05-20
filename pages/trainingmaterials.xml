@@ -86,7 +86,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               <cell>Refers to...</cell>
               <cell>elements</cell>
             </row>
-
+<row>
+  <cell>Introduction to Beta maṣāḥǝft</cell>
+  <cell>GitHub workflow, General introduction (video), Dillmann, Morphological parser.</cell>
+<cell><ref target="https://docs.google.com/presentation/d/e/2PACX-1vQE-4pPJjk3E-6IzB3bx-3KA6SokbR7tyB85thvrNpU-_-4LlDJ6B-HnpWUIfJ8BGNrsmb2NtWZ_vUz/pub?start=false&amp;loop=false&amp;delayms=3000">link</ref></cell>
+<cell></cell>
+<cell></cell>
+</row>
             <row>
               <cell>Introduction to XML</cell>
               <cell>What is XML, what it is useful for, basic terminology, example markup of bibliography. Contains some simple exercises.</cell>
@@ -219,10 +225,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 </row>
 <row>
     <cell>GitHub</cell>
-      <cell></cell>
-  <cell><ref target="https://docs.google.com/presentation/d/e/2PACX-1vQAPXvs7w6-kyTggSsFbaTnpTWyIUwnf3F8qA_Uziy7TotHKiyubH2vTRIHTl-8HN2Hd5DuTqjmXJ9f/pub?start=false&amp;loop=false&amp;delayms=3000&amp;slide=id.p">Using GitHub (Atom and GitHub Desktop)</ref>.</cell>
+      <cell>Using GitHub (Atom and GitHub Desktop)</cell>
+  <cell><ref target="https://docs.google.com/presentation/d/e/2PACX-1vQAPXvs7w6-kyTggSsFbaTnpTWyIUwnf3F8qA_Uziy7TotHKiyubH2vTRIHTl-8HN2Hd5DuTqjmXJ9f/pub?start=false&amp;loop=false&amp;delayms=3000&amp;slide=id.p">link</ref>.</cell>
 
-      <cell></cell>
+      <cell><ref target="workflow">workflow</ref></cell>
         <cell></cell>
 </row>
               </table>
