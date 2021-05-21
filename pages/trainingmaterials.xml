@@ -166,6 +166,34 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               <gi>relation</gi>
             </cell>
           </row>
+          
+          <row>
+            <cell>Using the Zotero Bibliography and the HLC Styles
+            </cell>
+            <cell></cell>
+            <cell></cell>
+            <cell/>
+            <cell/>
+          </row>
+          
+          <row>
+            <cell>Getting text From Transkribus
+            </cell>
+            <cell></cell>
+            <cell></cell>
+            <cell/>
+            <cell/>
+          </row>
+          
+          <row>
+            <cell>The Make PDF Oxygen Project package
+            </cell>
+            <cell></cell>
+            <cell></cell>
+            <cell/>
+            <cell/>
+          </row>
+          
           <row>
             <cell>Places</cell>
             <cell>The concept of Place, an example based on Etiopia. The structure of place and Repositories record. How occurrences of places and
@@ -272,7 +300,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell>Reusing the data from stored dumps, citing Beta maṣāḥǝft, reusing the
               bibliography, reusing the database,APIs available.</cell>
             <cell>
-              <ref target="https://drive.google.com/file/d/1MS6SgSRi0ODvYc78LuHdqs1rBmD_8Wpl/view"
+              <ref target="https://docs.google.com/presentation/d/e/2PACX-1vT73KYzOqKJVoyzuq35g84n8jtiqezxJk_3EH7q_9_0VolJydfKfLau9VIckllhA_Qt9tNAybNOmBgf/pub?start=false&amp;loop=false&amp;delayms=3000"
                 >links</ref>
             </cell>
             <cell/>
@@ -283,7 +311,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell>Distributed Text Services implementation of Beta maṣāḥǝft.</cell>
             <cell>
               <ref
-                target="https://docs.google.com/presentation/d/1fUgpqz22ltXl2KNmQvdm5Lb3TBHfjX7SadqM0c1bGC8/edit?usp=sharing"
+                target="https://docs.google.com/presentation/d/e/2PACX-1vTOfu83wqlqUfpAne8ptB1oHbKGflqq4R0C72GpPgYoKTmL7dtLipx3uZ6g6UaHrvf8Z9BxCKe7ErZ8/pub?start=false&amp;loop=false&amp;delayms=3000"
                 >links</ref>
             </cell>
 
