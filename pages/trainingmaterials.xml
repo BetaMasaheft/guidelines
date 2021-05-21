@@ -167,10 +167,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </cell>
           </row>
           <row>
-            <cell>Places/Repositories encoding and Toponyms annotations in texts</cell>
-            <cell>The structure of place and Repositories record. How occurrences of places and
+            <cell>Places</cell>
+            <cell>The concept of Place, an example based on Etiopia. The structure of place and Repositories record. How occurrences of places and
               persons in texts are annotated.</cell>
-            <cell>link</cell>
+            <cell><ref target="https://docs.google.com/presentation/d/e/2PACX-1vTueoYnLr-qWDcWuqQkPkPaGUmRMye7dfHcuYKAEvU58e9BpzNM2Y051xqHzriYsirX4J3SQFOFJ0gC/pub?start=false&amp;loop=false&amp;delayms=3000">link</ref></cell>
             <cell><ref target="places">places</ref>, <ref target="persons">persons</ref>, <ref
                 target="named-entities-and-authority-lists">named entities</ref></cell>
             <cell>
@@ -258,8 +258,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell>Images</cell>
             <cell>IIIF storage and presentation of images, how to encode links to images</cell>
             <cell>
-              <ref target="https://drive.google.com/file/d/1KtqJGvib1te6JiQOxhOwEmH28-xM0szW/view"
-                >links</ref>
+              <ref target="https://docs.google.com/presentation/d/e/2PACX-1vTDElLLNmGgDv6PkIOVcQDEaAOC0YXuAVHoppwixiF1NxmOP4Rlmnxg0jx8cr290Dz0Qw50BVtsoRzx/pub?start=false&amp;loop=false&amp;delayms=3000"
+                >link</ref>
             </cell>
             <cell>
               <ref target="images">images</ref>
