@@ -71,6 +71,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   >information and program</ref>
               </cell>
             </row>
+            <row>
+              <cell>28-30 September 2020</cell>
+              <cell>Hamburg (online)</cell>
+              <cell>TEI for Ethiopian and Eritrean manuscript cataloguing</cell>
+              <cell>
+                <ref target="https://www.betamasaheft.uni-hamburg.de/en/news/2020tei/">program</ref>
+              </cell>
+            </row>
           </table>
         </div>
         <div type="level3">
@@ -86,11 +94,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               <cell>program</cell>
             </row>
             <row>
-              <cell>28-30 September 2020</cell>
+              <cell>28 June - 2 July 2021</cell>
               <cell>Hamburg (online)</cell>
               <cell>TEI for Ethiopian and Eritrean manuscript cataloguing</cell>
               <cell>
-                <ref target="https://www.betamasaheft.uni-hamburg.de/en/news/2020tei/">program</ref>
               </cell>
             </row>
           </table>
@@ -114,8 +121,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell>GitHub workflow, General introduction (video), Dillmann, Morphological
               parser.</cell>
             <cell>
-              <ref
-                target="https://docs.google.com/presentation/d/e/2PACX-1vQE-4pPJjk3E-6IzB3bx-3KA6SokbR7tyB85thvrNpU-_-4LlDJ6B-HnpWUIfJ8BGNrsmb2NtWZ_vUz/pub?start=false&amp;loop=false&amp;delayms=3000"
+              <ref     target="https://docs.google.com/presentation/d/e/2PACX-1vQE-4pPJjk3E-6IzB3bx-3KA6SokbR7tyB85thvrNpU-_-4LlDJ6B-HnpWUIfJ8BGNrsmb2NtWZ_vUz/pub?start=false&amp;loop=false&amp;delayms=3000"
                 >link</ref>
             </cell>
             <cell/>
@@ -126,7 +132,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell>What is XML, what it is useful for, basic terminology, example markup of
               bibliography. Contains some simple exercises.</cell>
             <cell>
-              <ref target="https://drive.google.com/file/d/1ejOETSfYcQ78bHnd3Apc31rnLsm2lmd_/view"
+              <ref target="https://docs.google.com/presentation/d/e/2PACX-1vSU55d-SdJWG7BQ-mp4KQozq5ko_qnYSEm6QHzKBMSTnQGToQ9UNftiBVtQciIDONcmuZD9mlmzmhig/pub?start=false&amp;loop=false&amp;delayms=3000"
                 >link</ref>
             </cell>
             <cell> </cell>
@@ -136,38 +142,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell>Introduction to TEI</cell>
             <cell>What is TEI, TEI guidelines and community, more precision obtained with TEI</cell>
             <cell>
-              <ref target="https://drive.google.com/file/d/10Zy7mNwt_4NpI2kSl1fTzAEwh0lTMBfg/view"
-                >links</ref>
+              <ref target="https://docs.google.com/presentation/d/e/2PACX-1vTO_e6_eMWUbHtW6oXLTrsGSzhbN67py6cBfaGznKJwA8p_FJuVr03ai6vWAlIWdZ8S0I-0aPRx8ttK/pub?start=false&amp;loop=false&amp;delayms=3000"
+                >link</ref>
             </cell>
             <cell> </cell>
-            <cell> </cell>
-          </row>
-          <row>
-            <cell>Introduction to Beta maṣāḥǝft website</cell>
-            <cell>What is Beta maṣāḥǝft, general introduction, scope, website features</cell>
-            <cell>links<!-- https://drive.google.com/drive/u/0/folders/1U6DRF4DcF7_4y8GRqVjuak88q69XoXhc --></cell>
-            <cell> </cell>
-            <cell> </cell>
-          </row>
-          <row>
-            <cell>Introduction to Beta maṣāḥǝft research environment</cell>
-            <cell>What is Beta maṣāḥǝft research environment, GIT Workflow, APIs access,
-              collaboration</cell>
-            <cell>
-              <ref
-                target="https://drive.google.com/drive/u/0/folders/1t0IMyUIqzVoINcur_JzfdVhBVE_-Yqcm"
-                >links</ref>
-            </cell>
-            <cell>
-              <ref target="setup">setup</ref>
-            </cell>
             <cell> </cell>
           </row>
           <row>
             <cell>Introduction to the Beta maṣāḥǝft Guidelines</cell>
             <cell>Describes the different sources of guidelines and the reference materials to keep
               bookmarked</cell>
-            <cell>links</cell>
+            <cell>link</cell>
             <cell/>
             <cell> </cell>
           </row>
@@ -175,7 +160,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell>Beta maṣāḥǝft Guidelines for relationships</cell>
             <cell>describes how different entities are related with one another across the hierarchy
               of the TEI files.</cell>
-            <cell>links</cell>
+            <cell>link</cell>
             <cell/>
             <cell>
               <gi>relation</gi>
@@ -185,7 +170,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell>Places/Repositories encoding and Toponyms annotations in texts</cell>
             <cell>The structure of place and Repositories record. How occurrences of places and
               persons in texts are annotated.</cell>
-            <cell>links</cell>
+            <cell>link</cell>
             <cell><ref target="places">places</ref>, <ref target="persons">persons</ref>, <ref
                 target="named-entities-and-authority-lists">named entities</ref></cell>
             <cell>
@@ -204,8 +189,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell>Introduction to the Beta maṣāḥǝft Schema</cell>
             <cell>The ODD (One Document Does it all), the TEI modules, XPath</cell>
             <cell>
+<!--              Daria's presentation, not making it public for direct linking-->
               <ref target="https://drive.google.com/file/d/1JppbXm6quA6Aa860hl8GdCU56kwURdDq/view"
-                >links</ref>
+                >link</ref>
             </cell>
             <cell/>
             <cell> </cell>
@@ -213,7 +199,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <row>
             <cell>Using taxonomy and authority files</cell>
             <cell>The taxonomy, use of the authority file</cell>
-            <cell>links</cell>
+            <cell><ref target="https://docs.google.com/presentation/d/e/2PACX-1vQtw6Z0DD5H4HXHYD6iEkLkhP016CvFNdsiGh5DX7dniIzYdmkHAHZmVQ_loa4tm9sVHbdkH6lnMgxv/pub?start=false&amp;loop=false&amp;delayms=3000">link</ref></cell>
             <cell>
               <ref target="taxonomy">taxonomy</ref>, <ref target="authority-files"
                 >authority-files</ref></cell>
@@ -230,13 +216,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </cell>
             <cell><gi>person</gi>, <gi>persName</gi></cell>
           </row>
-
+<row>
+  <cell>TEI for Manuscripts cataloguing</cell>
+  <cell>Views, breakdowns, formats</cell>
+  <cell><ref target="https://docs.google.com/presentation/d/e/2PACX-1vRC4LH9i8AwvLaw5rp0SzUVaofIP9uBjVszjsteNelD1un4HX1762Gy_4oxzljTcWTTwK0YYm7LcKPR/pub?start=false&amp;loop=false&amp;delayms=3000">link</ref></cell>
+</row>
 
           <row>
             <cell>Beta maṣāḥǝft Guidelines on Manuscripts and general structure of manuscript
               records</cell>
             <cell>structure of <gi>teiHeader</gi>, including physical description and binding</cell>
-            <cell>links</cell>
+            <cell>link</cell>
             <cell>
               <ref target="manuscriptDescription">manuscript description</ref>, <ref
                 target="manuscriptPhysDescription">Physical description</ref></cell>
@@ -323,6 +313,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </cell>
             <cell/>
           </row>
+          <row>
+            <cell>Distributed Scholarly Work: Collaboration and Citability</cell>
+            <cell>Forms of scholarly interactions made better by the web, Minimal computing, Nanopublications</cell>
+            <cell><ref target="https://docs.google.com/presentation/d/e/2PACX-1vSDTRBo0wbb1CG7WOzSxRWauSEFiSpyKcC8sa5NiaH9xFUMSbFaYUXpc8NKHzr09WO7GbzAKsfwd1oF/pub?start=false&amp;loop=false&amp;delayms=3000"
+              >link</ref>.</cell>
+            
+            <cell>
+              <ref target="setup">setup</ref>
+            </cell>
+            <cell/>
+          </row>
+          
         </table>
       </div>
 
