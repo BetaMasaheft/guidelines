@@ -152,7 +152,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell>Introduction to the Beta maṣāḥǝft Guidelines</cell>
             <cell>Describes the different sources of guidelines and the reference materials to keep
               bookmarked</cell>
-            <cell>link</cell>
+            <cell><ref target="https://youtu.be/afdMy80Zy5Q">video</ref></cell>
             <cell/>
             <cell> </cell>
           </row>
@@ -160,7 +160,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell>Beta maṣāḥǝft Guidelines for relationships</cell>
             <cell>describes how different entities are related with one another across the hierarchy
               of the TEI files.</cell>
-            <cell>link</cell>
+            <cell><ref>link</ref></cell>
             <cell/>
             <cell>
               <gi>relation</gi>
@@ -168,28 +168,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           </row>
           
           <row>
-            <cell>Using the Zotero Bibliography and the HLC Styles
-            </cell>
+            <cell>Using the Zotero Bibliography and the HLC Styles</cell>
             <cell></cell>
-            <cell></cell>
+            <cell><ref>link</ref></cell>
             <cell/>
             <cell/>
           </row>
           
           <row>
-            <cell>Getting text From Transkribus
-            </cell>
-            <cell></cell>
-            <cell></cell>
-            <cell/>
+            <cell>Getting text From Transkribus</cell>
+            <cell>Using the model, alinging transcription, running HTR, exporting</cell>
+            <cell><ref>video</ref></cell>
+            <cell><ref target="transcription-transkribus">transcription with Transkribus</ref></cell>
             <cell/>
           </row>
           
           <row>
-            <cell>The Make PDF Oxygen Project package
-            </cell>
-            <cell></cell>
-            <cell></cell>
+            <cell>The Make PDF Oxygen Project package</cell>
+            <cell>How to use the provided package to produce a PDF based on XSL-FO with the Aethiopica editorial requirements based on BM data</cell>
+            <cell><ref
+              >link</ref></cell>
             <cell/>
             <cell/>
           </row>
@@ -206,13 +204,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               <gi>placeName</gi>
             </cell>
           </row>
-          <row>
-            <cell>The Synaxarion</cell>
-            <cell>description</cell>
-            <cell>links</cell>
-            <cell>GL links</cell>
-          </row>
-
+         
           <row>
             <cell>Introduction to the Beta maṣāḥǝft Schema</cell>
             <cell>The ODD (One Document Does it all), the TEI modules, XPath</cell>
@@ -353,6 +345,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell/>
           </row>
           
+          <row>
+            <cell>Taking a tour in Beta maṣāḥǝft</cell>
+            <cell>Shows different functionalities and views in the application</cell>
+            <cell><ref>video</ref></cell>
+            <cell/>
+            <cell> </cell>
+          </row>
+          
+          <row>
+            <cell>Taking a tour in the Online Lexicon Linguae Aethiopicae</cell>
+            <cell>Shows different functionalities and views in the application</cell>
+            <cell><ref>video</ref></cell>
+            <cell/>
+            <cell> </cell>
+          </row>
         </table>
       </div>
 
