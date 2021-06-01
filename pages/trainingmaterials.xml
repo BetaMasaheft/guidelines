@@ -169,16 +169,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           
           <row>
             <cell>Using the Zotero Bibliography and the HLC Styles</cell>
-            <cell></cell>
+            <cell>Covers all standard uses of Zotero related to BM: importing data, reusing it, encoding references and citations, features of the visualization in the website</cell>
             <cell><ref target="https://docs.google.com/presentation/d/e/2PACX-1vRGyBUo6ccJbsxepCL9wxEzB1QpxYqe_OcxaKypU0-BIOINJrVgv4aDzBUOuuFIqjRJKhu734HOcfg1/pub?start=false&amp;loop=false&amp;delayms=3000">link</ref></cell>
-            <cell/>
+            <cell><ref target="bibliographic-references">Bibliographic References</ref></cell>
             <cell/>
           </row>
           
           <row>
             <cell>Getting text From Transkribus</cell>
             <cell>Using the model, aligning transcription, running HTR, exporting</cell>
-            <cell><ref>video</ref></cell>
+            <cell><ref target="https://docs.google.com/presentation/d/e/2PACX-1vRq_M-h2Alkv4qWtyaCSG-_ZqjbdzWHkz9zpt1kpaMt_-tjkwf_TuuXE8aC5u3bVWL-MV7QUMZUn409/pub?start=false&amp;loop=false&amp;delayms=3000">link</ref></cell>
             <cell><ref target="transcription-transkribus">transcription with Transkribus</ref></cell>
             <cell/>
           </row>
