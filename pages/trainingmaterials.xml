@@ -172,7 +172,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell>Covers all standard uses of Zotero related to BM: importing data, reusing it, encoding references and citations, features of the visualization in the website</cell>
             <cell><ref target="https://docs.google.com/presentation/d/e/2PACX-1vRGyBUo6ccJbsxepCL9wxEzB1QpxYqe_OcxaKypU0-BIOINJrVgv4aDzBUOuuFIqjRJKhu734HOcfg1/pub?start=false&amp;loop=false&amp;delayms=3000">link</ref></cell>
             <cell><ref target="bibliographic-references">Bibliographic References</ref></cell>
-            <cell/>
+            <cell><gi>listBibl</gi><gi>bibl</gi></cell>
           </row>
           
           <row>
@@ -180,13 +180,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell>Using the model, aligning transcription, running HTR, exporting</cell>
             <cell><ref target="https://docs.google.com/presentation/d/e/2PACX-1vRq_M-h2Alkv4qWtyaCSG-_ZqjbdzWHkz9zpt1kpaMt_-tjkwf_TuuXE8aC5u3bVWL-MV7QUMZUn409/pub?start=false&amp;loop=false&amp;delayms=3000">link</ref></cell>
             <cell><ref target="transcription-transkribus">transcription with Transkribus</ref></cell>
-            <cell/>
+            <cell><gi>facsimile</gi> <gi>lb</gi> <gi>pb</gi></cell>
           </row>
           
           <row>
             <cell>The Make PDF Oxygen Project package</cell>
             <cell>How to use the provided package to produce a PDF based on XSL-FO with the Aethiopica editorial requirements based on BM data</cell>
-            <cell><ref
+            <cell><ref target="https://docs.google.com/presentation/d/e/2PACX-1vSe763ALF1tB4B3Jwuf9YVwoN1aB67Cu6eZJJTGq7WU06ikWdQzRSTbm_ScZIwKcPrTEVGOCl2icHI-/pub?start=false&amp;loop=false&amp;delayms=3000"
               >link</ref></cell>
             <cell/>
             <cell/>
