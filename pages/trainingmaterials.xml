@@ -170,14 +170,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <row>
             <cell>Using the Zotero Bibliography and the HLC Styles</cell>
             <cell></cell>
-            <cell><ref>link</ref></cell>
+            <cell><ref target="https://docs.google.com/presentation/d/e/2PACX-1vRGyBUo6ccJbsxepCL9wxEzB1QpxYqe_OcxaKypU0-BIOINJrVgv4aDzBUOuuFIqjRJKhu734HOcfg1/pub?start=false&amp;loop=false&amp;delayms=3000">link</ref></cell>
             <cell/>
             <cell/>
           </row>
           
           <row>
             <cell>Getting text From Transkribus</cell>
-            <cell>Using the model, alinging transcription, running HTR, exporting</cell>
+            <cell>Using the model, aligning transcription, running HTR, exporting</cell>
             <cell><ref>video</ref></cell>
             <cell><ref target="transcription-transkribus">transcription with Transkribus</ref></cell>
             <cell/>
@@ -290,7 +290,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <row>
             <cell>Reusing Data</cell>
             <cell>Reusing the data from stored dumps, citing Beta maṣāḥǝft, reusing the
-              bibliography, reusing the database,APIs available.</cell>
+              bibliography, reusing the database, APIs available.</cell>
             <cell>
               <ref target="https://docs.google.com/presentation/d/e/2PACX-1vT73KYzOqKJVoyzuq35g84n8jtiqezxJk_3EH7q_9_0VolJydfKfLau9VIckllhA_Qt9tNAybNOmBgf/pub?start=false&amp;loop=false&amp;delayms=3000"
                 >links</ref>
@@ -369,6 +369,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <item>
             <ref target="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html">TEI
               Guidelines</ref>
+          </item>
+          <item>
+            <ref target="https://pietroliuzzo.github.io/LOWA/">Additional presentations with several examples from Beta masaheft, related to Linked Open Data</ref>. These may be interesting if you plan doing something with our RDF.
           </item>
         </list>
       </div>
