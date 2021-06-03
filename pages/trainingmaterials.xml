@@ -160,7 +160,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell>Beta maṣāḥǝft Guidelines for relationships</cell>
             <cell>describes how different entities are related with one another across the hierarchy
               of the TEI files.</cell>
-            <cell><ref>link</ref></cell>
+            <cell></cell>
             <cell/>
             <cell>
               <gi>relation</gi>
@@ -230,7 +230,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <row>
             <cell>Persons encoding and description</cell>
             <cell>description</cell>
-            <cell>links</cell>
+            <cell></cell>
             <cell>
               <ref target="persons">persons</ref>
             </cell>
@@ -246,7 +246,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell>Beta maṣāḥǝft Guidelines on Manuscripts and general structure of manuscript
               records</cell>
             <cell>structure of <gi>teiHeader</gi>, including physical description and binding</cell>
-            <cell>link</cell>
+            <cell></cell>
             <cell>
               <ref target="manuscriptDescription">manuscript description</ref>, <ref
                 target="manuscriptPhysDescription">Physical description</ref></cell>
@@ -256,7 +256,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <row>
             <cell>Encoding of manuscripts' content and textual units</cell>
             <cell>description</cell>
-            <cell>links</cell>
+            <cell></cell>
             <cell>
               <ref target="manuscriptContents">contents of the manuscript</ref>
             </cell>
@@ -268,7 +268,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <row>
             <cell>Art Themes and Decorations</cell>
             <cell>description</cell>
-            <cell>links</cell>
+            <cell></cell>
             <cell><ref target="artThemes">Art Themes</ref>, <ref target="decorationDescription"
                 >decorations</ref></cell>
             <cell/>
@@ -293,7 +293,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               bibliography, reusing the database, APIs available.</cell>
             <cell>
               <ref target="https://docs.google.com/presentation/d/e/2PACX-1vT73KYzOqKJVoyzuq35g84n8jtiqezxJk_3EH7q_9_0VolJydfKfLau9VIckllhA_Qt9tNAybNOmBgf/pub?start=false&amp;loop=false&amp;delayms=3000"
-                >links</ref>
+                >link</ref>
             </cell>
             <cell/>
             <cell/>
@@ -302,9 +302,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell>DTS</cell>
             <cell>Distributed Text Services implementation of Beta maṣāḥǝft.</cell>
             <cell>
-              <ref
-                target="https://docs.google.com/presentation/d/e/2PACX-1vTOfu83wqlqUfpAne8ptB1oHbKGflqq4R0C72GpPgYoKTmL7dtLipx3uZ6g6UaHrvf8Z9BxCKe7ErZ8/pub?start=false&amp;loop=false&amp;delayms=3000"
-                >links</ref>
+              <ref target="https://docs.google.com/presentation/d/e/2PACX-1vTOfu83wqlqUfpAne8ptB1oHbKGflqq4R0C72GpPgYoKTmL7dtLipx3uZ6g6UaHrvf8Z9BxCKe7ErZ8/pub?start=false&amp;loop=false&amp;delayms=3000"
+                >link</ref>
             </cell>
 
             <cell/>
