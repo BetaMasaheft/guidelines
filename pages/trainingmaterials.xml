@@ -4,236 +4,378 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
 type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader>
-      <fileDesc>
-         <titleStmt>
-            <title>Training Materials</title>
-            <author>Pietro Liuzzo</author>
-         </titleStmt>
-         <publicationStmt>
-            <p/>
-         </publicationStmt>
-         <sourceDesc>
-            <p>Written up in XML.</p>
-         </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2019-07-26">first version after the workshop held in July in Hamburg</change>
-        <change who="DR" when="2019-07-31">Corrected typos, added link to Paris workshop program</change></revisionDesc>
-   </teiHeader>
-   <text>
-      <body xml:id="trainingMaterials">
-        <div type="level2">
-         <head>On the use of these materials</head>
-         <p>You might not be the kind of person that sits and read the guidelines page by page trying out new things. Or you might simply prefer another format or presentation.
-         For these reasons, and to allow for a shared base of shared presentations, some of which originally based on the training materials
-         of <ref target="https://wiki.digitalclassicist.org/EpiDoc_Workshops">EpiDoc</ref>,  we share here the training materials we have used, divided into programs and single presentations.
-         The programs of each workshop will use a different selection of the presentations and at a different moment in the life of the project. Those presentations as they were given at that point
-       will be linked in the programs, or only with the participants of that specific training, while the latest shareable version of a given presentation is linked below. </p>
-</div>
-       <div type="level2">
-         <head>Workshops</head>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Training Materials</title>
+        <author>Pietro Liuzzo</author>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Written up in XML.</p>
+      </sourceDesc>
+    </fileDesc>
+    <revisionDesc>
+      <change who="PL" when="2019-07-26">first version after the workshop held in July in
+        Hamburg</change>
+      <change who="DR" when="2019-07-31">Corrected typos, added link to Paris workshop
+        program</change>
+      <change who="PL" when="2021-05-20">Added new slideshows</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body xml:id="trainingMaterials">
+      <div type="level2">
+        <head>On the use of these materials</head>
+        <p>You might not be the kind of person that sits and read the guidelines page by page trying
+          out new things. Or you might simply prefer another format or presentation. For these
+          reasons, and to allow for a shared base of shared presentations, some of which originally
+          based on the training materials of <ref
+            target="https://wiki.digitalclassicist.org/EpiDoc_Workshops">EpiDoc</ref>, we share here
+          the training materials we have used, divided into programs and single presentations. The
+          programs of each workshop will use a different selection of the presentations and at a
+          different moment in the life of the project. Those presentations as they were given at
+          that point will be linked in the programs, or only with the participants of that specific
+          training, while the latest shareable version of a given presentation is linked below. </p>
+      </div>
+      <div type="level2">
+        <head>Workshops</head>
 
-                <div type="level3">
-                  <head>Past </head>
-                  <table>
-                  <row role="label">
-                  <cell>date</cell>
-                <cell>place</cell>
-                <cell>title</cell>
-                <cell>program</cell>
-              </row>
-              <row>
+        <div type="level3">
+          <head>Past </head>
+          <table>
+            <row role="label">
+              <cell>date</cell>
+              <cell>place</cell>
+              <cell>title</cell>
+              <cell>program</cell>
+            </row>
+            <row>
               <cell>21-24 January 2019</cell>
-            <cell>Paris</cell>
-            <cell> Workshop “Ethiopian Studies and Digital Humanities: tools and projects
-(Beta maṣāḥǝft, Ethiopian Manuscript Archives, EthioMap)”</cell>
-                <cell><ref target="https://www.betamasaheft.uni-hamburg.de/en/news/2019tei-hlces.html">program</ref></cell>
+              <cell>Paris</cell>
+              <cell> Workshop “Ethiopian Studies and Digital Humanities: tools and projects (Beta
+                maṣāḥǝft, Ethiopian Manuscript Archives, EthioMap)”</cell>
+              <cell>
+                <ref target="https://www.betamasaheft.uni-hamburg.de/en/news/2019tei-hlces.html"
+                  >program</ref>
+              </cell>
+            </row>
+            <row>
+              <cell>21-24 July 2019</cell>
+              <cell>Hamburg</cell>
+              <cell>TEI Workshop for Ethiopian Studies</cell>
+              <cell>
+                <ref target="https://www.aai.uni-hamburg.de/en/ethiostudies/news/2019paris.html"
+                  >information and program</ref>
+              </cell>
+            </row>
+            <row>
+              <cell>28-30 September 2020</cell>
+              <cell>Hamburg (online)</cell>
+              <cell>TEI for Ethiopian and Eritrean manuscript cataloguing</cell>
+              <cell>
+                <ref target="https://www.betamasaheft.uni-hamburg.de/en/news/2020tei/">program</ref>
+              </cell>
+            </row>
+          </table>
+        </div>
+        <div type="level3">
+          <head>Future </head>
+          <p>There is no open workshop planned at the moment. There is usually at least one workshop
+            a year held in Hamburg, which will be advertised and listed here as soon as its dates
+            are known. </p>
+          <table>
+            <row role="label">
+              <cell>date</cell>
+              <cell>place</cell>
+              <cell>title</cell>
+              <cell>program</cell>
+            </row>
+            <row>
+              <cell>28 June - 2 July 2021</cell>
+              <cell>Hamburg (online)</cell>
+              <cell>TEI for Ethiopian and Eritrean manuscript cataloguing</cell>
+              <cell>
+              </cell>
+            </row>
+          </table>
+        </div>
+      </div>
+      <div type="level2">
+        <head>Presentations</head>
+        <p>Linked programs should contain the links to the presentations given at a given workshop.
+          Because these slides have been used in different occasions they might contain errors,
+          overlapping contents, old screenshots, etc. with no guarantee.</p>
+        <table>
+          <row role="label">
+            <cell>title</cell>
+            <cell>description</cell>
+            <cell>links</cell>
+            <cell>Refers to...</cell>
+            <cell>elements</cell>
           </row>
           <row>
-          <cell>21-24 July 2019</cell>
-        <cell>Hamburg</cell>
-        <cell>TEI Workshop for Ethiopian Studies</cell>
-            <cell><ref target="https://www.aai.uni-hamburg.de/en/ethiostudies/news/2019paris.html">information and program</ref></cell>
-      </row>
-                </table>
-                </div>
-                       <div type="level3">
-                         <head>Future </head>
-                         <p>There is no workshop planned at the moment. There is usually at least one workshop a year held in Hamburg, which will be advertised and listed here as soon as its dates are known. </p>
-                         <table>
-                         <row role="label">
-                         <cell>date</cell>
-                       <cell>place</cell>
-                       <cell>title</cell>
-                       <cell>program</cell>
-                     </row>
-                           <row>
-                             <cell>28-30 September 2020</cell>
-                             <cell>Hamburg (online)</cell>
-                             <cell>TEI for Ethiopian and Eritrean manuscript cataloguing</cell>
-                             <cell><ref target="https://www.betamasaheft.uni-hamburg.de/en/news/2020tei/">program</ref></cell>
-                           </row>
-                       </table>
-                       </div>
-       </div>
-              <div type="level2">
-                <head>Presentations</head>
-                <p>Linked programs should contain the links to the presentations given at a given workshop. Because these slides have been used in different occasions they might contain errors, overlapping contents, old screenshots, etc. with no guarantee.</p>
-                <table>
-                <row role="label">
-                <cell>title</cell>
-              <cell>description</cell>
-              <cell>links</cell>
-              <cell>Refers to...</cell>
-              <cell>elements</cell>
-            </row>
-
-            <row>
-              <cell>Introduction to XML</cell>
-              <cell>What is XML, what it is useful for, basic terminology, example markup of bibliography. Contains some simple exercises.</cell>
-              <cell><ref target="https://drive.google.com/file/d/1ejOETSfYcQ78bHnd3Apc31rnLsm2lmd_/view">link</ref></cell>
-              <cell> </cell>
-              <cell> </cell>
-            </row>
-            <row>
-              <cell>Introduction to TEI</cell>
-              <cell>What is TEI, TEI guidelines and community, more precision obtained with TEI</cell>
-              <cell><ref target="https://drive.google.com/file/d/10Zy7mNwt_4NpI2kSl1fTzAEwh0lTMBfg/view">links</ref></cell>
-              <cell> </cell><cell> </cell>
-            </row>
-            <row>
-              <cell>Introduction to Beta maṣāḥǝft website</cell>
-              <cell>What is Beta maṣāḥǝft, general introduction, scope, website features</cell>
-              <cell>links<!-- https://drive.google.com/drive/u/0/folders/1U6DRF4DcF7_4y8GRqVjuak88q69XoXhc --></cell>
-              <cell> </cell><cell> </cell>
-            </row>
-            <row>
-              <cell>Introduction to Beta maṣāḥǝft research environment</cell>
-              <cell>What is Beta maṣāḥǝft research environment, GIT Workflow, APIs access, collaboration</cell>
-              <cell><ref target="https://drive.google.com/drive/u/0/folders/1t0IMyUIqzVoINcur_JzfdVhBVE_-Yqcm">links</ref></cell>
-              <cell><ref target="setup">setup</ref></cell>
-              <cell> </cell>
-            </row>
-            <row>
-              <cell>Introduction to the Beta maṣāḥǝft Guidelines</cell>
-              <cell>Describes the different sources of guidelines and the reference materials to keep bookmarked</cell>
-              <cell>links</cell>
-              <cell></cell><cell> </cell>
-            </row>
-            <row>
-              <cell>Beta maṣāḥǝft Guidelines for relationships</cell>
-              <cell>describes how different entities are related with one another across the hierarchy of the TEI files.</cell>
-              <cell>links</cell>
-              <cell></cell><cell><gi>relation</gi> </cell>
-            </row>
-            <row>
-              <cell>Places/Repositories encoding and Toponyms annotations in texts</cell>
-              <cell>The structure of place and Repositories record. How occurrences of places and persons in texts are annotated.</cell>
-              <cell>links</cell>
-              <cell><ref target="places">places</ref>,
-              <ref target="persons">persons</ref>,
-              <ref target="named-entities-and-authority-lists">named entities</ref></cell>
-              <cell> <gi>place</gi> <gi>placeName</gi></cell>
-            </row>
-            <row>
-              <cell>The Synaxarion</cell>
-              <cell>description</cell>
-              <cell>links</cell>
-              <cell>GL links</cell>
-            </row>
-
-            <row>
-              <cell>Introduction to the Beta maṣāḥǝft Schema</cell>
-              <cell>The ODD (One Document Does it all), the TEI modules, XPath</cell>
-              <cell><ref target="https://drive.google.com/file/d/1JppbXm6quA6Aa860hl8GdCU56kwURdDq/view">links</ref></cell>
-              <cell></cell>
-              <cell> </cell>
-            </row>
-            <row>
-              <cell>Using taxonomy and authority files</cell>
-              <cell>The taxonomy, use of the authority file</cell>
-              <cell>links</cell>
-              <cell>
-
-              <ref target="taxonomy">taxonomy</ref>,
-              <ref target="authority-files">authority-files</ref></cell>
-              <cell><gi>term</gi></cell>
-            </row>
-            <row>
-              <cell>Persons encoding and description</cell>
-              <cell>description</cell>
-              <cell>links</cell>
-              <cell>
-              <ref target="persons">persons</ref></cell>
-              <cell><gi>person</gi>, <gi>persName</gi></cell>
-            </row>
-
-
-            <row>
-              <cell>Beta maṣāḥǝft Guidelines on Manuscripts and general structure of manuscript records</cell>
-              <cell>structure of <gi>teiHeader</gi>, including physical description and binding</cell>
-              <cell>links</cell>
-              <cell>
-                            <ref target="manuscriptDescription">manuscript description</ref>,
-                            <ref target="manuscriptPhysDescription">Physical description</ref></cell>
-                            <cell><gi>msDesc</gi>, <gi>msPart</gi></cell>
-            </row>
-
-            <row>
-              <cell>Encoding of manuscripts' content and textual units</cell>
-              <cell>description</cell>
-              <cell>links</cell>
-              <cell><ref target="manuscriptContents">contents of the manuscript</ref></cell>
-              <cell><gi>msContents</gi></cell>
-            </row>
-
-            <row>
-              <cell>Art Themes and Decorations</cell>
-              <cell>description</cell>
-              <cell>links</cell>
-              <cell><ref target="artThemes">Art Themes</ref>, <ref target="decorationDescription">decorations</ref></cell>
-              <cell></cell>
-            </row>
-
-            <row>
-              <cell>Images</cell>
-              <cell>IIIF storage and presentation of images, how to encode links to images</cell>
-              <cell><ref target="https://drive.google.com/file/d/1KtqJGvib1te6JiQOxhOwEmH28-xM0szW/view">links</ref></cell>
-              <cell><ref target="images">images</ref></cell>
-              <cell><gi>idno</gi>, <gi>locus</gi></cell>
-            </row>
-
-            <row>
-              <cell>Reusing Data</cell>
-              <cell>Reusing the data from stored dumps, citing Beta maṣāḥǝft, reusing the bibliography, reusing the database,APIs available.</cell>
-              <cell><ref target="https://drive.google.com/file/d/1MS6SgSRi0ODvYc78LuHdqs1rBmD_8Wpl/view">links</ref></cell>
-              <cell></cell>
-              <cell></cell>
-            </row>
-            <row>
-              <cell>DTS</cell>
-              <cell>Distributed Text Services implementation of Beta maṣāḥǝft.</cell>
-<cell><ref target="https://docs.google.com/presentation/d/1fUgpqz22ltXl2KNmQvdm5Lb3TBHfjX7SadqM0c1bGC8/edit?usp=sharing">links</ref></cell>
-
-<cell></cell>
-<cell></cell>
+            <cell>Introduction to Beta maṣāḥǝft</cell>
+            <cell>GitHub workflow, General introduction (video), Dillmann, Morphological
+              parser.</cell>
+            <cell>
+              <ref     target="https://docs.google.com/presentation/d/e/2PACX-1vQE-4pPJjk3E-6IzB3bx-3KA6SokbR7tyB85thvrNpU-_-4LlDJ6B-HnpWUIfJ8BGNrsmb2NtWZ_vUz/pub?start=false&amp;loop=false&amp;delayms=3000"
+                >link</ref>
+            </cell>
+            <cell/>
+            <cell/>
+          </row>
+          <row>
+            <cell>Introduction to XML</cell>
+            <cell>What is XML, what it is useful for, basic terminology, example markup of
+              bibliography. Contains some simple exercises.</cell>
+            <cell>
+              <ref target="https://docs.google.com/presentation/d/e/2PACX-1vSU55d-SdJWG7BQ-mp4KQozq5ko_qnYSEm6QHzKBMSTnQGToQ9UNftiBVtQciIDONcmuZD9mlmzmhig/pub?start=false&amp;loop=false&amp;delayms=3000"
+                >link</ref>
+            </cell>
+            <cell> </cell>
+            <cell> </cell>
+          </row>
+          <row>
+            <cell>Introduction to TEI</cell>
+            <cell>What is TEI, TEI guidelines and community, more precision obtained with TEI</cell>
+            <cell>
+              <ref target="https://docs.google.com/presentation/d/e/2PACX-1vTO_e6_eMWUbHtW6oXLTrsGSzhbN67py6cBfaGznKJwA8p_FJuVr03ai6vWAlIWdZ8S0I-0aPRx8ttK/pub?start=false&amp;loop=false&amp;delayms=3000"
+                >link</ref>
+            </cell>
+            <cell> </cell>
+            <cell> </cell>
+          </row>
+          <row>
+            <cell>Introduction to the Beta maṣāḥǝft Guidelines</cell>
+            <cell>Describes the different sources of guidelines and the reference materials to keep
+              bookmarked</cell>
+            <cell><ref target="https://youtu.be/afdMy80Zy5Q">video</ref></cell>
+            <cell/>
+            <cell> </cell>
+          </row>
+          <row>
+            <cell>Beta maṣāḥǝft Guidelines for relationships</cell>
+            <cell>describes how different entities are related with one another across the hierarchy
+              of the TEI files.</cell>
+            <cell></cell>
+            <cell/>
+            <cell>
+              <gi>relation</gi>
+            </cell>
+          </row>
+          
+          <row>
+            <cell>Using the Zotero Bibliography and the HLC Styles</cell>
+            <cell>Covers all standard uses of Zotero related to BM: importing data, reusing it, encoding references and citations, features of the visualization in the website</cell>
+            <cell><ref target="https://docs.google.com/presentation/d/e/2PACX-1vRGyBUo6ccJbsxepCL9wxEzB1QpxYqe_OcxaKypU0-BIOINJrVgv4aDzBUOuuFIqjRJKhu734HOcfg1/pub?start=false&amp;loop=false&amp;delayms=3000">link</ref></cell>
+            <cell><ref target="bibliographic-references">Bibliographic References</ref></cell>
+            <cell><gi>listBibl</gi><gi>bibl</gi></cell>
+          </row>
+          
+          <row>
+            <cell>Getting text From Transkribus</cell>
+            <cell>Using the model, aligning transcription, running HTR, exporting</cell>
+            <cell><ref target="https://docs.google.com/presentation/d/e/2PACX-1vRq_M-h2Alkv4qWtyaCSG-_ZqjbdzWHkz9zpt1kpaMt_-tjkwf_TuuXE8aC5u3bVWL-MV7QUMZUn409/pub?start=false&amp;loop=false&amp;delayms=3000">link</ref></cell>
+            <cell><ref target="transcription-transkribus">transcription with Transkribus</ref></cell>
+            <cell><gi>facsimile</gi> <gi>lb</gi> <gi>pb</gi></cell>
+          </row>
+          
+          <row>
+            <cell>The Make PDF Oxygen Project package</cell>
+            <cell>How to use the provided package to produce a PDF based on XSL-FO with the Aethiopica editorial requirements based on BM data</cell>
+            <cell><ref target="https://docs.google.com/presentation/d/e/2PACX-1vSe763ALF1tB4B3Jwuf9YVwoN1aB67Cu6eZJJTGq7WU06ikWdQzRSTbm_ScZIwKcPrTEVGOCl2icHI-/pub?start=false&amp;loop=false&amp;delayms=3000"
+              >link</ref></cell>
+            <cell/>
+            <cell/>
+          </row>
+          
+          <row>
+            <cell>Places</cell>
+            <cell>The concept of Place, an example based on Etiopia. The structure of place and Repositories record. How occurrences of places and
+              persons in texts are annotated.</cell>
+            <cell><ref target="https://docs.google.com/presentation/d/e/2PACX-1vTueoYnLr-qWDcWuqQkPkPaGUmRMye7dfHcuYKAEvU58e9BpzNM2Y051xqHzriYsirX4J3SQFOFJ0gC/pub?start=false&amp;loop=false&amp;delayms=3000">link</ref></cell>
+            <cell><ref target="places">places</ref>, <ref target="persons">persons</ref>, <ref
+                target="named-entities-and-authority-lists">named entities</ref></cell>
+            <cell>
+              <gi>place</gi>
+              <gi>placeName</gi>
+            </cell>
+          </row>
+         
+          <row>
+            <cell>Introduction to the Beta maṣāḥǝft Schema</cell>
+            <cell>The ODD (One Document Does it all), the TEI modules, XPath</cell>
+            <cell>
+<!--              Daria's presentation, not making it public for direct linking-->
+              <ref target="https://drive.google.com/file/d/1JppbXm6quA6Aa860hl8GdCU56kwURdDq/view"
+                >link</ref>
+            </cell>
+            <cell/>
+            <cell> </cell>
+          </row>
+          <row>
+            <cell>Using taxonomy and authority files</cell>
+            <cell>The taxonomy, use of the authority file</cell>
+            <cell><ref target="https://docs.google.com/presentation/d/e/2PACX-1vQtw6Z0DD5H4HXHYD6iEkLkhP016CvFNdsiGh5DX7dniIzYdmkHAHZmVQ_loa4tm9sVHbdkH6lnMgxv/pub?start=false&amp;loop=false&amp;delayms=3000">link</ref></cell>
+            <cell>
+              <ref target="taxonomy">taxonomy</ref>, <ref target="authority-files"
+                >authority-files</ref></cell>
+            <cell>
+              <gi>term</gi>
+            </cell>
+          </row>
+          <row>
+            <cell>Persons encoding and description</cell>
+            <cell>description</cell>
+            <cell></cell>
+            <cell>
+              <ref target="persons">persons</ref>
+            </cell>
+            <cell><gi>person</gi>, <gi>persName</gi></cell>
+          </row>
+<row>
+  <cell>TEI for Manuscripts cataloguing</cell>
+  <cell>Views, breakdowns, formats</cell>
+  <cell><ref target="https://docs.google.com/presentation/d/e/2PACX-1vRC4LH9i8AwvLaw5rp0SzUVaofIP9uBjVszjsteNelD1un4HX1762Gy_4oxzljTcWTTwK0YYm7LcKPR/pub?start=false&amp;loop=false&amp;delayms=3000">link</ref></cell>
 </row>
 
-              </table>
-              </div>
+          <row>
+            <cell>Beta maṣāḥǝft Guidelines on Manuscripts and general structure of manuscript
+              records</cell>
+            <cell>structure of <gi>teiHeader</gi>, including physical description and binding</cell>
+            <cell></cell>
+            <cell>
+              <ref target="manuscriptDescription">manuscript description</ref>, <ref
+                target="manuscriptPhysDescription">Physical description</ref></cell>
+            <cell><gi>msDesc</gi>, <gi>msPart</gi></cell>
+          </row>
 
-              <div type="level2">
-                <head>Useful links</head>
-                <list>
-                  <item><ref target="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html">TEI Guidelines</ref></item>
-                  </list>
-                </div>
+          <row>
+            <cell>Encoding of manuscripts' content and textual units</cell>
+            <cell>description</cell>
+            <cell></cell>
+            <cell>
+              <ref target="manuscriptContents">contents of the manuscript</ref>
+            </cell>
+            <cell>
+              <gi>msContents</gi>
+            </cell>
+          </row>
 
-              <div type="level2">
-                <head>Contacts</head>
-                <p>You can use these materials, programs and presentations, given the workings above, to run your workshop. 
-                  We are happy to support you on this or if you prefer to come and deliver training at your institution. Just <ref target="https://betamasaheft.eu/contacts.html">contact us</ref>.</p>
-              </div>
+          <row>
+            <cell>Art Themes and Decorations</cell>
+            <cell>description</cell>
+            <cell></cell>
+            <cell><ref target="artThemes">Art Themes</ref>, <ref target="decorationDescription"
+                >decorations</ref></cell>
+            <cell/>
+          </row>
 
-     </body>
-   </text>
- </TEI>
+          <row>
+            <cell>Images</cell>
+            <cell>IIIF storage and presentation of images, how to encode links to images</cell>
+            <cell>
+              <ref target="https://docs.google.com/presentation/d/e/2PACX-1vTDElLLNmGgDv6PkIOVcQDEaAOC0YXuAVHoppwixiF1NxmOP4Rlmnxg0jx8cr290Dz0Qw50BVtsoRzx/pub?start=false&amp;loop=false&amp;delayms=3000"
+                >link</ref>
+            </cell>
+            <cell>
+              <ref target="images">images</ref>
+            </cell>
+            <cell><gi>idno</gi>, <gi>locus</gi></cell>
+          </row>
+
+          <row>
+            <cell>Reusing Data</cell>
+            <cell>Reusing the data from stored dumps, citing Beta maṣāḥǝft, reusing the
+              bibliography, reusing the database, APIs available.</cell>
+            <cell>
+              <ref target="https://docs.google.com/presentation/d/e/2PACX-1vT73KYzOqKJVoyzuq35g84n8jtiqezxJk_3EH7q_9_0VolJydfKfLau9VIckllhA_Qt9tNAybNOmBgf/pub?start=false&amp;loop=false&amp;delayms=3000"
+                >link</ref>
+            </cell>
+            <cell/>
+            <cell/>
+          </row>
+          <row>
+            <cell>DTS</cell>
+            <cell>Distributed Text Services implementation of Beta maṣāḥǝft.</cell>
+            <cell>
+              <ref target="https://docs.google.com/presentation/d/e/2PACX-1vTOfu83wqlqUfpAne8ptB1oHbKGflqq4R0C72GpPgYoKTmL7dtLipx3uZ6g6UaHrvf8Z9BxCKe7ErZ8/pub?start=false&amp;loop=false&amp;delayms=3000"
+                >link</ref>
+            </cell>
+
+            <cell/>
+            <cell/>
+          </row>
+          <row>
+            <cell>GitHub</cell>
+            <cell>Using GitHub (Atom and GitHub Desktop)</cell>
+            <cell><ref
+                target="https://docs.google.com/presentation/d/e/2PACX-1vQAPXvs7w6-kyTggSsFbaTnpTWyIUwnf3F8qA_Uziy7TotHKiyubH2vTRIHTl-8HN2Hd5DuTqjmXJ9f/pub?start=false&amp;loop=false&amp;delayms=3000&amp;slide=id.p"
+                >link</ref>.</cell>
+
+            <cell>
+              <ref target="workflow">workflow</ref>
+            </cell>
+            <cell/>
+          </row>
+          <row>
+            <cell>Atom</cell>
+            <cell>Setting Up Atom</cell>
+            <cell><ref target="https://docs.google.com/presentation/d/e/2PACX-1vSP7Gee8cC6Ty7YeEwy2i5DP2luT5PcB_NGkaWGOfNbGKMtb4EC8IOzjnAY45_hQYcDIInkKKAq_qoV/pub?start=false&amp;loop=false&amp;delayms=3000&amp;slide=id.p"
+              >link</ref>.</cell>
+            
+            <cell>
+              <ref target="setup">setup</ref>
+            </cell>
+            <cell/>
+          </row>
+          <row>
+            <cell>Distributed Scholarly Work: Collaboration and Citability</cell>
+            <cell>Forms of scholarly interactions made better by the web, Minimal computing, Nanopublications</cell>
+            <cell><ref target="https://docs.google.com/presentation/d/e/2PACX-1vSDTRBo0wbb1CG7WOzSxRWauSEFiSpyKcC8sa5NiaH9xFUMSbFaYUXpc8NKHzr09WO7GbzAKsfwd1oF/pub?start=false&amp;loop=false&amp;delayms=3000"
+              >link</ref>.</cell>
+            
+            <cell>
+              <ref target="setup">setup</ref>
+            </cell>
+            <cell/>
+          </row>
+          
+          
+          <row>
+            <cell>Taking a tour in the Online Lexicon Linguae Aethiopicae</cell>
+            <cell>Shows different functionalities and views in the application</cell>
+            <cell><ref target="https://docs.google.com/presentation/d/e/2PACX-1vQApg6yaI4WoHY2n-oFVmTCmlcu1cOfmZJOw-oVp2SAAxmqrhEuGBC1HPxvp_R0wjehwhGwAouobvg3/pub?start=false&amp;loop=false&amp;delayms=3000">link</ref></cell>
+            <cell/>
+            <cell> </cell>
+          </row>
+        </table>
+      </div>
+
+      <div type="level2">
+        <head>Useful links</head>
+        <list>
+          <item>
+            <ref target="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html">TEI
+              Guidelines</ref>
+          </item>
+          <item>
+            <ref target="https://pietroliuzzo.github.io/LOWA/">Additional presentations with several examples from Beta masaheft, related to Linked Open Data</ref>. These may be interesting if you plan doing something with our RDF.
+          </item>
+        </list>
+      </div>
+
+      <div type="level2">
+        <head>Contacts</head>
+        <p>You can use these materials, programs and presentations, given the workings above, to run
+          your workshop. We are happy to support you on this or if you prefer to come and deliver
+          training at your institution. Just <ref target="https://betamasaheft.eu/contacts.html"
+            >contact us</ref>.</p>
+      </div>
+
+    </body>
+  </text>
+</TEI>
