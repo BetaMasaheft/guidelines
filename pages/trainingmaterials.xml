@@ -345,18 +345,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell/>
           </row>
           
-          <row>
-            <cell>Taking a tour in Beta maṣāḥǝft</cell>
-            <cell>Shows different functionalities and views in the application</cell>
-            <cell><ref>video</ref></cell>
-            <cell/>
-            <cell> </cell>
-          </row>
           
           <row>
             <cell>Taking a tour in the Online Lexicon Linguae Aethiopicae</cell>
             <cell>Shows different functionalities and views in the application</cell>
-            <cell><ref>video</ref></cell>
+            <cell><ref target="https://docs.google.com/presentation/d/e/2PACX-1vQApg6yaI4WoHY2n-oFVmTCmlcu1cOfmZJOw-oVp2SAAxmqrhEuGBC1HPxvp_R0wjehwhGwAouobvg3/pub?start=false&amp;loop=false&amp;delayms=3000">link</ref></cell>
             <cell/>
             <cell> </cell>
           </row>
