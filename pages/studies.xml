@@ -8,6 +8,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <fileDesc>
             <titleStmt>
                 <title>Studies</title>
+                <author>Giulia Casella</author>
                 <author>Pietro Liuzzo</author>
             </titleStmt>
             <publicationStmt>
@@ -18,7 +19,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </sourceDesc>
         </fileDesc>       
         <revisionDesc>
-            <change who="PL" when="2021-02-23">first version from issue https://github.com/BetaMasaheft/Documentation/issues/1702</change>     
+            <change who="PL" when="2021-02-23">first version from issue https://github.com/BetaMasaheft/Documentation/issues/1702</change>            <change who="GC" when="2021-07-14">Submitted encoded version of work notes.</change> 
+            <change who="PL" when="2021-07-16">Encoded, enriched and corrected</change> 
         </revisionDesc>
     </teiHeader>
     <text>
@@ -27,7 +29,178 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <head>Studies</head>
                 <p>We store materials of interest to Ethiopian and Eritrean studies also as TEI.</p>
                 <p>For example for Ludolf's <hi rendition="simple:italic">Commentarius</hi> and <hi rendition="simple:italic">Historia</hi>.</p>
-                <p>Encoding practice for edition of Works apply, but we do not assign an <att>xml:id</att>, only a <att>type</att> with <val>study</val>.</p>
+                <p>Encoding practice for Textual Units apply, records for Studies should have in <gi>TEI</gi> a <att>type</att> with <val>study</val>.</p>
+                <p>Currently entities of this type originate from a workflow based on an available set of images of an out of copyright text which can be automatically transcribed. Please refer to <ref target="transcriptionTranskribus">the page on Transkribus</ref>. The output of the transcription and alignment of course does not follow the workflow used for manuscripts.</p>
+            </div>
+            <div type="level1">
+                <head>Specific features of the encoding of Studies</head>
+                <p>Having obtained a part or the entirety of the transcription you will have a starting point which may need further encoding detailed below. based on the encoding of the <hi rendition="simple:italic">Commentarius</hi>.</p>
+                <p> All text is contained in the element <gi>body</gi> and in a <gi>div</gi> element
+                    with the attribute <att>type</att> and the value <val>edition</val>. The different
+                    parts of the text are contained in other <gi>div</gi> element with the attributes
+                    <att>type</att>, <att>subtype</att>, <att>xml:id</att>.
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <div type="textpart" subtype="tabula_capitum" xml:id="tc"> ... </div>
+                    </egXML>
+                    These can be used to reproduce the overall structure of the work, e.g. the sequence of title page, table of contents, indexes, etc. This type of structure can be encoded, at any level of depth which is appropriate to render the features of the printed resource. These divisions can in part be obtained from the transcription tool. The logic and structure is not the same, so maintaining text areas from a layout analysis will in most cases not be meaningful.
+                </p>
+                
+                <p> Sections of the work that contain indices can be encoded using the <gi>list</gi>
+                    element, containing different number of <gi>item</gi> elements.
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <div type="textpart" subtype="catalogus_autorum" xml:id="CatAut">
+                            <head>A.</head>
+                            <list>
+                                <item>Abdelbakides Muhamed</item>
+                                <item>Abraham Echelelensis Maronita</item>
+                                <item>Abulbaracat Arabs</item>
+                            </list>
+                        </div>
+                    </egXML>
+                   
+                </p>
+                
+                <p> Other useful elements for encoding, based on the <hi rendition="simple:italic">mise en page</hi> of the text, may
+                    be: <list>
+                        <item>
+                            <gi>fw</gi> element, for the running head at the top of all pages where it
+                            does not function to introduce a new section of the work</item>
+                        <item>
+                            <gi>label</gi> element, with the attributes <att>type</att> and
+                            <att>place</att>, to specify whether it is the paragraph number or the
+                            note number and where it is placed in the page</item>
+                    </list>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <note>p44</note>
+                        <fw> Joh. Potken &amp; Matth. Armenius </fw>
+                        <label type="notnum" place="margin">Prooem. I.</label>
+                        <label type="parnum" place="margin">6</label>
+                    </egXML> 
+                    <figure><graphic  xml:id="g1"  url="https://iiif.archivelab.org/iiif/bub_gb_VOtTAAAAcAAJ$43/info.json"><desc>Running header and navigation labels</desc></graphic></figure>
+                </p>
+                
+                <p>Based on the structure of the work, the following elements may also be used: <list>
+                    <item><gi>p</gi> element, if the work is divided in paragraphs, with
+                        <att>xml:id</att> attribute, reporting the number of the
+                        paragraph;</item>
+                    <item><gi>ab</gi> element, if the work has footnotes, with <att>type</att>
+                        attribute and the value <val>footnote</val>,containing <gi>note</gi>
+                        elements, with <att>xml:id</att> attribute</item>
+                    <item><gi>note</gi> elements, with <att>place</att> attribute, for possible
+                        annotations placed in the margin of the page.</item>
+                </list>            
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <ab type="footnote">
+                            <note xml:id="np1_a"> (a) ... </note>
+                            <note xml:id="np1_b"> (b) ... </note>
+                        </ab>
+                        <note place="margin"><ref target="#lib">inf.2.6.29.</ref></note>
+                        <note place="margin"><bibl>L. II.5 p.112b</bibl></note>
+                    </egXML>
+                    <figure>             
+                        <graphic  xml:id="g2"  url="https://iiif.archivelab.org/iiif/bub_gb_VOtTAAAAcAAJ$45/info.json"><desc>Footnotes and marginal notes</desc></graphic></figure> 
+                The pointer to the footnote can be encoded with a simple <eg>ref</eg>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <ref target="#np1_a">(a)</ref>
+                </egXML>
+                </p>
+                
+                <p>For encoding internal and external references we can follow the indication on the
+                    page <ref target="references">References</ref>. The same applies to references to the encoded study-entity.</p>
+                
+                <p>For the quotations, a distinction must be made between literal and indirect
+                    quotations: 
+                    <list>
+                        <item>for literal quotations we use the <gi>quote</gi> element, accompanied by
+                            the <att>source</att> attribute and, if the quotation language differs from
+                            the text language, by the <att>xml:lang</att> attribute 
+                            
+                            <egXML
+                                xmlns="http://www.tei-c.org/ns/Examples">
+                                <quote source="#RamPrae" xml:lang="it"> Questa fatica di abbreviare un
+                                    così copioso volume doveva esser data à persone intelligenti, e
+                                    dotte.</quote>
+                            </egXML>
+                            
+                            here the <att>source</att> points to a <gi>bibl</gi> element in the text
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <bibl xml:id="RamPrae">Ramusius in
+                                    praefatione<ptr target="bm:Ramusio1550Navigationi"/></bibl>
+                            </egXML>
+                        </item>
+                        
+                        <item> we can use the <gi>q</gi> element for indirect quotations, or translation
+                            of quotation, which are distinguished from the surrounding text. If we have
+                            an indirect quotation we can also use the attribute <att>source</att> to
+                            point to a bibliographic reference in the text. 
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"> Tellezius autem eum passim
+                                meritò perstringit, <q source="#Tel1cap1"> quòd non solùm gloriosas
+                                    Lusitanorum actiones obfuscare voluerit ...</q>
+                            </egXML> 
+                            This also points to an existing <gi>bibl</gi> encoded in the running text
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <bibl
+                                    xml:id="Tel1cap1">Lib.I.<citedRange unit="chapter"
+                                        >c.I</citedRange><lb facs="#facs_50_line_1615904394303_3111"
+                                            n="N002"/><citedRange unit="page">p.2.b &amp;
+                                                3.</citedRange><ptr target="bm:Teles1660Historia"/></bibl>
+                            </egXML>
+                            In the case of quotation translations, we can use the <gi>q</gi>
+                            element with the <att>type</att> attribute and value <val>traslation</val>,
+                            and the attribute <att>corresp</att> to point to to the corresponding
+                            quotation 
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">                            
+                                <quote xml:id="Rehac1" xml:lang="fr">Les Abissins reclement et recherchent nostre Prince Zaga-Christ leur Catholique et legitimite Seigneur</quote>
+                                <q corresp="#Rehac1" type="translation">Habessini expectant &amp;
+                                    requirunt nostrum Principem Tzaga-Christum Catholicum &amp;
+                                    legitimum suum Dominum.</q>
+                            </egXML>
+                            <figure>             
+                                <graphic  xml:id="g3"  url="https://iiif.archivelab.org/iiif/bub_gb_VOtTAAAAcAAJ$49/info.json"><desc>Quotation with translation</desc></graphic></figure> 
+                        </item>
+                    </list> 
+                    
+                    For both literary and indirect quotations we can use the <att>source</att>
+                    attribute to point to a <gi>bibl</gi> element which should be placed in different
+                    place of the text: 
+                    <list>                    
+                        <item>in the body:
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                De quo P. B. Tellezius scribit:
+                                <bibl xml:id="Tel112a">II. <citedRange unit="chapter">5.
+                                </citedRange><citedRange unit="page">p. 112. a.</citedRange></bibl>
+                                <q source="#Tel112a"> Alvarezium composuisse stylo plano &amp; sincero
+                                    Historiam Aethiopiae ...</q>                                    
+                            </egXML>   
+                            <figure>
+                                <graphic  xml:id="g4"  url="https://iiif.archivelab.org/iiif/bub_gb_VOtTAAAAcAAJ$46/info.json"><desc>Encoded bibliographic reference in the running text</desc></graphic></figure>                              
+                        </item>
+                        
+                        <item>in the marginal note:
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                Tellezius enim diserte dicit:<q source="#Telp45">
+                                    <persName ref="PRS7481NaodA">Naodum</persName> ultimum fuisse, qui
+                                    ex hoc monte ad imperium pervenerit </q>
+                                <note place="margin"><bibl xml:id="Telp45">Lib.I <citedRange unit="chapter"
+                                    >c.17.</citedRange><citedRange unit="page">p.45.</citedRange><ptr
+                                        target="bm:Teles1660Historia"/></bibl></note>  
+                            </egXML>  
+                            <figure>
+                                <graphic  xml:id="g5"  url="https://iiif.archivelab.org/iiif/bub_gb_VOtTAAAAcAAJ$46/info.json"><desc>Marginal note with bibliographic reference</desc></graphic></figure>
+                        </item>
+                        
+                        <item>in the footnote:
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                qui scribunt: <q source="#Buxt16">Damnatorum animas in Sabbato feriari, atque ignem
+                                    infernalem tunc non urere, neque etiam foetere</q><ref target="#np1_r">(r)</ref>
+                                <note xml:id="np1_r">(r) <bibl xml:id="Buxt16">Buxtorf in Synagoga Jud. <citedRange unit="chapter">c. 16.</citedRange><ptr
+                                    target="bm:Buxtorf1641Synagoga"/></bibl></note>
+                            </egXML>
+                            <figure>
+                                <graphic  xml:id="g6"  url="https://iiif.archivelab.org/iiif/bub_gb_VOtTAAAAcAAJ$44/info.json"><desc>Footnote with bibliographic reference</desc></graphic></figure>                        
+                        </item>
+                    </list> 
+                </p>
             </div>
         </body>
     </text>
