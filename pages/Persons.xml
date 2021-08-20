@@ -214,6 +214,16 @@ guidelines for
          </div>
 
          <div type="level1">
+            <head>Dates from manuscripts</head>
+            <p>Sometimes a manuscript has an internal date and a person is mentioned in 
+               the primary stratum of this manuscript. We can thus assume that this person existed at that date, hopefully for them also somewhat before and after.</p>
+            <p>Because the application is going to pick up this information from the manuscript, you do not need to encode it. It will be visible in the website only however. 
+               Also the canonicalized XML includes this information. The RDF data also allows to retrieve this related entities.</p>
+            <p>You may still wish to encode this information in the person record as well, and you can do this within <gi>floruit</gi> by either providing a wider range or a narrower range according to each case.
+            This will help also users of the XML data from the source archive to disambiguate homonymous persons.</p>
+         </div>
+
+         <div type="level1">
             <head>Commemoration</head>
             <p>For Saints, you might wish to record the commemoration dates. Please
                follow the following example. Please always include the source for the date (Sǝnkǝssār, Dǝggwā, EAe...).</p>
