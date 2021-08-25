@@ -21,6 +21,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
           <change who="PL" when="2018-04-24">stub of page</change>
           <change who="EDS" when="2019-01-08">content added</change>
+            <change who="DR" when="2021-08-25">small edit to clarify encoding of sewing stations</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -32,10 +33,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <binding contemporary="false" xml:id="binding">
                 <decoNote xml:id='b1'>Wooden boards (recently) covered with
                     reddish-brown tooled leather. </decoNote>
-                <decoNote xml:id='b2'>Four pairs of sewing stations.</decoNote>
-                <decoNote xml:id='b3' type="bindingMaterial"><material key="wood"/></decoNote>
-                <decoNote  xml:id='b4' type="Endbands">...</decoNote>
-                <decoNote xml:id='b5' type="Other">
+                <decoNote xml:id='b2'>Two pairs of sewing stations.</decoNote>
+                <decoNote  xml:id='b3' type="SewingStations">4</decoNote>
+                <decoNote xml:id='b4' type="bindingMaterial"><material key="wood"/></decoNote>
+                <decoNote  xml:id='b5' type="Endbands">...</decoNote>
+                <decoNote xml:id='b6' type="Other">
                     Parchment guards (possibly of the same
                     origin as <locus target="#183"/>) were used to sew together <locus from="1" to="2"/>.
                 </decoNote>
@@ -117,7 +119,11 @@ the structure with 3 sewing stations is a structure on two paired sewing station
          </p>
 
          <p>A further description of the sewing is possible
-             within a general <gi>decoNote</gi>. Sewing stations are numbered starting from the head (first sewing station, second sewing station, third sewing station, etc.).
+             within a general <gi>decoNote</gi>. Here, you can also state the number of pairs of sewing stations:
+             <egXML xmlns="http://www.tei-c.org/ns/Examples">
+             <decoNote xml:id='b2'>Two pairs of sewing stations.</decoNote>
+             </egXML>
+             Sewing stations are numbered starting from the head (first sewing station, second sewing station, third sewing station, etc.).
              Here, if identified, you can specify with keywords the origin of sewing thread. <!--and the sewing pattern,
              following Bozzacchi's classification <ref target="https://www.zotero.org/groups/358366/ethiostudies/items/itemKey/2968T6TC/q/bozzacchi"></ref>.-->
          </p>
