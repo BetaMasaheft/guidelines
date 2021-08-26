@@ -22,6 +22,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="PL" when="2018-04-24">stub of page</change>
             <change who="DR" when="2019-04-26">Added dividers</change>
             <change who="DR" when="2020-04-07">Added example for translation of legends</change>
+            <change who="DR" when="2021-08-26">Added paragraph on dimensions</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -165,6 +166,23 @@ in this example from <ref type="bm" target="DSEthiop1">DS Ethiop. 1</ref>:</p>
         </decoDesc>
     </egXML>
             </div>
+            
+            <div type="level2">
+                <head>Dimensions</head>
+                <p>If available and desired, the dimensions of painted areas can be given in <gi>dimensions</gi> in <gi>decoNote</gi>,
+                    as in this example from <ref type="bm" target="RDW005">RDW-005</ref>:
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <decoNote xml:id="d2" type="drawing" corresp="#pic2">
+                            <desc>Monochrome drawing of a magic square, possibly a <ref type="authFile" corresp="AT1140SealSol"/>, but without face.</desc>
+                            <dimensions unit="mm">
+                                <height>75</height>
+                                <width>46</width>
+                            </dimensions>
+                        </decoNote>
+                    </egXML>
+                </p>
+            </div>
+            
             <div type="level2">
                 <head>Miniature Collections</head>
     <p>Manuscripts that contain exclusively miniatures and no text
