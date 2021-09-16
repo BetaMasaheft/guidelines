@@ -41,7 +41,7 @@
             <item>Make sure that you choose the correct publication type (journal article, encyclopaedia article, etc.). Please note:
               <list type="ordered:alpha">
                 <item>For papers in conference proceedings use ‘Book section’ in Zotero,
-                  <hi rend="underline">do not use</hi>
+                  <hi rendition="simple:underline">do not use</hi>
                   ‘Conference paper’, for two reasons: for this entry type you cannot enter series number and some other information in the mask that are essential data; this field must be reserved exclusively to paper presented at conferences that were not published,
                   as long as they are distinguished from a manuscript (draft).
                 </item>
@@ -53,8 +53,8 @@
                 </item>
                 <item>
                   In a multi-volume publication, each volume is a separate entry (and gets a
-                  <hi rend="underline">separate tag</hi>),
-                  <hi rend="underline">do not</hi>
+                  <hi rendition="simple:underline">separate tag</hi>),
+                  <hi rendition="simple:underline">do not</hi>
                   merge volumes in one entry. Same is valid for article series.
                 </item>
                 <item>
@@ -77,12 +77,12 @@
                   When importing entries into Zotero you have to check manually that the entries, in all fields you want to keep, observe this rule; if note, the right codes must be entered. Use the Keyman DiacriticsUnicode keyboard to enter the rights codes.
                 </item>
                 <item>Make sure the right for schwa is used, i.e.
-                  <hi rend="underline">not</hi>
+                  <hi rendition="simple:underline">not</hi>
                   ə Code 0259) but ǝ (Code 01DD).</item>
                 <item>When in the original title an apostrophe is used for
-                  <hi rend="italic">alef</hi>
+                  <hi rendition="simple:italic">alef</hi>
                   or
-                  <hi rend="italic">ayn</hi>
+                  <hi rendition="simple:italic">ayn</hi>
                   please replace with the diacritic, but not if the IPA symbol is used.</item>
               </list>
 
@@ -92,15 +92,15 @@
             <item>Importing data into Zotero (e.g. worldcat.org or JSTOR) is meant to facilitate your work, not to replace it. Hence, when importing entries automatically into Zotero, delete data from the ‘Short Title’ field and ‘Journ Abbrev’ field, as they
               interfere severely when exporting the entry.</item>
             <item>The transcription of text or words in
-              <hi rend="italic">fidal</hi>
+              <hi rendition="simple:italic">fidal</hi>
               must be done according to the transcription adopted in Beta maṣāḥǝft, not the
-              <hi rend="italic">Encyclopaedia Aethiopica</hi>
+              <hi rendition="simple:italic">Encyclopaedia Aethiopica</hi>
               or other systems. Please note:
               <list>
                 <item>IMPORTANT: Since the EthioStudies Library is shared between Beta maṣāḥǝft and the
-                  <hi rend="italic">Aethiopica</hi>
+                  <hi rendition="simple:italic">Aethiopica</hi>
                   but these do not share the same transcription system, if you encounter a record using the
-                  <hi rend="italic">Encyclopaedia Aethiopica</hi>
+                  <hi rendition="simple:italic">Encyclopaedia Aethiopica</hi>
                   system do not change it according to the BM system but rather create a new record, else who undertakes editorial work must re-do records over and over again. In case there are two copies of the same entry the one with the bm: tag will have the bm
                   transliteration, the one with Aethiopica transliteration will have no bm: tag.</item>
               </list>
@@ -149,23 +149,23 @@
                     </item>
                     <item>If more subtitles are present, they should be divided by a comma and capitalized.</item>
                     <item>If a publication consists of several volumes with their own titles, these must be separated by a semi-colon (;), e.g.
-                      <hi rend="italic">Encyclopaedia Aethiopica</hi>, I: A C ; II: D Ha ; III: He N</item>
+                      <hi rendition="simple:italic">Encyclopaedia Aethiopica</hi>, I: A C ; II: D Ha ; III: He N</item>
                     <item>Use a full stop between titles in different languages in publications with a double title, e.g.
-                      <hi rend="italic">Santi e guerrieri a cavallo: Tele etiopiche, Tele di Qēs Adamu Tesfaw. Warriors Saints on Horseback: Ethiopian Paintings, Paintings by Qēs Adamu Tesfaw</hi>.</item>
+                      <hi rendition="simple:italic">Santi e guerrieri a cavallo: Tele etiopiche, Tele di Qēs Adamu Tesfaw. Warriors Saints on Horseback: Ethiopian Paintings, Paintings by Qēs Adamu Tesfaw</hi>.</item>
                   </list>
                 </item>
                 <item>For titles in Ethiopic provide the original in fidal, the scientific transcription in brackets and the translation into English, e.g. ዝክረ ነገር (Zǝkra nagar, ‘Remembrances of things’). Please note
                   <list type="ordered:roman">
                     <item>
                       This rule does not apply if only part of the title is in
-                      <hi rend="italic">fidal</hi>, e.g. ትግርኛ ንዛረብ:
-                      <hi rend="italic">Let’s Speak Tigrinya, Elementary Level, A First-Year Textbook, A Multidimensional Approach to the Teaching and Learning of Tigrinya As a Foreign Language</hi>.
+                      <hi rendition="simple:italic">fidal</hi>, e.g. ትግርኛ ንዛረብ:
+                      <hi rendition="simple:italic">Let’s Speak Tigrinya, Elementary Level, A First-Year Textbook, A Multidimensional Approach to the Teaching and Learning of Tigrinya As a Foreign Language</hi>.
                     </item>
                   </list>
                 </item>
                 <item>
                   For titles in scripts other than Ethiopic (Arabic, Hebrew, Cyrillic, etc.), provide the scientific transcription and translation only (i.e. not the title in the original script), e.g.
-                  <hi rend="italic">Beyṯ ha-kǝneseṯ ʾAbūna ʾAbaʾ Ṣabra: Beʾer Ševaʿ</hi>
+                  <hi rendition="simple:italic">Beyṯ ha-kǝneseṯ ʾAbūna ʾAbaʾ Ṣabra: Beʾer Ševaʿ</hi>
                   (‘The Abuna Abba Ṣabra synagogue: Beʾer Ševaʿ’).
                 </item>
               </list>
@@ -174,25 +174,25 @@
             <item>Pay attention not to incorporate in the title elements that do not belong to it, e.g. information such as ‘edited and translated by’.</item>
             <item>
               Journal names are to be recorded in Zotero using only the main name of the journal, e.g.
-              <hi rend="italic">Aethiopica</hi>, not
-              <hi rend="italic">Aethiopica. International Journal of Ethiopian and Eritrean Studies</hi>. Please note:
+              <hi rendition="simple:italic">Aethiopica</hi>, not
+              <hi rendition="simple:italic">Aethiopica. International Journal of Ethiopian and Eritrean Studies</hi>. Please note:
               <list type="ordered:alpha">
                 <item>An exception to this rule is when you have ‘homonymous’ journals: in these fairly rare cases the full title as given on the journal frontispiece can be given, e.g.
-                  <hi rend="italic">Africa: Journal of the International African Institute</hi>
+                  <hi rendition="simple:italic">Africa: Journal of the International African Institute</hi>
                   vs
-                  <hi rend="italic">Africa: Vivere il continente vero</hi>.
+                  <hi rendition="simple:italic">Africa: Vivere il continente vero</hi>.
                 </item>
                 <item>
                   In some exceptional cases the name of the institution also needs to appear in the title to avoid confusion:
                   <list type="ordered:roman">
                     <item>
-                      <hi rend="italic">Atti della Accademia Nazionale dei Lincei , Classe di scienze morali, storiche e filologiche , Rendiconti</hi>
+                      <hi rendition="simple:italic">Atti della Accademia Nazionale dei Lincei , Classe di scienze morali, storiche e filologiche , Rendiconti</hi>
                     </item>
                     <item>
-                      <hi rend="italic">Atti della Accademia Nazionale dei Lincei , Classe di scienze morali, storiche e filologiche , Memorie</hi>
+                      <hi rendition="simple:italic">Atti della Accademia Nazionale dei Lincei , Classe di scienze morali, storiche e filologiche , Memorie</hi>
                     </item>
                     <item>
-                      <hi rend="italic">Académie des Inscriptions et Belles Lettres , Comptes rendus des séances</hi>
+                      <hi rendition="simple:italic">Académie des Inscriptions et Belles Lettres , Comptes rendus des séances</hi>
                     </item>
                   </list>
                 </item>
@@ -249,7 +249,7 @@
             <item>In case of multiple reprints, always provide and primarily quote the first version.</item>
             <item>In case of reprints, the abbreviation ‘repr.’ should be given in the “edition” field.</item>
             <item>Corpus Scriptorum Christianorum Orientalium: with CSCO the older series volumes are not printed with Peeters in Louvain, and have different series numbers. The original series numbers, publication place, publisher and year must be provided alongside the information of the later reprints (Louvain, in the 1960s, with the usual CSCO/SAe numbers):
-<p>Conti Rossini, Carlo 1904. <hi rend="italic">Vitae Sanctorum Antiquiorum</hi>, I: <hi rend="italic">Gadla Yārēd seu Acta Sancti Yārēd</hi>, II: <hi rend="italic">Gadla Panṭalēwon seu Acta Sancti Pantaleonis. Textus; Versio</hi>, ed., tr. Carlo Conti Rossini, I–II, Corpus Scriptorum Christianorum Orientalium, Scriptores Aethiopici, Series Altera, 17 (repr. CSCO, 26, 27, SAe, 9, 10) (Romae–Parisiis–Lipsiae (repr. Louvain): Excudebat Karolus de Luigi–Carolus Poussielgue Bibliopola–Otto Harrassowitz (repr. Secrétariat du CorpusSCO, 1961), 1904).</p>
+<p>Conti Rossini, Carlo 1904. <hi rendition="simple:italic">Vitae Sanctorum Antiquiorum</hi>, I: <hi rendition="simple:italic">Gadla Yārēd seu Acta Sancti Yārēd</hi>, II: <hi rendition="simple:italic">Gadla Panṭalēwon seu Acta Sancti Pantaleonis. Textus; Versio</hi>, ed., tr. Carlo Conti Rossini, I–II, Corpus Scriptorum Christianorum Orientalium, Scriptores Aethiopici, Series Altera, 17 (repr. CSCO, 26, 27, SAe, 9, 10) (Romae–Parisiis–Lipsiae (repr. Louvain): Excudebat Karolus de Luigi–Carolus Poussielgue Bibliopola–Otto Harrassowitz (repr. Secrétariat du CorpusSCO, 1961), 1904).</p>
             </item>
           </list>
         </div>
