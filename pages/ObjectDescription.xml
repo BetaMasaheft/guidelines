@@ -44,7 +44,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             information about the material support is given.</p>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
 <support>
-  <material key="Parchment"/>
+  <material key="parchment"/>
 </support>
 </egXML>
                      <p>In <gi>material</gi> with <att>key</att> enter the value
@@ -107,7 +107,7 @@ taken from <locus target="#6r"/>.
 </egXML>
                      <p>Measurements in <gi>dimensions</gi> should
                          always be given in millimetres, unless the source catalogues provides them otherwise.</p>
-                <p>You can add more precise information on a range of dimension using 
+                <p>You can add more precise information on a range of dimension using
                     <att>atLeast</att> and <att>atMost</att>, which will be given priority in the visualization
                     but, please, add a single valid value as content as in the following example.
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -122,14 +122,14 @@ taken from <locus target="#6r"/>.
                     <measure unit="leaf">3+69+1</measure>
                 </egXML>
                 <p>Please use only integers in <gi>measure</gi>. For all searching purposes only integers will be used.</p>
-                <p>Instead of placing your measure around the entire thing which you deem a measure, 
+                <p>Instead of placing your measure around the entire thing which you deem a measure,
                 try a more specific tagging</p>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                     A + <measure unit="quire">11</measure>
                     Protection quire + <measure unit="quire">19</measure>
                     Protection quire + 19 (<measure unit="quire">20</measure>)
                 </egXML>
-                
+
                 <p>To indicate the number of strips sewn together to produce a scroll, you can add a <gi>measure</gi> in a <gi>note</gi>, as in <ref target="BDLaethf10" type="bm">BDLaethf10</ref>:
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                     <extent>
