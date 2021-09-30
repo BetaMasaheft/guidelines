@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Contributing to the research environment</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>encoded in TEI</p>
+         </sourceDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2021-09-30">encoded as part of new release</change>     </revisionDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="contributing">
+        <list>
+            <item>
+
+              <ref target="https://github.com/BetaMasaheft/Documentation/blob/master/CONTRIBUTING.md">Contributing to the XML data source using GitHub</ref></item>
+              <item><ref target="contributingimages">Contributing images to the project</ref></item>
+                <item><ref target="zotero">Familiarizing with how to contribute to the Zotero bibliography</ref></item>
+                  <item><ref target="transcription-transkribus">contribute aligned images and transcriptions with Transkribus</ref></item>
+                <item><ref target="alpheios">contribute transliterations and morphological annotations with the Alpheios alignment tool</ref></item>
+                <item><ref target="hypothesis">Annotations with hypothes.is</ref></item>
+                <item><ref target="wikidata">Adding links from Wikidata</ref></item>
+          </list>
+        </body>
+      </text>
+    </TEI>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Aligning transliteration and morphological annotations with Alpheios Alignment Tool</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>encoded in TEI</p>
+         </sourceDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2021-09-30">encoded as part of new release</change>     </revisionDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="contributing">
+        <p>The <ref target="https://alignment.alpheios.net/">Alpheios Alignment Tool</ref> is designed to align multiple versions of a text in different languages.
+      We use it to align Fidal and the <ref target="transliteration-principles">transliteration</ref> so that morphological annotations can be made on the transliteraterated text.</p>
+          <p>Instructions on how to do the alignment and annotation can be found in the <ref target="https://github.com/BetaMasaheft/alpheiosannotations/blob/main/README.md">GitHub repository</ref> where a video is screencast of an example is also available.</p>
+<p>You can key in your texts, import them from files, from TEI or from the DTS API.</p>
+        <p>Annotations produced in this way are entirely compatible with the TEI export of annotations made with the GETA tool during the TraCES project.</p>
+        <p>This workflow, feeding directly the data to the morphological parser increments directly the available data for searches in Beta Masaheft as well. It is more suited for smaller
+        parts of work and does not feature the text-length functionalities of a dedicated tool. This way of contributing morphological annotations is however much more flexible and straight forward and therefore particularly adequate for small tasks with immediate impact.</p>
+        </body>
+      </text>
+    </TEI>
