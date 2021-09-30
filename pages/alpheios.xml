@@ -19,7 +19,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </fileDesc>       <revisionDesc>       <change who="PL" when="2021-09-30">encoded as part of new release</change>     </revisionDesc>
    </teiHeader>
    <text>
-      <body xml:id="contributing">
+      <body xml:id="alpheios">
         <p>The <ref target="https://alignment.alpheios.net/">Alpheios Alignment Tool</ref> is designed to align multiple versions of a text in different languages.
       We use it to align Fidal and the <ref target="transliteration-principles">transliteration</ref> so that morphological annotations can be made on the transliteraterated text.</p>
           <p>Instructions on how to do the alignment and annotation can be found in the <ref target="https://github.com/BetaMasaheft/alpheiosannotations/blob/main/README.md">GitHub repository</ref> where a video is screencast of an example is also available.</p>

@@ -24,7 +24,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <p>To lern how to use the websites maintained by the project and part of the Beta maṣāḥǝft research environment
           please see the dedicated help pages listed below or have a look at the <ref target="trainingMaterials">training materials</ref>.
 <list>
-  <item><ref target="https://betamasaheft.eu/help.html"/>Beta maṣāḥǝft help page</item>
+  <item><ref target="https://betamasaheft.eu/help.html">Beta maṣāḥǝft help page</ref></item>
   <item><ref target="https://betamasaheft.eu/Dillmann/tutorial.html">Online Lexicon Linguae Aethiopicae tutorial</ref></item>
   <item><ref target="https://betamasaheft.eu/morpho">Morphological parser</ref></item>
   <item><ref target="https://github.com/BetaMasaheft/makepdf/blob/main/README.md">Make PDF</ref> instructions</item>
@@ -47,7 +47,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <item><ref target="https://www.w3schools.com/xml/xpath_intro.asp">use XPath</ref></item>
         <item><ref target="https://regexr.com/">use Regex to search in the files</ref></item>
       </list>
-      
+
         </body>
         </text>
         </TEI>
