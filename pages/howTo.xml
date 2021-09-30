@@ -21,19 +21,25 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body xml:id="howto">
-        <p>Using the website</p>
-        <list>
-        <item><ref target="navigation">Navigation</ref></item>
-        <item><ref target="hypothesis">Annotations with hypothesis</ref></item>
-        </list>
-        <p><ref target="https://github.com/BetaMasaheft/Documentation/blob/master/CONTRIBUTING.md">Contributing</ref></p>
+        <p>To lern how to use the websites maintained by the project and part of the Beta maṣāḥǝft research environment
+          please see the dedicated help pages listed below or have a look at the <ref target="trainingMaterials">training materials</ref>.
+<list>
+  <item><ref target="https://betamasaheft.eu/help.html"/>Beta maṣāḥǝft help page</item>
+  <item><ref target="https://betamasaheft.eu/Dillmann/tutorial.html">Online Lexicon Linguae Aethiopicae tutorial</ref></item>
+  <item><ref target="https://betamasaheft.eu/morpho">Morphological parser</ref></item>
+  <item><ref target="https://github.com/BetaMasaheft/makepdf/blob/main/README.md">Make PDF</ref> instructions</item>
+  </list>
+  On some pages also a "Take a tour" or "Explore this page" button is available which will show you some features on that page.
+        </p>
+         <p>You are also very welcome to ask questions directly in the <ref target="https://github.com/BetaMasaheft/Documentation/discussions">discussion</ref> area on GitHub.</p>
+
+          <p>There are many ways of <ref target="contributing">contributing</ref> to the research environment directly.
+          These guidelines refer mainly to the curation of XML data in TEI. The linked page also gives details on additional ways of contributing information which are supported by the research environment.</p>
         <list>
           <item><ref target="https://github.com/BetaMasaheft/Documentation/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</ref></item>
-        <item><ref target="workflow">General workflow</ref></item>
-        <item><ref target="setup">Setting up your workspace</ref></item>
-        <item><ref target="zotero">Familiarizing with the bibliography editing</ref></item>
-        <item><ref target="https://help.github.com/articles/creating-a-pull-request/">Making a Pull Request</ref></item>
-        <item>Project collaborations</item>
+        <item><ref target="workflow">General workflow for the source XML data</ref></item>
+        <item><ref target="setup">Setting up your workspace to edit XML TEI data</ref></item>
+
 </list>
 <p>Useful things to know working with XML</p>
 <list>
@@ -41,13 +47,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <item><ref target="https://www.w3schools.com/xml/xpath_intro.asp">use XPath</ref></item>
         <item><ref target="https://regexr.com/">use Regex to search in the files</ref></item>
       </list>
-      <p>Reusing the data</p>
-      <list>
-              <item>reusing the data from GitHub</item>
-              <item><ref type="bm" target="api">accessing the data via the data API</ref></item>
-              <item><ref type="bm" target="SPARQL">reusing the RDF triples via SPARQL endpoint</ref></item>
-              <item>reuse of images</item>
-            </list>
+      
         </body>
         </text>
         </TEI>

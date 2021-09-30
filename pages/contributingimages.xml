@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Contributing sets of images to the research environment</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>encoded in TEI</p>
+         </sourceDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2021-09-30">encoded as part of new release</change>     </revisionDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="contributingimages">
+      <p>The best thing you can do to share images with the community of users is to publish them as IIIF. This is at least what we also do.
+        If you do not know how to do that, you coudl share them in a long term repository like Zenodo, and let us know, please. If also this is not easy for you for some reason you can still
+         send the organized image sets to us and we will store them along with the other images, eventually linking the image set to a TEI description.</p>
+        </body>
+      </text>
+    </TEI>

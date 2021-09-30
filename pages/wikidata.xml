@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Linking from Wikidata to the research environment</title>
+            <author>Pietro Liuzzo</author>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>encoded in TEI</p>
+         </sourceDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2021-09-30">encoded as part of new release</change>     </revisionDesc>
+   </teiHeader>
+   <text>
+      <body xml:id="contributing">
+        <p>Linking to and from Wikidata is very useful. There is a dedicate property to align entities in Wikidata with their identifier in the BM research environment.
+        <ref target="https://www.wikidata.org/wiki/Property:P7846">P7846: Beta maṣāḥǝft ID</ref>. See for example how it is used <ref target="https://www.wikidata.org/wiki/Q2563156">here</ref>.
+      </p>
+      <p>Anything that has an identifier in Beta maṣāḥǝft could be linked from it corresponding entity in Wikidata, also repositories, persons, ethinic groups and manuscripts. To contribute to Wikidata please follow the dedicate guidance there. It is extremely easy.</p>
+        </body>
+      </text>
+    </TEI>

@@ -79,12 +79,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <ref target="https://www.betamasaheft.uni-hamburg.de/en/news/2020tei/">program</ref>
               </cell>
             </row>
+            <row>
+              <cell>28 June - 2 July 2021</cell>
+              <cell>Hamburg (online)</cell>
+              <cell>TEI for Ethiopian and Eritrean manuscript cataloguing</cell>
+              <cell>
+              </cell>
+              </row>
+            <row>
+              <cell>27-29 September 2021</cell>
+              <cell>Hamburg (online)</cell>
+              <cell>TEI for Ethiopian and Eritrean manuscript cataloguing</cell>
+              <cell>
+              <ref target="https://docs.google.com/document/d/1q_ncLEWCB8Mca28w81PFMgjLLpH3yUH16vaKDTTPtiE/edit#heading=h.1sf1nfqy1rdu">program</ref>
+                  </cell>
+              </row>
           </table>
         </div>
         <div type="level3">
           <head>Future </head>
           <p>There is no open workshop planned at the moment. There is usually at least one workshop
-            a year held in Hamburg, which will be advertised and listed here as soon as its dates
+            a year held in Hamburg, which will be advertised and listed here and on the website as soon as its dates
             are known. </p>
           <table>
             <row role="label">
@@ -92,13 +107,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               <cell>place</cell>
               <cell>title</cell>
               <cell>program</cell>
-            </row>
-            <row>
-              <cell>28 June - 2 July 2021</cell>
-              <cell>Hamburg (online)</cell>
-              <cell>TEI for Ethiopian and Eritrean manuscript cataloguing</cell>
-              <cell>
-              </cell>
             </row>
           </table>
         </div>
@@ -166,7 +174,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               <gi>relation</gi>
             </cell>
           </row>
-          
+
           <row>
             <cell>Using the Zotero Bibliography and the HLC Styles</cell>
             <cell>Covers all standard uses of Zotero related to BM: importing data, reusing it, encoding references and citations, features of the visualization in the website</cell>
@@ -174,7 +182,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell><ref target="bibliographic-references">Bibliographic References</ref></cell>
             <cell><gi>listBibl</gi><gi>bibl</gi></cell>
           </row>
-          
+
           <row>
             <cell>Getting text From Transkribus</cell>
             <cell>Using the model, aligning transcription, running HTR, exporting</cell>
@@ -182,7 +190,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell><ref target="transcription-transkribus">transcription with Transkribus</ref></cell>
             <cell><gi>facsimile</gi> <gi>lb</gi> <gi>pb</gi></cell>
           </row>
-          
+
           <row>
             <cell>The Make PDF Oxygen Project package</cell>
             <cell>How to use the provided package to produce a PDF based on XSL-FO with the Aethiopica editorial requirements based on BM data</cell>
@@ -191,7 +199,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell/>
             <cell/>
           </row>
-          
+
           <row>
             <cell>Places</cell>
             <cell>The concept of Place, an example based on Etiopia. The structure of place and Repositories record. How occurrences of places and
@@ -204,7 +212,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               <gi>placeName</gi>
             </cell>
           </row>
-         
+
           <row>
             <cell>Introduction to the Beta maṣāḥǝft Schema</cell>
             <cell>The ODD (One Document Does it all), the TEI modules, XPath</cell>
@@ -326,7 +334,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell>Setting Up Atom</cell>
             <cell><ref target="https://docs.google.com/presentation/d/e/2PACX-1vSP7Gee8cC6Ty7YeEwy2i5DP2luT5PcB_NGkaWGOfNbGKMtb4EC8IOzjnAY45_hQYcDIInkKKAq_qoV/pub?start=false&amp;loop=false&amp;delayms=3000&amp;slide=id.p"
               >link</ref>.</cell>
-            
+
             <cell>
               <ref target="setup">setup</ref>
             </cell>
@@ -337,14 +345,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell>Forms of scholarly interactions made better by the web, Minimal computing, Nanopublications</cell>
             <cell><ref target="https://docs.google.com/presentation/d/e/2PACX-1vSDTRBo0wbb1CG7WOzSxRWauSEFiSpyKcC8sa5NiaH9xFUMSbFaYUXpc8NKHzr09WO7GbzAKsfwd1oF/pub?start=false&amp;loop=false&amp;delayms=3000"
               >link</ref>.</cell>
-            
+
             <cell>
               <ref target="setup">setup</ref>
             </cell>
             <cell/>
           </row>
-          
-          
+
+
           <row>
             <cell>Taking a tour in the Online Lexicon Linguae Aethiopicae</cell>
             <cell>Shows different functionalities and views in the application</cell>
