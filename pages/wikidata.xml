@@ -19,7 +19,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </fileDesc>       <revisionDesc>       <change who="PL" when="2021-09-30">encoded as part of new release</change>     </revisionDesc>
    </teiHeader>
    <text>
-      <body xml:id="alpheios">
+      <body xml:id="wikidata">
         <p>Linking to and from Wikidata is very useful. There is a dedicate property to align entities in Wikidata with their identifier in the BM research environment.
         <ref target="https://www.wikidata.org/wiki/Property:P7846">P7846: Beta maṣāḥǝft ID</ref>. See for example how it is used <ref target="https://www.wikidata.org/wiki/Q2563156">here</ref>.
       </p>
