@@ -223,6 +223,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
            </row>
          </table>
          </p>
+         <p>Daniel Yacob has also prepared a full table documenting this,
+           which can be found
+           <ref target="https://github.com/geezorg/Xliterator/wiki/Beta-Ma%E1%B9%A3%C4%81%E1%B8%A5%C7%9Dft-Transliteration">here</ref>.</p>
          <p>- for Schwa - please always use ǝ (01DD, Latin Small Letter Turned E)
          and not ə (0259, Latin Small Letter Schwa)</p>
          <p>- for Alif - please always use ʾ (02BE), not ˀ</p>
