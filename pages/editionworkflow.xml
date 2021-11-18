@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Critical Edition Workflow</title>
+        <author>Pietro Liuzzo</author>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Encoded natively in XML by Pietro Liuzzo</p>
+      </sourceDesc>
+    </fileDesc>
+    <revisionDesc>
+
+      <change who="PL" when="2021-11-18">first version from test run on LIT4714</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body xml:id="editionworkflow">
+      <div type="level1">
+        <head>A Digital-first Collaborative Critical Edition</head>
+
+        <p>There are many ways to do a digital first edition which can then be the basis for a paper
+          based product. Some tools are listed <ref target="https://doi.org/10.2307/j.ctvrnfr3q.14"
+            >here</ref>, and can be found looking at the <ref target="trainingmaterials.xml"
+            >training materials</ref> many more exist based on XML, LaTeX, etc. There is a ton of
+          examples and literature. each with its requirements and learning curve. Needless to say
+          the best one is the one which works best for you and your needs. This page describes one
+          possibility which benefits at several stages from the commonly edited data in Beta
+          maṣāḥǝft (BM) and contributes in several citable and versioned ways to it. It has never
+          been used for a real project although it has been possible already for some years. By
+          going through the hypothetical phases of the work involved for a critical edition of a
+          text we link to those resources which are available and which do not need to be used in
+          the exact ways described. The page here will also try to clarify what can and what cannot
+          be supported in such a process. The key idea is that what works for you does not
+          necessarily mean it is the best thing to do for the future and for others, and taking a
+          few steps towards a deeply collaborative way of working benefits you, the quality of your
+          work and the direct impact of that on others, so, it is definitely worth it. </p>
+        <p>The digital-first workflow is based on the principle of separation of concerns, which is
+          typical of the word of coding and programming. This methodological approach involves the
+          splitting of as many different levels of concern as it is possible and useful. Instead of
+          trying to do everything into one tool and with one method, each separate part of the work
+          is done with a specifically designed method. The most common and basic separation of
+          concerns is the separation between the concern about the semantic annotation of the text
+          and that of its rendering on the printed page. Instead of saying <q>I make a footnote to
+            indicate the list of variants for this passage, and I put it here because it looks
+            nice</q>. we turn it around and thing <q>I mark the variants as variants.</q> and then
+          in a separate step <q>I want the variants to be listed in footnotes.</q> and in yet
+          another separated step <q>I want the footnotes to be arranged in this way because it looks
+            nice.</q> Separating the steps also allows for much more control and consequently
+          consistence. Mastering this concept is however not easy, because it requires a
+          postponement of the result and satisfaction, thus a higher perceived risk. This page will
+          try to persuade with evidence at each step of the falsity of this widely spread perception
+          and serve as a reassurance that it is indeed the opposite.</p>
+        <p>With this in mind, within Beta maṣāḥǝft Research Environment there are many things one
+          can use, they will be linked in the different sections.</p>
+        <p>This workflow is made possible by some set up and implementation choices made by the
+          project, namely the TEI XML based data, the <ref
+            target="https://distributed-text-services.github.io/specifications/">DTS API</ref> and
+          the GitHub based collaborative workflow.</p>
+        <p>Because the author of this page is analphabet of Classical Ethiopic, the step by step
+          examples will become more and more fictitiuous has we go to the end. While looking forward
+          to replace them with a real example, there is none at the moment.</p>
+        <div type="level2">
+          <head>Requirements Identification</head>
+          <p>To start with the right foot, one should be quite clear from the outset about the
+            desired final output. In most cases if working at a critical edition this will involve
+            the requirements of the editors. Typically none of these requirements should prevent any
+            of the following steps, that is to say, there is no such excuse as <quote>the editor
+              does not let me</quote>.</p>
+          <p>My suggestion: make a list. If you did not do this before even submitting your project
+            and getting your funding, I suggest it is the first thing you do once you have been
+            approved.</p>
+          <div type="level3">
+            <head>Benefits to you</head>
+            <p>If you know what you are doing from the beginning, where it will land, everything
+              will be easier. e.g. if the translation goes in a different book, then you will avoid
+              wasting time with the alignment on facing pages, etc.</p>
+          </div>
+        </div>
+        <div type="level2">
+          <head>Select the manuscripts</head>
+          <p>Most likely if you are setting of on the journey to build the edition of a text, you
+            know where to find your manuscripts and probably already know which are where. Just in
+            case you do not, <ref target="https://betamasaheft.eu/">Beta maṣāḥǝft</ref> may help
+            you. Search for the title of your work, open the relevant work, and on the right you
+            will find a list of manuscripts, sorted by type of content and eventually also telling
+            you about other textual units related to the one you are looking for.</p>
+          <p>This kind of search may not however bring you to the digital surrogates directly. <ref
+              target="https://betamasaheft.eu/availableImages.html">The project also maintains a
+              list of available images.</ref></p>
+          <p>Because who writes does not have a clue, he looked with a script in the data searching
+            for a textual unit attested in manuscripts with a likelyhood to have accessible images.
+            Below is the script, just because it is always nice.</p>
+          <eg> xquery version "3.1"; declare namespace t = "http://www.tei-c.org/ns/1.0"; let $col
+            :=collection('/users/hlz-ad/Documents/GitHub/Manuscripts/ES/?select=*.xml') for $content
+            in $col//t:msItem[count(t:locus) =
+            1][t:locus[@from][@to]][ancestor::t:TEI[descendant::t:idno[@n][@facs]]]/t:title[@ref]
+            group by $title := $content/@ref let $count := count($content) order by $count
+            descending return if(($count eq 5) and not(contains($title, '#'))) then
+            (&lt;thistext>{$title}&lt;iscontained>{$count}&lt;/iscontained>{for $c in $content
+            return
+            &lt;ms>{string($c/ancestor::t:TEI/@xml:id)}{$c/parent::t:msItem/t:locus}&lt;/ms>}&lt;/thistext>)
+            else () </eg>
+          <p>Among the results I picked a short text which is not related to many others.</p>
+          <eg> &lt;thistext>LIT4714Salamlaki&lt;iscontained>5&lt;/iscontained>
+            &lt;ms>ESqs014&lt;locus xmlns="http://www.tei-c.org/ns/1.0" from="7vc"
+            to="8ra">7vc-8ra&lt;/locus> &lt;/ms> &lt;ms>ESamm007&lt;locus
+            xmlns="http://www.tei-c.org/ns/1.0" from="5va" to="5vb"/> &lt;/ms>
+            &lt;ms>ESamq014&lt;locus xmlns="http://www.tei-c.org/ns/1.0" from="5va" to="5vb"/>
+            &lt;/ms> &lt;ms>ESmr001&lt;locus xmlns="http://www.tei-c.org/ns/1.0" from="93rb"
+            to="94rb"/> &lt;/ms> &lt;ms>ESum014&lt;locus xmlns="http://www.tei-c.org/ns/1.0"
+            from="9ra" to="9rb"/> &lt;/ms> &lt;/thistext> </eg>
+          <p>Checking in the database,<ref
+              target="https://betamasaheft.eu/works/LIT4714Salamlaki/main">
+              https://betamasaheft.eu/works/LIT4714Salamlaki/main</ref> is called <emph>Salām laki
+              ḫoḫǝta mǝśrāq and there</emph> are 13 manuscripts in total whose descriptions point to
+            the identifier, some of them contain this text in the main and some in the secondary
+            strata. Looks good. Because of my query I know that there are images and they are
+            available.</p>
+          <div type="level3">
+            <head>Benefits to you</head>
+            <p>Well, you may find in the research environment manuscript descriptions and images,
+              curated by a team and peer reviewed. That does not sound bad, isn't it?</p>
+          </div>
+          <div type="level3">
+            <head>Benefits to the community</head>
+            <p>What about the others? Those which you know about and are not in the research
+              environment? Consider as a first step having a unified source of information, thus
+              describing the manuscripts and linking the images and the text in the research
+              environment. <ref target="manuscripts">Catalogue descriptions</ref> can be long or
+              short there are no requirement. What is then important is that you link your textual
+              unit to the description, as a <ref target="manuscriptContents">main content</ref> or
+                <ref target="additionsVaria">addition</ref>. If in doing this you also add a
+              description, links to other named entities and relevant bibliography, all will be able
+              to benefit from that.</p>
+          </div>
+        </div>
+        <div type="level2">
+          <head>Transcription</head>
+          <p>You may be very lucky and find out we have already added a transcription based on the
+            images, but this is not a very frequent case. Let us assume that there is no
+            transcription, as for my example. I located the text using the viewer for each
+            manuscript and downloaded the relevant photos following the manifest links. This may be
+            not possible for you, please, simply ask. I then asked a colleage, Solomon, to help me
+            identify the exact place where the text began and ended. We found out that only in four
+            cases out of five we could locate the text on the images where expected. This is still
+            quite good and fine for the purpose of the demo.</p>
+          <p>I uploaded the images to Transkribus, following the <ref
+              target="transcription-transkribus">instructions on the steps involved</ref> which are
+            also present in these guidelines. However, because the text is very short, I did not do
+            the entire manuscript, <ref
+              target="https://transkribus.eu/lite/collection/125718/doc/833390">only the part
+              interesting to me for this text</ref>. <list>
+              <item>https://betamasaheft.eu/ESum014 Begins 9r, columns 1, line 13 and ends 9r,
+                column 2, line 7</item>
+              <item>https://betamasaheft.eu/ESmr001 Begins 83r, column 2, line 1 and ends 83r,
+                column 2, line 13</item>
+              <item>https://betamasaheft.eu/ESqs014 Begins 8v column 3, line 12 and ends 9r column
+                1, line 6</item>
+              <item>https://betamasaheft.eu/ESamm007 Begins with verso column 1 line 9 and ends
+                verso column 2, line 9.</item>
+            </list> Eventually, if the text had been already transcribed and added to the database
+            you could have skipped this. The database is in principle able to fetch the correct
+            portion of the text if that is indicated precisely. In this case the indication was only
+            to the folio and there was no transcription.</p>
+          <p>At this point you can also download from transkribus .docx, .pdf, .txt and many other
+            formats besides the TEI which we will be using here.</p>
+          <div type="level3">
+            <head>Benefits to you</head>
+            <p>The three steps (loading, layout analysis and HTR) took me less than twenty minutes
+              for four images. At the end of the process you have a text in Unicode, aligned to the
+              images, ready to be used.</p>
+          </div>
+          <div type="level3">
+            <head>Benefits to the community</head>
+            <p>Correcting transcriptions in transkribus (see next step) will allow in the future to
+              further train the model so that the transcription can be improved and the corrections
+              needed less and less.</p>
+          </div>
+        </div>
+        <div type="level2">
+          <head>Correction and Encoding of the transcriptions</head>
+          <p>The transcription is not perfect, it needs to be corrected. You can correct in
+            Transkribus, which is nice in keeping you aligned to the text. Some features will
+            however need to be encoded after. So, I opted for doing the corrections in my TEI
+            export.</p>
+          <p>In the manuscripts where the identification is correct I can start encoding the
+            structure necessary for the text. This could have been supported by using the
+            transkribus2BM.xsl, which is however here not necessary, because the text is very short. </p>
+          <p>Now is time to get the data into the research environment. Not familiar with GitHub? In
+            these Guidelines and in our GitHub organisation you will find plenty of guidance. <ref
+              target="https://docs.google.com/presentation/d/e/2PACX-1vQAPXvs7w6-kyTggSsFbaTnpTWyIUwnf3F8qA_Uziy7TotHKiyubH2vTRIHTl-8HN2Hd5DuTqjmXJ9f/pub?start=false&amp;loop=false&amp;delayms=3000&amp;slide=id.p"
+              >You could start from here</ref>.</p>
+          <p>I did a branch of the Manuscripts repository and opened the four relevant files for the
+            manuscripts.</p>
+          <p>I did a branch of the Works repository and opened the textual unit of the text.</p>
+          <p>I then copied from the TEI output of transrkibus into the BM manuscript records and
+            encoded the text structure. I used for this step the Atom editor. Any other is ok.</p>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <div type="edition" xml:lang="gez">
+              <div type="textpart" subtype="folio" n="9">
+                <div type="textpart" corresp="#p1_i1.2">
+                  <ab><pb n="9r" facs="#facs_5"/>
+                    <cb n="a" facs="#facs_5_r3"/>
+                    <lb facs="#facs_5_r3l13" n="13"/>ኖኂተ፡ ሞሥ <lb facs="#facs_5_r3l14" n="14"/>እእ <lb
+                      facs="#facs_5_r3l15" n="15"/>ራቅ፡ ዘወልደ፡ ኖሬ፡ ሰላም <lb facs="#facs_5_r3l16" n="16"
+                    />ለኪ፡ ዓፀድ፡ ዘእስከደረ፡ <lb facs="#facs_5_r3l17" n="17"/>ለም፡ ስርጉት፡ በወሪ <lb
+                      facs="#facs_5_r3l18" n="18"/>ውሬ፡ ሰለኪ፡ ሰድልት <lb facs="#facs_5_r3l19" n="19"
+                    />ንጸሬ፡ ሰላኪ፡ በትረ፡ እ <lb facs="#facs_5_r3l20" n="20"/>ሮን፡ ጸዋሪተ፡ ፍሬ፡ ሶብ <lb
+                      facs="#facs_5_r3l21" n="21"/>፡ እንተ፡ ወለድኪ፡ ፈ <lb facs="#facs_5_r3l22" n="22"
+                    />ብሬ፡ ዘምስለ፡ ዝማረ፡ <lb facs="#facs_5_r3l23" n="23"/>ንወድለኪ፡ ለበይት <lb
+                      facs="#facs_5_r3l24" n="24"/>በብ፡ መጽሐፈ፡ ተአም <lb facs="#facs_5_r3l25" n="25"
+                    />ርኪ፡ በሰላም፡ ኪያነ፡ ባ <cb n="b" facs="#facs_5_r4"/>
+                    <lb facs="#facs_5_r4l1" n="1"/>ርኪ። ወኢትርስእኒ፡ ለ <lb facs="#facs_5_r4l2" n="2"
+                    />ገብርኪ፡ ኃጥእ፡ ወአባሴ <lb facs="#facs_5_r4l3" n="3"/>ተ፡ወልደ፡ ማርያም <lb
+                      facs="#facs_5_r4l4" n="4"/>ማር፡ አቡነ፡ ትክለ፡ ሃይወ <lb facs="#facs_5_r4l5" n="5"
+                    />ሮት፡ ወልደሙ፡ ለአቡን <lb facs="#facs_5_r4l6" n="6"/>ዘገብርኤል፡ በዓለመ፡ ዘ <lb
+                      facs="#facs_5_r4l7" n="7"/>ለም፡ አሜን፡ ወአሜን፡ </ab>
+                </div>
+              </div>
+            </div>
+          </egXML>
+          <p>Here we still have to add the encoding of, e.g. <ref
+              target="https://betamasaheft.eu/Guidelines/?id=text-encoding">rubrication,
+              corrections, normalizations</ref>, etc. The correction of the text can be done in
+            transkribus before exporting or in the TEI of the manuscript. If done in transkribus
+            only visible text should be entered. Markup will be added in the TEI. Once correction
+            and encoding took place the text in the mss will look like the following example, more
+            or less.</p>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <div type="edition" xml:lang="gez">
+              <div type="textpart" subtype="folio" n="93">
+                <ab>
+                  <pb facs="#facs_1" xml:id="AMM-007_006.jpeg" n="5v"/><cb facs="#facs_1_r1" n="a"
+                    /><lb facs="#facs_1_r1l9" n="9"/>ንፈስ።</ab>
+                <div type="textpart" corresp="#ms_i1.1.1">
+                  <ab>ሰላም፡ ለኪ፡ ማርያ<lb facs="#facs_1_r1l10" n="10"/>ም። ኆኅተ፡ ምሥራቅ፡ ዘወ<lb
+                      facs="#facs_1_r1l11" n="11"/>ልደ፡ ናዊ፡ ሰላም፡ ለኪ፡ ዓፀድ፡<lb facs="#facs_1_r1l12"
+                      n="12"/>ዘእሰከደሬ፡ ሰላም፡ ለኪ፡ ጽ<lb facs="#facs_1_r1l13" n="13"/>ድልተ፡ ንፂሬ፡ ሥርጉት፡
+                      በወ<lb facs="#facs_1_r1l14" n="14"/>ራውሬ፡ ሰላም፡ ለኪ፡ በቅ<lb facs="#facs_1_r1l15"
+                      n="15"/>ረ፡ አሮን፡ ጸዋሪተ፡ ፍሬ፡ ሳላ<lb facs="#facs_1_r1l16" n="16"/>ም፡ ለኪ። አንተ፡ ወለድኪ፡
+                      ፈ<lb facs="#facs_1_r1l17" n="17"/>ጣሬ፡ ሰላም፡ ለኪ። ዘምስለ፡<lb facs="#facs_1_r1l18"
+                      n="18"/>ዝማሬ፡ ንሰ<add place="top">ማ</add>ድ፡ ለኪ፡ ሶበ፡ ይ<lb facs="#facs_1_r1l19"
+                      n="19"/>ትነበብ፡ መጽሐፈ፡ ተአም<lb facs="#facs_1_r1l20" n="20"/>ርኪ። በሰላም፡ ኪያነ፡ በር<cb
+                      facs="#facs_1_r2" n="b"/><lb facs="#facs_1_r2l1" n="1"/>ኪ። ወላዲተ፡ አምላክ፡ ማ<lb
+                      facs="#facs_1_r2l2" n="2"/>ርያም፡ እንበለ፡ ዕብሳብ፡ ወ<lb facs="#facs_1_r2l3" n="3"
+                    />ሩካቤ፡ በይነ፡ ዘዓቀሂ፡ ብኩ<lb facs="#facs_1_r2l4" n="4"/>ለኪ፡ ንስቲተ፡ ቃለ፡ ይባቤ፡<lb
+                      facs="#facs_1_r2l5" n="5"/>ፈትዊ፡ እሙ፡ በረከተ፡ አፉ<lb facs="#facs_1_r2l6" n="6"/>ኪ፡
+                    ሙሐዘ፡ ከርቤ። ለነዳይ፡<lb facs="#facs_1_r2l7" n="7"/>ብእሲ፡ ወለዘረከበ፡ ምንደ<lb
+                      facs="#facs_1_r2l8" n="8"/>ቤ፡ ኅብስተከ፡ ፈትት፡ ኢሳይ<lb facs="#facs_1_r2l9" n="9"
+                    />ያስ፡ ይቤ። </ab>
+                </div>
+              </div>
+            </div>
+          </egXML>
+          <p>The important part here is that text has been checked line by line against the image
+            (here there are certainly errors, because I am analphabet) and transcription phenomena
+            have been encoded, for example the letter added at the top in line 18. Note that spaces
+            before <gi>pb</gi>, <gi>cb</gi> and <gi>lb</gi> have been removed. This text is now
+            ready for Collatex.</p>
+          <p>Want to opt out now? You can use your encoded text in Oxygen for example to get a
+            different format as output, e.g. .txt, .pdf, .odt.</p>
+          <div type="level3">
+            <head>Benefits to you</head>
+            <p>You may have noticed that I did not need to do any description of the manuscripts. I
+              added the transcriptions which where not there but all the data about the manuscripts
+              is already there.</p>
+          </div>
+          <div type="level3">
+            <head>Benefits to the community</head>
+            <p>Data is now in your branches of the different repositories. You could make a PR and
+              contribute that corrected transcription. Or still wait and keep the transcriptions
+              with you until you are happy. When they will be eventually merged they will be
+              published online also as HTML and PDF, while on the branch they are still available
+              but only as XML data.</p>
+          </div>
+        </div>
+        <div type="level2">
+          <head>Collation</head>
+          <p>I have the text transcribed from the four witnesses. Now I want to collate these four
+            texts. I opened <ref target="https://collatex.net/demo/">Collatex Demo</ref> ticked some
+            options and copied the corrected texts as four different witnesses, removing the XML
+            brackets. Click Collate and you get the results, also as TEI. I copied the resulting TEI
+            P5 into the Work file on my branch. This I am unlikely to propose for a PR, because a
+            mockup edition would not be a good contribution to the community.</p>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <div type="edition" xml:lang="gez">
+              <div type="textpart" subtype="incipit" xml:id="Incipit">
+
+                <ab> ሰላም፡ ለኪ፡<app>
+                    <rdg wit="W1">ማርያም።</rdg>
+                    <rdg wit="W2 W3 W4"/>
+                  </app>ኆኅተ፡ ምሥራቅ፡</ab>
+              </div>
+              <div type="textpart">
+                <ab>
+                  <app>
+                    <rdg wit="W3 W4 W1">ዘወልደ፡</rdg>
+                    <rdg wit="W2">በወልዳ፡</rdg>
+                  </app><app>
+                    <rdg wit="W1">ናዊ፡</rdg>
+                    <rdg wit="W2 W3 W4">ኖሬ፡</rdg>
+                  </app>ሰላም፡ ለኪ፡<app>
+                    <rdg wit="W3 W4 W1">ዓፀድ፡</rdg>
+                    <rdg wit="W2">ጽጽልት፡</rdg>
+                  </app><app>
+                    <rdg wit="W1">ዘእሰከደሬ፡</rdg>
+                    <rdg wit="W2"/>
+                    <rdg wit="W3">ዘኢስኪድራ፡</rdg>
+                    <rdg wit="W4">ዘእስከደሬ፡ ለሶኪ፡ ስርጉት፡ በወሪውሬ፡ ሰለኪ፡ ፅድልት፡</rdg>
+                  </app><app>
+                    <rdg wit="W2 W4 W1"/>
+                    <rdg wit="W3">ሰላም፡ ለኪ፡</rdg>
+                  </app><app>
+                    <rdg wit="W2 W4 W1"/>
+                    <rdg wit="W3">እስመ፡ ወልድኪ፡</rdg>
+                  </app><app>
+                    <rdg wit="W2 W4 W1"/>
+                    <rdg wit="W3">ፈጣሬ፡</rdg>
+                  </app><app>
+                    <rdg wit="W2 W4 W1"/>
+                    <rdg wit="W3">ሰላ፡</rdg>
+                  </app><app>
+                    <rdg wit="W2 W4 W1"/>
+                    <rdg wit="W3">ለኪ፡ ጽድልተ፡</rdg>
+                  </app><app>
+                    <rdg wit="W2 W1"/>
+                    <rdg wit="W3 W4">ንጸሬ፡</rdg>
+                  </app><app>
+                    <rdg wit="W3 W1">ሰላም፡</rdg>
+                    <rdg wit="W2"/>
+                    <rdg wit="W4">ሰላኪ፡</rdg>
+                  </app><app>
+                    <rdg wit="W1">ለኪ፡ ጽድልተ፡</rdg>
+                    <rdg wit="W2 W3 W4"/>
+                  </app><app>
+                    <rdg wit="W1">ንፂሬ፡</rdg>
+                    <rdg wit="W2 W3 W4"/>
+                  </app><app>
+                    <rdg wit="W3 W1">ሥርጉት፡</rdg>
+                    <rdg wit="W2 W4"/>
+                  </app><app>
+                    <rdg wit="W2 W1">በወራውሬ፡</rdg>
+                    <rdg wit="W3">በወራውረ፡ ሰ፡</rdg>
+                    <rdg wit="W4"/>
+                  </app><app>
+                    <rdg wit="W2 W1">ሰላም፡</rdg>
+                    <rdg wit="W3 W4"/>
+                  </app><app>
+                    <rdg wit="W2 W1">ለኪ፡</rdg>
+                    <rdg wit="W3 W4"/>
+                  </app><app>
+                    <rdg wit="W1">በቅረ፡</rdg>
+                    <rdg wit="W2">ወጽዕድውት፡ ዘምስለ፡ ንዳሬ፡</rdg>
+                    <rdg wit="W3 W4"/>
+                  </app><app>
+                    <rdg wit="W3 W4 W1"/>
+                    <rdg wit="W2">ሳላም፡ ለኪ።</rdg>
+                  </app><app>
+                    <rdg wit="W1"/>
+                    <rdg wit="W2 W3 W4">በትረ፡</rdg>
+                  </app><app>
+                    <rdg wit="W2 W3 W1">አሮን፡</rdg>
+                    <rdg wit="W4">እሮን፡</rdg>
+                  </app><app>
+                    <rdg wit="W4 W1">ጸዋሪተ፡</rdg>
+                    <rdg wit="W2">ጸዋፊተ፡</rdg>
+                    <rdg wit="W3">ጸዋሪተ፡ፍሬ፡ ሰ፡</rdg>
+                  </app><app>
+                    <rdg wit="W2 W4 W1">ፍሬ፡</rdg>
+                    <rdg wit="W3"/>
+                  </app><app>
+                    <rdg wit="W1">ሳላም፡ ለኪ።</rdg>
+                    <rdg wit="W2 W3 W4"/>
+                  </app><app>
+                    <rdg wit="W2 W3 W1"/>
+                    <rdg wit="W4">ሶላኪ፡ እንተ፡</rdg>
+                  </app><app>
+                    <rdg wit="W3 W4 W1"/>
+                    <rdg wit="W2">ሰላም፡</rdg>
+                  </app><app>
+                    <rdg wit="W3 W4 W1"/>
+                    <rdg wit="W2">ኪ፡</rdg>
+                  </app><app>
+                    <rdg wit="W2 W1">አንተ፡</rdg>
+                    <rdg wit="W3 W4"/>
+                  </app><app>
+                    <rdg wit="W4 W1">ወለድኪ፡</rdg>
+                    <rdg wit="W2">ወለጽኪ፡ ፈብሬ፡</rdg>
+                    <rdg wit="W3"/>
+                  </app><app>
+                    <rdg wit="W4 W1">ፈጣሬ፡</rdg>
+                    <rdg wit="W2 W3"/>
+                  </app><app>
+                    <rdg wit="W1">ሰላም፡</rdg>
+                    <rdg wit="W2 W3 W4"/>
+                  </app><app>
+                    <rdg wit="W1"/>
+                    <rdg wit="W2 W3 W4">ዘምስለ፡</rdg>
+                  </app><app>
+                    <rdg wit="W2 W3 W1"/>
+                    <rdg wit="W4">ዝማረ፡ ንስጣድ፡</rdg>
+                  </app><app>
+                    <rdg wit="W4 W1"/>
+                    <rdg wit="W2 W3">ዝማሬ፡</rdg>
+                  </app><app>
+                    <rdg wit="W2 W3 W1"/>
+                    <rdg wit="W4">ለኪ፡</rdg>
+                  </app><app>
+                    <rdg wit="W4 W1"/>
+                    <rdg wit="W2">እስግድ፡</rdg>
+                    <rdg wit="W3">ንሰግድ፡</rdg>
+                  </app><app>
+                    <rdg wit="W2 W1">ለኪ።</rdg>
+                    <rdg wit="W3"/>
+                    <rdg wit="W4">ለስይትን በብ፡</rdg>
+                  </app><app>
+                    <rdg wit="W1">ዘምስለ፡ ዝማሬ፡</rdg>
+                    <rdg wit="W2 W3 W4"/>
+                  </app><app>
+                    <rdg wit="W3 W4 W1"/>
+                    <rdg wit="W2">መጽሐፈ፡</rdg>
+                  </app><app>
+                    <rdg wit="W1">ንሰማድ፡</rdg>
+                    <rdg wit="W2">ተአምናኪ፡</rdg>
+                    <rdg wit="W3 W4"/>
+                  </app><app>
+                    <rdg wit="W3 W1">ለኪ፡ ሶበ፡</rdg>
+                    <rdg wit="W2 W4"/>
+                  </app><app>
+                    <rdg wit="W2 W3 W1">ይትነበብ፡</rdg>
+                    <rdg wit="W4"/>
+                  </app><app>
+                    <rdg wit="W3 W4 W1">መጽሐፈ፡</rdg>
+                    <rdg wit="W2"/>
+                  </app><app>
+                    <rdg wit="W3 W4 W1"/>
+                    <rdg wit="W2">ለለወትረ፡</rdg>
+                  </app><app>
+                    <rdg wit="W1">ተአምርኪ።</rdg>
+                    <rdg wit="W2"/>
+                    <rdg wit="W3 W4">ተአምርኪ፡</rdg>
+                  </app><app>
+                    <rdg wit="W3 W4 W1">በሰላም፡</rdg>
+                    <rdg wit="W2"/>
+                  </app><app>
+                    <rdg wit="W1"/>
+                    <rdg wit="W2 W3 W4">ኪያነ፡</rdg>
+                  </app><app>
+                    <rdg wit="W1"/>
+                    <rdg wit="W2">ባርኪ፡ ሰላመ፡ ባርኪ፡</rdg>
+                    <rdg wit="W3 W4">ባርኪ።</rdg>
+                  </app><app>
+                    <rdg wit="W2 W1">ኪያነ፡</rdg>
+                    <rdg wit="W3"/>
+                    <rdg wit="W4">ወኢትርስእኒ፡ ለገብርኪ፡ ኃጥእ፡ ወአባሴ፡ ዘወልደ፡ ማርያሞ፡ ማር፡ አቡነ፡ ትክለ፡ ሃይማሮት፡ ወልደሙ፡
+                      ለአቡን፡ ዘገብርኤል፡ ለዓለመ፡ ንለም፡ አሜን፡ ወአሜን፡</rdg>
+                  </app><app>
+                    <rdg wit="W1">በርኪ። ወላዲተ፡ አምላክ፡ ማርያም፡ እንበለ፡ ዕብሳብ፡ ወሩካቤ፡ በይነ፡ ዘዓቀሂ፡ ብኩለኪ፡ ንስቲተ፡
+                      ቃለ፡ ይባቤ፡ ፈትዊ፡ እሙ፡ በረከተ፡ አፉኪ፡ ሙሐዘ፡ ከርቤ። ለነዳይ፡ ብእሲ፡ ወለዘረከበ፡ ምንደቤ፡ ኅብስተከ፡ ፈትት፡
+                      ኢሳይያስ፡ ይቤ።</rdg>
+                    <rdg wit="W2">ኅቡረ።</rdg>
+                    <rdg wit="W3 W4"/>
+                  </app>
+                </ab>
+              </div>
+            </div>
+          </egXML>
+          <p>In the above text there are only <gi>rdg</gi> elements. I randomly changed one in each
+            to a <gi>lem</gi> for this demo. The <ref target="edition">encoding of the critical
+              text</ref> is described here. What is important to know is that this is only a
+            practical starting point, you will want to change this and add much more precise
+            encoding in your edition.</p>
+          <p>If the manuscripts had been committed already with the transcription, one could have
+            used the collatex instance of Beta Masaheft to run this step. While this can be a quick
+            way to look at the results of the process, and performs the clean up of the text for you
+              <ref
+              target="https://github.com/BetaMasaheft/BetMas/blob/master/db/apps/BetMas/modules/collatex.xqm"
+              >with this script</ref> the output is not in XML, so for this example we will use the
+            demo online instead. Collatex can do much more and much better than I used it for in
+            this demo!</p>
+          <div type="level3">
+            <head>Benefits to you</head>
+            <p>Collatex does the boring job of comparing the texts for you. You will still have to
+              do the boring job of checking the result of that job. Collatex will present some TEI,
+              how much of it you will have to redo and improve varies of course. You may want to
+              simply skip this, do your collation manually and get to know your text slowly. It is
+              advisable that you select carefully the portions of text to compare and take care of
+              the encoding to enrich it as adequate.</p>
+          </div>
+          <div type="level3">
+            <head>Benefits to the community</head>
+            <p>Once you have a text for the edition you could contribute that the community even if
+              you do not print it as a book. Just make a PR from your branch and this will be peer
+              reviewed.</p>
+          </div>
+        </div>
+        <div type="level2">
+          <head>Analysis of the errors and construction of the Stemma</head>
+          <p>I skipped this step, because there is no real help which can be offered here. There are
+            books about supported stemmatology with digital tools, but I would not be able to offer
+            here a concrete demo. The analysis of the variants and their encoding and evaluation
+            towards a stemma which may guide the editorial choices of the text can be encoded, for
+            example changing a <gi>rdg</gi> into a <gi>lem</gi> or adding <gi>note</gi> elements,
+              <gi>choice</gi>, etc. </p>
+        </div>
+        <div type="level2">
+          <head>Encoding of the Critical Edition</head>
+          <p>Guidelines on how to encode the edition are provided already in this Guidelines: See
+              <ref target="edition"/> and <ref target="edition-images"/>. Do not forget to correctly
+            list the <gi>witnesses</gi>.</p>
+          <div type="level3">
+            <head>Benefits to you</head>
+            <p>Your encoded edition will not have yet a bookish look and feel, although you can use
+              one of many veiwers, but it is an edition, recording all the relevant phenomena in a
+              univocal and standardized way, naming each feature and describing it with attributes
+              as necessary.</p>
+          </div>
+          <div type="level3">
+            <head>Benefits to the community</head>
+            <p>Even if the text is only presented online, if you have made a PR and this was merged
+              your text is edited and available especially as TEI data, it can be used by others not
+              simply to read it but to reuse its encoded features.</p>
+          </div>
+        </div>
+        <div type="level2">
+          <head>Print</head>
+          <p>In the <ref target="https://github.com/PietroLiuzzo/makepdf/tree/editionTest">GitHub
+              Make PDF repository (Pietro's personal Fork), branch editionTest</ref> I have had a go
+            at a simple package to allow producing also a PDF output from this steps, which would
+            include the full potential of the research environment collaborative work, that is, you
+            do only the edition, all the rest is done, which may not be always the case but is more
+            and more so, since so many people contribute to the common good.</p>
+          <p>If you open that package in Oxygen, open driver.xml and click play, the package will
+            use BM to fetch resources from the research environemnt and print your book. But wait,
+            you do not need to do that either, because output.pdf is already the result of running
+            this, simply <ref
+              target="https://github.com/PietroLiuzzo/makepdf/blob/editionTest/output.pdf">open the
+              PDF</ref>.</p>
+          <p>The package is easily customizable with the <ref
+              target="https://github.com/PietroLiuzzo/makepdf/blob/editionTest/settings.xml"
+              >settings</ref> file not only for the layout features but also for the parts, their
+            order, the contents and is all in TEI and XQuery, the standard languages of data for the
+            humanities. The main functionalities are <ref
+              target="https://github.com/BetaMasaheft/makepdf">documented here</ref> and the
+            typesetting is done in Oxygen XML Editor usig XSL-FO and Apache FOP.</p>
+          <p>To use it, please fork (not branch) this branch of the repository to your own
+            account.</p>
+          <div type="level3">
+            <head>Benefits to you</head>
+            <p>Relying on your work file, which is included locally, so it can be on your branch
+              only and not yet public, the script will use the data stored in BM as XML and the DTS
+              API to fetch information to compile your book. For example, <list>
+                <item>it will list all known witnesses and provide a print out of their
+                  dating</item>
+                <item>it will collect bibliography and print it into a specific section using the
+                  HLZ styles and the EthioStudies library pulling citations from the edition, the
+                  driver file and the related manuscripts.</item>
+                <item>it will organize the text and its apparata (only one in the example)</item>
+                <item>it will collect all named entities and print the indexes (also selected in settings).</item>
+                <item>notice that some examples are provided of how to use the existing information
+                  to attribute the contents reused from the Research Environment.</item>
+              </list>
+            </p>
+            <p>Of course, as you change your data, either the manuscripts or the edition running the
+              transformation will update the output.</p>
+            <p><emph>All </emph>can be customized, entirely changed, adapted, features can be added, etc. You can
+              read the script or ask somebody who can read it for you, is one file only. For example, if a translation is provided it can be put in the facing page and kept aligned with its own apparata.</p>
+            <p>Fine touches can be done in the XSL-FO, as this is also simply an XML file.</p>
+          </div>
+          <div type="level3">
+            <head>Benefits to the community</head>
+           <p>Any one could follow the same steps or some of them here to reproduce your work. Anyone will be able to find the exact point and layer of the information which can be criticized (or not), if they wanted to.</p> <p>Let us imagine that the same package is used by two scholars for two editions of texts which happen to share a witness. The description of the witness may be exactely the same in both. The authority files inequivocable, the data directly indexed and retrievable, the consistency ensured across different editions. Sure, there is much more that can be done...</p>
+          </div>
+        </div>
+        <div type="level2">
+          <head>Morphological Annotation</head>
+          <p>Once your text is established you may wish to record your interpretation of the morphology and eventually the syntax. Here <ref target="https://github.com/BetaMasaheft/alpheiosannotations"/> you can find a video tutorial on how to use the Alpehios Annotation tool for this purpose. You can copy paste in the TEI of the edition into the tool, or fetch the text from the DTS API if you had it merged. <ref target="transliteration-principles">This page</ref> will guide you in the transliteration and list tools which can be used for that preliminary step.</p>
+          <div type="level3">
+            <head>Benefits to you</head>
+            <p>By sharing your reading of the text and encoding it, you will provide more evidence of your interpretation and perhaps of some of the choices you made.</p>
+          </div>
+          <div type="level3">
+            <head>Benefits to the community</head>
+            <p>The annotation will directly enrich the Online Lexicon Linguae Aethiopicae and the ability to determin a morphological interpretation of the Morphological parser, both of which are available for any user of any page on the web.</p>
+          </div>
+        </div>
+        <div type="level2">
+          <head>Deposit Your Dataset</head>
+          <p>Working with the data in the research environment will provide you with<ref target="https://betamasaheft.eu/pid.html"> stable citable references</ref> for each committed and merged version of your files. But what about the entire group of resources you have used? To make the set really reproducible and your collected resources citable as a set, e.g. with your TEI edition, the files of the manuscript description has you have used them in the final version and eventually the script, you may deposit them in Zenodo or another similar repository.</p>
+          <div type="level3">
+            <head>Benefits to you</head>
+            <p>Your dataset, as a group of resources will be citable. You may also submit a data paper to describe your dataset.</p>
+          </div>
+        </div>
+        <div type="level2">
+          <head>Retrodigitizing</head>
+          <p>You have done the work in all another way. Old school, as if none of this existed. But you want to contribute it to the community. You will need patience, a lot of it. While getting an output from a semantically encoded set of files is possible, the other way around is tedious and error prone. Imagine your apparatus saying: "here is a link, here is bold, here is this font", and converting that information, however precisely disambiguated from the visual point of view, to something like "here this particular witness has an error".</p>
+          <div type="level3">
+            <head>Benefits to you</head>
+            <p>You will be doing the job a second time, it will be tedious. You will wish you had worked in another way from the beginning. By the way, nobody can actually help you much, but hey, your mess, you tidy it up...</p>
+          </div>
+          <div type="level3">
+            <head>Benefits to the community</head>
+            <p>Everyone will be glad to have one more digital resource so that the next edition can be based on that.</p>
+          </div>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>
