@@ -515,7 +515,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <div type="level2">
           <head>Encoding of the Critical Edition</head>
           <p>Guidelines on how to encode the edition are provided already in this Guidelines: See
-              <ref target="edition"/> and <ref target="edition-images"/>. Do not forget to correctly
+              <ref target="edition">edition</ref> and <ref target="edition-images">images for the edition</ref>. Do not forget to correctly
             list the <gi>witnesses</gi>.</p>
           <div type="level3">
             <head>Benefits to you</head>
@@ -583,7 +583,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </div>
         <div type="level2">
           <head>Morphological Annotation</head>
-          <p>Once your text is established you may wish to record your interpretation of the morphology and eventually the syntax. Here <ref target="https://github.com/BetaMasaheft/alpheiosannotations"/> you can find a video tutorial on how to use the Alpehios Annotation tool for this purpose. You can copy paste in the TEI of the edition into the tool, or fetch the text from the DTS API if you had it merged. <ref target="transliteration-principles">This page</ref> will guide you in the transliteration and list tools which can be used for that preliminary step.</p>
+          <p>Once your text is established you may wish to record your interpretation of the morphology and eventually the syntax. <ref target="https://github.com/BetaMasaheft/alpheiosannotations">Here </ref> you can find a video tutorial on how to use the Alpehios Annotation tool for this purpose. You can copy paste in the TEI of the edition into the tool, or fetch the text from the DTS API if you had it merged. <ref target="transliteration-principles">This page</ref> will guide you in the transliteration and list tools which can be used for that preliminary step.</p>
           <div type="level3">
             <head>Benefits to you</head>
             <p>By sharing your reading of the text and encoding it, you will provide more evidence of your interpretation and perhaps of some of the choices you made.</p>
