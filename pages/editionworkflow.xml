@@ -27,40 +27,43 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <div type="level1">
         <head>A Digital-first Collaborative Critical Edition</head>
 
-        <p>There are many ways to do a digital first edition which can then be the basis for a paper
+        <p>There are many ways to do a digital-first edition which can then be the basis for a paper
           based product. Some tools are listed <ref target="https://doi.org/10.2307/j.ctvrnfr3q.14"
             >here</ref>, and can be found looking at the <ref target="trainingmaterials.xml"
             >training materials</ref> many more exist based on XML, LaTeX, etc. There is a ton of
-          examples and literature. each with its requirements and learning curve. Needless to say
-          the best one is the one which works best for you and your needs. This page describes one
-          possibility which benefits at several stages from the commonly edited data in Beta
-          maṣāḥǝft (BM) and contributes in several citable and versioned ways to it. It has never
-          been used for a real project although it has been possible already for some years. By
-          going through the hypothetical phases of the work involved for a critical edition of a
-          text we link to those resources which are available and which do not need to be used in
-          the exact ways described. The page here will also try to clarify what can and what cannot
-          be supported in such a process. The key idea is that what works for you does not
-          necessarily mean it is the best thing to do for the future and for others, and taking a
-          few steps towards a deeply collaborative way of working benefits you, the quality of your
-          work and the direct impact of that on others, so, it is definitely worth it. </p>
-        <p>The digital-first workflow is based on the principle of separation of concerns, which is
-          typical of the word of coding and programming. This methodological approach involves the
-          splitting of as many different levels of concern as it is possible and useful. Instead of
-          trying to do everything into one tool and with one method, each separate part of the work
-          is done with a specifically designed method. The most common and basic separation of
-          concerns is the separation between the concern about the semantic annotation of the text
-          and that of its rendering on the printed page. Instead of saying <q>I make a footnote to
-            indicate the list of variants for this passage, and I put it here because it looks
-            nice</q>. we turn it around and thing <q>I mark the variants as variants.</q> and then
-          in a separate step <q>I want the variants to be listed in footnotes.</q> and in yet
-          another separated step <q>I want the footnotes to be arranged in this way because it looks
-            nice.</q> Separating the steps also allows for much more control and consequently
-          consistence. Mastering this concept is however not easy, because it requires a
-          postponement of the result and satisfaction, thus a higher perceived risk. This page will
-          try to persuade with evidence at each step of the falsity of this widely spread perception
-          and serve as a reassurance that it is indeed the opposite.</p>
-        <p>With this in mind, within Beta maṣāḥǝft Research Environment there are many things one
-          can use, they will be linked in the different sections.</p>
+          examples and literature. Each workflow comes with its requirements and learning curve.
+          Needless to say the best one is the one which works best for you and your needs. This page
+          describes one possibility which benefits at several stages from the commonly edited data
+          in Beta maṣāḥǝft (BM) and contributes in several citable and versioned ways to it. It has
+          never been used for a real project although it has been possible already for some years.
+          By going through the hypothetical phases of the work involved for a critical edition of a
+          text we link to those resources and pages of documentation which are available. These do
+          not need to be used in the exact ways described. The page here will also try to clarify
+          what can and what cannot be supported in such a process. The key idea is that what works
+          for you and gets the result done tidily for you, does not necessarily mean it is the best
+          thing to do for the future and for others, neither the smartest or more adequate to
+          state-of-the-art methodology. Taking a few steps towards a deeply collaborative way of
+          working benefits you, the quality of your work and the direct impact of that on others,
+          so, it is definitely worth it. </p>
+        <p>The digital-first workflow presented here is based on the principle of separation of
+          concerns, which is typical of the word of coding and programming. This methodological
+          approach involves the splitting of as many different levels of concern as it is possible
+          and useful. Instead of trying to do everything into one tool and with one method, each
+          separate part of the work is done with a specifically designed method. The most common and
+          basic separation of concerns is the separation between the concern about the semantic
+          annotation of the text and that of its rendering on the printed page. Instead of saying
+            <q>I make a footnote to indicate the list of variants for this passage, and I put it
+            here because it looks nice</q>. we turn it around and think <q>I mark the variants as
+            variants.</q> and then in a separate step <q>I want the variants to be listed in
+            footnotes.</q> and in yet another independently-documented step <q>I want the footnotes
+            to be arranged in this way because it looks nice.</q> Separating the steps also allows
+          for much more control and consequently consistence. Mastering this concept is however not
+          easy, because it requires a postponement of satisfaction, and thus a higher perceived
+          risk. This page will try to persuade with evidence at each step of the falsity of this
+          widely spread perception and serve as a reassurance that it is indeed the opposite which
+          is true.</p>
+        <p>With this in mind, within the Beta maṣāḥǝft Research Environment there are many things
+          one can use, they will be linked in the different sections.</p>
         <p>This workflow is made possible by some set up and implementation choices made by the
           project, namely the TEI XML based data, the <ref
             target="https://distributed-text-services.github.io/specifications/">DTS API</ref> and
@@ -533,12 +536,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </div>
         <div type="level2">
           <head>Print</head>
-          <p>In the <ref target="https://github.com/PietroLiuzzo/makepdf/tree/editionTest">GitHub
-              Make PDF repository (Pietro's personal Fork), branch editionTest</ref> I have had a go
-            at a simple package to allow producing also a PDF output from this steps, which would
-            include the full potential of the research environment collaborative work, that is, you
-            do only the edition, all the rest is done, which may not be always the case but is more
-            and more so, since so many people contribute to the common good.</p>
+          <p>Viewers will often expect that everything you want is contained in your input, which is
+            in many cases a false expectation. The expectation should be that each part of your
+            input will be tying up in a specific way a series of other resources of different types.
+            You can do the job for the viewer or software of your choice and tidily pack everything
+            explicitly for it, and have the certainties coming out of having layed out everything
+            explicitly (or at least think you did so) or you can embrace the sources and play with
+            that. In the <ref target="https://github.com/PietroLiuzzo/makepdf/tree/editionTest"
+              >GitHub Make PDF repository (Pietro's personal Fork), branch editionTest</ref> I have
+            had a go at a simple package to allow producing also a PDF output from this steps, which
+            would include the full potential of the research environment collaborative work, that
+            is, you do only the edition, all the rest is done, which may not be always the case but
+            is more and more so, since so many people contribute to the common good.</p>
           <p>If you open that package in Oxygen, open driver.xml and click play, the package will
             use BM to fetch resources from the research environemnt and print your book. But wait,
             you do not need to do that either, because output.pdf is already the result of running
