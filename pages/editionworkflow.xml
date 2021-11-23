@@ -632,6 +632,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           </div>
         </div>
         <div type="level2">
+          <head>Copyright of remixed content</head>
+          <p>As every single page of our website states, as well as each file in the Beta Masaheft dataset, the copyright of the data is of the Akademie der Wissenschaften in Hamburg, Hiob-Ludolf-Zentrum für Äthiopistik. Sharing and remixing are permitted under terms of the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Therefore books created remixing and reusing this data (catalogues, editions, etc.) should have the same copyright, or a formulation equally or more permissive adequately negotiated with the publisher.</p>
+        </div>
+        <div type="level2">
           <head>Retrodigitizing</head>
           <p>You have done the work in all another way. Old school, as if none of this existed. But you want to contribute it to the community. You will need patience, a lot of it. While getting an output from a semantically encoded set of files is possible, the other way around is tedious and error prone. Imagine your apparatus saying: "here is a link, here is bold, here is this font", and converting that information, however precisely disambiguated from the visual point of view, to something like "here this particular witness has an error".</p>
           <div type="level3">
