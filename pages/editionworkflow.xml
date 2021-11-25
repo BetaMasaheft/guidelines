@@ -27,6 +27,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <div type="level1">
         <head>A Digital-first Collaborative Critical Edition</head>
 
+        <p>This is a strategic page, very similar to the one about the workflow for
+        <ref target="editionworkflow">a digital-first collaborative catalogue of manuscripts</ref>. It is not meant to be 
+        comprehensive or tutorial-like, but to give you the right pointers in an organized fashion.</p>
         <p>There are many ways to do a digital-first edition which can then be the basis for a paper
           based product. Some tools are listed <ref target="https://doi.org/10.2307/j.ctvrnfr3q.14"
             >here</ref>, and can be found looking at the <ref target="trainingmaterials.xml"
