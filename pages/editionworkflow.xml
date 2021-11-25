@@ -650,7 +650,7 @@ This example workflow yields the following distinct products, each of which is d
 <list>
     <item>publication of the source data NC until publication CC-BY-SA-NC (C) Akademie+HLCEES +  Open Access and versioned in GitHub</item>
     <item>publication of the source data after publication CC-BY-SA (C) Akademie+HLCEES + Open Access and versioned in GitHub</item>
-<item>HTML versions of the data throughout CC-BY-SA-NC (C) Akademie+HLCEES + Openly available</item>
+<item>HTML versions of the data throughout CC-BY-SA-NC (C) Akademie+HLCEES + Openly available, with indepently generated Permanent Identifiers for reference and stable URIs for data relations.</item>
 <item>Several additional data formats remixes with CC-BY-SA-NC (C) Akademie+HLCEES + Openly available</item>
 <item>publication of the dataset for the publication  CC-BY-SA (C) Akademie+HLCEES + Open Access for the dataset with DOI</item>
 <item>the print publication  CC-BY-SA (C) Editor</item>
