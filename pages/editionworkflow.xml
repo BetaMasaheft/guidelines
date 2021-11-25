@@ -634,6 +634,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <div type="level2">
           <head>Copyright of remixed content</head>
           <p>As every single page of our website states, as well as each file in the Beta Masaheft dataset, the copyright of the data is of the Akademie der Wissenschaften in Hamburg, Hiob-Ludolf-Zentrum für Äthiopistik. Sharing and remixing are permitted under terms of the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Therefore books created remixing and reusing this data (catalogues, editions, etc.) should have the same copyright, or a formulation equally or more permissive adequately negotiated with the publisher.</p>
+          <p>Publication products generated from BM data must respect this copyright and
+            should contain appropriate attribution to all contributors. The above PDF producing script does some of this, not all that can be done!
+Once all is ok, the book/article is ready the licensing of the data, with the agreement of the above copyright owners,
+can be upgraded for commercial use as well, so that the publisher can print and sell (CC-BY-SA-NC —> CC-BY-SA).
+This is possible and positive, as it allows even more reuse.
+A Deposit of the source data, as descrbed above can be made and a DOI of the data deposit added to the book content.
+Copyright of the book/article, product of the remix of data, can be silently or formally passed to the editor.
+The statement in the book, in respect to the original copyright should state (C) editor name… CC-BY-SA, or an equally allowing licence
+as the data on which it is based requires. Editors can commercialise it and sell the book no problem respecting this copyright.
+As soon as possible and following agreement with the editor the data can additionally be made Open Access.
+The DOI of the open access book is added to the deposit of the data with the proper relation so that the two DOI know about each other.
+
+This example workflow yields the following distinct products, each of which is distinctly and separately citable, adding to each other over time:
+<list>
+    <item>publication of the source data NC until publication CC-BY-SA-NC (C) Akademie+HLCEES +  Open Access and versioned in GitHub</item>
+    <item>publication of the source data after publication CC-BY-SA (C) Akademie+HLCEES + Open Access and versioned in GitHub</item>
+<item>HTML versions of the data throughout CC-BY-SA-NC (C) Akademie+HLCEES + Openly available</item>
+<item>Several additional data formats remixes with CC-BY-SA-NC (C) Akademie+HLCEES + Openly available</item>
+<item>publication of the dataset for the publication  CC-BY-SA (C) Akademie+HLCEES + Open Access for the dataset with DOI</item>
+<item>the print publication  CC-BY-SA (C) Editor</item>
+<item>the digital publication  CC-BY-SA (C) Editor + Open Access for book with DOI.</item>
+<item>An additional versions of the DOI of the deposit of the data, once this is updated with relation to the DOI of the book.</item>
+</list>
+This flow is, to the knowledge of the author of this page, consistent licencing-wise, protects the contents from commercialisation until necessary, allows sales, has no time impacts, no costs impacts, is ready for open access... is quite simple... enforces collaboration, so, is a win win win and win again. with no side effects!
+</p>
         </div>
         <div type="level2">
           <head>Retrodigitizing</head>
