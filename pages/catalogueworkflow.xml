@@ -20,6 +20,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <revisionDesc>
 
       <change who="PL" when="2021-11-18">first version based on Dorothea, Denis, Mersha's works</change>
+      <change who="DR" when="2021-12-06">corrected typos, reformulated slightly</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -31,117 +32,126 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   comprehensive or tutorial-like, but to give you the right pointers in an organized fashion.</p>
         <p>There are many ways to do a digital-first catalogue or handlist which can then be the basis for a paper
           based product. Some tools are listed <ref target="https://doi.org/10.2307/j.ctvrnfr3q.14"
-            >here</ref>, and can be found looking at the <ref target="trainingmaterials.xml"
-            >training materials</ref> many more exist based on XML, LaTeX, etc.
-            One example is <bibl>Nosnitsin and Reule 2021</bibl>, entirely based on data edited in the online research environment.
+            >here</ref>, and can be found looking at the <ref target="trainingmaterials"
+            >training materials</ref>. Many more exist based on XML, LaTeX, etc.
+            One example is <bibl>Nosnitsin and Reule 2021</bibl>, entirely based on data edited in the online research environment
+          Beta maṣāḥǝft.</p>
 
-           Each workflow comes with its requirements and learning curve.
-          Needless to say the best one is the one which works best for you and your needs. This page
+           <p>Each workflow comes with its requirements and learning curve.
+          The best one is the one which works best for you and your needs. This page
           describes one possibility which benefits at several stages from the commonly edited data
-          in Beta maṣāḥǝft (BM) and contributes in several citable and version-aware ways to it. It
-          has never been used for a real project although it has been possible already for some
-          years. By going through the hypothetical phases of the work involved for a catalogue of mansucripts
-           we link to those resources and pages of documentation which are
-          available. These do not need to be useded in the exact ways described. The page here will
-          also try to clarify what can and what cannot be supported in such a process. The key idea
-          is that what works for you and gets the result done tidily for you, does not necessarily
-          mean it is the best thing to do for the future and for others, neither the smartest or
-          more adequate to  state-of-the-art methodology. Taking a few steps towards a deeply
+          in Beta maṣāḥǝft (BM) and contributes to it in several citable and version-aware ways. It
+          hasn't yet been used for a real project.</p>
+        
+        <p>In this page, we will
+         <list> <item>go through the hypothetical phases of the work involved for preparing a catalogue of manuscripts,</item>
+          <item>link to the available resources and pages of documentation (these do not need to be used  in the exact ways described),</item>
+          <item>try to clarify what can and what cannot be supported in such a process.</item></list>
+           
+           Taking a few steps towards a deeply
           collaborative way of working benefits you, the quality of your work and the direct impact
-          of that on others, so, it is definitely worth it. </p>
+          of this work on others.</p>
+        
         <p>The digital-first workflow presented here is based on the principle of separation of
-          concerns, which is typical of the word of coding and programming. This methodological
+          concerns, which is typical of the world of coding and programming. This methodological
           approach involves the splitting of as many different levels of concern as it is possible
-          and useful. Instead of trying to do everything into one tool and with one method, each
-          separate part of the work is done with a specifically designed method. The most common and
+          and useful. Instead of trying to do everything with one tool and one method, each
+          separate part of the work is done with a specifically designed method.</p>
+        
+        <p>The most common and
           basic separation of concerns is the separation between the concern about the semantic
-          annotation of the text and that of its rendering on the printed page. Instead of saying
-            <q>I make a footnote to indicate the list of variants for this passage, and I put it
-            here because it looks nice</q>. we turn it around and think <q>I mark the variants as
-            variants.</q> and then in a separate step <q>I want the variants to be listed in
-            footnotes.</q> and in yet another independently-documented step <q>I want the footnotes
-            to be arranged in this way because it looks nice.</q> Separating the steps also allows
-          for much more control and consequently consistence. Mastering this concept is however not
+          annotation of the text and that of its rendering on the printed page. Instead of saying,
+            <q>"I make a footnote to indicate the list of variants for this passage, and I put it
+            here because it looks nice"</q>, we turn it around and think first <q>"I mark the variants as
+            variants."</q>, and then in a separate step, <q>"I want the variants to be listed in
+            footnotes."</q>, and in yet another independently-documented step <q>"I want the footnotes
+            to be arranged in this way because it looks nice."</q></p>
+        
+        <p>Separating the steps also allows
+          for much more control and consequently consistence. Mastering this concept is not
           easy, because it requires a postponement of satisfaction, and thus a higher perceived
-          risk. This page will try to persuade with evidence at each step of the falsity of this
-          widely spread perception and serve as a reassurance that it is indeed the opposite which
+          risk. This page will try to demonstrate the falsity of this
+          widely spread perception with evidence at each step, and serve as a reassurance that it is indeed the opposite which
           is true.</p>
-        <p>With this in mind, within the Beta maṣāḥǝft Research Environment there are many things
+        
+   <!--     <p>With this in mind, within the Beta maṣāḥǝft Research Environment there are many things
           one can use, they will be linked in the different sections.</p>
         <p>This workflow is made possible by some set up and implementation choices made by the
           project, namely the TEI XML based data, the <ref
             target="https://distributed-text-services.github.io/specifications/">DTS API</ref> and
-          the GitHub based collaborative workflow.</p>
+          the GitHub based collaborative workflow.</p>-->
+        
         <div type="level2">
-          <head>Requirements Identification</head>
+          <head>Identification of requirements</head>
           <p>To start with the right foot, one should be quite clear from the outset about the
-            desired final output. In most cases if working at a catalogue this will involve
+            desired final output. In most cases, this will involve
             the requirements of the editors of the article or book and the structure of the entry for one manuscript.
-            Typically none of these requirements should prevent any
-            of the following steps, that is to say, there is no such excuse as <quote>the editor
-              does not let me</quote>.</p>
+            Typically, none of these requirements should prevent any
+            of the following steps, that is to say, good solutions can be found to the excuse <quote>"the editor
+              does not let me"</quote>.</p>
           <p>My suggestion: make a list or one, possibly complete, example of the input (XML) and output (your entry in the catalogue).
-            If you did not do this before submitting your project
-            and getting your funding, I suggest it is the first thing you do once you have been
-            approved.</p>
+            This would ideally before the start of the project or as early in the project as possible.</p>
           <div type="level3">
             <head>Benefits to you</head>
-            <p>If you know what you are doing from the beginning, where it will land, everything
-              will be easier. e.g. if the translation goes in a different book, then you will avoid
-              wasting time with the alignment on facing pages, etc.</p>
+            <p>If you know what your desired finished product is from the beginning, everything
+              will be easier. For example, if you already know for which entities you want to include indices, you will be 
+              able mark up all concerned terms from the beginning without having to search for them or manually compile the indices
+              at the end.</p>
           </div>
         </div>
         <div type="level2">
           <head>Start from the output...</head>
-          <p>While in the other example for a critical edition we start from the data, here,
-            let us start from the product setup.</p>
           <p>In the <ref target="https://github.com/BetaMasaheft/makepdf/tree/master"
               >GitHub Make PDF repository (Beta Masaheft)</ref> you can find all the details of a customizable
-               package to allow you producing a PDF output from the data. It is the same used in the Catalogue of the manuscripts of Dayr as Suryan.
-               It will include the full potential of the research environment collaborative work, that
+               package to allow you producing a PDF output from XML records. It is the same used in the Catalogue of the manuscripts of Dayr as Suryan.
+               <!--It will include the full potential of the research environment collaborative work, that
             is, you do only the cataloguing, all the rest is done, which may not be always the case but
-            is more and more so, since so many people contribute to the common good.</p>
-          <p>If you open that package in Oxygen, open driver.xml and click play, the package will
-            use BM to fetch resources from the research environment and print your book.</p>
-          <p>The package is easily customizable with the <ref
+            is more and more so, since so many people contribute to the common good.-->
+          <!--I think I understand the feeling, but this formulation is quite vague and unclear--></p>
+         <p>The package is easily customizable with the <ref
               target="https://github.com/BetaMasaheft/makepdf/blob/master/settings.xml"
-              >settings</ref> file not only for the layout features but also for the parts, their
-            order, the contents and is all in TEI and XQuery, the standard languages of data for the
-            humanities. The main functionalities are <ref
+              >settings</ref> file, not only for the layout features, but also for the parts, their
+            order, and the contents. 
+            The main functionalities are <ref
               target="https://github.com/BetaMasaheft/makepdf">documented here</ref> and the
             typesetting is done in Oxygen XML Editor using XSL-FO and Apache FOP.</p>
           <p>To use it, please fork (not branch) the repository to your own
-            GitHub account.</p>
+            GitHub account. If you open that package in Oxygen, open driver.xml and click play, the package will
+            use BM to fetch resources from the research environment and print your book.</p>
           <div type="level3">
             <head>Benefits to you</head>
-            <p>Relying on your work file, which is included locally, so it can be on your branch
-              only and not yet public, the script will use the data stored in BM as XML and the DTS
+            <p>The script will rely on your work file, which is included locally, and can therefore be only on your branch
+             and not yet public. It will use the data stored in BM as XML and the DTS
               API to fetch information to compile your book. For example, <list>
-                <item>it will print out the parts that you want in the order that you chose always consistently</item>
-                <item>it will collect bibliography and print it into a specific section using the
-                  HLZ styles and the EthioStudies library pulling citations from the edition, the
-                  driver file and the related manuscripts.</item>
-                <item>it will format the text benefiting from the encoding</item>
-                <item>it will collect all named entities and print the indexes (also selected in settings).</item>
-                <item>it will attempt at listing plates, if you so desire.</item>
+                <item>it will always consistently print the parts that you want in the order that you chose,</item>
+                <item>it will collect bibliography and print it in a specific section using the
+                  HLZ styles and the EthioStudies library pulling citations from all relevant files,</item>
+                <item>it will format the text benefiting from the encoding,</item>
+                <item>it will collect all named entities and print the indexes (also selected in settings),</item>
+                <item>it will list plates, if you so desire.</item>
               </list>
             </p>
-            <p>Of course, as you change your data, either the manuscripts or the edition running the
+            <p>Of course, as you change your data in the manuscript records, running the
               transformation will update the output.</p>
-            <p><emph>All </emph>can be customized, entirely changed, adapted, features can be added, etc. You can
-              read the script or ask somebody who can read it for you, is one file only. For example, if a translation is provided it can be put in the facing page and kept aligned with its own apparata.</p>
+            <p><emph>All </emph>can be customized, entirely changed, adapted, features can be added, etc. 
+              The script is only one file, which you can
+              read yourself or ask somebody who can read it for you.</p>
             <p>Fine touches can be done in the XSL-FO, as this is also simply an XML file.</p>
+            <!--This is not understandable to someone who has not done it, can we include examples?-->
           </div>
           <div type="level3">
             <head>Benefits to the community</head>
-           <p>Any one could follow the same steps or some of them here to reproduce your work. Anyone will be able to find the exact point and layer of the information which can be criticized (or not), if they wanted to.</p> <p>Let us imagine that the same package is used by two scholars for two editions of texts which
+           <p>Anyone could follow the same steps or some of them here to reproduce your work. 
+             Anyone will be able to find the exact point and layer of the information which can be criticized (or not), 
+             if they wanted to.</p> <!--<p>Let us imagine that the same package is used by two scholars for two editions of texts which
               happen to share a witness. The description of the witness may be exactly the same in
               both. The authority files unequivocal, the data directly indexed and retrievable, the
               consistency ensured across different editions. Sure, there is much more that can be
-              done...</p>
+              done...</p>-->
           </div>
           </div>
-        <div type="level2">
+      <!--  <div type="level2">
+          People who want to print a catalogue from XML will know which manuscripts they'll describe
           <head>Select the manuscripts</head>
           <p>Most likely if you are setting of on the journey to build a catalogue or a thematic list of manuscripts, you
             know where to find your manuscripts and probably already know which are where. Just in
@@ -161,16 +171,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <div type="level3">
             <head>Benefits to the community</head>
             <p>What about the others? Those which you know about and are not in the research
-              environment? Those you went to inspect and catalogue yourself?
-              Consider as a first step having a unified type of information, the TEI used by the project. Thus
-              describing the manuscripts and linking the images and the text in the research
-              environment will allow you to benefit from the exising information. <ref target="manuscripts">Catalogue descriptions</ref> can be long or
-              short there are no requirement.</p>
+              environment? Those you went to inspect and catalogue yourself?</p>
+              
           </div>
-        </div>
+        </div>-->
         <div type="level2">
           <head>Encode, print, check, report, correct, repeat</head>
-          <p>You are all set. Add the manuscripts, indexes will update at every run, add new information, change it, simply encode following this guidelines and
+          <!--I feel that this paragraph would strongly benefit from encoding examples. I might add these when I follow this workflow-->
+          <p>You might work with manuscripts already encoded in BM or with new descriptions you carried out for your project.
+            In the last case, consider as a first step having a unified type of information, the TEI used by the project. Thus
+          describing the manuscripts and linking the images and the text in the research
+          environment will allow you to benefit from the existing information. <ref target="manuscripts">Catalogue descriptions</ref>
+            can be as long or
+          short as desired.</p>
+          <p>Add the manuscripts <!--to the project?-->, indexes will update at every run, 
+            add new information, change it, simply encode following these guidelines and
           look at the output. Chances are that the output will not look as you want. If it is not one of the customizable settings
            you can either try to read the Xquery or simply ask somebody who knows to help you.
            If you keep your project in GitHub help will come as easy as a commit to your repository.</p>
@@ -178,58 +193,57 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           </div>
         <div type="level2">
           <head>Deposit Your Dataset</head>
-          <p>Working with the data in the research environment will provide you with<ref target="https://betamasaheft.eu/pid.html"> stable citable references</ref> for each committed and merged version of your files. But what about the entire group of resources you have used? To make the set really reproducible and your collected resources citable as a set, e.g. with your TEI edition, the files of the manuscript description has you have used them in the final version and eventually the script, you may deposit them in Zenodo or another similar repository.</p>
+          <p>Working with the data in the research environment will 
+            provide you with<ref target="https://betamasaheft.eu/pid.html"> stable citable references</ref> 
+            for each committed and merged version of your files. But what about the entire group of resources you have used? 
+            To make the set really reproducible and your collected resources citable as a set, 
+            you may deposit them in Zenodo or another similar repository.</p>
           <div type="level3">
             <head>Benefits to you</head>
-            <p>Your dataset, as a group of resources will be citable. You may also submit a data paper to describe your dataset.</p>
+            <p>Your complete dataset will be citable as a group of resources. You may also submit a data paper to describe your dataset.</p>
           </div>
         </div>
         <div type="level2">
           <head>Copyright of remixed content</head>
-          <p>As every single page of our website states, as well as each file in the Beta Masaheft dataset, the copyright of the data is of the Akademie der Wissenschaften in Hamburg, Hiob-Ludolf-Zentrum für Äthiopistik. Sharing and remixing are permitted under terms of the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Therefore books created remixing and reusing this data (catalogues, editions, etc.) should have the same copyright, or a formulation equally or more permissive adequately negotiated with the publisher.</p>
+          <p>As every single page of our website states, as well as each file in the Beta maṣāḥǝft
+            dataset, the copyright of the data is of the Akademie der Wissenschaften in Hamburg, Hiob-Ludolf-Zentrum für Äthiopistik. Sharing and remixing are permitted under terms of the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Therefore books created remixing and reusing this data (catalogues, editions, etc.) should have the same copyright, or a formulation equally or more permissive adequately negotiated with the publisher.</p>
           <p>Publication products generated from BM data must respect this copyright and
             should contain appropriate attribution to all contributors. The above PDF producing script does some of this, not all that can be done!
-Once all is ok, the book/article is ready the licensing of the data, with the agreement of the above copyright owners,
+Once all is ok and the book/article is ready, the licensing of the data, with the agreement of the above copyright owners,
 can be upgraded for commercial use as well, so that the publisher can print and sell (CC-BY-SA-NC —> CC-BY-SA).
 This is possible and positive, as it allows even more reuse.
-A Deposit of the source data, as descrbed above can be made and a DOI of the data deposit added to the book content.
+A deposit of the source data as described above can be made and a DOI of the data deposit added to the book content.
 Copyright of the book/article, product of the remix of data, can be silently or formally passed to the editor.
 The statement in the book, in respect to the original copyright should state (C) editor name… CC-BY-SA, or an equally allowing licence
-as the data on which it is based requires. Editors can commercialise it and sell the book no problem respecting this copyright.
-As soon as possible and following agreement with the editor the data can additionally be made Open Access.
-The DOI of the open access book is added to the deposit of the data with the proper relation so that the two DOI know about each other.
+as the data on which it is based requires. Editors can commercialise it and sell the book respecting this copyright.
+As soon as possible and following agreement with the editor, the data can additionally be made Open Access.
+The DOI of the open access book is added to the deposit of the data with the proper relation so that the two DOIs know about each other.
 
 This example workflow yields the following distinct products, each of which is distinctly and separately citable, adding to each other over time:
 <list>
     <item>publication of the source data NC until publication CC-BY-SA-NC (C) Akademie+HLCEES +  Open Access and versioned in GitHub</item>
     <item>publication of the source data after publication CC-BY-SA (C) Akademie+HLCEES + Open Access and versioned in GitHub</item>
-<item>HTML versions of the data throughout CC-BY-SA-NC (C) Akademie+HLCEES + Openly available, with indepently generated Permanent Identifiers for reference and stable URIs for data relations.</item>
+<item>HTML versions of the data throughout CC-BY-SA-NC (C) Akademie+HLCEES + Openly available, with independently generated Permanent Identifiers for reference and stable URIs for data relations.</item>
 <item>Several additional data formats remixes with CC-BY-SA-NC (C) Akademie+HLCEES + Openly available</item>
 <item>publication of the dataset for the publication  CC-BY-SA (C) Akademie+HLCEES + Open Access for the dataset with DOI</item>
 <item>the print publication  CC-BY-SA (C) Editor</item>
 <item>the digital publication  CC-BY-SA (C) Editor + Open Access for book with DOI.</item>
 <item>An additional versions of the DOI of the deposit of the data, once this is updated with relation to the DOI of the book.</item>
 </list>
-This flow is, to the knowledge of the author of this page, consistent licencing-wise, protects the contents from commercialisation until necessary, allows sales, has no time impacts, no costs impacts, is ready for open access... is quite simple... enforces collaboration, so, is a win win win and win again. with no side effects!
+This flow is, to the knowledge of the author of this page, consistent licencing-wise, protects the contents from commercialisation until necessary, 
+allows sales, has no time impacts, no costs impacts, is ready for open access... is quite simple... enforces collaboration, so, is a win win win and 
+win again, with no side effects!
 </p>
         </div>
         <div type="level2">
           <head>Retrodigitizing</head>
-          <p>You have done the work in all another way.
-            Old school, as if none of this existed.
-            But you want to contribute it to the community.
-            You will need patience, a lot of it, becuase you are looking at doing the work twice.
-            While getting an output from a semantically encoded set of files is possible,
-            the other way around is tedious and error prone.
-            </p>
-          <div type="level3">
-            <head>Benefits to you</head>
-            <p>You will be doing the job a second time, it will be tedious. You will wish you had worked in another way from the beginning. By the way, nobody can actually help you much, but hey, your mess, you tidy it up...</p>
-          </div>
-          <div type="level3">
-            <head>Benefits to the community</head>
-            <p>Everyone will be glad to have one more digital resource so that the next edition can be based on that.</p>
-          </div>
+         <!-- Are you available for helping such projects or not? If not, there is no point in including this paragraph, 
+          if yes, there should be some first step indicated at the end. Maybe better to delete it.-->
+          <p>This paragraph concerns projects which have worked in another way, producing their catalogue for example in word, but
+            now desire to contribute to the community and to make their data available. We are very grateful for that, and everyone 
+            will be glad to have one more digital resource so that future research can be based on that.
+            Please be aware that working this way around is not ideal, and a lot of patience will be needed during the process, 
+            as it will often feel like you are carrying out the same work twice.</p>
         </div>
       </div>
     </body>
