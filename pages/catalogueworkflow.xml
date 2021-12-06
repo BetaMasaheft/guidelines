@@ -20,6 +20,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <revisionDesc>
 
       <change who="PL" when="2021-11-18">first version based on Dorothea, Denis, Mersha's works</change>
+      <change who="DR" when="2021-12-06">corrected typos, reformulated slightly</change>
     </revisionDesc>
   </teiHeader>
   <text>
