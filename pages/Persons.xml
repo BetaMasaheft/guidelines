@@ -337,6 +337,9 @@ guidelines for
 <persName xml:lang="gez" xml:id="n1">ኢየሱስ፡ ክርስቶስ፡</persName>
 </person>
 </egXML>
+            
+            <p>If you are already adding the wikidata ID, it would be very helpful if you could add the BM ID to wikidata in the same
+               workflow. To do this, you only need to have a wikidata account, see <ref target="wikidata">wikidata</ref>.</p>
          </div>
          <div type="level1">
             <head>Dates</head>

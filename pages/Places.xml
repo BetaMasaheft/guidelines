@@ -109,6 +109,9 @@ guidelines for
               <region ref="wd:Q649"/>
               </place>
 </egXML>
+            <p>If you are already adding the wikidata ID, it would be very helpful if you could add the BM ID to wikidata in the same
+               workflow. To do this, you only need to have a wikidata account, see <ref target="wikidata">wikidata</ref>.</p>
+            
 <p>You are not allowed to add a <att>ref</att> in <gi>placeName</gi> or <gi>persName</gi> in a person or place record (it would not make that much sense either).</p>
          <div type="level2">
             <head>Alignment</head>
