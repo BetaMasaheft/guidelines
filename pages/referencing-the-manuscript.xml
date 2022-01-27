@@ -40,7 +40,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             Although for these to be resolvable the text needs to be present and encoded, their
             semantic value with reference to the selected passage remains even when the actual
             elements (<gi>pb</gi>, <gi>cb</gi> and <gi>lb</gi>) and text are not present and the reference is intended to the material object.
-            The following are possible references: <list type="ordered">
+            This means that references according to the following system can be used in <gi>locus</gi> even when the record does not contain any 
+            <gi>pb</gi>, <gi>cb</gi> and <gi>lb</gi>.
+            Below are possible references (the element  is followed by an attribute [@ …]):
+            <list type="ordered">
                <item>a folio, e.g. <code>1</code> (<tag>div[@type='folio'][@n]</tag>)</item>
                <item>a page, e.g. <code>1r </code>(<tag>pb[@n]</tag>)</item>
                <item>a column, e.g. <code>1va</code> (<tag>pb[@n]</tag>,<tag>cb[@n]</tag>)</item>
