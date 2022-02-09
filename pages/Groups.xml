@@ -44,7 +44,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <persName xml:lang="gez" xml:id="n1">ደቂቀ፡ ኤዎስጣቴዎስ፡</persName>
                <persName xml:lang="gez" type="normalized" corresp="#n1">daqiqa ʾEwosṭātewos</persName>
                <persName xml:lang="en">ʾEwosṭāteans</persName>
-               <floruit notBefore="1300" precision="medium">The ʾEwostāteans are a religious movement and network of monasteries going back to <persName ref="PRS3932Ewostate"/>. They originated
+               <floruit notBefore="1300" precision="medium">The ʾEwostāteans are a religious movement and network of monasteries going back to <persName ref="PRS3934Ewostate"/>. They originated
                   in Eastern <placeName ref="LOC6569Tegray"/> and were widely involved in the Christianization of the Northern Ethiopian provinces in the <date>14th and 15th century</date>.
                </floruit>
             </personGrp>
