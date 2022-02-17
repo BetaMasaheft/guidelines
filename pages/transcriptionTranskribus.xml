@@ -33,7 +33,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                  the text regions and lines on the base image to the transcription. If you do not know this too, please refer to their 
                  <ref target="https://transkribus.eu/wiki/index.php/Main_Page">guidelines and documentation</ref>.</p>
              <p>The first step you will run in Transkribus is a layout analysis. Once that process has completed, please, make sure to go through each image and fix it, 
-                 especially considering openings which are badly folded in the middle or areas of excessive match. Quite often red ink is not picked up by this step, for example.</p>
+                 especially considering openings which are badly folded in the middle or areas of excessive match. Quite often red ink is not picked up by this step, for example. Columns sometimes have to be split manually, 
+                 and marginal notes and other paratextual elements selected separately not to interfere with the text flow.</p>
              <p>A transcription model has been trained with several materials provided by all our project's collaborators which can be used either to train more specific models
                  or to directly transcribe images of written artefacts.</p>
              <p>You can use this model picking it from those available in the Handwritten Text Recognition step. Once finished, the aligned transcription will be loaded below the images.
