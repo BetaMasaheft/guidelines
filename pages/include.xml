@@ -45,9 +45,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </item>
                     </list>
                 </p>
-                <p>Remember to reproduce the TEI namespace, at the top element of the included files.
+                <p>Remember to reproduce the TEI namespace, at the top element of the included files.      
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <div>  
+                        <div  
                             xmlns="http://www.tei-c.org/ns/1.0" 
                             type="edition" 
                             xml:id="Transkribus" 
@@ -56,6 +56,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </div>
                     </egXML>
                 </p>
+                
                 <p>Another small step you need to take is to remove <att>xml:base</att> from <gi>text</gi></p>
                 <p>Now that those files exist and contain parts of your initial huge file, you can include them into the, now thin, manuscript file with <gi>xi:include</gi> like in the
                     <ref target="https://github.com/BetaMasaheft/Manuscripts/pull/978/files">ESap028 example</ref>.
