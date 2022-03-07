@@ -52,7 +52,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     most manuscripts photographed in these collections, these do no constitute actual repositories. In the course of editing these manuscripts, it is therefore advisable to 
                     substitute these IDs by the manuscripts' real repositories. The reference to EMML and EMIP
                 should remain in <gi>collection</gi>, and all shelfmarks should of course be given in <gi>altIdentifier</gi>s, as in this example from
-                <ref type="bm" target="EMML6952"/>:</p>
+                <ref type="bm" target="EMML6952">EMML 6952</ref>:</p>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                     <msIdentifier>
                         <repository ref="INS0912BetaGabreel"/>

@@ -122,7 +122,9 @@
             <item>Do not upload PDFs in the group bibliography. If they are necessary to substantiate your bibliographic entry, then please add a note to explain what is in the PDF which provides evidence for the decisions taken in entering the data in the
               record and perhaps inform on the PDF availability.</item>
             <item>When you are done entering information in Zotero, test the entry via the ‘export’ function to ensure it appears the way you would want to see it in a publishable bibliography. For quoting in publications of the HLCEES, use the Hiob Ludolf
-              Centre for Ethiopian and Eritrean Studies style provided in Zotero repository (<ref target="https://www.zotero.org/styles?q=hiob%20"/>). When you export your bibliography with this style make sure it corresponds to the appearance foreseen by the guidelines (e.g.
+              Centre for Ethiopian and Eritrean Studies style provided in the
+              <ref target="https://www.zotero.org/styles?q=hiob%20">Zotero repository</ref>.  
+              When you export your bibliography with this style make sure it corresponds to the appearance foreseen by the guidelines (e.g.
               <ref target="https://www.aai.uni-hamburg.de/en/comst/publications/bulletin.html">here</ref>). If not, maybe something was entered wrongly.</item>
           </list>
         </div>

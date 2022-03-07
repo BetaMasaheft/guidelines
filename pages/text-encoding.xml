@@ -94,7 +94,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             as far as possible to state the location
             of the text within the manuscript, whether the entire manuscript or parts of it are transcribed. Sometimes, the indications given by catalogues are too vague to allow for such precise encoding. 
             In this case, the location of excerpts should be stated
-            in a <gi>note</gi> in the corresponding <gi>msItem</gi>, referring the excerpt with its <att>xml:id</att>, such as in the following example from <ref type="bm" target="BNFet117"/>:
+            in a <gi>note</gi> in the corresponding <gi>msItem</gi>, referring the excerpt with its <att>xml:id</att>, such as in the following example from <ref type="bm" target="BNFet117">BnF Éthiopien 117</ref>:
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <msItem xml:id="ms_i1.3">
                   <locus from="63rb" to="69vb"/>

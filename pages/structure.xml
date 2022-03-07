@@ -42,7 +42,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <gi>additional</gi>.</p>
     <p>The order for these elements should be for simple manuscripts:
         <list>
-            <item><gi>msIdentifier</gi>, see <ref target="identifiersStructure"/></item>
+            <item><gi>msIdentifier</gi>, see <ref target="identifiersStructure">identifiers structure</ref></item>
             <item> <gi>msContents</gi></item>
             <item><gi>physDesc</gi></item>
             <item><gi>history</gi></item>

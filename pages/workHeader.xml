@@ -284,7 +284,7 @@ passive="LIT1455GadlaG"/>
       Corpus Coranicum, the external entry refers only to a part of a work, it is preferable to add the <gi>relation</gi> in the exact <gi>div</gi> of this text part in our
       edition, using <tag>relation name="skos:exactMatch"</tag>. If this is not possible, because we do not yet have the text of the work or because we
       follow different divisions than the other reference, <tag>relation name="skos:broadMatch"</tag> can be used at the most pertinent place of the record with the
-      most precise pointer to our record possible in <att>passive</att>, as, for example, in <ref type="bm" target="LIT1697Jubilees"/></p>
+      most precise pointer to our record possible in <att>passive</att>, as, for example, in <ref type="bm" target="LIT1697Jubilees">LIT1697Jubilees</ref></p>
    <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <listRelation>
       <relation name="skos:broadMatch"
@@ -292,7 +292,7 @@ passive="LIT1455GadlaG"/>
          passive="LIT1697Jubilees"/>
       </listRelation>
    </egXML>
-   <p>and in <ref type="bm" target="LIT1340EnochE"/>:</p>
+   <p>and in <ref type="bm" target="LIT1340EnochE">LIT1340EnochE</ref>:</p>
    <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <div type="textpart" subtype="chapter" n="47">
          <ab>ወበውእቱ ፡ መዋዕል ፡ ዐርገት ፡ ጸሎተ ፡ ጻድቃን ፡ ወደመ ፡ ጻድቅ ፡ እምነ ፡ ምድር ፡ ቅድመ ፡ እግዚአ ፡ መናፍስት
