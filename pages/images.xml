@@ -107,7 +107,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
   </egXML>
 <p>To add the value for the <att>facs</att> of an image or range to be linked you can check the number in the viewer (after the above step has been saved and the images appear).
-   The sequence number of the images is the one you want to assign. in <ref target="https://betamasaheft.eu/manuscripts/BMLacq755/viewer">BMLacq755</ref> you can see in the sequence of
+   The sequence number of the images is the one you want to assign. In <ref target="https://betamasaheft.eu/manuscripts/BMLacq755/viewer">BMLacq755</ref> you can see in the sequence of
 images below the main viewer that the image of the recto side of the first folio is numbered 3. Then you will enter this number in the file, in the three digits format.</p>
   <egXML xmlns="http://www.tei-c.org/ns/Examples">
     <locus from="1r" to="2v" facs="003"/>
