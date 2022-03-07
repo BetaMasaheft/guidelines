@@ -17,7 +17,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change> 
+         <change who="DR" when="2022-03-07">Added paragraph on partial digitisations</change> </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="images">
@@ -106,7 +107,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </msIdentifier>
   </egXML>
 <p>To add the value for the <att>facs</att> of an image or range to be linked you can check the number in the viewer (after the above step has been saved and the images appear).
-The sequence number of the images is the one you want to assign. in <ref target="https://betamasaheft.eu/manuscripts/BMLacq755/viewer"/> you can see in the sequence of
+   The sequence number of the images is the one you want to assign. in <ref target="https://betamasaheft.eu/manuscripts/BMLacq755/viewer">BMLacq755</ref> you can see in the sequence of
 images below the main viewer that the image of the recto side of the first folio is numbered 3. Then you will enter this number in the file, in the three digits format.</p>
   <egXML xmlns="http://www.tei-c.org/ns/Examples">
     <locus from="1r" to="2v" facs="003"/>
@@ -144,6 +145,23 @@ images below the main viewer that the image of the recto side of the first folio
         <graphic url="http://dfg-viewer.de/show/?set[mets]=http%3A%2F%2Fsammlungen.ub.uni-frankfurt.de%2Foai%2F%3Fverb%3DGetRecord%26metadataPrefix%3Dmets%26identifier%3D5247786"/>
     </facsimile>
 </egXML></div>
+         
+         <div type="level2">
+            <head>Add a link to partial digitisations</head>
+            <p>If only single pages of a manuscript have been digitised, add the link to the digitisation in the most appropriate 
+               place in the description, as in this example from <ref target="BNFabb115" type="bm">BnF d'Abbadie 115</ref>:
+               
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <decoNote type="miniature" xml:id="d1">
+                     <locus target="#3v"/>
+                     <desc><ref type="authFile" corresp="AT1044Prophet"></ref>: <persName ref="PRS7181MosesM">Moses</persName> and
+                        <persName ref="PRS4372Gabreel">St Gabriel</persName>.</desc>
+                     <note>Digitized at <ref target="http://mandragore.bnf.fr/ark:/12148/cgfbt4443">Mandragore</ref>.</note>                               
+                  </decoNote>
+               </egXML>
+            </p>
+         </div>
+         
          <div type="level2">
             <head>Add a link to an image zone</head>
             <p>To add an image of a feature as a specimen in your descriptions, you can use <gi>rs</gi>

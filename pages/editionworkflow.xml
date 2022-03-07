@@ -26,7 +26,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <body xml:id="editionworkflow">
       <div type="level1">
         <head>A Digital-first Collaborative Critical Edition</head>
-
+        <p>This page lists one possible workflow for producing a printed critical edition working from and with the digital
+          research environment Beta maṣāḥǝft. Currently, Beta maṣāḥǝft has no employee responsible for giving technical support to such a 
+          project.</p>
         <p>This is a strategic page, very similar to the one about the workflow for
         <ref target="catalogueworkflow">a digital-first collaborative catalogue of manuscripts</ref>. It is not meant to be 
         comprehensive or tutorial-like, but to give you the right pointers in an organized fashion.</p>
@@ -37,10 +39,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           examples and literature. Each workflow comes with its requirements and learning curve.
           Needless to say the best one is the one which works best for you and your needs. This page
           describes one possibility which benefits at several stages from the commonly edited data
-          in Beta maṣāḥǝft (BM) and contributes in several citable and version-aware ways to it. It
-          has never been used for a real project although it has been possible already for some
-          years. By going through the hypothetical phases of the work involved for a critical
-          edition of a text we link to those resources and pages of documentation which are
+          in Beta maṣāḥǝft (Bm) and contributes in several citable and version-aware ways to it. It
+          has not been used yet for a real project. By going through the hypothetical phases of the work involved for a critical
+          edition of a text, we link to those resources and pages of documentation which are
           available. These do not need to be used in the exact ways described. The page here will
           also try to clarify what can and what cannot be supported in such a process. The key idea
           is that what works for you and gets the result done tidily for you, does not necessarily
@@ -51,12 +52,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <p>The digital-first workflow presented here is based on the principle of separation of
           concerns, which is typical of the word of coding and programming. This methodological
           approach involves the splitting of as many different levels of concern as it is possible
-          and useful. Instead of trying to do everything into one tool and with one method, each
+          and useful. Instead of trying to do everything with one tool and with one method, each
           separate part of the work is done with a specifically designed method. The most common and
           basic separation of concerns is the separation between the concern about the semantic
           annotation of the text and that of its rendering on the printed page. Instead of saying
             <q>I make a footnote to indicate the list of variants for this passage, and I put it
-            here because it looks nice</q>. we turn it around and think <q>I mark the variants as
+            here because it looks nice</q>, we turn it around and think <q>I mark the variants as
             variants.</q> and then in a separate step <q>I want the variants to be listed in
             footnotes.</q> and in yet another independently-documented step <q>I want the footnotes
             to be arranged in this way because it looks nice.</q> Separating the steps also allows
@@ -662,18 +663,6 @@ This example workflow yields the following distinct products, each of which is d
 </list>
 This flow is, to the knowledge of the author of this page, consistent licencing-wise, protects the contents from commercialisation until necessary, allows sales, has no time impacts, no costs impacts, is ready for open access... is quite simple... enforces collaboration, so, is a win win win and win again. with no side effects!
 </p>
-        </div>
-        <div type="level2">
-          <head>Retrodigitizing</head>
-          <p>You have done the work in all another way. Old school, as if none of this existed. But you want to contribute it to the community. You will need patience, a lot of it. While getting an output from a semantically encoded set of files is possible, the other way around is tedious and error prone. Imagine your apparatus saying: "here is a link, here is bold, here is this font", and converting that information, however precisely disambiguated from the visual point of view, to something like "here this particular witness has an error".</p>
-          <div type="level3">
-            <head>Benefits to you</head>
-            <p>You will be doing the job a second time, it will be tedious. You will wish you had worked in another way from the beginning. By the way, nobody can actually help you much, but hey, your mess, you tidy it up...</p>
-          </div>
-          <div type="level3">
-            <head>Benefits to the community</head>
-            <p>Everyone will be glad to have one more digital resource so that the next edition can be based on that.</p>
-          </div>
         </div>
       </div>
     </body>

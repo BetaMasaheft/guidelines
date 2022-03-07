@@ -27,6 +27,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <body xml:id="catalogueworkflow">
       <div type="level1">
         <head>A Digital-first Collaborative Catalogue of Manuscripts</head>
+        <p>This page lists one possible workflow for producing a printed manuscript catalogue working from and with the digital
+          research environment Beta maṣāḥǝft. Currently, Beta maṣāḥǝft has no employee responsible for giving technical support to such a 
+        project.</p>
 <p>This is a strategic page, very similar to the one about the workflow for
   <ref target="editionworkflow">a digital-first collaborative critical edition</ref>. It is not meant to be
   comprehensive or tutorial-like, but to give you the right pointers in an organized fashion.</p>
@@ -234,16 +237,6 @@ This flow is, to the knowledge of the author of this page, consistent licencing-
 allows sales, has no time impacts, no costs impacts, is ready for open access... is quite simple... enforces collaboration, so, is a win win win and 
 win again, with no side effects!
 </p>
-        </div>
-        <div type="level2">
-          <head>Retrodigitizing</head>
-         <!-- Are you available for helping such projects or not? If not, there is no point in including this paragraph, 
-          if yes, there should be some first step indicated at the end. Maybe better to delete it.-->
-          <p>This paragraph concerns projects which have worked in another way, producing their catalogue for example in word, but
-            now desire to contribute to the community and to make their data available. We are very grateful for that, and everyone 
-            will be glad to have one more digital resource so that future research can be based on that.
-            Please be aware that working this way around is not ideal, and a lot of patience will be needed during the process, 
-            as it will often feel like you are carrying out the same work twice.</p>
         </div>
       </div>
     </body>

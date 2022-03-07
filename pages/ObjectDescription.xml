@@ -181,7 +181,8 @@ taken from <locus target="#6r"/>.
 </egXML>
 
                 <p>If necessary, it is also possible to refer to more than one foliation in the <gi>msItems</gi> by adding several <gi>locus</gi>
-                    with <att>corresp</att> having the values of the respective <att>xml:id</att>s indicated in <gi>foliation</gi>, as in  <ref target="BNFabb66A"/>:
+                    with <att>corresp</att> having the values of the respective <att>xml:id</att>s indicated in <gi>foliation</gi>, as in 
+                    <ref target="BNFabb66A" type="bm">BnF d'Abbadie 66A</ref>:
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <msItem xml:id="ms_i1.1.7.2">
                         <locus from="6va" to="7vb" corresp="#fol1"/>
