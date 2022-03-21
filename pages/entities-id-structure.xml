@@ -18,7 +18,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
       </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>  
-         <change who="DR" when="2018-08-03">Addition on diacritics</change>  </revisionDesc>
+         <change who="DR" when="2018-08-03">Addition on diacritics</change>
+         <change who="DR" when="2022-03-21">Addition on xml:ids</change></revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="entities-id-structure">
@@ -95,6 +96,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          
          <div type="level2">
             <head>Structure of internal <att>xml:id</att>s</head>
+            <p>An <att>xml:id</att> can be assigned to any element in a record, to allow direct references to this element both within the same record and from other records.
+               For the elements listed below, the structure of the <att>xml:id</att> follows a specific pattern. For all other elements the value for <att>xml:id</att> can 
+               be choosen freely. However, it is extremely important that no <att>xml:id</att> is identical to the <att>xml:id</att> of the root element <gi>TEI</gi> of
+               any record. This means that the names of records - manuscripts, works, persons, places, keywords etc. - must not used as <att>xml:id</att> in any record.
+               For example, giving the value "Supplication" to an <att>xml:id</att>, for example in a manuscript description or a textpart in a work, will lead to 
+               problems, because "Supplication" is already the <att>xml:id</att> of the Authority file <ref target="Supplication" type="bm">Supplication</ref>.</p>
           <p>
             <table>
             <row role="label"><cell>Element</cell><cell>ID pattern</cell></row>
