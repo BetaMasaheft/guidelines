@@ -182,6 +182,39 @@ images below the main viewer that the image of the recto side of the first folio
                
                </p>
          </div>
+         
+         <div type="level2">
+            <head>IIIF server</head>
+            <p>We serve images on a IIIF server. You can read more here on <ref target="https://iiif.io/">IIIF | International Image Interoperability Framework</ref>. If you have new images that need to be displayed they first have to be converted to pyramid (multi-tile) tiff images. We recommend <ref target="https://www.libvips.org/">libvips image processing library</ref> for best conversion. 
+               You can run the following shell script on copying it to your image directory for batch conversion:
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  [filename: e.g. vipbash.sh]
+                  #!/bin/bash
+                  #script for converting images to pyramidal tiffs
+                  #first install libvips https://www.libvips.org/ and add the vips directory to windows paths e g C:\Users\XYZ\Documents\vips-dev-8.12\bin
+                  #on Windows install a bash/shell emulator e.g. https://gitforwindows.org/ and add the bash path (click env for environment variables and add the path to bin)
+                  #copy the script to the folder with images to convert
+                  
+                  #harmonize extension from jpg and jpeg to JPG
+                  
+                  for file in *.jpg ; do mv $file ${file//jpg/JPG} 
+                  done
+                  
+                  for file in *.jpeg ; do mv $file ${file//jpeg/JPG} 
+                  done
+                  
+                  #produce pyramidal tiff
+                  for filename in *.JPG; do
+                  vips tiffsave $filename $filename.tif --tile --pyramid --compression deflate --tile-width 256 --tile-height 256;
+                  done
+                  
+                  #clean extension
+                  for file in *.JPG.tif ; do mv $file ${file//JPG.tif/tif} 
+                  done
+                  
+               </egXML>
+            </p>
+         </div>
       </body>
    </text>
 </TEI>
