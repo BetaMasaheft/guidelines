@@ -94,6 +94,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               <ref target="https://docs.google.com/document/d/1q_ncLEWCB8Mca28w81PFMgjLLpH3yUH16vaKDTTPtiE/edit#heading=h.1sf1nfqy1rdu">program</ref>
                   </cell>
               </row>
+            <row>
+              <cell>5-6 April 2022</cell>
+              <cell>Hamburg</cell>
+              <cell>TEI XML for Ethiopian and Eritrean manuscript cataloguing</cell>
+              <cell>
+                <ref target="https://www.aai.uni-hamburg.de/en/ethiostudies/news/20220405xml.html">program</ref>
+              </cell>
+            </row>
           </table>
         </div>
         <div type="level3">
@@ -202,7 +210,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
           <row>
             <cell>Places</cell>
-            <cell>The concept of Place, an example based on Etiopia. The structure of place and Repositories record. How occurrences of places and
+            <cell>The concept of Place, an example based on Ethiopia. The structure of place and Repositories record. How occurrences of places and
               persons in texts are annotated.</cell>
             <cell><ref target="https://docs.google.com/presentation/d/e/2PACX-1vTueoYnLr-qWDcWuqQkPkPaGUmRMye7dfHcuYKAEvU58e9BpzNM2Y051xqHzriYsirX4J3SQFOFJ0gC/pub?start=false&amp;loop=false&amp;delayms=3000">link</ref></cell>
             <cell><ref target="places">places</ref>, <ref target="persons">persons</ref>, <ref
