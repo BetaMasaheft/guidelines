@@ -25,16 +25,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body xml:id="named-entities-and-authority-lists">
          <head>Named Entities</head>
-         <p>Throughout the document <gi>placeName</gi> and
-    <gi>persName</gi> will take a
+         <p>Throughout the document, <gi>placeName</gi> and
+    <gi>persName</gi>  take a
     <att>ref</att> containing the
-    <gi>xml:id</gi> of the place or person record:
+    <gi>xml:id</gi> of the place or person record.
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
             belongs to the manuscripts looted by the British <persName ref="PRS7484Napier">Napier</persName>
             expedition in <date>1868</date> from the church of <placeName ref="INS0101MadhaneAlam">Madḫāne ʿAlam</placeName>
             or was acquired by a member of the expedition between <placeName ref="LOC5534Sanafe"/> and <placeName ref="LOC4547Maqdal"/>
 </egXML>
          </p>
+         
          <p>Before creating new entities for PLACES like Stuttgart, Paris,
     London, etc. which unlike all repositories are very much unlikely to
     receive specific descriptions by this project, use external links to
@@ -43,6 +44,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             vicaire en la paroisse de <placeName ref="wd:Q272084">Bourron</placeName>
 </egXML>
          <p>(same for persName and region)</p>
+         
+         
          <p>To decide whether to create a new place record or not if in
          doubt, see the page on creating <ref target="newEntry">new records</ref>.</p>
          <p>
@@ -101,10 +104,10 @@ notBefore="1540"
 notAfter="1559">ትግራይ፡</placeName>
  ከመ፡ ይርአይ፡ መርዔቶ፡ bእለ፡ ህየ፡ በጽድቅ፡ ወይዋሄ፡ cሕዝቦ፡ በርትዕ። ወበጽሐ፡</ab>
 </egXML>
-            <p>to choose which ID to use consider the following:</p>
+            <p>To choose which ID to use, consider the following:</p>
             <list type="unordered">
                <item>
-                  <p>if it is a place of interest for Ethiopian studies or attested
+                  <p>If it is a place of interest for Ethiopian studies or attested
       in Ethiopia, then use one of our internal IDs or create a new
       record if none is yet available</p>
                </item>
