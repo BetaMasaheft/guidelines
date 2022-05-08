@@ -23,6 +23,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <change who="DR" when="2019-07-31">Corrected typos, added link to Paris workshop
         program</change>
       <change who="PL" when="2021-05-20">Added new slideshows</change>
+      <change who="ES" when="2022-04-20">Added 2022 Hamburg workshop link, PP link</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -144,6 +145,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell/>
           </row>
           <row>
+            <cell>Introduction to Beta maṣāḥǝft</cell>
+            <cell>Architecture, state of the art 2022.</cell>
+            <cell>
+              <ref     target="https://www.betamasaheft.uni-hamburg.de/news/20220405xml/presentation-bm-2022.pdf"
+                >link</ref>
+            </cell>
+            <cell/>
+            <cell/>
+          </row>
+          <row>
             <cell>Introduction to XML</cell>
             <cell>What is XML, what it is useful for, basic terminology, example markup of
               bibliography. Contains some simple exercises.</cell>
@@ -155,10 +166,31 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell> </cell>
           </row>
           <row>
+            <cell>Introduction to XML</cell>
+            <cell>Explaining mark up, XML definitions (video lectures).</cell>
+            <cell>
+              <ref target="https://lecture2go.uni-hamburg.de/l2go/-/get/v/60972"
+                >link1</ref>, <ref target="https://lecture2go.uni-hamburg.de/l2go/-/get/v/60974"
+                  >link2</ref>
+            </cell>
+            <cell> </cell>
+            <cell> </cell>
+          </row>
+          <row>
             <cell>Introduction to TEI</cell>
             <cell>What is TEI, TEI guidelines and community, more precision obtained with TEI</cell>
             <cell>
               <ref target="https://docs.google.com/presentation/d/e/2PACX-1vTO_e6_eMWUbHtW6oXLTrsGSzhbN67py6cBfaGznKJwA8p_FJuVr03ai6vWAlIWdZ8S0I-0aPRx8ttK/pub?start=false&amp;loop=false&amp;delayms=3000"
+                >link</ref>
+            </cell>
+            <cell> </cell>
+            <cell> </cell>
+          </row>
+          <row>
+            <cell>Simple Introduction to TEI in Bm</cell>
+            <cell>TEI, schema and Bm guidelines (video lecture)</cell>
+            <cell>
+              <ref target="https://lecture2go.uni-hamburg.de/l2go/-/get/v/61048"
                 >link</ref>
             </cell>
             <cell> </cell>
