@@ -389,7 +389,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </row>
                   <row>
                      <cell>
-                        <p>Words or lines skipped in omitted by the editor in transcription</p>
+                        <p>Text erroneously omitted from the surface by the scribe</p>
                      </cell>
                      <cell>
                            <tag>gap reason="omitted"</tag>
@@ -401,9 +401,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </row>
                   <row>
                      <cell>
-                        <p>Text omitted from the edition by the editor, for
-            whatever reason (brevity, context, language,
-            etc.)</p>
+                        <p>Text omitted from the edition by the editor, for whatever
+                           reason (brevity, context, language, etc.)</p>
                      </cell>
                      <cell>
                            <tag>gap reason="ellipsis"</tag>
