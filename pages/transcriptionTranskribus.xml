@@ -59,7 +59,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <div type="level3">
               <head>Generating a transcription for BM</head>
               <p>You can of course fix everything by hand, or using regex in your preferred editor. We have however also an XSLT transformation which can be used, called
-                  <ref target="https://github.com/BetaMasaheft/Documentation/blob/master/utility/transkribus2BM.xsl">transkribus2BM.xsl</ref> and which 
+                  <ref target="https://raw.githubusercontent.com/BetaMasaheft/Documentation/master/utility/transkribus2BM.xsl">transkribus2BM.xsl</ref> and which 
                   will restructure the TEI to fit the project's requirements.
                   This transformation, which you can run with your engine or software of choice, e.g. in OxygenXML Editor,
                   takes as input your Transkribus-exported TEI and needs to be given some parameters: the total number of foliated leaves, the number of protection leaves at the beginning, 
