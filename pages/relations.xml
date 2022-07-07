@@ -23,6 +23,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="DR" when="2018-05-18">Edited and updated examples</change>
             <change who="ES" when="2018-05-25">Added lexicon relation example</change>
             <change who="DR" when="2020-03-05">Corrected typos</change>
+            <change who="DR" when="2022-07-07">updated use of several relations according to discussion in 
+                https://github.com/BetaMasaheft/Documentation/issues/1920 and https://github.com/BetaMasaheft/Documentation/issues/1350</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -106,6 +108,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     and so on. This also means that if you are working on a set of records and do not want to
                 touch the manuscripts, either start writing a list of witnesses, you can use this relation to say
                 that a textual unit is present in a manuscript.</p>
+                
+                <p>
+                    <code>syriaca:different-from</code> can be used to differentiate any two entitites from each other except
+                    works, where <code>saws:isDifferentTo</code> is used.
+                </p>
+                
             </div>
             <div type="level2">
                 <head>Manuscript to Manuscript</head>
@@ -145,6 +153,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <!--     <p><code>saws:isAncestorOf</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
                 </p>-->
+                <p>
+                    <code>dcterms:hasPart</code>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <relation active="BNFet45#UniCirc1" name="dcterms:hasPart" passive="BNFet45#p1 BNFet45#f2"/>
+                    </egXML>
+                </p>
             </div>
             <div type="level2">
                 <head>Manuscript to Work</head>
@@ -365,13 +379,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </relation>
                     </egXML>
                 </p>
-                <p>
-                    <code>syriaca:different-from</code> <!--same as saws:isDifferentTo?-->
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation name="syriaca:different-from" active="LIT2932RepCh213"
-                            passive="LIT4971MalkeaErgata"/>
-                    </egXML>
-                </p>
+             
                 <p>
                     <code>syriaca:possibly-identical</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -384,13 +392,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </egXML>
                 </p>
                 <p>
-                    <code>saws:hasPart</code>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation name="saws:hasPart" active="LIT4985AkalaKrestos"
-                            passive="LIT4986GadlaAkalaKrestos"/>
-                    </egXML>
-                </p>
-                <p>
                     <code>dcterms:isPartOf</code>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="dcterms:isPartOf" active="LIT3973GadlaT"
@@ -400,20 +401,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </relation>
                     </egXML>
                 </p>
-                <p>
-                    <code>dcterms:hasPart</code> <!--same as saws:hasPart?-->
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation name="dcterms:hasPart" active="LIT1100Anapho"
-                            passive="LIT2461Testam">
-                            <desc>Inside the Missal manuscripts, it is often preceded by an by the
-                                excerpt from the <title ref="LIT2461Testam">Testamentum
-                                    domini</title> (cp. <bibl>
-                                    <ptr target="bm:1962Qeddase"/>
-                                    <citedRange>IV, Qǝddāse ʾǝgziʾ, §§1-17</citedRange>
-                                </bibl>)</desc>
-                        </relation>
-                    </egXML>
-                </p>
+              
             </div>
             <div type="level2">
                 <head>Work to Person</head>
@@ -487,9 +475,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             passive="PRS9162TaklaHa"/>
                     </egXML>
                 </p>
-                <p><code>rel:enemyOf</code>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
-                </p>
                 <p>The following SNAP examples use classes rather than properties (this can be seen by the capital letters which they use). 
                     This is indeed confusing. It should be however correctly modelled in
                     the transformation to RDF and makes your encoding life a bit easier by sparing
@@ -539,7 +524,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </egXML>
                 </p>
                 <p>
-                    <code>saws:hasWritten</code>
+                    <code>saws:hasWritten</code> implies an authorship of some content, e.g. of marginalia in manuscripts.
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="saws:hasWritten" active="PRS11501Endreyas"
                             passive="BAVet8#a1"/>
