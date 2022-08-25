@@ -39,7 +39,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Please, try to discuss any schema update in a issue before editing the schema.</p>
             <p>After editing the ODD, use the Oxygen transformation for TEI ODD to RelaxNG which is
                 already available in the software and will save a .rng file in a "out" directory
-                relative to the place where your schema is stored. You can also do the same using the TEI Roma web application.</p>
+                relative to the place where your schema is stored. You can also do the same using the TEI Roma web application or with the <ref target="https://oxgarage2.tei-c.org/">OxGarage web application</ref>.</p>
             <p>Before committing the edited schema, test it locally validating a file against that
                 new version of the rng schema.</p>
             <p>Move then the new version in the main schema repository (not in the out subdirectory) and commit it. This will update the schema used by all the applications.</p>
