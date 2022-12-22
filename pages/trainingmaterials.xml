@@ -24,6 +24,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         program</change>
       <change who="PL" when="2021-05-20">Added new slideshows</change>
       <change who="ES" when="2022-04-20">Added 2022 Hamburg workshop link, PP link</change>
+      <change who="DR" when="2022-12-21">Added 2022 Marburg presentations</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -52,6 +53,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               <cell>place</cell>
               <cell>title</cell>
               <cell>program</cell>
+            </row>
+            <row>
+              <cell>14 December 2022</cell>
+              <cell>Marburg</cell>
+              <cell> Workshop “Introduction to the digital research environment Beta maṣāḥǝft”</cell>
+              <cell/>
             </row>
             <row>
               <cell>21-24 January 2019</cell>
@@ -132,6 +139,55 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell>links</cell>
             <cell>Refers to...</cell>
             <cell>elements</cell>
+          </row>
+          <row>
+            <cell>Einführung und Suche</cell>
+            <cell>Einführung in Beta maṣāḥǝft; Benutzung der Suche</cell>
+            <cell/>
+            <cell><ref target="https://drive.google.com/file/d/1SO6WtfsVI-CLqUHH1EyDIbWP41FtEf06/view?usp=share_link">link</ref></cell>
+            <cell/>
+          </row>
+          <row>
+            <cell>Handschriften</cell>
+            <cell>Einführung in Darstellung von und Suche nach Handschriften</cell>
+            <cell/>
+            <cell><ref target="https://drive.google.com/file/d/1SSp7mZT6iU2Se2KcS80Mqjj0uLqUSewW/view?usp=share_link">link</ref></cell>
+            <cell/>
+          </row>
+          <row>
+            <cell>Werke</cell>
+            <cell>Einführung in Darstellung von und Suche nach Werken</cell>
+            <cell/>
+            <cell><ref target="https://drive.google.com/file/d/1SHdCZJdIKmKVAD_A1jnkYfpvW2LoK3lF/view?usp=share_link">link</ref></cell>
+            <cell/>
+          </row>
+          <row>
+            <cell>Personen und Orte</cell>
+            <cell>Einführung in Darstellung von und Suche nach Personen und Orten</cell>
+            <cell/>
+            <cell><ref target="https://drive.google.com/file/d/1S_Sa45iwzGTRh42GJMuEmC3yUU961-cX/view?usp=share_link">link</ref></cell>
+            <cell/>
+          </row>
+          <row>
+            <cell>Ressourcen</cell>
+            <cell>Einführung in Bibliografie, Morphological Parser und Dillmann Online</cell>
+            <cell/>
+            <cell><ref target="https://drive.google.com/file/d/1SDEDjLEBMc1vwcxOM4lr7TprEJbVAVyr/view?usp=share_link">link</ref></cell>
+            <cell/>
+          </row>
+          <row>
+            <cell>Übungen: Einfach</cell>
+            <cell>Rechercheübungen zu Handschriften, Werken und Personen (mit Lösungen)</cell>
+            <cell/>
+            <cell><ref target="https://drive.google.com/file/d/1SaPzOrMeR7DQopGANjYpJKj5RGN9zhUT/view?usp=share_link">link</ref></cell>
+            <cell/>
+          </row>
+          <row>
+            <cell>Übungen: Fortgeschritten</cell>
+            <cell>Fortgeschrittene Rechercheübungen (mit Lösungen)</cell>
+            <cell/>
+            <cell><ref target="https://drive.google.com/file/d/1SMxnxuadl2Z0F-EqkHIaQ1htmFc7ZqYG/view?usp=share_link">link</ref></cell>
+            <cell/>
           </row>
           <row>
             <cell>Introduction to Beta maṣāḥǝft</cell>
