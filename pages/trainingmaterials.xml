@@ -29,13 +29,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   <text>
     <body xml:id="trainingMaterials">
       <div type="level2">
-        <head>On the use of these materials</head>
-        <p>You might not be the kind of person that sits and read the guidelines page by page trying
-          out new things. Or you might simply prefer another format or presentation. For these
-          reasons, and to allow for a shared base of shared presentations, some of which originally
+        <head>On these materials</head>
+        <p>Here are various presentations and other training resources on the use of Beta maṣāhəft website and XML encoding,
+          some of which originally
           based on the training materials of <ref
-            target="https://wiki.digitalclassicist.org/EpiDoc_Workshops">EpiDoc</ref>, we share here
-          the training materials we have used, divided into programs and single presentations. The
+            target="https://wiki.digitalclassicist.org/EpiDoc_Workshops">EpiDoc</ref>, divided into programs and single presentations. The
           programs of each workshop will use a different selection of the presentations and at a
           different moment in the life of the project. Those presentations as they were given at
           that point will be linked in the programs, or only with the participants of that specific
