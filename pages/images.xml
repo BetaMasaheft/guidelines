@@ -1,9 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
-schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
-type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/BetaMasaheft/guidelines/master/schema/out/tei-betamesaheftGL.rng"
+type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -21,133 +18,149 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change> 
          <change who="DR" when="2022-03-07">Added paragraph on partial digitisations</change> 
          <change who="ES" when="2022-03-29">Added paragraph on image conversion</change>
+         <change when="2023-01-31" who="ES">Added info on various repositories</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="images">
          <head>Images</head>
-
-       <div type="level2">
-          <head>Links to Digital Copies of Manuscripts</head>
-          <p>A link to a digital copy of a manuscript can be added to the main
-    identifier by adding in the <gi>idno</gi> descendant of the main 
-             <gi>msDesc</gi> a <att>facs</att> attribute:
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-               <idno facs="http://gallica.bnf.fr/ark:/12148/btv1b52507611w">BnF Éthiopien 14</idno>
-            </egXML>
-         for example, as in <ref target="BNFet14" type="bm">BnF Éthiopien 14</ref>.</p>
-          <p>This is a shortcut, and only covers for one set of images. You can do the same in <gi>idno</gi> 
-          for any <gi>altIdentifier</gi> or, if you have a <gi>facsimile</gi> or more, you can point to that. 
-          Consider the following example from Dabra Libanos.</p>
-          
-<!--          set like in DabraLibanosGG1. idno/@FACS should, when possible, 
-          point at the facsimile xml:id, which should have a corresp to the iiif location-->
-          <egXML xmlns="http://www.tei-c.org/ns/Examples">
-             <msIdentifier>
-                <repository ref="INS0346DL"/>
-                <idno facs="#valievaliuzzo2020" n="39">Golden Gospel</idno>
-                <altIdentifier xml:id="photos1975">
-                   <idno facs="#schneider1975" n="24"/>
-                </altIdentifier>
-                <altIdentifier xml:id="photos1993">
-                   <idno facs="#bausi1993" n="19"/>
-                </altIdentifier>
-                <altIdentifier xml:id="photos1994">
-                   <idno facs="#bausi1993" n="19"/>
-                </altIdentifier>
-             </msIdentifier>
-          </egXML>
-          <p>Here the <att>facs</att> links to the <gi>facsimile</gi> elements which in turn link to the location of images.
-             For example:</p>
-          <egXML xmlns="http://www.tei-c.org/ns/Examples">
-             <facsimile xml:id="schneider1975" resp="#schneider" facs="/Ham/1975/">
-                ....
-             </facsimile>
-          </egXML>
-          <p>You can thus also have multiple digital facsimiles listed as such and link one, another, some or all of them.</p>
-          
-          <p>In <gi>locus</gi>, add <att>facs</att> together with the other
-    attributes,  containing
-    only the reference to the first page in the range indicated
-    <hi rendition="simple:italic">exactly</hi> as it appears in the URL
-    for that page (so, not the folio number!).</p>
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-   <locus target="#30v" facs="f62"/>
-   <locus target="#86v #87r" facs="089"/>
-    <locus target="#64v #65v #110r" facs="f134 f136 f225"/>
-    <locus from="31" to="33" facs="f62"/>
-    <locus from="31" facs="f62"/>
-</egXML>
-
-          <p>You can also add the exact link to a page in a
-             <att>facs</att> in each <gi>pb</gi>
-             inside the transcription of the manuscript.</p>
-
-       </div>
-
+         
+         <div type="level2">
+            <head>Viewer for Digital Copies of Manuscripts</head>
+            <p>A link to a digital copy of a manuscript can be added to the main
+               identifier by adding in the <gi>idno</gi> descendant of the main 
+               <gi>msDesc</gi> a <att>facs</att> attribute.
+               The format depends on the location of the images. 
+               
+            </p>
+         </div>
+         
          <div type="level2">
             <head>Links to images hosted on our server</head>
-         <p>Links to images hosted on our server in the additional disks
-           should use the relevant part of the path, i.e.
-    BMQ/003/BMQM-003, for example. If the number of the photos are
-    separated with two underscores, then "KAE/011/KAE-011_", see, for example, <ref target="ESkae011" type="bm">KAE-011</ref>:</p>
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-  <msIdentifier>
-<repository ref="INS0234KAE"/>
-<collection>Ethio-SPaRe</collection>
-<idno facs="KAE/011/KAE-011_" n="66">KAE-011</idno>
-</msIdentifier>
-  </egXML>
-  <p><att>n</att> in the example above is the total number of images and it is a fundamental information to produce the links and the IIIF presentation manifest used by the viewer.</p>
-<p>If more than one set of images are available, there is a workaround, namely, give another value in an altIdentifier. This will produce a viewer with as many loaded manifests as there are in the encoding.</p>
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-  <msIdentifier>
+            <p>Links to images hosted on our server in the additional disks
+               should use the relevant part of the path, i.e.
+               BMQ/003/BMQM-003, for example. If the number of the photos are
+               separated with two underscores, then "KAE/011/KAE-011_", 
+               see, for example, <ref target="ESkae011" type="bm">KAE-011</ref>:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <msIdentifier>
+                  <repository ref="INS0234KAE"/>
+                  <collection>Ethio-SPaRe</collection>
+                  <idno facs="KAE/011/KAE-011_" n="66">KAE-011</idno>
+               </msIdentifier>
+            </egXML>
+            <p><att>n</att> in the example above is the total number of images and it is a fundamental information to produce the links and the IIIF presentation manifest used by the viewer.</p>
+            <p>If more than one set of images are available, there is a workaround, namely, give another value in an altIdentifier. This will produce a viewer with as many loaded manifests as there are in the encoding.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <msIdentifier>
                   <repository ref="INS0346DL"/>
                   <idno facs="Ham/1993/Eri_1993" n="39">Golden Gospel</idno>
                   <altIdentifier xml:id="photos1994">
                      <idno facs="Ham/1994/Eri_1994" n="19">Golden Gospel</idno>
                   </altIdentifier>
                </msIdentifier>
-  </egXML>
-<p>To add the value for the <att>facs</att> of an image or range to be linked you can check the number in the viewer (after the above step has been saved and the images appear).
-   The sequence number of the images is the one you want to assign. In <ref target="https://betamasaheft.eu/manuscripts/BMLacq755/viewer">BMLacq755</ref> you can see in the sequence of
-images below the main viewer that the image of the recto side of the first folio is numbered 3. Then you will enter this number in the file, in the three digits format.</p>
-  <egXML xmlns="http://www.tei-c.org/ns/Examples">
-    <locus from="1r" to="2v" facs="003"/>
-  </egXML>
-
-
-       </div>
-
-   <div type="level2">
-<head>Links to the Vatican Libaray</head>
-      <p>Links to the images of the Vatican Library MSS are now supported,
-    by adding in the <gi>idno</gi> <att>facs</att> the manifest.json
-    URL which can be found in the digivatlib on the left info page
-         <ref target="https://digi.vatlib.it/view/MSS_Vat.et.1">https://digi.vatlib.it/view/MSS_Vat.et.1</ref>, e.g.
-         <ref target="https://digi.vatlib.it/iiif/MSS_Vat.et.1/manifest.json">https://digi.vatlib.it/iiif/MSS_Vat.et.1/manifest.json</ref>.</p>
-         <p>To add the link to a
-    <gi>locus</gi>, add <att>facs</att> attributes. Please do not
-    forget that the folio number (in the following example 3r) does not
-    necessarily corresponds to the URL number (here 0006).</p>
-         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<msItem xml:id="ms_i1.1.1">
-<locus target="#3r" facs="0006"/>
-<title type="complete">Maqdǝma wangel (Introduction to the Gospels)</title>
-</msItem>
-</egXML>
-   </div>
+            </egXML>
+            <p>To add the value for the <att>facs</att> of an image or range to be linked you can check the number in the viewer (after the above step has been saved and the images appear).
+               The sequence number of the images is the one you want to assign. In <ref target="https://betamasaheft.eu/manuscripts/BMLacq755/viewer">BMLacq755</ref> you can see in the sequence of
+               images below the main viewer that the image of the recto side of the first folio is numbered 3. Then you will enter this number in the file, in the three digits format.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <locus from="1r" to="2v" facs="003"/>
+            </egXML>
+            
+            
+         </div>
+         
+         
+         <div type="level2">
+            <head>Libraries hosting IIIF images</head>
+            <p>Our viewer can show IIIF images hosted by other repositories. Currently enabled are: Vatican, Dublin, Cambridge, Princeton, Berlin, Sinai, Leicester,  Bodleian, BNF.</p>
+            <p>For most collections, the only thing you need is to add  in the <gi>idno</gi> <att>facs</att> the manifest.json
+               URL which can be found on the web page serving the images (e.g. in the digivatlib on the left info page,
+               <ref target="https://digi.vatlib.it/view/MSS_Vat.et.1">https://digi.vatlib.it/view/MSS_Vat.et.1</ref>, e.g.
+               <ref target="https://digi.vatlib.it/iiif/MSS_Vat.et.1/manifest.json">https://digi.vatlib.it/iiif/MSS_Vat.et.1/manifest.json</ref>).</p>
+            <p>To add the link to a
+               <gi>locus</gi>, add <att>facs</att> attributes. Please do not
+               forget that the folio number (in the following example 3r) does not
+               necessarily corresponds to the URL number (here 0006).</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <msItem xml:id="ms_i1.1.1">
+                  <locus target="#3r" facs="0006"/>
+                  <title type="complete">Maqdǝma wangel (Introduction to the Gospels)</title>
+               </msItem>
+            </egXML>
+            <p>For BNF, you can add the link to the gallica landing page of the digitized image, e.g.
+               
+               
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <idno facs="http://gallica.bnf.fr/ark:/12148/btv1b52507611w">BnF Éthiopien 14</idno>
+               </egXML>
+               for example, as in <ref target="BNFet14" type="bm">BnF Éthiopien 14</ref>.</p>
+            
+            
+         </div>
+         
+         <div type="level2">
+            <head>Multiple sets of images and pointing to a specific image</head>
+            <p>The above instructions only cover for one set of images. You can do the same in <gi>idno</gi> 
+               for any <gi>altIdentifier</gi> or, if you have a <gi>facsimile</gi> or more, you can point to that. 
+               Consider the following example from Dabra Libanos.</p>
+            
+            <!--          set like in DabraLibanosGG1. idno/@FACS should, when possible, 
+          point at the facsimile xml:id, which should have a corresp to the iiif location-->
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <msIdentifier>
+                  <repository ref="INS0346DL"/>
+                  <idno facs="#valievaliuzzo2020" n="39">Golden Gospel</idno>
+                  <altIdentifier xml:id="photos1975">
+                     <idno facs="#schneider1975" n="24"/>
+                  </altIdentifier>
+                  <altIdentifier xml:id="photos1993">
+                     <idno facs="#bausi1993" n="19"/>
+                  </altIdentifier>
+                  <altIdentifier xml:id="photos1994">
+                     <idno facs="#bausi1993" n="19"/>
+                  </altIdentifier>
+               </msIdentifier>
+            </egXML>
+            <p>Here the <att>facs</att> links to the <gi>facsimile</gi> elements which in turn link to the location of images.
+               For example:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <facsimile xml:id="schneider1975" resp="#schneider" facs="/Ham/1975/">
+                  ....
+               </facsimile>
+            </egXML>
+            <p>You can thus also have multiple digital facsimiles listed as such and link one, another, some or all of them.</p>
+            
+            <p>In <gi>locus</gi>, add <att>facs</att> together with the other
+               attributes,  containing
+               only the reference to the first page in the range indicated
+               <hi rendition="simple:italic">exactly</hi> as it appears in the URL
+               for that page (so, not the folio number!).</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <locus target="#30v" facs="f62"/>
+               <locus target="#86v #87r" facs="089"/>
+               <locus target="#64v #65v #110r" facs="f134 f136 f225"/>
+               <locus from="31" to="33" facs="f62"/>
+               <locus from="31" facs="f62"/>
+            </egXML>
+            
+            <p>You can also add the exact link to a page in a
+               <att>facs</att> in each <gi>pb</gi>
+               inside the transcription of the manuscript.</p>
+         </div>
+         
+         
          <div type="level2">
             <head>Link to images not accessible via IIIF</head>
             <p>Some Manuscripts have images published which are not accessible
-    via IIIF, please add in these cases add <gi>TEI</gi>, between
-    <gi>teiHeader</gi> and <gi>text</gi>, a
-    <gi>facsimile</gi> element:</p>
-         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-    <facsimile>
-        <graphic url="http://dfg-viewer.de/show/?set[mets]=http%3A%2F%2Fsammlungen.ub.uni-frankfurt.de%2Foai%2F%3Fverb%3DGetRecord%26metadataPrefix%3Dmets%26identifier%3D5247786"/>
-    </facsimile>
-</egXML></div>
+               via IIIF, please add in these cases add <gi>TEI</gi>, between
+               <gi>teiHeader</gi> and <gi>text</gi>, a
+               <gi>facsimile</gi> element:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <facsimile>
+                  <graphic url="http://dfg-viewer.de/show/?set[mets]=http%3A%2F%2Fsammlungen.ub.uni-frankfurt.de%2Foai%2F%3Fverb%3DGetRecord%26metadataPrefix%3Dmets%26identifier%3D5247786"/>
+               </facsimile>
+            </egXML></div>
          
          <div type="level2">
             <head>Add a link to partial digitisations</head>
@@ -157,7 +170,7 @@ images below the main viewer that the image of the recto side of the first folio
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <decoNote type="miniature" xml:id="d1">
                      <locus target="#3v"/>
-                     <desc><ref type="authFile" corresp="AT1044Prophet"></ref>: <persName ref="PRS7181MosesM">Moses</persName> and
+                     <desc><ref type="authFile" corresp="AT1044Prophet"/>: <persName ref="PRS7181MosesM">Moses</persName> and
                         <persName ref="PRS4372Gabreel">St Gabriel</persName>.</desc>
                      <note>Digitized at <ref target="http://mandragore.bnf.fr/ark:/12148/cgfbt4443">Mandragore</ref>.</note>                               
                   </decoNote>
@@ -172,9 +185,7 @@ images below the main viewer that the image of the recto side of the first folio
                
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <rs type="inline">
-                  <graphic 
-                     xml:id="g1" 
-                     url="https://betamasaheft.eu/iiif/EMIP/Codices/1928/015.tif/1780,500,40,35/full/0/default.jpg"/>
+                     <graphic xml:id="g1" url="https://betamasaheft.eu/iiif/EMIP/Codices/1928/015.tif/1780,500,40,35/full/0/default.jpg"/>
                   </rs>
                </egXML>
                
@@ -183,7 +194,7 @@ images below the main viewer that the image of the recto side of the first folio
                to fetch a specific region of an image, which is 40*35 pixel, so, more or less a thumbnail. 
                Linked images do not need to be of any special kind.
                
-               </p>
+            </p>
          </div>
          
          <div type="level2">
