@@ -25,9 +25,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <head>Create a new record</head>
                 <p>You shall now find a new "create new entity" function in the navigation bar of
                     the app. You only need to enter the name of the file, for manuscripts this is
-                    the full filename, for the other entities just the last (not numerical) part of the ID (see
+                    the full filename, for the other entities just the last (non-numerical) part of the ID (see
                         <gi>TEI</gi> schema specification). For LIT1234iliad, you would enter only
-                    "iliad". For a manuscript, simply enter the full name, the small print will
+                    "iliad". The non-numerical part of the ID <hi rendition="simple:bold">may not exceed 15 digits and may only include ASCII symbols</hi>.
+                    For a manuscript, simply enter the full name, the small print will
                     indicate you what is needed. As you start typing the button will become active
                     and you can create the file. This is stored in the app, not in Github! As the
                     confirmation page will tell you blinking, you need to
