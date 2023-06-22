@@ -229,6 +229,72 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                </egXML>
             </p>
          </div>
+         <div type="level2" xml:id="digitization">
+            <head>Digitization</head>
+            <p>When digitizing manuscripts, the project aims to adhering to the best practice in digitization, both in office and field conditions. For a recent summary of recommendations and principles please consult   <ref target="https://drive.google.com/file/d/0B2RNTL2u2zMrQTl3RkNaOVU1Qk0/view?resourcekey=0-RrkdjwxT8pULOQHW3Pbr2g">Meyer, M., J. Moukarzel, and E. Balicka-Witakowska 2015. ‘Digitization for access and preservation’, in A. Bausi, P. G. Borbone, F. Briquel-Chatonnet, P. Buzi, J. Gippert, C. Macé, M. Maniaci, Z. Melissakis, L. E. Parodi, W. Witakowski, and E. Sokolinski, eds, Comparative Oriental Manuscript Studies. An Introduction (Hamburg: COMSt, 2015), 570–580</ref>; you can also consult the <ref target="https://www.ifla.org/wp-content/uploads/2019/05/assets/rare-books-and-manuscripts/rbms-guidelines/guidelines-for-planning-digitization.pdf">IFLA Guidelines for Planning the Digitization of Rare Book and Manuscript Collections</ref> and the <ref target="https://www.dfg.de/download/pdf/foerderung/programme/lis/praxisregeln_digitalisierung_en.pdf">DFG Practical Guidelines
+               on Digitisation</ref></p>
+            <p>If you are planning to digitize manuscripts within the framework of the Beta maṣāḥǝft project in the field or outside of proper laboratory setting please make sure that you </p>
+            <p>(1) have the necessary equipment and auxiliaries, including at least:
+            </p>
+            <list>
+               <item> high resolution digital SLR camera which produces RAW and TIFF (or RAW and JPEG) images</item>
+               <item> tripod with a moving head or cross bar allowing the camera to point down </item>
+               <item> camera remote control</item>
+               <item> baseboard or at least dense dark fabric</item>
+               <item> book cradle or book support (e.g. foam cushions)</item>
+               <item> manuscript support (e.g.  foam cushions, of various height)</item>
+               <item> linear colour or greyscale metric scale </item>             
+               
+               <item> plastic or glass page holders</item>
+               <item> adjustable robot arms or clips to hold the metric scale  / signum mark bar</item>
+               <item> sufficient storage devices</item>
+               <item> paper and writing materials, including pre-printed metadata forms</item>
+            </list>
+            <p>and, if possible:
+            </p>
+            <list>
+               <item> waterproof tarpaulin (if digitizing on the ground)</item>
+               <item> materials for preservation (acid-free storage boxes) </item>
+               <item> additional light source</item>
+               <item> additional energy source</item>
+            </list>
+            <figure>
+               <graphic xml:id="ex1" url="https://betamasaheft.eu/iiif/guidelines/digit/scale.tif/info.json">
+                  <desc>Metric colour scale</desc></graphic>
+            </figure>
+            
+            <p>(2) follow the main steps, at least:
+            </p>
+            <list>
+               <item> check conservation status</item>
+               <item> assign unique and stable shelfmark (if not already present)</item>
+               <item> fill the basic metadata form with at least the shelfmark, main content, size, date and place of digitization (this must be photographed at least with the first opening or after the last opening to become part of the image set); prepare a small note with the shelfmark that will be photographed, together with the colour/greyscale with each frame) </item>
+               <item> desirably: fill the conservation status metadata form</item>
+               <item> foliate (in case no foliation present - use pencil and insert folio numbers in the same area on each recto. if the manuscript holders do not allow any pencil marks inside, prepare paper slips with numbers that can be placed next to the scale); recheck the foliation assigned twice</item>
+               <item> carry out the basic preservation measures (cleaning)</item>
+               <item> set up the digitization station and adjust the camera settings</item>
+               <item> digitize opening by opening (or page by page, depending on the requirements), make sure that the linear scale, manuscript shelfmark, and when necessary folio number slip are photographed with every frame</item>
+               <item> photograph the binding  from all sides  as well as all inserts and accompanying material</item>
+               <item> store images on at least two storage devices for back up, each manuscript in a separate folder named in the same way as the shelfmark</item>
+               
+               
+            </list>
+            <figure>
+               <graphic xml:id="ex2" url="https://betamasaheft.eu/iiif/guidelines/digit/digworkflow.tif/info.json">
+                  <desc>Workflow chart, from COMSt 2015</desc></graphic>
+            </figure>
+            <p>When sharing your images with the Beta maṣāḥǝft project please make sure that</p>
+            <list>
+               <item> images have high resolution </item>
+               <item> each image set is associated with a unique shelfmark and is accompanied by (photographed) metadata</item>
+               <item> each image contains shelfmark and folio information ( if foliation by pencil or foliation by added paper slip was not possible during the digitization please insert folio numbers directly into the images, preferably in the top right margin)</item>            
+               <item> image sets are complete (if some folia were not foliated or foliated twice please specify this in the basic metadata)</item>
+            </list>
+            <figure>
+               <graphic xml:id="ex3" url="https://betamasaheft.eu/iiif/guidelines/digit/am003-023.tif/info.json">
+                  <desc>Example of an opening digitized by the Ethio-SPaRe project</desc></graphic>
+            </figure>
+         </div>
       </body>
    </text>
 </TEI>
