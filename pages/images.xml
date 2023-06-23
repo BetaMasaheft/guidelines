@@ -242,9 +242,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
                <item> tripod with a moving head or cross bar allowing the camera to point down </item>
                <item> camera remote control</item>
                <item> baseboard or at least dense dark fabric</item>
-               <item> book cradle or book support (e.g. foam cushions)</item>
-               <item> manuscript support (e.g.  foam cushions, of various height)</item>
-               <item> linear colour or greyscale metric scale </item>             
+               <item> book cradle or book support (e.g. foam cushions)</item>               
+               <item> linear colour or greyscale metric scale </item>            
                
                <item> plastic or glass page holders</item>
                <item> adjustable robot arms or clips to hold the metric scale  / signum mark bar</item>
