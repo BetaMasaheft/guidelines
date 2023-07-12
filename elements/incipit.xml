@@ -25,7 +25,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body xml:id="incipit">
          <div>
             <head>incipit</head>
-            <p/>
+            <p>Incipits are meant to give the user an impression of the texts included and help to navigate in a manuscript. They should 
+               contain no more than 20 to 30 words and should focus on the most meaningful and substantial phrases of the beginning of each text part
+               and should exclude religious formulas or eulogies. </p>
          </div>
       </body>
    </text>

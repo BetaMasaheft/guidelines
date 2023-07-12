@@ -25,7 +25,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body xml:id="explicit">
          <div>
             <head>explicit</head>
-            <p/>
+            <p>Explicits are meant to give the user an impression of the texts included and help to navigate in a manuscript. They should 
+               contain no more than 20 to 30 words and should focus on the most meaningful and substantial last phrases of each text part. 
+               They should not include religious formulas, eulogies or later additions. Colophons are better to be recorded separately as 
+               colophon.</p>
          </div>
       </body>
    </text>
