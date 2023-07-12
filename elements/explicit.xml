@@ -25,10 +25,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body xml:id="explicit">
          <div>
             <head>explicit</head>
-            <p>Explicits are meant to give the user an impression of the texts included and help to navigate in a manuscript. They should 
-               contain no more than 20 to 30 words and should focus on the most meaningful and substantial last phrases of each text part. 
-               They should not include religious formulas, eulogies or later additions. Colophons are better to be recorded separately as 
-               colophon.</p>
+            <p>Quoting incipits serves the purpose of the description of the manuscript's content e.g. to help to identify the texts or their parts and 
+               to help to realize the extention and completeness of a texts or its parts.  They should contain no more than 20 to 30 words and should 
+               focus on meaningful and substantial last phrases of the text proper. Quotation of explicits should preferably not include common 
+               formulas and eulogies unless there is no special reason to do so, as it may be relevant nevertheless to distinguish different versions or 
+               to record commissioners or other details that may be worth being encoded. When a text ends ex abrupto, it should be mentioned in a 
+               note and the final words should be quoted.</p>
          </div>
       </body>
    </text>
