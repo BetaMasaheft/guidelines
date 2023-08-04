@@ -40,7 +40,7 @@ never be used to mark a content, that presupposes another perspective.</p>
                 <p>Additions (or <hi rendition="simple:italic">additiones</hi>)
                     are very often written in
                     a secondary hand, and they are later than the main text(s) of
-                    the manuscript. They mark the so-called "secondary life" of
+                    the manuscript. They mark the "secondary life" of
                     the manuscript as the latter is used as a repository of
                     documentary information, i.e. a true archive. These values are
                     provided for the <att>type</att> in the <gi>desc</gi>
@@ -61,15 +61,14 @@ never be used to mark a content, that presupposes another perspective.</p>
                         <item>whether the addition is rhymed.</item>
                     </list>
                 </p>
-                <p>If you cannot decide if the text is a main content or an addition,
+                <p>When you cannot decide if the text is a main content or an addition,
                   follow the criteria identified by Andrist in the COMSt book (p. 512) to identify strata.
-                  Additions would always be quaternary strata (independent content, not-independent material,
-                  autonomous writing project) whereas copied additions are primary strata.
-                  In the case in which a manuscript has a donation note which is a "added written element"
-                  thus preserving its writing project and the integrity of its content in comparison with the main text,
-                  but without material independence, then it is an addition, and we encode it as such.
-                  If instead, the unit is part of a primary writing project,
-                  the fact that it is copied from an addition does not change the fact that it is an <gi>msItem</gi> in a <gi>msPart</gi> or <gi>msDesc</gi>.</p>
+                  Additions would always be the so-called quaternary strata (independent content, not-independent material,
+                  autonomous writing project). A donation note which is an "added written element", being a small writing project without 
+                  full material independence and preserving the integrity of its content,
+                  is an addition, and we encode it as such.
+                  If instead, a textual unit, being part of a primary writing project, is a copy of a donation note,
+                  this does not change the fact that it is an <gi>msItem</gi> in a <gi>msPart</gi> or <gi>msDesc</gi>.</p>
                   <p>The example of the <hi rend="simple:italics">Liber Aksumae</hi> compilation should be encoded as <gi>msItem</gi>s. </p>
                 <p>These additions are encoded in an
                     <gi>additions</gi> element in <gi>physDesc</gi>, which will contain a
