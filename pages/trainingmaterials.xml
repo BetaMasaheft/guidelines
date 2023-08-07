@@ -52,12 +52,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               <cell>title</cell>
               <cell>program</cell>
             </row>
-            <row>
-              <cell>14 December 2022</cell>
-              <cell>Marburg</cell>
-              <cell> Workshop “Introduction to the digital research environment Beta maṣāḥǝft”</cell>
-              <cell/>
-            </row>
+            
             <row>
               <cell>21-24 January 2019</cell>
               <cell>Paris</cell>
@@ -108,13 +103,19 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <ref target="https://www.aai.uni-hamburg.de/en/ethiostudies/news/20220405xml.html">program</ref>
               </cell>
             </row>
+            <row>
+              <cell>14 December 2022</cell>
+              <cell>Marburg</cell>
+              <cell> Workshop “Introduction to the digital research environment Beta maṣāḥǝft”</cell>
+              <cell>
+                <ref target="https://www.betamasaheft.uni-hamburg.de/news/20221214marburg">program</ref>
+              </cell>
+            </row>
           </table>
         </div>
         <div type="level3">
           <head>Future </head>
-          <p>There is no open workshop planned at the moment. There is usually at least one workshop
-            a year held in Hamburg, which will be advertised and listed here and on the website as soon as its dates
-            are known. </p>
+          <p>September 2023: DH workshop within the framework of the Summer School. </p>
           <table>
             <row role="label">
               <cell>date</cell>
@@ -139,56 +140,67 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell>elements</cell>
           </row>
           <row>
-            <cell>Einführung und Suche</cell>
+            <cell>Einführung und Suche (2022)</cell>
             <cell>Einführung in Beta maṣāḥǝft; Benutzung der Suche</cell>
             <cell/>
             <cell><ref target="https://drive.google.com/file/d/1SO6WtfsVI-CLqUHH1EyDIbWP41FtEf06/view?usp=share_link">link</ref></cell>
             <cell/>
           </row>
           <row>
-            <cell>Handschriften</cell>
+            <cell>Handschriften (2022)</cell>
             <cell>Einführung in Darstellung von und Suche nach Handschriften</cell>
             <cell/>
             <cell><ref target="https://drive.google.com/file/d/1SSp7mZT6iU2Se2KcS80Mqjj0uLqUSewW/view?usp=share_link">link</ref></cell>
             <cell/>
           </row>
           <row>
-            <cell>Werke</cell>
+            <cell>Werke (2022)</cell>
             <cell>Einführung in Darstellung von und Suche nach Werken</cell>
             <cell/>
             <cell><ref target="https://drive.google.com/file/d/1SHdCZJdIKmKVAD_A1jnkYfpvW2LoK3lF/view?usp=share_link">link</ref></cell>
             <cell/>
           </row>
           <row>
-            <cell>Personen und Orte</cell>
+            <cell>Personen und Orte (2022)</cell>
             <cell>Einführung in Darstellung von und Suche nach Personen und Orten</cell>
             <cell/>
             <cell><ref target="https://drive.google.com/file/d/1S_Sa45iwzGTRh42GJMuEmC3yUU961-cX/view?usp=share_link">link</ref></cell>
             <cell/>
           </row>
           <row>
-            <cell>Ressourcen</cell>
+            <cell>Ressourcen (2022)</cell>
             <cell>Einführung in Bibliografie, Morphological Parser und Dillmann Online</cell>
             <cell/>
             <cell><ref target="https://drive.google.com/file/d/1SDEDjLEBMc1vwcxOM4lr7TprEJbVAVyr/view?usp=share_link">link</ref></cell>
             <cell/>
           </row>
           <row>
-            <cell>Übungen: Einfach</cell>
+            <cell>Übungen: Einfach (2022)</cell>
             <cell>Rechercheübungen zu Handschriften, Werken und Personen (mit Lösungen)</cell>
             <cell/>
             <cell><ref target="https://drive.google.com/file/d/1SaPzOrMeR7DQopGANjYpJKj5RGN9zhUT/view?usp=share_link">link</ref></cell>
             <cell/>
           </row>
           <row>
-            <cell>Übungen: Fortgeschritten</cell>
+            <cell>Übungen: Fortgeschritten (2022)</cell>
             <cell>Fortgeschrittene Rechercheübungen (mit Lösungen)</cell>
             <cell/>
             <cell><ref target="https://drive.google.com/file/d/1SMxnxuadl2Z0F-EqkHIaQ1htmFc7ZqYG/view?usp=share_link">link</ref></cell>
             <cell/>
           </row>
+          
           <row>
-            <cell>Introduction to Beta maṣāḥǝft</cell>
+            <cell>Introduction to Beta maṣāḥǝft  (2022)</cell>
+            <cell>Architecture, state of the art 2022.</cell>
+            <cell>
+              <ref     target="https://www.betamasaheft.uni-hamburg.de/news/20220405xml/presentation-bm-2022.pdf"
+                >link</ref>
+            </cell>
+            <cell/>
+            <cell/>
+          </row>
+          <row>
+            <cell>Introduction to Beta maṣāḥǝft (2021)</cell>
             <cell>GitHub workflow, General introduction (video), Dillmann, Morphological
               parser.</cell>
             <cell>
@@ -199,17 +211,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell/>
           </row>
           <row>
-            <cell>Introduction to Beta maṣāḥǝft</cell>
-            <cell>Architecture, state of the art 2022.</cell>
-            <cell>
-              <ref     target="https://www.betamasaheft.uni-hamburg.de/news/20220405xml/presentation-bm-2022.pdf"
-                >link</ref>
-            </cell>
-            <cell/>
-            <cell/>
-          </row>
-          <row>
-            <cell>Introduction to XML</cell>
+            <cell>Introduction to XML (2021)</cell>
             <cell>What is XML, what it is useful for, basic terminology, example markup of
               bibliography. Contains some simple exercises.</cell>
             <cell>
@@ -220,7 +222,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <cell> </cell>
           </row>
           <row>
-            <cell>Introduction to XML</cell>
+            <cell>Introduction to XML (2021)</cell>
             <cell>Explaining mark up, XML definitions (video lectures).</cell>
             <cell>
               <ref target="https://lecture2go.uni-hamburg.de/l2go/-/get/v/60972"
