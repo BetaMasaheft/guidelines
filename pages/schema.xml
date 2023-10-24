@@ -16,12 +16,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <sourceDesc>
                 <p>Encoded in TEI.</p>
             </sourceDesc>
-        </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+        </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change><change who="ES" when="2023-10-24">updated the workflow desc (transformation in CI)</change>     </revisionDesc>
     </teiHeader>
     <text>
         <body xml:id="editingSchema">
             <head>Editing the ODD (i.e. the Schema)</head>
-          <p>  In the Schema repository there should be five files and the README.md</p>
+          <p>  In the Schema repository there should be the index files, the actual schema files and the README.md</p>
 
 <p>The .xml files are the ODD (One Document Does it all) and the .rng are the actual RelaxNG schema files used for validation.</p>
 
@@ -37,12 +37,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 will be simply adding a value to an existing list.
                 But to add rules it is safer to ask somebody who has done it.</p>
             <p>Please, try to discuss any schema update in a issue before editing the schema.</p>
-            <p>After editing the ODD, use the Oxygen transformation for TEI ODD to RelaxNG which is
-                already available in the software and will save a .rng file in a "out" directory
-                relative to the place where your schema is stored. You can also do the same using the TEI Roma web application or with the <ref target="https://oxgarage2.tei-c.org/">OxGarage web application</ref>.</p>
-            <p>Before committing the edited schema, test it locally validating a file against that
-                new version of the rng schema.</p>
-            <p>Move then the new version in the main schema repository (not in the out subdirectory) and commit it. This will update the schema used by all the applications.</p>
+            <p>If you are happy with your changes, create a pull request for the modified .xml file. Once merged, the new RelaxNG schema file (.rng) and expanded versions will be generated automatically.</p>
+            <p>If you want to test the RelaxNG prior to submitting your changes, you can always use the manual transformation, either with the help of your oXygen software (using the appropriate transformation scenario will save a .rng file in a "out" directory
+                relative to the place where your schema is stored) or by using the <ref target="https://roma.tei-c.org/">TEI Roma web application</ref> or with the <ref target="https://oxgarage2.tei-c.org/">OxGarage web application</ref>. Please do not commit any changes in .rng files to GitHub.</p>
             <p>If you are not sure of what you are doing please ask.</p>
         </body>
     </text>
