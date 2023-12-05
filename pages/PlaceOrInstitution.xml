@@ -22,19 +22,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </teiHeader>
     <text>
         <body xml:id="placeOrInstitution"><div type="level1">
-    <head>Creating a new record or deciding between repository entity and
-        place entity</head>
-    <p>All Monasteries and Churches in PLACES have also a parallel 
-        Repository record in the institutions repository. The two lists have different origins, PLACES comes from
-        EA indexes, while the Institutions list is an export of the records in
-        EthioSPaRe for repositories.</p>
-            <p>In principle, all geographical locations should have a PLACE-type record, with co-ordinates and administrative division provided wherever possible, and all repositories (places where manuscripts are preserved) should have a repository-type record. 
-                In case of "doublets" the records must be disambiguated. </p>
-                <p>Please, proceed as follows in case of doubt:</p>
+    
+    
+            <p>All <emph>geographical locations</emph> should have a <ref target="places">PLACE</ref>-type record (prefixed LOC and stored in the Places repository), with co-ordinates and administrative division provided wherever possible.</p>
+            <p>At the same time, all <emph>repositories</emph> (libraries/archives/collections where manuscripts are preserved, including private collections, churches, monasteries, etc.) should have an <ref target="institution">INSTITUTION</ref>-type record (prefixed INS and stored in the Institutions repository).</p>
+            <p>A <emph>repository</emph> is a different conceptual entity from <emph>place</emph>: potentially a repository/library may move in space; and at the same time multiple repositories may share the same coordinates.</p>
+            <p>If you need to mark up a locality (mentioned in a work, or relevant for a manuscript, a person or a place) refer to a record of <ref target="places">PLACE</ref>-type (creating one if necessary).</p>
+            <p>If you need to refer to a manuscript repository, in particular to link <gi>repository</gi> within the <gi>msIdentifier</gi> of a manuscript description, please refer to a record of <ref target="institution">INSTITUTION</ref>-type (creating one if necessary).</p>
+            <p>If you need to refer to a manuscript repository which is a church or a monastery already present among the Places (either because it has been inherited from the initial list of authority files, or created in another context) but not among the Institutions please proceed as follows :</p>
     <list type="ordered:arabic">
         <item>
-            <p>if the repository record for the repository you need does not
-                exist, create one and assign an ID.</p>
+            <p>create a new <ref target="institution">repository record</ref> and assign an ID (prefixed INS).</p>
         </item>
         <item>
             <p>leave the place record there, check the already existing
@@ -46,7 +44,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 and not to a place, if any.</p>
         </item>
         <item>
-            <p>you can link the place and repository by adding a relation of the skos:exactMatch type as e.g. in <ref  type="bm" target="INS0017UM">ʿUra Qirqos</ref>
+            <p>link the place and repository by adding a relation of the skos:exactMatch type as e.g. in <ref  type="bm" target="INS0017UM">ʿUra Qirqos</ref>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                 <listRelation>
                     <relation name="skos:exactMatch" active="INS0017UM" passive="LOC6063UraMas"/>
@@ -55,7 +53,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </p>
         </item>
     </list>
-            <p>See also <ref target="places">Places</ref> <ref target="institution">Repositories</ref>.</p>
+            <p>See also the Guidelines for <ref target="places">Places</ref> and <ref target="institution">Repositories/Institutions</ref>.</p>
 </div>
         </body>
     </text>
