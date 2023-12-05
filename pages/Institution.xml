@@ -28,11 +28,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
          <div type="level2">
             <head>Specific encoding for repositories</head>
-            <p>For repositories where manuscripts are preserved all general guidelines and especially those for <ref target="places">places</ref> are valid.
+            <p>All collections of manuscripts (churches, monasteries, archives, libraries, museums, private collections, etc) need a record of INS-type, stored in the Institutions repository.  A repository is a different conceptual entity from Place: potentially a repository/library may move in space; and at the same time multiple repositories may share the same coordinates. (The fact that churches in Ethiopia are also repositories may generate some confusion in this regard as their place is very unlikely to change; please check the <ref target="placeOrInstitution">Place or Repository</ref> Guidelines section to overcome the confusion and decide if you need a repository record.</p>
+            <p>Records for repositories are also visualized differently, with a list of hosted manuscripts automatically extracted.</p>
+            <p>For INS-type records all general guidelines and especially those for <ref target="places">places</ref> are valid.
            All repository records should have a <att>subtype</att> with <val>institution</val>.</p>
-            <p>Please, note the difference between place and repository. A repository can change of place, it is a different conceptual entity. The fact that churches in Ethiopia are 
-            here considered repository may generate confusion in this regard as a church is always a repository and a place and is very unlikely to change of place. However, do consider the necessary 
-            alignment with other repositories more likely to change their premises over time, like libraries or museums. See also <ref target="placeOrInstitution">Place or Repository</ref>.</p>
+            
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <listPlace>
                   <place type="church dabr" subtype="institution">
