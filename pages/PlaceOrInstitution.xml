@@ -24,9 +24,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <body xml:id="placeOrInstitution"><div type="level1">
     
     
-            <p>All geographical locations should have a <ref target="places">PLACE</ref>-type record (prefixed LOC and stored in the Places repository), with co-ordinates and administrative division provided wherever possible.</p>
-            <p>At the same time, all repositories (libraries/archives/collections where manuscripts are preserved, including private collections, churches, monasteries, etc.) should have an <ref target="institution">INSTITUTION</ref>-type record (prefixed INS and stored in the Institutions repository).</p>
-            <p>If you need to mark up a locality mentioned in a work, or relevant for a manuscript, a person or a place place refer to a record of <ref target="places">PLACE</ref>-type (creating one if necessary).</p>
+            <p>All <emph>geographical locations</emph> should have a <ref target="places">PLACE</ref>-type record (prefixed LOC and stored in the Places repository), with co-ordinates and administrative division provided wherever possible.</p>
+            <p>At the same time, all <emph>repositories</emph> (libraries/archives/collections where manuscripts are preserved, including private collections, churches, monasteries, etc.) should have an <ref target="institution">INSTITUTION</ref>-type record (prefixed INS and stored in the Institutions repository).</p>
+            <p>A <emph>repository</emph> is a different conceptual entity from <emph>place</emph>: potentially a repository/library may move in space; and at the same time multiple repositories may share the same coordinates.</p>
+            <p>If you need to mark up a locality (mentioned in a work, or relevant for a manuscript, a person or a place) refer to a record of <ref target="places">PLACE</ref>-type (creating one if necessary).</p>
             <p>If you need to refer to a manuscript repository, in particular to link <gi>repository</gi> within the <gi>msIdentifier</gi> of a manuscript description, please refer to a record of <ref target="institution">INSTITUTION</ref>-type (creating one if necessary).</p>
             <p>If you need to refer to a manuscript repository which is a church or a monastery already present among the Places (either because it has been inherited from the initial list of authority files, or created in another context) but not among the Institutions please proceed as follows :</p>
     <list type="ordered:arabic">
