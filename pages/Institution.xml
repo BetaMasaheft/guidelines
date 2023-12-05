@@ -28,7 +28,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
          <div type="level2">
             <head>Specific encoding for manuscript repositories</head>
-            <p>All collections of manuscripts (churches, monasteries, archives, libraries, museums, private hands, etc) need a record of <gi>INS</gi>-type, stored under <gi>Institutions</gi>. This is the type of record we refer to within the <gi>msIdentifier</gi> as <gi>repository</gi>.</p>
+            <p>All collections of manuscripts (churches, monasteries, archives, libraries, museums, private hands, etc) need a record of <code>INS</code>-type, stored under <code>Institutions</code>. This is the type of record we refer to within the <gi>msIdentifier</gi> as <gi>repository</gi>.</p>
             
             <p>Please check the <ref target="placeOrInstitution">Place or Repository</ref> Guidelines section to decide if you need a repository record.</p>
             <p>Note that records for repositories are visualized differently, with a list of hosted manuscripts automatically extracted.</p>
