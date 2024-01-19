@@ -64,7 +64,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          The midpoint of the Psalms of David is indicated with the word <foreign xml:lang="gez">መንፈቁ፡</foreign>, encircled in black ink
             </egXML>
          </p>
-
+         <div type="level2">
+            <head>Scripts and alphabets</head>
+            <p>For languages that may be encoded in a variety of scripts, you can use the relevant script subtag to specify the particular script used. 
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                   <textLang xml:lang="ar-Ethi"/> (for an Arabic text written in Fidel)
+                  <textLang xml:lang="gez-Sarb"/> (for an Ethiopic inscription written in South Arabian script)
+               </egXML>
+               </p>
+            <p>Check the available language tags and subtags <ref target="https://betamasaheft.eu/Guidelines/?id=language">in the schema</ref>. For more information on language tags see <ref target="https://www.w3.org/International/questions/qa-choosing-language-tags">https://www.w3.org/International/questions/qa-choosing-language-tags</ref>; you can do the search for the tags and subtags here <ref target="https://r12a.github.io/app-subtags/">https://r12a.github.io/app-subtags/</ref>. If you need a new tag please contact the Bm team.
+            </p>
+         </div>
       </body>
    </text>
 </TEI>
