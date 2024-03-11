@@ -267,6 +267,14 @@ trials, notes crudely written in pencil or pen;</item>
                     </p>
             </div>
 
+            <div type="level2" xml:id="addinparts">
+                <head>Additions and varia in composite manuscripts</head>
+                
+                <p>When describing a composite manuscript, it is important to distinguish between additions and varia belonging to a specific codicological unit (e.g. glosses, finding aids, or marginal commentary added to the main text, or guest texts and notes added on the blank leaves formerly at the end of the production unit, even if these have now been bound into a larger codex, ownership records belonging to a distinct part, etc.), those belonging to the entire composite manuscript (e.g. library stamps, purchase records of the entire manuscript, etc), and those we cannot be sure about.</p>
+                <p>Additional paratexts that can be clearly associated with a specific codicological unit should be encoded in the <gi>physDesc</gi> of the relevant <gi>msPart</gi>. All other additions should be listed at the upper level of description, within the main <gi>physDesc</gi> section, even if their <gi>locus</gi> presently falls within one or the other <gi>msPart</gi>. </p>
+                
+            </div>
+
         </body>
     </text>
 </TEI>
