@@ -278,7 +278,7 @@ trials, notes crudely written in pencil or pen;</item>
             <div type="level2" xml:id="accmat">
                 <head>Accompanying material</head>
                 
-                <p>The circumstance may arise where material not originally part of a manuscript is bound into or otherwise kept with a manuscript. In some cases this material would best be treated in a separate <gi>msPart</gi> element. There are, however, cases where the additional matter is not self-evidently a distinct manuscript: it might, for example, be a set of notes by a later scholar, or a file of correspondence relating to the manuscript. The accMat element is provided as a holder for this kind of information. See also <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#msadac">https://tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#msadac</ref>
+                <p>The circumstance may arise where material not originally part of a manuscript is bound into or otherwise kept with a manuscript. In some cases this material would best be treated in a separate <gi>msPart</gi> element. There are, however, cases where the additional matter is not self-evidently a distinct manuscript: it might, for example, be a set of notes by a later scholar, or a file of correspondence relating to the manuscript. The <gi>accMat</gi> element is provided as a holder for this kind of information. See also <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#msadac">https://tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#msadac</ref>
                     
                 </p>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
