@@ -274,6 +274,18 @@ trials, notes crudely written in pencil or pen;</item>
                 <p>Additional paratexts that can be clearly associated with a specific codicological unit should be encoded in the <gi>physDesc</gi> of the relevant <gi>msPart</gi>. All other additions should be listed at the upper level of description, within the main <gi>physDesc</gi> section, even if their <gi>locus</gi> presently falls within one or the other <gi>msPart</gi>. </p>
                 
             </div>
+            
+            <div type="level2" xml:id="accmat">
+                <head>Accompanying material</head>
+                
+                <p>The circumstance may arise where material not originally part of a manuscript is bound into or otherwise kept with a manuscript. In some cases this material would best be treated in a separate <gi>msPart</gi> element. There are, however, cases where the additional matter is not self-evidently a distinct manuscript: it might, for example, be a set of notes by a later scholar, or a file of correspondence relating to the manuscript. The <gi>accMat</gi> element is provided as a holder for this kind of information. See also <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#msadac">https://tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#msadac</ref>
+                    
+                </p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <accMat> Loose <material key="paper">paper</material> slip with monogram of William Simpson</accMat>
+                </egXML>
+                
+            </div>
 
         </body>
     </text>
