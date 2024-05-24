@@ -69,6 +69,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               <p>When adding this transcription to a record, please add a <gi>sourceDesc</gi> <gi>p</gi>aragraph about the fact that the transcription is done with Transkribus
                   and add a <gi>change</gi> element detailing the transcription work carried out (corrected, not corrected, precision declared by the model, who has done the alignment and when, etc.).
                   It will also be useful to other users to add a <gi>note</gi> about the status of the transcription.</p>
+              <p>IMPORTANT: if you are using the <gi>xi:include</gi> for your transcription and  the main manuscript record already contains a <gi>text</gi> element, you must (1) remove the <gi>text</gi> and <gi>body</gi> tags in the transkribusText.xml file, and (2) insert the  relevant <gi>xi:include</gi> element inside of the <gi>text</gi> element of your main file.</p>
           </div>
           
           <div type="level3">
