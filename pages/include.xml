@@ -63,6 +63,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </p>
                 <p>You can include in files which are included, but please do not go deeper with folders than this order, just keep them all in the same folder, so that the relative path 
                 in <att>href</att> can be simply the filename.</p>
+                <p>IMPORTANT: if you are using the <gi>xi:include</gi> for your transcription and  the main manuscript record already contains a <gi>text</gi> element, you must (1) remove the <gi>text</gi> and <gi>body</gi> tags in the transkribusText.xml file, and (2) insert the  relevant <gi>xi:include</gi> element inside of the <gi>text</gi> element of your main file, cp. <ref target="https://github.com/BetaMasaheft/Manuscripts/commit/d32eeee5dd035986ca469fcafb3ab6f362b05fb6">this fix for an example</ref>.</p>
                 <p>Now, there are some qui-pro-quos. For example, validation will only be run from the main file. If you are working on any part you should look at errors
                 report in the main file. Also, Atom does not support this.</p>
             </div>
