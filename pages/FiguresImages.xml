@@ -38,6 +38,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </figure>
     </egXML>
     <p>Please, note that adding an image in these guidelines is slightly different as it requires an absolute reference to the info.json, which is not needed here.</p>
+      
+      <p>You can also insert images hosted elsewhere by adding in the <att>url</att> the absolute path to the image on the web, beginning with <gi>http</gi>. If you want to limit the image height you can add the <gi>height</gi> attribute. This can also be used to point to low resolution images.</p>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+        <figure>
+          <graphic
+            url="https://betamasaheft.eu/resources/images/snippets/BLorient12996/sign1.png" height="30px">
+            <desc>Symbol used in BL oriental 12996</desc>
+          </graphic>
+        </figure>
+      </egXML>
   </div>
   <div type="level1">
   <head>Linking images to the description</head>
