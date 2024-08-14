@@ -94,8 +94,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
  bm:AuthorYYYYkeyword
 </quote>
          </cit>
-         <p>Please make sure this contains no special characters, only digits
-    and Latin characters. To check that this is unique, after saving the
+            <p>Please make sure this contains <hi rendition="simple:bold">no special characters</hi>, only digits
+    and Latin ASCII characters; no dashes/hyphens/underscores/diacritics. To check that this is unique, after saving the
     record in Zotero, click on the tag and check that only one item has
     this tag. If not, change the keyword of the tag just assigned.</p>
          <p>When adding records to the Zotero Group Library, please follow
