@@ -306,7 +306,7 @@
             <item>If your entry is to be used in BetaMasaheft or Dillmann Online, then you need to add a tag with the following format and using only Latin alphabet letters: bm:AuthorYYYYkeyword
 <list>
 <item>For text editions accompanied by translation in a separate volume use ‘Text’ or ‘Versio’ at the end of the tag (e.g. bm:Arras1974TransituText, bm:Arras1974TransituVersio).</item>
-<item>Please make sure this contains no special characters, umlaut, underdots and other combining diacritics, only digits and Latin characters. To check that this is unique, after saving the record in Zotero, click on the tag and check that only one item has this tag. If not, change the keyword of the tag just assigned.</item>
+  <item>Please make sure this contains <hi rendition="simple:bold">no special characters</hi>, no umlaut, underdots and other combining diacritics, hyphens, dashes, or underscores; only digits and Latin ASCII characters. To check that this is unique, after saving the record in Zotero, click on the tag and check that only one item has this tag. If not, change the keyword of the tag just assigned.</item>
 </list>
             </item>
             <item>Please do not change existing tags, as they probably already have been used in Beta maṣāḥǝft or Dillmann.</item>
