@@ -76,14 +76,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
 
 <div type="textpart" subtype="chapter" n="7" corresp="#ms_i3" xml:id="chapter7" xml:lang="gez">
-    <ab>
-      <l n="1">በቀዳማዊ፡ ዐመተ፡ መንግሥቱ፡ ለበልጣሰር፡ ንጉሠ፡ ከለዴዎን፡ ሐለመ፡ ዳንኤል፡ ሕልመ፡ ወርእየ፡
-        ርእሶ፡ በውስተ፡ ምስካቡ፡ ወጸሐፈ፡ ሕልሞ። </l>
-      <l n="2">አነ፡ ዳንኤል፡ ሐለምኩ፡ ወርእኩ፡ አርባዕተ፡ ነፋሳተ፡
-        ነፍኁ፡ ውስተ፡ ባሕር፡ ዐቢይ፡ </l>
-      <l n="3">ወዐርጉ፡ አራዊት፡ አርባዕቱ፡ ዐበይት፡ እምባሕር፡ ኅቡረ፡ ወቀዳማዊ፡ </l>
-      <l n="4">ከመ፡ አንበሳዊት፡ ወባቲ፡ ክንፈ፡ ወክንፊሃኒ፡ ከመዝ፡ ንስር፡ ወርኢኩዋ፡ ውስከ፡ ተመልኀ፡ ክንፊሃ፡
-        ወተንሥአት፡ ወቆመት፡ በእግረ፡ ሰብእ፡ ዲበ፡ ምድር፡ ወልበ፡ ሰብእ፡ ተውህበ፡ ላቲ።</l>
+    <ab>በቀዳማዊ፡ ዐመተ፡ መንግሥቱ፡ ለበልጣሰር፡ ንጉሠ፡ ከለዴዎን፡ ሐለመ፡ ዳንኤል፡ ሕልመ፡ ወርእየ፡
+        ርእሶ፡ በውስተ፡ ምስካቡ፡ ወጸሐፈ፡ ሕልሞ።      
     </ab>
   </div>
 </egXML>
@@ -149,6 +143,52 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 </ab>
 </div>
+               </egXML>
+            </div>
+            <div type="level4">
+               <head>Poetry</head>
+               <p>For poetic text, you can specify lines as <gi>l</gi>.
+                  this takes a <att>n</att> which will have the line number. Stanzas can be grouped inside of a <gi>lg</gi> element.
+               </p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  LIT7035Tasabha
+                  <div type="textpart" xml:lang="gez">                                                                                               
+                     <ab>
+                        <l n="1">ተሰብሐ፡ ሰማዕተ፡ ልዳ፡ በልሳነ፡ ሰይፍ፡ ጸላዒሁ፡ እስመ፡ ድኅረ፡ አጽገበ፡ ነደ፡ ፍቁሮ፡ እመብልዓ፡ ነገሥት፡ ሰብአ፡ አቅረበ፡ ሎቱ፡ ፫ተ፡ ጽዋዓ፤</l>  
+                        <l n="2">መቃብርሂ፡ ነዳይ፡ ሐመዮ፡ እንዘ፡ ይቀውም፡ በአፍአ፤</l>
+                        <l n="3">መዓዛ፡ ሥጋሁ፡ እምጣነ፡ መልዓ፤</l>
+                        <l n="4">በአፅናፊሁ፡ አድባር፡ እመኒ፡ ግፉዓ፡</l>
+                        <l n="5">ድኅረ፡ ፍት፡ ዓጽሞ፡ ነሥአ።</l>
+                     </ab>                        
+                  </div>
+               </egXML>
+               
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  LIT6018MalkaSanbat
+                  <div type="textpart">
+                     <lg type="stanza" n="1">
+                        <l n="1">ድርሳን፡ ዘደረሰ፡ አሐዱ፡ ርቱዐ፡ ሃይማኖት፨</l>
+                        <l n="2">ሶበ፡ አገበሮ፡ ኪያሁ፡ ኅሊና፡ ፍትወት፨</l>
+                        <l n="3">በኵሉ፡ እሑድ፡ ወበሰናብት፨</l>
+                        <l n="4">ይትነበብ፡ ይቤ፡ መጽሐፈ፡ ዝንቱ፡ ማሕሌት፨</l>
+                        <l n="5">ዘኍላቌሁ፡ ሰኑይ፡ ወኃምስ፡ አርእስት፨</l>
+                     </lg>
+                     
+                     <lg type="stanza" n="2">
+                        <l n="1">ሶበ፡ አእመርኩ፡ በስምኪ፡ ከመ፡ ታቦተ፡ ይቄድሱ፨</l>
+                        <l n="2">ወድሶተኪ፡ ወጠንኩ፡ ለአእምሮትየ፡ መጠነ፡ ናእሱ፨</l>
+                        <l n="3">ሰንበተ፡ ክርስቲያ፡ ቅድስት፡ ንግሥተ፡ መሳፍንት፡ ስሱ፨</l>
+                        <l n="4">እለሰ፡ ኪያኪ፡ አርኰሱ፨</l>
+                        <l n="5">ፈቀዱ፡ ሞተ፡ ወኵነኔ፡ ኀሠሡ፨</l>
+                     </lg>
+                     ...
+                  </div>
+               </egXML>
+               <p>               If you want to highlight the fact that line breaks are present in the manuscript (whether poetry or prose) you can insert the <gi>lb</gi> tag</p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <q xml:lang="gez">
+                     <lb/>ብፁዕ፡ ብእሲ፡ ዘኢሖረ፡ በምክረ፡ ረሲዓን፨ <lb/>ወዘኢቆመ፡
+                     ውስተ፡ ፍኖተ፡ ኃጥአን፨ <lb/>ወዘኢነበረ፡ ውስተ፡ መንበረ፡ መስተሳልቃን፨</q>
                </egXML>
             </div>
             <div type="level4">
