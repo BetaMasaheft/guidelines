@@ -25,8 +25,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <body xml:id="explicit">
          <div>
             <head>explicit</head>
-            <p>Quoting incipits serves the purpose of the description of the manuscript's content e.g. to help to identify the texts or their parts and 
-               to help to realize the extention and completeness of a texts or its parts.  They should contain no more than 20 to 30 words and should 
+            <p>Quoting explicits serves the purpose of the description of the manuscript's content e.g. to help to identify the texts or their parts and 
+               to help to realize the extention and completeness of a texts or its parts. They should contain no more than 20 to 30 words and should 
                focus on meaningful and substantial last phrases of the text proper. Most common formulas and eulogies can be omitted and then should 
                be marked as a gap and ellipsis. When a text ends ex abrupto, it should be mentioned in a note and the final words should be quoted.</p>
          </div>
