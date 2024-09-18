@@ -32,16 +32,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 </p>
   <p>Examples of colophons recorded in Ethio-Spare are the following:
 <list>
-  <item>In <ref type="BM" target="ESqs006">QS-006</ref>, it is placed at the
+  <item>In <ref type="bm" target="ESqs006">QS-006</ref>, it is placed at the
   beginning (possibly the same in other Deggwa manuscripts) and refers to the beginning of the copying. </item>
-  <item>  In <ref type="BM" target="ESap008">AP-008</ref>, f. 140v, it refers to the beginning and the end
+  <item>  In <ref type="bm" target="ESap008">AP-008</ref>, f. 140v, it refers to the beginning and the end
   of the copying: <foreign xml:lang="gez">ዘተወጥነ᎓ በዘመነ᎓ ማቴዎስ᎓ ተፈጸመ᎓ በዘመነ᎓ ማርቆስ᎓ በዘመነ᎓ ሢመቱ᎓ ለዘሚካኤል።</foreign></item>
-  <item>  Short colophons: e.g. <ref type="BM" target="ESqsm002">QSM-002</ref>; <ref type="BM" target="ESmy018">MY-018</ref>.</item>
-  <item>Very long colophons extended with narratives: <ref type="BM" target="ESaqg019">AQG-19</ref>rv (“rejected leaf”);
+  <item>  Short colophons: e.g. <ref type="bm" target="ESqsm002">QSM-002</ref>; <ref type="bm" target="ESmy018">MY-018</ref>.</item>
+  <item>Very long colophons extended with narratives: <ref type="bm" target="ESaqg019">AQG-19</ref>rv (“rejected leaf”);
   <ref target="https://www.zotero.org/groups/358366/ethiostudies/items/tag/bm%3Abausi2016colof">Bausi 2016, 248</ref>, colophon in Octateuch of
   Dabra Bizan f. 574; 247-48, the so-called “Operetta di Arkaledes”, “Operetta di Yostinos”.
    Probably <ref target="https://www.zotero.org/groups/358366/ethiostudies/items/tag/bm%3Abausi2016colof">Bausi 2016, 245</ref>,
-   colophon in <ref type="BM" target="BLorient691">BritLib Orient. 691</ref>.
+   colophon in <ref type="bm" target="BLorient691">BritLib Orient. 691</ref>.
   <ref target="https://www.zotero.org/groups/358366/ethiostudies/items/tag/bm%3Abausi2016colof">Bausi 2016:255</ref>,
   colophon of a hagiographic manuscript from Tigray. </item>
   </list>
@@ -74,7 +74,7 @@ See <ref target="ColophSupplTit">Colophons, titles and supplications</ref>.
             </egXML>
             <p>Translations of the colophon should occur in the translation of the manuscript transcription, if any, inside a <tag>div type='translations'</tag>.</p>
             <p>You can use <att>type</att> with values like
-                <q>subscription</q> as in <ref target="ESsmm003" type="BM">SMM-003</ref>.</p>
+                <q>subscription</q> as in <ref target="ESsmm003" type="bm">SMM-003</ref>.</p>
             <p>Paragraphic information on the colophon can be entered inside <gi>colophon</gi> in a <gi>note</gi>, 
             as in this example from <ref type="bm" target="DSEthiop7">DSEthiop7</ref>:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
