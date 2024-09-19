@@ -39,7 +39,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Please, try to discuss any schema update in a issue before editing the schema.</p>
             <p>If you are happy with your changes, create a pull request for the modified .xml file. Once merged, the new RelaxNG schema file (.rng) and expanded versions will be generated automatically.</p>
             <p>If you want to test the RelaxNG prior to submitting your changes, you can always use the manual transformation, either with the help of your oXygen software (using the appropriate transformation scenario will save a .rng file in a "out" directory
-                relative to the place where your schema is stored) or by using the <ref target="https://roma.tei-c.org/">TEI Roma web application</ref> or with the <ref target="https://oxgarage2.tei-c.org/">OxGarage web application</ref>. Please do not commit any changes in .rng files to GitHub.</p>
+                relative to the place where your schema is stored; <ref target="https://github.com/TEIC/oxygen-tei/blob/master/oxygen-tei-plugin.md">check also this package</ref>) or by using the <ref target="https://roma.tei-c.org/">TEI Roma web application</ref> or with the <ref target="https://teigarage.tei-c.org">TEIGarage web application</ref> (converting from ODD document to RelaxNG schema). </p>
             <p>If you are not sure of what you are doing please ask.</p>
         </body>
     </text>
