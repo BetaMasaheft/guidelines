@@ -412,7 +412,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </cell>
                      <cell/>
                      <cell>
-                        <p>word/letter?</p>
+                        <p>[word/letter/phrase (underlined by a wavy line)?]</p>
                      </cell>
                   </row>
                   <row>
