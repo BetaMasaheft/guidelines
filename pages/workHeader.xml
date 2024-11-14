@@ -175,11 +175,11 @@ title in the language of the original.</p>
 <div type="level2">
 <head>Witnesses</head>
 
-<p>We use <gi>witness</gi> for those manuscripts
-which are <hi rendition="simple:bold">used</hi> for the
-edition we are going to provide in the
+<p>We always use <gi>witness</gi> for those manuscripts
+which are used for the
+edition we are going to (or could potentially) provide in the
 <tag>div type='edition'</tag>. All
-manuscript records containing the work are displayed in the app anyway.</p>
+manuscript records containing the work if they have been fully encoded with the correct reference are displayed in the app anyway. If manuscripts are known to contain the work but have not been properly encoded yet it is recommended to list them as <gi>witness</gi> (and make sure a corresponding stub or an external reference for the manuscript exist).</p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
    <sourceDesc>
       <listWit>
