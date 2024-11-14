@@ -183,12 +183,24 @@ manuscript records containing the work if they have been fully encoded with the 
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
    <sourceDesc>
       <listWit>
-         <witness corresp="BLorient818" xml:id="L"/>
-         <witness corresp="BNFet146" xml:id="P"/>
-         <witness corresp="ONBAeth4" xml:id="W"/>
+         <witness corresp="BLorient818"/>
+         <witness corresp="BNFet146"/>
+         <witness corresp="ONBAeth4"/>
       </listWit>
    </sourceDesc>
 </egXML>
+  <p>
+     When you list witnesses that are used in an edition please add the attribute <att>rend</att> with the value "edition" to the <gi>listWit</gi> and assign sigla as <att>xml:id</att> to each witness.
+   </p>
+   <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <sourceDesc>
+         <listWit rend="edition">
+            <witness corresp="BLorient818" xml:id="L"/>
+            <witness corresp="BNFet146" xml:id="P"/>
+            <witness corresp="ONBAeth4" xml:id="W"/>
+         </listWit>
+      </sourceDesc>
+   </egXML>
 <p>Please, as in all other instances of ID assigning, make sure you do not assign an existing ID. If you want to give as <att>xml:id</att> to the above witness with corresp ONBAeth4, the value of this cannot be this same string,
 which is the identifier of the manuscript. It is enough, for example, to use it in lower case.</p>
   
