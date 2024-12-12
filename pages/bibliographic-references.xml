@@ -17,7 +17,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>     </revisionDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+         <change who="NV" when="2024-12-12">added a paragraph on bibliographic references for enriched records and a note on the ambition to have the bibliography as complete as possible</change>
+      </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="bibliographic-references">
@@ -25,138 +29,128 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <div type="level2">
             <head>Bibliographies</head>
 
-            <p>Different <gi>listBibl</gi> are used for separate
-  types of entries. Within
-  <tag>listBibl type='editions'</tag> each bibl will be an
-  edition of this work.</p>
-            <p>References to the different manuscripts used for the editions can be done with a link directly to a
-  <gi>witness</gi>'s or a <gi>listWit</gi>'s
-  <att>xml:id</att> like in <ref type="bm" target="LIT2317Senodo">LIT2317Senodo</ref> and <ref type="bm" target="LIT1709Kebran">LIT1709Kebran</ref>:
-
-               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-               <listBibl type="editions">
-                  <bibl>
-                     <ptr target="bm:Praetorius1870Fabula"/>
-                  </bibl>
-                  <bibl corresp="#bnfet5 #bnfet146 #bdlbruce93 #bdlbruce87 #berlin395 #blor818 #blor819">
-                     <ptr target="bm:Bezold1905KebraN"/>
-                  </bibl>
-               </listBibl>
-               </egXML>
-
-            </p>
-            <p>When using <att>type</att> <val>translation</val>
-            encoders have sometimes also specified the language of the translation
-          in a <att>xml:lang</att>.</p>
-            <p>Secondary bibliographic references given in catalogues about a
-  certain work can also be included here, as they do not belong to the
-  manuscript description.</p>
-
-         </div>
-         <div type="level2">
-            <head>Distinguishing records encoded from catalogues and enriched records</head>
-            In order to clearly distinguish between records created on the basis of a historical catalogue only and between records significantly enriched, 
-            
-            <p>Different <gi>listBibl</gi> are used for separate
-               types of entries. Within
-               <tag>listBibl type='editions'</tag> each bibl will be an
-               edition of this work.</p>
-            <p>References to the different manuscripts used for the editions can be done with a link directly to a
-               <gi>witness</gi>'s or a <gi>listWit</gi>'s
-               <att>xml:id</att> like in <ref type="bm" target="LIT2317Senodo">LIT2317Senodo</ref> and <ref type="bm" target="LIT1709Kebran">LIT1709Kebran</ref>:
-               
-               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <p>Different <gi>listBibl</gi> are used for separate types of entries. Within
+                  <tag>listBibl type='editions'</tag> each bibl will be an edition of this work.</p>
+            <p>References to the different manuscripts used for the editions can be done with a link
+               directly to a <gi>witness</gi>'s or a <gi>listWit</gi>'s <att>xml:id</att> like in
+                  <ref type="bm" target="LIT2317Senodo">LIT2317Senodo</ref> and <ref type="bm"
+                  target="LIT1709Kebran">LIT1709Kebran</ref>: <egXML
+                  xmlns="http://www.tei-c.org/ns/Examples">
                   <listBibl type="editions">
                      <bibl>
                         <ptr target="bm:Praetorius1870Fabula"/>
                      </bibl>
-                     <bibl corresp="#bnfet5 #bnfet146 #bdlbruce93 #bdlbruce87 #berlin395 #blor818 #blor819">
+                     <bibl
+                        corresp="#bnfet5 #bnfet146 #bdlbruce93 #bdlbruce87 #berlin395 #blor818 #blor819">
                         <ptr target="bm:Bezold1905KebraN"/>
                      </bibl>
                   </listBibl>
                </egXML>
-               
             </p>
-            <p>When using <att>type</att> <val>translation</val>
-               encoders have sometimes also specified the language of the translation
-               in a <att>xml:lang</att>.</p>
-            <p>Secondary bibliographic references given in catalogues about a
-               certain work can also be included here, as they do not belong to the
-               manuscript description.</p>
-            
+            <p>When using <att>type</att>
+               <val>translation</val> encoders have sometimes also specified the language of the
+               translation in a <att>xml:lang</att>.</p>
+            <p>Secondary bibliographic references given in catalogues about a certain work can also
+               be included here, as they do not belong to the manuscript description.</p>
+
          </div>
-         
          <div type="level2">
-           <head>References</head>
-         <p>Bibliographic references are marked-up by a
-    <gi>bibl</gi> element containing at least a
-    <gi>ptr</gi> element with a
-    <att>target</att>, as in the following example:</p>
-         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<bibl>
-  <ptr target="bm:Villa2013Erma"/>
-</bibl>
-</egXML>
-         <p>If you need to add an indication of exact reference, it should be given in a
-    <gi>citedRange</gi> element, as in the following
-    example:</p>
-         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<bibl>
-  <ptr target="bm:Villa2014Erma"/>
-  <citedRange unit="page">5-13</citedRange>
-</bibl>
-</egXML>
-         <p>
-            <gi>citedRange</gi> can take several values in
-    <att>unit</att> and can be repeated if there is a need
-    to specify a volume, an entry, etc.</p>
-         <p>Please, <hi rendition="simple:bold">do not</hi> use <att>from</att> and
-    <att>to</att> in <gi>citedRange</gi> as
-    this is unnecessary.</p>
-         <p>Please note that lists of references about a manuscript should be
-    kept with the manuscript and bibliography about a text should be
-    kept with the text, etc. No typed bibliography is entered in the
-    record, only pointers to a common bibliographic database.</p>
-         <p>The target should be a uniquely assigned tag in the
-    <ref target="https://www.zotero.org/groups/ethiostudies/items">Zotero
-    Group Bibliography EthioStudies</ref>. If the item you want to cite
-    does not yet have a unique tag, please assign one with this format
-    and using only Latin alphabet letters</p>
-         <cit>
-            <quote>
- bm:AuthorYYYYkeyword
-</quote>
-         </cit>
-            <p>Please make sure this contains <hi rendition="simple:bold">no special characters</hi>, only digits
-               and Latin ASCII characters; no dashes/hyphens/underscores/diacritics. Make the tag as short as possible. To check that this is unique, after saving the
-    record in Zotero, click on the tag and check that only one item has
-    this tag. If not, change the keyword of the tag just assigned.</p>
-         <p>When adding records to the Zotero Group Library, please follow
-    the principles <ref target="zotero">at this
-    page</ref>.</p>
-</div>
-<div type="level2">
-  <p>You can use a <att>corresp</att> to link a <gi>bibl</gi> element to a
-part of the file with an <att>xml:id</att>.</p>
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-  <bibl corresp="#t3arabic">
-  <ptr target="bm:Enger1856Transitu"/>
-  </bibl>
-</egXML>
-<p>The above example would point the bibliographical reference directly to the <gi>title</gi> with that ID.</p>
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <head>Bibliographic references for enriched records</head>
+            <p>Following <ref target="https://github.com/BetaMasaheft/Documentation/issues/2630">issue
+               2630</ref>, in cases of enriching a historical catalogue description, such as verifying images or
+               adding new information, to acknowledge this, one can include the marked-up by a
+                  <gi>bibl</gi> element containing a <gi>ptr</gi> element with a <att>target</att>,
+               with <tag>bm:BmWebsite</tag>, as in the following example: <egXML
+                  xmlns="http://www.tei-c.org/ns/Examples">
+                  <listBibl type="catalogue">
+                     <bibl>
+                        <ptr target="bm:BmWebsite"/>
+                     </bibl>
+                  </listBibl>
+               </egXML>
+            </p>
+            <p> As a result, instead of the standard note saying 'This manuscript description is
+               based on the catalogues listed in the catalogue bibliography', the record will
+               contain the following note: 'This manuscript description is based on the catalogue(s)
+               listed in the catalogue bibliography and has been corrected or enriched by the Bm
+               project team; please check Revision history for more information' </p>
 
-                 <bibl corresp="#blorient481">
-                    <ptr target="bm:Wright1877BM"/>
-                    <citedRange unit="page">2-4</citedRange>
-                 </bibl>
-</egXML>
+            <p>Note that for newly catalogued manuscripts, no additional action is required, and
+               the reference <gi>bibl</gi><ptr target="bm:BmWebsite"/> should not be added.</p>
 
-<p>In this second example the <att>corresp</att> points to a <gi>witness</gi> with <att>xml:id</att>. </p>
-<p>If you want to encode a bibliographic reference provided by a catalogue to a editions of a text and catalogue descriptions of manuscripts featuring the same work, please add bibliography to the work or manuscript in question directly.</p>
+            <p>When closely following a historical catalogue, continue citing it in the standard
+               format discussed below, without adding <ptr target="bm:BmWebsite"/>. </p>
 
+         </div>
 
-</div>
+         <div type="level2">
+            <head>References</head>
+            <p>Bibliographic references are marked-up by a <gi>bibl</gi> element containing at least
+               a <gi>ptr</gi> element with a <att>target</att>, as in the following example:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <bibl>
+                  <ptr target="bm:Villa2013Erma"/>
+               </bibl>
+            </egXML>
+            <p>If you need to add an indication of exact reference, it should be given in a
+                  <gi>citedRange</gi> element, as in the following example:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <bibl>
+                  <ptr target="bm:Villa2014Erma"/>
+                  <citedRange unit="page">5-13</citedRange>
+               </bibl>
+            </egXML>
+            <p>
+               <gi>citedRange</gi> can take several values in <att>unit</att> and can be repeated if
+               there is a need to specify a volume, an entry, etc.</p>
+            <p>Please, <hi rendition="simple:bold">do not</hi> use <att>from</att> and <att>to</att>
+               in <gi>citedRange</gi> as this is unnecessary.</p>
+            <p>Please note that lists of references about a manuscript should be kept with the
+               manuscript and bibliography about a text should be kept with the text, etc. No typed
+               bibliography is entered in the record, only pointers to a common bibliographic
+               database.</p>
+            <p>The target should be a uniquely assigned tag in the <ref
+                  target="https://www.zotero.org/groups/ethiostudies/items">Zotero Group
+                  Bibliography EthioStudies</ref>. If the item you want to cite does not yet have a
+               unique tag, please assign one with this format and using only Latin alphabet
+               letters</p>
+            <cit>
+               <quote> bm:AuthorYYYYkeyword </quote>
+            </cit>
+            <p>Please make sure this contains <hi rendition="simple:bold">no special
+               characters</hi>, only digits and Latin ASCII characters; no
+               dashes/hyphens/underscores/diacritics. Make the tag as short as possible. To check
+               that this is unique, after saving the record in Zotero, click on the tag and check
+               that only one item has this tag. If not, change the keyword of the tag just
+               assigned.</p>
+            <p>When adding records to the Zotero Group Library, please follow the principles <ref
+                  target="zotero">at this page</ref>.</p>
+         </div>
+         <div type="level2">
+            <p>You can use a <att>corresp</att> to link a <gi>bibl</gi> element to a part of the
+               file with an <att>xml:id</att>.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <bibl corresp="#t3arabic">
+                  <ptr target="bm:Enger1856Transitu"/>
+               </bibl>
+            </egXML>
+            <p>The above example would point the bibliographical reference directly to the
+                  <gi>title</gi> with that ID.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <bibl corresp="#blorient481">
+                  <ptr target="bm:Wright1877BM"/>
+                  <citedRange unit="page">2-4</citedRange>
+               </bibl>
+            </egXML>
+
+            <p>In this second example the <att>corresp</att> points to a <gi>witness</gi> with
+                  <att>xml:id</att>. </p>
+            <p>If you want to encode a bibliographic reference provided by a catalogue to a editions
+               of a text and catalogue descriptions of manuscripts featuring the same work, please
+               add bibliography to the work or manuscript in question directly.</p>
+            <p>Note that the bibliography, both primary and secondary, should be as exhaustive as possible whenever feasible.</p>
+
+         </div>
       </body>
    </text>
 </TEI>

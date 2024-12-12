@@ -70,6 +70,17 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>You can fix this by merging the two records in one and deleting the one with less information. Remember when doing this to check for references to the id which will go missing, and update them to point to the other identifier.</p>
             </div>
          <div type="level2">
+            <head>Differenciating between various levels of description</head>
+            <p>Following  <ref target="https://github.com/BetaMasaheft/Documentation/issues/2700"
+               >issue 2700</ref>, to mark a rudimentary description as "stub" (if the cataloguer wants others consider it as "stub"), one needs to 
+               write the word "stub" anywhere in the change history.  When the record has stopped being a stub as it has been developed further then in the first change line the word stub must replaced with something like initial version or anything else.  
+             </p>
+            <p>On the opposite, following <ref target="https://github.com/BetaMasaheft/Documentation/issues/2630">issue
+               2630</ref>, in cases of enriching a historical catalogue description, such as verifying images or
+               adding new information, one can acknowledge this using <ptr target="bm:BmWebsite"/>, see the respective paragraph in <ref target="bibliographic-references"
+                  >Bibliographic References</ref></p>
+         </div>
+         <div type="level2">
             <head>Manuscript Encoding: Overview</head>
             <list>
                <item><ref target="structure">General structure of the Manuscript record</ref></item>

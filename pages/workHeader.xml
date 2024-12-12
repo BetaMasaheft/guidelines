@@ -12,450 +12,458 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </titleStmt>
          <publicationStmt>
             <p/>
-          </publicationStmt>
+         </publicationStmt>
          <sourceDesc>
             <p>Produced by pandoc. Conversion from GIT flavoured markdown to TEI simple.</p>
             <p>transformed to TEI documentation with XSLT by Pietro Liuzzo</p>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>
+      </fileDesc>
+      <revisionDesc>
 
-        <change who="DR" when="2018-04-26">editing of the Work section of the guidelines</change>
-          <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
-         <change who="DR" when="2018-12-03">added paragraph on TUK IDs and relations with other databases</change>
-        <change who="PL" when="2019-02-28">added example</change>
+         <change who="DR" when="2018-04-26">editing of the Work section of the guidelines</change>
+         <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
+         <change who="DR" when="2018-12-03">added paragraph on TUK IDs and relations with other
+            databases</change>
+         <change who="PL" when="2019-02-28">added example</change>
          <change who="DR" when="2019-06-17">added specification and example for title</change>
+         <change who="NV">added link to the bibliographic reference and issues</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="work-teiHeader">
 
-<div type="level2">
-   <head>titleStmt</head>
+         <div type="level2">
+            <head>titleStmt</head>
 
-<p>
-   The title(s) of the work are encoded in <gi>titleStmt</gi>:
+            <p> The title(s) of the work are encoded in <gi>titleStmt</gi>: <egXML
+                  xmlns="http://www.tei-c.org/ns/Examples">
+                  <titleStmt>
+                     <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ቅዳሴ፡</title>
+                     <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa qǝddāse</title>
+                     <title xml:lang="en" corresp="#t1">Book of the Consecration</title>
+                     <title xml:lang="en" xml:id="t2">Missal</title>
+                     <title xml:lang="en" xml:id="t3">Book of Liturgy</title>
+                     <editor role="generalEditor" key="AB"/>
+                     <funder>Akademie der Wissenschaften in Hamburg</funder>
+                  </titleStmt>
+               </egXML> In general, the normalized version of the Gǝʿz is the one printed on the app
+               to refer to a work. If another title should be printed, because it is the standard
+               title used when referring to this work, you can also use <att>type</att> with value
+                  <val>main</val> to signal the title which is to be used for labels, pointers and
+               headers. </p>
+            <p>The title which will be printed on the website will therefore be, in order of
+               priority <list>
+                  <item><tag>title[@type = 'main'][@corresp = '#t1']</tag></item>
+                  <item><tag>title[@corresp = '#t1'][@xml:lang = 'am']</tag></item>
+                  <item><tag>title[@corresp = '#t1'][@xml:lang = 'gez']</tag></item>
+                  <item><tag>title[@corresp = '#t1'][@xml:lang = 'en']</tag></item>
+                  <item><tag>title[@corresp = '#t1']</tag></item>
+                  <item>
+                     <tag> title[1]</tag></item>
+               </list> In the example above, therefore <hi rendition="simple:italic">Maṣḥafa
+                  qǝddāse</hi> will be printed. Please be as careful in your encoding of titles as
+               everywhere else to correctly encode the facts and not adapt them to achieve a certain
+               visualization. </p>
 
-   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <titleStmt>
-         <title xml:lang="gez" xml:id="t1">መጽሐፈ፡ ቅዳሴ፡</title>
-         <title xml:lang="gez" corresp="#t1" type="normalized">Maṣḥafa qǝddāse</title>
-         <title xml:lang="en" corresp="#t1">Book of the Consecration</title>
-         <title xml:lang="en" xml:id="t2">Missal</title>
-         <title xml:lang="en" xml:id="t3">Book of Liturgy</title>
-         <editor role="generalEditor" key="AB"/>
-         <funder>Akademie der Wissenschaften in Hamburg</funder>
-      </titleStmt>
-   </egXML>
+            <p>Titles of the same work in another tradition will be reported following the same rule
+               and attributing an arbitrary t+digit <att>xml:id</att> and the appropriate
+                  <att>xml:lang</att>. </p>
 
-   In general, the normalized version of the Gǝʿz is the one printed on the app to refer to a work. If another title should be printed, because it is the standard title used when
-   referring to this work, you can also use <att>type</att> with value <val>main</val> to signal
-   the title which is to be used for labels, pointers and headers.
-</p>
-<p>The title which will be printed on the website will therefore be, in order of priority
-   <list>
-      <item><tag>title[@type = 'main'][@corresp = '#t1']</tag></item>
-      <item><tag>title[@corresp = '#t1'][@xml:lang = 'am']</tag></item>
-      <item><tag>title[@corresp = '#t1'][@xml:lang = 'gez']</tag></item>
-      <item><tag>title[@corresp = '#t1'][@xml:lang = 'en']</tag></item>
-      <item><tag>title[@corresp = '#t1']</tag></item>
-      <item>  <tag> title[1]</tag></item>
-   </list>
-   In the example above, therefore <hi rendition="simple:italic">Maṣḥafa qǝddāse</hi> will be printed.
-   Please be as careful in your encoding of titles as everywhere else to correctly encode the facts and not adapt 
-   them to achieve a certain visualization.
-    </p>
+            <p>You can also use <tag>title type='short'</tag> for shortened titles like citation
+               forms: <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <title xml:lang="gez" xml:id="t1">ወንጌል፡ ዘዮሐንስ፡</title>
+                  <title xml:lang="gez" corresp="#t1" type="normalized">Wangel za-Yoḥannǝs</title>
+                  <title xml:lang="en" corresp="#t1" type="main">Gospel of John</title>
+                  <title type="short">Jn.</title>
+               </egXML>
+            </p>
 
-   <p>Titles of the same work in another tradition will be reported
-      following the same rule and attributing an arbitrary t+digit <att>xml:id</att>
-      and the appropriate <att>xml:lang</att>.
-   </p>
+            <p>If a subpart of a work, which does not circulate independently in the Ethiopic
+               tradition, does circulate independently in other traditions, the relevant titles and
+               references will be added in the appropriate <tag>div type='textpart'</tag>, not in
+                  <gi>titleStmt</gi>. </p>
 
-   <p>You can also use <tag>title type='short'</tag> for shortened
-      titles like citation forms:
-   <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <p>For works for which no standard title is known, such as short prayers or hymns, it is
+               preferable to use the beginning as title. A more generic title can then be given
+               later, as in this example from <ref type="bm" target="LIT4719Eweddesa"
+                  >LIT4719Eweddesa</ref>: <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <title xml:lang="gez" xml:id="t1">እዌድሳ፡ ለውድስት፡</title>
+                  <title xml:lang="gez" corresp="#t1">ʾƎweddǝsā la-wǝddǝst</title>
+                  <title xml:lang="en" corresp="#t1">I praise the praised one</title>
+                  <title xml:lang="en" xml:id="t2">Hymn to Mary</title>
+               </egXML>
+            </p>
 
-      <title xml:lang="gez" xml:id="t1">ወንጌል፡ ዘዮሐንስ፡</title>
-      <title xml:lang="gez" corresp="#t1" type="normalized">Wangel za-Yoḥannǝs</title>
-      <title xml:lang="en" corresp="#t1" type="main">Gospel of John</title>
-      <title type="short">Jn.</title>
-   </egXML>
-   </p>
-
-<p>If a subpart of a work, which does not circulate independently  in the Ethiopic
-   tradition, does circulate independently in other
-   traditions, the relevant titles and references will be added in the appropriate
-   <tag>div type='textpart'</tag>, not in <gi>titleStmt</gi>.
-</p>
-
-   <p>For works for which no standard title is known, such as short prayers or hymns, it is preferable to use the beginning as title. A more generic title can then be
-      given later, as in this example from <ref type="bm" target="LIT4719Eweddesa">LIT4719Eweddesa</ref>:
-
-   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <title xml:lang="gez" xml:id="t1">እዌድሳ፡ ለውድስት፡</title>
-      <title xml:lang="gez" corresp="#t1">ʾƎweddǝsā la-wǝddǝst</title>
-      <title xml:lang="en" corresp="#t1">I praise the praised one</title>
-      <title xml:lang="en" xml:id="t2">Hymn to Mary</title>
-   </egXML>
-   </p>
-
-</div>
+         </div>
 
 
-<div type="level2">
-<head>Authors</head>
-<p>Please Note that we will encode
-<hi rendition="simple:bold">AUTHORSHIP</hi> as a relation in the work
-record, to be more specific and explicit about the sort of
-authorship.</p>
-<p>
-   <tag>relation name='dcterms:creator' active='LIT1608hoheta' passive='PRS4709Giyorgis'</tag>
-</p>
-<p>This means that the work has this author.</p>
-<p>If a work is traditionally attributed to an author whose authorship
-is not currently considered to be historical, this can be expressed
-verbally with bibliographic references in the description of the
-relation, for example, LIT1608hoheta:</p>
-<p>
-   <tag>relation name='saws:isAttributedToAuthor' active='LIT1608hoheta' passive="PRS4709Giyorgis'</tag>
-</p>
-<p>
-   <tag>relation name='saws:isAttributedToAuthor' active='LIT1608hoheta' passive='PRS3709eleni'</tag>
-   <!--descThe traditional attribution to persName ref="PRS3709eleni"/             is considered unlikely by biblptr target="bm:Habtemichael2007Hoheta"//bibl./desc/relation</tag>-->
-</p>
-<p>you can use many of this and also have different types for one
-work. If you come across records which use the author element, please
-correct them.</p>
-<p>You might need to express concept which need more than one
-relation. For example, if Person A is author of a translation B of a
-work C in Arabic, you will need a relation of authorship between A and
-B (A isAuthorOf B) and the relation stating the fact that B is a
-translation of C (B isLooseTranslationOf C). If a digital edition of
-the translated work exists, please use that as a value in the
-relation. If no such edition exist you might point to the ID of the
-title in the language of the original.</p>
+         <div type="level2">
+            <head>Authors</head>
+            <p>Please Note that we will encode <hi rendition="simple:bold">AUTHORSHIP</hi> as a
+               relation in the work record, to be more specific and explicit about the sort of
+               authorship.</p>
+            <p>
+               <tag>relation name='dcterms:creator' active='LIT1608hoheta'
+                  passive='PRS4709Giyorgis'</tag>
+            </p>
+            <p>This means that the work has this author.</p>
+            <p>If a work is traditionally attributed to an author whose authorship is not currently
+               considered to be historical, this can be expressed verbally with bibliographic
+               references in the description of the relation, for example, LIT1608hoheta:</p>
+            <p>
+               <tag>relation name='saws:isAttributedToAuthor' active='LIT1608hoheta'
+                  passive="PRS4709Giyorgis'</tag>
+            </p>
+            <p>
+               <tag>relation name='saws:isAttributedToAuthor' active='LIT1608hoheta'
+                  passive='PRS3709eleni'</tag>
+               <!--descThe traditional attribution to persName ref="PRS3709eleni"/             is considered unlikely by biblptr target="bm:Habtemichael2007Hoheta"//bibl./desc/relation</tag>-->
+            </p>
+            <p>you can use many of this and also have different types for one work. If you come
+               across records which use the author element, please correct them.</p>
+            <p>You might need to express concept which need more than one relation. For example, if
+               Person A is author of a translation B of a work C in Arabic, you will need a relation
+               of authorship between A and B (A isAuthorOf B) and the relation stating the fact that
+               B is a translation of C (B isLooseTranslationOf C). If a digital edition of the
+               translated work exists, please use that as a value in the relation. If no such
+               edition exist you might point to the ID of the title in the language of the
+               original.</p>
 
-</div>
+         </div>
 
-<div type="level2">
-<head>Clavis IDs</head>
-<p>Inside <gi>sourceDesc</gi>, IDs of the work in different claves can be given in <tag>listBibl type='clavis'</tag>:</p>
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-<listBibl type="clavis">
-   <bibl corresp="#t2coptic" type="CC"><ptr target="bm:CC"/><citedRange unit="item">123</citedRange></bibl>
-   <bibl  type="CPG"><ptr target="bm:CPG1"/><citedRange unit="item">123</citedRange></bibl>
-   <bibl type="BHO"><ptr target="bm:BHO"/><citedRange unit="item">123</citedRange></bibl>
-   <bibl  type="CANT"><ptr target="bm:CANT1"/><citedRange unit="item">123</citedRange></bibl>
-   <bibl  type="CAVT"><ptr target="bm:CAVT2"/><citedRange unit="item">123</citedRange></bibl>
-   <bibl  type="BHL"><ptr target="bm:BHL"/><citedRange unit="item">123</citedRange></bibl>
-   <bibl type="syriaca"><ptr target="bm:syriaca"/><citedRange unit="item">123</citedRange></bibl>
-   <bibl type="KRZ"><ptr target="bm:KRZ"/><citedRange unit="item">123</citedRange></bibl>
-</listBibl>
-</egXML>
-   <p>You cannot have both <gi>p</gi> and <gi>listBibl</gi> in <gi>sourceDesc</gi>, so if you also need paragraphs, add another <gi>sourceDesc</gi>.</p>
-   <p>Please use only the clavis IDs given in this example. If there is another clavis you would like to add to this list, please open an issue to discuss it. Other
-      references to works in standardized lists, such as Chaîne's Répertoire or various publications listing the single Miracles of Mary can
-      be given as a bibliographic reference in <gi>listBibl</gi>, while references to external sources such as the <ref target="https://corpuscoranicum.de/kontexte/uebersicht">Umwelttexte
-    by Corpus Coranicum</ref>  can be given in a <gi>relation</gi> between the record and the external reference in
-   <gi>listRelation</gi>, see below.</p>
-   <p>If there is a need to assign an external clavis ID to textparts of a work, this should be done within
-     <tag>div type="edition"</tag>. A Clavis ID should be assigned for each textpart inside <gi>listBible</gi>:</p>
-   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-   <div type="textpart" xml:id="Theophilos2">
-                 <label>Extract from the 21st Festal letter (Graf 1937, 383)</label>
-                 <listBibl type="clavis">
-                    <bibl type="CPG">
-                       <ptr target="bm:CPG2"/>
-                       <citedRange unit="item">2589</citedRange>
-                    </bibl>
-                 </listBibl>
-              </div>
-    </egXML>
-</div>
+         <div type="level2">
+            <head>Clavis IDs</head>
+            <p>Inside <gi>sourceDesc</gi>, IDs of the work in different claves can be given in
+                  <tag>listBibl type='clavis'</tag>:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <listBibl type="clavis">
+                  <bibl corresp="#t2coptic" type="CC"><ptr target="bm:CC"/><citedRange unit="item"
+                        >123</citedRange></bibl>
+                  <bibl type="CPG"><ptr target="bm:CPG1"/><citedRange unit="item"
+                     >123</citedRange></bibl>
+                  <bibl type="BHO"><ptr target="bm:BHO"/><citedRange unit="item"
+                     >123</citedRange></bibl>
+                  <bibl type="CANT"><ptr target="bm:CANT1"/><citedRange unit="item"
+                     >123</citedRange></bibl>
+                  <bibl type="CAVT"><ptr target="bm:CAVT2"/><citedRange unit="item"
+                     >123</citedRange></bibl>
+                  <bibl type="BHL"><ptr target="bm:BHL"/><citedRange unit="item"
+                     >123</citedRange></bibl>
+                  <bibl type="syriaca"><ptr target="bm:syriaca"/><citedRange unit="item"
+                        >123</citedRange></bibl>
+                  <bibl type="KRZ"><ptr target="bm:KRZ"/><citedRange unit="item"
+                     >123</citedRange></bibl>
+               </listBibl>
+            </egXML>
+            <p>You cannot have both <gi>p</gi> and <gi>listBibl</gi> in <gi>sourceDesc</gi>, so if
+               you also need paragraphs, add another <gi>sourceDesc</gi>.</p>
+            <p>Please use only the clavis IDs given in this example. If there is another clavis you
+               would like to add to this list, please open an issue to discuss it. Other references
+               to works in standardized lists, such as Chaîne's Répertoire or various publications
+               listing the single Miracles of Mary can be given as a bibliographic reference in
+                  <gi>listBibl</gi>, while references to external sources such as the <ref
+                  target="https://corpuscoranicum.de/kontexte/uebersicht">Umwelttexte by Corpus
+                  Coranicum</ref> can be given in a <gi>relation</gi> between the record and the
+               external reference in <gi>listRelation</gi>, see below.</p>
+            <p>If there is a need to assign an external clavis ID to textparts of a work, this
+               should be done within <tag>div type="edition"</tag>. A Clavis ID should be assigned
+               for each textpart inside <gi>listBible</gi>:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <div type="textpart" xml:id="Theophilos2">
+                  <label>Extract from the 21st Festal letter (Graf 1937, 383)</label>
+                  <listBibl type="clavis">
+                     <bibl type="CPG">
+                        <ptr target="bm:CPG2"/>
+                        <citedRange unit="item">2589</citedRange>
+                     </bibl>
+                  </listBibl>
+               </div>
+            </egXML>
+         </div>
 
-<div type="level2">
-<head>Witnesses</head>
+         <div type="level2">
+            <head>Witnesses</head>
 
-<p>We always use <gi>witness</gi> for those manuscripts
-which are used for the
-edition we are going to (or could potentially) provide in the
-<tag>div type='edition'</tag>. All
-manuscript records containing the work if they have been fully encoded with the correct reference are displayed in the app anyway. If manuscripts are known to contain the work but have not been properly encoded yet it is recommended to list them as <gi>witness</gi> (and make sure a corresponding stub or an external reference for the manuscript exist).</p>
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-   <sourceDesc>
-      <listWit>
-         <witness corresp="BLorient818"/>
-         <witness corresp="BNFet146"/>
-         <witness corresp="ONBAeth4"/>
-      </listWit>
-   </sourceDesc>
-</egXML>
-  <p>
-     When you list witnesses that are used in an edition please add the attribute <att>rend</att> with the value "edition" to the <gi>listWit</gi> and assign sigla as <att>xml:id</att> to each witness.
-   </p>
-   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <sourceDesc>
-         <listWit rend="edition">
-            <witness corresp="BLorient818" xml:id="L"/>
-            <witness corresp="BNFet146" xml:id="P"/>
-            <witness corresp="ONBAeth4" xml:id="W"/>
-         </listWit>
-      </sourceDesc>
-   </egXML>
-<p>Please, as in all other instances of ID assigning, make sure you do not assign an existing ID. If you want to give as <att>xml:id</att> to the above witness with corresp ONBAeth4, the value of this cannot be this same string,
-which is the identifier of the manuscript. It is enough, for example, to use it in lower case.</p>
-  
-<p>
+            <p>As stated in <ref target="https://github.com/BetaMasaheft/Documentation/issues/714"
+                  >issue 714</ref>, we always use <gi>witness</gi> for those manuscripts which are
+               used for the edition we are going to (or could potentially) provide in the <tag>div
+                  type='edition'</tag>, if one click 'text' in the upper menu. All manuscript
+               records containing the work if they have been fully encoded with the correct
+               reference are displayed in the app anyway. However, since not all manuscript records
+               have been properly encoded yet, following <ref
+                  target="https://github.com/BetaMasaheft/Documentation/issues/2690">issue
+                  2690</ref> and <ref
+                  target="https://github.com/BetaMasaheft/Documentation/issues/2699">issue
+                  2699</ref>, if someone wants to list further records containing this work, an
+               acceptable practice is to list otherwise invisible manuscripts as <gi>witness</gi> as well.
+           Since identification of witnesses is part of the research, whoever has done it should be acknowledge in the <gi>note</gi> and bibliographic references (if available).</p>
+            <p>If someone decides to list manuscripts that were neither used in the edition nor fall in the category of stubs, for the sake of clarity, using the <gi>note</gi>, one can state what is its specific relevance.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <sourceDesc>
+                  <listWit>
+                     <witness corresp="BLorient818"/>
+                     <witness corresp="BNFet146"/>
+                     <witness corresp="ONBAeth4"/>
+                  </listWit>
+               </sourceDesc>
+            </egXML>
+            <p> When you list witnesses that are used in an edition please add the attribute
+                  <att>rend</att> with the value "edition" to the <gi>listWit</gi> and assign sigla
+               as <att>xml:id</att> to each witness. </p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <sourceDesc>
+                  <listWit rend="edition">
+                     <witness corresp="BLorient818" xml:id="L"/>
+                     <witness corresp="BNFet146" xml:id="P"/>
+                     <witness corresp="ONBAeth4" xml:id="W"/>
+                  </listWit>
+               </sourceDesc>
+            </egXML>
+            <p>Please, as in all other instances of ID assigning, make sure you do not assign an
+               existing ID. If you want to give as <att>xml:id</att> to the above witness with
+               corresp ONBAeth4, the value of this cannot be this same string, which is the
+               identifier of the manuscript. It is enough, for example, to use it in lower case.</p>
 
-   <gi>listWit</gi>s can be nested if needed, for example,
-to group them in families. Each <gi>witness</gi> will
-have to take a <att>corresp</att> pointing to the
-manuscript <att>xml:id</att>. If the manuscript is in already described in
-Beta maṣāḥǝft, that is enough. If the manuscript is described in an
-external catalogue, then use <tag>@type='external'</tag>. 
-   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <listWit>
-         <witness type="external" xml:id="P" 
-            corresp="http://digi.ub.uni-heidelberg.de/diglit/cpgraec398/0569" 
-            facs="http://digi.ub.uni-heidelberg.de/diglit/cpgraec398/0569">
-            <idno>Cod. Pal. graec. 398</idno>
-            <ptr target="https://digi.ub.uni-heidelberg.de/diglit/iiif/cpgraec398/manifest.json"/>
-            Sammelhandschrift — Konstantinopel, letztes Viertel 9. Jh.
-         </witness>
-         <witness type="external" xml:id="L" 
-            corresp="http://www.bl.uk/manuscripts/Viewer.aspx?ref=add_ms_19391_f009r" 
-            facs="http://www.bl.uk/manuscripts/Viewer.aspx?ref=add_ms_19391_f009r">
-            <idno>British Library Add MS 19391</idno>
-         </witness>
-      </listWit>
-   </egXML>
-   A simpler form, with only the link would also be ok.
-   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <witness corresp="https://eap.bl.uk/archive-file/EAP286-1-1-133" type="external"/>
-   </egXML>
-</p>
-<p>   
-   You can use
-<att>cert</att> to specify a degree of certainty
-regarding the manuscript you are listing. Please, note that each
-witness element can take a fully marked-up description about
-the text.</p>
-<p>As information provided by the catalogues we are working with
-should not be lost, whenever a catalogue description contains
-references to other manuscripts containing the same work, minimal manuscript
-records containing the work ID should be created for those
-manuscripts. This assures that all the manuscripts containing the same
-work can be retrieved by the app while reserving
-<gi>listWit</gi> in the work records mainly for the
-manuscripts used for the edition.</p>
+            <p>Different manuscripts used for the editions that are listed as <gi>witness</gi> with
+                  <att>xml:id</att> can be linked to the specific edition or translation listed in
+               the bibliographic references. For this see the respective paragraph in <ref target="bibliographic-references"
+                  >Bibliographic References</ref>
+            </p>
+            <p><gi>listWit</gi>s can be nested if needed, for example, to group them in families.
+               Each <gi>witness</gi> will have to take a <att>corresp</att> pointing to the
+               manuscript <att>xml:id</att>. If the manuscript is in already described in Beta
+               maṣāḥǝft, that is enough. If the manuscript is described in an external catalogue,
+               then use <tag>@type='external'</tag>. <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <listWit>
+                     <witness type="external" xml:id="P"
+                        corresp="http://digi.ub.uni-heidelberg.de/diglit/cpgraec398/0569"
+                        facs="http://digi.ub.uni-heidelberg.de/diglit/cpgraec398/0569">
+                        <idno>Cod. Pal. graec. 398</idno>
+                        <ptr
+                           target="https://digi.ub.uni-heidelberg.de/diglit/iiif/cpgraec398/manifest.json"
+                        /> Sammelhandschrift — Konstantinopel, letztes Viertel 9. Jh. </witness>
+                     <witness type="external" xml:id="L"
+                        corresp="http://www.bl.uk/manuscripts/Viewer.aspx?ref=add_ms_19391_f009r"
+                        facs="http://www.bl.uk/manuscripts/Viewer.aspx?ref=add_ms_19391_f009r">
+                        <idno>British Library Add MS 19391</idno>
+                     </witness>
+                  </listWit>
+               </egXML> A simpler form, with only the link would also be ok. <egXML
+                  xmlns="http://www.tei-c.org/ns/Examples">
+                  <witness corresp="https://eap.bl.uk/archive-file/EAP286-1-1-133" type="external"/>
+               </egXML>
+            </p>
+            <p> You can use <att>cert</att> to specify a degree of certainty regarding the
+               manuscript you are listing. Please, note that each witness element can take a fully
+               marked-up description about the text.</p>
+            <p>As information provided by the catalogues we are working with should not be lost,
+               whenever a catalogue description contains references to other manuscripts containing
+               the same work, minimal manuscript records containing the work ID should be created
+               for those manuscripts. This assures that all the manuscripts containing the same work
+               can be retrieved by the app while reserving <gi>listWit</gi> in the work records
+               mainly for the manuscripts used for the edition.</p>
 
-<p>Please note that the list of manuscripts containing a work shown in the application
-  and the list of witnesses used for an edition are two different things.
-  The first picks up whatever information is available, it might be less or more than we know at the moment depending on what has been marked-up and linked.
-  The <gi>listWit</gi> contains instead a statement about
-  the manuscripts used for an edition, which can be nested, and also might contain manuscripts which we do not have yet.</p>
-</div>
+            <p>Please note that the list of manuscripts containing a work shown in the application
+               and the list of witnesses used for an edition are two different things. The first
+               picks up whatever information is available, it might be less or more than we know at
+               the moment depending on what has been marked-up and linked. The <gi>listWit</gi>
+               contains instead a statement about the manuscripts used for an edition, which can be
+               nested, and also might contain manuscripts which we do not have yet.</p>
+         </div>
 
 
 
-<div type="level2">
-<head>Relations</head>
-<p>Each relationship should be listed separately in a
-<gi>relation</gi>, even if the same relationship exists
-between this and more than one other entity.
-<att>name</att> contains the name of the relation.
-<!--Allowed values for relations among works and authors are those in the
+         <div type="level2">
+            <head>Relations</head>
+            <p>Each relationship should be listed separately in a <gi>relation</gi>, even if the
+               same relationship exists between this and more than one other entity. <att>name</att>
+               contains the name of the relation.
+               <!--Allowed values for relations among works and authors are those in the
 <ref target="http://www.ancientwisdoms.ac.uk/media/ontology/doc/">SAWS
 Ontology</ref> and those used by syriaca.org. You can filter them out
 in oXygen typing syriaca: or saws: in the value list.--></p>
-<p>
-   Usually, <att>active</att> should contain the <att>xml:id</att> of the
-current item. <att>passive</att> should contain the ID
-of the related work, person or place. In <gi>desc</gi>, the relation can be described with a sentence or two:</p>
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-   <listRelation>
-   <relation name="saws:isAttributedToAuthor"
-      active="LIT1925Mashaf#t2arabic"
-      passive="PRS7509Nasralla">
-      <desc>It is not clear whether <persName ref="PRS7509Nasralla"/>, who is otherwise unknown, is the compiler or author.
-         <bibl>
-            <ptr target="bm:Pietruschka2005EAEFalasfa"/>
-         </bibl>
-      </desc>
-   </relation>
-   </listRelation>
-</egXML>
-<p>The relationship between a work and its subject is expressed in the
-person record:</p>
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-<relation name="ecrm:P129i_is_subject_of"
-active="PRS4585Georgeo"
-passive="LIT1455GadlaG"/>
-</egXML>
+            <p> Usually, <att>active</att> should contain the <att>xml:id</att> of the current item.
+                  <att>passive</att> should contain the ID of the related work, person or place. In
+                  <gi>desc</gi>, the relation can be described with a sentence or two:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <listRelation>
+                  <relation name="saws:isAttributedToAuthor" active="LIT1925Mashaf#t2arabic"
+                     passive="PRS7509Nasralla">
+                     <desc>It is not clear whether <persName ref="PRS7509Nasralla"/>, who is
+                        otherwise unknown, is the compiler or author. <bibl>
+                           <ptr target="bm:Pietruschka2005EAEFalasfa"/>
+                        </bibl>
+                     </desc>
+                  </relation>
+               </listRelation>
+            </egXML>
+            <p>The relationship between a work and its subject is expressed in the person
+               record:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <relation name="ecrm:P129i_is_subject_of" active="PRS4585Georgeo"
+                  passive="LIT1455GadlaG"/>
+            </egXML>
 
-   <p>External entries in databases or similar which concern a particular work can also be referenced in a <gi>relation</gi>. If, as in the case of the TUK IDs given by
-      Corpus Coranicum, the external entry refers only to a part of a work, it is preferable to add the <gi>relation</gi> in the exact <gi>div</gi> of this text part in our
-      edition, using <tag>relation name="skos:exactMatch"</tag>. If this is not possible, because we do not yet have the text of the work or because we
-      follow different divisions than the other reference, <tag>relation name="skos:broadMatch"</tag> can be used at the most pertinent place of the record with the
-      most precise pointer to our record possible in <att>passive</att>, as, for example, in <ref type="bm" target="LIT1697Jubilees">LIT1697Jubilees</ref></p>
-   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <listRelation>
-      <relation name="skos:broadMatch"
-         active="https://corpuscoranicum.de/kontexte/index/sure/6/vers/74/intertext/673"
-         passive="LIT1697Jubilees"/>
-      </listRelation>
-   </egXML>
-   <p>and in <ref type="bm" target="LIT1340EnochE">LIT1340EnochE</ref>:</p>
-   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-      <div type="textpart" subtype="chapter" n="47">
-         <ab>ወበውእቱ ፡ መዋዕል ፡ ዐርገት ፡ ጸሎተ ፡ ጻድቃን ፡ ወደመ ፡ ጻድቅ ፡ እምነ ፡ ምድር ፡ ቅድመ ፡ እግዚአ ፡ መናፍስት
-            ። በእሉ ፡ መዋዕል ፡ የኀብሩ ፡ ቅዱሳን ፡ እለ ፡ ይነብሩ ፡ መልዕልተ ፡ ሰማያት ፡ በ፩ቃል ፡ ወያስተበቊዑ ፡ ወይጼልዩ
-            ፡ ወይሴብሑ ፡ ወያአኲቱ ፡ ወይባርኩ ፡ ለስሙ ፡ ለእግዚአ ፡ መናፍስት ፡ በእንተ ፡ ደመ ፡ ጻድቃን ፡ ዘተክዕወ ፡
-            ወጸሎቶሙ ፡ ለጻድቃን ፡ ከመ ፡ ኢትፀራእ ፡ በቅድመ ፡ እግዚአ ፡ መናፍስት ፡ ከመ ፡ ይትገበር ፡ ሎሙ ፡ ኲነኔ ፡
-            ወትዕግሥት ፡ ኢይኩን ፡ ሎሙ ፡ ለዓለም ። ወበእማንቱ ፡ መዋዕል ፡ ርኢክዎ ፡ ለርእሰ ፡ መዋዕል ፡ ሶበ ፡ ነበረ ፡
-            በመንበረ ፡ ስብሐቲሁ ፡ ወመጻሕፍተ ፡ ሕያዋን ፡ በቅድሜሁ ፡ ተከሥቱ ፡ ወኲሉ ፡ ኀይሉ ፡ ዘመልዕልተ ፡ ሰማያት ፡ ወዐውደ
-            ፡ ዚአሁ ፡ ይቀውሙ ፡ ቅድሜሁ ። ወልቦሙ ፡ ለቅዱሳን ፡ ትመልእ ፡ ፍሥሐ ፡ እስመ ፡ በጽሐ ፡ ኊልቋ ፡ ለጽድቅ ፡
-            ወጸሎቶሙ ፡ ለጻድቃን ፡ ተሰምዐ ፡ ወደሙ ፡ ለጻድቅ ፡ በቅድመ ፡ እግዚአ ፡ መናፍስት ፡ ተፈቅደ ። </ab>
-         <listRelation><relation name="skos:broadMatch"
-            active="https://corpuscoranicum.de/kontexte/index/sure/78/vers/38/intertext/913"
-            passive="betmas:LIT1340EnochE.2.47"/>
-            <relation name="skos:broadMatch"
-               active="https://corpuscoranicum.de/kontexte/index/sure/10/vers/21/intertext/914"
-               passive="betmas:LIT1340EnochE.2.47"/></listRelation>
-      </div>
-   </egXML>
-</div>
+            <p>External entries in databases or similar which concern a particular work can also be
+               referenced in a <gi>relation</gi>. If, as in the case of the TUK IDs given by Corpus
+               Coranicum, the external entry refers only to a part of a work, it is preferable to
+               add the <gi>relation</gi> in the exact <gi>div</gi> of this text part in our edition,
+               using <tag>relation name="skos:exactMatch"</tag>. If this is not possible, because we
+               do not yet have the text of the work or because we follow different divisions than
+               the other reference, <tag>relation name="skos:broadMatch"</tag> can be used at the
+               most pertinent place of the record with the most precise pointer to our record
+               possible in <att>passive</att>, as, for example, in <ref type="bm"
+                  target="LIT1697Jubilees">LIT1697Jubilees</ref></p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <listRelation>
+                  <relation name="skos:broadMatch"
+                     active="https://corpuscoranicum.de/kontexte/index/sure/6/vers/74/intertext/673"
+                     passive="LIT1697Jubilees"/>
+               </listRelation>
+            </egXML>
+            <p>and in <ref type="bm" target="LIT1340EnochE">LIT1340EnochE</ref>:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <div type="textpart" subtype="chapter" n="47">
+                  <ab>ወበውእቱ ፡ መዋዕል ፡ ዐርገት ፡ ጸሎተ ፡ ጻድቃን ፡ ወደመ ፡ ጻድቅ ፡ እምነ ፡ ምድር ፡ ቅድመ ፡ እግዚአ ፡ መናፍስት
+                     ። በእሉ ፡ መዋዕል ፡ የኀብሩ ፡ ቅዱሳን ፡ እለ ፡ ይነብሩ ፡ መልዕልተ ፡ ሰማያት ፡ በ፩ቃል ፡ ወያስተበቊዑ ፡ ወይጼልዩ
+                     ፡ ወይሴብሑ ፡ ወያአኲቱ ፡ ወይባርኩ ፡ ለስሙ ፡ ለእግዚአ ፡ መናፍስት ፡ በእንተ ፡ ደመ ፡ ጻድቃን ፡ ዘተክዕወ ፡
+                     ወጸሎቶሙ ፡ ለጻድቃን ፡ ከመ ፡ ኢትፀራእ ፡ በቅድመ ፡ እግዚአ ፡ መናፍስት ፡ ከመ ፡ ይትገበር ፡ ሎሙ ፡ ኲነኔ ፡
+                     ወትዕግሥት ፡ ኢይኩን ፡ ሎሙ ፡ ለዓለም ። ወበእማንቱ ፡ መዋዕል ፡ ርኢክዎ ፡ ለርእሰ ፡ መዋዕል ፡ ሶበ ፡ ነበረ ፡
+                     በመንበረ ፡ ስብሐቲሁ ፡ ወመጻሕፍተ ፡ ሕያዋን ፡ በቅድሜሁ ፡ ተከሥቱ ፡ ወኲሉ ፡ ኀይሉ ፡ ዘመልዕልተ ፡ ሰማያት ፡ ወዐውደ
+                     ፡ ዚአሁ ፡ ይቀውሙ ፡ ቅድሜሁ ። ወልቦሙ ፡ ለቅዱሳን ፡ ትመልእ ፡ ፍሥሐ ፡ እስመ ፡ በጽሐ ፡ ኊልቋ ፡ ለጽድቅ ፡
+                     ወጸሎቶሙ ፡ ለጻድቃን ፡ ተሰምዐ ፡ ወደሙ ፡ ለጻድቅ ፡ በቅድመ ፡ እግዚአ ፡ መናፍስት ፡ ተፈቅደ ። </ab>
+                  <listRelation>
+                     <relation name="skos:broadMatch"
+                        active="https://corpuscoranicum.de/kontexte/index/sure/78/vers/38/intertext/913"
+                        passive="betmas:LIT1340EnochE.2.47"/>
+                     <relation name="skos:broadMatch"
+                        active="https://corpuscoranicum.de/kontexte/index/sure/10/vers/21/intertext/914"
+                        passive="betmas:LIT1340EnochE.2.47"/>
+                  </listRelation>
+               </div>
+            </egXML>
+         </div>
 
-<div type="level2">
-<head>Edition statement, Source statement, and encoding
-description</head>
-<p>These elements should be provided in the header for texts that we
-provide edition for. The Edition statement should specify the origin
-of the text. The encoding description specifies the principles used
-when encoding, when known (e.g. transcription, specific tag sets,
-etc.)</p>
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-<editionStmt>
-<p>Digital text based on  <bibl><ptr target="bm:Marrassini1993AmdaSeyon"/></bibl>.</p>
-</editionStmt>
-</egXML>
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-<encodingDesc>
-<projectDesc>
-<p>Text prepared within the framework of the TraCES project.</p>
-</projectDesc>
-<editorialDecl>
-<correction>
-   <p>The following errors
-      in Marrassini edition have been corrected:
-      <list>
-         <item>...</item>
-         <item>...</item>
-         <item>...</item>
+         <div type="level2">
+            <head>Edition statement, Source statement, and encoding description</head>
+            <p>These elements should be provided in the header for texts that we provide edition
+               for. The Edition statement should specify the origin of the text. The encoding
+               description specifies the principles used when encoding, when known (e.g.
+               transcription, specific tag sets, etc.)</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <editionStmt>
+                  <p>Digital text based on <bibl><ptr target="bm:Marrassini1993AmdaSeyon"
+                     /></bibl>.</p>
+               </editionStmt>
+            </egXML>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <encodingDesc>
+                  <projectDesc>
+                     <p>Text prepared within the framework of the TraCES project.</p>
+                  </projectDesc>
+                  <editorialDecl>
+                     <correction>
+                        <p>The following errors in Marrassini edition have been corrected: <list>
+                              <item>...</item>
+                              <item>...</item>
+                              <item>...</item>
 
-      </list>
-   </p>
+                           </list>
+                        </p>
+                     </correction>
+                     <normalization>
+                        <p>Original spelling and typography is retained.</p>
+                     </normalization>
+                  </editorialDecl>
+                  <tagsDecl>
+                     <!-- the format for the tagsDecl to be specified -->
+                  </tagsDecl>
+               </encodingDesc>
+            </egXML>
 
-</correction>
+         </div>
 
-<normalization>
-   <p>Original spelling and typography is retained.</p>
-</normalization>
-</editorialDecl>
-<tagsDecl>
-<!-- the format for the tagsDecl to be specified -->
-</tagsDecl>
+         <div type="level2">
+            <head>Extent</head>
+            <p>Extent should be specified for the works wherever possible; obligatory for works with
+               digital text provided, after the edition statement:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <editionStmt>
+                  <p>Digital text based on <bibl><ptr target="bm:Marrassini1993AmdaSeyon"
+                     /></bibl>.</p>
+               </editionStmt>
+               <extent>10170 words</extent>
+            </egXML>
 
-</encodingDesc>
-</egXML>
-
-</div>
-
-<div type="level2">
-<head>Extent</head>
-<p>Extent should be specified for the works wherever possible;
-obligatory for works with digital text provided, after the edition
-statement:</p>
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-<editionStmt>
-<p>Digital text based on  <bibl><ptr target="bm:Marrassini1993AmdaSeyon"/></bibl>.</p>
-</editionStmt>
-
-<extent>10170  words</extent>
-</egXML>
-
-</div>
+         </div>
 
 
 
 
-<div type="level2">
-<head>Versions</head>
-<p>If you have multiple recensions/version of a text, these can be
-linked with a <gi>relation</gi> with
-<tag>name='saws:isVersionOf'</tag> this will be used to
-pick up these in the text view. The same parallel content in the
-different versions should have the same @corresp to a NAR unit and
-there should always be a <att>resp</att> in the <tag>div[@type='edition']</tag> containing
-this text part with multiple versions with either the initials of the
-editor or the pointer to the <att>xml:id</att> of the bibl element which has a
-pointer to the edition.</p>
+         <div type="level2">
+            <head>Versions</head>
+            <p>If you have multiple recensions/version of a text, these can be linked with a
+                  <gi>relation</gi> with <tag>name='saws:isVersionOf'</tag> this will be used to
+               pick up these in the text view. The same parallel content in the different versions
+               should have the same @corresp to a NAR unit and there should always be a
+                  <att>resp</att> in the <tag>div[@type='edition']</tag> containing this text part
+               with multiple versions with either the initials of the editor or the pointer to the
+                  <att>xml:id</att> of the bibl element which has a pointer to the edition.</p>
 
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <relation name="saws:isVersionOf" active="LIT2231Saatat" passive="LIT1961Mashaf"
+               > </relation>
+            </egXML>
+            <p>The above example is from <ref target="LIT2231Saatat" type="BM">Saʿātāt
+                  za-maʿālt</ref></p>
+         </div>
+         <div type="level2">
+            <head>Dates</head>
+            <p>For the date of creation of a work, use the element <gi>creation</gi> in
+                  <gi>profileDesc</gi> as in the following example</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <creation when="1555-06-23" corresp="#Pdamot">23 Sane (17 June) 1555 in <placeName
+                     ref="LOC2488Damot" xml:id="Pdamot">Damot</placeName></creation>
+            </egXML>
+            <p>any other date relevant to the work elaboration or life could be added in a date
+               element, possibly pointing to one of the placeNames in the file with a proper ID as
+               in the example below.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <date when="1555-06-23" corresp="#Pdamot">23 Sane (17 June) 1555</date> in <placeName
+                  ref="LOC2488Damot" xml:id="Pdamot">Damot</placeName>
+            </egXML>
+            <p>It is important that the ID of the referred place starts with P because there are
+               cases where <att>corresp</att> is already used to point to another ID, e.g. a work in
+               another tradition title. Look at this fictitious example, where I have entered a
+               placeName with Q item ID from Wikidata (Ethiopia) and assigned the second
+                  <att>corresp</att> and the ID with P</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <creation corresp="#t2arabic #Ptest" when="1238-09">
+                  <placeName ref="wd:Q115" xml:id="Ptest"/>
+               </creation>
+            </egXML>
+            <p>this sounds like a dirty hack to get it working... and it is!</p>
+         </div>
 
-<relation name="saws:isVersionOf" active="LIT2231Saatat" passive="LIT1961Mashaf"> </relation>
-</egXML>
-<p>The above example is from <ref target="LIT2231Saatat" type="BM">Saʿātāt za-maʿālt</ref></p>
-</div>
-<div type="level2">
-<head>Dates</head>
-<p>For the date of creation of a work, use the element
-<gi>creation</gi> in <gi>profileDesc</gi>
-as in the following example</p>
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-<creation when="1555-06-23" corresp="#Pdamot">23 Sane (17 June) 1555 in <placeName ref="LOC2488Damot" xml:id="Pdamot">Damot</placeName></creation>
-</egXML>
-<p>any other date relevant to the work elaboration or life could be
-added in a date element, possibly pointing to one of the placeNames in
-the file with a proper ID as in the example below.</p>
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-<date when="1555-06-23" corresp="#Pdamot">23 Sane (17 June) 1555</date> in <placeName ref="LOC2488Damot" xml:id="Pdamot">Damot</placeName>
-</egXML>
-<p>It is important that the ID of the referred place starts with P
-because there are cases where <att>corresp</att> is already used to point to
-another ID, e.g. a work in another tradition title. Look at this
-fictitious example, where I have entered a placeName with Q item ID
-from Wikidata (Ethiopia) and assigned the second <att>corresp</att> and the ID
-with P</p>
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-<creation corresp="#t2arabic #Ptest" when="1238-09" >
-<placeName ref="wd:Q115" xml:id="Ptest"></placeName>
-</creation>
-</egXML>
-<p>this sounds like a dirty hack to get it working... and it is!</p>
-</div>
+         <div type="level2">
+            <head>Short Summary of Contents</head>
+            <p>To provide a short summary of contents use the element <gi>abstract</gi> in as in
+               this example from <ref
+                  target="https://github.com/BetaMasaheft/Works/blob/master/LIT1252Confes.xml"
+                  >Confessio Claudii</ref>
+            </p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <abstract>
+                  <p>A theological treatise believed to be a response of king <persName
+                        ref="PRS4428Galawdew">Galāwdewos</persName> to the Jesuit missionaries
+                     headed by <persName ref="PRS7691Oviedo">Oviedo</persName>. </p>
+               </abstract>
+            </egXML>
+            <p>The abstract can also mention the total number of words, which might be then
+               marked-up with a <tag>measure type='words'</tag> within the <gi>abstract</gi>.</p>
+            <p>Summaries given in catalogues can be copied here and edited.</p>
 
-<div type="level2">
-<head>Short Summary of Contents</head>
-<p>To provide a short summary of contents use the element
-<gi>abstract</gi> in as in this example from
-<ref target="https://github.com/BetaMasaheft/Works/blob/master/LIT1252Confes.xml">Confessio
-Claudii</ref>
-</p>
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-<abstract>
-<p>A theological treatise believed to be a response of king <persName
-ref="PRS4428Galawdew">Galāwdewos</persName> to the Jesuit missionaries headed by <persName
-ref="PRS7691Oviedo">Oviedo</persName>.
-</p>
-</abstract>
-</egXML>
-<p>The abstract can also mention the total number of words, which
-might be then marked-up with a
-<tag>measure type='words'</tag> within the
-<gi>abstract</gi>.</p>
-<p>Summaries given in catalogues can be copied here and edited.</p>
-
-</div>
-</body>
-</text>
+         </div>
+      </body>
+   </text>
 </TEI>
