@@ -47,12 +47,45 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </p>
             <p>When using <att>type</att> <val>translation</val>
             encoders have sometimes also specified the language of the translation
-          in a <att>xml:lang</att>. This is not saying that, so there is no need to add that.</p>
+          in a <att>xml:lang</att>.</p>
             <p>Secondary bibliographic references given in catalogues about a
   certain work can also be included here, as they do not belong to the
   manuscript description.</p>
 
          </div>
+         <div type="level2">
+            <head>Distinguishing records encoded from catalogues and enriched records</head>
+            In order to clearly distinguish between records created on the basis of a historical catalogue only and between records significantly enriched, 
+            
+            <p>Different <gi>listBibl</gi> are used for separate
+               types of entries. Within
+               <tag>listBibl type='editions'</tag> each bibl will be an
+               edition of this work.</p>
+            <p>References to the different manuscripts used for the editions can be done with a link directly to a
+               <gi>witness</gi>'s or a <gi>listWit</gi>'s
+               <att>xml:id</att> like in <ref type="bm" target="LIT2317Senodo">LIT2317Senodo</ref> and <ref type="bm" target="LIT1709Kebran">LIT1709Kebran</ref>:
+               
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <listBibl type="editions">
+                     <bibl>
+                        <ptr target="bm:Praetorius1870Fabula"/>
+                     </bibl>
+                     <bibl corresp="#bnfet5 #bnfet146 #bdlbruce93 #bdlbruce87 #berlin395 #blor818 #blor819">
+                        <ptr target="bm:Bezold1905KebraN"/>
+                     </bibl>
+                  </listBibl>
+               </egXML>
+               
+            </p>
+            <p>When using <att>type</att> <val>translation</val>
+               encoders have sometimes also specified the language of the translation
+               in a <att>xml:lang</att>.</p>
+            <p>Secondary bibliographic references given in catalogues about a
+               certain work can also be included here, as they do not belong to the
+               manuscript description.</p>
+            
+         </div>
+         
          <div type="level2">
            <head>References</head>
          <p>Bibliographic references are marked-up by a
