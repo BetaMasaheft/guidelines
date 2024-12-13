@@ -25,6 +25,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="DR" when="2019-04-05">Updated foliation paragraph with real examples</change>
             <change who="DR" when="2020-02-11">Added weight</change>
             <change who="DR" when="2020-04-17">Added examples to support and foliation</change>
+            <change who="DR" when="2024-12-13">Added example to blank leaves</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -116,7 +117,13 @@ taken from <locus target="#6r"/>.
                 </p>
                      <p>You can also specify which leaves are blank, adding a
             <gi>locus</gi> immediately after the relative
-            measure.</p>
+            measure:</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <measure unit="leaf" quantity="40">40</measure>
+                <measure unit="leaf" type="blank">19</measure>
+                <locus from="1r" to="1v"/>
+                <locus from="23v" to="40v"/>
+                </egXML>
                 <p>To record the presence of protective leaves, please use a syntax involving only Arabic numerals, like 3+69+1 to indicate that there are three guard leaves at the beginning and another one at the end.</p>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                     <measure unit="leaf">3+69+1</measure>
