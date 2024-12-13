@@ -26,7 +26,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             databases</change>
          <change who="PL" when="2019-02-28">added example</change>
          <change who="DR" when="2019-06-17">added specification and example for title</change>
-         <change who="NV">added link to the bibliographic reference and issues</change>
+         <change who="NV">added link to the bibliographic reference and few specifications for
+            witnesses</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -184,20 +185,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <div type="level2">
             <head>Witnesses</head>
 
-            <p>As stated in <ref target="https://github.com/BetaMasaheft/Documentation/issues/714"
-                  >issue 714</ref>, we always use <gi>witness</gi> for those manuscripts which are
-               used for the edition we are going to (or could potentially) provide in the <tag>div
-                  type='edition'</tag>, if one click 'text' in the upper menu. All manuscript
-               records containing the work if they have been fully encoded with the correct
-               reference are displayed in the app anyway. However, since not all manuscript records
-               have been properly encoded yet, following <ref
-                  target="https://github.com/BetaMasaheft/Documentation/issues/2690">issue
-                  2690</ref> and <ref
-                  target="https://github.com/BetaMasaheft/Documentation/issues/2699">issue
-                  2699</ref>, if someone wants to list further records containing this work, an
-               acceptable practice is to list otherwise invisible manuscripts as <gi>witness</gi> as well.
-           Since identification of witnesses is part of the research, whoever has done it should be acknowledge in the <gi>note</gi> and bibliographic references (if available).</p>
-            <p>If someone decides to list manuscripts that were neither used in the edition nor fall in the category of stubs, for the sake of clarity, using the <gi>note</gi>, one can state what is its specific relevance.</p>
+            <p>We always use <gi>witness</gi> for those manuscripts which are used for the edition
+               we are going to (or could potentially) provide in the <tag>div type='edition'</tag>.
+               All manuscript records containing the work if they have been fully encoded with the
+               correct reference are displayed in the app anyway. However, since not all manuscript
+               records have been properly encoded yet, if someone wants to list further records
+               containing this work, an acceptable practice is to list otherwise invisible
+               manuscripts as <gi>witness</gi> as well. Since identification of witnesses is part of
+               the research, whoever has done it should be acknowledged in the <gi>note</gi> and
+               bibliographic references (if available).</p>
+            <p>If someone decides to list manuscripts that were neither used in the edition nor fall
+               in the category of stubs, for the sake of clarity, using the <gi>note</gi>, one can
+               state what is its specific relevance.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <sourceDesc>
                   <listWit>
@@ -226,12 +225,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
             <p>Different manuscripts used for the editions that are listed as <gi>witness</gi> with
                   <att>xml:id</att> can be linked to the specific edition or translation listed in
-               the bibliographic references. For this see the respective paragraph in <ref target="bibliographic-references"
-                  >Bibliographic References</ref>
+               the bibliographic references. For this see the respective paragraph in <ref
+                  target="bibliographic-references">Bibliographic References</ref>
             </p>
             <p><gi>listWit</gi>s can be nested if needed, for example, to group them in families.
                Each <gi>witness</gi> will have to take a <att>corresp</att> pointing to the
-               manuscript <att>xml:id</att>. If the manuscript is in already described in Beta
+               manuscript <att>xml:id</att>. If the manuscript is already described in Beta
                maṣāḥǝft, that is enough. If the manuscript is described in an external catalogue,
                then use <tag>@type='external'</tag>. <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <listWit>
@@ -266,9 +265,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Please note that the list of manuscripts containing a work shown in the application
                and the list of witnesses used for an edition are two different things. The first
                picks up whatever information is available, it might be less or more than we know at
-               the moment depending on what has been marked-up and linked. The <gi>listWit</gi>
+               the moment depending on what has been marked up and linked. The <gi>listWit</gi>
                contains instead a statement about the manuscripts used for an edition, which can be
-               nested, and also might contain manuscripts which we do not have yet.</p>
+               nested.</p>
          </div>
 
 

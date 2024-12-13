@@ -20,7 +20,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </fileDesc>
       <revisionDesc>
          <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
-         <change who="NV" when="2024-12-12">added a paragraph on bibliographic references for enriched records and a note on the ambition to have the bibliography as complete as possible</change>
+         <change who="NV" when="2024-12-12">added a paragraph on bibliographic references for
+            enriched records and a note on the ambition to have the bibliography as complete as
+            possible</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -56,8 +58,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </div>
          <div type="level2">
             <head>Bibliographic references for enriched records</head>
-            <p>Following <ref target="https://github.com/BetaMasaheft/Documentation/issues/2630">issue
-               2630</ref>, in cases of enriching a historical catalogue description, such as verifying images or
+            <p>In cases of enriching a historical catalogue description, such as verifying images or
                adding new information, to acknowledge this, one can include the marked-up by a
                   <gi>bibl</gi> element containing a <gi>ptr</gi> element with a <att>target</att>,
                with <tag>bm:BmWebsite</tag>, as in the following example: <egXML
@@ -75,8 +76,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                listed in the catalogue bibliography and has been corrected or enriched by the Bm
                project team; please check Revision history for more information' </p>
 
-            <p>Note that for newly catalogued manuscripts, no additional action is required, and
-               the reference <gi>bibl</gi><ptr target="bm:BmWebsite"/> should not be added.</p>
+            <p>Note that for newly catalogued manuscripts, no additional action is required, and the
+               reference <gi>bibl</gi><ptr target="bm:BmWebsite"/> should not be added.</p>
 
             <p>When closely following a historical catalogue, continue citing it in the standard
                format discussed below, without adding <ptr target="bm:BmWebsite"/>. </p>
@@ -148,7 +149,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>If you want to encode a bibliographic reference provided by a catalogue to a editions
                of a text and catalogue descriptions of manuscripts featuring the same work, please
                add bibliography to the work or manuscript in question directly.</p>
-            <p>Note that the bibliography, both primary and secondary, should be as exhaustive as possible whenever feasible.</p>
+            <p>Note that the bibliography, both primary and secondary, should be as exhaustive as
+               possible whenever feasible.</p>
 
          </div>
       </body>
