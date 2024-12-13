@@ -66,7 +66,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <gi>msDesc</gi>, but in any case, where a structure in codicological units occurs,
                we will use <gi>msPart</gi>. <gi>msPart</gi> can contain other <gi>msPart</gi>s.
                   <gi>msFrag</gi> can be used when there are at least two parts of one manuscript
-               kept in different repositories and our schema this is allowed also beside
+               kept in different repositories and in our schema this is allowed also beside
                   <gi>msPart</gi> for special cases like <ref target="BNFet45" type="bm"
                   >BNFet45</ref>.</p>
             <p>As for <ref target="https://github.com/BetaMasaheft/Documentation/issues/368">issue
