@@ -69,7 +69,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <revisionDesc>
                      <change who="ES" when="2024-04-10">Created an initial version.</change>
-                     <change who="NV" when="2024-12-13">Completed the description; updated the first entry above.</change>
+                     <change who="NV" when="2024-12-13">Completed the description.</change>
                   </revisionDesc>
                </egXML>
             </p>
