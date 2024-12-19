@@ -24,104 +24,70 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             guidelines</change>
          <change who="DR" when="2019-04-09">Added before creating a manuscript record
             paragraph</change>
-         <change who="NV" when="2024-12-13">added a paragraph about "Differenciating between various
-            levels of description"</change>
+         <change who="NV" when="2024-12-13">added a paragraph about "Differentiating between various
+            levels of description"; introduced English corrections suggested by ChatGPT.</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="manuscripts">
-         <p>Any manuscripts referenced in our records should have at least a minimal record. To
-            create such a minimal record for referencing use the form to <ref target="newEntry"
-               >create new items</ref> in the Beta maṣāḥǝft website.</p>
-
+         <p>Any manuscripts referenced in our records should have at least a minimal record. To create such a minimal record for referencing, use the form to <ref target="newEntry">create new items</ref> on the Beta maṣāḥǝft website.</p>
+         
          <div type="level2">
-            <head>Before creating a manuscript record</head>
-            <p>Before creating a manuscript record, as for all entities, it is important to check
-               whether it already exists! It is better not to check only the repository folder in
-               which you would expect it in GitHub, but to <ref
-                  target="https://betamasaheft.eu/as.html">search</ref> for the manuscript's
-               shelfmark or other identifiers on the app as well. Remember that particularly records
-               for EMML and EMIP manuscripts might have already been created within their actual
-               repository and vice versa.</p>
+            <head>Before Creating a Manuscript Record</head>
+            <p>Before creating a manuscript record, as with all entities, it is important to check whether it already exists! Avoid relying solely on the repository folder in GitHub where you expect it to be; instead, <ref target="https://betamasaheft.eu/as.html">search</ref> for the manuscript's shelfmark or other identifiers on the app. Remember that records for EMML and EMIP manuscripts may already exist in their respective repositories or vice versa.</p>
          </div>
-
-
+         
          <div type="level2">
-            <head>Manuscript Structure: Use of <gi>msDesc</gi>, <gi>msPart</gi> and
-               <gi>msFrag</gi></head>
-            <p>Reading of the <ref
-                  target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html">TEI
-                  guidelines for manuscript description</ref> is highly recommended. Regarding the
-               structure of simple and composite manuscripts, they also state in <ref
-                  target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mspt"
-                  >Manuscript Parts</ref>
+            <head>Manuscript Structure: Use of <gi>msDesc</gi>, <gi>msPart</gi>, and <gi>msFrag</gi></head>
+            <p>It is highly recommended to consult the <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html">TEI guidelines for manuscript description</ref>. Regarding the structure of simple and composite manuscripts, the guidelines state in <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mspt">Manuscript Parts</ref>:
                <cit>
                   <quote>Since each component of such a composite manuscript will in all likelihood
                      have its content, physical description, history, and so on, the structure of
                      msPart is in the main identical to that of msDesc, allowing one to retain the
                      top level of identity (msIdentifier), but to branch out thereafter into as many
-                     parts, or even subparts, as necessary.</quote>
-               </cit></p>
-            <p>This means that for manuscripts made of only one part we will use only
-                  <gi>msDesc</gi>, but in any case, where a structure in codicological units occurs,
-               we will use <gi>msPart</gi>. <gi>msPart</gi> can contain other <gi>msPart</gi>s.
-                  <gi>msFrag</gi> can be used when there are at least two parts of one manuscript
-               kept in different repositories and in our schema this is allowed also beside
-                  <gi>msPart</gi> for special cases like <ref target="BNFet45" type="bm"
-                  >BNFet45</ref>.</p>
-            <p>As for <ref target="https://github.com/BetaMasaheft/Documentation/issues/368">issue
-                  368</ref> we have decided to use <gi>msFrag</gi> and <gi>msPart</gi> as follows in
-               cases where leaves or quires have been moved. The Ms containing currently the unit
-               will have a <gi>msPart</gi> with it, with an appropriate description and pointer to
-               the manuscript where the unit comes from. The Ms which has lost a unit will instead
-               have a <gi>msFrag</gi> pointing to the Ms where the unit is now. Please, do not
-               confuse this with cases where leaves or quires are lost.</p>
+                     parts, or even subparts, as necessary.</quote></cit>
+            </p>
+            <p>For manuscripts consisting of only one part, we use <gi>msDesc</gi> exclusively. However, when a structure with codicological units occurs, we use <gi>msPart</gi>. Note that <gi>msPart</gi> can contain other <gi>msPart</gi>s. The <gi>msFrag</gi> element is used when parts of a manuscript are kept in different repositories. In our schema, <gi>msFrag</gi> can also be used alongside <gi>msPart</gi> for special cases, such as <ref target="BNFet45" type="bm">BNFet45</ref>.</p>
+            <p>As per <ref target="https://github.com/BetaMasaheft/Documentation/issues/368">issue 368</ref>, the following approach is adopted for cases where leaves or quires have been moved. The manuscript currently containing the unit will have a <gi>msPart</gi> with a description and a pointer to the manuscript where the unit originated. The manuscript that has lost the unit will instead have a <gi>msFrag</gi> pointing to the manuscript where the unit is now located. Please do not confuse this with cases where leaves or quires are lost.</p>
          </div>
+         
          <div type="level2">
-            <head>Double records</head>
-            <p>It can be that you find out the same manuscript is present under 2 identifiers.</p>
-            <p>You can fix this by merging the two records in one and deleting the one with less
-               information. Remember when doing this to check for references to the id which will go
-               missing, and update them to point to the other identifier.</p>
+            <head>Double Records</head>
+            <p>In some cases, you may find that the same manuscript is present under two identifiers.</p>
+            <p>This can be resolved by merging the two records into one and deleting the record with less information. When doing so, ensure that any references to the deleted identifier are updated to point to the retained identifier.</p>
          </div>
+         
          <div type="level2">
-            <head>Differenciating between various levels of description</head>
-            <p>To mark a rudimentary description as "stub" (if the cataloguer wants others consider
-               it as "stub"), one needs to write the word "stub" anywhere in the change history.
-                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <head>Differentiating Between Various Levels of Description</head>
+            <p>To mark a rudimentary description as a "stub" (indicating that the cataloguer wants others to consider it as such), include the word "stub" in the change history:
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <revisionDesc>
-                     <change who="ES" when="2024-04-10">created stub</change>
-                  </revisionDesc></egXML> When the record has stopped being a stub as it has been
-               developed further then in the first change line the word stub must replaced with
-               something like "initial version" or anything else. After the description is
-               completed, the above example can be changed into something like the example below.
-                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     <change who="ES" when="2024-04-10">Created stub.</change>
+                  </revisionDesc>
+               </egXML>
+               Once the record has been developed further, the word "stub" anywhere in the <gi>change</gi> element under <gi>revisionDesc</gi> should be replaced:
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <revisionDesc>
-                     <change who="ES" when="2024-04-10">created an initial version</change>
-                     <change who="NV" when="2024-12-13">completed the description, change the first
-                        line above</change>
+                     <change who="ES" when="2024-04-10">Created an initial version.</change>
+                     <change who="NV" when="2024-12-13">Completed the description; updated the first entry above.</change>
                   </revisionDesc>
                </egXML>
             </p>
-            <p> In cases of enriching a historical catalogue description, such as verifying images
-               or adding new information, one can acknowledge this using <ptr target="bm:BmWebsite"
-               />, see the respective paragraph in <ref target="bibliographic-references"
-                  >Bibliographic References</ref></p>
+            <p>When enriching a historical catalogue description, such as verifying images or adding new information, this can be acknowledged using <ptr target="bm:BmWebsite" />, as outlined in the paragraph on <ref target="bibliographic-references">Bibliographic References</ref>.</p>
          </div>
+         
          <div type="level2">
             <head>Manuscript Encoding: Overview</head>
             <list>
                <item><ref target="structure">General structure of the Manuscript record</ref></item>
-               <item><ref target="identifiersStructure">Structure of the Identifiers in a Manuscript
-                     record</ref></item>
+               <item><ref target="identifiersStructure">Structure of the Identifiers in a Manuscript record</ref></item>
                <item><ref target="manuscriptDescription">Description of the Manuscript</ref></item>
                <item><ref target="text-encoding">Text encoding</ref></item>
                <item><ref target="references">References</ref></item>
-               <item><ref target="syntaxe">Stratigraphic description (La Syntaxe du
-                  Codex)</ref></item>
+               <item><ref target="syntaxe">Stratigraphic description (La Syntaxe du Codex)</ref></item>
                <item><ref target="images">Images</ref></item>
             </list>
-            <p>Some more specific types of written artefacts, </p>
+            <p>Specific types of written artefacts include:</p>
             <list>
                <item><ref target="inscriptions">Inscriptions</ref></item>
                <item><ref target="scrolls">Scrolls</ref></item>
