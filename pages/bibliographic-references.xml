@@ -56,33 +56,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                be included here, as they do not belong to the manuscript description.</p>
 
          </div>
-         <div type="level2">
-            <head>Bibliographic references for enriched records</head>
-            <p>In cases of enriching a historical catalogue description, such as verifying images or
-               adding new information, to acknowledge this, one can include  a
-                  <gi>bibl</gi> element containing a <gi>ptr</gi> element with a <att>target</att>,
-               with <tag>bm:BmWebsite</tag>, as in the following example: <egXML
-                  xmlns="http://www.tei-c.org/ns/Examples">
-                  <listBibl type="catalogue">
-                     <bibl>
-                        <ptr target="bm:BmWebsite"/>
-                     </bibl>
-                  </listBibl>
-               </egXML>
-            </p>
-            <p> As a result, instead of the standard note saying 'This manuscript description is
-               based on the catalogues listed in the catalogue bibliography', the visualisation of the record on the app will
-               contain the following note: 'This manuscript description is based on the catalogue(s)
-               listed in the catalogue bibliography and has been corrected or enriched by the Bm
-               project team; please check Revision history for more information' </p>
-
-            <p>Note that for newly catalogued manuscripts, no additional action is required, and the
-               reference <tag><bibl><ptr target="bm:BmWebsite"/></bibl></tag>  should not be added.</p>
-
-            <p>When closely following a historical catalogue, continue citing it in the standard
-               format discussed below, without adding <ptr target="bm:BmWebsite"/>. </p>
-
-         </div>
+         
 
          <div type="level2">
             <head>References</head>
@@ -152,6 +126,33 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>Note that the bibliography, both primary and secondary, should be as exhaustive as
                possible whenever feasible.</p>
 
+         </div>
+         <div type="level2">
+            <head>Bibliographic references for enriched records</head>
+            <p>In cases of enriching a historical catalogue description, such as verifying images or
+               adding new information, this can be acknowledged by including a 
+               <gi>bibl</gi> element containing a <gi>ptr</gi> element with a <att>target</att>,
+               referencing <tag>bm:BmWebsite</tag>, as shown in the following example: <egXML
+                  xmlns="http://www.tei-c.org/ns/Examples">
+                  <listBibl type="catalogue">
+                     <bibl>
+                        <ptr target="bm:BmWebsite"/>
+                     </bibl>
+                  </listBibl>
+               </egXML>
+            </p>
+            <p> As a result, instead of the standard note stating, 'This manuscript description is
+               based on the catalogues listed in the catalogue bibliography', the visualisation of the record on the app will
+            include the following note: 'This manuscript description is based on the catalogue(s)
+               listed in the catalogue bibliography and has been corrected or enriched by the Bm
+               project team; please check Revision history for more information' </p>
+            
+            <p>Note that for newly catalogued manuscripts, no additional action is required, and the
+               reference  <gi>bibl</gi><ptr target="bm:BmWebsite"/>  should not be added.</p>
+            
+            <p>When closely following a historical catalogue, continue citing it in the standard
+               format discussed above, without adding <ptr target="bm:BmWebsite"/>. </p>
+            
          </div>
       </body>
    </text>

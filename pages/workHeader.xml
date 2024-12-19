@@ -154,6 +154,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         >123</citedRange></bibl>
                   <bibl type="KRZ"><ptr target="bm:KRZ"/><citedRange unit="item"
                      >123</citedRange></bibl>
+                  <bibl type="PEMM">
+                     <ptr type="story" target="bm:PEMM"/>
+                     <citedRange unit="item">1022</citedRange>
+                  </bibl>
                </listBibl>
             </egXML>
             <p>You cannot have both <gi>p</gi> and <gi>listBibl</gi> in <gi>sourceDesc</gi>, so if
@@ -187,13 +191,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
             <p>We always use <gi>witness</gi> for those manuscripts which are used for the edition
                we are going to (or could potentially) provide in the <tag>div type='edition'</tag>.
-               All manuscript records containing the work if they have been fully encoded with the
-               correct reference are displayed in the app anyway. However, since not all manuscript
-               records have been properly encoded yet, if someone wants to list further records
-               containing this work, an acceptable practice is to list otherwise invisible
-               manuscripts as <gi>witness</gi> as well. Since identification of witnesses is part of
-               the research, whoever has done it should be acknowledged in the <gi>note</gi> and
-               bibliographic references (if available).</p>
+               All manuscript records containing the work if they have been fully encoded with the correct reference are displayed in the app anyway. 
+               If manuscripts are known to contain the work but have not been properly encoded yet it is recommended to list them as <gi>witness</gi> (and make sure a corresponding stub or an external reference for the manuscript exist).
+              </p>
             <p>If someone decides to list manuscripts that were neither used in the edition nor fall
                in the category of stubs, for the sake of clarity, using the <gi>note</gi>, one can
                state what is its specific relevance.</p>
