@@ -17,9 +17,10 @@
       </sourceDesc>
     </fileDesc>
     <revisionDesc>
-      <change who="PL" when="2021-09-16">incldued revision from pdf sent by Francesca Panini and Eugenia Sokolinski in December 2020</change>
       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
       <change who="DR" when="2019-11-05">Corrected link to Cyrillic transliteration</change>
+      <change who="PL" when="2021-09-16">incldued revision from pdf sent by Francesca Panini and Eugenia Sokolinski in December 2020</change>
+      <change who="CH" when="2024-12-18">Small corrections</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -58,11 +59,11 @@
                   merge volumes in one entry. Same is valid for article series.
                 </item>
                 <item>
-                  Additional records merging more volumes into one entry can be created only for the sake of references in publications. These are separate entries of their own and must always be in addition to the single entries and, in case, must receive BM tags of
-                  d, in case, must receive BM tags of their own.
+                  Additional records merging more volumes into one entry can be created only for the sake of references in publications. These are 
+                  separate entries of their own and must always be in addition to the single entries and, in case, must receive BM tags of their own.
                 </item>
                 <item>
-                  A miscellaneous volume or collection (Festschrift, conference proceedings, etc.) get separate entries as ‘Book’, while each paper or chapter in the collection gets its own entry as ‘Book section’. In electronic publications, both the book and each
+                  A miscellaneous volume or collection (Festschrift, conference proceedings, etc.) must get a separate entry as ‘Book’, while each paper or chapter in the collection gets its own entry as ‘Book section’. In electronic publications, both the book and each
                   chapter get independent DOIs.
                 </item>
                 <item>The same applies to articles consisting of sub-articles written by different authors: the group article is an entry, but also each sub-article by a different author is an entry of its own.</item>
@@ -76,13 +77,13 @@
                 <item>
                   When importing entries into Zotero you have to check manually that the entries, in all fields you want to keep, observe this rule; if note, the right codes must be entered. Use the Keyman DiacriticsUnicode keyboard to enter the rights codes.
                 </item>
-                <item>Make sure the right for schwa is used, i.e.
+                <item>Make sure the right sign for schwa is used, i.e.
                   <hi rendition="simple:underline">not</hi>
-                  ə Code 0259) but ǝ (Code 01DD).</item>
+                  ə/Ə (Code 0259/018F) but ǝ/Ǝ (Code 01DD/018E).</item>
                 <item>When in the original title an apostrophe is used for
-                  <hi rendition="simple:italic">alef</hi>
+                  <hi rendition="simple:italic">ʾalef</hi>
                   or
-                  <hi rendition="simple:italic">ayn</hi>
+                  <hi rendition="simple:italic">ʿayn</hi>
                   please replace with the diacritic, but not if the IPA symbol is used.</item>
               </list>
 
@@ -135,7 +136,7 @@
             <item>The titles must be quoted in full (not abbreviated), in the way they appear on the frontispiece. All diacritics must be preserved (with the exceptions mentioned above).
               <list type="ordered:alpha">
                 <item>
-                  Titles in English should use maximal capitalization (i.e. capitalize every words apart from articles and conjunctions), unless the title is not originally in upper case, then follow the capitalization as it appears on the book cover. Titles in
+                  Titles in English should use maximal capitalization (i.e. capitalize every word apart from articles and conjunctions), unless the title is not originally in upper case, then follow the capitalization as it appears on the book cover. Titles in
                   languages other than English should use minimal capitalization (i.e. capitalize only the words which must be capitalized according to the rules of the language in question, e.g. nouns in German).
                 </item>
                 <item>
