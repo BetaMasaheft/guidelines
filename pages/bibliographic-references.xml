@@ -54,7 +54,6 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                translation in a <att>xml:lang</att>.</p>
             <p>Secondary bibliographic references given in catalogues about a certain work can also
                be included here, as they do not belong to the manuscript description.</p>
-
          </div>
          
 
@@ -98,8 +97,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                that this is unique, after saving the record in Zotero, click on the tag and check
                that only one item has this tag. If not, change the keyword of the tag just
                assigned.</p>
-            <p>When adding records to the Zotero Group Library, please follow the principles <ref
-                  target="zotero">at this page</ref>.</p>
+            <p>When adding records to the Zotero Group Library, please follow <ref
+               target="zotero">the principles detailed here</ref>.</p>
          </div>
          <div type="level2">
             <p>You can use a <att>corresp</att> to link a <gi>bibl</gi> element to a part of the
