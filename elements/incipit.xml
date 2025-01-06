@@ -19,13 +19,18 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </fileDesc>
       <revisionDesc>
          <change who="PL" when="2018-04-24">stub of page</change>
+         <change who="CH" when="2023-07-12">Added definition</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="incipit">
          <div>
             <head>incipit</head>
-            <p/>
+            <p>The purpose of quoting incipits is to describe the content of the manuscript, i.e. to help identify the texts or their parts, and to 
+               indicate the extent and completeness of the texts or their parts. They should not exceed 20 to 30 words and should concentrate on 
+               meaningful and substantial phrases from the beginning of the text itself. Most common formulas and eulogies may be omitted and 
+               should be marked as gaps and ellipses. If a text begins ex abrutto, this should be mentioned in a note and the first words should be 
+               quoted.</p>
          </div>
       </body>
    </text>
