@@ -30,7 +30,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    </teiHeader>
    <text>
       <body xml:id="manuscripts">
-         <p>Any manuscripts referenced in our records should have at least a minimal record. To create such a minimal record for referencing, use the form to <ref target="newEntry">create new items</ref> on the Beta maṣāḥǝft website.</p>
+         <p>Any manuscripts referenced in our records should have at least a minimal record. To create such a minimal record for referencing, you may use the form to <ref target="newEntry">create new items</ref> on the Beta maṣāḥǝft website (note that when using the form you must first download the record to the "Manuscripts/new" folder) or create a record in your XML editor, placing it in the folder corresponding to the manuscript repository.</p>
          
          <div type="level2">
             <head>Before Creating a Manuscript Record</head>
