@@ -73,7 +73,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </revisionDesc>
                </egXML>
             </p>
-            <p>When enriching a historical catalogue description, such as verifying images or adding new information, this can be acknowledged using <ptr target="bm:BmWebsite" />, as outlined in the paragraph on <ref target="bibliographic-references">Bibliographic References</ref>.</p>
+            <p>When enriching a historical catalogue description, such as
+               verifying images or adding new information, this can be acknowledged using 
+               <egXML xmlns="http://www.tei-c.org/ns/Examples"><ptr target="bm:BmWebsite" /></egXML>, 
+               as outlined in the paragraph on 
+               <ref target="bibliographic-references">Bibliographic References</ref>.</p>
          </div>
          
          <div type="level2">
