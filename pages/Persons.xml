@@ -21,6 +21,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2018-05-23">Added title priorities</change>
          <change who="DR" when="2018-07-06">Added use of floruit</change>
          <change who="DR" when="2019-03-20">Split groups, added information on person types</change>
+         <change who="DR" when="2025-03-12">Precised commemoration dates</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -225,10 +226,16 @@ guidelines for
 
          <div type="level1">
             <head>Commemoration</head>
-            <p>For Saints, you might wish to record the commemoration dates. Please
-               follow the following example. Please always include the source for the date (Sǝnkǝssār, Dǝggwā, EAe...).</p>
+            <p>For Saints, commemoration dates can be recorded as in the following examples. 
+               Please always include the source for the date (Sǝnkǝssār, Dǝggʷā, EAe...).</p>
+            <p>In some records, <att>type</att> with <val>diesNatalis</val> is used. While contested, this
+               term should be used when the commemoration falls on the day of their martyrdom.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-               <note type="commemoration"><date type="diesNatalis" ref="ethiocal:Maskaram5">5 Maskaram</date></note>
+               <note type="commemoration"><date ref="ethiocal:Terr25">25 Ṭǝrr</date></note>
+            </egXML>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <note type="commemoration">Commemorated in the Synaxary on <date type="diesNatalis" ref="ethiocal:Maskaram11">11 Maskaram</date></note>
+            <note type="commemoration">Commemorated in the Acts of Martyrs on <date type="diesNatalis" ref="ethiocal:Hedar23">23 Ḫǝdār</date></note>
             </egXML>
          </div>
 
