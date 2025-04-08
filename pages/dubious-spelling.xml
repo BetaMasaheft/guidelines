@@ -20,13 +20,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </fileDesc>       <revisionDesc>       <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
          <change who="DR" when="2019-01-09">Added ʾElyās and bǝʾsi, corrected ʾǝmuntu</change>
          <change who="JK" when="2025-01-09">Updated gəʿz</change>
+         <change who="DR" when="2025-04-08">Updated Sǝnkǝsār</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="dubious-spelling">
          <head>Dubious spelling</head>
-         <p>The words listed below should be transliterated as follows,
-    according to the TraCES decisions:</p>
+         <p>The words listed below should be transliterated as follows:</p>
          <list type="unordered">
             <item>
                <p>አእላፍ፡ | ʾaʾlāf (not ʾaʾǝlāf)</p>
@@ -93,6 +93,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <p>ሰማዕታት፡ | samāʿtāt (not samāʿǝtāt)</p>
             </item>
             <item>
+               <p>ስንክሳር፡ | Sǝnkǝsār (not Sǝnkǝssār)</p>
+            </item>
+            <item>
                <p>ትእዛዝ፡ | tǝʾǝzāz (not tǝʾzāz)</p>
             </item>
             <item>
@@ -102,7 +105,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <p>ያዕቆብ፡ | Yāʿqob (not Yāʿǝqob)</p>
             </item>
          </list>
-         <p>For other cases which raise questions, please do not hesitate to open individual
+         <p>This list is the result of discussions of the TraCES and Beta maṣāḥǝft projects.</p>
+         <p>For other cases, please do not hesitate to open individual
     issues and please remember to document any decisions taken to such dubious spellings here.</p>
       </body>
    </text>
