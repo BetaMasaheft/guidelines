@@ -59,20 +59,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          
          <div type="level2">
             <head>Differentiating Between Various Levels of Description</head>
-            <p>To mark a rudimentary description as a "stub" (indicating that the cataloguer wants others to consider it as such), include the word "stub" in the change history:
-               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <revisionDesc>
-                     <change who="ES" when="2024-04-10">Created stub.</change>
-                  </revisionDesc>
-               </egXML>
-               Once the record has been developed further, the word "stub" anywhere in the <gi>change</gi> element under <gi>revisionDesc</gi> should be replaced:
-               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <revisionDesc>
-                     <change who="ES" when="2024-04-10">Created an initial version.</change>
-                     <change who="NV" when="2024-12-13">Completed the description.</change>
-                  </revisionDesc>
-               </egXML>
-            </p>
+            <p>On versioning and credits see the section on <ref target="revisions"
+               >revisions</ref>.</p>
             <p>When enriching a historical catalogue description, such as
                verifying images or adding new information, this can be acknowledged using 
                <egXML xmlns="http://www.tei-c.org/ns/Examples"><ptr target="bm:BmWebsite" /></egXML>, 

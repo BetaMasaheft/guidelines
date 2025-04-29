@@ -28,9 +28,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <p>It is very important to add a <gi>change</gi> in the <gi>revisionDesc</gi> element of
             the <gi>teiHeader</gi> at the end of each section of work of improvement of a record. In
             the attribute <att>who</att> enter <ref target="teamids">your ID</ref>, in the
-               <att>when</att> enter the date of the change, in the format YYYY-MM-DD. You can use
-            code templates in Oxygen to do this. There is a set ready for you which also includes
-            this. Inside the element, briefly describe the changes you have made.</p>
+               <att>when</att> enter the date of the change, in the format YYYY-MM-DD. Inside the element, briefly describe the changes you have made.</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <revisionDesc>
                <change when="2010-12-04">registered</change>
@@ -38,10 +36,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <change who="PL" when="2016-03-10">transformed from mycore to TEI P5</change>
             </revisionDesc>
          </egXML>
-         <p>Best thing would be to do this every time you are not simply adding a comma.</p>
+         <p>Best thing would be to do this every time you are not simply adding a comma. Records with only one <gi>change</gi> element are considered stubs and are visualized as such. </p>
 
          <p>The file should be submitted for revision to a second author taking care of describing,
-            according to the guidelines, the event.</p>
+            according to the guidelines, the event. Remember to create a <gi>change</gi> element every time the record is reviewed and requested changes are carried out, giving credits to reviewers. A possible workflow could be:</p>
          <list type="ordered:arabic">
             <item>
                <p>Cataloguer will enter a <gi>change</gi> with content <hi rendition="simple:italic"
@@ -76,13 +74,32 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             are of great importance in the short and long term. </p>
          <p>In <gi>change</gi>, please describe what you have changed in the file, e.g. "added
             msItems and transcription of divs". </p>
-         <p>In the commit title, try to provide a descriptive title which will make it as easy as
+         <p>In the commit title, try to provide a <hi
+            rendition="simple:bold">short</hi> descriptive title which will make it as easy as
             possible to know at a glance what you have committed there. so, "added IDs" is way much
-            better of "minor correction" (and shorter!) "added perName elements" is better than
+            better of "minor correction" (and shorter!) "added persName elements" is better than
             "changed something". </p>
          <p>You can use the commit description to link and refer to issues, if the explanation of
             what you have done is there. The issue will also receive that information and provide a
             link to the commit. </p>
+         <div type="level2">
+            <head>Visualization of revisions</head>
+            <p>The revision history as recorded in the XML file and the permalinks to individual GitHub commits are present in the footer section of every record.</p>
+            <p>In addition, records with only one <gi>change</gi> element are clearly highlighted in the header section as "stubs".  The visualization is changed to "Last edited on YYYY-MM-DD" as soon as there are more <gi>change</gi> elements in the revision history. To deliberately mark a description with several <gi>change</gi> elements as a "stub" (indicating that the cataloguer wants others to consider it as such), include the word "stub" in the any <gi>change</gi> element:
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <revisionDesc>
+                     <change who="ES" when="2024-04-10">Created stub.</change>
+                  </revisionDesc>
+               </egXML>
+               Once the record stops being rudimentary, the word "stub" anywhere in the <gi>change</gi> element under <gi>revisionDesc</gi> should be replaced:
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <revisionDesc>
+                     <change who="ES" when="2024-04-10">Created an initial version.</change>
+                     <change who="NV" when="2024-12-13">Completed the description.</change>
+                  </revisionDesc>
+               </egXML>
+            </p>            
+         </div>
       </body>
    </text>
 </TEI>
