@@ -24,8 +24,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <text>
       <body xml:id="surrogates">
          <div>
-            <head>surrogates</head>
-            <p/>
+            <head>Surrogates</head>
+            <p>If surrogates of a ms exist (photographs, microfilms, etc) these should be listed in <gi>additional</gi> section as <gi>surrogates</gi>.
+               <egXML xmlns="http://www.tei-c.org/ns/Examples"><surrogates>
+                  <list>
+                     <item>digital images by Ewa Balicka-Witakowska and Michael Gervers <date when="2006">October 2006</date>
+                        <list>
+                           <item><idno>GG 00006 (HMML)</idno></item>
+                           <item><idno>623103 (vHMML digital identifier)</idno>
+                              <ref type="mss"
+                                 target="https://w3id.org/vhmml/readingRoom/view/623103"
+                                 ></ref></item>
+                           <item><idno>61220/utsc35354 (Toronto digital identifier)</idno><ref type="mss"
+                              target="https://ark.digital.utsc.utoronto.ca/ark:61220/utsc35354"
+                              ></ref></item>
+                        </list>
+                     </item>
+                  </list>
+               </surrogates></egXML></p>
          </div>
       </body>
    </text>
