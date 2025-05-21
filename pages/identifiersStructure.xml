@@ -59,7 +59,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <collection>Ethiopian Manuscript Microfilm Library</collection>
                         <idno>EMML no. 6952</idno>
                     </msIdentifier>
-                </egXML>
+                </egXML><p>Distingish between identifiers of manuscripts and <gi>surrogates</gi>.</p>
+                
+               
             </div>
             
             <div type="level2">
