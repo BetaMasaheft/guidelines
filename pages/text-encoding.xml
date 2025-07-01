@@ -24,6 +24,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2019-12-09">Added line take-up/down information, small edits for readability</change>
          <change who="DR" when="2020-11-20">Added explanations on text in work and manuscript records from Pietro
             Liuzzo's and Daria Elagina's remarks in https://github.com/BetaMasaheft/Documentation/issues/1570</change>
+         <change who="CH" when="2025-07-01">Update according to our discussion in Issue #1918 (Replace 'Textual Unit')</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -831,7 +832,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <head>Translations</head>
    <p>As there is a <tag>div type='edition'</tag> there can be a <tag>div type='translation'</tag>, a feature inherited 
       from the main structural <gi>div</gi>s of an edition from the <ref target="https://epidoc.stoa.org/gl/latest/supp-translation.html">EpiDoc Guidelines</ref>. 
-      You can add this beside your <tag>div type='edition'</tag> in any manuscript or textual unit file where you want to provide a translation. 
+      You can add this beside your <tag>div type='edition'</tag> in any Manuscript or Work file where you want to provide a translation. 
       To align parts of the translation to parts of the text, edition or transcription, you can use standard linking practices, that is to say, point to the correct <att>xml:id</att>.</p>
    <p>The following example is taken from <ref type="BM" target="LIT5064HEpA">History of the Episcopate of Alexandria</ref>.</p>
    <egXML xmlns="http://www.tei-c.org/ns/Examples">

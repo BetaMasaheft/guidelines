@@ -21,6 +21,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <change who="PL" when="2019-06-28">first version from
         https://github.com/BetaMasaheft/Documentation/issues/946 and related issues, examples from
         document provided by Denis Nosnitsin and Dorothea Reule.</change>
+      <change who="CH" when="2025-07-01">Update according to our discussion in Issue #1918 (Replace 'Textual Unit')</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -332,7 +333,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </explicit>
           </msItem>
         </egXML>
-        <p>In here the encoder is declaring the relation between the <gi>msItem</gi> and a textual unit twice, 
+        <p>In here the encoder is declaring the relation between the <gi>msItem</gi> and a Work twice, 
           once declaring an incipit, once not, and then also adding the incipit, which may contain the title again. There is no need to do all this, 
         it is enough to either
         <list><item>add the type <val>inscription</val> to the <gi>title</gi></item>

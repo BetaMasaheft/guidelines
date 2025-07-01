@@ -21,26 +21,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
         <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
         <change who="PL" when="2019-02-28">added links, split into three parts to define most common uses of the Narrative Unit</change>
+          <change who="CH" when="2025-07-01">Update according to our discussion in Issue #1918 (Replace 'Textual Unit')</change>
       </revisionDesc>
     </teiHeader>
     <text>
         <body xml:id="narrativeUnits">
             <div type="level1">
     <head>Narrative Units</head>
-                <p>The model file for a <ref target="definitionWorks">Narrative Unit</ref> is much
-                  simpler than a <ref target="works">work file</ref>. Just assign a
-        title to your file and add in the <gi>body</gi> a short
-        description. You can mark up content as in any other entity.
-        Recommended but not compulsory are a bibliography and a
-        <gi>listRelation</gi>.</p>
-        <p>A Narrative Unit can be pointed to in any place where you can point to a <ref target="definitionWorks">Textual Unit</ref>.
+              <p>The model file for a <ref target="definitionWorks">Narrative Unit</ref> is similar to a 
+                <ref target="works">Work file</ref>, but somehow simpler. Just assign a
+                title to your file and add in the <gi>body</gi> a short
+                description. You can mark up content as in any other entity.
+                Recommended but not compulsory are a bibliography and a
+                <gi>listRelation</gi>.</p>
+        <p>A Narrative Unit can be pointed to in any place where you can point to a <ref target="definitionWorks">Work</ref>.
           The following are some examples of the main types of use</p>
         <div type="level2">
           <head>Narrative Units in the main content</head>
           <p>
             In the following example from
             <ref type="BM" target="BLadd16217">London, British Library, BL Add. 16,217</ref>
-            a main content of the manuscript could not be identified with a Textual Unit. It has been associated with a Narrative Unit
+            a main content of the manuscript could not be identified with a Work. It has been associated with a Narrative Unit
           instead.
           </p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -50,7 +51,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 ...
             </msItem>
           </egXML>
-          <p>This is the same which you would do for a Textual Unit (see the page on <ref target="manuscriptContents">manuscript contents</ref>).</p>
+          <p>This is the same which you would do for a Work (see the page on <ref target="manuscriptContents">manuscript contents</ref>).</p>
           <p>In the following example from
             <ref target="BDLbruce93">Oxford,
               Bodleian Library, Bodleian Bruce 93</ref>
@@ -76,7 +77,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <head>Narrative Units in quaternary strata</head>
             <p>
               <ref target="documents">The page about documents</ref>
-              gives some examples of how to use Narrative Units and Textual Units to identify a content.
+              gives some examples of how to use Narrative Units and Work to identify a content.
               This will happen basically in the same way as in the above example, with a <gi>title</gi> element.
             </p>
             </div>

@@ -20,13 +20,14 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
           <change who="PL" when="2018-07-20">first version of guidelines from Wiki</change>
             <change who="PL" when="2019-02-28">updated with examples</change>
+            <change who="CH" when="2025-07-01">Update according to our discussion in Issue #1918 (Replace 'Textual Unit')</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body xml:id="Documents">
     <head>Documentary texts</head>
-<p>Texts which are not <ref target="definitionWorks">textual units</ref>
-occur often in manuscripts as <ref target="additionsVaria">additions</ref>.
+<p>Texts which are not <ref target="definitionWorks">Works</ref>
+occur often in manuscripts as <ref target="additionsVaria">Additions</ref>.
 That is why the list of types for these texts is in the
 <ref target="http://betamasaheft.eu/authority-files/list">Taxonomy</ref> under 'Additions'.</p>
             <p>Please, make sure you encode these texts correctly according to their actual
@@ -62,15 +63,16 @@ known and you wish to encode.</p>
 <p>There will be cases when it is only worth adding a value to <att>type</att> in <gi>desc</gi>,
 cases in which
 an association to a Narrative Unit is all that can be done, and cases in which the two
-might be very similar.</p>
+might be very similar.</p><!-- What 'two'? 'Narrative Unit and Addition' or 'Narrative Unit and Work'? -->
 <p>While the value of <att>type</att> in <gi>desc</gi> is only providing a useful
 grouping keyword from the taxonomy,
-the identification with a Textual Unit or Narrative Unit specifies that the current text is an <!--what?--></p>
+the identification with a Work or Narrative Unit specifies that the current text is an <!--what?--></p>
 <p>In the same way in which a document in a quaternary stratum
-   can be associated with a Narrative Unit, a quaternary stratum content
+    can be associated with a Narrative Unit, a quaternary stratum content (independent content, not-independent material,
+    autonomous writing project) 
   which can be identified with a stable content
   can be referenced in this same way,
-  like in <ref type="BM" target="BLorient481">London, British Library, BL Orient 481</ref></p>
+  like in <ref type="BM" target="BLorient481">London, British Library, BL Orient 481</ref>.</p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
   <item xml:id="a15">
     <locus target="#92r"/>
@@ -79,10 +81,10 @@ the identification with a Textual Unit or Narrative Unit specifies that the curr
   </item>
 </egXML>
 <p>Here you will notice also how assigning a value to <att>type</att> in <gi>desc</gi>
-is different from identifying it with a Textual or Narrative Unit</p>
+is different from identifying it with a Work or Narrative Unit.</p>
 <p>If a document is the main content of a manuscript,
   it can be encoded in the same way as other main contents in <gi>msContents</gi>. If it
-  is not an identifiable Textual Unit,
+  is not an identifiable part of a Work,
 it might also be assigned a <ref target="narrativeUnits">Narrative Unit</ref> identifier in the same way.</p>
 <p>For meaningful groups of documents you can also use the document <ref target="corpora">corpus</ref> grouping</p>
 <p>In case your text is in an <gi>additions</gi> <gi>item</gi> and it is composed of different sections,

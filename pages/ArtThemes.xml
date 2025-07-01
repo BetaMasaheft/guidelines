@@ -21,7 +21,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change who="DR" when="2018-05-02">Updated examples and fixed links</change>
          <change who="DR" when="2019-04-10">Included clarifications on art themes and caption encoding from issue 954, encoded lists,
          added paragraph on relations</change>
-         <change who="DR" when="2019-04-26">Specified use of ecrm:P129_is_about</change></revisionDesc>
+         <change who="DR" when="2019-04-26">Specified use of ecrm:P129_is_about</change>
+         <change who="CH" when="2025-07-01">Update according to our discussion in Issue #1918 (Replace 'Textual Unit')</change>
+      </revisionDesc>
    </teiHeader>
    <text>
 
@@ -58,7 +60,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   British English;
      </item>
   <item>
-     b) include Ge'ez
+     b) include Gǝʾǝz
   title;
   </item>
   <item>
@@ -85,7 +87,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
   Ethiopian tradition, provide a brief description of the features of
   each typology.</p>
             <p>In addition to this basic information you may choose to provide
-  references to person, places and textual units IDs that inform the content
+  references to Persons, Places, Works and Narrative units that inform the content
   of the ATID (e.g The Crucifixion will include a
   reference to the Gospels) and/or, where possible, to the relevant
   passages of that work with <att>cRef</att>:

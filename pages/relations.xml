@@ -25,6 +25,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="DR" when="2020-03-05">Corrected typos</change>
             <change who="DR" when="2022-07-07">updated use of several relations according to discussion in 
                 https://github.com/BetaMasaheft/Documentation/issues/1920 and https://github.com/BetaMasaheft/Documentation/issues/1350</change>
+            <change who="CH" when="2025-07-01">Update according to our discussion in Issue #1918 (Replace 'Textual Unit')</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -102,12 +103,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 is reserved for marking the relation between a deleted record and a record which 
                 contains information formerly described in that<ref target="create"> deleted record</ref>.</p>
 
-                <p><code>lawd:hasAttestation</code> is used to say that a named entity, a person, a
-                    place, a textual unit is attested in a textual unit or a manuscript or one of
-                    its parts. It cannot be used to relate persons to persons or persons to places,
+                <p><code>lawd:hasAttestation</code> is used to say that a named entity, a Person, a
+                    Place, a Work is attested in a Work or a Manuscript or one of
+                    its parts. It cannot be used to relate Person to Person or Person to Place,
                     and so on. This also means that if you are working on a set of records and do not want to
                 touch the manuscripts, either start writing a list of witnesses, you can use this relation to say
-                that a textual unit is present in a manuscript.</p>
+                that a work is present in a manuscript.</p>
                 
                 <p>
                     <code>syriaca:different-from</code> can be used to differentiate any two entitites from each other except
@@ -188,7 +189,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </div>
             <div type="level2">
                 <head>Work to Work</head>
-                <p><code>saws:formsPartOf</code> is used to declare that a defined Textual Unit is
+                <p><code>saws:formsPartOf</code> is used to declare that a defined Work is
                     always part of another one. <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="saws:formsPartOf" active="LIT3854KingList"
                             passive="LIT1507GadlaT">
@@ -237,8 +238,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </relation>
                     </egXML>
                 </p>
-                <p><code>saws:contains</code> can be used if you are sure that a textual unit always
-                    contains another textual unit (the latter may circulate also independently).
+                <p><code>saws:contains</code> can be used if you are sure that a Work always
+                    contains another Work (the latter may circulate also independently).
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="saws:contains" active="LIT2317Senodo" passive="LIT2696Hom"/>
                     </egXML>
@@ -271,8 +272,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </egXML>
                 </p>
                 <p>
-                    <code>ecrm:P129_is_about</code> is used to say that a Textual Unit speaks about
-                    another Textual Unit. <egXML
+                    <code>ecrm:P129_is_about</code> is used to say that a Work speaks about
+                    another Work. <egXML
                         xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="ecrm:P129_is_about" active="LIT5327MiracleVisit"
                             passive="LIT3575Mashaf"/>
@@ -405,7 +406,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </div>
             <div type="level2">
                 <head>Work to Person</head>
-                <p><code>saws:isAttributedToAuthor</code> is used to state that a Textual Unit has
+                <p><code>saws:isAttributedToAuthor</code> is used to state that a Work has
                     been attributed to a person. <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="saws:isAttributedToAuthor" active="LIT1287Dersan"
                             passive="PRS9481Theodoto">
@@ -426,7 +427,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             passive="PRS9167TaklaHa"/>
                     </egXML>
                 </p>
-                <p><code>ecrm:P129_is_about</code> is used to state a subject of a Textual Unit.
+                <p><code>ecrm:P129_is_about</code> is used to state a subject of a Work.
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <relation name="ecrm:P129_is_about" active="LIT5284MiracleDawit"
                             passive="PRS3429DawitII">

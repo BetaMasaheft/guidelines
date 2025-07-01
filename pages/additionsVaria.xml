@@ -24,6 +24,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <change who="DR" when="2018-05-23">Added paragraph on handNotes</change>
             <change who="PL" when="2018-06-18">Added summary of Issue 917</change>
             <change who="DR" when="2018-08-03">Added encoding of owners in varia</change>
+            <change who="CH" when="2025-07-01">Update according to our discussion in Issue #1918 (Replace 'Textual Unit')</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -107,7 +108,7 @@ never be used to mark a content, that presupposes another perspective.</p>
                     <val>guardLeaf</val>.</p>
                 <p>If the type of document is known, then there should be a
                     value in the <att>type</att> of the element <gi>desc</gi>.
-                    Additionally, if the content is identifiable with a Textual or Narrative Unit, this can be specified, adding <gi>title</gi> element with a <att>ref</att> in <gi>desc</gi>.
+                    Additionally, if the content is identifiable with a Work or with a Narrative Unit, this can be specified, adding <gi>title</gi> element with a <att>ref</att> in <gi>desc</gi>.
                   </p>
                 <p>More examples are provided in the page about <ref target="documents">documents</ref>.
                   The following example, from <ref target="BLorient494" type="BM">London, British Library, BL Oriental 494</ref> shows
@@ -175,7 +176,7 @@ never be used to mark a content, that presupposes another perspective.</p>
                   the text in its correct position as non-literary.
                   We have in the category of keywords for Subjects, for example, "Other" but also "Legal Document".
                   If a given textual unit is, according to the definition in the schema, a
-                  Donation Note or a Letter, you can add that keyword to the work record.</p>
+                  Donation Note or a Letter, you can add that keyword to the Work record.</p>
 <p>If the text is a primary strata and we happen to have also manuscripts where this text is an addition,
   then you could add a <gi>relation</gi> (e.g. with  <val>saws:isCopyOf</val> for <att>name</att>) which connects the <gi>msItem</gi> with the addition in question.</p>
                 <p>In additions as anywhere in the manuscript description, a <gi>handNote</gi> should be created for each identifiable hand, whether it can be described from available pictures of the manuscript
@@ -245,7 +246,7 @@ trials, notes crudely written in pencil or pen;</item>
                     <p>See also <ref target="text-encoding">Text Encoding</ref>.</p>
 
                     <p>Information provided in the catalogue which would ideally be marked-up directly in a transcribed text, such as the names of owners or patrons mentioned in supplications or elsewhere,
-                    can also be recorded in Varia if the textual context is not provided by the catalogue:
+                    can also be recorded in Varia, if the textual context is not provided by the catalogue:
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <item xml:id="e1">
                             <locus target="#1r"/>
