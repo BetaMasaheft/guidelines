@@ -21,7 +21,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
         <change who="DR" when="2018-04-26">editing of the Work section of the guidelines</change>
             <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
-         <change who="DR" when="2019-11-08">minor edits according to Alessandro Bausi's corrections</change></revisionDesc>
+         <change who="DR" when="2019-11-08">minor edits according to Alessandro Bausi's corrections</change>
+         <change who="CH" when="2025-07-01">Update according to our discussion in Issue #1918 (Replace 'Textual Unit')</change>
+      </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="definitionWorks">
@@ -72,7 +74,7 @@ is not a work, it is a part of the work
                     <label>Anaphora of Mary</label>
                     </div>
                   </egXML>
-                  The text is then identified as a textual unit but also as part of the text where it is contained with reference to its independent ID. 
+                  The text is then identified as a Work in its own right, as well as being referenced by another ID within the text in which it is contained. 
                   This corresponds to making a statement as
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                     <relation active="LIT1960Mashaf" name="saws:contains" passive="LIT1099Anapho"/>
