@@ -26,7 +26,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <div type="level1">
     <head>Adding a figure directly to your descriptions</head>
     <p></p>
-    <p>You can link images or portions of images published by the project simply using the element <gi>figure</gi> and <gi>graphic</gi>
+    <p>You can link single images or portions of images published by the project simply using the element <gi>figure</gi> and <gi>graphic</gi>
     adding in the <att>url</att> of the latter the relative path to the image on the server.</p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
     <figure>
@@ -38,7 +38,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     </figure>
     </egXML>
     <p>Please, note that adding an image in these guidelines is slightly different as it requires an absolute reference to the info.json, which is not needed here.</p>
-      
+      <p><ref target="images">On activating a viewer for image sets for manuscripts and institutions check the Images page</ref>.</p>
       <p>You can also insert images hosted elsewhere by adding in the <att>url</att> the absolute path to the image on the web, beginning with <gi>http</gi>. If you want to limit the image height you can add the <gi>height</gi> attribute. This can also be used to point to low resolution images.</p>
       <egXML xmlns="http://www.tei-c.org/ns/Examples">
         <figure>
@@ -68,6 +68,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <p><ref target="edition-images">See page on linking images to the edition of the text</ref>.</p>
 </div>
 </div>
+      
     </body>
   </text>
 </TEI>

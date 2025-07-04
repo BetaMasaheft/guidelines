@@ -199,6 +199,23 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI
             </p>
          </div>
          
+         
+         <div type="level2">
+            <head>Viewer for Photographs of Institutions</head>
+            <p>A link to a set of photographs can be added adding a <gi>desc</gi> element under the main 
+               <gi>place</gi> a <att>facs</att> attribute.
+               
+            </p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <place sameAs="wd:Q1885762" type="monastery" subtype="institution">
+                  <placeName xml:id="n1">Dayr as-Suryān</placeName>
+                  <country ref="wd:Q79"/>
+                  <region ref="wd:Q1074945"/>
+                  <desc facs="Sites/INS0478DS/DS_" n="29">Images</desc>
+                  ...... </place>
+            </egXML>
+         </div>
+         
          <div type="level2">
             <head>IIIF server</head>
             <p>We serve images on a IIIF server. You can read more here on <ref target="https://iiif.io/">IIIF | International Image Interoperability Framework</ref>. If you have new images that need to be displayed they first have to be converted to pyramid (multi-tile) tiff images. We recommend <ref target="https://www.libvips.org/">libvips image processing library</ref> for best conversion. 
