@@ -113,7 +113,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <code>syriaca:different-from</code> can be used to differentiate any two entitites from each other except
                     works, where <code>saws:isDifferentTo</code> is used.
                 </p>
-                
+                 <p>
+                     <code>dc:relation</code> can be used to state a generic relation between two entities (in most cases
+                places, but can be exceptionally used for other entities if no precise relation is available)
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <relation name="dc:relation" active="LOC3577Gondar" passive="LOC6552Amhara">
+                        <desc>Gondar was the capital of the Governo dell'Amhara during the
+                            Italian occupation.</desc>
+                    </relation>
+                </egXML>
+                 </p>
             </div>
             <div type="level2">
                 <head>Manuscript to Manuscript</head>
@@ -579,15 +588,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 ʾAksum Ṣǝyon.</desc>
                         </relation>
                     </egXML>
-                </p>
-                <p><code>dc:relation</code> can be used to state a generic relation between two
-                    places <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <relation name="dc:relation" active="LOC3577Gondar" passive="LOC6552Amhara">
-                            <desc>Gondar was the capital of the Governo dell'Amhara during the
-                                Italian occupation.</desc>
-                        </relation>
-                    </egXML>
-                </p>
+                </p>                
             </div>
             <div type="level2">
                 <head>Person to Place</head>
