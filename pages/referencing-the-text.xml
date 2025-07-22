@@ -50,16 +50,16 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     actual canonical reference.</p>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                     <cit>
-                        <quote xml:lang="gez"> ለሙሴ᎓ ግበር᎓ ለከ᎓ አርዌ᎓ ምድር᎓ ዘብረት᎓ ኵሉ᎓ ዘነሰኮ᎓ ይርአይ᎓ ኪያሁ᎓
-                            ወይሕየው᎓ ኪዮስ᎓ </quote>
+                        <quote xml:lang="gez"> ለሙሴ፡ ግበር፡ ለከ፡ አርዌ፡ ምድር፡ ዘብረት፡ ኵሉ፡ ዘነሰኮ፡ ይርአይ፡ ኪያሁ፡
+                            ወይሕየው፡ ኪዮስ፡ </quote>
                         <ref cRef="betmas:LIT2075Number.21.8">Numbers 21:8</ref>
                     </cit>
                 </egXML>
                 <p>The following example of markup is confusing and should be avoided as it claims
                     that the content of the ref element is a reference, while it is a quote.</p>
-                <egXML xmlns="http://www.tei-c.org/ns/Examples"> ለሙሴ᎓ <ref
-                        cRef="betmas:LIT2075Number.21.8">ግበር᎓ ለከ᎓ አርዌ᎓ ምድር᎓ ዘብረት᎓ ኵሉ᎓ ዘነሰኮ᎓ ይርአይ᎓
-                        ኪያሁ᎓ ወይሕየው</ref>᎓ ኪዮስ </egXML>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples"> ለሙሴ፡ <ref
+                        cRef="betmas:LIT2075Number.21.8">ግበር፡ ለከ፡ አርዌ፡ ምድር፡ ዘብረት፡ ኵሉ፡ ዘነሰኮ፡ ይርአይ፡
+                        ኪያሁ፡ ወይሕየው</ref>፡ ኪዮስ </egXML>
                 <div type="level3">
                     <head>Structure of the reference</head>
                     <p>What should I put after the <q>.</q> in my reference?</p>

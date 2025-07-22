@@ -119,8 +119,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <div type="level3">
           <head>Title of the (entire) work</head>
           <p>See, for example, in the manuscripts with the <ref type="bm" target="LIT3179Revela"
-              >Revelation of John</ref>, the wording like <foreign xml:lang="gez">ዝየ᎓ ተፈጸመ᎓ ራእየ᎓
-              ዮሐንስ᎓ አቡቀለምሲስ᎓ ዘውእቱ᎓ በሕይወቱ᎓ ራእይ᎓ ብሂል᎓</foreign> e.g. <ref
+              >Revelation of John</ref>, the wording like <foreign xml:lang="gez">ዝየ፡ ተፈጸመ፡ ራእየ፡
+              ዮሐንስ፡ አቡቀለምሲስ፡ ዘውእቱ፡ በሕይወቱ፡ ራእይ፡ ብሂል፡</foreign> e.g. <ref
               target="https://betamasaheft.eu/manuscripts/IVsuhtelen252/main#ms_i1.2">Saint
               Petersburg, Institut Vostočnyh Rukopisej Rossijskoj Akademii Nauk, IV Suhtelen 252,
               content item 1.2</ref>
@@ -130,10 +130,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               <locus from="66ra" to="99vb"/>
               <title type="complete" ref="LIT3179Revela" xml:lang="gez"/>
               <incipit xml:lang="gez">
-                <hi rend="rubric">ዘዮሐንስ᎓ እጲስ᎓</hi> ቆጶስ᎓ ዘቍስጥንጥያ᎓ ምጥረ᎓ ጶሊስ᎓ አመ᎓ ሀለዎ᎓ ይሰደድ᎓ ራእዮ᎓
-                ለዮሐንስ᎓ ዘከመ᎓ ርእዮ᎓ ለኢየሱስ᎓ ክርስቶስ᎓ ዘወሀቦ᎓ እግዚኣብሔር᎓ ከመ᎓ ያርእዩሙ᎓ ለአግብርቲሁ᎓ ዘሀሎ᎓ ይኩን᎓ ፍጡነ ። </incipit>
-              <explicit xml:lang="gez"> ዝየ᎓ ተፈጸመ᎓ ራእየ᎓ ዮሐንስ᎓ አቡቀለምሲስ᎓ ዘውእቱ᎓ ብሂል᎓ ዘርእየ᎓ በሕይወቱ᎓ ራእየ፨
-                ወእመቦ᎓ ዘገደፍኩ᎓ ወዘወሰኩ᎓ በኢያእምሮ᎓ ስረዩ᎓ ወባረኩ᎓ ላዕሌየ᎓ ወኢትርስዑኒ᎓ በሞትየ᎓ ወበሕይወትየ᎓ ሶበ᎓ አንበብክምዋ።
+                <hi rend="rubric">ዘዮሐንስ፡ እጲስ፡</hi> ቆጶስ፡ ዘቍስጥንጥያ፡ ምጥረ፡ ጶሊስ፡ አመ፡ ሀለዎ፡ ይሰደድ፡ ራእዮ፡
+                ለዮሐንስ፡ ዘከመ፡ ርእዮ፡ ለኢየሱስ፡ ክርስቶስ፡ ዘወሀቦ፡ እግዚኣብሔር፡ ከመ፡ ያርእዩሙ፡ ለአግብርቲሁ፡ ዘሀሎ፡ ይኩን፡ ፍጡነ ። </incipit>
+              <explicit xml:lang="gez"> ዝየ፡ ተፈጸመ፡ ራእየ፡ ዮሐንስ፡ አቡቀለምሲስ፡ ዘውእቱ፡ ብሂል፡ ዘርእየ፡ በሕይወቱ፡ ራእየ፨
+                ወእመቦ፡ ዘገደፍኩ፡ ወዘወሰኩ፡ በኢያእምሮ፡ ስረዩ፡ ወባረኩ፡ ላዕሌየ፡ ወኢትርስዑኒ፡ በሞትየ፡ ወበሕይወትየ፡ ሶበ፡ አንበብክምዋ።
               </explicit>
             </msItem>
           </egXML>
@@ -144,7 +144,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             either here or in the transcription as in the example above.</p>
           <p> Other examples of short colophons can be found at the end of some of the Old Testament
             books (esp. Octateuch). Cp. <ref type="bm" target="ESaqg008">AQG-008</ref>, Octateuch:
-              <foreign xml:lang="gez">ተፈጸመ᎓ ኦሪት᎓ ዘፀአት; ኦሪት᎓ ዘሌዋዊያን᎓ ተፈጸመ᎓</foreign>, etc. or at the
+              <foreign xml:lang="gez">ተፈጸመ፡ ኦሪት፡ ዘፀአት; ኦሪት፡ ዘሌዋዊያን፡ ተፈጸመ፡</foreign>, etc. or at the
             end of Aksumite collection (<ref type="bm" target="ESum039">UM-039</ref>), <ref
               target="https://www.zotero.org/groups/358366/ethiostudies/items/tag/bm%3Abausi2016colof"
               >Bausi 2016, 240</ref>. Cp. <ref type="bm" target="ESdd042">DD-042</ref>, Zena Ayhud,
@@ -190,7 +190,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <foreign xml:lang="gez">ተፈጸመ፡ በዝየ፡ ተአምረ፡ አቡነ፡ ገብረ፡</foreign>….
             <ref
               target="https://www.zotero.org/groups/358366/ethiostudies/items/tag/bm%3Abausi2016colof"
-              >Bausi 2016, 253–54</ref>, for the Ethiopic Apocalypse of Peter (The last two lines<foreign xml:lang="gez"> ለዛቲ᎓ መጽሐፍ᎓ ዘአጽሐፋ᎓</foreign>… 
+              >Bausi 2016, 253–54</ref>, for the Ethiopic Apocalypse of Peter (The last two lines<foreign xml:lang="gez"> ለዛቲ፡ መጽሐፍ፡ ዘአጽሐፋ፡</foreign>… 
             can be considered also as a separate unit, a commissioner note or supplication for the commissioner).</p>
           
         </div>
@@ -203,9 +203,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <p>The identification of this type of title depends on how the structure of the work in
             question is understood. However this level of interpretation will be encoded as well, so that the position of the information will be enough to provide the information about the fact that a 
             title regards only a part: it will be nested into a <gi>div</gi>.</p>
-          <p><ref target="ESam002" type="bm">AM-002</ref>, Sinodos, f. 40vb ተፈጸመ᎓ ተፈሥሑ᎓ ቀዳሜ᎓ ብሔር᎓; f. 68rb: ተፈጸመ᎓ ኃምስ᎓ ብሔር᎓ etc.
+          <p><ref target="ESam002" type="bm">AM-002</ref>, Sinodos, f. 40vb ተፈጸመ፡ ተፈሥሑ፡ ቀዳሜ፡ ብሔር፡; f. 68rb: ተፈጸመ፡ ኃምስ፡ ብሔር፡ etc.
             Aksumite collection (<ref target="ESmum039" type="bm">UM-039</ref>),
-            e.g., f. 117/46rb ተፈጸመ᎓ ሥርዓተ᎓ ጥምቀት᎓; f. 61/134 ተፈጸመት᎓ እንተ᎓ በከልቂዶን᎓ etc.
+            e.g., f. 117/46rb ተፈጸመ፡ ሥርዓተ፡ ጥምቀት፡; f. 61/134 ተፈጸመት፡ እንተ፡ በከልቂዶን፡ etc.
             Nearly all copies of the Synaxarion have these colophons, always at the end of the part for each month.
             Cp. <ref target="ESsdm008" type="bm">SDM-008</ref>.
           </p>
@@ -239,8 +239,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           <p>Examples of titles of the translation of a part </p>
             <list>
               <item><ref target="ESum018" type="bm">UM-018</ref>, f. 115rb 
-            <foreign xml:lang="gez">ወአዕለውነ᎓ ዘንተ᎓ ገድለ᎓ በመዋዕለ᎓ መፍቀሬ᎓ እግዚአብሔር᎓ ንጉሥ᎓ ገብረ᎓ መስቀል᎓ 
-              ወዘተረጐሞ᎓ ቀሲስ᎓ ግብጻዊ᎓ ወስሙ᎓ ሚካኤል᎓ ወመካኑ᎓ ብሔረ᎓ ግብጽ᎓ ደብረ᎓ አባ᎓ ሲኖዳ</foreign>; f. 132r, etc.</item>
+            <foreign xml:lang="gez">ወአዕለውነ፡ ዘንተ፡ ገድለ፡ በመዋዕለ፡ መፍቀሬ፡ እግዚአብሔር፡ ንጉሥ፡ ገብረ፡ መስቀል፡ 
+              ወዘተረጐሞ፡ ቀሲስ፡ ግብጻዊ፡ ወስሙ፡ ሚካኤል፡ ወመካኑ፡ ብሔረ፡ ግብጽ፡ ደብረ፡ አባ፡ ሲኖዳ</foreign>; f. 132r, etc.</item>
               <item><ref
                 target="https://www.zotero.org/groups/358366/ethiostudies/items/tag/bm%3Abausi2016colof"
                 >Bausi 2016, 243</ref>, colophon for the Vita of Bsoy (<ref target="BLorient692" type="bm">BritLib Orient 692</ref>, 
