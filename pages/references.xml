@@ -21,7 +21,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <revisionDesc>
          <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change> 
          <change who="PL" when="2020-06-16">introduced text and example for referencing 
-         based on DTS navigation and document support</change>     
+         based on DTS navigation and document support</change>
+         <change who="CH" when="2025-07-01">Update according to our discussion in Issue #1918 (Replace 'Textual Unit')</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -130,7 +131,7 @@ This manuscript is in the same hand as <ref type="hand" corresp="ESap002#h2"/>
                <div type="level4">
                   <head>First part (identifier)</head>
                <p><code>ID</code></p>
-                  <p>This is the ID of the manuscript or textual unit, <ref target="entities-id-structure">as normally used</ref>.
+                  <p>This is the ID of the Manuscript, Work or Narrative unit, <ref target="entities-id-structure">as normally used</ref>.
                Anchors are inconsistent with the aim of this structured referencing system and alternative to it. 
                The following example is what is discussed here, as a pointer to a specific passage in the text TUid123 at a subdivision named 1 which is 
                child of another subdivision named 1.

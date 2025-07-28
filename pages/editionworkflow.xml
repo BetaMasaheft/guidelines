@@ -18,8 +18,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </sourceDesc>
     </fileDesc>
     <revisionDesc>
-
       <change who="PL" when="2021-11-18">first version from test run on LIT4714</change>
+      <change who="CH" when="2025-07-01">Update according to our discussion in Issue #1918 (Replace 'Textual Unit')</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -99,12 +99,12 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             case you do not, <ref target="https://betamasaheft.eu/">Beta maṣāḥǝft</ref> may help
             you. Search for the title of your work, open the relevant work, and on the right, in
             red, you will find a list of manuscripts, sorted by type of content and eventually also
-            telling you about other textual units related to the one you are looking for.</p>
+            telling you about other Works or Narrative units related to the one you are looking for.</p>
           <p>This kind of search may not however bring you to the digital surrogates directly. <ref
               target="https://betamasaheft.eu/availableImages.html">The project also maintains a
               list of available images.</ref></p>
           <p>Because who writes does not have a clue, he looked with a script in the data searching
-            for a textual unit attested in manuscripts with a likelihood to have accessible images.
+            for a Work attested in manuscripts with a likelihood to have accessible images.
             Below is the script, just because it is always nice. It looks in the Ethio-SpaRE
             manuscripts, and selects only identified and encoded texts which occur 5 times in
             manuscripts whose images are available online (<gi>idno</gi> has both <att>facs</att>
@@ -146,10 +146,10 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               environment? Consider as a first step having a unified source of information, thus
               describing the manuscripts and linking the images and the text in the research
               environment. <ref target="manuscripts">Catalogue descriptions</ref> can be long or
-              short there are no requirement. What is then important is that you link your textual
-              unit to the description, as a <ref target="manuscriptContents">main content</ref> or
-                <ref target="additionsVaria">addition</ref>. If in doing this you also add a
-              description, links to other named entities and relevant bibliography, all will be able
+              short there are no requirements. What is then important is that you link your identified textual unit with its Work ID
+              to the description, as a <ref target="manuscriptContents">main content</ref> or
+                <ref target="additionsVaria">addition</ref>. If doing this you also add a
+              description, links to other named entities and relevant bibliography. Everybody will be able
               to benefit from that. If you do not want to do so, you can still list witnesses which
               are external to BM. If these have accessible images and data, link them. However, the
               PDF script listed in this page will not work out of the box, can be adapted
@@ -158,8 +158,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </div>
         <div type="level2">
           <head>Transcription</head>
-          <p>You may be very lucky and find out we have already added a transcription based on the
-            images, but this is not a very frequent case. Let us assume that there is no
+          <p>You might be lucky enough to find that we have already added a transcription based on the images, 
+            but this doesn't happen very often. Let us assume that there is no
             transcription, as for my example. I located the text using the viewer for each
             manuscript and downloaded the relevant photos following the manifest links. This may be
             not possible for you, please, simply ask. I then asked a colleague, Solomon, to help me
@@ -216,9 +216,9 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               >You could start from here</ref>.</p>
           <p>I did a branch of the Manuscripts repository and opened the four relevant files for the
             manuscripts.</p>
-          <p>I did a branch of the Works repository and opened the textual unit of the text.</p>
-          <p>I then copied from the TEI output of transrkibus into the BM manuscript records and
-            encoded the text structure. I used for this step the Atom editor. Any other is ok.</p>
+          <p>I created a branch of the Works repository and opened the Work record of the text.</p>
+          <p>I then copied the text from the TEI output of Transkribus into the BM manuscript records,
+            encoding the text structure in the process. For this step, I used the Atom editor. Any other editor is OK.</p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <div type="edition" xml:lang="gez">
               <div type="textpart" subtype="folio" n="9">
@@ -248,7 +248,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
               corrections, normalizations</ref>, etc. The correction of the text can be done in
             transkribus before exporting or in the TEI of the manuscript. If done in transkribus
             only visible text should be entered. Markup will be added in the TEI. Once correction
-            and encoding took place the text in the mss will look like the following example, more
+            and encoding took place the text in the Manuscripts will look like the following example, more
             or less.</p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <div type="edition" xml:lang="gez">
