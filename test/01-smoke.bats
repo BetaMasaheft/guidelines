@@ -26,7 +26,7 @@
 # Make sure the package has been deployed
 @test "logs show package deployment" {
   result=$(docker logs exist | grep -ow -c 'http://betamasaheft.aai.uni-hamburg.de/guidelines-data/')
-  [ "$result" == 'http://betamasaheft.aai.uni-hamburg.de/guidelines-data/' ]
+  [ "$result" -eq 1 ]
 }
 
 @test "logs are error free" {
