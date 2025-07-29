@@ -10,8 +10,6 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      GH_TOKEN: ${{ secrets.CI_BOT_PAT }}
     strategy:
        fail-fast: false
        matrix:
@@ -36,25 +34,13 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y libxml2-utils bats
-          
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
-        with:
-          platforms: linux/amd64,linux/arm64 
-          # platforms: all
 
-      - name: Make buildkit default
-        uses: docker/setup-buildx-action@v3
-        id: buildx
-        with:
-          install: true
-
-      # sanity check
-      # TODO(DP) Validate ?
-      - name: Ensure all XML files are well-formed
-        run: |
-          xmllint --noout \
-            $(find . -type f -name '*.xml')
+      # sanity check 
+      # TODO: see #164
+      # - name: Ensure all XML files are well-formed
+      #   run: |
+      #     xmllint --noout \
+      #       $(find . -type f -name '*.xml')
 
       # Build
       - name: Install Java
@@ -64,28 +50,20 @@ jobs:
           java-version: ${{ matrix.java-version }}
       - run: ant
 
-      # - name: authenticate gh cli
-      #   run: gh auth status
-
-      # - name: Add Expath Dependency
-      #   working-directory: ./build/
-      #   run: gh release download -R BetaMasaheft/DillmannData -p '*.xar' -O '001.xar'
-
-      # - name: check contents
-      #   working-directory: build/
-      #   run: ls
-
     #   Install Package 
       - name: Install package and start exist instance
         run: |
-          docker run -dit -p 8080:8080 -p 8443:8433 -v ${{ github.workspace }}/build:/exist/autodeploy:ro --name exist duncdrum/existdb:${{ matrix.exist-version }}-slim
+          docker run -dit -p 8080:8080 -v ${{ github.workspace }}/build:/exist/autodeploy \
+          --name exist --rm --health-interval=2s --health-start-period=2s \
+          duncdrum/existdb:${{ matrix.exist-version }}-slim
+
       - name: Wait for server to start
         timeout-minutes: 2 
         run: |
           echo "Waiting for server to start..."
           until docker logs exist 2>&1 | grep -q "Server has started"; do
             echo "Still waiting..."
-            sleep 2
+            sleep 4
           done
 
       # Test
@@ -106,7 +84,7 @@ jobs:
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: Dillmann-exist-${{ matrix.exist-version }}-log
+          name: Guidelines_data-exist-${{ matrix.exist-version }}-log
           path: exist.log
 
     #   - name: Run Cypress e2e test
