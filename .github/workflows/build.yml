@@ -1,0 +1,113 @@
+# This workflow builds a xar archive, deploys it into exist and execute a simple smoke test.
+# It also includes code for using semantic-release to upload packages as part of GitHub releases
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+# For node free automated release see https://trstringer.com/github-actions-create-release-upload-artifacts/
+
+name: exist-db CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.CI_BOT_PAT }}
+    strategy:
+       fail-fast: false
+       matrix:
+        # 7.0.0-SNAPSHOT and 6.2.0 created
+         exist-version: [latest, release]
+         java-version: [11, 21]
+         exclude:
+           - exist-version: release
+             java-version: 21
+           - exist-version: latest
+             java-version: 11
+
+    steps:
+      # Checkout code
+      - uses: actions/checkout@v4
+      # Speed up apt-get installs
+      - name: Disable man-db to make package install and removal faster
+        run: |
+          echo 'set man-db/auto-update false' | sudo debconf-communicate >/dev/null
+          sudo dpkg-reconfigure man-db
+      - name: Install Test Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libxml2-utils bats
+          
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+        with:
+          platforms: linux/amd64,linux/arm64 
+          # platforms: all
+
+      - name: Make buildkit default
+        uses: docker/setup-buildx-action@v3
+        id: buildx
+        with:
+          install: true
+
+      # sanity check
+      # TODO(DP) Validate ?
+      - name: Ensure all XML files are well-formed
+        run: |
+          xmllint --noout \
+            $(find . -type f -name '*.xml')
+
+      # Build
+      - name: Install Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: ${{ matrix.java-version }}
+      - run: ant
+
+      # - name: authenticate gh cli
+      #   run: gh auth status
+
+      # - name: Add Expath Dependency
+      #   working-directory: ./build/
+      #   run: gh release download -R BetaMasaheft/DillmannData -p '*.xar' -O '001.xar'
+
+      # - name: check contents
+      #   working-directory: build/
+      #   run: ls
+
+    #   Install Package 
+      - name: Install package and start exist instance
+        run: |
+          docker run -dit -p 8080:8080 -p 8443:8433 -v ${{ github.workspace }}/build:/exist/autodeploy:ro --name exist duncdrum/existdb:${{ matrix.exist-version }}-slim
+      - name: Wait for server to start
+        timeout-minutes: 2 
+        run: |
+          echo "Waiting for server to start..."
+          until docker logs exist 2>&1 | grep -q "Server has started"; do
+            echo "Still waiting..."
+            sleep 2
+          done
+
+      # Test
+      - name: Run smoke test
+        run: bats --tap test/*.bats
+  
+      - name: debug logs
+        if: failure()
+        run: docker logs exist | grep 'ERROR'
+
+      - name: Copy logs on failure
+        if: failure()
+        run: |
+          echo "Copying logs..."
+          docker cp exist:/exist/logs/exist.log ./exist.log
+
+      - name: Upload logs artifact
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Dillmann-exist-${{ matrix.exist-version }}-log
+          path: exist.log
+
+    #   - name: Run Cypress e2e test
+    #     uses: cypress-io/github-action@v6
