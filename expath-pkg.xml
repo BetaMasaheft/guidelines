@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://expath.org/ns/pkg" name="http://betamasaheft.aai.uni-hamburg.de/guidelines-data/" abbrev="guide-data" version="1.0.0" spec="1.0">
+    <title>Guidelines (Data)</title>
+    <dependency processor="http://exist-db.org" semver-min="5.2.0"/>
+    <rng>
+        <import-uri>https://betamasaheft.eu/guidelines.rng</import-uri>
+        <file>schema/out/tei-betamesaheftGL.rng</file>              
+    </rng>
+</package>

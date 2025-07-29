@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meta xmlns="http://exist-db.org/xquery/repo">
+    <description>Guidelines (Data)</description>
+    <author>Pietro Maria Liuzzo</author>
+    <website>http://www.betamasaheft.eu/Guidelines/</website>
+    <status>alpha</status>
+    <license>GNU-LGPL</license>
+    <copyright>true</copyright>
+    <type>application</type>
+    <target>guidelines/data</target>
+    <prepare>pre-install.xql</prepare>
+    <finish/>
+    <permissions user="BetaMasaheftAdmin" group="dba" mode="rw-rw-r--"/>
+<deployed>2017-11-16T15:43:53.038+01:00</deployed>
+</meta>
