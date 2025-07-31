@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<meta xmlns="http://exist-db.org/xquery/repo">
+<meta xmlns="http://exist-db.org/xquery/repo" commit-id="@commit-id@" commit-time="@commit-time@">
     <description>Guidelines (Data)</description>
     <author>Pietro Maria Liuzzo</author>
     <website>http://www.betamasaheft.eu/Guidelines/</website>
