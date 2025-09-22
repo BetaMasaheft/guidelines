@@ -25,6 +25,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <change who="PL" when="2021-05-20">Added new slideshows</change>
       <change who="ES" when="2022-04-20">Added 2022 Hamburg workshop link, PP link</change>
       <change who="DR" when="2022-12-21">Added 2022 Marburg presentations</change>
+      <change who="CH" when="2025-07-01">Update according to our discussion in Issue #1918 (Replace 'Textual Unit')</change>
     </revisionDesc>
   </teiHeader>
   <text>
@@ -358,7 +359,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
           </row>
 
           <row>
-            <cell>Encoding of manuscripts' content and textual units</cell>
+            <cell>Encoding of manuscripts' content (Works and Narrative Units)</cell>
             <cell>description</cell>
             <cell></cell>
             <cell>
