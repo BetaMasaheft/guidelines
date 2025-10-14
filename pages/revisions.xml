@@ -48,6 +48,11 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <item>
                <p>Reviewer will add a <gi>change</gi> with content <hi rendition="simple:italic"
                      >Reviewed and Corrected</hi>,</p>
+               
+            </item> 
+            <item>
+               <p>OR the initial Cataloguer will add a <gi>change</gi> with content <hi rendition="simple:italic"
+                  >Reviewed and Corrected after the review by XY</hi>,</p>
             </item>
             <item>
                <p>General editor will enter a <gi>change</gi> with value <hi
