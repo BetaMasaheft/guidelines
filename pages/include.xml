@@ -45,16 +45,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </item>
                     </list>
                 </p>
-                <p>Remember to reproduce the TEI namespace, at the top element of the included files.      
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <div  
-                            xmlns="http://www.tei-c.org/ns/1.0" 
-                            type="edition" 
-                            xml:id="Transkribus" 
-                            subtype="transkribus" >
-                            ...
-                        </div>
-                    </egXML>
+                <p>Remember to reproduce the TEI namespace (xmlns="http://www.tei-c.org/ns/1.0") as an attribute <att>xmlns</att> at the top element of the included files.      
                 </p>
                 
                 <p>Another small step you need to take is to remove <att>xml:base</att> from <gi>text</gi></p>
