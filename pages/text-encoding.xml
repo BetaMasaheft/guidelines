@@ -860,8 +860,15 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
    <p>Usually, if you have done a lot of encoding in a text which you are translating, you do not want, neither need to replicate that in the translation.
    You may however wish to mark up features of the translation itself, like omitted text which are translating or the text of the translation reports. This 
    is especially important if the translation itself is an historical work and made choices of some respect.</p>
-   <p>For example you could use <gi>supplied</gi> with <att>reason</att> 'subaudible' or 'omitted'. 
+   <p>For example you could use <gi>supplied</gi> with <att>reason</att> 'omitted'. 
       Here we use the same values which <ref target="https://epidoc.stoa.org/gl/latest/supp-translation.html">EpiDoc</ref> uses.</p>
+   <p>Do not over-annotate translations: at the moment, we do not mark up words that are added in translation for fluidity only; they may be put in round brackets to show that they are added by the translator, as per convention. If ever need arises to mark such words up you can use <att>reason</att> 'subaudible' as in <ref target="https://epidoc.stoa.org/gl/latest/supp-translation.html">EpiDoc</ref>. The two examples below would result in the same visualization.</p>
+   <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <ab>At that moment (he) fell down...</ab>
+   </egXML>
+   <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <ab>At that moment <supplied reason="subaudible">he</supplied> fell down...</ab>
+   </egXML>
 <!--   here we may add examples from the French Translation of the Historia of Ludolf and the note that Ludolf makes about the omissions-->
 </div>
       </body>
