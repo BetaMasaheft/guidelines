@@ -155,13 +155,13 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </figure>
                 </egXML>
                 <figure>
-                    <graphic xml:id="g1" url="/iiif/KAE/011/KAE-011__005.tif/info.json">
+                    <graphic xml:id="fig1" url="/iiif/KAE/011/KAE-011__005.tif/info.json">
                         <desc>This is a test image from BM IIIF server.</desc>
                     </graphic>
                 </figure>
                 <p>You can use <tag>ref type='figure'</tag> with a <att>target</att> pointing at the
                     image ID like in the following example, used here <ref type="figure"
-                        target="#g1"/>.</p>
+                        target="#fig1"/>.</p>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                     <ref type="figure" target="#g1"/>
                 </egXML>
