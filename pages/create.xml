@@ -19,20 +19,24 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </fileDesc>       <revisionDesc>
         <change who="PL" when="2019-11-20">Created file</change>
          <change who="CH" when="2025-07-01">Update according to our discussion in Issue #1918 (Replace 'Textual Unit')</change>
+         <change who="ES" when="2026-01-06">detailed the initial workflow</change>
       </revisionDesc>    
    </teiHeader>
    <text>
       <body xml:id="create">
 <div type="level1">
-   <head>Create</head>
-        <p>If you have editors' rights, you can create a file once logged in the application from the relevant page.</p>
-        <p>If you are not, ask to be added.</p>
-        <p>You can always check the data and add in the folder called "new" correct and validating files which adhere to these guidelines, with one exception:
-          <ref target="Works">Work</ref> records can only be created in the application because their IDs become CAe identifiers.</p>
-   <!-- Is it only Work records, that are created through the app? PRS and LOC are created through the app and receive their own CAe identifiers as well. -->
+   <head>Creating new records</head>
+   <p>Project members and associates can all contribute to the database by creating new records in one of the main repositories (Manuscripts, Persons, Places, Institutions, Works, Studies, Narrative Units, Authority Files). Please study these Guidelines first for definitions.</p>
+   <p>In order to be able to contribute you must be assigned editor's rights - if you are not sure whether you have them please contact the <ref target="https://www.betamasaheft.uni-hamburg.de/team/projectteam.html">project team</ref>.</p>
+   <p>Make sure you have everything prepared as described in the <ref target="setup">Setup</ref> section. Make sure you understand how the GitHub workflow and branches and pull requests work (check <ref target="workflow">Workflow</ref>). </p>
+   <p>Before creating any record, use a thorough search of the application to make sure it is not present already, possibly under a slightly different name or spelling; if you are not certain, feel free to open a <ref target="https://github.com/BetaMasaheft/Documentation/issues">ticket</ref> and ask for advise. You must always create an issue before creating a new work record to ensure a consistent Clavis Aethiopica structure.</p>
+   <p>In order to ensure that Clavis Aethiopica numbers are unique, <ref target="Works">Work</ref> records must be created inside the web application at <ref target="http://betamasaheft.eu">betamasaheft.eu</ref>. Please log in to the application by providing Username and Password (only possible from the homepage), select the record type from the drop-down menu and click "new".</p>
+   <p>In order to ensure unique filenames it is also recommended to use the same system for all other record types, except for manuscripts, that can be directly created in the relevant collection folders bypassing the application.</p>
         <p>Please follow the instructions given on the application after the creation of a new file with that procedure. After downloading and before committing
          the new file, always open it in your editor to make sure that it is valid and, if necessary (which it nearly always is!), edit it.</p>
-</div>
+   <p>Remember: all files created through the application must be first downloaded to the /new subfolder in your local repository, edited, and syncronized to GitHub and application through a successful pull request before that can be renamed, deleted, or moved.</p>
+</div>        
+         
          <div type="level1">
             <head>Example workflow</head>
             <p>It is not rare that a single unit of work will involve several commits to several branches of different repositories. Here is an example:</p>
@@ -121,6 +125,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             the deleted one was a double, then requesting 
             the deleted item will redirect to that record.
             </p>
+            <p>Remember that you can only delete records after they have been syncronized to the GitHub cloud and the web application, so if you discovered that you have just created a record by mistake before the very first pull request, you must first still download it, create a pull request, wait for the merge approval. Only then can a record be deleted.</p>
          </div>
         </body>
         </text>
