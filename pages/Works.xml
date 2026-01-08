@@ -46,6 +46,14 @@ please read <ref target="definitionWorks">Definition of Works and Narrative Unit
                <ref target="narrativeUnits">Narrative Units</ref>
             </p>
          </div>
+         <div type="level1" xml:id="studies">
+            <head>Studies</head>
+            
+            <p>A separate category of texts witnessed in manuscripts are <hi rendition="simple:bold">scholarly texts</hi> such as historical accounts, lexica, grammars, authored by western academics and not being part of Ethiopian and Eritrean literary tradition.</p>
+            
+            <p>As such textual units should not be identified as a part of the Clavis Aethiopica, a separate category (Studies) exists for such work types.
+            </p>
+         </div>
       </body>
    </text>
 </TEI>

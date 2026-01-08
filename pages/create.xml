@@ -12,121 +12,147 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </titleStmt>
          <publicationStmt>
             <p/>
-          </publicationStmt>
+         </publicationStmt>
          <sourceDesc>
-            <p></p>
+            <p/>
          </sourceDesc>
-      </fileDesc>       <revisionDesc>
-        <change who="PL" when="2019-11-20">Created file</change>
-         <change who="CH" when="2025-07-01">Update according to our discussion in Issue #1918 (Replace 'Textual Unit')</change>
+      </fileDesc>
+      <revisionDesc>
+         <change who="PL" when="2019-11-20">Created file</change>
+         <change who="CH" when="2025-07-01">Update according to our discussion in Issue #1918
+            (Replace 'Textual Unit')</change>
          <change who="ES" when="2026-01-06">detailed the initial workflow</change>
-      </revisionDesc>    
+      </revisionDesc>
    </teiHeader>
    <text>
       <body xml:id="create">
-<div type="level1">
-   <head>Creating new records</head>
-   <p>Project members and associates can all contribute to the database by creating new records in one of the main repositories (Manuscripts, Persons, Places, Institutions, Works, Studies, Narrative Units, Authority Files). Please study these Guidelines first for definitions.</p>
-   <p>In order to be able to contribute you must be assigned editor's rights - if you are not sure whether you have them please contact the <ref target="https://www.betamasaheft.uni-hamburg.de/team/projectteam.html">project team</ref>.</p>
-   <p>Make sure you have everything prepared as described in the <ref target="setup">Setup</ref> section. Make sure you understand how the GitHub workflow and branches and pull requests work (check <ref target="workflow">Workflow</ref>). </p>
-   <p>Before creating any record, use a thorough search of the application to make sure it is not present already, possibly under a slightly different name or spelling; if you are not certain, feel free to open a <ref target="https://github.com/BetaMasaheft/Documentation/issues">ticket</ref> and ask for advise. You must always create an issue before creating a new work record to ensure a consistent Clavis Aethiopica structure.</p>
-   <p>In order to ensure that Clavis Aethiopica numbers are unique, <ref target="Works">Work</ref> records must be created inside the web application at <ref target="http://betamasaheft.eu">betamasaheft.eu</ref>. Please log in to the application by providing Username and Password (only possible from the homepage), select the record type from the drop-down menu and click "new".</p>
-   <p>In order to ensure unique filenames it is also recommended to use the same system for all other record types, except for manuscripts, that can be directly created in the relevant collection folders bypassing the application.</p>
-        <p>Please follow the instructions given on the application after the creation of a new file with that procedure. After downloading and before committing
-         the new file, always open it in your editor to make sure that it is valid and, if necessary (which it nearly always is!), edit it.</p>
-   <p>Remember: all files created through the application must be first downloaded to the /new subfolder in your local repository, edited, and syncronized to GitHub and application through a successful pull request before that can be renamed, deleted, or moved.</p>
-</div>        
-         
+         <div type="level1">
+            <head>Creating new records</head>
+            <p>Project members and associates can all contribute to the database by creating <ref
+                  target="newEntry">new records</ref> in one of the main repositories (<ref
+                  target="manuscripts">Manuscripts</ref>, <ref target="persons">Persons</ref>, <ref
+                  target="places">Places</ref>, <ref target="institution">Repositories</ref>, <ref
+                  target="works">Works</ref>, <ref target="works">Studies</ref>, <ref
+                  target="narrativeUnits">Narrative Units</ref>, <ref target="authority-files"
+                  >Authority Files</ref>, <ref target="artThemes">Art Themes</ref>). Please study
+               these Guidelines first for definitions.</p>
+            <p>In order to be able to contribute you must be assigned editor's rights - if you are
+               not sure whether you have them please contact the <ref
+                  target="https://www.betamasaheft.uni-hamburg.de/team/projectteam.html">project
+                  team</ref>.</p>
+            <p>Make sure you have everything prepared as described in the <ref target="setup"
+                  >Setup</ref> section. Make sure you understand how the GitHub workflow and
+               branches and pull requests work (check <ref target="workflow">Workflow</ref>). </p>
+            <p>Before creating any record, use a thorough search of the application to make sure it
+               is not present already, possibly under a slightly different name or spelling; if you
+               are not certain, feel free to open a <ref
+                  target="https://github.com/BetaMasaheft/Documentation/issues">ticket</ref> and ask
+               for advice. <hi rendition="simple:bold">You must always create an issue before
+                  creating a new <ref target="works">Work</ref> record to ensure a consistent Clavis
+                  Aethiopica structure.</hi></p>
+            <p>In order to ensure that Clavis Aethiopica numbers are unique, <ref target="works"
+                  >Work</ref> records must be created inside the web application at <ref
+                  target="http://betamasaheft.eu">betamasaheft.eu</ref>. Please log in to the
+               application by providing Username and Password (only possible from the homepage),
+               select the record type from the drop-down menu and click "new".</p>
+            <p>In order to ensure unique filenames it is also recommended to use the same system for
+               all other record types - except for <ref target="manuscripts">Manuscripts</ref>,
+               which can be directly created in the relevant collection folders bypassing the
+               application.</p>
+            <p>Please follow the instructions given <ref target="newEntry">here</ref> and on the
+               application. After downloading and before committing the new file, always open it in
+               your editor to make sure that it is valid and, if necessary (which it nearly always
+               is!), edit it.</p>
+            <p>Remember: all files created through the application must be first downloaded to the
+                  <hi rendition="simple:bold">/new</hi> subfolder in your local repository, edited,
+               and syncronized to GitHub and application through a successful pull request before
+               that can be renamed, deleted, or moved.</p>
+         </div>
+
          <div type="level1">
             <head>Example workflow</head>
-            <p>It is not rare that a single unit of work will involve several commits to several branches of different repositories. Here is an example:</p>
+            <p>It is not rare that a single unit of work will involve several commits to several
+               branches of different repositories. Here is an example:</p>
             <list rend="ordered">
                <item>The contributor starts to edit a manuscript record,</item>
                <item>she thinks an identifier for a new Work is needed,</item>
-            <item> she opens an issue, labeled 'Text Identification', pings relevant people and 
-               makes sure that this textual unit should be created as a new Work file or Narrative unit file  
-               (this also helps contributors who do not have enough permissions to 
-               create Works or Narrative units in the app). In the while, there is no need to add a <att>ref</att> to
-            <gi>title</gi> in <gi>msItem</gi> in the manuscript record, for example, a comment can be left that there is a pending issue about the 
-               identification of this text part.</item>
-              <item> 
-                 If the result of the discussion is positive and a new record is needed,
-                 the editor or some other collaborator creates it in the app.</item>
-              <item> 
-                 Because the Work record or the Narrative unit record has been created in the app, it needs to be synced.
-                 Make a Pull Request to Works repository and make sure it is promptly reviewed, corrected and merged. 
-                 Planning this 
-                 in the issue where you discussed the creation is a good idea.
-                 Please note that it needs to be merged quickly, to keep the app in sync.
-              </item> 
-               <item>Anyone can now use the newly created 
-                  Work ID or Narrative unit ID in  manuscript records.
-              </item> 
-               <item>Once the contributor is ready, a Pull Request for the manuscript can be done to the Manuscripts repository.
-               </item>
-               <item>During review it turns out it was not necessary to create a Work ID, alas. A collaborator reviewing this Pull Request did not see the discussion and could not intervene before.
-               </item>
-               <item>The editor or any other collaborator can now delete the 
-                  record in the Works repository and make a Pull Request justified by the
-                  review of the manuscript, and eventually needs no review if linked to that.
-                  By doing this, the app, where the record was created, gets to know and stays in sync.
-             </item>
+               <item> she opens an issue, labeled 'Text Identification', pings relevant people and
+                  makes sure that this textual unit should be created as a new Work file or
+                  Narrative unit file (this also helps contributors who do not have enough
+                  permissions to create Works or Narrative units in the app). In the while, there is
+                  no need to add a <att>ref</att> to <gi>title</gi> in <gi>msItem</gi> in the
+                  manuscript record, for example, a comment can be left that there is a pending
+                  issue about the identification of this text part.</item>
+               <item> If the result of the discussion is positive and a new record is needed, the
+                  editor or some other collaborator creates it in the app.</item>
+               <item> Because the Work record or the Narrative unit record has been created in the
+                  app, it needs to be synced. Make a Pull Request to Works repository and make sure
+                  it is promptly reviewed, corrected and merged. Planning this in the issue where
+                  you discussed the creation is a good idea. Please note that it needs to be merged
+                  quickly, to keep the app in sync. </item>
+               <item>Anyone can now use the newly created Work ID or Narrative unit ID in manuscript
+                  records. </item>
+               <item>Once the contributor is ready, a Pull Request for the manuscript can be done to
+                  the Manuscripts repository. </item>
+               <item>During review it turns out it was not necessary to create a Work ID, alas. A
+                  collaborator reviewing this Pull Request did not see the discussion and could not
+                  intervene before. </item>
+               <item>The editor or any other collaborator can now delete the record in the Works
+                  repository and make a Pull Request justified by the review of the manuscript, and
+                  eventually needs no review if linked to that. By doing this, the app, where the
+                  record was created, gets to know and stays in sync. </item>
             </list>
-            <p>A record creation in the app should always be promptly followed by a 
-               commit and a Pull Request to align to the database in any case. If the discussion about this 
-               operation has already happened, review only needs to focus on typos and contents of the record.
-              The app will have learned about the new files because they were created in there 
-              in the first place. But if you do not merge them into master, as a result of a Pull Request and delete them,
-              the app will never get to know that the record was deleted 
-              (because you deleted it somewhere else). 
-              That is why we need a commit and a Pull Request, so that repository and database stay in sync.</p>
+            <p>A record creation in the app should always be promptly followed by a commit and a
+               Pull Request to align to the database in any case. If the discussion about this
+               operation has already happened, review only needs to focus on typos and contents of
+               the record. The app will have learned about the new files because they were created
+               in there in the first place. But if you do not merge them into master, as a result of
+               a Pull Request and delete them, the app will never get to know that the record was
+               deleted (because you deleted it somewhere else). That is why we need a commit and a
+               Pull Request, so that repository and database stay in sync.</p>
          </div>
          <div type="level1">
             <head>Doublets</head>
-            <p>Doublets may be identified. This happens especially when Works are created without enough disambiguation information
-            or when one same manuscript is entered in the system from different sources without prior knowledge 
-            and due diligence to identify the already existing record. It is, however, normal and will always happen.</p>
-            <p>If you identify a doublet, it is wise to deal with it in some way or another 
-            and it is often advisable to consult with other editors and collaborators about this, 
-            because there may be reasons to have those different records.</p>
-            <p>
-               If it is clear that a record is superfluous, 
-               delete it, properly document this in the commit, make sure the deleted identifier is
-               not used elsewhere, update existing references,
-               but also add a relation in the record which survives, like the following.
-               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <relation 
-                     name="betmas:formerlyAlsoListedAs" 
-                     active="IDofthesurvivedrecord"
+            <p>Doublets may be identified. This happens especially when Works are created without
+               enough disambiguation information or when one same manuscript is entered in the
+               system from different sources without prior knowledge and due diligence to identify
+               the already existing record. It is, however, normal and will always happen.</p>
+            <p>If you identify a doublet, it is wise to deal with it in some way or another and it
+               is often advisable to consult with other editors and collaborators about this,
+               because there may be reasons to have those different records.</p>
+            <p> If it is clear that a record is superfluous, delete it, properly document this in
+               the commit, make sure the deleted identifier is not used elsewhere, update existing
+               references, but also add a relation in the record which survives, like the following.
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <relation name="betmas:formerlyAlsoListedAs" active="IDofthesurvivedrecord"
                      passive="IDofthedeletedrecord"/>
-               </egXML>
-               If you delete more than one, the same can be said for each. If the deleted ID is requested
-               a redirect will fetch the surviving record.
-            </p>
-            <p>It may be also that in cases of doubt or for other reasons that the editors and collaborators will discuss
-            you want to keep the double record. In this case, you can always use a <gi>relation</gi>
-               with <att>name</att> <code>skos:exactMatch</code>,  <code>skos:broadMatch</code> 
-               or <code>skos:closeMatch</code>. It will be even more useful than usual to give a <gi>desc</gi>
-               in your <gi>relation</gi>. No redirect will be produced, in this case, when one of the two is requested, 
-               the relations will be visualized, and in case of <code>skos:exactMatch</code> this will be with the header.</p>
+               </egXML> If you delete more than one, the same can be said for each. If the deleted
+               ID is requested a redirect will fetch the surviving record. </p>
+            <p>It may be also that in cases of doubt or for other reasons that the editors and
+               collaborators will discuss you want to keep the double record. In this case, you can
+               always use a <gi>relation</gi> with <att>name</att>
+               <code>skos:exactMatch</code>, <code>skos:broadMatch</code> or
+                  <code>skos:closeMatch</code>. It will be even more useful than usual to give a
+                  <gi>desc</gi> in your <gi>relation</gi>. No redirect will be produced, in this
+               case, when one of the two is requested, the relations will be visualized, and in case
+               of <code>skos:exactMatch</code> this will be with the header.</p>
          </div>
          <div type="level1">
             <head>Delete</head>
-            <p>If you make a mistake or find a doublet 
-               which needs to be cleaned up or need 
-               to <ref target="definitionWorks">reorganize Works</ref> by making one formerly independent 
-               part of another, you will delete a record. 
-            Doing so as you do normally, with a commit to the 
-            public repositories in GitHub, 
-            will add a value to a list of deleted records and if a 
-               <gi>relation</gi> with <att>name</att> 
-               <code>betmas:formerlyAlsoListedAs</code> 
-               is present in another record of which
-            the deleted one was a double, then requesting 
-            the deleted item will redirect to that record.
-            </p>
-            <p>Remember that you can only delete records after they have been syncronized to the GitHub cloud and the web application, so if you discovered that you have just created a record by mistake before the very first pull request, you must first still download it, create a pull request, wait for the merge approval. Only then can a record be deleted.</p>
+            <p>If you make a mistake or find a doublet which needs to be cleaned up or need to <ref
+                  target="definitionWorks">reorganize Works</ref> by making one formerly independent
+               part of another, you will delete a record. Doing so as you do normally, with a commit
+               to the public repositories in GitHub, will add a value to a list of deleted records
+               and if a <gi>relation</gi> with <att>name</att>
+               <code>betmas:formerlyAlsoListedAs</code> is present in another record of which the
+               deleted one was a double, then requesting the deleted item will redirect to that
+               record. </p>
+            <p>Remember that you can only delete records after they have been syncronized to the
+               GitHub cloud and the web application, so if you discovered that you have just created
+               a record by mistake before the very first pull request, you must first still download
+               it, create a pull request, wait for the merge approval. Only then can a record be
+               deleted.</p>
          </div>
-        </body>
-        </text>
-        </TEI>
+      </body>
+   </text>
+</TEI>
