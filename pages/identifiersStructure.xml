@@ -104,32 +104,27 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
     <p>
         <gi>msItem</gi>s will have an ID formed of the
         <gi>msPart</gi> or <gi>msFrag</gi>, underscore and the item ID, like
-        <hi rendition="simple:italics">p1.1_i1</hi>
+        <hi rendition="simple:italics">p2_i1</hi>
     </p>
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-        <msPart xml:id="p1.1">
-            <msIdentifier>
-                <idno>  </idno>
-            </msIdentifier>
             <msContents>
-                <msItem xml:id="p1.1_i1">
+                <msItem xml:id="p1_i1">
                     <locus></locus>
                     <title></title>
-                    <msItem xml:id="p1.1_i1.1">
+                    <msItem xml:id="p1_i1.1">
                         <locus></locus>
                         <title></title>
                     </msItem>
-                    <msItem xml:id="p1.1_i1.2">
+                    <msItem xml:id="p1_i1.2">
                         <locus></locus>
                         <title></title>
                     </msItem>
                 </msItem>
-                <msItem xml:id="p1.1_i2">
+                <msItem xml:id="p1_i2">
                     <locus></locus>
                     <title></title>
                 </msItem>
             </msContents>
-        </msPart>
     </egXML>
                 <p>See also <ref target="entities-id-structure">Entities ID Structure</ref>.</p>
             </div>
