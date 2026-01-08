@@ -140,7 +140,7 @@ for the alternative identification.</p>
 <p>However, one can be much more precise in this respect and use as in the following example, the <gi>desc</gi> element inside <gi>certainty</gi>, or
 avoid entirely to provide an alternative identification.</p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
-  <placeName ref="ETH1085Aggabe" xml:id="aggabe">
+  <placeName ref="ETH1085Aggabe" xml:id="agg">
         <certainty locus="value" match="../@ref" resp="#salt">
              <desc><quote>Angabet or Andabet in Begemder</quote><ref
             target="https://recogito.pelagios.org/document/t7e6q1bznco148#bfaa74d2-f350-4f3e-a072-019a9c811eab">
