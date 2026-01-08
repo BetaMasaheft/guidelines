@@ -152,7 +152,7 @@ never be used to mark a content, that presupposes another perspective.</p>
                 <p>You may have additions which are rather long. You can use <gi>seg</gi> with <att>part</att>
                 to let the reader know what part you are copying in the catalogue record.</p>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                    <item xml:id="a6">
+                    <item xml:id="a7">
                         <locus from="75rb" to="76ra"/>
                         <desc type="GuestText">
                             <title ref="LIT4859Litany"/>
