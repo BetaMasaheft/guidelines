@@ -98,31 +98,91 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <head>Structure of internal <att>xml:id</att>s</head>
             <p>An <att>xml:id</att> can be assigned to any element in a record, to allow direct references to this element both within the same record and from other records.
                For the elements listed below, the structure of the <att>xml:id</att> follows a specific pattern. For all other elements the value for <att>xml:id</att> can 
-               be choosen freely. However, it is extremely important that no <att>xml:id</att> is identical to the <att>xml:id</att> of the root element <gi>TEI</gi> of
-               any record. This means that the names of records - manuscripts, works, persons, places, keywords etc. - must not used as <att>xml:id</att> in any record.
+               be choosen freely. However, <hi rendition="simple:bold">it is extremely important that no <att>xml:id</att> is identical to the <att>xml:id</att> of the root element <gi>TEI</gi> of
+                  any record.</hi> This means that the names of records - manuscripts, works, persons, places, keywords etc. - must not used as <att>xml:id</att> in any record.
                For example, giving the value "Supplication" to an <att>xml:id</att>, for example in a manuscript description or a textpart in a work, will lead to 
-               problems, because "Supplication" is already the <att>xml:id</att> of the Authority file <ref target="Supplication" type="bm">Supplication</ref>.</p>
+               problems, because "Supplication" is already the <att>xml:id</att> of the Authority file <ref target="Supplication" type="bm">Supplication</ref>. If you feel like using a real-language term for an <att>xml:id</att>, check the <ref target="authority-files/list" type="bm">list of keywords</ref> first.</p>
           <p>
-            <table>
-            <row role="label"><cell>Element</cell><cell>ID pattern</cell></row>
-            <row><cell>msPart</cell><cell>p\d+[\.\d+]+</cell></row>
-            <row><cell>msItem</cell><cell>p\d+[\.\d+]+_i\d+[\.\d+]+</cell></row>
-            <row><cell>binding decoNote</cell><cell>b\d+</cell></row>
-            <row><cell>decoNote</cell><cell>d\d+</cell></row>
-            <row><cell>addition</cell><cell>a\d+</cell></row>
-            <row><cell>extra</cell><cell>e\d+</cell></row>
-            <row><cell>quire</cell><cell>q\d+</cell></row>
-            <row><cell>foliation unit</cell><cell>fol\d+</cell></row>
-            <row><cell>hand</cell><cell>h\d+</cell></row>
-            <row><cell>title</cell><cell>t\d+</cell></row>
-            <row><cell>name</cell><cell>n\d+</cell></row>
-            <row><cell>edition</cell><cell>ed\d+</cell></row>
-            <row><cell>transformation</cell><cell>tr\d+</cell></row>
-            <row><cell>Uni\w+ (SdC)</cell><cell>Uni\w+\d+ (SdC)</cell></row>
-
-          </table>
+             <table>
+                <row role="label">
+                   <cell>Element</cell>
+                   <cell>ID pattern</cell>
+                   <cell>Example</cell>
+                </row>
+                <row>
+                   <cell>msPart</cell>
+                   <cell>p\d+[\.\d+]+</cell>
+                   <cell><att>xml:id</att>="p1"</cell>
+                </row>
+                <row>
+                   <cell>msItem</cell>
+                   <cell>p\d+[\.\d+]+_i\d+[\.\d+]+</cell>
+                   <cell><att>xml:id</att>="ms_i1" or <att>xml:id</att>="p1_i1"</cell>
+                </row>
+                <row>
+                   <cell>binding decoNote</cell>
+                   <cell>b\d+</cell>
+                   <cell><att>xml:id</att>="b1"</cell>
+                </row>
+                <row>
+                   <cell>decoNote</cell>
+                   <cell>d\d+</cell>
+                   <cell><att>xml:id</att>="d1"</cell>
+                </row>
+                <row>
+                   <cell>addition</cell>
+                   <cell>a\d+</cell>
+                   <cell><att>xml:id</att>="a1"</cell>
+                </row>
+                <row>
+                   <cell>extra</cell>
+                   <cell>e\d+</cell>
+                   <cell><att>xml:id</att>="e1"</cell>
+                </row>
+                <row>
+                   <cell>quire</cell>
+                   <cell>q\d+</cell>
+                   <cell><att>xml:id</att>="q1"</cell>
+                </row>
+                <row>
+                   <cell>foliation unit</cell>
+                   <cell>fol\d+</cell>
+                   <cell><att>xml:id</att>="fol1"</cell>
+                </row>
+                <row>
+                   <cell>hand</cell>
+                   <cell>h\d+</cell>
+                   <cell><att>xml:id</att>="h1"</cell>
+                </row>
+                <row>
+                   <cell>title</cell>
+                   <cell>t\d+</cell>
+                   <cell><att>xml:id</att>="t1"</cell>
+                </row>
+                <row>
+                   <cell>name</cell>
+                   <cell>n\d+</cell>
+                   <cell><att>xml:id</att>="n1"</cell>
+                </row>
+                <row>
+                   <cell>edition</cell>
+                   <cell>ed\d+</cell>
+                   <cell><att>xml:id</att>="ed1"</cell>
+                </row>
+                <row>
+                   <cell>transformation</cell>
+                   <cell>tr\d+</cell>
+                   <cell><att>xml:id</att>="tr1"</cell>
+                </row>
+                <row>
+                   <cell>Uni\w+ (SdC)</cell>
+                   <cell>Uni\w+\d+ (SdC)</cell>
+                   <cell><att>xml:id</att>="UniCirc1"</cell>
+                </row>
+                
+             </table>
         </p>
-            <p>See also <ref target="identifiersStructure">Identifiers Structure</ref>.</p>
+            <p>For Identifiers within the manuscript record see also <ref target="identifiersStructure">Identifiers Structure</ref>.</p>
           </div>
       </body>
    </text>
