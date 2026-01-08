@@ -41,8 +41,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   target="https://www.betamasaheft.uni-hamburg.de/team/projectteam.html">project
                   team</ref>.</p>
             <p>Make sure you have everything prepared as described in the <ref target="setup"
-                  >Setup</ref> section. Make sure you understand how the GitHub workflow and
-               branches and pull requests work (check <ref target="workflow">Workflow</ref>). </p>
+               >Setup</ref> section. Make sure you understand how the GitHub <ref target="workflow">workflow</ref> and
+               branches and pull requests work and how the <ref target="entities-id-structure">filenames</ref> are structured. </p>
             <p>Before creating any record, use a thorough search of the application to make sure it
                is not present already, possibly under a slightly different name or spelling; if you
                are not certain, feel free to open a <ref
@@ -55,7 +55,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   target="http://betamasaheft.eu">betamasaheft.eu</ref>. Please log in to the
                application by providing Username and Password (only possible from the homepage),
                select the record type from the drop-down menu and click "new".</p>
-            <p>In order to ensure unique filenames it is also recommended to use the same system for
+            <p>In order to ensure unique <ref target="entities-id-structure">filenames</ref> it is also recommended to use the same system for
                all other record types - except for <ref target="manuscripts">Manuscripts</ref>,
                which can be directly created in the relevant collection folders bypassing the
                application.</p>
