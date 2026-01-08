@@ -56,7 +56,7 @@ See <ref target="ColophSupplTit">Colophons, titles and supplications</ref>.
             </p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <colophon xml:lang="gez" xml:id="coloph1" >
-                  <locus from="49rb" n="28"/>
+                  <locus from="49rb"/>
                   በአስተሐምሞ፡ በትእዛዘ። እግዚአብሔር፡ ገበርክዎ፡ ለዝንቱ፡ ነገር ።
                </colophon>
             </egXML>
@@ -65,8 +65,8 @@ See <ref target="ColophSupplTit">Colophons, titles and supplications</ref>.
                <att>xml:lang</att> of the second language
                used (see e.g. <ref target="ESakm010" type="bm">ESakm010</ref>).</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-               <colophon xml:id="coloph1" xml:lang="gez">
-                  <locus target="#60r">60r</locus>
+               <colophon xml:id="coloph1a" xml:lang="gez">
+                  <locus target="#60r"/>
                   ተጽሕፈ፡ በ፲፱፻፵ወ፬ዓ፡ም፡ በ፫መስከረም፡ ዝመጽሐፍ፡ ዘተክለ፡ ሃይማኖት፡ እምነቱ፡ ዘወሀቦ፡ ለደብረ፡ ሊባኖስ፡ ሀገሩ፡ አንበሰት፡ ፍቃዳ፡ እዛ፡ መጽሐፍ፡ ንዕሽቶይ፡ ኮይና፡ ከይትረአየኩም፡ ዓባይ፡ መጽሐፍ፡ እያ፡ እሞ፡ አብ፡ ብራና፡ ከምቶውርሱዋ፡ ግበሩ።
                   <foreign xml:lang="tr">ሐደራኹም፡ እብለኩም፡ አነ፡ ቀ፡ ወልደ፡ ትንሣኤ፡ ጸሐፊኡ፡</foreign>
                   ....
@@ -78,7 +78,7 @@ See <ref target="ColophSupplTit">Colophons, titles and supplications</ref>.
             <p>Paragraphic information on the colophon can be entered inside <gi>colophon</gi> in a <gi>note</gi>, 
             as in this example from <ref type="bm" target="DSEthiop7">DSEthiop7</ref>:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-               <colophon xml:id="coloph1" xml:lang="ti">
+               <colophon xml:id="coloph1b" xml:lang="ti">
                   <locus target="#73v"/>
                   <note>Short colophon written in the main hand, mentioning only the day of the week (Tuesday),
                      followed by a Tigrinya note stating that the manuscript was owned by <persName ref="PRS12557Barha"/>.</note>
