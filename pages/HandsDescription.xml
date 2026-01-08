@@ -54,7 +54,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                E.g., <ref type="BM" target="BAVet7">BAVet7</ref>:
                 
                <egXML xmlns="http://www.tei-c.org/ns/Examples"> 
-                   <handNote xml:id="h1" script="Ethiopic">
+                   <handNote>
                     <seg type="script">Written in a mediocre handwriting.</seg>
                     <seg type="ink">Black, red</seg>
                     <date notBefore="1400" notAfter="1499">15th century</date>
