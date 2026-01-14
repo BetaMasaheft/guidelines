@@ -29,7 +29,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
          
          <div type="level2">
             <head>Structure of record IDs</head>
-         <p>The following principles for the creation of new IDs should be followed for new records:</p>
+         <p>Record IDs must always match the filename. The following principles for the creation of new IDs should be followed for new records:</p>
 
          <list type="unordered">
             <item>

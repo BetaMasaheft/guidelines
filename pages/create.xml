@@ -67,6 +67,8 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <hi rendition="simple:bold">/new</hi> subfolder in your local repository, edited,
                and syncronized to GitHub and application through a successful pull request before
                that can be renamed, deleted, or moved.</p>
+            <p>If you create a file record manually please remember that the filename of the record must always exactly match the value of <gi>xml:id</gi> in the <gi>TEI</gi> element. E.g. filename "<hi rendition="simple:bold">EMML2312</hi>.xml" must match "TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="<hi rendition="simple:bold">EMML2312</hi>" xml:lang="en" type="mss"". If you use the application to create a new record, this is already taken care of.</p>
+            
          </div>
 
          <div type="level1">
