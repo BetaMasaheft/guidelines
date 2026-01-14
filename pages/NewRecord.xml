@@ -30,7 +30,7 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p>If you have editor rights and are logged in to the application, you can find a new "create new entity" function in the navigation bar of
                     the app. You only need to enter the name of the file, for manuscripts this is
                     the full filename, for the other entities just the last (non-numerical) part of
-                    the ID (see <gi>TEI</gi> schema specification and the <ref target="entities-id-structure">Entities ID Structure page</ref> for assigning the correct filename. ). For LIT1234iliad, you would
+                    the ID (see <gi>TEI</gi> schema specification and the <ref target="entities-id-structure">Entities ID Structure page</ref> for assigning the correct filename = ID. ). For LIT1234iliad, you would
                     enter only "iliad". The non-numerical part of the ID <hi rendition="simple:bold"
                         >may not exceed 15 digits and may only include ASCII symbols</hi>. For a
                     manuscript, simply enter the <ref target="entities-id-structure">filename</ref>, the small print will indicate you what
