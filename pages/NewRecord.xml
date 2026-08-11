@@ -21,13 +21,21 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <revisionDesc>
             <change who="PL" when="2018-04-30">first version of guidelines from Wiki</change>
             <change who="ES" when="2026-01-06">harmonized with the Create page</change>
+            <change who="ES" when="2026-08-11">rephrased for clarity</change>
+
         </revisionDesc>
     </teiHeader>
     <text>
         <body xml:id="newEntry">
             <div type="level1">
-                <head>Create a new record</head>                
-                <p>If you have editor rights and are logged in to the application, you can find a new "create new entity" function in the navigation bar of
+                <head>Create a new record</head> 
+                <p> While XML records may be created directly in your XML editor, users are strongly advised to use the built-in "create new entity"
+                    function in the application. The application ensures that the generated file has a unique ID (most important for works where the numeric
+                    part of the ID corresponds to the Clavis number, but also persons and places) which will be inserted in the appropriate place in the file. This should
+                    avoid the frequent problem of IDs not being updated after copy-pasting a master
+                    file in your editor. The generated file will also have the correct type and a <gi>change</gi> element with your
+                    initials and current date. 
+                    If you have editor rights and are logged in to the application, you can find a new "create new entity" function in the navigation bar of
                     the app. You only need to enter the name of the file, for manuscripts this is
                     the full filename, for the other entities just the last (non-numerical) part of
                     the ID (see <gi>TEI</gi> schema specification and the <ref target="entities-id-structure">Entities ID Structure page</ref> for assigning the correct filename = ID. ). For LIT1234iliad, you would
@@ -35,24 +43,26 @@ type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         >may not exceed 15 digits and may only include ASCII symbols</hi>. For a
                     manuscript, simply enter the <ref target="entities-id-structure">filename</ref>, the small print will indicate you what
                     is needed. As you start typing the button will become active and you can create
-                    the file. Initially, the file is only stored in the app, not in Github! As the confirmation page
+                    the file. As the confirmation page
                     will tell you blinking, you need to <list rendition="ordered">
                         <item>download the file</item>
-                        <item>save it in a folder called "new" into the proper folder</item>
-                        <item>commit and sync to git</item>
-                    </list> Once you have done this GIT and our server will be again in sync, which
+                        <item>save it in a folder called "new"</item>
+                        <item>commit and sync to git (pull request - merge)</item>
+                    </list> 
+                    Once you have done this GIT and our server will be again in sync, which
                     means you can now move your file if you need to (especially for manuscripts) and
                     then <hi rendition="simple:bold">commit and sync this change again.</hi></p>
-                <p> If you omit the first step, we will have two identical files in two locations
-                    and thus the ID lookup of the app will fail not showing you your file. On
+                <p> Note that when you create a record through the application it is immediately
+                    stored on the server, in the "new" folder. This means if you download the file 
+                    to any other folder on your computer and save it to GIT from there, 
+                    we will have two identical files in two locations
+                    and thus the ID lookup of the app will fail. On
                     leaving the page you will get a warning every time, intended to make you stop
-                    before you carry on without syncing. The generated file will have a consistent
-                    new ID and will insert it in the appropriate place in the file. This should
-                    avoid the frequent problem of IDs not being updated after copy-pasting a master
-                    file. It remains entirely possible to create your files in Oxygen as previously,
-                    but the application interface is recommended as it makes sure your ID is unique.
-                    The file will also have the correct type and a <gi>change</gi> element with your
-                    initials and current date.</p>
+                    before you carry on without syncing. 
+                    It remains entirely possible to create your files in Oxygen, especially manuscript 
+                    records and authority files, where the ID is assigned by the user, 
+                    but the application interface is recommended for all other record types
+                    as it makes sure your ID is unique.</p>
                 <p>Especially when creating a new work record, where the numerical part of the ID
                     will become the Clavis reference number, only the app should be used.</p>
                 <p>Check the principles for creating a <ref target="works">WORK entity</ref> and the
