@@ -63,8 +63,12 @@ jobs:
           echo "Waiting for server to start..."
           until docker logs exist 2>&1 | grep -q "Server has started"; do
             echo "Still waiting..."
-            sleep 4
+            sleep 2
           done
+          # Bounded settle sleep, not a wait-for-healthy loop.
+          # Jetty logs "Server has started" before health/autodeploy settle
+          # (same pattern as BetMasWeb / org install-smoke).
+          sleep 15
 
       # Test
       - name: Run smoke test
@@ -72,7 +76,7 @@ jobs:
   
       - name: debug logs
         if: failure()
-        run: docker logs exist | grep 'ERROR'
+        run: docker logs exist | grep 'ERROR' || true
 
       - name: Copy logs on failure
         if: failure()
