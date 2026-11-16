@@ -1,0 +1,18 @@
+.github/workflows/validate_push.yml
+  h_ff0005bef58c9d 14
+.github/workflows/build.yml
+  h_ff0005bef58c9d 12
+.github/workflows/validate_pr.yml
+  h_ff0005bef58c9d 11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c4135d06603de183a02111a35587e93a2a6f6bc1",
+  "prompts": {},
+  "humans": {
+    "h_ff0005bef58c9d": {
+      "author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
