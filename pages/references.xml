@@ -239,7 +239,7 @@ starting with http.</p>
          <p>To link to a manuscript in vHMML, please, use the provided
     permalink in the metadata.</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
- <ref type="mss" target="https://w3id.org/vhmml/readingRoom/view/133001"/>
+            <ref type="mss" target="https://w3id.org/vhmml/readingRoom/view/133001">C3-IV-102</ref>
 </egXML>
 </div>
       </body>
